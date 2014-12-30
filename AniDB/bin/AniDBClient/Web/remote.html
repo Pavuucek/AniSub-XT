@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cs" lang="cs">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="title" content="AniSub" />
+		<meta name="company" content="*Grep-a-Fruit*" />
+		<meta name="author" content="Benda_11" />
+		<meta name="copyright" content="*Grep-a-Fruit* 2011" />		
+		<link type="text/css" rel="stylesheet" href="style.css" />
+		
+		<meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width,height=device-height">
+		
+		<script type="text/javascript" src="js.js"></script>
+		
+		<title>MPC-HC Remote</title>
+	</head>
+	<body>
+	
+	<div class="search"><div class="search-obal">
+	<form method="post" enctype="multipart/form-data" action="search" >
+	<input type="text" name="sText" /><br />   	
+	<input type="submit" name="sSearch" value="Search" />		    	
+	<input type="submit" name="sAll" value="All" />		    	
+	<input type="submit" name="sRemote" value="Remote" />		    	
+	</form>
+	</div></div>
+	
+	<div class="remote"><div class="remote-obal">
+		
+	<form action="%MPC-HC%#s887" method="post">
+		<a name="s887"></a>
+		<input type="hidden" name="wm_command" value="887">
+		<input type="submit" value=" &gt; " title="Play" name="submit" onclick="postForm(887,'null',0); return false;">
+	</form>
+	
+	<form action="%MPC-HC%#s888" method="post">
+		<a name="s888"></a>
+		<input type="hidden" name="wm_command" value="888">
+		<input type="submit" value=" || " title="Pause" name="submit" onclick="postForm(888,'null',0); return false;">
+	</form>	
+	
+	<form action="%MPC-HC%#s890" method="post">
+		<a name="s890"></a>
+		<input type="hidden" name="wm_command" value="890">
+		<input type="submit" value=" # " title="Stop" name="submit" onclick="postForm(890,'null',0); return false;">
+	</form>	
+	
+	<form action="%MPC-HC%#s921" method="post">
+		<a name="s921"></a>
+		<input type="hidden" name="wm_command" value="921">
+		<input type="submit" value="I&lt;&lt;" title="Skip back" name="submit" onclick="postForm(921,'null',0); return false;">
+	</form>	
+	
+	<form action="%MPC-HC%#s903" method="post">
+		<a name="s903"></a>
+		<input type="hidden" name="wm_command" value="903">
+		<input type="submit" value="&lt;&lt;&lt;" title="Jump Backward (large)" name="submit" onclick="postForm(903,'null',0); return false;">
+	</form>		
+		
+	<form action="%MPC-HC%#s904" method="post">
+		<a name="s904"></a>
+		<input type="hidden" name="wm_command" value="904">
+		<input type="submit" value="&gt;&gt;&gt;" title="Jump Forward (large)" name="submit" onclick="postForm(904,'null',0); return false;">
+	</form>
+	
+	<form action="%MPC-HC%#s922" method="post">
+		<a name="s922"></a>
+		<input type="hidden" name="wm_command" value="922">
+		<input type="submit" value="&gt;&gt;I" title="Skip forward" name="submit" onclick="postForm(922,'null',0); return false;">
+	</form>
+		
+	<form action="%MPC-HC%#s836" method="post">
+		<a name="s836"></a>
+		<input type="hidden" name="wm_command" value="830">
+		<input type="submit" value="Normal" name="submit" onclick="postForm(830,'null',0); return false;">
+	</form>
+	
+	<form action="%MPC-HC%#s909" method="post">
+		<a name="s909"></a>
+		<input type="hidden" name="wm_command" value="909">
+		<input type="submit" value="Mute" name="submit" onclick="postForm(909,'null',0); return false;">
+	</form>
+	
+	<form action="%MPC-HC%#s908" method="post">
+		<a name="s908"></a>
+		<input type="hidden" name="wm_command" value="908">
+		<input type="submit" value="Vol. Down" name="submit" onclick="postForm(908,'null',0); return true;">
+	</form>
+	
+	<form action="%MPC-HC%#s907" method="post">
+		<a name="s907"></a>
+		<input type="hidden" name="wm_command" value="907">
+		<input type="submit" value="Vol. Up" name="submit" onclick="postForm(907,'null',0); return true;">
+	</form>
+	
+	<form action="%MPC-HC%#s953" method="post">
+		<a name="s953"></a>
+		<input type="hidden" name="wm_command" value="953">
+		<input type="submit" value="&lt; Audio" name="submit" onclick="postForm(953,'null',0); return false;">
+	</form>
+	
+	<form action="%MPC-HC%#s952" method="post">
+		<a name="s952"></a>
+		<input type="hidden" name="wm_command" value="952">
+		<input type="submit" value="Audio &gt;" name="submit" onclick="postForm(952,'null',0); return false;">
+	</form>
+	
+	<form action="%MPC-HC%#s955" method="post">
+		<a name="s955"></a>
+		<input type="hidden" name="wm_command" value="955">
+		<input type="submit" value="&lt; Subtitle" name="submit" onclick="postForm(955,'null',0); return false;">
+	</form>
+	
+	<form action="%MPC-HC%#s954" method="post">
+		<a name="s954"></a>
+		<input type="hidden" name="wm_command" value="954">
+		<input type="submit" value="Subtitle &gt;" name="submit" onclick="postForm(954,'null',0); return false;">
+	</form>
+	
+	<form action="%MPC-HC%" method="post">
+        <input id="fwmc" type="hidden" name="wm_command" value="-2">
+        <input id="fextra" type="hidden" name="extra" value="">
+    </form>
+	
+	<p class="war">Javascript required. Only works with MPC-HC! Must enabled webserver in MPC-HC and set correct webserver port for MPC-HC in AniSub.</p>
+	
+	</div></div>	
+</body>
+</html>

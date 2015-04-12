@@ -106,7 +106,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Utilities\AniDBClient.cs" />
+    <Compile Include="Utilities\AniDbClient2.cs" />
+    <Compile Include="Utilities\AniDbMsgs.cs" />
+    <Compile Include="Utilities\ControlSorter.cs" />
     <Compile Include="Utilities\EDCrypt.cs" />
     <Compile Include="Forms\Backups.cs">
       <SubType>Form</SubType>
@@ -212,6 +214,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Utilities\NodeSorter.cs" />
     <Compile Include="Utilities\Settings.cs" />
     <Compile Include="7z\SevenZipFormat.cs" />
     <Compile Include="7z\SevenZipInterface.cs" />

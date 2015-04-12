@@ -84,7 +84,7 @@ namespace AniDBClient
         #endregion
 
         #region IMPORT
-        private AniDBMsgs AniDBStatus = AniDBMsgs.A_DISCONNECT;
+        private AniDbMsgs AniDBStatus = AniDbMsgs.A_DISCONNECT;
         private List<string> FRename_List = new List<string>();
         private List<object[]> GlobalMyList = new List<object[]>();
         private FileInfo Watcher_SouborOldM = null;
@@ -194,44 +194,6 @@ namespace AniDBClient
                 }
 
                 k++;
-            }
-        }
-
-        //Srovnání prvků
-        public class ControlsSorter : IComparer<Control>
-        {
-            public int Compare(Control x, Control y)
-            {
-                if (x.Location.Y > y.Location.Y)
-                {
-                    x.TabIndex = 1;
-                    y.TabIndex = 0;
-                }
-                else if (x.Location.Y == y.Location.Y)
-                {
-                    if (x.Location.X > y.Location.X)
-                    {
-                        x.TabIndex = 1;
-                        y.TabIndex = 0;
-                    }
-                    else if (x.Location.X == y.Location.X)
-                    {
-                        x.TabIndex = 1;
-                        y.TabIndex = 1;
-                    }
-                    else
-                    {
-                        x.TabIndex = 0;
-                        y.TabIndex = 1;
-                    }
-                }
-                else
-                {
-                    x.TabIndex = 0;
-                    y.TabIndex = 1;
-                }
-
-                return x.TabIndex.CompareTo(y.TabIndex);
             }
         }
 
@@ -3157,19 +3119,7 @@ namespace AniDBClient
                 }
             }
         }
-
-        // Create a node sorter that implements the IComparer interface.
-        public class NodeSorter : IComparer
-        {
-            public int Compare(object x, object y)
-            {
-                TreeNode tx = x as TreeNode;
-                TreeNode ty = y as TreeNode;
-
-                return string.Compare(tx.Text, ty.Text);
-            }
-        }
-
+        
         //Výběr žánrů z databáze
         private void DatabaseSelectGenres()
         {
@@ -3826,283 +3776,213 @@ namespace AniDBClient
                 {
                     if (message.Contains("\n"))
                     {
-                        AniDBStatus = AniDBMsgs.A__NOTHING_;
+                        AniDBStatus = AniDbMsgs.A__NOTHING_;
 
                         string[] T = message.Split('\n');
 
                         if (T[0].Contains("CONNECT"))
-                            AniDBStatus = AniDBMsgs.A_CONNECT;
+                            AniDBStatus = AniDbMsgs.A_CONNECT;
 
                         if (T[0].Contains("DISCONNECT"))
-                            AniDBStatus = AniDBMsgs.A_DISCONNECT;
+                            AniDBStatus = AniDbMsgs.A_DISCONNECT;
 
                         if (T[0].Contains("ILLEGAL INPUT"))
-                            AniDBStatus = AniDBMsgs.A_ILLEGAL_INPUT;
+                            AniDBStatus = AniDbMsgs.A_ILLEGAL_INPUT;
 
                         if (T[0].Contains("BANNED"))
-                            AniDBStatus = AniDBMsgs.A_BANNED;
+                            AniDBStatus = AniDbMsgs.A_BANNED;
 
                         if (T[0].Contains("UNKNOWN COMMAND"))
-                            AniDBStatus = AniDBMsgs.A_UNKNOWN_COMMAND;
+                            AniDBStatus = AniDbMsgs.A_UNKNOWN_COMMAND;
 
                         if (T[0].Contains("INTERNAL SERVER ERROR"))
-                            AniDBStatus = AniDBMsgs.A_INTERNAL_SERVER_ERROR;
+                            AniDBStatus = AniDbMsgs.A_INTERNAL_SERVER_ERROR;
 
                         if (T[0].Contains("OUT OF SERVICE"))
-                            AniDBStatus = AniDBMsgs.A_OUT_OF_SERVICE;
+                            AniDBStatus = AniDbMsgs.A_OUT_OF_SERVICE;
 
                         if (T[0].Contains("SERVER BUSY"))
-                            AniDBStatus = AniDBMsgs.A_SERVER_BUSY;
+                            AniDBStatus = AniDbMsgs.A_SERVER_BUSY;
 
                         if (T[0].Contains("LOGIN FIRST"))
-                            AniDBStatus = AniDBMsgs.A_LOGIN_FIRST;
+                            AniDBStatus = AniDbMsgs.A_LOGIN_FIRST;
 
                         if (T[0].Contains("ACCESS DENIED"))
-                            AniDBStatus = AniDBMsgs.A_ACCESS_DENIED;
+                            AniDBStatus = AniDbMsgs.A_ACCESS_DENIED;
 
                         if (T[0].Contains("INVALID SESSION"))
-                            AniDBStatus = AniDBMsgs.A_INVALID_SESSION;
+                            AniDBStatus = AniDbMsgs.A_INVALID_SESSION;
 
                         if (T[0].Contains("ERROR"))
-                            AniDBStatus = AniDBMsgs.A_ERROR;
+                            AniDBStatus = AniDbMsgs.A_ERROR;
 
                         if (T[0].Contains("AUTH"))
-                            AniDBStatus = AniDBMsgs.A_AUTH;
+                            AniDBStatus = AniDbMsgs.A_AUTH;
 
                         if (T[0].Contains("A_AUTH"))
-                            AniDBStatus = AniDBMsgs.A_SERVER_BUSY;
+                            AniDBStatus = AniDbMsgs.A_SERVER_BUSY;
 
                         if (T[0].Contains("LOGOUT"))
-                            AniDBStatus = AniDBMsgs.A_LOGOUT;
+                            AniDBStatus = AniDbMsgs.A_LOGOUT;
 
                         if (T[0].Contains("LOGGED OUT"))
-                            AniDBStatus = AniDBMsgs.A_LOGGED_OUT;
+                            AniDBStatus = AniDbMsgs.A_LOGGED_OUT;
 
                         if (T[0].Contains("LOGIN ACCEPTED"))
-                            AniDBStatus = AniDBMsgs.A_LOGIN_ACCEPTED;
+                            AniDBStatus = AniDbMsgs.A_LOGIN_ACCEPTED;
 
                         if (T[0].Contains("LOGIN ACCEPTED NEW VER"))
-                            AniDBStatus = AniDBMsgs.A_LOGIN_ACCEPTED_NEW_VER;
+                            AniDBStatus = AniDbMsgs.A_LOGIN_ACCEPTED_NEW_VER;
 
                         if (T[0].Contains("LOGIN FAILED"))
-                            AniDBStatus = AniDBMsgs.A_LOGIN_FAILED;
+                            AniDBStatus = AniDbMsgs.A_LOGIN_FAILED;
 
                         if (T[0].Contains("CLIENT BANNED"))
-                            AniDBStatus = AniDBMsgs.A_CLIENT_BANNED;
+                            AniDBStatus = AniDbMsgs.A_CLIENT_BANNED;
 
                         if (T[0].Contains("NOT LOGGED"))
-                            AniDBStatus = AniDBMsgs.A_NOT_LOGGED;
+                            AniDBStatus = AniDbMsgs.A_NOT_LOGGED;
 
                         if (T[0].Contains("NOTIFICATION ENABLED"))
-                            AniDBStatus = AniDBMsgs.A_NOTIFICATION_ENABLED;
+                            AniDBStatus = AniDbMsgs.A_NOTIFICATION_ENABLED;
 
                         if (T[0].Contains("NOTIFICATION DISABLED"))
-                            AniDBStatus = AniDBMsgs.A_NOTIFICATION_DISABLED;
+                            AniDBStatus = AniDbMsgs.A_NOTIFICATION_DISABLED;
 
                         if (T[0].Contains("NOTIFYLIST"))
-                            AniDBStatus = AniDBMsgs.A_NOTIFYLIST;
+                            AniDBStatus = AniDbMsgs.A_NOTIFYLIST;
 
                         if (T[0].Contains("NOTIFYGET"))
-                            AniDBStatus = AniDBMsgs.A_NOTIFYGET;
+                            AniDBStatus = AniDbMsgs.A_NOTIFYGET;
 
                         if (T[0].Contains("NO SUCH ENTRY"))
-                            AniDBStatus = AniDBMsgs.A_NO_SUCH_ENTRY;
+                            AniDBStatus = AniDbMsgs.A_NO_SUCH_ENTRY;
 
                         if (T[0].Contains("NOTIFYACK"))
-                            AniDBStatus = AniDBMsgs.A_NOTIFYACK;
+                            AniDBStatus = AniDbMsgs.A_NOTIFYACK;
 
                         if (T[0].Contains("BUDDYDEL"))
-                            AniDBStatus = AniDBMsgs.A_BUDDYDEL;
+                            AniDBStatus = AniDbMsgs.A_BUDDYDEL;
 
                         if (T[0].Contains("BUDDYACCEPT"))
-                            AniDBStatus = AniDBMsgs.A_BUDDYACCEPT;
+                            AniDBStatus = AniDbMsgs.A_BUDDYACCEPT;
 
                         if (T[0].Contains("BUDDYDENY"))
-                            AniDBStatus = AniDBMsgs.A_BUDDYDENY;
+                            AniDBStatus = AniDbMsgs.A_BUDDYDENY;
 
                         if (T[0].Contains("BUDDYLIST"))
-                            AniDBStatus = AniDBMsgs.A_BUDDYLIST;
+                            AniDBStatus = AniDbMsgs.A_BUDDYLIST;
 
                         if (T[0].Contains("ANIME"))
-                            AniDBStatus = AniDBMsgs.A_ANIME;
+                            AniDBStatus = AniDbMsgs.A_ANIME;
 
                         if (T[0].Contains("NO SUCH ANIME"))
-                            AniDBStatus = AniDBMsgs.A_NO_SUCH_ANIME;
+                            AniDBStatus = AniDbMsgs.A_NO_SUCH_ANIME;
 
                         if (T[0].Contains("EPISODE"))
-                            AniDBStatus = AniDBMsgs.A_EPISODE;
+                            AniDBStatus = AniDbMsgs.A_EPISODE;
 
                         if (T[0].Contains("NO SUCH EPISODE"))
-                            AniDBStatus = AniDBMsgs.A_NO_SUCH_EPISODE;
+                            AniDBStatus = AniDbMsgs.A_NO_SUCH_EPISODE;
 
                         if (T[0].Contains("FILE"))
-                            AniDBStatus = AniDBMsgs.A_FILE;
+                            AniDBStatus = AniDbMsgs.A_FILE;
 
                         if (T[0].Contains("NO SUCH FILE"))
-                            AniDBStatus = AniDBMsgs.A_NO_SUCH_FILE;
+                            AniDBStatus = AniDbMsgs.A_NO_SUCH_FILE;
 
                         if (T[0].Contains("MULTIPLE FILES FOUND"))
-                            AniDBStatus = AniDBMsgs.A_MULTIPLE_FILES_FOUND;
+                            AniDBStatus = AniDbMsgs.A_MULTIPLE_FILES_FOUND;
 
                         if (T[0].Contains("GROUP"))
-                            AniDBStatus = AniDBMsgs.A_GROUP;
+                            AniDBStatus = AniDbMsgs.A_GROUP;
 
                         if (T[0].Contains("NO SUCH GROUP"))
-                            AniDBStatus = AniDBMsgs.A_NO_SUCH_GROUP;
+                            AniDBStatus = AniDbMsgs.A_NO_SUCH_GROUP;
 
                         if (T[0].Contains("GROUPSTATUS"))
-                            AniDBStatus = AniDBMsgs.A_GROUPSTATUS;
+                            AniDBStatus = AniDbMsgs.A_GROUPSTATUS;
 
                         if (T[0].Contains("MYLIST"))
-                            AniDBStatus = AniDBMsgs.A_MYLIST;
+                            AniDBStatus = AniDbMsgs.A_MYLIST;
 
                         if (T[0].Contains("NO SUCH MYLIST ENTRY"))
-                            AniDBStatus = AniDBMsgs.A_NO_SUCH_MYLIST_ENTRY;
+                            AniDBStatus = AniDbMsgs.A_NO_SUCH_MYLIST_ENTRY;
 
                         if (T[0].Contains("MULTIPLE MYLIST ENTRIES"))
-                            AniDBStatus = AniDBMsgs.A_MULTIPLE_MYLIST_ENTRIES;
+                            AniDBStatus = AniDbMsgs.A_MULTIPLE_MYLIST_ENTRIES;
 
                         if (T[0].Contains("MYLISTADD"))
-                            AniDBStatus = AniDBMsgs.A_MYLISTADD;
+                            AniDBStatus = AniDbMsgs.A_MYLISTADD;
 
                         if (T[0].Contains("MYLIST ENTRY ADDED"))
-                            AniDBStatus = AniDBMsgs.A_MYLIST_ENTRY_ADDED;
+                            AniDBStatus = AniDbMsgs.A_MYLIST_ENTRY_ADDED;
 
                         if (T[0].Contains("FILE ALREADY IN MYLIST"))
-                            AniDBStatus = AniDBMsgs.A_FILE_ALREADY_IN_MYLIST;
+                            AniDBStatus = AniDbMsgs.A_FILE_ALREADY_IN_MYLIST;
 
                         if (T[0].Contains("MULTIPLE FILES FOUND"))
-                            AniDBStatus = AniDBMsgs.A_MULTIPLE_FILES_FOUND;
+                            AniDBStatus = AniDbMsgs.A_MULTIPLE_FILES_FOUND;
 
                         if (T[0].Contains("MYLISTDEL"))
-                            AniDBStatus = AniDBMsgs.A_MYLISTDEL;
+                            AniDBStatus = AniDbMsgs.A_MYLISTDEL;
 
                         if (T[0].Contains("MYLIST ENTRY DELETED"))
-                            AniDBStatus = AniDBMsgs.A_MYLIST_ENTRY_DELETED;
+                            AniDBStatus = AniDbMsgs.A_MYLIST_ENTRY_DELETED;
 
                         if (T[0].Contains("MYLIST STATS"))
-                            AniDBStatus = AniDBMsgs.A_MYLISTSTATS;
+                            AniDBStatus = AniDbMsgs.A_MYLISTSTATS;
 
                         if (T[0].Contains("VOTE"))
-                            AniDBStatus = AniDBMsgs.A_VOTE;
+                            AniDBStatus = AniDbMsgs.A_VOTE;
 
                         if (T[0].Contains("INVALID VOTE TYPE"))
-                            AniDBStatus = AniDBMsgs.A_INVALID_VOTE_TYPE;
+                            AniDBStatus = AniDbMsgs.A_INVALID_VOTE_TYPE;
 
                         if (T[0].Contains("PERMVOTE NOT ALLOWED"))
-                            AniDBStatus = AniDBMsgs.A_PERMVOTE_NOT_ALLOWED;
+                            AniDBStatus = AniDbMsgs.A_PERMVOTE_NOT_ALLOWED;
 
                         if (T[0].Contains("RANDOMANIME"))
-                            AniDBStatus = AniDBMsgs.A_RANDOMANIME;
+                            AniDBStatus = AniDbMsgs.A_RANDOMANIME;
 
                         if (T[0].Contains("MYLISTEXPORT"))
-                            AniDBStatus = AniDBMsgs.A_MYLISTEXPORT;
+                            AniDBStatus = AniDbMsgs.A_MYLISTEXPORT;
 
                         if (T[0].Contains("PING"))
-                            AniDBStatus = AniDBMsgs.A_VOTE;
+                            AniDBStatus = AniDbMsgs.A_VOTE;
 
                         if (T[0].Contains("PONG"))
-                            AniDBStatus = AniDBMsgs.A_PONG;
+                            AniDBStatus = AniDbMsgs.A_PONG;
 
                         if (T[0].Contains("VERSION"))
-                            AniDBStatus = AniDBMsgs.A_VERSION;
+                            AniDBStatus = AniDbMsgs.A_VERSION;
 
                         if (T[0].Contains("UPTIME"))
-                            AniDBStatus = AniDBMsgs.A_UPTIME;
+                            AniDBStatus = AniDbMsgs.A_UPTIME;
 
                         if (T[0].Contains("USER"))
-                            AniDBStatus = AniDBMsgs.A_USER;
+                            AniDBStatus = AniDbMsgs.A_USER;
 
                         if (T[0].Contains("UNKNOWN COMMAND"))
-                            AniDBStatus = AniDBMsgs.A_UNKNOWN_COMMAND;
+                            AniDBStatus = AniDbMsgs.A_UNKNOWN_COMMAND;
 
                         if (T[0].Contains("LOGIN FIRST"))
-                            AniDBStatus = AniDBMsgs.A_LOGIN_FIRST;
+                            AniDBStatus = AniDbMsgs.A_LOGIN_FIRST;
 
                         if (T[0].Contains("MYLIST ENTRY EDITED"))
-                            AniDBStatus = AniDBMsgs.A_MYLIST_ENTRY_EDITED;
+                            AniDBStatus = AniDbMsgs.A_MYLIST_ENTRY_EDITED;
                     }
                     else
-                        AniDBStatus = AniDBMsgs.A_DISCONNECT;
+                        AniDBStatus = AniDbMsgs.A_DISCONNECT;
                 }
                 else
-                    AniDBStatus = AniDBMsgs.A_DISCONNECT;
+                    AniDBStatus = AniDbMsgs.A_DISCONNECT;
             }
             else
-                AniDBStatus = AniDBMsgs.A_DISCONNECT;
+                AniDBStatus = AniDbMsgs.A_DISCONNECT;
         }
 
-        #region AniDBMsgs
-        //Zprávy
-        public enum AniDBMsgs
-        {
-            A__NOTHING_ = 0x1000,
-            A_DISCONNECT = 0x0000,
-            A_CONNECT = 0x0001,
-            A_ILLEGAL_INPUT = 0x0002,
-            A_BANNED = 0x0003,
-            A_UNKNOWN_COMMAND = 0x0004,
-            A_INTERNAL_SERVER_ERROR = 0x0005,
-            A_OUT_OF_SERVICE = 0x0006,
-            A_SERVER_BUSY = 0x0007,
-            A_LOGIN_FIRST = 0x0008,
-            A_ACCESS_DENIED = 0x0009,
-            A_INVALID_SESSION = 0x0010,
-            A_ERROR = 0x0011,
-            A_AUTH = 0x0012,
-            A_LOGOUT = 0x0013,
-            A_LOGIN_ACCEPTED = 0x0014,
-            A_LOGIN_FAILED = 0x0015,
-            A_VERSION_OUTDATED = 0x0016,
-            A_CLIENT_BANNED = 0x0017,
-            A_NOT_LOGGED = 0x0018,
-            A_NOTIFICATION_ENABLED = 0x0019,
-            A_NOTIFICATION_DISABLED = 0x0020,
-            A_NOTIFYLIST = 0x0021,
-            A_NOTIFYGET = 0x0022,
-            A_NO_SUCH_ENTRY = 0x0023,
-            A_NOTIFYACK = 0x0024,
-            A_BUDDYADD = 0x0025,
-            A_BUDDYDEL = 0x0026,
-            A_BUDDYACCEPT = 0x0027,
-            A_BUDDYDENY = 0x0028,
-            A_BUDDYLIST = 0x0029,
-            A_ANIME = 0x0030,
-            A_NO_SUCH_ANIME = 0x0031,
-            A_ANIMEDESC = 0x0032,
-            A_EPISODE = 0x0033,
-            A_NO_SUCH_EPISODE = 0x0034,
-            A_FILE = 0x0035,
-            A_NO_SUCH_FILE = 0x0036,
-            A_MULTIPLE_FILES_FOUND = 0x0037,
-            A_GROUP = 0x0038,
-            A_NO_SUCH_GROUP = 0x0039,
-            A_GROUPSTATUS = 0x0040,
-            A_MYLIST = 0x0041,
-            A_MULTIPLE_MYLIST_ENTRIES = 0x0042,
-            A_MYLISTADD = 0x0043,
-            A_MYLIST_ENTRY_ADDED = 0x0044,
-            A_FILE_ALREADY_IN_MYLIST = 0x0045,
-            A_USER = 0x0046,
-            A_MYLIST_ENTRY_EDITED = 0x0047,
-            A_MYLISTDEL = 0x0048,
-            A_MYLIST_ENTRY_DELETED = 0x0049,
-            A_MYLISTSTATS = 0x0050,
-            A_VOTE = 0x0051,
-            A_INVALID_VOTE_TYPE = 0x0052,
-            A_PERMVOTE_NOT_ALLOWED = 0x0053,
-            A_ALREADY_PERMVOTED = 0x0054,
-            A_RANDOMANIME = 0x0055,
-            A_MYLISTEXPORT = 0x0056,
-            A_PING = 0x0057,
-            A_PONG = 0x0058,
-            A_VERSION = 0x0059,
-            A_UPTIME = 0x0060,
-            A_NO_SUCH_MYLIST_ENTRY = 0x0061,
-            A_LOGGED_OUT = 0x0062,
-            A_LOGIN_ACCEPTED_NEW_VER = 0x0063
-        }
-        #endregion
+       
 
         //Úlohy pro připojení
         private void ComunicationNewTask(string Task)
@@ -4155,7 +4035,7 @@ namespace AniDBClient
             }
             else if (AniDBSessions == null)
             {
-                AniDBStatus = AniDBMsgs.A_ERROR;
+                AniDBStatus = AniDbMsgs.A_ERROR;
                 ComunicationW_Task = "";
                 ComunicationW_WaitW("Error");
 
@@ -4211,7 +4091,7 @@ namespace AniDBClient
 
                             ComunicationW_DataReceive = CommunicationReceive();
 
-                            if (AniDBStatus == AniDBMsgs.A_DISCONNECT || ComunicationW_ReLogIn || AniDBStatus == AniDBMsgs.A_LOGIN_FIRST)
+                            if (AniDBStatus == AniDbMsgs.A_DISCONNECT || ComunicationW_ReLogIn || AniDBStatus == AniDbMsgs.A_LOGIN_FIRST)
                             {
                                 aniDBClient.Close();
                                 ComunicationW.CancelAsync();
@@ -4233,15 +4113,15 @@ namespace AniDBClient
             {
                 switch (AniDBStatus)
                 {
-                    case AniDBMsgs.A_BANNED:
-                    case AniDBMsgs.A_ERROR:
-                    case AniDBMsgs.A_INTERNAL_SERVER_ERROR:
-                    case AniDBMsgs.A_LOGIN_FAILED:
-                    case AniDBMsgs.A_LOGIN_FIRST:
-                    case AniDBMsgs.A_OUT_OF_SERVICE:
-                    case AniDBMsgs.A_CLIENT_BANNED:
-                    case AniDBMsgs.A_SERVER_BUSY:
-                    case AniDBMsgs.A_VERSION_OUTDATED:
+                    case AniDbMsgs.A_BANNED:
+                    case AniDbMsgs.A_ERROR:
+                    case AniDbMsgs.A_INTERNAL_SERVER_ERROR:
+                    case AniDbMsgs.A_LOGIN_FAILED:
+                    case AniDbMsgs.A_LOGIN_FIRST:
+                    case AniDbMsgs.A_OUT_OF_SERVICE:
+                    case AniDbMsgs.A_CLIENT_BANNED:
+                    case AniDbMsgs.A_SERVER_BUSY:
+                    case AniDbMsgs.A_VERSION_OUTDATED:
                         break;
 
                     default:
@@ -4270,23 +4150,23 @@ namespace AniDBClient
             {
                 switch (AniDBStatus)
                 {
-                    case AniDBMsgs.A_BANNED:
-                    case AniDBMsgs.A_ACCESS_DENIED:
-                    case AniDBMsgs.A_ERROR:
-                    case AniDBMsgs.A_ILLEGAL_INPUT:
-                    case AniDBMsgs.A_INTERNAL_SERVER_ERROR:
-                    case AniDBMsgs.A_UNKNOWN_COMMAND:
-                    case AniDBMsgs.A_LOGIN_FAILED:
-                    case AniDBMsgs.A_LOGIN_FIRST:
-                    case AniDBMsgs.A_OUT_OF_SERVICE:
-                    case AniDBMsgs.A_CLIENT_BANNED:
-                    case AniDBMsgs.A_SERVER_BUSY:
-                    case AniDBMsgs.A_VERSION_OUTDATED:
+                    case AniDbMsgs.A_BANNED:
+                    case AniDbMsgs.A_ACCESS_DENIED:
+                    case AniDbMsgs.A_ERROR:
+                    case AniDbMsgs.A_ILLEGAL_INPUT:
+                    case AniDbMsgs.A_INTERNAL_SERVER_ERROR:
+                    case AniDbMsgs.A_UNKNOWN_COMMAND:
+                    case AniDbMsgs.A_LOGIN_FAILED:
+                    case AniDbMsgs.A_LOGIN_FIRST:
+                    case AniDbMsgs.A_OUT_OF_SERVICE:
+                    case AniDbMsgs.A_CLIENT_BANNED:
+                    case AniDbMsgs.A_SERVER_BUSY:
+                    case AniDbMsgs.A_VERSION_OUTDATED:
                         MSG = "Error";
                         break;
                 }
 
-                if (ComunicationW_DataReceive == "" || ComunicationW_DataReceive == null || AniDBStatus == AniDBMsgs.A_DISCONNECT || AniDBStatus == AniDBMsgs.A_SERVER_BUSY)
+                if (ComunicationW_DataReceive == "" || ComunicationW_DataReceive == null || AniDBStatus == AniDbMsgs.A_DISCONNECT || AniDBStatus == AniDbMsgs.A_SERVER_BUSY)
                 {
                     MSG = "Error";
                     CRessetCount++;
@@ -4294,7 +4174,7 @@ namespace AniDBClient
 
                     if (CRessetCount >= Options_Reset.Value)
                     {
-                        AniDBStatus = AniDBMsgs.A_ERROR;
+                        AniDBStatus = AniDbMsgs.A_ERROR;
                         ComunicationW.ReportProgress(1, "Error");
 
                         ComunicationW_Reconncect = false;
@@ -4304,16 +4184,16 @@ namespace AniDBClient
                 }
             }
             else
-                AniDBStatus = AniDBMsgs.A__NOTHING_;
+                AniDBStatus = AniDbMsgs.A__NOTHING_;
 
             long sleep = CRessetCount * 2 * 60 * 1000;
 
-            if (AniDBStatus == AniDBMsgs.A_SERVER_BUSY)
+            if (AniDBStatus == AniDbMsgs.A_SERVER_BUSY)
                 ComunicationW_DataReceive += " * Sleep time " + sleep.ToString() + "ms";
 
             ComunicationW.ReportProgress(1, MSG);
 
-            if (AniDBStatus == AniDBMsgs.A_SERVER_BUSY)
+            if (AniDBStatus == AniDbMsgs.A_SERVER_BUSY)
             {
                 for (long i = 0; i <= sleep; i += 10)
                 {
@@ -4350,7 +4230,7 @@ namespace AniDBClient
 
                     string[] T = ComunicationW_DataReceive.Replace("'", "''").Replace("\r", "").Split('\n');
 
-                    if ((e.UserState.ToString() == "Receive" && ComunicationW_DataReceive != "") || AniDBStatus == AniDBMsgs.A_ACCESS_DENIED)
+                    if ((e.UserState.ToString() == "Receive" && ComunicationW_DataReceive != "") || AniDBStatus == AniDbMsgs.A_ACCESS_DENIED)
                     {
                         CRessetCount = 0;
                         DatabaseAdd("DELETE FROM task WHERE task_task='" + ComunicationW_Task + "'");
@@ -4358,8 +4238,8 @@ namespace AniDBClient
                         StatusBar_Mn02.Text = LogTasks.Items.Count.ToString();
                     }
 
-                    if (AniDBStatus == AniDBMsgs.A_LOGIN_ACCEPTED ||
-                        AniDBStatus == AniDBMsgs.A_LOGIN_ACCEPTED_NEW_VER)
+                    if (AniDBStatus == AniDbMsgs.A_LOGIN_ACCEPTED ||
+                        AniDBStatus == AniDbMsgs.A_LOGIN_ACCEPTED_NEW_VER)
                     {
                         StatusBar_ConnectLB.Text = Language.StatusBar_ConnectLBOn;
                         ToolTip.SetToolTip(Options_StartComunication, Language.Options_StartComunicationOn);
@@ -4371,50 +4251,50 @@ namespace AniDBClient
                         AniDBSessions = T[1];
                     }
 
-                    if (AniDBStatus == AniDBMsgs.A_LOGIN_FAILED)
+                    if (AniDBStatus == AniDbMsgs.A_LOGIN_FAILED)
                     {
                         MessageBox.Show(Language.MSG03, "AniSub - Error", MessageBoxButtons.OK);
                     }
 
-                    if (AniDBStatus == AniDBMsgs.A_LOGIN_FIRST)
+                    if (AniDBStatus == AniDbMsgs.A_LOGIN_FIRST)
                     {
                         MessageBox.Show(Language.MSG03, "AniSub - Error", MessageBoxButtons.OK);
                         ComunicationW_Reconncect = true;
                     }
 
-                    if (AniDBStatus == AniDBMsgs.A_LOGIN_ACCEPTED_NEW_VER)
+                    if (AniDBStatus == AniDbMsgs.A_LOGIN_ACCEPTED_NEW_VER)
                     {
                         MessageBox.Show(Language.MSG05, "AniSub", MessageBoxButtons.OK);
                     }
 
-                    if (AniDBStatus == AniDBMsgs.A_VERSION_OUTDATED)
+                    if (AniDBStatus == AniDbMsgs.A_VERSION_OUTDATED)
                     {
                         MessageBox.Show(Language.MSG01, "AniSub - Error", MessageBoxButtons.OK);
                     }
 
-                    if (AniDBStatus == AniDBMsgs.A_BANNED ||
-                        AniDBStatus == AniDBMsgs.A_CLIENT_BANNED)
+                    if (AniDBStatus == AniDbMsgs.A_BANNED ||
+                        AniDBStatus == AniDbMsgs.A_CLIENT_BANNED)
                     {
                         ComunicationW_Reconncect = false;
                         ComunicationW.CancelAsync();
                         MessageBox.Show(Language.MSG02, "AniSub - Error", MessageBoxButtons.OK);
                     }
 
-                    if (AniDBStatus == AniDBMsgs.A_SERVER_BUSY)
+                    if (AniDBStatus == AniDbMsgs.A_SERVER_BUSY)
                     {
                         //
                     }
 
-                    if (AniDBStatus == AniDBMsgs.A_INTERNAL_SERVER_ERROR ||
-                        AniDBStatus == AniDBMsgs.A_ERROR ||
-                        AniDBStatus == AniDBMsgs.A_OUT_OF_SERVICE)
+                    if (AniDBStatus == AniDbMsgs.A_INTERNAL_SERVER_ERROR ||
+                        AniDBStatus == AniDbMsgs.A_ERROR ||
+                        AniDBStatus == AniDbMsgs.A_OUT_OF_SERVICE)
                     {
 
                         MessageBox.Show(Language.MSG04, "AniSub - Error", MessageBoxButtons.OK);
                     }
 
-                    if (AniDBStatus == AniDBMsgs.A_UNKNOWN_COMMAND ||
-                        AniDBStatus == AniDBMsgs.A_ILLEGAL_INPUT)
+                    if (AniDBStatus == AniDbMsgs.A_UNKNOWN_COMMAND ||
+                        AniDBStatus == AniDbMsgs.A_ILLEGAL_INPUT)
                     {
                         MessageBox.Show(Language.MSG02, "AniSub - Error", MessageBoxButtons.OK);
                     }
@@ -4423,24 +4303,24 @@ namespace AniDBClient
                     {
                         ComunicationW_DataReceive = T[1];
 
-                        if (AniDBStatus == AniDBMsgs.A_MYLIST ||
-                            AniDBStatus == AniDBMsgs.A_FILE_ALREADY_IN_MYLIST)
+                        if (AniDBStatus == AniDbMsgs.A_MYLIST ||
+                            AniDBStatus == AniDbMsgs.A_FILE_ALREADY_IN_MYLIST)
                         {
                             AniDBParserMyList();
                         }
 
-                        if (AniDBStatus == AniDBMsgs.A_FILE)
+                        if (AniDBStatus == AniDbMsgs.A_FILE)
                         {
                             AniDBParserFiles();
                         }
 
-                        if (AniDBStatus == AniDBMsgs.A_MYLISTSTATS)
+                        if (AniDBStatus == AniDbMsgs.A_MYLISTSTATS)
                         {
                             AniDBParserMyListStats();
                         }
 
-                        if (AniDBStatus == AniDBMsgs.A_MYLIST_ENTRY_ADDED ||
-                            AniDBStatus == AniDBMsgs.A_MYLIST_ENTRY_EDITED)
+                        if (AniDBStatus == AniDbMsgs.A_MYLIST_ENTRY_ADDED ||
+                            AniDBStatus == AniDbMsgs.A_MYLIST_ENTRY_EDITED)
                         {
                             if (ComunicationW_DataSend.Contains("fid="))
                             {
@@ -4450,7 +4330,7 @@ namespace AniDBClient
                             }
                         }
 
-                        if (AniDBStatus == AniDBMsgs.A_MYLIST_ENTRY_DELETED)
+                        if (AniDBStatus == AniDbMsgs.A_MYLIST_ENTRY_DELETED)
                         {
                             if (ComunicationW_DataSend.Contains("MYLISTDEL fid="))
                             {
@@ -4461,9 +4341,9 @@ namespace AniDBClient
                             }
                         }
 
-                        if (AniDBStatus == AniDBMsgs.A_NO_SUCH_ENTRY ||
-                            AniDBStatus == AniDBMsgs.A_MULTIPLE_MYLIST_ENTRIES ||
-                            AniDBStatus == AniDBMsgs.A_NO_SUCH_MYLIST_ENTRY)
+                        if (AniDBStatus == AniDbMsgs.A_NO_SUCH_ENTRY ||
+                            AniDBStatus == AniDbMsgs.A_MULTIPLE_MYLIST_ENTRIES ||
+                            AniDBStatus == AniDbMsgs.A_NO_SUCH_MYLIST_ENTRY)
                         {
                             if (ComunicationW_DataSend.Contains("MYLIST") && ComunicationW_DataSend.Contains("fid="))
                             {
@@ -4478,7 +4358,7 @@ namespace AniDBClient
                             }
                         }
 
-                        if (AniDBStatus == AniDBMsgs.A_NO_SUCH_FILE)
+                        if (AniDBStatus == AniDbMsgs.A_NO_SUCH_FILE)
                         {
                             if ((ComunicationW_DataSend.Contains("FILE") || ComunicationW_DataSend.Contains("MYLIST")) && ComunicationW_DataSend.Contains("ed2k="))
                             {
@@ -4489,12 +4369,12 @@ namespace AniDBClient
                             }
                         }
 
-                        if (AniDBStatus == AniDBMsgs.A_EPISODE)
+                        if (AniDBStatus == AniDbMsgs.A_EPISODE)
                         {
                             AniDBParserEpisodes();
                         }
 
-                        if (AniDBStatus == AniDBMsgs.A_ANIME)
+                        if (AniDBStatus == AniDbMsgs.A_ANIME)
                         {
                             AniDBParserAnime();
                         }

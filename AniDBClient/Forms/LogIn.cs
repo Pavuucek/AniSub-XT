@@ -13,6 +13,7 @@ using System.Security.Cryptography;
 using System.Threading;
 using System.Globalization;
 using AniDBClient.Lang;
+using AniDBClient.Utilities;
 
 namespace AniDBClient
 {

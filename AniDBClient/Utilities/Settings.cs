@@ -6,7 +6,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Windows.Forms;
 
-namespace AniDBClient
+namespace AniDBClient.Utilities
 {
     internal class Settings
     {

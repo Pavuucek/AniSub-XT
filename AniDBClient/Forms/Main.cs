@@ -27,17 +27,19 @@ using Cryptography;
 using AniDBClient.Lang;
 using AniDBClient.Pack;
 using AniDBClient.Properties;
+using AniDBClient.Utilities;
 using ZedGraph;
 
 using HttpServer;
 using HttpListener = HttpServer.HttpListener;
+using Settings = AniDBClient.Utilities.Settings;
 
 namespace AniDBClient
 {
     public partial class Main : Form
     {
         private OleDbConnection AniDBDatabase = null;
-        private AniDBClient2 aniDBClient = null;
+        private AniDbClient2 aniDBClient = null;
         private string GlobalAdresar = null;
         private string GlobalAdresarAccount = null;
         private string AniSubV = "84";
@@ -3745,7 +3747,7 @@ namespace AniDBClient
         {
             while (true)
             {
-                if (aniDBClient._Status != AniDBClient2.SocketMsgs.S_SENDING)
+                if (aniDBClient.Status != AniDbClient2.SocketMsgs.SSending)
                     break;
 
                 Thread.Sleep(500);
@@ -3764,24 +3766,24 @@ namespace AniDBClient
         //Získej zprávu + log
         private string CommunicationReceive()
         {
-            if (aniDBClient.SocketAniDB != null)
+            if (aniDBClient.SocketAniDb != null)
             {
                 while (true)
                 {
                     Thread.Sleep(500);
-                    if (aniDBClient._Status != AniDBClient2.SocketMsgs.S_RECEIVEING)
+                    if (aniDBClient.Status != AniDbClient2.SocketMsgs.SReceiveing)
                         break;
                 }
 
                 Thread.Sleep(500);
 
-                int nBytesReceive = aniDBClient.SocketAniDB.Available;
+                int nBytesReceive = aniDBClient.SocketAniDb.Available;
 
                 int k = 0;
 
                 while (nBytesReceive == 0)
                 {
-                    nBytesReceive = aniDBClient.SocketAniDB.Available;
+                    nBytesReceive = aniDBClient.SocketAniDb.Available;
                     Thread.Sleep(500);
                     k++;
                     if (k > 10)
@@ -4138,7 +4140,7 @@ namespace AniDBClient
             {
                 ComunicationW_ReLogIn = false;
 
-                aniDBClient = new AniDBClient2(Options_ServerName.Text, (int)Options_ServerPort.Value, (int)Options_LocalPort.Value, (int)Options_TimeOut.Value, Options_Network.SelectedItem.ToString());
+                aniDBClient = new AniDbClient2(Options_ServerName.Text, (int)Options_ServerPort.Value, (int)Options_LocalPort.Value, (int)Options_TimeOut.Value, Options_Network.SelectedItem.ToString());
 
                 aniDBClient.Connnect();
 

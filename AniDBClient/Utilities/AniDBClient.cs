@@ -4,44 +4,44 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 
-namespace AniDBClient
+namespace AniDBClient.Utilities
 {
-    public class AniDBClient2
+    public class AniDbClient2
     {
         //Zprávy
         public enum SocketMsgs
         {
-            S_DISCONNECT = 0x0000,
-            S_CONNECT = 0x0001,
-            S_SEND = 0x0002,
-            S_RECEIVE = 0x0003,
-            S_SENDING = 0x0004,
-            S_RECEIVEING = 0x0005
+            SDisconnect = 0x0000,
+            SConnect = 0x0001,
+            SSend = 0x0002,
+            SReceive = 0x0003,
+            SSending = 0x0004,
+            SReceiveing = 0x0005
         }
 
-        public SocketMsgs _Status = SocketMsgs.S_DISCONNECT;
-        public IPHostEntry localHostEntry;
-        public IPEndPoint localIpEndPoint;
-        public IPEndPoint receivedEndPoint;
-        public IPHostEntry receivedHostEntry;
-        public EndPoint receiverRemote;
-        public IPHostEntry remoteHostEntry;
-        public IPEndPoint remoteIpEndPoint;
-        public EndPoint senderRemote;
-        public Socket SocketAniDB;
-        private readonly int _LocalPort;
-        private readonly string[] _netGW;
-        private readonly string _ServerName;
-        private readonly int _ServerPort;
-        private readonly int _TimeOut;
+        public SocketMsgs Status = SocketMsgs.SDisconnect;
+        public IPHostEntry LocalHostEntry;
+        public IPEndPoint LocalIpEndPoint;
+        public IPEndPoint ReceivedEndPoint;
+        public IPHostEntry ReceivedHostEntry;
+        public EndPoint ReceiverRemote;
+        public IPHostEntry RemoteHostEntry;
+        public IPEndPoint RemoteIpEndPoint;
+        public EndPoint SenderRemote;
+        public Socket SocketAniDb;
+        private readonly int _localPort;
+        private readonly string[] _netGw;
+        private readonly string _serverName;
+        private readonly int _serverPort;
+        private readonly int _timeOut;
 
-        public AniDBClient2(string serverName, int serverPort, int localPort, int timeOut, string netGW)
+        public AniDbClient2(string serverName, int serverPort, int localPort, int timeOut, string netGW)
         {
-            _ServerName = serverName;
-            _ServerPort = serverPort;
-            _LocalPort = localPort;
-            _TimeOut = timeOut*1000;
-            _netGW = netGW.Split(new[] {" * "}, StringSplitOptions.None);
+            _serverName = serverName;
+            _serverPort = serverPort;
+            _localPort = localPort;
+            _timeOut = timeOut*1000;
+            _netGw = netGW.Split(new[] {" * "}, StringSplitOptions.None);
         }
 
         //Připojení k serveru
@@ -49,20 +49,20 @@ namespace AniDBClient
         {
             try
             {
-                SocketAniDB = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
-                SocketAniDB.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReceiveTimeout, _TimeOut);
-                SocketAniDB.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.DontRoute, true);
-                SocketAniDB.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
+                SocketAniDb = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
+                SocketAniDb.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReceiveTimeout, _timeOut);
+                SocketAniDb.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.DontRoute, true);
+                SocketAniDb.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
 
-                localHostEntry = Dns.GetHostByName(Dns.GetHostName());
+                LocalHostEntry = Dns.GetHostByName(Dns.GetHostName());
 
                 var k = 0;
 
-                if (_netGW.Length == 3)
+                if (_netGw.Length == 3)
                 {
-                    for (var i = 0; i < localHostEntry.AddressList.Length; i++)
+                    for (var i = 0; i < LocalHostEntry.AddressList.Length; i++)
                     {
-                        if (localHostEntry.AddressList[i].ToString() == _netGW[2])
+                        if (LocalHostEntry.AddressList[i].ToString() == _netGw[2])
                         {
                             k = i;
                             break;
@@ -70,16 +70,16 @@ namespace AniDBClient
                     }
                 }
 
-                localIpEndPoint = new IPEndPoint(localHostEntry.AddressList[k], _LocalPort);
-                senderRemote = localIpEndPoint;
-                SocketAniDB.Bind(localIpEndPoint);
+                LocalIpEndPoint = new IPEndPoint(LocalHostEntry.AddressList[k], _localPort);
+                SenderRemote = LocalIpEndPoint;
+                SocketAniDb.Bind(LocalIpEndPoint);
 
-                remoteHostEntry = Dns.GetHostByName(_ServerName);
-                remoteIpEndPoint = new IPEndPoint(remoteHostEntry.AddressList[0], _ServerPort);
-                receiverRemote = remoteIpEndPoint;
-                SocketAniDB.Connect(remoteIpEndPoint);
+                RemoteHostEntry = Dns.GetHostByName(_serverName);
+                RemoteIpEndPoint = new IPEndPoint(RemoteHostEntry.AddressList[0], _serverPort);
+                ReceiverRemote = RemoteIpEndPoint;
+                SocketAniDb.Connect(RemoteIpEndPoint);
 
-                _Status = SocketMsgs.S_CONNECT;
+                Status = SocketMsgs.SConnect;
             }
             catch (Exception e)
             {
@@ -102,19 +102,19 @@ namespace AniDBClient
         //Odeslání dat
         public void Send(byte[] buffer, int offset, int size)
         {
-            if (SocketAniDB != null)
+            if (SocketAniDb != null)
             {
-                _Status = SocketMsgs.S_SENDING;
+                Status = SocketMsgs.SSending;
 
                 var startTickCount = Environment.TickCount;
                 var sent = 0; // how many bytes is already sent
                 do
                 {
-                    if (Environment.TickCount > startTickCount + _TimeOut)
+                    if (Environment.TickCount > startTickCount + _timeOut)
                         break;
                     try
                     {
-                        sent += SocketAniDB.Send(buffer, offset + sent, size - sent, SocketFlags.None);
+                        sent += SocketAniDb.Send(buffer, offset + sent, size - sent, SocketFlags.None);
                     }
                     catch (SocketException ex)
                     {
@@ -128,28 +128,28 @@ namespace AniDBClient
                     }
                 } while (sent < size);
 
-                _Status = SocketMsgs.S_SEND;
+                Status = SocketMsgs.SSend;
             }
             else
-                _Status = SocketMsgs.S_DISCONNECT;
+                Status = SocketMsgs.SDisconnect;
         }
 
         //Příjem dat
         public byte[] Receive(byte[] buffer, int offset, int size)
         {
-            if (SocketAniDB.Connected)
+            if (SocketAniDb.Connected)
             {
-                _Status = SocketMsgs.S_RECEIVEING;
+                Status = SocketMsgs.SReceiveing;
 
                 var startTickCount = Environment.TickCount;
                 var received = 0; // how many bytes is already received
                 do
                 {
-                    if (Environment.TickCount > startTickCount + _TimeOut)
+                    if (Environment.TickCount > startTickCount + _timeOut)
                         break;
                     try
                     {
-                        received += SocketAniDB.Receive(buffer, offset + received, size - received, SocketFlags.None);
+                        received += SocketAniDb.Receive(buffer, offset + received, size - received, SocketFlags.None);
                     }
                     catch (SocketException ex)
                     {
@@ -163,11 +163,11 @@ namespace AniDBClient
                     }
                 } while (received < size);
 
-                _Status = SocketMsgs.S_RECEIVE;
+                Status = SocketMsgs.SReceive;
 
                 return buffer;
             }
-            _Status = SocketMsgs.S_DISCONNECT;
+            Status = SocketMsgs.SDisconnect;
             return ConvertToByte("DISCONNECT");
         }
 
@@ -176,16 +176,16 @@ namespace AniDBClient
         {
             try
             {
-                SocketAniDB.Shutdown(SocketShutdown.Both);
-                SocketAniDB.Close();
-                SocketAniDB = null;
+                SocketAniDb.Shutdown(SocketShutdown.Both);
+                SocketAniDb.Close();
+                SocketAniDb = null;
             }
             catch
             {
-                SocketAniDB = null;
+                SocketAniDb = null;
             }
 
-            _Status = SocketMsgs.S_DISCONNECT;
+            Status = SocketMsgs.SDisconnect;
         }
     }
 }

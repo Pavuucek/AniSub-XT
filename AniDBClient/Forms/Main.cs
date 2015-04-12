@@ -11724,7 +11724,7 @@ namespace AniDBClient.Forms
         //Vyber adresář
         private void Hash_Cesta_Click(object sender, EventArgs e)
         {
-            Nacti_Hash(FileHelpers.OpenDirectoryDialog(""), Options_CH13.Checked);
+            Nacti_Hash(FileHelpers.OpenDirectoryDialog("", Options_CH13.Checked));
         }
 
         private List<DirectoryInfo> Hash_Directories(string Cesta)

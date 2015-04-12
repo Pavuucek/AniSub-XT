@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,35 +6,30 @@ using System.Data.OleDb;
 using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
 using System.Globalization;
-using System.Linq;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Net.NetworkInformation;
-using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows.Forms;
 using System.Xml;
-using System.Drawing.Imaging;
-using System.Security.Cryptography;
-using AniDBClient.Forms;
-using WinAPI;
-using Cryptography;
 using AniDBClient.Lang;
 using AniDBClient.Pack;
 using AniDBClient.Properties;
 using AniDBClient.Utilities;
-using ZedGraph;
-
+using Cryptography;
 using HttpServer;
-using Calendar = AniDBClient.Forms.Calendar;
+using WinAPI;
+using ZedGraph;
 using HttpListener = HttpServer.HttpListener;
 using Settings = AniDBClient.Utilities.Settings;
 
-namespace AniDBClient
+namespace AniDBClient.Forms
 {
     public partial class Main : Form
     {
@@ -110,21 +104,21 @@ namespace AniDBClient
             this.InitializeComponent();
 
             foreach (Control Cont in this.Controls)
-                SortControls(GetAllControls(Cont));
+                ControlHelpers.SortControls(ControlHelpers.GetAllControls(Cont));
 
-            SetDoubleBuffered(Rules_Replace);
-            SetDoubleBuffered(DataAnime);
-            SetDoubleBuffered(DataFiles);
-            SetDoubleBuffered(AnimeData);
-            SetDoubleBuffered(DataGenres);
-            SetDoubleBuffered(DataGroups);
-            SetDoubleBuffered(DataSearch);
-            SetDoubleBuffered(Manga_Data);
-            SetDoubleBuffered(DataSQL);
-            SetDoubleBuffered(MangaSearch);
-            SetDoubleBuffered(Manga_ChaptersDT);
-            SetDoubleBuffered(WEB);
-            SetDoubleBuffered(MyListAnime);
+            ControlHelpers.SetDoubleBuffered(Rules_Replace);
+            ControlHelpers.SetDoubleBuffered(DataAnime);
+            ControlHelpers.SetDoubleBuffered(DataFiles);
+            ControlHelpers.SetDoubleBuffered(AnimeData);
+            ControlHelpers.SetDoubleBuffered(DataGenres);
+            ControlHelpers.SetDoubleBuffered(DataGroups);
+            ControlHelpers.SetDoubleBuffered(DataSearch);
+            ControlHelpers.SetDoubleBuffered(Manga_Data);
+            ControlHelpers.SetDoubleBuffered(DataSQL);
+            ControlHelpers.SetDoubleBuffered(MangaSearch);
+            ControlHelpers.SetDoubleBuffered(Manga_ChaptersDT);
+            ControlHelpers.SetDoubleBuffered(WEB);
+            ControlHelpers.SetDoubleBuffered(MyListAnime);
 
             Options_Network.Items.Add("");
             Options_Network.SelectedIndex = 0;
@@ -143,53 +137,6 @@ namespace AniDBClient
                         }
                     }
                 }
-            }
-        }
-
-        public static void SetDoubleBuffered(System.Windows.Forms.Control c)
-        {
-            if (System.Windows.Forms.SystemInformation.TerminalServerSession)
-                return;
-
-            System.Reflection.PropertyInfo aProp = typeof(System.Windows.Forms.Control).GetProperty("DoubleBuffered", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
-
-            aProp.SetValue(c, true, null);
-        }
-
-        //Srovnání prvků+
-        public List<Control> GetAllControls(Control Con)
-        {
-            List<Control> Cons = new List<Control>();
-
-            Cons.Add(Con);
-
-            foreach (Control Cont in Con.Controls)
-            {
-                List<Control> Conts = GetAllControls(Cont);
-
-                foreach (Control C in Conts)
-                    Cons.Add(C);
-            }
-
-            return Cons;
-        }
-
-        public void SortControls(List<Control> Con)
-        {
-            Con.Sort(new ControlsSorter());
-
-            int k = 1;
-            foreach (Control Cont in Con)
-            {
-                try
-                {
-                    Cont.TabIndex = k;
-                }
-                catch
-                {
-                }
-
-                k++;
             }
         }
 
@@ -1335,7 +1282,7 @@ namespace AniDBClient
         //Změna účtu
         private void Options_AccountChange_Click(object sender, EventArgs e)
         {
-            FileDelete(GlobalAdresar + @"AniSub-Account.hash");
+            FileHelpers.FileDelete(GlobalAdresar + @"AniSub-Account.hash");
 
             this.MainTab.Enabled = false;
             if (!Options_AccountLoad(false))
@@ -1369,7 +1316,7 @@ namespace AniDBClient
                     foreach (FileInfo Soubor in Adresar.GetFiles())
                     {
                         if (Soubor.Length == 0)
-                            FileDelete(Soubor.FullName);
+                            FileHelpers.FileDelete(Soubor.FullName);
                     }
 
                     Adresar = new DirectoryInfo(GlobalAdresar + @"Accounts\!rename\");
@@ -1422,7 +1369,7 @@ namespace AniDBClient
 
                     Hash_Check();
 
-                    FileDelete(GlobalAdresarAccount + ".enc");
+                    FileHelpers.FileDelete(GlobalAdresarAccount + ".enc");
 
                     MainTab.MouseMove += new MouseEventHandler(Tab_MouseMove);
                     MainTabData.MouseMove += new MouseEventHandler(Tab_MouseMove);
@@ -1502,7 +1449,7 @@ namespace AniDBClient
                     DirectoryInfo Adresar = new DirectoryInfo(GlobalAdresar + "Manual");
 
                     foreach (FileInfo Soubor in Adresar.GetFiles("index.en-US-Full-*.html"))
-                        FileDelete(Soubor.FullName);
+                        FileHelpers.FileDelete(Soubor.FullName);
 
                     for (int i = 1; i <= c; i++)
                         lists += "<a href=\"" + GlobalAdresar + "Manual\\index.en-US-Full-" + i.ToString() + ".html\">" + i + "</a> ";
@@ -1585,7 +1532,7 @@ namespace AniDBClient
                 && File.Exists(GlobalAdresar + @"Accounts\" + Ucet + @"\" + Ucet + ".mdb"))
                 File.Copy(GlobalAdresar + @"Accounts\" + Ucet + @"\" + Ucet + ".mdb", GlobalAdresar + @"Accounts\" + Ucet + @"\" + Ucet + "-" + datum + ".mdb");
 
-            FileDelete(GlobalAdresar + @"Accounts\" + Ucet + @"\" + Ucet + "-B.mdb");
+            FileHelpers.FileDelete(GlobalAdresar + @"Accounts\" + Ucet + @"\" + Ucet + "-B.mdb");
 
             DirectoryInfo Adresar = new DirectoryInfo(GlobalAdresar + @"Accounts\" + Ucet + @"\");
 
@@ -1599,7 +1546,7 @@ namespace AniDBClient
                 Soubory.Sort(delegate(FileInfo x, FileInfo y) { return x.Name.CompareTo(y.Name); });
 
                 if (Soubory.Count > Options_Backup.Value + 1)
-                    FileDelete(Soubory[1].FullName);
+                    FileHelpers.FileDelete(Soubory[1].FullName);
                 else
                     break;
             }
@@ -1750,7 +1697,7 @@ namespace AniDBClient
 
             string datum = DateTime.Now.Year.ToString() + "-" + String.Format("{0:00}", DateTime.Now.Month) + "-" + String.Format("{0:00}", DateTime.Now.Day);
 
-            FileDelete(GlobalAdresar + @"Accounts\" + Ucet + @"\" + Ucet + "-" + datum + ".mdb");
+            FileHelpers.FileDelete(GlobalAdresar + @"Accounts\" + Ucet + @"\" + Ucet + "-" + datum + ".mdb");
 
             if (!File.Exists(GlobalAdresar + @"Accounts\" + Ucet + @"\" + Ucet + "-" + datum + ".mdb"))
                 File.Copy(GlobalAdresar + @"Accounts\" + Ucet + @"\" + Ucet + ".mdb", GlobalAdresar + @"Accounts\" + Ucet + @"\" + Ucet + "-" + datum + ".mdb");
@@ -3305,11 +3252,11 @@ namespace AniDBClient
                 if (AniDBDatabase != null)
                     this.AniDBDatabase.Close();
 
-                FileDelete(GlobalAdresar + @"AniSub-MyList.log");
-                FileDelete(GlobalAdresar + @"avdumpLog.txt");
+                FileHelpers.FileDelete(GlobalAdresar + @"AniSub-MyList.log");
+                FileHelpers.FileDelete(GlobalAdresar + @"avdumpLog.txt");
 
                 EncDec.Encrypt(GlobalAdresarAccount, GlobalAdresarAccount + ".enc", "4651511fac9cbbc80c8417779620b893");
-                FileDelete(GlobalAdresarAccount);
+                FileHelpers.FileDelete(GlobalAdresarAccount);
 
                 DatabaseCompact(GlobalAdresarAccount.Substring(0, GlobalAdresarAccount.Length - 3).Replace(" ", "?") + "mdb");
 
@@ -5207,14 +5154,14 @@ namespace AniDBClient
         //Smaž rename
         private void Rules_FilesRulesRenameDel_Click(object sender, EventArgs e)
         {
-            FileDelete(GlobalAdresar + @"Accounts\!rename\" + Rules_FilesRulesRenameC.Text + ".txt");
+            FileHelpers.FileDelete(GlobalAdresar + @"Accounts\!rename\" + Rules_FilesRulesRenameC.Text + ".txt");
             Rules_FilesRulesRenameC.Items.Remove(Rules_FilesRulesRenameC.Text);
         }
 
         //Smaž move
         private void Rules_FilesRulesMoveDel_Click(object sender, EventArgs e)
         {
-            FileDelete(GlobalAdresar + @"Accounts\!move\" + Rules_FilesRulesMoveC.Text + ".txt");
+            FileHelpers.FileDelete(GlobalAdresar + @"Accounts\!move\" + Rules_FilesRulesMoveC.Text + ".txt");
             Rules_FilesRulesMoveC.Items.Remove(Rules_FilesRulesMoveC.Text);
         }
 
@@ -5291,7 +5238,7 @@ namespace AniDBClient
                         {
                             if (File.Exists(DPath + DSoubor + Soubor.Extension))
                             {
-                                FileDelete(DPath + DSoubor + Soubor.Extension);
+                                FileHelpers.FileDelete(DPath + DSoubor + Soubor.Extension);
                                 FRename = true;
                             }
                             else
@@ -7000,7 +6947,7 @@ namespace AniDBClient
         //Smaž Info
         private void Rules_InfoDell_Click(object sender, EventArgs e)
         {
-            FileDelete(GlobalAdresar + @"Accounts\!info\" + Rules_InfoC.Text + ".txt");
+            FileHelpers.FileDelete(GlobalAdresar + @"Accounts\!info\" + Rules_InfoC.Text + ".txt");
             Rules_InfoC.Items.Remove(Rules_InfoC.Text);
         }
 
@@ -9389,7 +9336,7 @@ namespace AniDBClient
                     {
                         img = resizeImage(img, new Size(225, 279));
 
-                        FileDelete(GlobalAdresar + @"Accounts\!imgs\" + DAnime.Rows[0]["anime_obr"].ToString());
+                        FileHelpers.FileDelete(GlobalAdresar + @"Accounts\!imgs\" + DAnime.Rows[0]["anime_obr"].ToString());
                         img.Save(GlobalAdresar + @"Accounts\!imgs\" + DAnime.Rows[0]["anime_obr"].ToString(), System.Drawing.Imaging.ImageFormat.Jpeg);
                     }
 
@@ -9397,7 +9344,7 @@ namespace AniDBClient
                 }
                 catch
                 {
-                    FileDelete(GlobalAdresar + @"Accounts\!imgs\" + DAnime.Rows[0]["anime_obr"].ToString());
+                    FileHelpers.FileDelete(GlobalAdresar + @"Accounts\!imgs\" + DAnime.Rows[0]["anime_obr"].ToString());
                 }
             }
 
@@ -9496,7 +9443,7 @@ namespace AniDBClient
                 if (img.Height > 279 || img.Width > 255)
                 {
                     img = resizeImage(img, new Size(225, 279));
-                    FileDelete(GlobalAdresar + @"Accounts\!imgs\" + DAnime.Rows[0]["anime_obr"].ToString());
+                    FileHelpers.FileDelete(GlobalAdresar + @"Accounts\!imgs\" + DAnime.Rows[0]["anime_obr"].ToString());
                     img.Save(GlobalAdresar + @"Accounts\!imgs\" + DAnime.Rows[0]["anime_obr"].ToString(), System.Drawing.Imaging.ImageFormat.Jpeg);
                 }
 
@@ -9733,8 +9680,8 @@ namespace AniDBClient
                 AnimeData[8, RowIndex + 1].Value = Rip;
                 AnimeData[9, RowIndex + 1].Value = Extension;
                 AnimeData[10, RowIndex + 1].Value = Video;
-                AnimeData[11, RowIndex + 1].Value = FilesLangAudio(row["files_dub"].ToString());
-                AnimeData[12, RowIndex + 1].Value = FilesLangSub(row["files_sub"].ToString());
+                AnimeData[11, RowIndex + 1].Value = FileHelpers.FilesLangAudio(row["files_dub"].ToString());
+                AnimeData[12, RowIndex + 1].Value = FileHelpers.FilesLangSub(row["files_sub"].ToString());
 
                 AnimeData.Rows[RowIndex + 1].Cells[3].Style.Alignment = DataGridViewContentAlignment.MiddleLeft;
             }
@@ -10078,7 +10025,7 @@ namespace AniDBClient
 
             Anime_Img.BackgroundImage = new Bitmap(1, 1);
 
-            FileDelete(GlobalAdresar + @"Accounts\!imgs\" + DAnime.Rows[0]["anime_obr"].ToString());
+            FileHelpers.FileDelete(GlobalAdresar + @"Accounts\!imgs\" + DAnime.Rows[0]["anime_obr"].ToString());
 
             if (DAnime.Rows[0]["anime_obr"].ToString() != "")
             {
@@ -10240,7 +10187,7 @@ namespace AniDBClient
                 DatabaseAdd("DELETE FROM manga_anime WHERE id_anime=" + AnimeTree.SelectedNode.Name);
 
                 if (DAnime.Rows.Count > 0)
-                    FileDelete(GlobalAdresar + @"Accounts\!imgs\" + DAnime.Rows[0]["anime_obr"].ToString());
+                    FileHelpers.FileDelete(GlobalAdresar + @"Accounts\!imgs\" + DAnime.Rows[0]["anime_obr"].ToString());
 
                 DatabaseSelectAnimeTree(1);
             }
@@ -11455,472 +11402,11 @@ namespace AniDBClient
         #endregion
 
         #region Funkce
-        //Smazání souboru
-        private void FileDelete(string Path)
-        {
-            if (File.Exists(Path))
-                try
-                {
-                    File.Delete(Path);
-                }
-                catch
-                {
-                }
-        }
+        
 
-        //Ikonka  pro audio
-        private Image FilesLangAudio(string Lang)
-        {
-            Lang = Lang.ToLower();
-            string[] LangT = Lang.Replace(" (unspecified)", "").Split('\'');
-            Image[] Audio = new Image[LangT.Length];
+        
 
-            for (int i = 0; i < LangT.Length; i++)
-                switch (LangT[i])
-                {
-                    case "albanian":
-                        Audio[i] = Resources.anidb_audio_albanian;
-                        break;
-
-                    case "arabic":
-                        Audio[i] = Resources.anidb_audio_arabic;
-                        break;
-
-                    case "bengali":
-                        Audio[i] = Resources.anidb_audio_bengali;
-                        break;
-
-                    case "brasilian":
-                        Audio[i] = Resources.anidb_audio_brasilian;
-                        break;
-
-                    case "bulgarian":
-                        Audio[i] = Resources.anidb_audio_bulgarian;
-                        break;
-
-                    case "cantonese":
-                        Audio[i] = Resources.anidb_audio_cantonese;
-                        break;
-
-                    case "catalan":
-                        Audio[i] = Resources.anidb_audio_catalan;
-                        break;
-
-                    case "croatian":
-                        Audio[i] = Resources.anidb_audio_croatian;
-                        break;
-
-                    case "czech":
-                        Audio[i] = Resources.anidb_audio_czech;
-                        break;
-
-                    case "danish":
-                        Audio[i] = Resources.anidb_audio_danish;
-                        break;
-
-                    case "dutch":
-                        Audio[i] = Resources.anidb_audio_dutch;
-                        break;
-
-                    case "estonian":
-                        Audio[i] = Resources.anidb_audio_estonian;
-                        break;
-
-                    case "finnish":
-                        Audio[i] = Resources.anidb_audio_finnish;
-                        break;
-
-                    case "french":
-                        Audio[i] = Resources.anidb_audio_french;
-                        break;
-
-                    case "georgian":
-                        Audio[i] = Resources.anidb_audio_georgian;
-                        break;
-
-                    case "german":
-                        Audio[i] = Resources.anidb_audio_german;
-                        break;
-
-                    case "hebrew":
-                        Audio[i] = Resources.anidb_audio_hebrew;
-                        break;
-
-                    case "hungarian":
-                        Audio[i] = Resources.anidb_audio_hungarian;
-                        break;
-
-                    case "chinese":
-                        Audio[i] = Resources.anidb_audio_chinese;
-                        break;
-
-                    case "icelandic":
-                        Audio[i] = Resources.anidb_audio_icelandic;
-                        break;
-
-                    case "indonesian":
-                        Audio[i] = Resources.anidb_audio_indonesian;
-                        break;
-
-                    case "instrumental":
-                        Audio[i] = Resources.anidb_audio_instrumental;
-                        break;
-
-                    case "italian":
-                        Audio[i] = Resources.anidb_audio_italian;
-                        break;
-
-                    case "korean":
-                        Audio[i] = Resources.anidb_audio_korean;
-                        break;
-
-                    case "latin":
-                        Audio[i] = Resources.anidb_audio_latin;
-                        break;
-
-                    case "lithuanian":
-                        Audio[i] = Resources.anidb_audio_lithuanian;
-                        break;
-
-                    case "malay":
-                        Audio[i] = Resources.anidb_audio_malay;
-                        break;
-
-                    case "mandarin":
-                        Audio[i] = Resources.anidb_audio_mandarin;
-                        break;
-
-                    case "norwegian":
-                        Audio[i] = Resources.anidb_audio_norwegian;
-                        break;
-
-                    case "polish":
-                        Audio[i] = Resources.anidb_audio_polish;
-                        break;
-
-                    case "portuguese":
-                        Audio[i] = Resources.anidb_audio_portuguese;
-                        break;
-
-                    case "romania":
-                        Audio[i] = Resources.anidb_audio_romanian;
-                        break;
-
-                    case "serbian":
-                        Audio[i] = Resources.anidb_audio_serbian;
-                        break;
-
-                    case "simplified":
-                        Audio[i] = Resources.anidb_audio_simplified;
-                        break;
-
-                    case "slovak":
-                        Audio[i] = Resources.anidb_audio_slovak;
-                        break;
-
-                    case "slovenian":
-                        Audio[i] = Resources.anidb_audio_slovenian;
-                        break;
-
-                    case "spanish":
-                        Audio[i] = Resources.anidb_audio_spanish;
-                        break;
-
-                    case "swedish":
-                        Audio[i] = Resources.anidb_audio_swedish;
-                        break;
-
-                    case "taiwanese":
-                        Audio[i] = Resources.anidb_audio_taiwanese;
-                        break;
-
-                    case "tamil":
-                        Audio[i] = Resources.anidb_audio_tamil;
-                        break;
-
-                    case "tartar":
-                        Audio[i] = Resources.anidb_audio_tartar;
-                        break;
-
-                    case "thai":
-                        Audio[i] = Resources.anidb_audio_thai;
-                        break;
-
-                    case "traditional":
-                        Audio[i] = Resources.anidb_audio_traditional;
-                        break;
-
-                    case "turkish":
-                        Audio[i] = Resources.anidb_audio_turkish;
-                        break;
-
-                    case "ukrainian":
-                        Audio[i] = Resources.anidb_audio_ukrainian;
-                        break;
-
-                    case "unknown":
-                        Audio[i] = Resources.anidb_audio_unknown;
-                        break;
-
-                    case "vietnamese":
-                        Audio[i] = Resources.anidb_audio_vietnamese;
-                        break;
-
-                    case "japanese":
-                        Audio[i] = Resources.anidb_audio_japanese;
-                        break;
-
-                    case "english":
-                        Audio[i] = Resources.anidb_audio_english;
-                        break;
-
-                    default:
-                        Audio[i] = Resources.anidb_audio_unknown;
-                        break;
-                }
-
-            int NWidth = 0;
-            int NOffset = 0;
-
-            for (int i = 0; i < LangT.Length; i++)
-                NWidth += Audio[i].Width + 1;
-
-            Bitmap ImgR = new Bitmap(NWidth, Audio[0].Height);
-
-            using (Graphics g = Graphics.FromImage(ImgR))
-            {
-                for (int i = 0; i < LangT.Length; i++)
-                {
-                    g.DrawImage(Audio[i], new Point(NOffset, 0));
-                    NOffset += Audio[i].Width + 1;
-                }
-
-                g.Save();
-            }
-
-            return ImgR;
-        }
-
-        //Ikonka pro titulky
-        private Image FilesLangSub(string Lang)
-        {
-            Lang = Lang.ToLower();
-            string[] LangT = Lang.Replace(" (unspecified)", "").Split('\'');
-            Image[] Audio = new Image[LangT.Length];
-
-            for (int i = 0; i < LangT.Length; i++)
-                switch (LangT[i])
-                {
-                    case "albanian":
-                        Audio[i] = Resources.anidb_sub_albanian;
-                        break;
-
-                    case "arabic":
-                        Audio[i] = Resources.anidb_sub_arabic;
-                        break;
-
-                    case "bengali":
-                        Audio[i] = Resources.anidb_sub_bengali;
-                        break;
-
-                    case "brasilian":
-                        Audio[i] = Resources.anidb_sub_brasilian;
-                        break;
-
-                    case "bulgarian":
-                        Audio[i] = Resources.anidb_sub_bulgarian;
-                        break;
-
-                    case "catalan":
-                        Audio[i] = Resources.anidb_sub_catalan;
-                        break;
-
-                    case "croatian":
-                        Audio[i] = Resources.anidb_sub_croatian;
-                        break;
-
-                    case "czech":
-                        Audio[i] = Resources.anidb_sub_czech;
-                        break;
-
-                    case "danish":
-                        Audio[i] = Resources.anidb_sub_danish;
-                        break;
-
-                    case "dutch":
-                        Audio[i] = Resources.anidb_sub_dutch;
-                        break;
-
-                    case "estonian":
-                        Audio[i] = Resources.anidb_sub_estonian;
-                        break;
-
-                    case "finnish":
-                        Audio[i] = Resources.anidb_sub_finnish;
-                        break;
-
-                    case "french":
-                        Audio[i] = Resources.anidb_sub_french;
-                        break;
-
-                    case "georgian":
-                        Audio[i] = Resources.anidb_sub_georgian;
-                        break;
-
-                    case "german":
-                        Audio[i] = Resources.anidb_sub_german;
-                        break;
-
-                    case "hebrew":
-                        Audio[i] = Resources.anidb_sub_hebrew;
-                        break;
-
-                    case "hungarian":
-                        Audio[i] = Resources.anidb_sub_hungarian;
-                        break;
-
-                    case "chinese":
-                        Audio[i] = Resources.anidb_sub_chinese;
-                        break;
-
-                    case "icelandic":
-                        Audio[i] = Resources.anidb_sub_icelandic;
-                        break;
-
-                    case "indonesian":
-                        Audio[i] = Resources.anidb_sub_indonesian;
-                        break;
-
-                    case "italian":
-                        Audio[i] = Resources.anidb_sub_italian;
-                        break;
-
-                    case "korean":
-                        Audio[i] = Resources.anidb_sub_korean;
-                        break;
-
-                    case "latin":
-                        Audio[i] = Resources.anidb_sub_latin;
-                        break;
-
-                    case "lithuanian":
-                        Audio[i] = Resources.anidb_sub_lithuanian;
-                        break;
-
-                    case "malay":
-                        Audio[i] = Resources.anidb_sub_malay;
-                        break;
-
-                    case "norwegian":
-                        Audio[i] = Resources.anidb_sub_norwegian;
-                        break;
-
-                    case "polish":
-                        Audio[i] = Resources.anidb_sub_polish;
-                        break;
-
-                    case "portuguese":
-                        Audio[i] = Resources.anidb_sub_portuguese;
-                        break;
-
-                    case "romania":
-                        Audio[i] = Resources.anidb_sub_romanian;
-                        break;
-
-                    case "serbian":
-                        Audio[i] = Resources.anidb_sub_serbian;
-                        break;
-
-                    case "simplified":
-                        Audio[i] = Resources.anidb_sub_simplified;
-                        break;
-
-                    case "slovak":
-                        Audio[i] = Resources.anidb_sub_slovak;
-                        break;
-
-                    case "slovenian":
-                        Audio[i] = Resources.anidb_sub_slovenian;
-                        break;
-
-                    case "spanish":
-                        Audio[i] = Resources.anidb_sub_spanish;
-                        break;
-
-                    case "swedish":
-                        Audio[i] = Resources.anidb_sub_swedish;
-                        break;
-
-                    case "taiwanese":
-                        Audio[i] = Resources.anidb_sub_taiwanese;
-                        break;
-
-                    case "tamil":
-                        Audio[i] = Resources.anidb_sub_tamil;
-                        break;
-
-                    case "tartar":
-                        Audio[i] = Resources.anidb_sub_tartar;
-                        break;
-
-                    case "thai":
-                        Audio[i] = Resources.anidb_sub_thai;
-                        break;
-
-                    case "traditional":
-                        Audio[i] = Resources.anidb_sub_traditional;
-                        break;
-
-                    case "turkish":
-                        Audio[i] = Resources.anidb_sub_turkish;
-                        break;
-
-                    case "ukrainian":
-                        Audio[i] = Resources.anidb_sub_ukrainian;
-                        break;
-
-                    case "unknown":
-                        Audio[i] = Resources.anidb_sub_unknown;
-                        break;
-
-                    case "vietnamese":
-                        Audio[i] = Resources.anidb_sub_vietnamese;
-                        break;
-
-                    case "japanese":
-                        Audio[i] = Resources.anidb_sub_japanese;
-                        break;
-
-                    case "english":
-                        Audio[i] = Resources.anidb_sub_english;
-                        break;
-
-                    default:
-                        Audio[i] = Resources.anidb_audio_unknown;
-                        break;
-                }
-
-            int NWidth = 0;
-            int NOffset = 0;
-
-            for (int i = 0; i < LangT.Length; i++)
-                NWidth += Audio[i].Width + 1;
-
-            Bitmap ImgR = new Bitmap(NWidth, Audio[0].Height);
-
-            using (Graphics g = Graphics.FromImage(ImgR))
-            {
-                for (int i = 0; i < LangT.Length; i++)
-                {
-                    g.DrawImage(Audio[i], new Point(NOffset, 0));
-                    NOffset += Audio[i].Width + 1;
-                }
-
-                g.Save();
-            }
-
-            return ImgR;
-        }
+        
 
         //Aktualizace MyListu - Full
         private void Options_MyListRefresh_Click(object sender, EventArgs e)
@@ -12480,7 +11966,7 @@ namespace AniDBClient
                                     Cti.Close();
                                     Cti.Dispose();
 
-                                    FileDelete(GlobalAdresar + "avdump.txt");
+                                    FileHelpers.FileDelete(GlobalAdresar + "avdump.txt");
 
                                     Hash_JeSmazano = false;
 
@@ -14123,7 +13609,7 @@ namespace AniDBClient
                 Manga_Data[6, RowIndex + 1].Value = FilesSize(row["manga_chatpers_size"].ToString());
                 Manga_Data[7, RowIndex + 1].Value = row["manga_chatpers_file"].ToString();
                 Manga_Data[8, RowIndex + 1].Value = Read;
-                Manga_Data[9, RowIndex + 1].Value = FilesLangAudio(row["manga_chatpers_lang"].ToString());
+                Manga_Data[9, RowIndex + 1].Value = FileHelpers.FilesLangAudio(row["manga_chatpers_lang"].ToString());
 
                 Manga_Data.Rows[RowIndex + 1].Cells[3].Style.Alignment = DataGridViewContentAlignment.MiddleLeft;
             }
@@ -14564,7 +14050,7 @@ namespace AniDBClient
                     img = resizeImage(img, new Size(225, 279));
                     Manga_Picture.BackgroundImage = img;
 
-                    FileDelete(GlobalAdresar + @"\Accounts\!imgsm\" + ID.ToString() + ".jpg");
+                    FileHelpers.FileDelete(GlobalAdresar + @"\Accounts\!imgsm\" + ID.ToString() + ".jpg");
                     img.Save(GlobalAdresar + @"\Accounts\!imgsm\" + ID.ToString() + ".jpg", System.Drawing.Imaging.ImageFormat.Jpeg);
 
                     DatabaseAdd("UPDATE manga SET manga_obr='" + ID.ToString() + ".jpg' WHERE id_manga=" + ID.ToString());
@@ -15482,7 +14968,7 @@ namespace AniDBClient
                 DatabaseAdd("DELETE FROM manga_genres WHERE id_manga=" + ID);
                 DatabaseAdd("DELETE FROM manga_anime WHERE id_manga=" + ID);
 
-                FileDelete(GlobalAdresar + @"\Accounts\!imgsm\" + ID + ".jpg");
+                FileHelpers.FileDelete(GlobalAdresar + @"\Accounts\!imgsm\" + ID + ".jpg");
                 DatabaseSelectMangaTree(0);
                 MainTabManga.SelectedIndex = 0;
             }

@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Threading;
 using System.Windows.Forms;
+using AniDBClient.Forms;
 using WinAPI;
 
 namespace AniDBClient

@@ -158,7 +158,7 @@
     </Compile>
     <Compile Include="7z\Ole32.cs" />
     <Compile Include="7z\Pack.cs" />
-    <Compile Include="PN.cs">
+    <Compile Include="Utilities\NPanel.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Program.cs" />
@@ -214,6 +214,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Utilities\ControlHelpers.cs" />
+    <Compile Include="Utilities\FileHelpers.cs" />
     <Compile Include="Utilities\Logger.cs" />
     <Compile Include="Utilities\NodeSorter.cs" />
     <Compile Include="Utilities\Settings.cs" />

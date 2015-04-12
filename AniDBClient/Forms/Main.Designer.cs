@@ -1,6 +1,6 @@
 ﻿using ZedGraph;
 
-namespace AniDBClient
+namespace AniDBClient.Forms
 {
     partial class Main
     {

@@ -1,4 +1,4 @@
-﻿namespace AniDBClient
+﻿namespace AniDBClient.Forms
 {
     partial class MyListAdd
     {

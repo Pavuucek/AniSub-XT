@@ -11529,45 +11529,7 @@ namespace AniDBClient.Forms
             InitializeComponentLanguage();
         }
         
-        //Výběr adresáře
-        private string OpenDirectoryDialog(string path)
-        {
-            if (Options_CH13.Checked)
-            {
-                FolderBrowserDialog fbd = new FolderBrowserDialog();
-                fbd.SelectedPath = path;
-
-                if (fbd.ShowDialog() == DialogResult.OK)
-                    return fbd.SelectedPath;
-                else
-                    return "";
-            }
-            else
-            {
-                OpenFileDialog ofd = new OpenFileDialog();
-                ofd.InitialDirectory = path;
-                ofd.CheckPathExists = false;
-                ofd.ShowReadOnly = false;
-                ofd.CheckFileExists = false;
-                ofd.ReadOnlyChecked = false;
-                ofd.ValidateNames = false;
-                ofd.FileName = "Folder";
-                ofd.Filter = "Folders|no.files";
-
-                try
-                {
-                    if (ofd.ShowDialog() == DialogResult.OK)
-                        return Path.GetDirectoryName(ofd.FileName);
-                    else
-                        return "";
-                }
-                catch
-                {
-                    return "";
-                }
-            }
-        }
-
+        
         //Refresh All
         private void StatusBar_Refresh_Click(object sender, EventArgs e)
         {
@@ -11762,7 +11724,7 @@ namespace AniDBClient.Forms
         //Vyber adresář
         private void Hash_Cesta_Click(object sender, EventArgs e)
         {
-            Nacti_Hash(OpenDirectoryDialog(""));
+            Nacti_Hash(FileHelpers.OpenDirectoryDialog(""), Options_CH13.Checked);
         }
 
         private List<DirectoryInfo> Hash_Directories(string Cesta)
@@ -13094,7 +13056,7 @@ namespace AniDBClient.Forms
         //Přidání adresáře
         private void Watcher_Add_Click(object sender, EventArgs e)
         {
-            string path = OpenDirectoryDialog("");
+            string path = FileHelpers.OpenDirectoryDialog("", Options_CH13.Checked);
 
             if (Directory.Exists(path))
             {
@@ -14587,7 +14549,7 @@ namespace AniDBClient.Forms
         //Chapters Directory
         private void Manga_Obr_CHD_Click(object sender, EventArgs e)
         {
-            string path = OpenDirectoryDialog(Manga_Tx19.Text);
+            string path = FileHelpers.OpenDirectoryDialog(Manga_Tx19.Text, Options_CH13.Checked);
 
             if (Directory.Exists(path))
             {

@@ -18,6 +18,7 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows.Forms;
 using System.Xml;
+using AniDBClient.Helpers;
 using AniDBClient.Lang;
 using AniDBClient.Pack;
 using AniDBClient.Properties;

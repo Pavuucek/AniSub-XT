@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Drawing.Drawing2D;
-using System.IO;
-using System.Linq;
-using System.Text;
-using AniDBClient.Properties;
+﻿using System.IO;
 
-namespace AniDBClient.Utilities
+namespace AniDBClient.Helpers
 {
     public static class FileHelpers
     {

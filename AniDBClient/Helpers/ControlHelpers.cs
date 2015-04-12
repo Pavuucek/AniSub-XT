@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Reflection;
-using System.Text;
 using System.Windows.Forms;
+using AniDBClient.Utilities;
 
-namespace AniDBClient.Utilities
+namespace AniDBClient.Helpers
 {
     public static class ControlHelpers
     {

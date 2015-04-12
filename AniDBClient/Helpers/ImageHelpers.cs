@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
+﻿using System.Drawing;
 using System.Drawing.Drawing2D;
-using System.Linq;
-using System.Text;
 using AniDBClient.Properties;
 
-namespace AniDBClient.Utilities
+namespace AniDBClient.Helpers
 {
     public static class ImageHelpers
     {

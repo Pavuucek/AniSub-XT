@@ -8290,7 +8290,7 @@ namespace AniDBClient.Forms
                         {
                             try
                             {
-                                ZapisMD5 = new StreamWriter(AdresarNew.FullName + @"\" + RemoveUnesesaryStrings(AdresarNew.Name) + ".md5", true, UTF8Encoding.UTF8);
+                                ZapisMD5 = new StreamWriter(AdresarNew.FullName + @"\" + StringHelpers.RemoveUnesesaryStrings(AdresarNew.Name) + ".md5", true, UTF8Encoding.UTF8);
                                 ZapisMD5.WriteLine(DFiles.Rows[0]["files_md5"].ToString() + " *" + Soubor.Name);
                                 ZapisMD5.Flush();
                                 ZapisMD5.Close();
@@ -8305,7 +8305,7 @@ namespace AniDBClient.Forms
                         {
                             try
                             {
-                                ZapisCRC = new StreamWriter(AdresarNew.FullName + @"\" + RemoveUnesesaryStrings(AdresarNew.Name) + ".sfv", true, UTF8Encoding.UTF8);
+                                ZapisCRC = new StreamWriter(AdresarNew.FullName + @"\" + StringHelpers.RemoveUnesesaryStrings(AdresarNew.Name) + ".sfv", true, UTF8Encoding.UTF8);
                                 ZapisCRC.WriteLine(Soubor.Name + " " + DFiles.Rows[0]["files_crc32"].ToString());
                                 ZapisCRC.Flush();
                                 ZapisCRC.Close();
@@ -8320,7 +8320,7 @@ namespace AniDBClient.Forms
                         {
                             try
                             {
-                                ZapisED2K = new StreamWriter(AdresarNew.FullName + @"\" + RemoveUnesesaryStrings(AdresarNew.Name) + ".ed2k", true, UTF8Encoding.UTF8);
+                                ZapisED2K = new StreamWriter(AdresarNew.FullName + @"\" + StringHelpers.RemoveUnesesaryStrings(AdresarNew.Name) + ".ed2k", true, UTF8Encoding.UTF8);
                                 ZapisED2K.WriteLine("ed2k://|file|" + Soubor.Name + "|" + Soubor.Length + "|" + DFiles.Rows[0]["files_ed2k"].ToString() + "|");
                                 ZapisED2K.Flush();
                                 ZapisED2K.Close();
@@ -8335,7 +8335,7 @@ namespace AniDBClient.Forms
                         {
                             try
                             {
-                                ZapisSHA1 = new StreamWriter(AdresarNew.FullName + @"\" + RemoveUnesesaryStrings(AdresarNew.Name) + ".sha1", true, UTF8Encoding.UTF8);
+                                ZapisSHA1 = new StreamWriter(AdresarNew.FullName + @"\" + StringHelpers.RemoveUnesesaryStrings(AdresarNew.Name) + ".sha1", true, UTF8Encoding.UTF8);
                                 ZapisSHA1.WriteLine(DFiles.Rows[0]["files_sha1"].ToString() + " *" + Soubor.Name);
                                 ZapisSHA1.Flush();
                                 ZapisSHA1.Close();
@@ -9334,7 +9334,7 @@ namespace AniDBClient.Forms
 
                     if (img.Height > 279 || img.Width > 255)
                     {
-                        img = resizeImage(img, new Size(225, 279));
+                        img = ImageHelpers.resizeImage(img, new Size(225, 279));
 
                         FileHelpers.FileDelete(GlobalAdresar + @"Accounts\!imgs\" + DAnime.Rows[0]["anime_obr"].ToString());
                         img.Save(GlobalAdresar + @"Accounts\!imgs\" + DAnime.Rows[0]["anime_obr"].ToString(), System.Drawing.Imaging.ImageFormat.Jpeg);
@@ -9442,7 +9442,7 @@ namespace AniDBClient.Forms
 
                 if (img.Height > 279 || img.Width > 255)
                 {
-                    img = resizeImage(img, new Size(225, 279));
+                    img = ImageHelpers.resizeImage(img, new Size(225, 279));
                     FileHelpers.FileDelete(GlobalAdresar + @"Accounts\!imgs\" + DAnime.Rows[0]["anime_obr"].ToString());
                     img.Save(GlobalAdresar + @"Accounts\!imgs\" + DAnime.Rows[0]["anime_obr"].ToString(), System.Drawing.Imaging.ImageFormat.Jpeg);
                 }
@@ -9680,8 +9680,8 @@ namespace AniDBClient.Forms
                 AnimeData[8, RowIndex + 1].Value = Rip;
                 AnimeData[9, RowIndex + 1].Value = Extension;
                 AnimeData[10, RowIndex + 1].Value = Video;
-                AnimeData[11, RowIndex + 1].Value = FileHelpers.FilesLangAudio(row["files_dub"].ToString());
-                AnimeData[12, RowIndex + 1].Value = FileHelpers.FilesLangSub(row["files_sub"].ToString());
+                AnimeData[11, RowIndex + 1].Value = ImageHelpers.FilesLangAudio(row["files_dub"].ToString());
+                AnimeData[12, RowIndex + 1].Value = ImageHelpers.FilesLangSub(row["files_sub"].ToString());
 
                 AnimeData.Rows[RowIndex + 1].Cells[3].Style.Alignment = DataGridViewContentAlignment.MiddleLeft;
             }
@@ -10338,11 +10338,11 @@ namespace AniDBClient.Forms
             {
                 g.FillRectangle(new SolidBrush(Color.White), new Rectangle(0, 0, Anime_RatImg.Width, Anime_RatImg.Height));
                 for (int i = 0; i < Anime_Rat.Value; i++)
-                    g.DrawImage(resizeImage(Resources.i_Star, new Size(20, 20)), new Point(0 + i * 20, 0));
+                    g.DrawImage(ImageHelpers.resizeImage(Resources.i_Star, new Size(20, 20)), new Point(0 + i * 20, 0));
 
                 for (int i = (int)Anime_Rat.Value; i < 10; i++)
                 {
-                    Bitmap res = (Bitmap)resizeImage(Resources.i_Star, new Size(20, 20));
+                    Bitmap res = (Bitmap)ImageHelpers.resizeImage(Resources.i_Star, new Size(20, 20));
 
                     ColorMatrix cm = new ColorMatrix();
                     cm.Matrix33 = 0.5f;
@@ -10539,7 +10539,7 @@ namespace AniDBClient.Forms
                         if (File.Exists(GlobalAdresar + @"Accounts\!imgs\" + Anime[i].Key[2].ToString()))
                         {
                             StreamReader Cti = new StreamReader(GlobalAdresar + @"Accounts\!imgs\" + Anime[i].Key[2].ToString());
-                            Bitmap res = (Bitmap)resizeImage(Image.FromStream(Cti.BaseStream), new Size(W, H));
+                            Bitmap res = (Bitmap)ImageHelpers.resizeImage(Image.FromStream(Cti.BaseStream), new Size(W, H));
                             int w = (W - res.Width) / 4;
                             int h = (H - res.Height) / 4;
                             w = w < 0 ? 0 : w;
@@ -11402,11 +11402,6 @@ namespace AniDBClient.Forms
         #endregion
 
         #region Funkce
-        
-
-        
-
-        
 
         //Aktualizace MyListu - Full
         private void Options_MyListRefresh_Click(object sender, EventArgs e)
@@ -11532,55 +11527,7 @@ namespace AniDBClient.Forms
 
             InitializeComponentLanguage();
         }
-
-        //Zmenšit obrázek
-        private static Image resizeImage(Image imgToResize, Size size)
-        {
-            int sourceWidth = imgToResize.Width;
-            int sourceHeight = imgToResize.Height;
-
-            float nPercent = 0;
-            float nPercentW = 0;
-            float nPercentH = 0;
-
-            nPercentW = ((float)size.Width / (float)sourceWidth);
-            nPercentH = ((float)size.Height / (float)sourceHeight);
-
-            if (nPercentH < nPercentW)
-                nPercent = nPercentH;
-            else
-                nPercent = nPercentW;
-
-            if (nPercent > 1)
-                nPercent = 1;
-
-            int destWidth = (int)(sourceWidth * nPercent);
-            int destHeight = (int)(sourceHeight * nPercent);
-
-            Bitmap b = new Bitmap(destWidth, destHeight);
-            Graphics g = Graphics.FromImage((Image)b);
-            g.InterpolationMode = InterpolationMode.HighQualityBicubic;
-
-            g.DrawImage(imgToResize, 0, 0, destWidth, destHeight);
-            g.Dispose();
-
-            return (Image)b;
-        }
-
-        //Odstranění nechtěných znaků
-        private string RemoveUnesesaryStrings(string x)
-        {
-            x = x.Replace("\\", "");
-            x = x.Replace("*", "");
-            x = x.Replace(":", "");
-            x = x.Replace("<", "");
-            x = x.Replace(">", "");
-            x = x.Replace("?", "");
-            x = x.Replace("|", "");
-
-            return x;
-        }
-
+        
         //Výběr adresáře
         private string OpenDirectoryDialog(string path)
         {
@@ -13609,7 +13556,7 @@ namespace AniDBClient.Forms
                 Manga_Data[6, RowIndex + 1].Value = FilesSize(row["manga_chatpers_size"].ToString());
                 Manga_Data[7, RowIndex + 1].Value = row["manga_chatpers_file"].ToString();
                 Manga_Data[8, RowIndex + 1].Value = Read;
-                Manga_Data[9, RowIndex + 1].Value = FileHelpers.FilesLangAudio(row["manga_chatpers_lang"].ToString());
+                Manga_Data[9, RowIndex + 1].Value = ImageHelpers.FilesLangAudio(row["manga_chatpers_lang"].ToString());
 
                 Manga_Data.Rows[RowIndex + 1].Cells[3].Style.Alignment = DataGridViewContentAlignment.MiddleLeft;
             }
@@ -13797,7 +13744,7 @@ namespace AniDBClient.Forms
                             Cti.Close();
                             Cti.Dispose();
 
-                            img = resizeImage(img, new Size(225, 279));
+                            img = ImageHelpers.resizeImage(img, new Size(225, 279));
                             img.Save(GlobalAdresar + @"\Accounts\!imgsm\" + ID.ToString() + ".jpg", System.Drawing.Imaging.ImageFormat.Jpeg);
 
 
@@ -14047,7 +13994,7 @@ namespace AniDBClient.Forms
                     Cti.Close();
                     Cti.Dispose();
 
-                    img = resizeImage(img, new Size(225, 279));
+                    img = ImageHelpers.resizeImage(img, new Size(225, 279));
                     Manga_Picture.BackgroundImage = img;
 
                     FileHelpers.FileDelete(GlobalAdresar + @"\Accounts\!imgsm\" + ID.ToString() + ".jpg");

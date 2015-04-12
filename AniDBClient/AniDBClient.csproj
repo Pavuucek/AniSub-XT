@@ -106,8 +106,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AniDBClient.cs" />
-    <Compile Include="EDCrypt.cs" />
+    <Compile Include="Utilities\AniDBClient.cs" />
+    <Compile Include="Utilities\EDCrypt.cs" />
     <Compile Include="Forms\Backups.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,7 +212,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Settings.cs" />
+    <Compile Include="Utilities\Settings.cs" />
     <Compile Include="7z\SevenZipFormat.cs" />
     <Compile Include="7z\SevenZipInterface.cs" />
     <Compile Include="ShellContextMenu.cs" />
@@ -283,9 +283,7 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Utilities\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

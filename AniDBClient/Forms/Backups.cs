@@ -1,43 +1,37 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
 using System.IO;
+using System.Windows.Forms;
 
-namespace AniDBClient
+namespace AniDBClient.Forms
 {
     public partial class Backups : Form
     {
-        private string GlobalAdresar = "";
-        private string Account = "";
+        private readonly string _account = "";
+        private readonly string _globalAdresar = "";
 
         public Backups(string account, string globalAdresar)
         {
-            GlobalAdresar = globalAdresar;
-            Account = account;
+            _globalAdresar = globalAdresar;
+            _account = account;
 
             InitializeComponent();
 
             BackupsLoad();
         }
-        
+
         //Načtení záloh
         private void BackupsLoad()
         {
-            Backups_List.Items.Clear(); 
+            Backups_List.Items.Clear();
 
-            FileInfo Soubor = new FileInfo(Account);
-            string Ucet = Soubor.Name.Replace(Soubor.Extension, "");
+            var soubor = new FileInfo(_account);
+            var ucet = soubor.Name.Replace(soubor.Extension, "");
 
-            DirectoryInfo Adresar = new DirectoryInfo(GlobalAdresar + @"Accounts\" + Ucet + @"\");
+            var adresar = new DirectoryInfo(_globalAdresar + @"Accounts\" + ucet + @"\");
 
-            foreach (FileInfo x in Adresar.GetFiles("*.mdb"))
+            foreach (var x in adresar.GetFiles("*.mdb"))
             {
-                if (x.Name != Ucet + ".mdb")
+                if (x.Name != ucet + ".mdb")
                     Backups_List.Items.Add(x.Name);
             }
         }
@@ -45,8 +39,8 @@ namespace AniDBClient
         //Zavřít
         private void Backups_KO_Click(object sender, EventArgs e)
         {
-            this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.Close();
+            DialogResult = DialogResult.Cancel;
+            Close();
         }
 
         //Obnovit ze zálohy
@@ -54,14 +48,15 @@ namespace AniDBClient
         {
             if (Backups_List.SelectedIndex >= 0)
             {
-                FileInfo Soubor = new FileInfo(Account);
-                string Ucet = Soubor.Name.Replace(Soubor.Extension, "");
+                var soubor = new FileInfo(_account);
+                var ucet = soubor.Name.Replace(soubor.Extension, "");
 
-                FileDelete(GlobalAdresar + @"Accounts\" + Ucet + @"\" + Ucet + ".mdb");
-                File.Copy(GlobalAdresar + @"Accounts\" + Ucet + @"\" + Backups_List.Items[Backups_List.SelectedIndex], GlobalAdresar + @"Accounts\" + Ucet + @"\" + Ucet + ".mdb");
-                
-                this.DialogResult = System.Windows.Forms.DialogResult.OK;
-                this.Close();
+                FileDelete(_globalAdresar + @"Accounts\" + ucet + @"\" + ucet + ".mdb");
+                File.Copy(_globalAdresar + @"Accounts\" + ucet + @"\" + Backups_List.Items[Backups_List.SelectedIndex],
+                    _globalAdresar + @"Accounts\" + ucet + @"\" + ucet + ".mdb");
+
+                DialogResult = DialogResult.OK;
+                Close();
             }
         }
 
@@ -70,22 +65,22 @@ namespace AniDBClient
         {
             if (Backups_List.SelectedIndex >= 0)
             {
-                FileInfo Soubor = new FileInfo(Account);
-                string Ucet = Soubor.Name.Replace(Soubor.Extension, "");
+                var soubor = new FileInfo(_account);
+                var ucet = soubor.Name.Replace(soubor.Extension, "");
 
-                FileDelete(GlobalAdresar + @"Accounts\" + Ucet + @"\" + Backups_List.Items[Backups_List.SelectedIndex]);
+                FileDelete(_globalAdresar + @"Accounts\" + ucet + @"\" + Backups_List.Items[Backups_List.SelectedIndex]);
 
                 BackupsLoad();
             }
         }
 
         //Smazání souboru
-        private void FileDelete(string Path)
+        private void FileDelete(string path)
         {
-            if (File.Exists(Path))
+            if (File.Exists(path))
                 try
                 {
-                    File.Delete(Path);
+                    File.Delete(path);
                 }
                 catch
                 {

@@ -21,7 +21,7 @@ using System.Windows.Forms;
 using System.Xml;
 using System.Drawing.Imaging;
 using System.Security.Cryptography;
-
+using AniDBClient.Forms;
 using WinAPI;
 using Cryptography;
 using AniDBClient.Lang;

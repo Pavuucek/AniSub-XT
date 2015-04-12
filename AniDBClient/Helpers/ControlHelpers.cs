@@ -12,40 +12,40 @@ namespace AniDBClient.Helpers
             if (SystemInformation.TerminalServerSession)
                 return;
 
-            var aProp = typeof(Control).GetProperty("DoubleBuffered", BindingFlags.NonPublic | BindingFlags.Instance);
+            var aProp = typeof (Control).GetProperty("DoubleBuffered", BindingFlags.NonPublic | BindingFlags.Instance);
 
             aProp.SetValue(c, true, null);
         }
 
         //Srovnání prvků+
 
-        public static List<Control> GetAllControls(Control Con)
+        public static List<Control> GetAllControls(Control con)
         {
-            List<Control> Cons = new List<Control>();
+            var cons = new List<Control>();
 
-            Cons.Add(Con);
+            cons.Add(con);
 
-            foreach (Control Cont in Con.Controls)
+            foreach (Control cont in con.Controls)
             {
-                List<Control> Conts = GetAllControls(Cont);
+                var conts = GetAllControls(cont);
 
-                foreach (Control C in Conts)
-                    Cons.Add(C);
+                foreach (var c in conts)
+                    cons.Add(c);
             }
 
-            return Cons;
+            return cons;
         }
 
-        public static void SortControls(List<Control> Con)
+        public static void SortControls(List<Control> con)
         {
-            Con.Sort(new ControlsSorter());
+            con.Sort(new ControlsSorter());
 
-            int k = 1;
-            foreach (Control Cont in Con)
+            var k = 1;
+            foreach (var cont in con)
             {
                 try
                 {
-                    Cont.TabIndex = k;
+                    cont.TabIndex = k;
                 }
                 catch
                 {

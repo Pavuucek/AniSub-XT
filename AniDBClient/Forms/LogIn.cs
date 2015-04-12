@@ -1,35 +1,32 @@
 ﻿using System;
-using System.IO;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.OleDb;
 using System.Diagnostics;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using System.Security.Cryptography;
-using System.Threading;
 using System.Globalization;
+using System.IO;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading;
+using System.Windows.Forms;
 using AniDBClient.Lang;
 using AniDBClient.Utilities;
 
-namespace AniDBClient
+namespace AniDBClient.Forms
 {
     public partial class LogIn : Form
     {
-        private string GlobalAdresar;
-        public SettingsData settingsData;
-        OleDbConnection AniDBDatabase;
+        private OleDbConnection _aniDbDatabase;
+        public SettingsData SettingsData;
+        private readonly string _globalAdresar;
 
-        public LogIn(string globalAdresar, bool LoadingStart)
+        public LogIn(string globalAdresar, bool loadingStart)
         {
-            this.GlobalAdresar = globalAdresar;
+            _globalAdresar = globalAdresar;
             InitializeComponent();
 
-            if (File.Exists(GlobalAdresar + @"AniSubLogIn.jpg"))
-                this.BackgroundImage = Image.FromFile(GlobalAdresar + @"AniSubLogIn.jpg");
+            if (File.Exists(_globalAdresar + @"AniSubLogIn.jpg"))
+                BackgroundImage = Image.FromFile(_globalAdresar + @"AniSubLogIn.jpg");
 
             LogIn_Language.SelectedIndex = 0;
 
@@ -37,56 +34,62 @@ namespace AniDBClient
             LogIn_LB03.BackColor = Color.Transparent;
             LogIn_LB03.Update();
 
-            SQL();
+            Sql();
 
-            DirectoryInfo Adersar = new DirectoryInfo(this.GlobalAdresar + @"Accounts");
+            var adresar = new DirectoryInfo(_globalAdresar + @"Accounts");
 
-            this.DialogResult = DialogResult.Cancel;
+            DialogResult = DialogResult.Cancel;
 
-            foreach (DirectoryInfo AdresarSub in Adersar.GetDirectories())
+            foreach (var adresarSub in adresar.GetDirectories())
             {
-                if (AdresarSub.Name.Substring(0, 1) != "!")
+                if (adresarSub.Name.Substring(0, 1) != "!")
                 {
-                    LogIn_Accounts.Items.Add(AdresarSub.Name);
-                    if (File.Exists(this.GlobalAdresar + @"AniSub-Account.hash") && LoadingStart)
+                    LogIn_Accounts.Items.Add(adresarSub.Name);
+                    if (File.Exists(_globalAdresar + @"AniSub-Account.hash") && loadingStart)
                     {
-                        if (File.Exists(this.GlobalAdresar + @"Accounts\" + AdresarSub.Name + @"\" + AdresarSub.Name + ".dat.enc"))
-                            EncDec.Decrypt(this.GlobalAdresar + @"Accounts\" + AdresarSub.Name + @"\" + AdresarSub.Name + ".dat.enc", this.GlobalAdresar + @"Accounts\" + AdresarSub.Name + @"\" + AdresarSub.Name + ".dat", "4651511fac9cbbc80c8417779620b893");
+                        if (
+                            File.Exists(_globalAdresar + @"Accounts\" + adresarSub.Name + @"\" + adresarSub.Name +
+                                        ".dat.enc"))
+                            EncDec.Decrypt(
+                                _globalAdresar + @"Accounts\" + adresarSub.Name + @"\" + adresarSub.Name + ".dat.enc",
+                                _globalAdresar + @"Accounts\" + adresarSub.Name + @"\" + adresarSub.Name + ".dat",
+                                "4651511fac9cbbc80c8417779620b893");
 
-                        settingsData = Settings.Settings_Load(this.GlobalAdresar + @"Accounts\" + AdresarSub.Name + @"\" + AdresarSub.Name + ".dat");
+                        SettingsData =
+                            Settings.Settings_Load(_globalAdresar + @"Accounts\" + adresarSub.Name + @"\" +
+                                                   adresarSub.Name + ".dat");
 
-                        if (settingsData != null)
+                        if (SettingsData != null)
                         {
-                            if (settingsData.LoadAutomaticaly)
+                            if (SettingsData.LoadAutomaticaly)
                             {
-                                byte[] bytePass = Encoding.ASCII.GetBytes(settingsData.Pass);
-                                byte[] byteLogin = Encoding.ASCII.GetBytes(settingsData.Name);
+                                var bytePass = Encoding.ASCII.GetBytes(SettingsData.Pass);
+                                var byteLogin = Encoding.ASCII.GetBytes(SettingsData.Name);
 
-                                MD5 md5 = MD5.Create();
-                                SHA1 sha1 = SHA1.Create();
+                                var md5 = MD5.Create();
+                                var sha1 = SHA1.Create();
 
-                                string hashPass = Convert.ToBase64String(md5.ComputeHash(bytePass));
-                                string hashLogin = Convert.ToBase64String(md5.ComputeHash(byteLogin));
+                                var hashPass = Convert.ToBase64String(md5.ComputeHash(bytePass));
+                                var hashLogin = Convert.ToBase64String(md5.ComputeHash(byteLogin));
 
-                                byte[] byteLP = Encoding.ASCII.GetBytes(hashLogin + hashPass);
+                                var byteLp = Encoding.ASCII.GetBytes(hashLogin + hashPass);
 
-                                string HashPass = Convert.ToBase64String(sha1.ComputeHash(byteLP));
+                                var HashPass = Convert.ToBase64String(sha1.ComputeHash(byteLp));
 
-                                StreamReader Cti = new StreamReader(this.GlobalAdresar + @"AniSub-Account.hash");
-                                string HashStream = Cti.ReadLine().Replace("\r", "").Replace("\n", "");
-                                Cti.Close();
+                                var cti = new StreamReader(_globalAdresar + @"AniSub-Account.hash");
+                                var hashStream = cti.ReadLine().Replace("\r", "").Replace("\n", "");
+                                cti.Close();
 
-                                if (HashStream == HashPass)
+                                if (hashStream == HashPass)
                                 {
-                                    this.DialogResult = DialogResult.OK;
-                                    this.Close();
+                                    DialogResult = DialogResult.OK;
+                                    Close();
                                     break;
                                 }
-                                else
-                                    settingsData = null;
+                                SettingsData = null;
                             }
                             else
-                                settingsData = null;
+                                SettingsData = null;
                         }
                     }
                 }
@@ -111,67 +114,71 @@ namespace AniDBClient
         }
 
         //Update databáze v účtě
-        private void SQL()
+        private void Sql()
         {
-            if (File.Exists(GlobalAdresar + @"Update.sql"))
+            if (File.Exists(_globalAdresar + @"Update.sql"))
             {
-                List<string> SQLList = new List<string>();
+                var sqlList = new List<string>();
 
-                StreamReader Cti = new StreamReader(GlobalAdresar + @"Update.sql");
+                var cti = new StreamReader(_globalAdresar + @"Update.sql");
 
-                while (Cti.Peek() >= 0)
-                    SQLList.Add(Cti.ReadLine());
+                while (cti.Peek() >= 0)
+                    sqlList.Add(cti.ReadLine());
 
-                Cti.Close();
-                Cti.Dispose();
+                cti.Close();
+                cti.Dispose();
 
-                DirectoryInfo Adresar = new DirectoryInfo(GlobalAdresar + @"Accounts\");
+                var adresar = new DirectoryInfo(_globalAdresar + @"Accounts\");
 
-                foreach (DirectoryInfo AdresarSub in Adresar.GetDirectories())
+                foreach (var adresarSub in adresar.GetDirectories())
                 {
-                    if (AdresarSub.Name.Substring(0, 1) != "!")
+                    if (adresarSub.Name.Substring(0, 1) != "!")
                         try
                         {
-                            string AniDatabasePripojeni = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=\"" + this.GlobalAdresar + @"Accounts\" + AdresarSub.Name + @"\" + AdresarSub.Name + ".mdb\";User Id=admin;Password=;";
-                            this.AniDBDatabase = new OleDbConnection();
-                            this.AniDBDatabase.ConnectionString = AniDatabasePripojeni;
-                            this.AniDBDatabase.Open();
+                            var aniDatabasePripojeni = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=\"" + _globalAdresar +
+                                                       @"Accounts\" + adresarSub.Name + @"\" + adresarSub.Name +
+                                                       ".mdb\";User Id=admin;Password=;";
+                            _aniDbDatabase = new OleDbConnection();
+                            _aniDbDatabase.ConnectionString = aniDatabasePripojeni;
+                            _aniDbDatabase.Open();
 
-                            foreach (string Radek in SQLList)
-                                DatabaseAdd(Radek);
+                            foreach (var radek in sqlList)
+                                DatabaseAdd(radek);
 
-                            this.AniDBDatabase.Close();
-                            this.AniDBDatabase.Dispose();
+                            _aniDbDatabase.Close();
+                            _aniDbDatabase.Dispose();
 
-                            Process.Start(GlobalAdresar + "AniDBUpdate.exe", (this.GlobalAdresar + @"Accounts\" + AdresarSub.Name + @"\" + AdresarSub.Name).Replace(" ", "?") + ".mdb*" + Process.GetCurrentProcess().MainWindowHandle + "*update");
+                            Process.Start(_globalAdresar + "AniDBUpdate.exe",
+                                (_globalAdresar + @"Accounts\" + adresarSub.Name + @"\" + adresarSub.Name).Replace(" ",
+                                    "?") + ".mdb*" + Process.GetCurrentProcess().MainWindowHandle + "*update");
                         }
                         catch
                         {
                         }
                 }
 
-                File.Delete(GlobalAdresar + @"Update.sql");
+                File.Delete(_globalAdresar + @"Update.sql");
             }
         }
 
         //Přidání/editace/mazání z/do databáze - VOID
         private void DatabaseAdd(string SQLString)
         {
-            AniDBDatabase.ResetState();
+            _aniDbDatabase.ResetState();
 
-            OleDbCommand SQLCommand = new OleDbCommand();
-            SQLCommand.CommandText = SQLString;
-            SQLCommand.Connection = AniDBDatabase;
+            var sqlCommand = new OleDbCommand();
+            sqlCommand.CommandText = SQLString;
+            sqlCommand.Connection = _aniDbDatabase;
 
             try
             {
-                int response = SQLCommand.ExecuteNonQuery();
+                var response = sqlCommand.ExecuteNonQuery();
             }
             catch
             {
             }
 
-            SQLCommand.Dispose();
+            sqlCommand.Dispose();
         }
 
         //Zaregistrovat nový účet
@@ -179,16 +186,18 @@ namespace AniDBClient
         {
             if (!LogIn_Accounts.Items.Contains(LogIn_User.Text))
             {
-                Directory.CreateDirectory(this.GlobalAdresar + @"Accounts\" + LogIn_User.Text);
+                Directory.CreateDirectory(_globalAdresar + @"Accounts\" + LogIn_User.Text);
 
-                settingsData = new SettingsData();
+                SettingsData = new SettingsData();
 
-                settingsData.Pass = LogIn_Password.Text;
-                settingsData.Name = LogIn_User.Text;
+                SettingsData.Pass = LogIn_Password.Text;
+                SettingsData.Name = LogIn_User.Text;
 
-                Settings.Settings_Save(this.GlobalAdresar + @"Accounts\" + LogIn_User.Text + @"\" + LogIn_User.Text + ".dat", settingsData);
+                Settings.Settings_Save(
+                    _globalAdresar + @"Accounts\" + LogIn_User.Text + @"\" + LogIn_User.Text + ".dat", SettingsData);
 
-                File.Copy(this.GlobalAdresar + @"Accounts\OriginalDatabase.mdb", this.GlobalAdresar + @"Accounts\" + LogIn_User.Text + @"\" + LogIn_User.Text + ".mdb");
+                File.Copy(_globalAdresar + @"Accounts\OriginalDatabase.mdb",
+                    _globalAdresar + @"Accounts\" + LogIn_User.Text + @"\" + LogIn_User.Text + ".mdb");
 
                 LogIn_Accounts.Items.Add(LogIn_User.Text);
 
@@ -203,18 +212,21 @@ namespace AniDBClient
         //Přihlásit
         private void LogIn_LogIn_Click(object sender, EventArgs e)
         {
-            if (File.Exists(this.GlobalAdresar + @"Accounts\" + LogIn_User.Text + @"\" + LogIn_User.Text + ".dat.enc"))
-                EncDec.Decrypt(this.GlobalAdresar + @"Accounts\" + LogIn_User.Text + @"\" + LogIn_User.Text + ".dat.enc", this.GlobalAdresar + @"Accounts\" + LogIn_User.Text + @"\" + LogIn_User.Text + ".dat", "4651511fac9cbbc80c8417779620b893");
+            if (File.Exists(_globalAdresar + @"Accounts\" + LogIn_User.Text + @"\" + LogIn_User.Text + ".dat.enc"))
+                EncDec.Decrypt(_globalAdresar + @"Accounts\" + LogIn_User.Text + @"\" + LogIn_User.Text + ".dat.enc",
+                    _globalAdresar + @"Accounts\" + LogIn_User.Text + @"\" + LogIn_User.Text + ".dat",
+                    "4651511fac9cbbc80c8417779620b893");
 
-            settingsData = Settings.Settings_Load(this.GlobalAdresar + @"Accounts\" + LogIn_User.Text + @"\" + LogIn_User.Text + ".dat");
+            SettingsData =
+                Settings.Settings_Load(_globalAdresar + @"Accounts\" + LogIn_User.Text + @"\" + LogIn_User.Text + ".dat");
 
-            if (settingsData == null)
+            if (SettingsData == null)
             {
-                settingsData = new SettingsData();
-                settingsData.Pass = LogIn_Password.Text;
-                settingsData.Name = LogIn_User.Text;
+                SettingsData = new SettingsData();
+                SettingsData.Pass = LogIn_Password.Text;
+                SettingsData.Name = LogIn_User.Text;
 
-                object[] ml = new object[6];
+                var ml = new object[6];
 
                 ml[0] = "";
                 ml[1] = "";
@@ -223,53 +235,57 @@ namespace AniDBClient
                 ml[4] = 0;
                 ml[5] = false;
 
-                settingsData.MyList.Add(ml);
+                SettingsData.MyList.Add(ml);
             }
 
-            if (settingsData.Pass == LogIn_Password.Text)
+            if (SettingsData.Pass == LogIn_Password.Text)
             {
                 if (LogIn_CH01.Checked)
                 {
-                    settingsData.LoadAutomaticaly = true;
-                    settingsData.Language = LogIn_Language.SelectedIndex;
-                    Settings.Settings_Save(this.GlobalAdresar + @"Accounts\" + settingsData.Name + @"\" + settingsData.Name + ".dat", settingsData);
+                    SettingsData.LoadAutomaticaly = true;
+                    SettingsData.Language = LogIn_Language.SelectedIndex;
+                    Settings.Settings_Save(
+                        _globalAdresar + @"Accounts\" + SettingsData.Name + @"\" + SettingsData.Name + ".dat",
+                        SettingsData);
 
-                    StreamWriter Zapis = new StreamWriter(this.GlobalAdresar + @"AniSub-Account.hash", false);
+                    var zapis = new StreamWriter(_globalAdresar + @"AniSub-Account.hash", false);
 
-                    byte[] bytePass = Encoding.ASCII.GetBytes(settingsData.Pass);
-                    byte[] byteLogin = Encoding.ASCII.GetBytes(settingsData.Name);
+                    var bytePass = Encoding.ASCII.GetBytes(SettingsData.Pass);
+                    var byteLogin = Encoding.ASCII.GetBytes(SettingsData.Name);
 
-                    MD5 md5 = MD5.Create();
-                    SHA1 sha1 = SHA1.Create();
+                    var md5 = MD5.Create();
+                    var sha1 = SHA1.Create();
 
-                    string hashPass = Convert.ToBase64String(md5.ComputeHash(bytePass));
-                    string hashLogin = Convert.ToBase64String(md5.ComputeHash(byteLogin));
+                    var hashPass = Convert.ToBase64String(md5.ComputeHash(bytePass));
+                    var hashLogin = Convert.ToBase64String(md5.ComputeHash(byteLogin));
 
-                    byte[] byteLP = Encoding.ASCII.GetBytes(hashLogin + hashPass);
+                    var byteLp = Encoding.ASCII.GetBytes(hashLogin + hashPass);
 
-                    string HashPass = Convert.ToBase64String(sha1.ComputeHash(byteLP));
+                    var HashPass = Convert.ToBase64String(sha1.ComputeHash(byteLp));
 
-                    Zapis.Write(HashPass);
-                    Zapis.Close();
-                    Zapis.Dispose();
+                    zapis.Write(HashPass);
+                    zapis.Close();
+                    zapis.Dispose();
                 }
                 else
                 {
-                    settingsData.LoadAutomaticaly = false;
-                    settingsData.Language = LogIn_Language.SelectedIndex;
-                    Settings.Settings_Save(this.GlobalAdresar + @"Accounts\" + settingsData.Name + @"\" + settingsData.Name + ".dat", settingsData);
+                    SettingsData.LoadAutomaticaly = false;
+                    SettingsData.Language = LogIn_Language.SelectedIndex;
+                    Settings.Settings_Save(
+                        _globalAdresar + @"Accounts\" + SettingsData.Name + @"\" + SettingsData.Name + ".dat",
+                        SettingsData);
 
-                    if (File.Exists(this.GlobalAdresar + @"AniSub-Account.hash"))
-                        File.Delete(this.GlobalAdresar + @"AniSub-Account.hash");
+                    if (File.Exists(_globalAdresar + @"AniSub-Account.hash"))
+                        File.Delete(_globalAdresar + @"AniSub-Account.hash");
                 }
 
-                this.DialogResult = DialogResult.OK;
-                this.Close();
+                DialogResult = DialogResult.OK;
+                Close();
             }
             else
             {
-                this.DialogResult = DialogResult.Retry;
-                settingsData = null;
+                DialogResult = DialogResult.Retry;
+                SettingsData = null;
                 MessageBox.Show(Language.MessageBox_LogInI, Language.MessageBox_LogIn);
             }
         }
@@ -292,7 +308,7 @@ namespace AniDBClient
         //Kontrola účtu
         private void LogIn_User_TextChanged(object sender, EventArgs e)
         {
-            if (Directory.Exists(this.GlobalAdresar + @"Accounts\" + LogIn_User.Text))
+            if (Directory.Exists(_globalAdresar + @"Accounts\" + LogIn_User.Text))
             {
                 LogIn_LogIn.Enabled = true;
                 LogIn_Register.Enabled = false;
@@ -323,8 +339,8 @@ namespace AniDBClient
         //Odhlášení
         private void LogIn_LogOut_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.Abort;
-            this.Close();
+            DialogResult = DialogResult.Abort;
+            Close();
         }
 
         //První použítí
@@ -336,13 +352,14 @@ namespace AniDBClient
         //První použítí
         private void LogIn_LB06_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start("http://translate.google.com/translate?hl=cs&sl=cs&tl=en&u=http%3A%2F%2Fblog.benda-11.cz%2F2011%2F09%2Fanisub-navod-pro-zacatecniky%2F");
+            Process.Start(
+                "http://translate.google.com/translate?hl=cs&sl=cs&tl=en&u=http%3A%2F%2Fblog.benda-11.cz%2F2011%2F09%2Fanisub-navod-pro-zacatecniky%2F");
         }
 
         //Licence
         private void LogIn_LB07_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start(GlobalAdresar + @"License.rtf");
+            Process.Start(_globalAdresar + @"License.rtf");
         }
     }
 }

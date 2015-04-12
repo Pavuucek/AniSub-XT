@@ -1429,16 +1429,16 @@ namespace AniDBClient
                     this.MainTab.Enabled = true;
                     this.StatusBar_Connect.Enabled = true;
 
-                    this.Options_SetingsLoadApply(logIn.settingsData, false);
+                    this.Options_SetingsLoadApply(logIn.SettingsData, false);
 
-                    GlobalAdresarAccount = this.GlobalAdresar + @"Accounts\" + logIn.settingsData.Name + @"\" + logIn.settingsData.Name + ".dat";
+                    GlobalAdresarAccount = this.GlobalAdresar + @"Accounts\" + logIn.SettingsData.Name + @"\" + logIn.SettingsData.Name + ".dat";
 
                     ChBackup();
                     LogFileEnable();
 
                     try
                     {
-                        string AniDatabasePripojeni = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=\"" + this.GlobalAdresar + @"Accounts\" + logIn.settingsData.Name + @"\" + logIn.settingsData.Name + ".mdb\";User Id=Admin;Password=;";
+                        string AniDatabasePripojeni = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=\"" + this.GlobalAdresar + @"Accounts\" + logIn.SettingsData.Name + @"\" + logIn.SettingsData.Name + ".mdb\";User Id=Admin;Password=;";
                         this.AniDBDatabase = new OleDbConnection();
                         this.AniDBDatabase.ConnectionString = AniDatabasePripojeni;
                         this.AniDBDatabase.Open();

@@ -24,14 +24,15 @@ using System.Security.Cryptography;
 
 using WinAPI;
 using Cryptography;
-using AniDB.Properties;
-using AniDB.Lang;
+using AniDBClient.Lang;
+using AniDBClient.Pack;
+using AniDBClient.Properties;
 using ZedGraph;
 
 using HttpServer;
 using HttpListener = HttpServer.HttpListener;
 
-namespace AniDB
+namespace AniDBClient
 {
     public partial class Main : Form
     {
@@ -15444,80 +15445,80 @@ namespace AniDB
             {
                 case ".cbz":
                 case ".zip":
-                    List = UnZip.List(Soubor.FullName, AniDB.Pack.KnownSevenZipFormat.Zip);
+                    List = UnZip.List(Soubor.FullName, KnownSevenZipFormat.Zip);
                     break;
 
                 case ".7z":
-                    List = UnZip.List(Soubor.FullName, AniDB.Pack.KnownSevenZipFormat.SevenZip);
+                    List = UnZip.List(Soubor.FullName, KnownSevenZipFormat.SevenZip);
                     break;
 
                 case "arj":
-                    List = UnZip.List(Soubor.FullName, AniDB.Pack.KnownSevenZipFormat.Arj);
+                    List = UnZip.List(Soubor.FullName, KnownSevenZipFormat.Arj);
                     break;
 
                 case "bZip2":
-                    List = UnZip.List(Soubor.FullName, AniDB.Pack.KnownSevenZipFormat.BZip2);
+                    List = UnZip.List(Soubor.FullName, KnownSevenZipFormat.BZip2);
                     break;
 
                 case ".cab":
-                    List = UnZip.List(Soubor.FullName, AniDB.Pack.KnownSevenZipFormat.Cab);
+                    List = UnZip.List(Soubor.FullName, KnownSevenZipFormat.Cab);
                     break;
 
                 case ".chm":
-                    List = UnZip.List(Soubor.FullName, AniDB.Pack.KnownSevenZipFormat.Chm);
+                    List = UnZip.List(Soubor.FullName, KnownSevenZipFormat.Chm);
                     break;
 
                 case ".compound":
-                    List = UnZip.List(Soubor.FullName, AniDB.Pack.KnownSevenZipFormat.Compound);
+                    List = UnZip.List(Soubor.FullName, KnownSevenZipFormat.Compound);
                     break;
 
                 case ".cpio":
-                    List = UnZip.List(Soubor.FullName, AniDB.Pack.KnownSevenZipFormat.Cpio);
+                    List = UnZip.List(Soubor.FullName, KnownSevenZipFormat.Cpio);
                     break;
 
                 case ".gzip":
-                    List = UnZip.List(Soubor.FullName, AniDB.Pack.KnownSevenZipFormat.GZip);
+                    List = UnZip.List(Soubor.FullName, KnownSevenZipFormat.GZip);
                     break;
 
                 case ".iso":
-                    List = UnZip.List(Soubor.FullName, AniDB.Pack.KnownSevenZipFormat.Iso);
+                    List = UnZip.List(Soubor.FullName, KnownSevenZipFormat.Iso);
                     break;
 
                 case ".lzh":
-                    List = UnZip.List(Soubor.FullName, AniDB.Pack.KnownSevenZipFormat.Lzh);
+                    List = UnZip.List(Soubor.FullName, KnownSevenZipFormat.Lzh);
                     break;
 
                 case ".lzma":
-                    List = UnZip.List(Soubor.FullName, AniDB.Pack.KnownSevenZipFormat.Lzma);
+                    List = UnZip.List(Soubor.FullName, KnownSevenZipFormat.Lzma);
                     break;
 
                 case ".nsis":
-                    List = UnZip.List(Soubor.FullName, AniDB.Pack.KnownSevenZipFormat.Nsis);
+                    List = UnZip.List(Soubor.FullName, KnownSevenZipFormat.Nsis);
                     break;
 
                 case ".cbr":
                 case ".rar":
-                    List = UnZip.List(Soubor.FullName, AniDB.Pack.KnownSevenZipFormat.Rar);
+                    List = UnZip.List(Soubor.FullName, KnownSevenZipFormat.Rar);
                     break;
 
                 case ".rpm":
-                    List = UnZip.List(Soubor.FullName, AniDB.Pack.KnownSevenZipFormat.Split);
+                    List = UnZip.List(Soubor.FullName, KnownSevenZipFormat.Split);
                     break;
 
                 case ".split":
-                    List = UnZip.List(Soubor.FullName, AniDB.Pack.KnownSevenZipFormat.Zip);
+                    List = UnZip.List(Soubor.FullName, KnownSevenZipFormat.Zip);
                     break;
 
                 case ".wim":
-                    List = UnZip.List(Soubor.FullName, AniDB.Pack.KnownSevenZipFormat.Wim);
+                    List = UnZip.List(Soubor.FullName, KnownSevenZipFormat.Wim);
                     break;
 
                 case ".tar":
-                    List = UnZip.List(Soubor.FullName, AniDB.Pack.KnownSevenZipFormat.Tar);
+                    List = UnZip.List(Soubor.FullName, KnownSevenZipFormat.Tar);
                     break;
 
                 case ".z":
-                    List = UnZip.List(Soubor.FullName, AniDB.Pack.KnownSevenZipFormat.Z);
+                    List = UnZip.List(Soubor.FullName, KnownSevenZipFormat.Z);
                     break;
             }
 
@@ -15527,12 +15528,12 @@ namespace AniDB
                 {
                     case ".cbr":
                     case ".rar":
-                        List = UnZip.List(Soubor.FullName, AniDB.Pack.KnownSevenZipFormat.Zip);
+                        List = UnZip.List(Soubor.FullName, KnownSevenZipFormat.Zip);
                         break;
 
                     case ".cbz":
                     case ".zip":
-                        List = UnZip.List(Soubor.FullName, AniDB.Pack.KnownSevenZipFormat.Rar);
+                        List = UnZip.List(Soubor.FullName, KnownSevenZipFormat.Rar);
                         break;
                 }
 

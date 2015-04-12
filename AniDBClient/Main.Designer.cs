@@ -1,6 +1,6 @@
 ﻿using ZedGraph;
 
-namespace AniDB
+namespace AniDBClient
 {
     partial class Main
     {
@@ -8409,7 +8409,7 @@ namespace AniDB
             // StatusBar_Refresh
             // 
             this.StatusBar_Refresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.StatusBar_Refresh.BackgroundImage = global::AniDB.Properties.Resources.i_Refresh;
+            this.StatusBar_Refresh.BackgroundImage = global::AniDBClient.Properties.Resources.i_Refresh;
             this.StatusBar_Refresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.StatusBar_Refresh.Location = new System.Drawing.Point(12, 0);
             this.StatusBar_Refresh.Name = "StatusBar_Refresh";
@@ -8552,7 +8552,7 @@ namespace AniDB
             // 
             // Watcher_Delete
             // 
-            this.Watcher_Delete.BackgroundImage = global::AniDB.Properties.Resources.i_Delete;
+            this.Watcher_Delete.BackgroundImage = global::AniDBClient.Properties.Resources.i_Delete;
             this.Watcher_Delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Watcher_Delete.ForeColor = System.Drawing.Color.Black;
             this.Watcher_Delete.Location = new System.Drawing.Point(490, 302);
@@ -8576,7 +8576,7 @@ namespace AniDB
             // 
             // Options_ExtensionRem
             // 
-            this.Options_ExtensionRem.BackgroundImage = global::AniDB.Properties.Resources.i_Delete;
+            this.Options_ExtensionRem.BackgroundImage = global::AniDBClient.Properties.Resources.i_Delete;
             this.Options_ExtensionRem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Options_ExtensionRem.Location = new System.Drawing.Point(490, 275);
             this.Options_ExtensionRem.Name = "Options_ExtensionRem";
@@ -8587,7 +8587,7 @@ namespace AniDB
             // 
             // Options_AccountChange
             // 
-            this.Options_AccountChange.BackgroundImage = global::AniDB.Properties.Resources.i_Log_Out;
+            this.Options_AccountChange.BackgroundImage = global::AniDBClient.Properties.Resources.i_Log_Out;
             this.Options_AccountChange.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Options_AccountChange.ForeColor = System.Drawing.Color.Black;
             this.Options_AccountChange.Location = new System.Drawing.Point(463, 119);
@@ -8611,7 +8611,7 @@ namespace AniDB
             // 
             // Options_w8Hack
             // 
-            this.Options_w8Hack.BackgroundImage = global::AniDB.Properties.Resources.i_w8;
+            this.Options_w8Hack.BackgroundImage = global::AniDBClient.Properties.Resources.i_w8;
             this.Options_w8Hack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Options_w8Hack.ForeColor = System.Drawing.Color.Black;
             this.Options_w8Hack.Location = new System.Drawing.Point(867, 306);
@@ -8623,7 +8623,7 @@ namespace AniDB
             // 
             // Options_SetingsDefault
             // 
-            this.Options_SetingsDefault.BackgroundImage = global::AniDB.Properties.Resources.i_StockIndexDown;
+            this.Options_SetingsDefault.BackgroundImage = global::AniDBClient.Properties.Resources.i_StockIndexDown;
             this.Options_SetingsDefault.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Options_SetingsDefault.ForeColor = System.Drawing.Color.Black;
             this.Options_SetingsDefault.Location = new System.Drawing.Point(925, 306);
@@ -8635,7 +8635,7 @@ namespace AniDB
             // 
             // Options_SetingsLoad
             // 
-            this.Options_SetingsLoad.BackgroundImage = global::AniDB.Properties.Resources.i_StockIndexUp;
+            this.Options_SetingsLoad.BackgroundImage = global::AniDBClient.Properties.Resources.i_StockIndexUp;
             this.Options_SetingsLoad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Options_SetingsLoad.ForeColor = System.Drawing.Color.Black;
             this.Options_SetingsLoad.Location = new System.Drawing.Point(983, 306);
@@ -8647,7 +8647,7 @@ namespace AniDB
             // 
             // Options_SetingsSave
             // 
-            this.Options_SetingsSave.BackgroundImage = global::AniDB.Properties.Resources.i_Save;
+            this.Options_SetingsSave.BackgroundImage = global::AniDBClient.Properties.Resources.i_Save;
             this.Options_SetingsSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Options_SetingsSave.ForeColor = System.Drawing.Color.Black;
             this.Options_SetingsSave.Location = new System.Drawing.Point(1044, 306);
@@ -8787,7 +8787,7 @@ namespace AniDB
             // 
             // Hash_Files
             // 
-            this.Hash_Files.BackgroundImage = global::AniDB.Properties.Resources.i_Key;
+            this.Hash_Files.BackgroundImage = global::AniDBClient.Properties.Resources.i_Key;
             this.Hash_Files.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Hash_Files.Enabled = false;
             this.Hash_Files.ForeColor = System.Drawing.Color.Black;
@@ -8800,7 +8800,7 @@ namespace AniDB
             // 
             // Hash_Delete
             // 
-            this.Hash_Delete.BackgroundImage = global::AniDB.Properties.Resources.i_Delete;
+            this.Hash_Delete.BackgroundImage = global::AniDBClient.Properties.Resources.i_Delete;
             this.Hash_Delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Hash_Delete.Enabled = false;
             this.Hash_Delete.ForeColor = System.Drawing.Color.Black;
@@ -8827,7 +8827,7 @@ namespace AniDB
             // Options_MyListRefreshMin
             // 
             this.Options_MyListRefreshMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Options_MyListRefreshMin.BackgroundImage = global::AniDB.Properties.Resources.i_Refresh;
+            this.Options_MyListRefreshMin.BackgroundImage = global::AniDBClient.Properties.Resources.i_Refresh;
             this.Options_MyListRefreshMin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Options_MyListRefreshMin.Location = new System.Drawing.Point(48, 622);
             this.Options_MyListRefreshMin.Name = "Options_MyListRefreshMin";
@@ -8839,7 +8839,7 @@ namespace AniDB
             // Options_MyListRefresh
             // 
             this.Options_MyListRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Options_MyListRefresh.BackgroundImage = global::AniDB.Properties.Resources.i_Refresh;
+            this.Options_MyListRefresh.BackgroundImage = global::AniDBClient.Properties.Resources.i_Refresh;
             this.Options_MyListRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Options_MyListRefresh.Location = new System.Drawing.Point(6, 622);
             this.Options_MyListRefresh.Name = "Options_MyListRefresh";
@@ -8851,7 +8851,7 @@ namespace AniDB
             // DataFiles_Bt21
             // 
             this.DataFiles_Bt21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt21.BackgroundImage = global::AniDB.Properties.Resources.i_Information;
+            this.DataFiles_Bt21.BackgroundImage = global::AniDBClient.Properties.Resources.i_Information;
             this.DataFiles_Bt21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.DataFiles_Bt21.Location = new System.Drawing.Point(731, 619);
             this.DataFiles_Bt21.Name = "DataFiles_Bt21";
@@ -8863,7 +8863,7 @@ namespace AniDB
             // DataFiles_Bt22
             // 
             this.DataFiles_Bt22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt22.BackgroundImage = global::AniDB.Properties.Resources.i_Help;
+            this.DataFiles_Bt22.BackgroundImage = global::AniDBClient.Properties.Resources.i_Help;
             this.DataFiles_Bt22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.DataFiles_Bt22.Location = new System.Drawing.Point(673, 619);
             this.DataFiles_Bt22.Name = "DataFiles_Bt22";
@@ -8875,7 +8875,7 @@ namespace AniDB
             // DataFiles_Bt20
             // 
             this.DataFiles_Bt20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt20.BackgroundImage = global::AniDB.Properties.Resources.i_Help;
+            this.DataFiles_Bt20.BackgroundImage = global::AniDBClient.Properties.Resources.i_Help;
             this.DataFiles_Bt20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.DataFiles_Bt20.Location = new System.Drawing.Point(702, 619);
             this.DataFiles_Bt20.Name = "DataFiles_Bt20";
@@ -8887,7 +8887,7 @@ namespace AniDB
             // DataFiles_Bt19
             // 
             this.DataFiles_Bt19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt19.BackgroundImage = global::AniDB.Properties.Resources.i_Globe;
+            this.DataFiles_Bt19.BackgroundImage = global::AniDBClient.Properties.Resources.i_Globe;
             this.DataFiles_Bt19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.DataFiles_Bt19.Location = new System.Drawing.Point(615, 619);
             this.DataFiles_Bt19.Name = "DataFiles_Bt19";
@@ -8899,7 +8899,7 @@ namespace AniDB
             // DataFiles_Bt00
             // 
             this.DataFiles_Bt00.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt00.BackgroundImage = global::AniDB.Properties.Resources.i_Refresh;
+            this.DataFiles_Bt00.BackgroundImage = global::AniDBClient.Properties.Resources.i_Refresh;
             this.DataFiles_Bt00.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.DataFiles_Bt00.Location = new System.Drawing.Point(6, 619);
             this.DataFiles_Bt00.Name = "DataFiles_Bt00";
@@ -8911,7 +8911,7 @@ namespace AniDB
             // DataFiles_Bt01
             // 
             this.DataFiles_Bt01.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt01.BackgroundImage = global::AniDB.Properties.Resources.i_Delete;
+            this.DataFiles_Bt01.BackgroundImage = global::AniDBClient.Properties.Resources.i_Delete;
             this.DataFiles_Bt01.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.DataFiles_Bt01.Location = new System.Drawing.Point(35, 619);
             this.DataFiles_Bt01.Name = "DataFiles_Bt01";
@@ -8923,7 +8923,7 @@ namespace AniDB
             // DataFiles_Bt18
             // 
             this.DataFiles_Bt18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt18.BackgroundImage = global::AniDB.Properties.Resources.anidb_file_removemylist;
+            this.DataFiles_Bt18.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_file_removemylist;
             this.DataFiles_Bt18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.DataFiles_Bt18.Location = new System.Drawing.Point(557, 619);
             this.DataFiles_Bt18.Name = "DataFiles_Bt18";
@@ -8935,7 +8935,7 @@ namespace AniDB
             // DataFiles_Bt17
             // 
             this.DataFiles_Bt17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt17.BackgroundImage = global::AniDB.Properties.Resources.anidb_file_addmylist;
+            this.DataFiles_Bt17.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_file_addmylist;
             this.DataFiles_Bt17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.DataFiles_Bt17.Location = new System.Drawing.Point(528, 619);
             this.DataFiles_Bt17.Name = "DataFiles_Bt17";
@@ -8947,7 +8947,7 @@ namespace AniDB
             // DataFiles_Bt16
             // 
             this.DataFiles_Bt16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt16.BackgroundImage = global::AniDB.Properties.Resources.anidb_atype_other;
+            this.DataFiles_Bt16.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_atype_other;
             this.DataFiles_Bt16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.DataFiles_Bt16.Location = new System.Drawing.Point(499, 619);
             this.DataFiles_Bt16.Name = "DataFiles_Bt16";
@@ -8959,7 +8959,7 @@ namespace AniDB
             // DataFiles_Bt15
             // 
             this.DataFiles_Bt15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt15.BackgroundImage = global::AniDB.Properties.Resources.anidb_atype_web;
+            this.DataFiles_Bt15.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_atype_web;
             this.DataFiles_Bt15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.DataFiles_Bt15.Location = new System.Drawing.Point(470, 619);
             this.DataFiles_Bt15.Name = "DataFiles_Bt15";
@@ -8971,7 +8971,7 @@ namespace AniDB
             // DataFiles_Bt14
             // 
             this.DataFiles_Bt14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt14.BackgroundImage = global::AniDB.Properties.Resources.anidb_atype_tv_series;
+            this.DataFiles_Bt14.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_atype_tv_series;
             this.DataFiles_Bt14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.DataFiles_Bt14.Location = new System.Drawing.Point(441, 619);
             this.DataFiles_Bt14.Name = "DataFiles_Bt14";
@@ -8983,7 +8983,7 @@ namespace AniDB
             // DataFiles_Bt13
             // 
             this.DataFiles_Bt13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt13.BackgroundImage = global::AniDB.Properties.Resources.Anidb_filestate_ondvd;
+            this.DataFiles_Bt13.BackgroundImage = global::AniDBClient.Properties.Resources.Anidb_filestate_ondvd;
             this.DataFiles_Bt13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.DataFiles_Bt13.Location = new System.Drawing.Point(412, 619);
             this.DataFiles_Bt13.Name = "DataFiles_Bt13";
@@ -8995,7 +8995,7 @@ namespace AniDB
             // DataFiles_Bt12
             // 
             this.DataFiles_Bt12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt12.BackgroundImage = global::AniDB.Properties.Resources.anidb_atype_tv_special;
+            this.DataFiles_Bt12.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_atype_tv_special;
             this.DataFiles_Bt12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.DataFiles_Bt12.Location = new System.Drawing.Point(383, 619);
             this.DataFiles_Bt12.Name = "DataFiles_Bt12";
@@ -9007,7 +9007,7 @@ namespace AniDB
             // DataFiles_Bt11
             // 
             this.DataFiles_Bt11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt11.BackgroundImage = global::AniDB.Properties.Resources.anidb_atype_ova;
+            this.DataFiles_Bt11.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_atype_ova;
             this.DataFiles_Bt11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.DataFiles_Bt11.Location = new System.Drawing.Point(354, 619);
             this.DataFiles_Bt11.Name = "DataFiles_Bt11";
@@ -9020,7 +9020,7 @@ namespace AniDB
             // 
             this.DataFiles_Bt10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.DataFiles_Bt10.BackColor = System.Drawing.Color.White;
-            this.DataFiles_Bt10.BackgroundImage = global::AniDB.Properties.Resources.anidb_seen_yes;
+            this.DataFiles_Bt10.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_seen_yes;
             this.DataFiles_Bt10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.DataFiles_Bt10.Location = new System.Drawing.Point(325, 619);
             this.DataFiles_Bt10.Name = "DataFiles_Bt10";
@@ -9032,7 +9032,7 @@ namespace AniDB
             // DataFiles_Bt09
             // 
             this.DataFiles_Bt09.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt09.BackgroundImage = global::AniDB.Properties.Resources.anidb_seen_no;
+            this.DataFiles_Bt09.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_seen_no;
             this.DataFiles_Bt09.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.DataFiles_Bt09.Location = new System.Drawing.Point(296, 619);
             this.DataFiles_Bt09.Name = "DataFiles_Bt09";
@@ -9044,7 +9044,7 @@ namespace AniDB
             // DataFiles_Bt08
             // 
             this.DataFiles_Bt08.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt08.BackgroundImage = global::AniDB.Properties.Resources.anidb_state_release;
+            this.DataFiles_Bt08.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_state_release;
             this.DataFiles_Bt08.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.DataFiles_Bt08.Location = new System.Drawing.Point(267, 619);
             this.DataFiles_Bt08.Name = "DataFiles_Bt08";
@@ -9056,7 +9056,7 @@ namespace AniDB
             // DataFiles_Bt07
             // 
             this.DataFiles_Bt07.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt07.BackgroundImage = global::AniDB.Properties.Resources.anidb_filestate_other;
+            this.DataFiles_Bt07.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_filestate_other;
             this.DataFiles_Bt07.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.DataFiles_Bt07.Location = new System.Drawing.Point(238, 619);
             this.DataFiles_Bt07.Name = "DataFiles_Bt07";
@@ -9068,7 +9068,7 @@ namespace AniDB
             // DataFiles_Bt06
             // 
             this.DataFiles_Bt06.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt06.BackgroundImage = global::AniDB.Properties.Resources.anidb_state_shared;
+            this.DataFiles_Bt06.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_state_shared;
             this.DataFiles_Bt06.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.DataFiles_Bt06.Location = new System.Drawing.Point(209, 619);
             this.DataFiles_Bt06.Name = "DataFiles_Bt06";
@@ -9080,7 +9080,7 @@ namespace AniDB
             // DataFiles_Bt05
             // 
             this.DataFiles_Bt05.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt05.BackgroundImage = global::AniDB.Properties.Resources.anidb_state_unknown;
+            this.DataFiles_Bt05.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_state_unknown;
             this.DataFiles_Bt05.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.DataFiles_Bt05.Location = new System.Drawing.Point(180, 619);
             this.DataFiles_Bt05.Name = "DataFiles_Bt05";
@@ -9092,7 +9092,7 @@ namespace AniDB
             // DataFiles_Bt04
             // 
             this.DataFiles_Bt04.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt04.BackgroundImage = global::AniDB.Properties.Resources.anidb_state_deleted;
+            this.DataFiles_Bt04.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_state_deleted;
             this.DataFiles_Bt04.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.DataFiles_Bt04.Location = new System.Drawing.Point(151, 619);
             this.DataFiles_Bt04.Name = "DataFiles_Bt04";
@@ -9104,7 +9104,7 @@ namespace AniDB
             // DataFiles_Bt03
             // 
             this.DataFiles_Bt03.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt03.BackgroundImage = global::AniDB.Properties.Resources.anidb_state_oncd;
+            this.DataFiles_Bt03.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_state_oncd;
             this.DataFiles_Bt03.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.DataFiles_Bt03.Location = new System.Drawing.Point(122, 619);
             this.DataFiles_Bt03.Name = "DataFiles_Bt03";
@@ -9116,7 +9116,7 @@ namespace AniDB
             // DataFiles_Bt02
             // 
             this.DataFiles_Bt02.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt02.BackgroundImage = global::AniDB.Properties.Resources.anidb_state_onhdd;
+            this.DataFiles_Bt02.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_state_onhdd;
             this.DataFiles_Bt02.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.DataFiles_Bt02.Location = new System.Drawing.Point(93, 619);
             this.DataFiles_Bt02.Name = "DataFiles_Bt02";
@@ -9188,7 +9188,7 @@ namespace AniDB
             // 
             // Anime_Lang02
             // 
-            this.Anime_Lang02.Image = global::AniDB.Properties.Resources.anidb_audio_english;
+            this.Anime_Lang02.Image = global::AniDBClient.Properties.Resources.anidb_audio_english;
             this.Anime_Lang02.Location = new System.Drawing.Point(32, 16);
             this.Anime_Lang02.Name = "Anime_Lang02";
             this.Anime_Lang02.Size = new System.Drawing.Size(23, 23);
@@ -9263,7 +9263,7 @@ namespace AniDB
             // 
             // Zgc_GraphB01
             // 
-            this.Zgc_GraphB01.BackgroundImage = global::AniDB.Properties.Resources.i_Picture;
+            this.Zgc_GraphB01.BackgroundImage = global::AniDBClient.Properties.Resources.i_Picture;
             this.Zgc_GraphB01.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Zgc_GraphB01.Location = new System.Drawing.Point(3, 3);
             this.Zgc_GraphB01.Name = "Zgc_GraphB01";
@@ -9274,7 +9274,7 @@ namespace AniDB
             // 
             // Options_MyListRefreshManga
             // 
-            this.Options_MyListRefreshManga.BackgroundImage = global::AniDB.Properties.Resources.i_Refresh;
+            this.Options_MyListRefreshManga.BackgroundImage = global::AniDBClient.Properties.Resources.i_Refresh;
             this.Options_MyListRefreshManga.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Options_MyListRefreshManga.Location = new System.Drawing.Point(227, 201);
             this.Options_MyListRefreshManga.Name = "Options_MyListRefreshManga";
@@ -9301,7 +9301,7 @@ namespace AniDB
             // Manga_Edit
             // 
             this.Manga_Edit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Manga_Edit.BackgroundImage = global::AniDB.Properties.Resources.i_Edit;
+            this.Manga_Edit.BackgroundImage = global::AniDBClient.Properties.Resources.i_Edit;
             this.Manga_Edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Manga_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.Manga_Edit.ForeColor = System.Drawing.Color.Black;
@@ -9324,7 +9324,7 @@ namespace AniDB
             // 
             // Manga_Lang03
             // 
-            this.Manga_Lang03.Image = global::AniDB.Properties.Resources.anidb_audio_english;
+            this.Manga_Lang03.Image = global::AniDBClient.Properties.Resources.anidb_audio_english;
             this.Manga_Lang03.Location = new System.Drawing.Point(35, 201);
             this.Manga_Lang03.Name = "Manga_Lang03";
             this.Manga_Lang03.Size = new System.Drawing.Size(23, 23);
@@ -9355,7 +9355,7 @@ namespace AniDB
             // Manga_EditCh
             // 
             this.Manga_EditCh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Manga_EditCh.BackgroundImage = global::AniDB.Properties.Resources.i_Edit;
+            this.Manga_EditCh.BackgroundImage = global::AniDBClient.Properties.Resources.i_Edit;
             this.Manga_EditCh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Manga_EditCh.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.Manga_EditCh.ForeColor = System.Drawing.Color.Black;
@@ -9382,7 +9382,7 @@ namespace AniDB
             // 
             // Manga_Insert_CHD
             // 
-            this.Manga_Insert_CHD.BackgroundImage = global::AniDB.Properties.Resources.i_Check;
+            this.Manga_Insert_CHD.BackgroundImage = global::AniDBClient.Properties.Resources.i_Check;
             this.Manga_Insert_CHD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Manga_Insert_CHD.ForeColor = System.Drawing.Color.Black;
             this.Manga_Insert_CHD.Location = new System.Drawing.Point(818, 18);
@@ -9394,7 +9394,7 @@ namespace AniDB
             // 
             // Manga_Delete
             // 
-            this.Manga_Delete.BackgroundImage = global::AniDB.Properties.Resources.i_Delete;
+            this.Manga_Delete.BackgroundImage = global::AniDBClient.Properties.Resources.i_Delete;
             this.Manga_Delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Manga_Delete.ForeColor = System.Drawing.Color.Black;
             this.Manga_Delete.Location = new System.Drawing.Point(588, 289);
@@ -9514,7 +9514,7 @@ namespace AniDB
             // LogTasksDelAll
             // 
             this.LogTasksDelAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.LogTasksDelAll.BackgroundImage = global::AniDB.Properties.Resources.i_Cancel;
+            this.LogTasksDelAll.BackgroundImage = global::AniDBClient.Properties.Resources.i_Cancel;
             this.LogTasksDelAll.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.LogTasksDelAll.ForeColor = System.Drawing.Color.Black;
             this.LogTasksDelAll.Location = new System.Drawing.Point(373, 619);
@@ -9527,7 +9527,7 @@ namespace AniDB
             // LogTasksDel
             // 
             this.LogTasksDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.LogTasksDel.BackgroundImage = global::AniDB.Properties.Resources.i_Delete;
+            this.LogTasksDel.BackgroundImage = global::AniDBClient.Properties.Resources.i_Delete;
             this.LogTasksDel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.LogTasksDel.ForeColor = System.Drawing.Color.Black;
             this.LogTasksDel.Location = new System.Drawing.Point(344, 619);
@@ -9540,7 +9540,7 @@ namespace AniDB
             // DataSQL_Select
             // 
             this.DataSQL_Select.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.DataSQL_Select.BackgroundImage = global::AniDB.Properties.Resources.i_Burn_Disk;
+            this.DataSQL_Select.BackgroundImage = global::AniDBClient.Properties.Resources.i_Burn_Disk;
             this.DataSQL_Select.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.DataSQL_Select.ForeColor = System.Drawing.Color.Black;
             this.DataSQL_Select.Location = new System.Drawing.Point(1078, 3);

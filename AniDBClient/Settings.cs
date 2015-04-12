@@ -14,9 +14,9 @@ using System.Drawing;
 using Microsoft.VisualBasic;
 using System.Data;
 using System.Drawing.Design;
-using AniDB.Lang;
+using AniDBClient.Lang;
 
-namespace AniDB
+namespace AniDBClient
 {
     class Settings
     {

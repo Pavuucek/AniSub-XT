@@ -8,8 +8,8 @@
     <ProjectGuid>{2D87685F-E29B-43FF-8BD4-D84F82C08E5D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AniDB</RootNamespace>
-    <AssemblyName>AniSub</AssemblyName>
+    <RootNamespace>AniDBClient</RootNamespace>
+    <AssemblyName>AniSub-XT.AniDBClient</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ApplicationIcon>AniSub.ico</ApplicationIcon>
@@ -69,6 +69,9 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <DocumentationFile>
     </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>AniDBClient.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ed2k, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">

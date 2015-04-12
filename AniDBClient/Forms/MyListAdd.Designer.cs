@@ -1,4 +1,4 @@
-﻿namespace AniDB
+﻿namespace AniDBClient
 {
     partial class MyListAdd
     {
@@ -153,7 +153,7 @@
             // 
             // Option_MylistOk
             // 
-            this.Option_MylistOk.BackgroundImage = global::AniDB.Properties.Resources.i_Check;
+            this.Option_MylistOk.BackgroundImage = global::AniDBClient.Properties.Resources.i_Check;
             this.Option_MylistOk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Option_MylistOk.Location = new System.Drawing.Point(281, 170);
             this.Option_MylistOk.Name = "Option_MylistOk";
@@ -173,7 +173,7 @@
             // 
             // Option_MylistSave
             // 
-            this.Option_MylistSave.BackgroundImage = global::AniDB.Properties.Resources.i_Add;
+            this.Option_MylistSave.BackgroundImage = global::AniDBClient.Properties.Resources.i_Add;
             this.Option_MylistSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Option_MylistSave.Location = new System.Drawing.Point(403, 170);
             this.Option_MylistSave.Name = "Option_MylistSave";
@@ -191,7 +191,7 @@
             // 
             // Option_MylistDel
             // 
-            this.Option_MylistDel.BackgroundImage = global::AniDB.Properties.Resources.i_Delete;
+            this.Option_MylistDel.BackgroundImage = global::AniDBClient.Properties.Resources.i_Delete;
             this.Option_MylistDel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Option_MylistDel.Location = new System.Drawing.Point(445, 170);
             this.Option_MylistDel.Name = "Option_MylistDel";
@@ -202,7 +202,7 @@
             // 
             // Option_MylistClose
             // 
-            this.Option_MylistClose.BackgroundImage = global::AniDB.Properties.Resources.i_Cancel;
+            this.Option_MylistClose.BackgroundImage = global::AniDBClient.Properties.Resources.i_Cancel;
             this.Option_MylistClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Option_MylistClose.Cursor = System.Windows.Forms.Cursors.Default;
             this.Option_MylistClose.Location = new System.Drawing.Point(239, 170);

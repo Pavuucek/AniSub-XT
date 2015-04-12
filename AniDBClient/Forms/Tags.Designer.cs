@@ -1,4 +1,4 @@
-﻿namespace AniDB
+﻿namespace AniDBClient
 {
     partial class Tags
     {
@@ -49,7 +49,7 @@
             // 
             // Tags_KO
             // 
-            this.Tags_KO.BackgroundImage = global::AniDB.Properties.Resources.i_Cancel;
+            this.Tags_KO.BackgroundImage = global::AniDBClient.Properties.Resources.i_Cancel;
             this.Tags_KO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Tags_KO.Cursor = System.Windows.Forms.Cursors.Default;
             this.Tags_KO.Location = new System.Drawing.Point(403, 170);
@@ -61,7 +61,7 @@
             // 
             // Tags_OK
             // 
-            this.Tags_OK.BackgroundImage = global::AniDB.Properties.Resources.i_Check;
+            this.Tags_OK.BackgroundImage = global::AniDBClient.Properties.Resources.i_Check;
             this.Tags_OK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Tags_OK.Location = new System.Drawing.Point(445, 170);
             this.Tags_OK.Name = "Tags_OK";

@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 
-namespace AniDB
+namespace AniDBClient
 {
     public partial class Backups : Form
     {

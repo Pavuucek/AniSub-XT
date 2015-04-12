@@ -4,9 +4,9 @@ using System.IO;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using Microsoft.COM;
-using AniDB.Pack;
+using AniDBClient.Pack;
 
-namespace AniDB
+namespace AniDBClient
 {
     class UnZipRar
     {

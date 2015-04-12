@@ -14,7 +14,7 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using WinAPI;
 
-namespace AniDB
+namespace AniDBClient
 {
     static class Program
     {

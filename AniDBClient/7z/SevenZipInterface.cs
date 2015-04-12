@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using Microsoft.COM;
 
-namespace AniDB.Pack
+namespace AniDBClient.Pack
 {
     [ComImport]
     [Guid("23170F69-40C1-278A-0000-000000050000")]

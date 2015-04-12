@@ -12,9 +12,9 @@ using System.Windows.Forms;
 using System.Security.Cryptography;
 using System.Threading;
 using System.Globalization;
-using AniDB.Lang;
+using AniDBClient.Lang;
 
-namespace AniDB
+namespace AniDBClient
 {
     public partial class LogIn : Form
     {

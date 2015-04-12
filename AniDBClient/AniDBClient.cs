@@ -4,7 +4,7 @@ using System.Net.Sockets;
 using System.Threading;
 using System.Text;
 
-namespace AniDB
+namespace AniDBClient
 {
     public class AniDBClient2
     {

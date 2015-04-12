@@ -1,4 +1,4 @@
-﻿namespace AniDB
+﻿namespace AniDBClient
 {
     partial class Backups
     {
@@ -36,7 +36,7 @@
             // 
             // Backups_KO
             // 
-            this.Backups_KO.BackgroundImage = global::AniDB.Properties.Resources.i_Cancel;
+            this.Backups_KO.BackgroundImage = global::AniDBClient.Properties.Resources.i_Cancel;
             this.Backups_KO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Backups_KO.Cursor = System.Windows.Forms.Cursors.Default;
             this.Backups_KO.Location = new System.Drawing.Point(239, 170);
@@ -48,7 +48,7 @@
             // 
             // Backups_OK
             // 
-            this.Backups_OK.BackgroundImage = global::AniDB.Properties.Resources.i_Check;
+            this.Backups_OK.BackgroundImage = global::AniDBClient.Properties.Resources.i_Check;
             this.Backups_OK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Backups_OK.Location = new System.Drawing.Point(281, 170);
             this.Backups_OK.Name = "Backups_OK";
@@ -59,7 +59,7 @@
             // 
             // Backups_Del
             // 
-            this.Backups_Del.BackgroundImage = global::AniDB.Properties.Resources.i_Delete;
+            this.Backups_Del.BackgroundImage = global::AniDBClient.Properties.Resources.i_Delete;
             this.Backups_Del.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Backups_Del.Location = new System.Drawing.Point(445, 170);
             this.Backups_Del.Name = "Backups_Del";

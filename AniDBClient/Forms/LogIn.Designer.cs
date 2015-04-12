@@ -1,4 +1,4 @@
-﻿namespace AniDB
+﻿namespace AniDBClient
 {
     partial class LogIn
     {

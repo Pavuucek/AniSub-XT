@@ -6,9 +6,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using AniDB.Lang;
+using AniDBClient.Lang;
 
-namespace AniDB
+namespace AniDBClient
 {
     public partial class MyListAdd : Form
     {

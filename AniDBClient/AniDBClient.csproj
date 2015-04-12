@@ -214,6 +214,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Utilities\Logger.cs" />
     <Compile Include="Utilities\NodeSorter.cs" />
     <Compile Include="Utilities\Settings.cs" />
     <Compile Include="7z\SevenZipFormat.cs" />

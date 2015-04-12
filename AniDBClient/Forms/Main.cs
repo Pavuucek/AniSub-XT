@@ -46,11 +46,7 @@ namespace AniDBClient
         private string AniSubV = "84";
         private string AniSubC = "subgui";
         private string AniSubImgUrl = "http://img7.anidb.net/pics/anime/";
-
-        private StreamWriter ZapisLogA = null;
-        private StreamWriter ZapisLogS = null;
-        private StreamWriter ZapisLogE = null;
-
+        private Logger logger;
         private HttpListener WebServer = null;
 
         #region BOOL
@@ -1659,7 +1655,7 @@ namespace AniDBClient
                 ComunicationNewTask("FILE fid=" + row["id_files"] + "&fmask=7FFAFFF9&amask=FEE0F0C1");
             }
 
-            LogAddError("CHECK > U N K N O W N   F I L E S   W E R E   C H E C K E D");
+            logger.LogAddError("CHECK > U N K N O W N   F I L E S   W E R E   C H E C K E D");
         }
 
         //Kontrola episod k anime
@@ -1687,7 +1683,7 @@ namespace AniDBClient
                 }
             }
 
-            LogAddError("CHECK > E P I S O D E S   W E R E   C H E C K E D");
+            logger.LogAddError("CHECK > E P I S O D E S   W E R E   C H E C K E D");
         }
 
         //Kontrola souborů k episodám
@@ -1702,7 +1698,7 @@ namespace AniDBClient
                     ComunicationNewTask("MYLIST aid=" + row["id_anime"] + "&epno=" + row["episodes_epn"]);
             }
 
-            LogAddError("CHECK > E P I S O D E S   W E R E   C H E C K E D");
+            logger.LogAddError("CHECK > E P I S O D E S   W E R E   C H E C K E D");
         }
 
         //Kontrola zdvojení
@@ -1737,7 +1733,7 @@ namespace AniDBClient
                 ComunicationNewTask("FILE fid=" + IDFile.Rows[0]["id_files"] + "&fmask=7FFAFFF9&amask=FEE0F0C1");
             }
 
-            LogAddError("CHECK > D O U B L E   F I L E S   W E R E   C H E C K E D");
+            logger.LogAddError("CHECK > D O U B L E   F I L E S   W E R E   C H E C K E D");
         }
 
         //Komprimace DB
@@ -1759,7 +1755,7 @@ namespace AniDBClient
             if (!File.Exists(GlobalAdresar + @"Accounts\" + Ucet + @"\" + Ucet + "-" + datum + ".mdb"))
                 File.Copy(GlobalAdresar + @"Accounts\" + Ucet + @"\" + Ucet + ".mdb", GlobalAdresar + @"Accounts\" + Ucet + @"\" + Ucet + "-" + datum + ".mdb");
 
-            LogAddError("BACKUP > B A C K U P   W A S   C R E A T E D");
+            logger.LogAddError("BACKUP > B A C K U P   W A S   C R E A T E D");
         }
 
         //Obnovit ze zálohy
@@ -1770,7 +1766,7 @@ namespace AniDBClient
             Backups bck = new Backups(GlobalAdresarAccount, GlobalAdresar);
 
             if (bck.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                LogAddError("BACKUP < R E S T O R E D   F R O M   B A C K U P");
+                logger.LogAddError("BACKUP < R E S T O R E D   F R O M   B A C K U P");
 
             AniDBDatabase.Open();
         }
@@ -1924,11 +1920,11 @@ namespace AniDBClient
                 string cmd = string.Format("COMPACT_DB=\"{0}\" \"{0}\" General\0", mdbFileName);
                 SQLConfigDataSource((IntPtr)0, ODBC_ADD_DSN, "Microsoft Access Driver (*.mdb)", cmd);
 
-                LogAddError("DB > D A T A B A S E   W A S   C O M P R I M E D");
+                logger.LogAddError("DB > D A T A B A S E   W A S   C O M P R I M E D");
             }
             catch
             {
-                LogAdd(Language.MessageBox_DBC);
+                logger.LogAdd(Language.MessageBox_DBC);
             }
             AniDBDatabase.Open();
         }
@@ -1942,7 +1938,7 @@ namespace AniDBClient
         //Přidání/editace/mazání z/do databáze - VOID
         private void DatabaseAdd(string SQLString)
         {
-            LogAddSQL("MySQL > " + SQLString);
+            logger.LogAddSql("MySQL > " + SQLString);
 
             OleDbCommand SQLCommand = new OleDbCommand();
             SQLCommand.CommandText = SQLString;
@@ -1954,7 +1950,7 @@ namespace AniDBClient
             }
             catch (Exception e)
             {
-                LogAddError("MySQL ERROR > " + SQLString + "\r\n" + e.ToString());
+                logger.LogAddError("MySQL ERROR > " + SQLString + "\r\n" + e.ToString());
             }
 
             SQLCommand.Dispose();
@@ -1966,7 +1962,7 @@ namespace AniDBClient
         {
             if (AniDBDatabase != null)
             {
-                LogAddSQL("MySQL < " + SQLString);
+                logger.LogAddSql("MySQL < " + SQLString);
 
                 OleDbCommand SQLQuery = new OleDbCommand();
                 SQLQuery.CommandText = SQLString;
@@ -1983,7 +1979,7 @@ namespace AniDBClient
                 }
                 catch (Exception e)
                 {
-                    LogAddError("MySQL ERROR > " + SQLString + "\r\n" + e.ToString());
+                    logger.LogAddError("MySQL ERROR > " + SQLString + "\r\n" + e.ToString());
                 }
 
                 SQLQuery.Dispose();
@@ -2009,7 +2005,7 @@ namespace AniDBClient
             }
             catch (Exception e)
             {
-                LogAddError("MySQL ERROR > " + SQLString + "\r\n" + e.ToString());
+                logger.LogAddError("MySQL ERROR > " + SQLString + "\r\n" + e.ToString());
             }
 
             SQLCommand.Dispose();
@@ -2037,7 +2033,7 @@ namespace AniDBClient
                 }
                 catch (Exception e)
                 {
-                    LogAddError("MySQL ERROR > " + SQLString + "\r\n" + e.ToString());
+                    logger.LogAddError("MySQL ERROR > " + SQLString + "\r\n" + e.ToString());
                 }
 
                 SQLQuery.Dispose();
@@ -4170,7 +4166,7 @@ namespace AniDBClient
                 {
                     MSG = "Error";
                     CRessetCount++;
-                    LogAddError("Reset count: " + CRessetCount);
+                    logger.LogAddError("Reset count: " + CRessetCount);
 
                     if (CRessetCount >= Options_Reset.Value)
                     {
@@ -4222,11 +4218,11 @@ namespace AniDBClient
             {
                 if (e.UserState.ToString() == "Send")
                 {
-                    LogAdd("AniDB > " + e.UserState.ToString() + " : " + ComunicationW_DataSend);
+                    logger.LogAdd("AniDB > " + e.UserState.ToString() + " : " + ComunicationW_DataSend);
                 }
                 else
                 {
-                    LogAdd("AniDB < " + e.UserState.ToString() + " : " + ComunicationW_DataReceive);
+                    logger.LogAdd("AniDB < " + e.UserState.ToString() + " : " + ComunicationW_DataReceive);
 
                     string[] T = ComunicationW_DataReceive.Replace("'", "''").Replace("\r", "").Split('\n');
 
@@ -4383,7 +4379,7 @@ namespace AniDBClient
             }
             catch (Exception ee)
             {
-                LogAddError("Thread error: " + ee.ToString());
+                logger.LogAddError("Thread error: " + ee.ToString());
             }
 
             ComunicationW_Wait = true;
@@ -4502,7 +4498,7 @@ namespace AniDBClient
             }
             else
             {
-                LogAddError("Input string isn't valid format: " + ComunicationW_DataReceive + ", Array lenght != 17");
+                logger.LogAddError("Input string isn't valid format: " + ComunicationW_DataReceive + ", Array lenght != 17");
             }
         }
 
@@ -4560,12 +4556,12 @@ namespace AniDBClient
                     }
                 }
                 else
-                    LogAddError("Input string isn't valid format: " + ComunicationW_DataReceive + ", Array lenght != 12");
+                    logger.LogAddError("Input string isn't valid format: " + ComunicationW_DataReceive + ", Array lenght != 12");
 
             }
             catch (Exception e)
             {
-                LogAddError(e.ToString());
+                logger.LogAddError(e.ToString());
             }
         }
 
@@ -4858,7 +4854,7 @@ namespace AniDBClient
                 if (!ComunicationW_Task.Contains("&amask=FEE080C1"))
                     ComunicationNewTask(ComunicationW_Task.Replace("&amask=FEE0F0C1", "&amask=FEE080C1"));
 
-                LogAddError("Input string isn't valid format: " + ComunicationW_DataReceive + ", Array lenght != 45");
+                logger.LogAddError("Input string isn't valid format: " + ComunicationW_DataReceive + ", Array lenght != 45");
             }
         }
 
@@ -4918,7 +4914,7 @@ namespace AniDBClient
                 }
             }
             else
-                LogAddError("Input string isn't valid format: " + ComunicationW_DataReceive + ", Array lenght != 10");
+                logger.LogAddError("Input string isn't valid format: " + ComunicationW_DataReceive + ", Array lenght != 10");
         }
 
         //Informace o MyListu
@@ -4959,7 +4955,7 @@ namespace AniDBClient
                 DatabaseAdd("UPDATE mylist_anidb SET mylist_anidb_anime='" + T[0] + "', mylist_anidb_epn='" + T[1] + "', mylist_anidb_files='" + T[2] + "', mylist_anidb_filessize='" + T[3] + "', mylist_anidb_addanime='" + T[4] + "', mylist_anidb_addepn='" + T[5] + "', mylist_anidb_addfiles='" + T[6] + "', mylist_anidb_addgroups='" + T[7] + "', mylist_anidb_leech='" + T[8] + "%', mylist_anidb_glory='" + T[9] + "%', mylist_anidb_viewed='" + T[10] + "%', mylist_anidb_mylist='" + T[11] + "%', mylist_anidb_mylistviewed='" + T[12] + "%', mylist_anidb_mylistviewednum='" + T[13] + "', mylist_anidb_votes='" + T[14] + "', mylist_anidb_revies='" + T[15] + "', mylist_anidb_mylistviewedmin='" + T[16] + "' WHERE id_myslist_anidb=1");
             }
             else
-                LogAddError("Input string isn't valid format: " + ComunicationW_DataReceive + ", Array lenght != 16");
+                logger.LogAddError("Input string isn't valid format: " + ComunicationW_DataReceive + ", Array lenght != 16");
         }
 
         //Parsování
@@ -5317,17 +5313,17 @@ namespace AniDBClient
                             if (Rules_FilesRulesMove_RB02.Checked)
                                 File.Copy(Soubor.FullName, DPath + DSoubor + Soubor.Extension, true);
 
-                            LogAddError("RENAME > " + Soubor.FullName + " >> " + DPath + DSoubor + Soubor.Extension);
+                            logger.LogAddError("RENAME > " + Soubor.FullName + " >> " + DPath + DSoubor + Soubor.Extension);
 
                             DatabaseAdd("UPDATE files SET files_localfile='" + DPath.Replace("'", "''") + DSoubor.Replace("'", "''") + Soubor.Extension + "' WHERE id_files=" + DFilesID);
                         }
                         else
                         {
                             if (!FRename)
-                                LogAddError("RENAME ! Rules disabled renaming * " + Soubor.FullName + " >!> " + DPath + DSoubor + Soubor.Extension);
+                                logger.LogAddError("RENAME ! Rules disabled renaming * " + Soubor.FullName + " >!> " + DPath + DSoubor + Soubor.Extension);
 
                             if (Soubor.FullName == DPath + DSoubor + Soubor.Extension)
-                                LogAddError("RENAME ! New name is same as old name * " + Soubor.FullName + " >!> " + DPath + DSoubor + Soubor.Extension);
+                                logger.LogAddError("RENAME ! New name is same as old name * " + Soubor.FullName + " >!> " + DPath + DSoubor + Soubor.Extension);
                         }
 
                         if (Rules_CH04.Checked)
@@ -5347,12 +5343,12 @@ namespace AniDBClient
                                     if (AdresarDel.GetFiles("*", SearchOption.AllDirectories).LongLength == 0)
                                     {
                                         Directory.Delete(AdresarDel.FullName, true);
-                                        LogAddError("RENAME ! DELETED DIRECTORY: " + AdresarDel.FullName);
+                                        logger.LogAddError("RENAME ! DELETED DIRECTORY: " + AdresarDel.FullName);
                                     }
                                 }
                                 catch
                                 {
-                                    LogAddError("RENAME ! CANT DELETE DIRECTORY: " + AdresarDel.FullName);
+                                    logger.LogAddError("RENAME ! CANT DELETE DIRECTORY: " + AdresarDel.FullName);
                                 }
                             }
                         }
@@ -5360,13 +5356,13 @@ namespace AniDBClient
                     else
                     {
                         if (DSoubor == "")
-                            LogAddError("RENAME ! File name is null * " + DFile.Rows[0]["files_localfile"].ToString() + " !!! " + DPath + DSoubor);
+                            logger.LogAddError("RENAME ! File name is null * " + DFile.Rows[0]["files_localfile"].ToString() + " !!! " + DPath + DSoubor);
 
                         if (DPath == "")
-                            LogAddError("RENAME ! File path is null * " + DFile.Rows[0]["files_localfile"].ToString() + " !!! " + DPath + DSoubor);
+                            logger.LogAddError("RENAME ! File path is null * " + DFile.Rows[0]["files_localfile"].ToString() + " !!! " + DPath + DSoubor);
 
                         if (!File.Exists(DFile.Rows[0]["files_localfile"].ToString()))
-                            LogAddError("RENAME ! File doesnt exist * " + DFile.Rows[0]["files_localfile"].ToString() + " !!! " + DPath + DSoubor);
+                            logger.LogAddError("RENAME ! File doesnt exist * " + DFile.Rows[0]["files_localfile"].ToString() + " !!! " + DPath + DSoubor);
                     }
                 }
 
@@ -5375,7 +5371,7 @@ namespace AniDBClient
             }
             catch (Exception ee)
             {
-                LogAddError("RENAME ! " + ee.Message);
+                logger.LogAddError("RENAME ! " + ee.Message);
             }
         }
 
@@ -6944,11 +6940,11 @@ namespace AniDBClient
                 Zapis.Close();
                 Zapis.Dispose();
 
-                LogAddError("EXPORT > " + Soubor.Directory.FullName + @"\" + Nazev + ".txt");
+                logger.LogAddError("EXPORT > " + Soubor.Directory.FullName + @"\" + Nazev + ".txt");
             }
             else
             {
-                LogAddError("EXPORT ! File doesnt exist");
+                logger.LogAddError("EXPORT ! File doesnt exist");
             }
         }
 
@@ -8354,7 +8350,7 @@ namespace AniDBClient
                             }
                             catch
                             {
-                                LogAddError("EXPORT > Cant export " + AdresarNew.FullName + @"\" + AdresarNew.Name + ".md5");
+                                logger.LogAddError("EXPORT > Cant export " + AdresarNew.FullName + @"\" + AdresarNew.Name + ".md5");
                             }
                         }
 
@@ -8369,7 +8365,7 @@ namespace AniDBClient
                             }
                             catch
                             {
-                                LogAddError("EXPORT > Cant export " + AdresarNew.FullName + @"\" + AdresarNew.Name + ".sfv");
+                                logger.LogAddError("EXPORT > Cant export " + AdresarNew.FullName + @"\" + AdresarNew.Name + ".sfv");
                             }
                         }
 
@@ -8384,7 +8380,7 @@ namespace AniDBClient
                             }
                             catch
                             {
-                                LogAddError("EXPORT > Cant export " + AdresarNew.FullName + @"\" + AdresarNew.Name + ".ed2k");
+                                logger.LogAddError("EXPORT > Cant export " + AdresarNew.FullName + @"\" + AdresarNew.Name + ".ed2k");
                             }
                         }
 
@@ -8399,7 +8395,7 @@ namespace AniDBClient
                             }
                             catch
                             {
-                                LogAddError("EXPORT > Cant export " + AdresarNew.FullName + @"\" + AdresarNew.Name + ".sha1");
+                                logger.LogAddError("EXPORT > Cant export " + AdresarNew.FullName + @"\" + AdresarNew.Name + ".sha1");
                             }
                         }
                     }
@@ -11415,19 +11411,7 @@ namespace AniDBClient
         private void LogFileEnable()
         {
             FileInfo soubor = new FileInfo(GlobalAdresarAccount);
-
-            if (ZapisLogA != null)
-                ZapisLogA.Close();
-
-            if (ZapisLogS != null)
-                ZapisLogS.Close();
-
-            if (ZapisLogE != null)
-                ZapisLogE.Close();
-
-            ZapisLogA = new StreamWriter(soubor.Directory.FullName + @"\L-AniDB.Log", true, Encoding.UTF8);
-            ZapisLogS = new StreamWriter(soubor.Directory.FullName + @"\L-SQL.Log", true, Encoding.UTF8);
-            ZapisLogE = new StreamWriter(soubor.Directory.FullName + @"\L-Error.Log", true, Encoding.UTF8);
+            logger = new Logger(soubor.Directory.FullName);
         }
 
         //Zapnutí logování do souboru
@@ -11436,65 +11420,7 @@ namespace AniDBClient
             if (GlobalAdresarAccount != null)
                 LogFileEnable();
         }
-
-        //Logování AniDB
-        private void LogAdd(string MessageString)
-        {
-            if (LogSQL.Text.Length + MessageString.Length > LogSQL.MaxLength)
-                Log.Text = "";
-
-            Log.Text = LogTime() + MessageString + "\r\n\r\n" + Log.Text;
-
-            if (Options_CH21.Checked && ZapisLogA != null)
-            {
-                ZapisLogA.WriteLine(LogTime() + MessageString);
-                ZapisLogA.WriteLine();
-                ZapisLogA.Flush();
-            }
-        }
-
-        //Logování SQL
-        private void LogAddSQL(string MessageString)
-        {
-            if (LogSQL.Text.Length + MessageString.Length > LogSQL.MaxLength)
-                LogSQL.Text = "";
-
-            LogSQL.Text = LogTime() + MessageString + "\r\n\r\n" + LogSQL.Text;
-
-            if (Options_CH21.Checked && ZapisLogS != null)
-            {
-                ZapisLogS.WriteLine(LogTime() + MessageString);
-                ZapisLogS.WriteLine();
-                ZapisLogS.Flush();
-            }
-        }
-
-        //Získej čas
-        private string LogTime()
-        {
-            return "[" + DateTime.Now.ToShortDateString().Replace(" ", "") + " " + DateTime.Now.ToShortTimeString() + "]\r\n";
-        }
-
-        //Logování Eroor
-        private void LogAddError(string MessageString)
-        {
-            try
-            {
-                if (LogSQL.Text.Length + MessageString.Length > LogSQL.MaxLength)
-                    LogError.Text = "";
-
-                LogError.Text = LogTime() + MessageString + "\r\n\r\n" + LogError.Text;
-
-                if (Options_CH21.Checked && ZapisLogE != null)
-                {
-                    ZapisLogE.WriteLine(LogTime() + MessageString);
-                    ZapisLogE.WriteLine();
-                    ZapisLogE.Flush();
-                }
-            }
-            catch { }
-        }
-
+        
         //Vymazání úloh
         private void LogTasksDel_Click(object sender, EventArgs e)
         {
@@ -12892,7 +12818,7 @@ namespace AniDBClient
                     }
                     catch (Exception ee)
                     {
-                        LogAddError("PARSER > E R O R R  I N  CRC32\r\n" + ee.ToString());
+                        logger.LogAddError("PARSER > E R O R R  I N  CRC32\r\n" + ee.ToString());
                     }
                 }
                 else if (Soubor.Extension.ToLower() == ".md5")
@@ -12940,7 +12866,7 @@ namespace AniDBClient
                     }
                     catch (Exception ee)
                     {
-                        LogAddError("PARSER > E R O R R  I N  MD5\r\n" + ee.ToString());
+                        logger.LogAddError("PARSER > E R O R R  I N  MD5\r\n" + ee.ToString());
                     }
                 }
                 else if (Soubor.Extension.ToLower() == ".ed2k")
@@ -12986,7 +12912,7 @@ namespace AniDBClient
                     }
                     catch (Exception ee)
                     {
-                        LogAddError("PARSER > E R O R R  I N  ED2K\r\n" + ee.ToString());
+                        logger.LogAddError("PARSER > E R O R R  I N  ED2K\r\n" + ee.ToString());
                     }
                 }
                 else if (Soubor.Extension.ToLower() == ".xml")
@@ -13409,7 +13335,7 @@ namespace AniDBClient
                     }
                     catch (Exception ee)
                     {
-                        LogAddError("PARSER > E R O R R  I N  XML\r\n" + ee.ToString());
+                        logger.LogAddError("PARSER > E R O R R  I N  XML\r\n" + ee.ToString());
                     }
                 }
                 else if (Soubor.Name == "mylist.txt")
@@ -13441,7 +13367,7 @@ namespace AniDBClient
                     }
                     catch (Exception ee)
                     {
-                        LogAddError("PARSER > E R O R R\r\n" + ee.ToString());
+                        logger.LogAddError("PARSER > E R O R R\r\n" + ee.ToString());
                     }
 
                 }

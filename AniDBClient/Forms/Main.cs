@@ -31,6 +31,7 @@ using AniDBClient.Utilities;
 using ZedGraph;
 
 using HttpServer;
+using Calendar = AniDBClient.Forms.Calendar;
 using HttpListener = HttpServer.HttpListener;
 using Settings = AniDBClient.Utilities.Settings;
 

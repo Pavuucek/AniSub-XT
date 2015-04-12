@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
-namespace AniDBClient
+namespace AniDBClient.Forms
 {
     public partial class Tags : Form
     {
@@ -17,12 +13,12 @@ namespace AniDBClient
         {
             InitializeComponent();
 
-            for (int i = 0; i < tagy.Rows.Count; i++ )
+            for (var i = 0; i < tagy.Rows.Count; i++)
                 Tags_Tags.Items.Add(tagy.Rows[i]["tags_name"].ToString());
 
-            for (int i = 0; i < tagych.Rows.Count; i++)
+            for (var i = 0; i < tagych.Rows.Count; i++)
             {
-                int x = Tags_Tags.Items.IndexOf(tagych.Rows[i]["tags_name"].ToString());
+                var x = Tags_Tags.Items.IndexOf(tagych.Rows[i]["tags_name"].ToString());
 
                 if (x >= 0 && x < Tags_Tags.Items.Count)
                     Tags_Tags.SetItemChecked(x, true);
@@ -37,15 +33,15 @@ namespace AniDBClient
             foreach (string tag in Tags_Tags.CheckedItems)
                 Tagy.Add(tag);
 
-            this.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.Close();
+            DialogResult = DialogResult.OK;
+            Close();
         }
 
         //Zavři
         private void Tags_KO_Click(object sender, EventArgs e)
         {
-            this.DialogResult = System.Windows.Forms.DialogResult.Abort;
-            this.Close();
+            DialogResult = DialogResult.Abort;
+            Close();
         }
 
         //Přidej tag

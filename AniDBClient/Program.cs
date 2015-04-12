@@ -1,62 +1,51 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Drawing;
-using System.Drawing.Imaging;
-using System.Globalization;
 using System.IO;
-using System.Linq;
-using System.Windows.Forms;
-using System.Runtime.InteropServices;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading;
+using System.Windows.Forms;
 using WinAPI;
 
 namespace AniDBClient
 {
-    static class Program
+    internal static class Program
     {
         public const string ApplicationName = "AniSub-Grep-a-Fruit";
 
         [STAThread]
         //Startup hlavního programu
-        static void Main(string[] Args)
+        private static void Main(string[] args)
         {
-            string Att = "";
+            var att = "";
 
-            foreach (string Arg in Args)
-                Att += Arg + " ";
+            foreach (var arg in args)
+                att += arg + " ";
 
-            FileInfo ExecutablePath = new FileInfo(Application.ExecutablePath);
-            string GlobalAdresar = ExecutablePath.DirectoryName + @"\";                
+            var executablePath = new FileInfo(Application.ExecutablePath);
+            var globalAdresar = executablePath.DirectoryName + @"\";
 
-            bool NoInstanceCurrently;
+            bool noInstanceCurrently;
 
-            Mutex mutex = new Mutex(true, ApplicationName, out NoInstanceCurrently);
+            var mutex = new Mutex(true, ApplicationName, out noInstanceCurrently);
 
-            if (NoInstanceCurrently)
+            if (noInstanceCurrently)
             {
-                AppDomain.CurrentDomain.AppendPrivatePath(GlobalAdresar);
+                AppDomain.CurrentDomain.AppendPrivatePath(globalAdresar);
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new Main(GlobalAdresar));
+                Application.Run(new Main(globalAdresar));
 
                 GC.KeepAlive(mutex);
                 GC.WaitForPendingFinalizers();
             }
 
-            if (Att != "")
-            {
-                Process[] Procs = Process.GetProcesses();
+            if (att == "") return;
+            var procs = Process.GetProcesses();
 
-                foreach (Process Proc in Procs)
-                {
-                    if (Proc.ProcessName.Contains("AniSub"))
-                        if (Process.GetCurrentProcess().Handle != Proc.Handle)
-                            WinApi.sendWindowsStringMessage((int)Proc.MainWindowHandle, 0, Att);
-                }
+            foreach (var proc in procs)
+            {
+                if (!proc.ProcessName.Contains("AniSub")) continue;
+                if (Process.GetCurrentProcess().Handle != proc.Handle)
+                    WinApi.sendWindowsStringMessage((int) proc.MainWindowHandle, 0, att);
             }
         }
     }

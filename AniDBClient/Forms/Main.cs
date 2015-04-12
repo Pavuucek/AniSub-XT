@@ -997,62 +997,62 @@ namespace AniDBClient
         {
             SettingsData settingsData = new SettingsData();
 
-            settingsData._Pass = Options_Password.Text;
-            settingsData._LoadAutomaticaly = true;
-            settingsData._Server = Options_ServerName.Text;
-            settingsData._Port = Options_ServerPort.Text;
-            settingsData._Name = Options_User.Text;
-            settingsData._TimeOut = (int)Options_TimeOut.Value;
-            settingsData._Delay = (int)Options_Delay.Value;
-            settingsData._MyListAdd = Options_CH01.Checked;
-            settingsData._Options_CH13 = Options_CH13.Checked;
-            settingsData._Options_CH14 = Options_CH14.Checked;
-            settingsData._Options_CH15 = Options_CH15.Checked;
-            settingsData._Options_CH16 = Options_CH16.Checked;
-            settingsData._Options_CH17 = Options_CH17.Checked;
-            settingsData._Options_CH18 = Options_CH18.Checked;
-            settingsData._Options_CH19 = Options_CH19.Checked;
-            settingsData._Options_CH21 = Options_CH21.Checked;
-            settingsData._Options_CH24 = Options_CH24.Checked;
-            settingsData._Reset = (int)Options_Reset.Value;
-            settingsData._Options_Network = Options_Network.SelectedItem.ToString();
-            settingsData._MyList = GlobalMyList;
-            settingsData._MyListPre.Clear();
-            settingsData._MyListPre.Add(Options_MylistStorage.Text);
-            settingsData._MyListPre.Add(Options_MylistSource.Text);
-            settingsData._MyListPre.Add(Options_MylistOther.Text);
-            settingsData._MyListPre.Add(Options_MylistState.SelectedIndex);
-            settingsData._MyListPre.Add(Options_CH02.Checked);
-            settingsData._PortLocal = Options_LocalPort.Text;
-            settingsData._PagesFile = (int)DataFiles_Rows.Value;
-            settingsData._PagesAnime = (int)DataAnime_Rows.Value;
-            settingsData._Options_CH08 = Options_CH08.Checked;
-            settingsData._Hash_CH01 = Hash_CH01.Checked;
-            settingsData._Hash_CH02 = Hash_CH02.Checked;
-            settingsData._Hash_CH03 = Hash_CH03.Checked;
-            settingsData._Rules_Position = Rules_Position.SelectedIndex;
-            settingsData._Hash_Waiting = (int)Hash_Waiting.Value;
-            settingsData._Export1 = DataFiles_Menu_Mn06_Mn01.Checked;
-            settingsData._Export2 = DataFiles_Menu_Mn06_Mn02.Checked;
-            settingsData._Export3 = DataFiles_Menu_Mn06_Mn03.Checked;
-            settingsData._Export4 = DataFiles_Menu_Mn06_Mn04.Checked;
-            settingsData._Watcher_CH01 = Watcher_CH01.Checked;
-            settingsData._AnimeTree_CH01 = AnimeTree_CH01.CheckState;
-            settingsData._AnimeTree_CH02 = AnimeTree_CH02.Checked;
-            settingsData._MangaTree_CH01 = MangaTree_CH01.Checked;
-            settingsData._Backup = (int)Options_Backup.Value;
-            settingsData._WebServerPort = (int)WebServer_Port.Value;
-            settingsData._WebServerMPCHC = (int)WebServer_MPCHC.Value;
+            settingsData.Pass = Options_Password.Text;
+            settingsData.LoadAutomaticaly = true;
+            settingsData.Server = Options_ServerName.Text;
+            settingsData.Port = Options_ServerPort.Text;
+            settingsData.Name = Options_User.Text;
+            settingsData.TimeOut = (int)Options_TimeOut.Value;
+            settingsData.Delay = (int)Options_Delay.Value;
+            settingsData.MyListAdd = Options_CH01.Checked;
+            settingsData.OptionsCh13 = Options_CH13.Checked;
+            settingsData.OptionsCh14 = Options_CH14.Checked;
+            settingsData.OptionsCh15 = Options_CH15.Checked;
+            settingsData.OptionsCh16 = Options_CH16.Checked;
+            settingsData.OptionsCh17 = Options_CH17.Checked;
+            settingsData.OptionsCh18 = Options_CH18.Checked;
+            settingsData.OptionsCh19 = Options_CH19.Checked;
+            settingsData.OptionsCh21 = Options_CH21.Checked;
+            settingsData.OptionsCh24 = Options_CH24.Checked;
+            settingsData.Reset = (int)Options_Reset.Value;
+            settingsData.OptionsNetwork = Options_Network.SelectedItem.ToString();
+            settingsData.MyList = GlobalMyList;
+            settingsData.MyListPre.Clear();
+            settingsData.MyListPre.Add(Options_MylistStorage.Text);
+            settingsData.MyListPre.Add(Options_MylistSource.Text);
+            settingsData.MyListPre.Add(Options_MylistOther.Text);
+            settingsData.MyListPre.Add(Options_MylistState.SelectedIndex);
+            settingsData.MyListPre.Add(Options_CH02.Checked);
+            settingsData.PortLocal = Options_LocalPort.Text;
+            settingsData.PagesFile = (int)DataFiles_Rows.Value;
+            settingsData.PagesAnime = (int)DataAnime_Rows.Value;
+            settingsData.OptionsCh08 = Options_CH08.Checked;
+            settingsData.HashCh01 = Hash_CH01.Checked;
+            settingsData.HashCh02 = Hash_CH02.Checked;
+            settingsData.HashCh03 = Hash_CH03.Checked;
+            settingsData.RulesPosition = Rules_Position.SelectedIndex;
+            settingsData.HashWaiting = (int)Hash_Waiting.Value;
+            settingsData.Export1 = DataFiles_Menu_Mn06_Mn01.Checked;
+            settingsData.Export2 = DataFiles_Menu_Mn06_Mn02.Checked;
+            settingsData.Export3 = DataFiles_Menu_Mn06_Mn03.Checked;
+            settingsData.Export4 = DataFiles_Menu_Mn06_Mn04.Checked;
+            settingsData.WatcherCh01 = Watcher_CH01.Checked;
+            settingsData.AnimeTreeCh01 = AnimeTree_CH01.CheckState;
+            settingsData.AnimeTreeCh02 = AnimeTree_CH02.Checked;
+            settingsData.MangaTreeCh01 = MangaTree_CH01.Checked;
+            settingsData.Backup = (int)Options_Backup.Value;
+            settingsData.WebServerPort = (int)WebServer_Port.Value;
+            settingsData.WebServerMpchc = (int)WebServer_MPCHC.Value;
 
-            settingsData._DataFilesTree_CH01 = DataFilesTree_CH01.Checked;
-            settingsData._DataFilesTree_CH02 = DataFilesTree_CH02.Checked;
-            settingsData._DataFilesTree_CH03 = DataFilesTree_CH03.Checked;
+            settingsData.DataFilesTreeCh01 = DataFilesTree_CH01.Checked;
+            settingsData.DataFilesTreeCh02 = DataFilesTree_CH02.Checked;
+            settingsData.DataFilesTreeCh03 = DataFilesTree_CH03.Checked;
 
-            settingsData._Rename = Rules_FilesRulesRenameC.SelectedIndex;
-            settingsData._Move = Rules_FilesRulesMoveC.SelectedIndex;
-            settingsData._Info = Rules_InfoC.SelectedIndex;
+            settingsData.Rename = Rules_FilesRulesRenameC.SelectedIndex;
+            settingsData.Move = Rules_FilesRulesMoveC.SelectedIndex;
+            settingsData.Info = Rules_InfoC.SelectedIndex;
 
-            settingsData._Manga_Directory = Manga_Tx19.Text;
+            settingsData.MangaDirectory = Manga_Tx19.Text;
 
             foreach (Control c in MainTabData_Mn01.Controls)
             {
@@ -1061,59 +1061,59 @@ namespace AniDBClient
                     RadioButton cc = c as System.Windows.Forms.RadioButton;
 
                     if (cc.Checked)
-                        settingsData._DataFiles_RB = cc.Name;
+                        settingsData.DataFilesRb = cc.Name;
                 }
             }
 
             if (Rules_FilesRulesMove_RB01.Checked)
-                settingsData._MoveRB = 1;
+                settingsData.MoveRb = 1;
             else if (Rules_FilesRulesMove_RB02.Checked)
-                settingsData._MoveRB = 2;
+                settingsData.MoveRb = 2;
             else
-                settingsData._MoveRB = 3;
+                settingsData.MoveRb = 3;
 
             if (Rules_FilesRulesRename_RB01.Checked)
-                settingsData._RenameRB = 1;
+                settingsData.RenameRb = 1;
             else
-                settingsData._RenameRB = 2;
+                settingsData.RenameRb = 2;
 
             if (Rules_InfoRB01.Checked)
-                settingsData._InfoRB = 1;
+                settingsData.InfoRb = 1;
             else
-                settingsData._InfoRB = 2;
+                settingsData.InfoRb = 2;
 
             if (Rules_CH01.Checked)
-                settingsData._Rules_CH01 = true;
+                settingsData.RulesCh01 = true;
             else
-                settingsData._Rules_CH01 = false;
+                settingsData.RulesCh01 = false;
 
             if (Rules_CH02.Checked)
-                settingsData._Rules_CH02 = true;
+                settingsData.RulesCh02 = true;
             else
-                settingsData._Rules_CH02 = false;
+                settingsData.RulesCh02 = false;
 
             if (Rules_CH03.Checked)
-                settingsData._Rules_CH03 = true;
+                settingsData.RulesCh03 = true;
             else
-                settingsData._Rules_CH03 = false;
+                settingsData.RulesCh03 = false;
 
             if (Rules_CH04.Checked)
-                settingsData._Rules_CH04 = true;
+                settingsData.RulesCh04 = true;
             else
-                settingsData._Rules_CH04 = false;
+                settingsData.RulesCh04 = false;
 
-            settingsData._TreeList = DataFilesTree.Enabled;
+            settingsData.TreeList = DataFilesTree.Enabled;
 
-            settingsData._Extensions = "";
+            settingsData.Extensions = "";
             foreach (string Polozka in Options_ExtensionList.Items)
-                settingsData._Extensions += Polozka + ";";
+                settingsData.Extensions += Polozka + ";";
 
-            settingsData._ListChars.Clear();
+            settingsData.ListChars.Clear();
 
             for (int i = 0; i < Rules_Replace.Rows.Count - 1; i++)
-                settingsData._ListChars.Add(Rules_Replace[0, i].Value.ToString() + ";%*" + Rules_Replace[1, i].Value.ToString());
+                settingsData.ListChars.Add(Rules_Replace[0, i].Value.ToString() + ";%*" + Rules_Replace[1, i].Value.ToString());
 
-            settingsData._Language = Options_Language.SelectedIndex;
+            settingsData.Language = Options_Language.SelectedIndex;
 
             settingsData.Color01 = Options_Color01.BackColor;
             settingsData.Color02 = Options_Color02.BackColor;
@@ -1153,42 +1153,42 @@ namespace AniDBClient
         //Aplikuj nastavení
         private void Options_SetingsLoadApply(SettingsData settingsData, bool defaultSettingsData)
         {
-            Options_Language.SelectedIndex = settingsData._Language;
+            Options_Language.SelectedIndex = settingsData.Language;
 
-            Options_ServerName.Text = settingsData._Server;
-            Options_ServerPort.Text = settingsData._Port;
+            Options_ServerName.Text = settingsData.Server;
+            Options_ServerPort.Text = settingsData.Port;
 
             if (!defaultSettingsData)
             {
-                Options_User.Text = settingsData._Name;
-                Options_Password.Text = settingsData._Pass;
+                Options_User.Text = settingsData.Name;
+                Options_Password.Text = settingsData.Pass;
             }
 
-            Options_TimeOut.Value = settingsData._TimeOut;
-            Options_Delay.Value = settingsData._Delay;
-            Options_CH01.Checked = settingsData._MyListAdd;
-            GlobalMyList = settingsData._MyList;
-            Options_Reset.Value = settingsData._Reset == 0 ? 3 : settingsData._Reset;
-            Options_CH13.Checked = settingsData._Options_CH13;
-            Options_CH14.Checked = settingsData._Options_CH14;
-            Options_CH15.Checked = settingsData._Options_CH15;
-            Options_CH16.Checked = settingsData._Options_CH16;
-            Options_CH17.Checked = settingsData._Options_CH17;
-            Options_CH18.Checked = settingsData._Options_CH18;
-            Options_CH19.Checked = settingsData._Options_CH19;
-            Options_CH21.Checked = settingsData._Options_CH21;
-            Options_CH24.Checked = settingsData._Options_CH24;
+            Options_TimeOut.Value = settingsData.TimeOut;
+            Options_Delay.Value = settingsData.Delay;
+            Options_CH01.Checked = settingsData.MyListAdd;
+            GlobalMyList = settingsData.MyList;
+            Options_Reset.Value = settingsData.Reset == 0 ? 3 : settingsData.Reset;
+            Options_CH13.Checked = settingsData.OptionsCh13;
+            Options_CH14.Checked = settingsData.OptionsCh14;
+            Options_CH15.Checked = settingsData.OptionsCh15;
+            Options_CH16.Checked = settingsData.OptionsCh16;
+            Options_CH17.Checked = settingsData.OptionsCh17;
+            Options_CH18.Checked = settingsData.OptionsCh18;
+            Options_CH19.Checked = settingsData.OptionsCh19;
+            Options_CH21.Checked = settingsData.OptionsCh21;
+            Options_CH24.Checked = settingsData.OptionsCh24;
 
             try
             {
-                WebServer_Port.Value = settingsData._WebServerPort;
-                WebServer_MPCHC.Value = settingsData._WebServerMPCHC;
+                WebServer_Port.Value = settingsData.WebServerPort;
+                WebServer_MPCHC.Value = settingsData.WebServerMpchc;
             }
             catch { }
 
-            if (settingsData._Options_Network != null)
+            if (settingsData.OptionsNetwork != null)
             {
-                string[] OP = settingsData._Options_Network.Split(new string[] { " * " }, StringSplitOptions.None);
+                string[] OP = settingsData.OptionsNetwork.Split(new string[] { " * " }, StringSplitOptions.None);
 
                 for (int i = 0; i < Options_Network.Items.Count; i++)
                 {
@@ -1200,17 +1200,17 @@ namespace AniDBClient
                 }
             }
 
-            if (settingsData._MyListPre != null)
+            if (settingsData.MyListPre != null)
             {
-                if (settingsData._MyListPre.Count == 5)
+                if (settingsData.MyListPre.Count == 5)
                 {
                     try
                     {
-                        Options_MylistStorage.Text = (string)settingsData._MyListPre[0];
-                        Options_MylistSource.Text = (string)settingsData._MyListPre[1].ToString();
-                        Options_MylistOther.Text = (string)settingsData._MyListPre[2].ToString();
-                        Options_MylistState.SelectedIndex = (int)settingsData._MyListPre[3];
-                        Options_CH02.Checked = (bool)settingsData._MyListPre[4];
+                        Options_MylistStorage.Text = (string)settingsData.MyListPre[0];
+                        Options_MylistSource.Text = (string)settingsData.MyListPre[1].ToString();
+                        Options_MylistOther.Text = (string)settingsData.MyListPre[2].ToString();
+                        Options_MylistState.SelectedIndex = (int)settingsData.MyListPre[3];
+                        Options_CH02.Checked = (bool)settingsData.MyListPre[4];
                     }
                     catch
                     {
@@ -1224,53 +1224,53 @@ namespace AniDBClient
                 {
                     RadioButton cc = c as System.Windows.Forms.RadioButton;
 
-                    if (cc.Name == settingsData._DataFiles_RB)
+                    if (cc.Name == settingsData.DataFilesRb)
                         cc.Checked = true;
                 }
             }
 
-            Options_LocalPort.Text = settingsData._PortLocal;
+            Options_LocalPort.Text = settingsData.PortLocal;
 
-            if (settingsData._PagesFile > 1000)
+            if (settingsData.PagesFile > 1000)
                 DataFiles_Rows.Value = 1000;
             else
-                DataFiles_Rows.Value = settingsData._PagesFile;
+                DataFiles_Rows.Value = settingsData.PagesFile;
 
 
-            DataAnime_Rows.Value = settingsData._PagesAnime > 5000 ? 5000 : settingsData._PagesAnime;
+            DataAnime_Rows.Value = settingsData.PagesAnime > 5000 ? 5000 : settingsData.PagesAnime;
 
-            Options_CH08.Checked = settingsData._Options_CH08;
-            Hash_CH01.Checked = settingsData._Hash_CH01;
-            Hash_CH02.Checked = settingsData._Hash_CH02;
-            Hash_CH03.Checked = settingsData._Hash_CH03;
-            Rules_Position.SelectedIndex = settingsData._Rules_Position;
-            Hash_Waiting.Value = settingsData._Hash_Waiting;
-            DataFiles_Menu_Mn06_Mn01.Checked = settingsData._Export1;
-            DataFiles_Menu_Mn06_Mn02.Checked = settingsData._Export2;
-            DataFiles_Menu_Mn06_Mn03.Checked = settingsData._Export3;
-            DataFiles_Menu_Mn06_Mn04.Checked = settingsData._Export4;
-            Watcher_CH01.Checked = settingsData._Watcher_CH01;
-            AnimeTree_CH01.CheckState = settingsData._AnimeTree_CH01;
-            AnimeTree_CH02.Checked = settingsData._AnimeTree_CH02;
-            MangaTree_CH01.Checked = settingsData._MangaTree_CH01;
-            Options_Backup.Value = settingsData._Backup == 0 ? 2 : settingsData._Backup;
+            Options_CH08.Checked = settingsData.OptionsCh08;
+            Hash_CH01.Checked = settingsData.HashCh01;
+            Hash_CH02.Checked = settingsData.HashCh02;
+            Hash_CH03.Checked = settingsData.HashCh03;
+            Rules_Position.SelectedIndex = settingsData.RulesPosition;
+            Hash_Waiting.Value = settingsData.HashWaiting;
+            DataFiles_Menu_Mn06_Mn01.Checked = settingsData.Export1;
+            DataFiles_Menu_Mn06_Mn02.Checked = settingsData.Export2;
+            DataFiles_Menu_Mn06_Mn03.Checked = settingsData.Export3;
+            DataFiles_Menu_Mn06_Mn04.Checked = settingsData.Export4;
+            Watcher_CH01.Checked = settingsData.WatcherCh01;
+            AnimeTree_CH01.CheckState = settingsData.AnimeTreeCh01;
+            AnimeTree_CH02.Checked = settingsData.AnimeTreeCh02;
+            MangaTree_CH01.Checked = settingsData.MangaTreeCh01;
+            Options_Backup.Value = settingsData.Backup == 0 ? 2 : settingsData.Backup;
 
-            DataFilesTree_CH01.Checked = settingsData._DataFilesTree_CH01;
-            DataFilesTree_CH02.Checked = settingsData._DataFilesTree_CH02;
-            DataFilesTree_CH03.Checked = settingsData._DataFilesTree_CH03;
+            DataFilesTree_CH01.Checked = settingsData.DataFilesTreeCh01;
+            DataFilesTree_CH02.Checked = settingsData.DataFilesTreeCh02;
+            DataFilesTree_CH03.Checked = settingsData.DataFilesTreeCh03;
 
-            Manga_Tx19.Text = settingsData._Manga_Directory;
+            Manga_Tx19.Text = settingsData.MangaDirectory;
 
-            if (Rules_FilesRulesRenameC.Items.Count > settingsData._Rename)
-                Rules_FilesRulesRenameC.SelectedIndex = settingsData._Rename;
+            if (Rules_FilesRulesRenameC.Items.Count > settingsData.Rename)
+                Rules_FilesRulesRenameC.SelectedIndex = settingsData.Rename;
 
-            if (Rules_FilesRulesMoveC.Items.Count > settingsData._Move)
-                Rules_FilesRulesMoveC.SelectedIndex = settingsData._Move;
+            if (Rules_FilesRulesMoveC.Items.Count > settingsData.Move)
+                Rules_FilesRulesMoveC.SelectedIndex = settingsData.Move;
 
-            if (Rules_InfoC.Items.Count > settingsData._Info)
-                Rules_InfoC.SelectedIndex = settingsData._Info;
+            if (Rules_InfoC.Items.Count > settingsData.Info)
+                Rules_InfoC.SelectedIndex = settingsData.Info;
 
-            switch (settingsData._MoveRB)
+            switch (settingsData.MoveRb)
             {
                 case 1:
                     Rules_FilesRulesMove_RB01.Checked = true;
@@ -1289,7 +1289,7 @@ namespace AniDBClient
                     break;
             }
 
-            switch (settingsData._RenameRB)
+            switch (settingsData.RenameRb)
             {
                 case 1:
                     Rules_FilesRulesRename_RB01.Checked = true;
@@ -1304,7 +1304,7 @@ namespace AniDBClient
                     break;
             }
 
-            switch (settingsData._InfoRB)
+            switch (settingsData.InfoRb)
             {
                 case 1:
                     Rules_InfoRB01.Checked = true;
@@ -1319,37 +1319,37 @@ namespace AniDBClient
                     break;
             }
 
-            if (settingsData._Rules_CH01)
+            if (settingsData.RulesCh01)
                 Rules_CH01.Checked = true;
             else
                 Rules_CH01.Checked = false;
 
 
-            if (settingsData._Rules_CH02)
+            if (settingsData.RulesCh02)
                 Rules_CH02.Checked = true;
             else
                 Rules_CH02.Checked = false;
 
-            if (settingsData._Rules_CH03)
+            if (settingsData.RulesCh03)
                 Rules_CH03.Checked = true;
             else
                 Rules_CH03.Checked = false;
 
-            if (settingsData._Rules_CH04)
+            if (settingsData.RulesCh04)
                 Rules_CH04.Checked = true;
             else
                 Rules_CH04.Checked = false;
 
-            if (settingsData._TreeList)
+            if (settingsData.TreeList)
                 DataFiles_Bt19_Click(null, null);
 
             Options_ExtensionList.Items.Clear();
-            foreach (string Polozka in settingsData._Extensions.Split(new string[] { ";" }, StringSplitOptions.RemoveEmptyEntries))
+            foreach (string Polozka in settingsData.Extensions.Split(new string[] { ";" }, StringSplitOptions.RemoveEmptyEntries))
                 Options_ExtensionList.Items.Add(Polozka);
 
             Rules_Replace.SuspendLayout();
             Rules_Replace.Rows.Clear();
-            foreach (string Polozka in settingsData._ListChars)
+            foreach (string Polozka in settingsData.ListChars)
             {
                 string[] PolozkaT = Polozka.Split(new string[] { ";%*" }, StringSplitOptions.None);
 
@@ -1428,14 +1428,14 @@ namespace AniDBClient
 
                     this.Options_SetingsLoadApply(logIn.settingsData, false);
 
-                    GlobalAdresarAccount = this.GlobalAdresar + @"Accounts\" + logIn.settingsData._Name + @"\" + logIn.settingsData._Name + ".dat";
+                    GlobalAdresarAccount = this.GlobalAdresar + @"Accounts\" + logIn.settingsData.Name + @"\" + logIn.settingsData.Name + ".dat";
 
                     ChBackup();
                     LogFileEnable();
 
                     try
                     {
-                        string AniDatabasePripojeni = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=\"" + this.GlobalAdresar + @"Accounts\" + logIn.settingsData._Name + @"\" + logIn.settingsData._Name + ".mdb\";User Id=Admin;Password=;";
+                        string AniDatabasePripojeni = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=\"" + this.GlobalAdresar + @"Accounts\" + logIn.settingsData.Name + @"\" + logIn.settingsData.Name + ".mdb\";User Id=Admin;Password=;";
                         this.AniDBDatabase = new OleDbConnection();
                         this.AniDBDatabase.ConnectionString = AniDatabasePripojeni;
                         this.AniDBDatabase.Open();

@@ -56,10 +56,10 @@ namespace AniDBClient
 
                         if (settingsData != null)
                         {
-                            if (settingsData._LoadAutomaticaly)
+                            if (settingsData.LoadAutomaticaly)
                             {
-                                byte[] bytePass = Encoding.ASCII.GetBytes(settingsData._Pass);
-                                byte[] byteLogin = Encoding.ASCII.GetBytes(settingsData._Name);
+                                byte[] bytePass = Encoding.ASCII.GetBytes(settingsData.Pass);
+                                byte[] byteLogin = Encoding.ASCII.GetBytes(settingsData.Name);
 
                                 MD5 md5 = MD5.Create();
                                 SHA1 sha1 = SHA1.Create();
@@ -182,8 +182,8 @@ namespace AniDBClient
 
                 settingsData = new SettingsData();
 
-                settingsData._Pass = LogIn_Password.Text;
-                settingsData._Name = LogIn_User.Text;
+                settingsData.Pass = LogIn_Password.Text;
+                settingsData.Name = LogIn_User.Text;
 
                 Settings.Settings_Save(this.GlobalAdresar + @"Accounts\" + LogIn_User.Text + @"\" + LogIn_User.Text + ".dat", settingsData);
 
@@ -210,8 +210,8 @@ namespace AniDBClient
             if (settingsData == null)
             {
                 settingsData = new SettingsData();
-                settingsData._Pass = LogIn_Password.Text;
-                settingsData._Name = LogIn_User.Text;
+                settingsData.Pass = LogIn_Password.Text;
+                settingsData.Name = LogIn_User.Text;
 
                 object[] ml = new object[6];
 
@@ -222,21 +222,21 @@ namespace AniDBClient
                 ml[4] = 0;
                 ml[5] = false;
 
-                settingsData._MyList.Add(ml);
+                settingsData.MyList.Add(ml);
             }
 
-            if (settingsData._Pass == LogIn_Password.Text)
+            if (settingsData.Pass == LogIn_Password.Text)
             {
                 if (LogIn_CH01.Checked)
                 {
-                    settingsData._LoadAutomaticaly = true;
-                    settingsData._Language = LogIn_Language.SelectedIndex;
-                    Settings.Settings_Save(this.GlobalAdresar + @"Accounts\" + settingsData._Name + @"\" + settingsData._Name + ".dat", settingsData);
+                    settingsData.LoadAutomaticaly = true;
+                    settingsData.Language = LogIn_Language.SelectedIndex;
+                    Settings.Settings_Save(this.GlobalAdresar + @"Accounts\" + settingsData.Name + @"\" + settingsData.Name + ".dat", settingsData);
 
                     StreamWriter Zapis = new StreamWriter(this.GlobalAdresar + @"AniSub-Account.hash", false);
 
-                    byte[] bytePass = Encoding.ASCII.GetBytes(settingsData._Pass);
-                    byte[] byteLogin = Encoding.ASCII.GetBytes(settingsData._Name);
+                    byte[] bytePass = Encoding.ASCII.GetBytes(settingsData.Pass);
+                    byte[] byteLogin = Encoding.ASCII.GetBytes(settingsData.Name);
 
                     MD5 md5 = MD5.Create();
                     SHA1 sha1 = SHA1.Create();
@@ -254,9 +254,9 @@ namespace AniDBClient
                 }
                 else
                 {
-                    settingsData._LoadAutomaticaly = false;
-                    settingsData._Language = LogIn_Language.SelectedIndex;
-                    Settings.Settings_Save(this.GlobalAdresar + @"Accounts\" + settingsData._Name + @"\" + settingsData._Name + ".dat", settingsData);
+                    settingsData.LoadAutomaticaly = false;
+                    settingsData.Language = LogIn_Language.SelectedIndex;
+                    Settings.Settings_Save(this.GlobalAdresar + @"Accounts\" + settingsData.Name + @"\" + settingsData.Name + ".dat", settingsData);
 
                     if (File.Exists(this.GlobalAdresar + @"AniSub-Account.hash"))
                         File.Delete(this.GlobalAdresar + @"AniSub-Account.hash");

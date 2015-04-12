@@ -9335,7 +9335,7 @@ namespace AniDBClient.Forms
 
                     if (img.Height > 279 || img.Width > 255)
                     {
-                        img = ImageHelpers.resizeImage(img, new Size(225, 279));
+                        img = ImageHelpers.ResizeImage(img, new Size(225, 279));
 
                         FileHelpers.FileDelete(GlobalAdresar + @"Accounts\!imgs\" + DAnime.Rows[0]["anime_obr"].ToString());
                         img.Save(GlobalAdresar + @"Accounts\!imgs\" + DAnime.Rows[0]["anime_obr"].ToString(), System.Drawing.Imaging.ImageFormat.Jpeg);
@@ -9443,7 +9443,7 @@ namespace AniDBClient.Forms
 
                 if (img.Height > 279 || img.Width > 255)
                 {
-                    img = ImageHelpers.resizeImage(img, new Size(225, 279));
+                    img = ImageHelpers.ResizeImage(img, new Size(225, 279));
                     FileHelpers.FileDelete(GlobalAdresar + @"Accounts\!imgs\" + DAnime.Rows[0]["anime_obr"].ToString());
                     img.Save(GlobalAdresar + @"Accounts\!imgs\" + DAnime.Rows[0]["anime_obr"].ToString(), System.Drawing.Imaging.ImageFormat.Jpeg);
                 }
@@ -10339,11 +10339,11 @@ namespace AniDBClient.Forms
             {
                 g.FillRectangle(new SolidBrush(Color.White), new Rectangle(0, 0, Anime_RatImg.Width, Anime_RatImg.Height));
                 for (int i = 0; i < Anime_Rat.Value; i++)
-                    g.DrawImage(ImageHelpers.resizeImage(Resources.i_Star, new Size(20, 20)), new Point(0 + i * 20, 0));
+                    g.DrawImage(ImageHelpers.ResizeImage(Resources.i_Star, new Size(20, 20)), new Point(0 + i * 20, 0));
 
                 for (int i = (int)Anime_Rat.Value; i < 10; i++)
                 {
-                    Bitmap res = (Bitmap)ImageHelpers.resizeImage(Resources.i_Star, new Size(20, 20));
+                    Bitmap res = (Bitmap)ImageHelpers.ResizeImage(Resources.i_Star, new Size(20, 20));
 
                     ColorMatrix cm = new ColorMatrix();
                     cm.Matrix33 = 0.5f;
@@ -10540,7 +10540,7 @@ namespace AniDBClient.Forms
                         if (File.Exists(GlobalAdresar + @"Accounts\!imgs\" + Anime[i].Key[2].ToString()))
                         {
                             StreamReader Cti = new StreamReader(GlobalAdresar + @"Accounts\!imgs\" + Anime[i].Key[2].ToString());
-                            Bitmap res = (Bitmap)ImageHelpers.resizeImage(Image.FromStream(Cti.BaseStream), new Size(W, H));
+                            Bitmap res = (Bitmap)ImageHelpers.ResizeImage(Image.FromStream(Cti.BaseStream), new Size(W, H));
                             int w = (W - res.Width) / 4;
                             int h = (H - res.Height) / 4;
                             w = w < 0 ? 0 : w;
@@ -13707,7 +13707,7 @@ namespace AniDBClient.Forms
                             Cti.Close();
                             Cti.Dispose();
 
-                            img = ImageHelpers.resizeImage(img, new Size(225, 279));
+                            img = ImageHelpers.ResizeImage(img, new Size(225, 279));
                             img.Save(GlobalAdresar + @"\Accounts\!imgsm\" + ID.ToString() + ".jpg", System.Drawing.Imaging.ImageFormat.Jpeg);
 
 
@@ -13957,7 +13957,7 @@ namespace AniDBClient.Forms
                     Cti.Close();
                     Cti.Dispose();
 
-                    img = ImageHelpers.resizeImage(img, new Size(225, 279));
+                    img = ImageHelpers.ResizeImage(img, new Size(225, 279));
                     Manga_Picture.BackgroundImage = img;
 
                     FileHelpers.FileDelete(GlobalAdresar + @"\Accounts\!imgsm\" + ID.ToString() + ".jpg");

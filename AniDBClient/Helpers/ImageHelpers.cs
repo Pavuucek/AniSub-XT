@@ -7,471 +7,469 @@ namespace AniDBClient.Helpers
     public static class ImageHelpers
     {
         //Ikonka  pro audio
-        public static Image FilesLangAudio(string Lang)
+        public static Image FilesLangAudio(string lang)
         {
-            Lang = Lang.ToLower();
-            string[] LangT = Lang.Replace(" (unspecified)", "").Split('\'');
-            Image[] Audio = new Image[LangT.Length];
+            lang = lang.ToLower();
+            var langT = lang.Replace(" (unspecified)", "").Split('\'');
+            var audio = new Image[langT.Length];
 
-            for (int i = 0; i < LangT.Length; i++)
-                switch (LangT[i])
+            for (var i = 0; i < langT.Length; i++)
+                switch (langT[i])
                 {
                     case "albanian":
-                        Audio[i] = Resources.anidb_audio_albanian;
+                        audio[i] = Resources.anidb_audio_albanian;
                         break;
 
                     case "arabic":
-                        Audio[i] = Resources.anidb_audio_arabic;
+                        audio[i] = Resources.anidb_audio_arabic;
                         break;
 
                     case "bengali":
-                        Audio[i] = Resources.anidb_audio_bengali;
+                        audio[i] = Resources.anidb_audio_bengali;
                         break;
 
                     case "brasilian":
-                        Audio[i] = Resources.anidb_audio_brasilian;
+                        audio[i] = Resources.anidb_audio_brasilian;
                         break;
 
                     case "bulgarian":
-                        Audio[i] = Resources.anidb_audio_bulgarian;
+                        audio[i] = Resources.anidb_audio_bulgarian;
                         break;
 
                     case "cantonese":
-                        Audio[i] = Resources.anidb_audio_cantonese;
+                        audio[i] = Resources.anidb_audio_cantonese;
                         break;
 
                     case "catalan":
-                        Audio[i] = Resources.anidb_audio_catalan;
+                        audio[i] = Resources.anidb_audio_catalan;
                         break;
 
                     case "croatian":
-                        Audio[i] = Resources.anidb_audio_croatian;
+                        audio[i] = Resources.anidb_audio_croatian;
                         break;
 
                     case "czech":
-                        Audio[i] = Resources.anidb_audio_czech;
+                        audio[i] = Resources.anidb_audio_czech;
                         break;
 
                     case "danish":
-                        Audio[i] = Resources.anidb_audio_danish;
+                        audio[i] = Resources.anidb_audio_danish;
                         break;
 
                     case "dutch":
-                        Audio[i] = Resources.anidb_audio_dutch;
+                        audio[i] = Resources.anidb_audio_dutch;
                         break;
 
                     case "estonian":
-                        Audio[i] = Resources.anidb_audio_estonian;
+                        audio[i] = Resources.anidb_audio_estonian;
                         break;
 
                     case "finnish":
-                        Audio[i] = Resources.anidb_audio_finnish;
+                        audio[i] = Resources.anidb_audio_finnish;
                         break;
 
                     case "french":
-                        Audio[i] = Resources.anidb_audio_french;
+                        audio[i] = Resources.anidb_audio_french;
                         break;
 
                     case "georgian":
-                        Audio[i] = Resources.anidb_audio_georgian;
+                        audio[i] = Resources.anidb_audio_georgian;
                         break;
 
                     case "german":
-                        Audio[i] = Resources.anidb_audio_german;
+                        audio[i] = Resources.anidb_audio_german;
                         break;
 
                     case "hebrew":
-                        Audio[i] = Resources.anidb_audio_hebrew;
+                        audio[i] = Resources.anidb_audio_hebrew;
                         break;
 
                     case "hungarian":
-                        Audio[i] = Resources.anidb_audio_hungarian;
+                        audio[i] = Resources.anidb_audio_hungarian;
                         break;
 
                     case "chinese":
-                        Audio[i] = Resources.anidb_audio_chinese;
+                        audio[i] = Resources.anidb_audio_chinese;
                         break;
 
                     case "icelandic":
-                        Audio[i] = Resources.anidb_audio_icelandic;
+                        audio[i] = Resources.anidb_audio_icelandic;
                         break;
 
                     case "indonesian":
-                        Audio[i] = Resources.anidb_audio_indonesian;
+                        audio[i] = Resources.anidb_audio_indonesian;
                         break;
 
                     case "instrumental":
-                        Audio[i] = Resources.anidb_audio_instrumental;
+                        audio[i] = Resources.anidb_audio_instrumental;
                         break;
 
                     case "italian":
-                        Audio[i] = Resources.anidb_audio_italian;
+                        audio[i] = Resources.anidb_audio_italian;
                         break;
 
                     case "korean":
-                        Audio[i] = Resources.anidb_audio_korean;
+                        audio[i] = Resources.anidb_audio_korean;
                         break;
 
                     case "latin":
-                        Audio[i] = Resources.anidb_audio_latin;
+                        audio[i] = Resources.anidb_audio_latin;
                         break;
 
                     case "lithuanian":
-                        Audio[i] = Resources.anidb_audio_lithuanian;
+                        audio[i] = Resources.anidb_audio_lithuanian;
                         break;
 
                     case "malay":
-                        Audio[i] = Resources.anidb_audio_malay;
+                        audio[i] = Resources.anidb_audio_malay;
                         break;
 
                     case "mandarin":
-                        Audio[i] = Resources.anidb_audio_mandarin;
+                        audio[i] = Resources.anidb_audio_mandarin;
                         break;
 
                     case "norwegian":
-                        Audio[i] = Resources.anidb_audio_norwegian;
+                        audio[i] = Resources.anidb_audio_norwegian;
                         break;
 
                     case "polish":
-                        Audio[i] = Resources.anidb_audio_polish;
+                        audio[i] = Resources.anidb_audio_polish;
                         break;
 
                     case "portuguese":
-                        Audio[i] = Resources.anidb_audio_portuguese;
+                        audio[i] = Resources.anidb_audio_portuguese;
                         break;
 
                     case "romania":
-                        Audio[i] = Resources.anidb_audio_romanian;
+                        audio[i] = Resources.anidb_audio_romanian;
                         break;
 
                     case "serbian":
-                        Audio[i] = Resources.anidb_audio_serbian;
+                        audio[i] = Resources.anidb_audio_serbian;
                         break;
 
                     case "simplified":
-                        Audio[i] = Resources.anidb_audio_simplified;
+                        audio[i] = Resources.anidb_audio_simplified;
                         break;
 
                     case "slovak":
-                        Audio[i] = Resources.anidb_audio_slovak;
+                        audio[i] = Resources.anidb_audio_slovak;
                         break;
 
                     case "slovenian":
-                        Audio[i] = Resources.anidb_audio_slovenian;
+                        audio[i] = Resources.anidb_audio_slovenian;
                         break;
 
                     case "spanish":
-                        Audio[i] = Resources.anidb_audio_spanish;
+                        audio[i] = Resources.anidb_audio_spanish;
                         break;
 
                     case "swedish":
-                        Audio[i] = Resources.anidb_audio_swedish;
+                        audio[i] = Resources.anidb_audio_swedish;
                         break;
 
                     case "taiwanese":
-                        Audio[i] = Resources.anidb_audio_taiwanese;
+                        audio[i] = Resources.anidb_audio_taiwanese;
                         break;
 
                     case "tamil":
-                        Audio[i] = Resources.anidb_audio_tamil;
+                        audio[i] = Resources.anidb_audio_tamil;
                         break;
 
                     case "tartar":
-                        Audio[i] = Resources.anidb_audio_tartar;
+                        audio[i] = Resources.anidb_audio_tartar;
                         break;
 
                     case "thai":
-                        Audio[i] = Resources.anidb_audio_thai;
+                        audio[i] = Resources.anidb_audio_thai;
                         break;
 
                     case "traditional":
-                        Audio[i] = Resources.anidb_audio_traditional;
+                        audio[i] = Resources.anidb_audio_traditional;
                         break;
 
                     case "turkish":
-                        Audio[i] = Resources.anidb_audio_turkish;
+                        audio[i] = Resources.anidb_audio_turkish;
                         break;
 
                     case "ukrainian":
-                        Audio[i] = Resources.anidb_audio_ukrainian;
+                        audio[i] = Resources.anidb_audio_ukrainian;
                         break;
 
                     case "unknown":
-                        Audio[i] = Resources.anidb_audio_unknown;
+                        audio[i] = Resources.anidb_audio_unknown;
                         break;
 
                     case "vietnamese":
-                        Audio[i] = Resources.anidb_audio_vietnamese;
+                        audio[i] = Resources.anidb_audio_vietnamese;
                         break;
 
                     case "japanese":
-                        Audio[i] = Resources.anidb_audio_japanese;
+                        audio[i] = Resources.anidb_audio_japanese;
                         break;
 
                     case "english":
-                        Audio[i] = Resources.anidb_audio_english;
+                        audio[i] = Resources.anidb_audio_english;
                         break;
 
                     default:
-                        Audio[i] = Resources.anidb_audio_unknown;
+                        audio[i] = Resources.anidb_audio_unknown;
                         break;
                 }
 
-            int NWidth = 0;
-            int NOffset = 0;
+            var nWidth = 0;
+            var nOffset = 0;
 
-            for (int i = 0; i < LangT.Length; i++)
-                NWidth += Audio[i].Width + 1;
+            for (var i = 0; i < langT.Length; i++)
+                nWidth += audio[i].Width + 1;
 
-            Bitmap ImgR = new Bitmap(NWidth, Audio[0].Height);
+            var imgR = new Bitmap(nWidth, audio[0].Height);
 
-            using (Graphics g = Graphics.FromImage(ImgR))
+            using (var g = Graphics.FromImage(imgR))
             {
-                for (int i = 0; i < LangT.Length; i++)
+                for (var i = 0; i < langT.Length; i++)
                 {
-                    g.DrawImage(Audio[i], new Point(NOffset, 0));
-                    NOffset += Audio[i].Width + 1;
+                    g.DrawImage(audio[i], new Point(nOffset, 0));
+                    nOffset += audio[i].Width + 1;
                 }
 
                 g.Save();
             }
 
-            return ImgR;
+            return imgR;
         }
 
         //Ikonka pro titulky
-        public static Image FilesLangSub(string Lang)
+        public static Image FilesLangSub(string lang)
         {
-            Lang = Lang.ToLower();
-            string[] LangT = Lang.Replace(" (unspecified)", "").Split('\'');
-            Image[] Audio = new Image[LangT.Length];
+            lang = lang.ToLower();
+            var langT = lang.Replace(" (unspecified)", "").Split('\'');
+            var audio = new Image[langT.Length];
 
-            for (int i = 0; i < LangT.Length; i++)
-                switch (LangT[i])
+            for (var i = 0; i < langT.Length; i++)
+                switch (langT[i])
                 {
                     case "albanian":
-                        Audio[i] = Resources.anidb_sub_albanian;
+                        audio[i] = Resources.anidb_sub_albanian;
                         break;
 
                     case "arabic":
-                        Audio[i] = Resources.anidb_sub_arabic;
+                        audio[i] = Resources.anidb_sub_arabic;
                         break;
 
                     case "bengali":
-                        Audio[i] = Resources.anidb_sub_bengali;
+                        audio[i] = Resources.anidb_sub_bengali;
                         break;
 
                     case "brasilian":
-                        Audio[i] = Resources.anidb_sub_brasilian;
+                        audio[i] = Resources.anidb_sub_brasilian;
                         break;
 
                     case "bulgarian":
-                        Audio[i] = Resources.anidb_sub_bulgarian;
+                        audio[i] = Resources.anidb_sub_bulgarian;
                         break;
 
                     case "catalan":
-                        Audio[i] = Resources.anidb_sub_catalan;
+                        audio[i] = Resources.anidb_sub_catalan;
                         break;
 
                     case "croatian":
-                        Audio[i] = Resources.anidb_sub_croatian;
+                        audio[i] = Resources.anidb_sub_croatian;
                         break;
 
                     case "czech":
-                        Audio[i] = Resources.anidb_sub_czech;
+                        audio[i] = Resources.anidb_sub_czech;
                         break;
 
                     case "danish":
-                        Audio[i] = Resources.anidb_sub_danish;
+                        audio[i] = Resources.anidb_sub_danish;
                         break;
 
                     case "dutch":
-                        Audio[i] = Resources.anidb_sub_dutch;
+                        audio[i] = Resources.anidb_sub_dutch;
                         break;
 
                     case "estonian":
-                        Audio[i] = Resources.anidb_sub_estonian;
+                        audio[i] = Resources.anidb_sub_estonian;
                         break;
 
                     case "finnish":
-                        Audio[i] = Resources.anidb_sub_finnish;
+                        audio[i] = Resources.anidb_sub_finnish;
                         break;
 
                     case "french":
-                        Audio[i] = Resources.anidb_sub_french;
+                        audio[i] = Resources.anidb_sub_french;
                         break;
 
                     case "georgian":
-                        Audio[i] = Resources.anidb_sub_georgian;
+                        audio[i] = Resources.anidb_sub_georgian;
                         break;
 
                     case "german":
-                        Audio[i] = Resources.anidb_sub_german;
+                        audio[i] = Resources.anidb_sub_german;
                         break;
 
                     case "hebrew":
-                        Audio[i] = Resources.anidb_sub_hebrew;
+                        audio[i] = Resources.anidb_sub_hebrew;
                         break;
 
                     case "hungarian":
-                        Audio[i] = Resources.anidb_sub_hungarian;
+                        audio[i] = Resources.anidb_sub_hungarian;
                         break;
 
                     case "chinese":
-                        Audio[i] = Resources.anidb_sub_chinese;
+                        audio[i] = Resources.anidb_sub_chinese;
                         break;
 
                     case "icelandic":
-                        Audio[i] = Resources.anidb_sub_icelandic;
+                        audio[i] = Resources.anidb_sub_icelandic;
                         break;
 
                     case "indonesian":
-                        Audio[i] = Resources.anidb_sub_indonesian;
+                        audio[i] = Resources.anidb_sub_indonesian;
                         break;
 
                     case "italian":
-                        Audio[i] = Resources.anidb_sub_italian;
+                        audio[i] = Resources.anidb_sub_italian;
                         break;
 
                     case "korean":
-                        Audio[i] = Resources.anidb_sub_korean;
+                        audio[i] = Resources.anidb_sub_korean;
                         break;
 
                     case "latin":
-                        Audio[i] = Resources.anidb_sub_latin;
+                        audio[i] = Resources.anidb_sub_latin;
                         break;
 
                     case "lithuanian":
-                        Audio[i] = Resources.anidb_sub_lithuanian;
+                        audio[i] = Resources.anidb_sub_lithuanian;
                         break;
 
                     case "malay":
-                        Audio[i] = Resources.anidb_sub_malay;
+                        audio[i] = Resources.anidb_sub_malay;
                         break;
 
                     case "norwegian":
-                        Audio[i] = Resources.anidb_sub_norwegian;
+                        audio[i] = Resources.anidb_sub_norwegian;
                         break;
 
                     case "polish":
-                        Audio[i] = Resources.anidb_sub_polish;
+                        audio[i] = Resources.anidb_sub_polish;
                         break;
 
                     case "portuguese":
-                        Audio[i] = Resources.anidb_sub_portuguese;
+                        audio[i] = Resources.anidb_sub_portuguese;
                         break;
 
                     case "romania":
-                        Audio[i] = Resources.anidb_sub_romanian;
+                        audio[i] = Resources.anidb_sub_romanian;
                         break;
 
                     case "serbian":
-                        Audio[i] = Resources.anidb_sub_serbian;
+                        audio[i] = Resources.anidb_sub_serbian;
                         break;
 
                     case "simplified":
-                        Audio[i] = Resources.anidb_sub_simplified;
+                        audio[i] = Resources.anidb_sub_simplified;
                         break;
 
                     case "slovak":
-                        Audio[i] = Resources.anidb_sub_slovak;
+                        audio[i] = Resources.anidb_sub_slovak;
                         break;
 
                     case "slovenian":
-                        Audio[i] = Resources.anidb_sub_slovenian;
+                        audio[i] = Resources.anidb_sub_slovenian;
                         break;
 
                     case "spanish":
-                        Audio[i] = Resources.anidb_sub_spanish;
+                        audio[i] = Resources.anidb_sub_spanish;
                         break;
 
                     case "swedish":
-                        Audio[i] = Resources.anidb_sub_swedish;
+                        audio[i] = Resources.anidb_sub_swedish;
                         break;
 
                     case "taiwanese":
-                        Audio[i] = Resources.anidb_sub_taiwanese;
+                        audio[i] = Resources.anidb_sub_taiwanese;
                         break;
 
                     case "tamil":
-                        Audio[i] = Resources.anidb_sub_tamil;
+                        audio[i] = Resources.anidb_sub_tamil;
                         break;
 
                     case "tartar":
-                        Audio[i] = Resources.anidb_sub_tartar;
+                        audio[i] = Resources.anidb_sub_tartar;
                         break;
 
                     case "thai":
-                        Audio[i] = Resources.anidb_sub_thai;
+                        audio[i] = Resources.anidb_sub_thai;
                         break;
 
                     case "traditional":
-                        Audio[i] = Resources.anidb_sub_traditional;
+                        audio[i] = Resources.anidb_sub_traditional;
                         break;
 
                     case "turkish":
-                        Audio[i] = Resources.anidb_sub_turkish;
+                        audio[i] = Resources.anidb_sub_turkish;
                         break;
 
                     case "ukrainian":
-                        Audio[i] = Resources.anidb_sub_ukrainian;
+                        audio[i] = Resources.anidb_sub_ukrainian;
                         break;
 
                     case "unknown":
-                        Audio[i] = Resources.anidb_sub_unknown;
+                        audio[i] = Resources.anidb_sub_unknown;
                         break;
 
                     case "vietnamese":
-                        Audio[i] = Resources.anidb_sub_vietnamese;
+                        audio[i] = Resources.anidb_sub_vietnamese;
                         break;
 
                     case "japanese":
-                        Audio[i] = Resources.anidb_sub_japanese;
+                        audio[i] = Resources.anidb_sub_japanese;
                         break;
 
                     case "english":
-                        Audio[i] = Resources.anidb_sub_english;
+                        audio[i] = Resources.anidb_sub_english;
                         break;
 
                     default:
-                        Audio[i] = Resources.anidb_audio_unknown;
+                        audio[i] = Resources.anidb_audio_unknown;
                         break;
                 }
 
-            int NWidth = 0;
-            int NOffset = 0;
+            var nWidth = 0;
+            var nOffset = 0;
 
-            for (int i = 0; i < LangT.Length; i++)
-                NWidth += Audio[i].Width + 1;
+            for (var i = 0; i < langT.Length; i++)
+                nWidth += audio[i].Width + 1;
 
-            Bitmap ImgR = new Bitmap(NWidth, Audio[0].Height);
+            var imgR = new Bitmap(nWidth, audio[0].Height);
 
-            using (Graphics g = Graphics.FromImage(ImgR))
+            using (var g = Graphics.FromImage(imgR))
             {
-                for (int i = 0; i < LangT.Length; i++)
+                for (var i = 0; i < langT.Length; i++)
                 {
-                    g.DrawImage(Audio[i], new Point(NOffset, 0));
-                    NOffset += Audio[i].Width + 1;
+                    g.DrawImage(audio[i], new Point(nOffset, 0));
+                    nOffset += audio[i].Width + 1;
                 }
 
                 g.Save();
             }
 
-            return ImgR;
+            return imgR;
         }
 
         //Zmenšit obrázek
-        public static Image resizeImage(Image imgToResize, Size size)
+        public static Image ResizeImage(Image imgToResize, Size size)
         {
-            int sourceWidth = imgToResize.Width;
-            int sourceHeight = imgToResize.Height;
+            var sourceWidth = imgToResize.Width;
+            var sourceHeight = imgToResize.Height;
 
-            float nPercent = 0;
-            float nPercentW = 0;
-            float nPercentH = 0;
+            float nPercent;
 
-            nPercentW = ((float)size.Width / (float)sourceWidth);
-            nPercentH = ((float)size.Height / (float)sourceHeight);
+            var nPercentW = (size.Width/(float) sourceWidth);
+            var nPercentH = (size.Height/(float) sourceHeight);
 
             if (nPercentH < nPercentW)
                 nPercent = nPercentH;
@@ -481,17 +479,17 @@ namespace AniDBClient.Helpers
             if (nPercent > 1)
                 nPercent = 1;
 
-            int destWidth = (int)(sourceWidth * nPercent);
-            int destHeight = (int)(sourceHeight * nPercent);
+            var destWidth = (int) (sourceWidth*nPercent);
+            var destHeight = (int) (sourceHeight*nPercent);
 
-            Bitmap b = new Bitmap(destWidth, destHeight);
-            Graphics g = Graphics.FromImage((Image)b);
+            var b = new Bitmap(destWidth, destHeight);
+            var g = Graphics.FromImage(b);
             g.InterpolationMode = InterpolationMode.HighQualityBicubic;
 
             g.DrawImage(imgToResize, 0, 0, destWidth, destHeight);
             g.Dispose();
 
-            return (Image)b;
+            return b;
         }
     }
 }

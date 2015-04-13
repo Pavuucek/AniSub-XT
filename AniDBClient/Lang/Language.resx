@@ -117,40 +117,40 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="DataAnime_Menu_Mn01" xml:space="preserve">
+  <data name="DataAnime_Menu_Expand" xml:space="preserve">
     <value>Rozevřít</value>
   </data>
-  <data name="DataAnime_Menu_Mn01_Mn01" xml:space="preserve">
+  <data name="DataAnime_Menu_ExpandAnime" xml:space="preserve">
     <value>Rozevřít anime</value>
   </data>
-  <data name="DataAnime_Menu_Mn01_Mn02" xml:space="preserve">
+  <data name="DataAnime_Menu_ExpandEpisodes" xml:space="preserve">
     <value>Rozevřít episody</value>
   </data>
-  <data name="DataAnime_Menu_Mn01_Mn03" xml:space="preserve">
+  <data name="DataAnime_Menu_ExpandAll" xml:space="preserve">
     <value>Rozevřít vše</value>
   </data>
-  <data name="DataAnime_Menu_Mn01_Mn04" xml:space="preserve">
+  <data name="DataAnime_Menu_CollapseEpisodes" xml:space="preserve">
     <value>Sbalit episody</value>
   </data>
-  <data name="DataAnime_Menu_Mn01_Mn05" xml:space="preserve">
+  <data name="DataAnime_Menu_CollapseAllEpisodes" xml:space="preserve">
     <value>Sbalit všechny episody</value>
   </data>
-  <data name="DataAnime_Menu_Mn01_Mn06" xml:space="preserve">
+  <data name="DataAnime_Menu_CollapseAll" xml:space="preserve">
     <value>Sbalit vše</value>
   </data>
-  <data name="DataAnime_Menu_Mn02" xml:space="preserve">
+  <data name="DataAnime_Menu_MyList" xml:space="preserve">
     <value>MyList</value>
   </data>
-  <data name="DataAnime_Menu_Mn02_Mn01" xml:space="preserve">
+  <data name="DataAnime_Menu_MyListAddModify" xml:space="preserve">
     <value>Přidat / Upravit</value>
   </data>
-  <data name="DataAnime_Menu_Mn02_Mn02" xml:space="preserve">
+  <data name="DataAnime_Menu_MyListDelete" xml:space="preserve">
     <value>Vymazat</value>
   </data>
-  <data name="DataAnime_Menu_Mn02_Mn03" xml:space="preserve">
+  <data name="DataAnime_Menu_MyListWatched" xml:space="preserve">
     <value>Shlédnuto</value>
   </data>
-  <data name="DataAnime_Menu_Mn03" xml:space="preserve">
+  <data name="DataAnime_Menu_Database" xml:space="preserve">
     <value>Databáze</value>
   </data>
   <data name="DataAnime_Mn04" xml:space="preserve">
@@ -495,10 +495,10 @@
   <data name="Anime_Genres" xml:space="preserve">
     <value>Žánry:</value>
   </data>
-  <data name="DataAnime_Menu_Mn02_Mn04" xml:space="preserve">
+  <data name="DataAnime_Menu_MyListUpdate" xml:space="preserve">
     <value>Aktualizovat</value>
   </data>
-  <data name="DataAnime_Menu_Mn03_Mn01" xml:space="preserve">
+  <data name="DataAnime_Menu_DatabaseDelete" xml:space="preserve">
     <value>Smazat</value>
   </data>
   <data name="DataFiles_RB01" xml:space="preserve">
@@ -540,13 +540,13 @@
   <data name="Add_Id" xml:space="preserve">
     <value>ID</value>
   </data>
-  <data name="AnimeData_Mn03" xml:space="preserve">
+  <data name="AnimeData_Episode" xml:space="preserve">
     <value>Episoda</value>
   </data>
-  <data name="AnimeData_Mn04" xml:space="preserve">
+  <data name="AnimeData_Name" xml:space="preserve">
     <value>Název *</value>
   </data>
-  <data name="AnimeData_Mn05" xml:space="preserve">
+  <data name="AnimeData_Length" xml:space="preserve">
     <value>Délka</value>
   </data>
   <data name="Hash" xml:space="preserve">
@@ -591,7 +591,7 @@
   <data name="Options_GR05" xml:space="preserve">
     <value>Nastavení</value>
   </data>
-  <data name="DataAnime_Menu_Mn02_Mn05" xml:space="preserve">
+  <data name="DataAnime_Menu_MyListCheck" xml:space="preserve">
     <value>Zkontrolovat</value>
   </data>
   <data name="DataFiles_Bt00_ToolTip" xml:space="preserve">
@@ -979,7 +979,7 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="DataFiles_RB05" xml:space="preserve">
     <value>Neznámé</value>
   </data>
-  <data name="AnimeTree_CH01" xml:space="preserve">
+  <data name="AnimeTree_Adult" xml:space="preserve">
     <value>18+</value>
   </data>
   <data name="MainTabManga_Mn01" xml:space="preserve">
@@ -1171,7 +1171,7 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="Options_MyListRefreshManga" xml:space="preserve">
     <value>Aktualizace statistik</value>
   </data>
-  <data name="AnimeTree_Menu_Mn02" xml:space="preserve">
+  <data name="AnimeTree_Menu_DeleteAnime" xml:space="preserve">
     <value>Smazat Anime</value>
   </data>
   <data name="Anime_Length" xml:space="preserve">

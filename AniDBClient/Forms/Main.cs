@@ -255,15 +255,15 @@ namespace AniDBClient.Forms
             DataAnime.Columns[14].HeaderText = Language.DataAnime_Mn14;
             DataAnime.Columns[15].HeaderText = Language.DataAnime_Mn15;
 
-            DataAnime_Menu_Mn01.Text = Language.DataAnime_Menu_Mn01;
-            DataAnime_Menu_Mn02.Text = Language.DataAnime_Menu_Mn02;
-            DataAnime_Menu_Mn03.Text = Language.DataAnime_Menu_Mn03;
-            DataAnime_Menu_Mn01_Mn01.Text = Language.DataAnime_Menu_Mn01_Mn01;
-            DataAnime_Menu_Mn01_Mn02.Text = Language.DataAnime_Menu_Mn01_Mn02;
-            DataAnime_Menu_Mn01_Mn03.Text = Language.DataAnime_Menu_Mn01_Mn03;
-            DataAnime_Menu_Mn01_Mn04.Text = Language.DataAnime_Menu_Mn01_Mn04;
-            DataAnime_Menu_Mn01_Mn05.Text = Language.DataAnime_Menu_Mn01_Mn05;
-            DataAnime_Menu_Mn01_Mn06.Text = Language.DataAnime_Menu_Mn01_Mn06;
+            DataAnime_Menu_Mn01.Text = Language.DataAnime_Menu_Expand;
+            DataAnime_Menu_Mn02.Text = Language.DataAnime_Menu_MyList;
+            DataAnime_Menu_Mn03.Text = Language.DataAnime_Menu_Database;
+            DataAnime_Menu_Mn01_Mn01.Text = Language.DataAnime_Menu_ExpandAnime;
+            DataAnime_Menu_Mn01_Mn02.Text = Language.DataAnime_Menu_ExpandEpisodes;
+            DataAnime_Menu_Mn01_Mn03.Text = Language.DataAnime_Menu_ExpandAll;
+            DataAnime_Menu_Mn01_Mn04.Text = Language.DataAnime_Menu_CollapseEpisodes;
+            DataAnime_Menu_Mn01_Mn05.Text = Language.DataAnime_Menu_CollapseAllEpisodes;
+            DataAnime_Menu_Mn01_Mn06.Text = Language.DataAnime_Menu_CollapseAll;
 
             DataGenres.Columns[3].HeaderText = Language.DataAnime_Mn04;
             DataGenres.Columns[4].HeaderText = Language.DataAnime_Mn05;
@@ -374,42 +374,42 @@ namespace AniDBClient.Forms
             DataSQL_BT04.Text = Language.DataSQL_BT04;
             DataSQL_GR01.Text = Language.DataSQL_GR01;
 
-            DataAnime_Menu_Mn02_Mn01.Text = Language.DataAnime_Menu_Mn02_Mn01;
-            DataAnime_Menu_Mn02_Mn02.Text = Language.DataAnime_Menu_Mn02_Mn02;
-            DataAnime_Menu_Mn02_Mn03.Text = Language.DataAnime_Menu_Mn02_Mn03;
+            DataAnime_Menu_Mn02_Mn01.Text = Language.DataAnime_Menu_MyListAddModify;
+            DataAnime_Menu_Mn02_Mn02.Text = Language.DataAnime_Menu_MyListDelete;
+            DataAnime_Menu_Mn02_Mn03.Text = Language.DataAnime_Menu_MyListWatched;
 
-            DataAnime_Menu_Mn03_Mn01.Text = Language.DataAnime_Menu_Mn03_Mn01;
+            DataAnime_Menu_Mn03_Mn01.Text = Language.DataAnime_Menu_DatabaseDelete;
 
-            DataFiles_Menu_Mn01_Mn01.Text = Language.DataAnime_Menu_Mn02_Mn01;
-            DataFiles_Menu_Mn01_Mn02.Text = Language.DataAnime_Menu_Mn02_Mn02;
-            DataFiles_Menu_Mn01_Mn03.Text = Language.DataAnime_Menu_Mn02_Mn03;
+            DataFiles_Menu_Mn01_Mn01.Text = Language.DataAnime_Menu_MyListAddModify;
+            DataFiles_Menu_Mn01_Mn02.Text = Language.DataAnime_Menu_MyListDelete;
+            DataFiles_Menu_Mn01_Mn03.Text = Language.DataAnime_Menu_MyListWatched;
 
-            DataFiles_Menu_Mn01.Text = Language.DataAnime_Menu_Mn02;
-            DataFiles_Menu_Mn02.Text = Language.DataAnime_Menu_Mn03;
+            DataFiles_Menu_Mn01.Text = Language.DataAnime_Menu_MyList;
+            DataFiles_Menu_Mn02.Text = Language.DataAnime_Menu_Database;
             DataFiles_Menu_Mn03.Text = Language.DataFiles_Menu_Mn03;
             DataFiles_Menu_Mn04.Text = Language.DataFiles_Menu_Mn04;
             DataFiles_Menu_Mn07.Text = Language.DataFiles_Menu_Mn07;
 
-            DataFiles_Menu_Mn02_Mn01.Text = Language.DataAnime_Menu_Mn03_Mn01;
+            DataFiles_Menu_Mn02_Mn01.Text = Language.DataAnime_Menu_DatabaseDelete;
 
             DataFilesTree_CH01.Text = Language.DataFilesTree_CH01;
             DataFilesTree_CH02.Text = Language.DataFilesTree_CH02;
             DataFilesTree_CH03.Text = Language.DataFilesTree_CH03;
 
-            DataFilesTree_Mn01.Text = Language.DataAnime_Menu_Mn01;
-            DataFilesTree_Mn02.Text = Language.DataAnime_Menu_Mn02;
-            DataFilesTree_Mn03.Text = Language.DataAnime_Menu_Mn03;
+            DataFilesTree_Mn01.Text = Language.DataAnime_Menu_Expand;
+            DataFilesTree_Mn02.Text = Language.DataAnime_Menu_MyList;
+            DataFilesTree_Mn03.Text = Language.DataAnime_Menu_Database;
             DataFilesTree_Mn04.Text = Language.DataFiles_Menu_Mn04;
             DataFilesTree_Mn05.Text = Language.DataFilesTree_Mn05;
             DataFilesTree_Mn06.Text = Language.DataFiles_Menu_Mn03;
             DataFilesTree_Mn08.Text = Language.DataFiles_Menu_Mn07;
 
-            DataFilesTree_Mn01_Mn01.Text = Language.DataAnime_Menu_Mn01_Mn03;
-            DataFilesTree_Mn01_Mn02.Text = Language.DataAnime_Menu_Mn01_Mn06;
-            DataFilesTree_Mn02_Mn01.Text = Language.DataAnime_Menu_Mn02_Mn01;
-            DataFilesTree_Mn02_Mn02.Text = Language.DataAnime_Menu_Mn02_Mn02;
-            DataFilesTree_Mn02_Mn03.Text = Language.DataAnime_Menu_Mn02_Mn03;
-            DataFilesTree_Mn03_Mn01.Text = Language.DataAnime_Menu_Mn03_Mn01;
+            DataFilesTree_Mn01_Mn01.Text = Language.DataAnime_Menu_ExpandAll;
+            DataFilesTree_Mn01_Mn02.Text = Language.DataAnime_Menu_CollapseAll;
+            DataFilesTree_Mn02_Mn01.Text = Language.DataAnime_Menu_MyListAddModify;
+            DataFilesTree_Mn02_Mn02.Text = Language.DataAnime_Menu_MyListDelete;
+            DataFilesTree_Mn02_Mn03.Text = Language.DataAnime_Menu_MyListWatched;
+            DataFilesTree_Mn03_Mn01.Text = Language.DataAnime_Menu_DatabaseDelete;
 
             Anime_LB03.Text = Language.Anime_KanjiName;
             Anime_LB04.Text = Language.Anime_Type;
@@ -442,26 +442,26 @@ namespace AniDBClient.Forms
             DataFiles_Mn16.HeaderText = Language.DataFiles_Mn08;
             DataFiles_Mn17.HeaderText = Language.DataFiles_Mn09;
 
-            AnimeData_Mn03.HeaderText = Language.AnimeData_Mn03;
-            AnimeData_Mn04.HeaderText = Language.AnimeData_Mn04;
-            AnimeData_Mn05.HeaderText = Language.AnimeData_Mn05;
+            AnimeData_Mn03.HeaderText = Language.AnimeData_Episode;
+            AnimeData_Mn04.HeaderText = Language.AnimeData_Name;
+            AnimeData_Mn05.HeaderText = Language.AnimeData_Length;
 
             Hash_GR01.Text = Language.Hash_GR01;
             Hash_LB02.Text = Language.Hash_LB02;
 
-            AnimeData_Menu_Mn01.Text = Language.DataAnime_Menu_Mn01;
-            AnimeData_Menu_Mn02.Text = Language.DataAnime_Menu_Mn02;
-            AnimeData_Menu_Mn03.Text = Language.DataAnime_Menu_Mn03;
+            AnimeData_Menu_Mn01.Text = Language.DataAnime_Menu_Expand;
+            AnimeData_Menu_Mn02.Text = Language.DataAnime_Menu_MyList;
+            AnimeData_Menu_Mn03.Text = Language.DataAnime_Menu_Database;
             AnimeData_Menu_Mn04.Text = Language.DataFiles_Menu_Mn04;
             AnimeData_Menu_Mn05.Text = Language.DataFiles_Menu_Mn07;
             AnimeData_Menu_Mn06.Text = Language.DataFiles_Menu_Mn07;
 
-            AnimeData_Menu_Mn01_Mn01.Text = Language.DataAnime_Menu_Mn01_Mn02;
-            AnimeData_Menu_Mn01_Mn02.Text = Language.DataAnime_Menu_Mn01_Mn04;
-            AnimeData_Menu_Mn02_Mn01.Text = Language.DataAnime_Menu_Mn02_Mn01;
-            AnimeData_Menu_Mn02_Mn02.Text = Language.DataAnime_Menu_Mn02_Mn02;
-            AnimeData_Menu_Mn02_Mn03.Text = Language.DataAnime_Menu_Mn02_Mn03;
-            AnimeData_Menu_Mn03_Mn01.Text = Language.DataAnime_Menu_Mn03_Mn01;
+            AnimeData_Menu_Mn01_Mn01.Text = Language.DataAnime_Menu_ExpandEpisodes;
+            AnimeData_Menu_Mn01_Mn02.Text = Language.DataAnime_Menu_CollapseEpisodes;
+            AnimeData_Menu_Mn02_Mn01.Text = Language.DataAnime_Menu_MyListAddModify;
+            AnimeData_Menu_Mn02_Mn02.Text = Language.DataAnime_Menu_MyListDelete;
+            AnimeData_Menu_Mn02_Mn03.Text = Language.DataAnime_Menu_MyListWatched;
+            AnimeData_Menu_Mn03_Mn01.Text = Language.DataAnime_Menu_DatabaseDelete;
 
             ToolTip.SetToolTip(DataFiles_Bt00, Language.DataFiles_Bt00_ToolTip);
             ToolTip.SetToolTip(StatusBar_Refresh, Language.DataFiles_Bt00_ToolTip);
@@ -531,9 +531,9 @@ namespace AniDBClient.Forms
             AnimeTree_Menu_Mn01_Mn03.Text = Language.DataFiles_Menu_Mn05_Mn03;
             AnimeTree_Menu_Mn01_Mn04.Text = Language.DataFiles_Menu_Mn05_Mn04;
             AnimeTree_Menu_Mn01_Mn05.Text = Language.DataFiles_Menu_Mn05_Mn05;
-            AnimeTree_Menu_Mn02.Text = Language.AnimeTree_Menu_Mn02;
+            AnimeTree_Menu_Mn02.Text = Language.AnimeTree_Menu_DeleteAnime;
 
-            AnimeTree_CH01.Text = Language.AnimeTree_CH01;
+            AnimeTree_CH01.Text = Language.AnimeTree_Adult;
             AnimeTree_CH02.Text = Language.DataSearch_CH02;
 
             DataFilesTree_Mn07.Text = Language.DataFiles_Menu_Mn05;

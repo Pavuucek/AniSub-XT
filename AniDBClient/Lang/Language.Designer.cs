@@ -468,27 +468,27 @@ namespace AniDBClient.Lang {
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Episoda.
         /// </summary>
-        internal static string AnimeData_Mn03 {
+        internal static string AnimeData_Episode {
             get {
-                return ResourceManager.GetString("AnimeData_Mn03", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Název *.
-        /// </summary>
-        internal static string AnimeData_Mn04 {
-            get {
-                return ResourceManager.GetString("AnimeData_Mn04", resourceCulture);
+                return ResourceManager.GetString("AnimeData_Episode", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Délka.
         /// </summary>
-        internal static string AnimeData_Mn05 {
+        internal static string AnimeData_Length {
             get {
-                return ResourceManager.GetString("AnimeData_Mn05", resourceCulture);
+                return ResourceManager.GetString("AnimeData_Length", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Název *.
+        /// </summary>
+        internal static string AnimeData_Name {
+            get {
+                return ResourceManager.GetString("AnimeData_Name", resourceCulture);
             }
         }
         
@@ -504,153 +504,153 @@ namespace AniDBClient.Lang {
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný 18+.
         /// </summary>
-        internal static string AnimeTree_CH01 {
+        internal static string AnimeTree_Adult {
             get {
-                return ResourceManager.GetString("AnimeTree_CH01", resourceCulture);
+                return ResourceManager.GetString("AnimeTree_Adult", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Smazat Anime.
         /// </summary>
-        internal static string AnimeTree_Menu_Mn02 {
+        internal static string AnimeTree_Menu_DeleteAnime {
             get {
-                return ResourceManager.GetString("AnimeTree_Menu_Mn02", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Rozevřít.
-        /// </summary>
-        internal static string DataAnime_Menu_Mn01 {
-            get {
-                return ResourceManager.GetString("DataAnime_Menu_Mn01", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Rozevřít anime.
-        /// </summary>
-        internal static string DataAnime_Menu_Mn01_Mn01 {
-            get {
-                return ResourceManager.GetString("DataAnime_Menu_Mn01_Mn01", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Rozevřít episody.
-        /// </summary>
-        internal static string DataAnime_Menu_Mn01_Mn02 {
-            get {
-                return ResourceManager.GetString("DataAnime_Menu_Mn01_Mn02", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Rozevřít vše.
-        /// </summary>
-        internal static string DataAnime_Menu_Mn01_Mn03 {
-            get {
-                return ResourceManager.GetString("DataAnime_Menu_Mn01_Mn03", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Sbalit episody.
-        /// </summary>
-        internal static string DataAnime_Menu_Mn01_Mn04 {
-            get {
-                return ResourceManager.GetString("DataAnime_Menu_Mn01_Mn04", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Sbalit všechny episody.
-        /// </summary>
-        internal static string DataAnime_Menu_Mn01_Mn05 {
-            get {
-                return ResourceManager.GetString("DataAnime_Menu_Mn01_Mn05", resourceCulture);
+                return ResourceManager.GetString("AnimeTree_Menu_DeleteAnime", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Sbalit vše.
         /// </summary>
-        internal static string DataAnime_Menu_Mn01_Mn06 {
+        internal static string DataAnime_Menu_CollapseAll {
             get {
-                return ResourceManager.GetString("DataAnime_Menu_Mn01_Mn06", resourceCulture);
+                return ResourceManager.GetString("DataAnime_Menu_CollapseAll", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný MyList.
+        ///   Vyhledá lokalizovaný řetězec podobný Sbalit všechny episody.
         /// </summary>
-        internal static string DataAnime_Menu_Mn02 {
+        internal static string DataAnime_Menu_CollapseAllEpisodes {
             get {
-                return ResourceManager.GetString("DataAnime_Menu_Mn02", resourceCulture);
+                return ResourceManager.GetString("DataAnime_Menu_CollapseAllEpisodes", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Přidat / Upravit.
+        ///   Vyhledá lokalizovaný řetězec podobný Sbalit episody.
         /// </summary>
-        internal static string DataAnime_Menu_Mn02_Mn01 {
+        internal static string DataAnime_Menu_CollapseEpisodes {
             get {
-                return ResourceManager.GetString("DataAnime_Menu_Mn02_Mn01", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Vymazat.
-        /// </summary>
-        internal static string DataAnime_Menu_Mn02_Mn02 {
-            get {
-                return ResourceManager.GetString("DataAnime_Menu_Mn02_Mn02", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Shlédnuto.
-        /// </summary>
-        internal static string DataAnime_Menu_Mn02_Mn03 {
-            get {
-                return ResourceManager.GetString("DataAnime_Menu_Mn02_Mn03", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Aktualizovat.
-        /// </summary>
-        internal static string DataAnime_Menu_Mn02_Mn04 {
-            get {
-                return ResourceManager.GetString("DataAnime_Menu_Mn02_Mn04", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Zkontrolovat.
-        /// </summary>
-        internal static string DataAnime_Menu_Mn02_Mn05 {
-            get {
-                return ResourceManager.GetString("DataAnime_Menu_Mn02_Mn05", resourceCulture);
+                return ResourceManager.GetString("DataAnime_Menu_CollapseEpisodes", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Databáze.
         /// </summary>
-        internal static string DataAnime_Menu_Mn03 {
+        internal static string DataAnime_Menu_Database {
             get {
-                return ResourceManager.GetString("DataAnime_Menu_Mn03", resourceCulture);
+                return ResourceManager.GetString("DataAnime_Menu_Database", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Smazat.
         /// </summary>
-        internal static string DataAnime_Menu_Mn03_Mn01 {
+        internal static string DataAnime_Menu_DatabaseDelete {
             get {
-                return ResourceManager.GetString("DataAnime_Menu_Mn03_Mn01", resourceCulture);
+                return ResourceManager.GetString("DataAnime_Menu_DatabaseDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Rozevřít.
+        /// </summary>
+        internal static string DataAnime_Menu_Expand {
+            get {
+                return ResourceManager.GetString("DataAnime_Menu_Expand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Rozevřít vše.
+        /// </summary>
+        internal static string DataAnime_Menu_ExpandAll {
+            get {
+                return ResourceManager.GetString("DataAnime_Menu_ExpandAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Rozevřít anime.
+        /// </summary>
+        internal static string DataAnime_Menu_ExpandAnime {
+            get {
+                return ResourceManager.GetString("DataAnime_Menu_ExpandAnime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Rozevřít episody.
+        /// </summary>
+        internal static string DataAnime_Menu_ExpandEpisodes {
+            get {
+                return ResourceManager.GetString("DataAnime_Menu_ExpandEpisodes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný MyList.
+        /// </summary>
+        internal static string DataAnime_Menu_MyList {
+            get {
+                return ResourceManager.GetString("DataAnime_Menu_MyList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Přidat / Upravit.
+        /// </summary>
+        internal static string DataAnime_Menu_MyListAddModify {
+            get {
+                return ResourceManager.GetString("DataAnime_Menu_MyListAddModify", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Zkontrolovat.
+        /// </summary>
+        internal static string DataAnime_Menu_MyListCheck {
+            get {
+                return ResourceManager.GetString("DataAnime_Menu_MyListCheck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Vymazat.
+        /// </summary>
+        internal static string DataAnime_Menu_MyListDelete {
+            get {
+                return ResourceManager.GetString("DataAnime_Menu_MyListDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Aktualizovat.
+        /// </summary>
+        internal static string DataAnime_Menu_MyListUpdate {
+            get {
+                return ResourceManager.GetString("DataAnime_Menu_MyListUpdate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Shlédnuto.
+        /// </summary>
+        internal static string DataAnime_Menu_MyListWatched {
+            get {
+                return ResourceManager.GetString("DataAnime_Menu_MyListWatched", resourceCulture);
             }
         }
         

@@ -123,13 +123,13 @@
   <data name="Add_Id" xml:space="preserve">
     <value>ID</value>
   </data>
-  <data name="AnimeData_Mn03" xml:space="preserve">
+  <data name="AnimeData_Episode" xml:space="preserve">
     <value>Episode</value>
   </data>
-  <data name="AnimeData_Mn04" xml:space="preserve">
+  <data name="AnimeData_Name" xml:space="preserve">
     <value>Title *</value>
   </data>
-  <data name="AnimeData_Mn05" xml:space="preserve">
+  <data name="AnimeData_Length" xml:space="preserve">
     <value>Length</value>
   </data>
   <data name="Anime_KanjiName" xml:space="preserve">
@@ -147,49 +147,49 @@
   <data name="Anime_Genres" xml:space="preserve">
     <value>Genres:</value>
   </data>
-  <data name="DataAnime_Menu_Mn01" xml:space="preserve">
+  <data name="DataAnime_Menu_Expand" xml:space="preserve">
     <value>Expand</value>
   </data>
-  <data name="DataAnime_Menu_Mn01_Mn01" xml:space="preserve">
+  <data name="DataAnime_Menu_ExpandAnime" xml:space="preserve">
     <value>Expand anime</value>
   </data>
-  <data name="DataAnime_Menu_Mn01_Mn02" xml:space="preserve">
+  <data name="DataAnime_Menu_ExpandEpisodes" xml:space="preserve">
     <value>Expand episodes</value>
   </data>
-  <data name="DataAnime_Menu_Mn01_Mn03" xml:space="preserve">
+  <data name="DataAnime_Menu_ExpandAll" xml:space="preserve">
     <value>Expand all</value>
   </data>
-  <data name="DataAnime_Menu_Mn01_Mn04" xml:space="preserve">
+  <data name="DataAnime_Menu_CollapseEpisodes" xml:space="preserve">
     <value>Collapse episodes</value>
   </data>
-  <data name="DataAnime_Menu_Mn01_Mn05" xml:space="preserve">
+  <data name="DataAnime_Menu_CollapseAllEpisodes" xml:space="preserve">
     <value>Collapse all episodes</value>
   </data>
-  <data name="DataAnime_Menu_Mn01_Mn06" xml:space="preserve">
+  <data name="DataAnime_Menu_CollapseAll" xml:space="preserve">
     <value>Collapse all</value>
   </data>
-  <data name="DataAnime_Menu_Mn02" xml:space="preserve">
+  <data name="DataAnime_Menu_MyList" xml:space="preserve">
     <value>MyList</value>
   </data>
-  <data name="DataAnime_Menu_Mn02_Mn01" xml:space="preserve">
+  <data name="DataAnime_Menu_MyListAddModify" xml:space="preserve">
     <value>Add / Modify</value>
   </data>
-  <data name="DataAnime_Menu_Mn02_Mn02" xml:space="preserve">
+  <data name="DataAnime_Menu_MyListDelete" xml:space="preserve">
     <value>Delete</value>
   </data>
-  <data name="DataAnime_Menu_Mn02_Mn03" xml:space="preserve">
+  <data name="DataAnime_Menu_MyListWatched" xml:space="preserve">
     <value>Watched</value>
   </data>
-  <data name="DataAnime_Menu_Mn02_Mn04" xml:space="preserve">
+  <data name="DataAnime_Menu_MyListUpdate" xml:space="preserve">
     <value>Refresh</value>
   </data>
-  <data name="DataAnime_Menu_Mn02_Mn05" xml:space="preserve">
+  <data name="DataAnime_Menu_MyListCheck" xml:space="preserve">
     <value>Check</value>
   </data>
-  <data name="DataAnime_Menu_Mn03" xml:space="preserve">
+  <data name="DataAnime_Menu_Database" xml:space="preserve">
     <value>Database</value>
   </data>
-  <data name="DataAnime_Menu_Mn03_Mn01" xml:space="preserve">
+  <data name="DataAnime_Menu_DatabaseDelete" xml:space="preserve">
     <value>Delete</value>
   </data>
   <data name="DataAnime_Mn04" xml:space="preserve">
@@ -976,7 +976,7 @@ Before you can use AniSub, please fill your name and password:</value>
   <data name="DataFiles_RB05" xml:space="preserve">
     <value>Unknown</value>
   </data>
-  <data name="AnimeTree_CH01" xml:space="preserve">
+  <data name="AnimeTree_Adult" xml:space="preserve">
     <value>18+</value>
   </data>
   <data name="MainTabManga_Mn01" xml:space="preserve">
@@ -1174,7 +1174,7 @@ Before you can use AniSub, please fill your name and password:</value>
   <data name="Options_MyListRefreshManga" xml:space="preserve">
     <value>Update statistics</value>
   </data>
-  <data name="AnimeTree_Menu_Mn02" xml:space="preserve">
+  <data name="AnimeTree_Menu_DeleteAnime" xml:space="preserve">
     <value>Delete Anime</value>
   </data>
   <data name="Anime_Length" xml:space="preserve">

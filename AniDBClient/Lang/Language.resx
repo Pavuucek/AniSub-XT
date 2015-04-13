@@ -480,19 +480,19 @@
   <data name="Add_Add" xml:space="preserve">
     <value>Přidat</value>
   </data>
-  <data name="Anime_LB03" xml:space="preserve">
+  <data name="Anime_KanjiName" xml:space="preserve">
     <value>Název kanji:</value>
   </data>
-  <data name="Anime_LB04" xml:space="preserve">
+  <data name="Anime_Type" xml:space="preserve">
     <value>Typ:</value>
   </data>
-  <data name="Anime_LB05" xml:space="preserve">
+  <data name="Anime_Year" xml:space="preserve">
     <value>Rok:</value>
   </data>
-  <data name="Anime_LB06" xml:space="preserve">
+  <data name="Anime_Episodes" xml:space="preserve">
     <value>Počet epizod:</value>
   </data>
-  <data name="Anime_LB07" xml:space="preserve">
+  <data name="Anime_Genres" xml:space="preserve">
     <value>Žánry:</value>
   </data>
   <data name="DataAnime_Menu_Mn02_Mn04" xml:space="preserve">
@@ -840,37 +840,37 @@
   <data name="Rules_Tags" xml:space="preserve">
     <value>Tagy</value>
   </data>
-  <data name="Anime_RelationTree_Mn01" xml:space="preserve">
+  <data name="Anime_RelationTree_Sequel" xml:space="preserve">
     <value>Sequel: </value>
   </data>
-  <data name="Anime_RelationTree_Mn02" xml:space="preserve">
+  <data name="Anime_RelationTree_Prequel" xml:space="preserve">
     <value>Prequel: </value>
   </data>
-  <data name="Anime_RelationTree_Mn03" xml:space="preserve">
+  <data name="Anime_RelationTree_SameSetting" xml:space="preserve">
     <value>Same setting: </value>
   </data>
-  <data name="Anime_RelationTree_Mn04" xml:space="preserve">
+  <data name="Anime_RelationTree_AlternativeSetting" xml:space="preserve">
     <value>Alternative setting: </value>
   </data>
-  <data name="Anime_RelationTree_Mn05" xml:space="preserve">
+  <data name="Anime_RelationTree_AlternativeVersion" xml:space="preserve">
     <value>Alternative version: </value>
   </data>
-  <data name="Anime_RelationTree_Mn06" xml:space="preserve">
+  <data name="Anime_RelationTree_Character" xml:space="preserve">
     <value>Character: </value>
   </data>
-  <data name="Anime_RelationTree_Mn07" xml:space="preserve">
+  <data name="Anime_RelationTree_SideStory" xml:space="preserve">
     <value>Side story: </value>
   </data>
-  <data name="Anime_RelationTree_Mn08" xml:space="preserve">
+  <data name="Anime_RelationTree_ParentStory" xml:space="preserve">
     <value>Parent story: </value>
   </data>
-  <data name="Anime_RelationTree_Mn09" xml:space="preserve">
+  <data name="Anime_RelationTree_Summary" xml:space="preserve">
     <value>Summary: </value>
   </data>
-  <data name="Anime_RelationTree_Mn10" xml:space="preserve">
+  <data name="Anime_RelationTree_FullStory" xml:space="preserve">
     <value>Full story: </value>
   </data>
-  <data name="Anime_RelationTree_Mn11" xml:space="preserve">
+  <data name="Anime_RelationTree_Other" xml:space="preserve">
     <value>Other: </value>
   </data>
   <data name="DataFiles_Menu_Mn06" xml:space="preserve">
@@ -885,7 +885,7 @@
   <data name="DataFiles_Menu_Mn06_Mn03" xml:space="preserve">
     <value>ED2K</value>
   </data>
-  <data name="Anime_LB09" xml:space="preserve">
+  <data name="Anime_Date" xml:space="preserve">
     <value>Datum:</value>
   </data>
   <data name="LogIn_LogOut" xml:space="preserve">
@@ -931,7 +931,7 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="Watcher_Delete" xml:space="preserve">
     <value>Smazat</value>
   </data>
-  <data name="Anime_RelationTree_Mn12" xml:space="preserve">
+  <data name="Anime_RelationTree_AlternativeStory" xml:space="preserve">
     <value>Alternativní příběh</value>
   </data>
   <data name="DataFiles_Menu_Mn07" xml:space="preserve">
@@ -1174,7 +1174,7 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="AnimeTree_Menu_Mn02" xml:space="preserve">
     <value>Smazat Anime</value>
   </data>
-  <data name="Anime_LB10" xml:space="preserve">
+  <data name="Anime_Length" xml:space="preserve">
     <value>Délka</value>
   </data>
   <data name="MessageBox_Anime" xml:space="preserve">
@@ -1210,7 +1210,7 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="Anime_BT01" xml:space="preserve">
     <value>Aktualizuj</value>
   </data>
-  <data name="Anime_LB11" xml:space="preserve">
+  <data name="Anime_Tags" xml:space="preserve">
     <value>Tagy</value>
   </data>
   <data name="MainTabData_Mn08" xml:space="preserve">
@@ -1324,7 +1324,7 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="MainTabData_Mn10" xml:space="preserve">
     <value>Export</value>
   </data>
-  <data name="Anime_ExportLB01" xml:space="preserve">
+  <data name="Anime_Export_UpdateYourStatistics" xml:space="preserve">
     <value>Před vytvořením exportu doporučuju provést přepočítání statistik!</value>
   </data>
   <data name="LogIn_LB07" xml:space="preserve">

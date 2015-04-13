@@ -411,14 +411,14 @@ namespace AniDBClient.Forms
             DataFilesTree_Mn02_Mn03.Text = Language.DataAnime_Menu_Mn02_Mn03;
             DataFilesTree_Mn03_Mn01.Text = Language.DataAnime_Menu_Mn03_Mn01;
 
-            Anime_LB03.Text = Language.Anime_LB03;
-            Anime_LB04.Text = Language.Anime_LB04;
-            Anime_LB05.Text = Language.Anime_LB05;
-            Anime_LB06.Text = Language.Anime_LB06;
-            Anime_LB07.Text = Language.Anime_LB07;
-            Anime_LB09.Text = Language.Anime_LB09;
-            Anime_LB10.Text = Language.Anime_LB10;
-            Anime_LB11.Text = Language.Anime_LB11;
+            Anime_LB03.Text = Language.Anime_KanjiName;
+            Anime_LB04.Text = Language.Anime_Type;
+            Anime_LB05.Text = Language.Anime_Year;
+            Anime_LB06.Text = Language.Anime_Episodes;
+            Anime_LB07.Text = Language.Anime_Genres;
+            Anime_LB09.Text = Language.Anime_Date;
+            Anime_LB10.Text = Language.Anime_Length;
+            Anime_LB11.Text = Language.Anime_Tags;
 
             DataFiles_RB01.Text = Language.DataFiles_RB01;
             DataFiles_RB02.Text = Language.DataFiles_RB02;
@@ -655,7 +655,7 @@ namespace AniDBClient.Forms
             Anime_ExportCH18.Text = Language.Anime_Export_WatchedDate;
             Anime_ExportBT01.Text = Language.Anime_Export_Xml;
             Anime_ExportBT02.Text = Language.Anime_Export_Cvs;
-            Anime_ExportLB01.Text = Language.Anime_ExportLB01;
+            Anime_ExportLB01.Text = Language.Anime_Export_UpdateYourStatistics;
 
             Manga_ChaptersCM02.HeaderText = Language.Manga_LB28;
             Manga_ChaptersCM03.HeaderText = Language.Manga_LB32;
@@ -720,7 +720,7 @@ namespace AniDBClient.Forms
             ToolTip.SetToolTip(Zgc_GraphB02, Language.DataAnime_Mn14);
             ToolTip.SetToolTip(Zgc_GraphB03, Language.DataAnime_Mn15);
             ToolTip.SetToolTip(Zgc_GraphB04, Language.Zgc_GraphB04);
-            ToolTip.SetToolTip(Zgc_GraphB05, Language.Anime_LB11);
+            ToolTip.SetToolTip(Zgc_GraphB05, Language.Anime_Tags);
             ToolTip.SetToolTip(Zgc_GraphB06, Language.AnimeRating);
             ToolTip.SetToolTip(Options_Color01, Language.Options_Color01);
             ToolTip.SetToolTip(Options_Color02, Language.Options_Color02);
@@ -9363,51 +9363,51 @@ namespace AniDBClient.Forms
                         switch (row["id_relation"].ToString())
                         {
                             case "1":
-                                Anime_RelationTree.Nodes.Add("A" + row["id_anime_related"].ToString(), Language.Anime_RelationTree_Mn01 + row["anime_nazevjap"].ToString());
+                                Anime_RelationTree.Nodes.Add("A" + row["id_anime_related"].ToString(), Language.Anime_RelationTree_Sequel + row["anime_nazevjap"].ToString());
                                 break;
 
                             case "2":
-                                Anime_RelationTree.Nodes.Add("A" + row["id_anime_related"].ToString(), Language.Anime_RelationTree_Mn02 + row["anime_nazevjap"].ToString());
+                                Anime_RelationTree.Nodes.Add("A" + row["id_anime_related"].ToString(), Language.Anime_RelationTree_Prequel + row["anime_nazevjap"].ToString());
                                 break;
 
                             case "11":
                             case "12":
-                                Anime_RelationTree.Nodes.Add("A" + row["id_anime_related"].ToString(), Language.Anime_RelationTree_Mn03 + row["anime_nazevjap"].ToString());
+                                Anime_RelationTree.Nodes.Add("A" + row["id_anime_related"].ToString(), Language.Anime_RelationTree_SameSetting + row["anime_nazevjap"].ToString());
                                 break;
 
                             case "21":
                             case "22":
-                                Anime_RelationTree.Nodes.Add("A" + row["id_anime_related"].ToString(), Language.Anime_RelationTree_Mn04 + row["anime_nazevjap"].ToString());
+                                Anime_RelationTree.Nodes.Add("A" + row["id_anime_related"].ToString(), Language.Anime_RelationTree_AlternativeSetting + row["anime_nazevjap"].ToString());
                                 break;
 
                             case "31":
                             case "32":
-                                Anime_RelationTree.Nodes.Add("A" + row["id_anime_related"].ToString(), Language.Anime_RelationTree_Mn05 + row["anime_nazevjap"].ToString());
+                                Anime_RelationTree.Nodes.Add("A" + row["id_anime_related"].ToString(), Language.Anime_RelationTree_AlternativeVersion + row["anime_nazevjap"].ToString());
                                 break;
 
                             case "41":
                             case "42":
-                                Anime_RelationTree.Nodes.Add("A" + row["id_anime_related"].ToString(), Language.Anime_RelationTree_Mn06 + row["anime_nazevjap"].ToString());
+                                Anime_RelationTree.Nodes.Add("A" + row["id_anime_related"].ToString(), Language.Anime_RelationTree_Character + row["anime_nazevjap"].ToString());
                                 break;
 
                             case "51":
-                                Anime_RelationTree.Nodes.Add("A" + row["id_anime_related"].ToString(), Language.Anime_RelationTree_Mn07 + row["anime_nazevjap"].ToString());
+                                Anime_RelationTree.Nodes.Add("A" + row["id_anime_related"].ToString(), Language.Anime_RelationTree_SideStory + row["anime_nazevjap"].ToString());
                                 break;
 
                             case "52":
-                                Anime_RelationTree.Nodes.Add("A" + row["id_anime_related"].ToString(), Language.Anime_RelationTree_Mn08 + row["anime_nazevjap"].ToString());
+                                Anime_RelationTree.Nodes.Add("A" + row["id_anime_related"].ToString(), Language.Anime_RelationTree_ParentStory + row["anime_nazevjap"].ToString());
                                 break;
 
                             case "61":
-                                Anime_RelationTree.Nodes.Add("A" + row["id_anime_related"].ToString(), Language.Anime_RelationTree_Mn09 + row["anime_nazevjap"].ToString());
+                                Anime_RelationTree.Nodes.Add("A" + row["id_anime_related"].ToString(), Language.Anime_RelationTree_Summary + row["anime_nazevjap"].ToString());
                                 break;
 
                             case "62":
-                                Anime_RelationTree.Nodes.Add("A" + row["id_anime_related"].ToString(), Language.Anime_RelationTree_Mn10 + row["anime_nazevjap"].ToString());
+                                Anime_RelationTree.Nodes.Add("A" + row["id_anime_related"].ToString(), Language.Anime_RelationTree_FullStory + row["anime_nazevjap"].ToString());
                                 break;
 
                             case "100":
-                                Anime_RelationTree.Nodes.Add("A" + row["id_anime_related"].ToString(), Language.Anime_RelationTree_Mn11 + row["anime_nazevjap"].ToString());
+                                Anime_RelationTree.Nodes.Add("A" + row["id_anime_related"].ToString(), Language.Anime_RelationTree_Other + row["anime_nazevjap"].ToString());
                                 break;
                         }
                     }
@@ -10677,14 +10677,14 @@ namespace AniDBClient.Forms
 
                     Font Fs = new Font("Arial", 10, FontStyle.Regular, GraphicsUnit.Point);
 
-                    g.DrawString((Language.Anime_RelationTree_Mn01 + " / " + Language.Anime_RelationTree_Mn02).Replace(": ", ""), Fs, new SolidBrush(Color.DeepSkyBlue), BMP.Width - 220, BMP.Height - 190);
-                    g.DrawString((Language.Anime_RelationTree_Mn03).Replace(": ", ""), Fs, new SolidBrush(Color.DarkCyan), BMP.Width - 220, BMP.Height - 170);
-                    g.DrawString((Language.Anime_RelationTree_Mn04).Replace(": ", ""), Fs, new SolidBrush(Color.DarkGoldenrod), BMP.Width - 220, BMP.Height - 150);
-                    g.DrawString((Language.Anime_RelationTree_Mn05).Replace(": ", ""), Fs, new SolidBrush(Color.DarkGreen), BMP.Width - 220, BMP.Height - 130);
-                    g.DrawString((Language.Anime_RelationTree_Mn06).Replace(": ", ""), Fs, new SolidBrush(Color.DarkKhaki), BMP.Width - 220, BMP.Height - 110);
-                    g.DrawString((Language.Anime_RelationTree_Mn07 + " / " + Language.Anime_RelationTree_Mn08).Replace(": ", ""), Fs, new SolidBrush(Color.DarkMagenta), BMP.Width - 220, BMP.Height - 90);
-                    g.DrawString((Language.Anime_RelationTree_Mn09 + " / " + Language.Anime_RelationTree_Mn10).Replace(": ", ""), Fs, new SolidBrush(Color.DarkOrange), BMP.Width - 220, BMP.Height - 70);
-                    g.DrawString((Language.Anime_RelationTree_Mn11).Replace(": ", ""), Fs, new SolidBrush(Color.DarkRed), BMP.Width - 220, BMP.Height - 50);
+                    g.DrawString((Language.Anime_RelationTree_Sequel + " / " + Language.Anime_RelationTree_Prequel).Replace(": ", ""), Fs, new SolidBrush(Color.DeepSkyBlue), BMP.Width - 220, BMP.Height - 190);
+                    g.DrawString((Language.Anime_RelationTree_SameSetting).Replace(": ", ""), Fs, new SolidBrush(Color.DarkCyan), BMP.Width - 220, BMP.Height - 170);
+                    g.DrawString((Language.Anime_RelationTree_AlternativeSetting).Replace(": ", ""), Fs, new SolidBrush(Color.DarkGoldenrod), BMP.Width - 220, BMP.Height - 150);
+                    g.DrawString((Language.Anime_RelationTree_AlternativeVersion).Replace(": ", ""), Fs, new SolidBrush(Color.DarkGreen), BMP.Width - 220, BMP.Height - 130);
+                    g.DrawString((Language.Anime_RelationTree_Character).Replace(": ", ""), Fs, new SolidBrush(Color.DarkKhaki), BMP.Width - 220, BMP.Height - 110);
+                    g.DrawString((Language.Anime_RelationTree_SideStory + " / " + Language.Anime_RelationTree_ParentStory).Replace(": ", ""), Fs, new SolidBrush(Color.DarkMagenta), BMP.Width - 220, BMP.Height - 90);
+                    g.DrawString((Language.Anime_RelationTree_Summary + " / " + Language.Anime_RelationTree_FullStory).Replace(": ", ""), Fs, new SolidBrush(Color.DarkOrange), BMP.Width - 220, BMP.Height - 70);
+                    g.DrawString((Language.Anime_RelationTree_Other).Replace(": ", ""), Fs, new SolidBrush(Color.DarkRed), BMP.Width - 220, BMP.Height - 50);
                 }
 
                 Anime_Rel.BackgroundImage = BMP;

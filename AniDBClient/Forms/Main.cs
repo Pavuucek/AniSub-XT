@@ -357,16 +357,16 @@ namespace AniDBClient.Forms
             MainTabLog_Mn03.Text = Language.MainTabLog_Mn03;
             MainTabLog_Mn04.Text = Language.MainTabLog_Mn04;
 
-            MainTabData_Mn00.Text = Language.MainTabData_Mn00;
-            MainTabData_Mn01.Text = Language.MainTabData_Mn01;
-            MainTabData_Mn02.Text = Language.MainTabData_Mn02;
-            MainTabData_Mn03.Text = Language.MainTabData_Mn03;
-            MainTabData_Mn04.Text = Language.MainTabData_Mn04;
-            MainTabData_Mn05.Text = Language.MainTabData_Mn05;
-            MainTabData_Mn07.Text = Language.MainTabData_Mn07;
-            MainTabData_Mn08.Text = Language.MainTabData_Mn08;
-            MainTabData_Mn09.Text = Language.MainTabData_Mn09;
-            MainTabData_Mn10.Text = Language.MainTabData_Mn10;
+            MainTabData_Mn00.Text = Language.MainTabData_MyList;
+            MainTabData_Mn01.Text = Language.MainTabData_Files;
+            MainTabData_Mn02.Text = Language.MainTabData_Anime;
+            MainTabData_Mn03.Text = Language.MainTabData_Anime2;
+            MainTabData_Mn04.Text = Language.MainTabData_Genres;
+            MainTabData_Mn05.Text = Language.MainTabData_Groups;
+            MainTabData_Mn07.Text = Language.MainTabData_Search;
+            MainTabData_Mn08.Text = Language.MainTabData_Others;
+            MainTabData_Mn09.Text = Language.MainTabData_Graphs;
+            MainTabData_Mn10.Text = Language.MainTabData_Export;
 
             DataSQL_BT01.Text = Language.DataSQL_Anime;
             DataSQL_BT02.Text = Language.DataSQL_Episodes;
@@ -572,7 +572,7 @@ namespace AniDBClient.Forms
             Manga_Gr04.Text = Language.MainTabManga_Mn00;
             MainTabManga_Mn01.Text = Language.MainTabManga_Mn01;
             MainTabManga_Mn02.Text = Language.MainTabManga_Mn02;
-            MainTabManga_Mn03.Text = Language.MainTabData_Mn07;
+            MainTabManga_Mn03.Text = Language.MainTabData_Search;
 
             Manga_Gr02.Text = Language.Manga_Gr02;
             Manga_Gr03.Text = Language.Manga_Gr03;
@@ -716,7 +716,7 @@ namespace AniDBClient.Forms
             ToolTip.SetToolTip(Manga_Update, Language.Manga_Update);
             ToolTip.SetToolTip(Manga_Insert_CHD, Language.Manga_Insert_CH);
             ToolTip.SetToolTip(Manga_Delete, Language.Manga_Delete);
-            ToolTip.SetToolTip(Zgc_GraphB01, Language.MainTabData_Mn03);
+            ToolTip.SetToolTip(Zgc_GraphB01, Language.MainTabData_Anime2);
             ToolTip.SetToolTip(Zgc_GraphB02, Language.DataAnime_Storage);
             ToolTip.SetToolTip(Zgc_GraphB03, Language.DataAnime_Source);
             ToolTip.SetToolTip(Zgc_GraphB04, Language.Zgc_GraphB04);

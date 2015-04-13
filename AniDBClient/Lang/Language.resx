@@ -201,19 +201,19 @@
   <data name="LogTasksDel" xml:space="preserve">
     <value>Vymazat</value>
   </data>
-  <data name="MainTabData_Mn01" xml:space="preserve">
+  <data name="MainTabData_Files" xml:space="preserve">
     <value>Soubory</value>
   </data>
-  <data name="MainTabData_Mn02" xml:space="preserve">
+  <data name="MainTabData_Anime" xml:space="preserve">
     <value>Anime</value>
   </data>
-  <data name="MainTabData_Mn03" xml:space="preserve">
+  <data name="MainTabData_Anime2" xml:space="preserve">
     <value>Anime</value>
   </data>
-  <data name="MainTabData_Mn04" xml:space="preserve">
+  <data name="MainTabData_Genres" xml:space="preserve">
     <value>Žánry</value>
   </data>
-  <data name="MainTabData_Mn05" xml:space="preserve">
+  <data name="MainTabData_Groups" xml:space="preserve">
     <value>Skupiny</value>
   </data>
   <data name="MainTabLog_Mn01" xml:space="preserve">
@@ -237,7 +237,7 @@
   <data name="MainTab_Log" xml:space="preserve">
     <value>Log</value>
   </data>
-  <data name="MainTabData_Mn00" xml:space="preserve">
+  <data name="MainTabData_MyList" xml:space="preserve">
     <value>MyList</value>
   </data>
   <data name="Options_AccountChange" xml:space="preserve">
@@ -708,7 +708,7 @@
   <data name="DataSearch_Search" xml:space="preserve">
     <value>Vyhledat</value>
   </data>
-  <data name="MainTabData_Mn07" xml:space="preserve">
+  <data name="MainTabData_Search" xml:space="preserve">
     <value>Vyhledávání</value>
   </data>
   <data name="Options_CH06" xml:space="preserve">
@@ -1213,7 +1213,7 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="Anime_Tags" xml:space="preserve">
     <value>Tagy</value>
   </data>
-  <data name="MainTabData_Mn08" xml:space="preserve">
+  <data name="MainTabData_Others" xml:space="preserve">
     <value>Ostatní</value>
   </data>
   <data name="AnimeRating" xml:space="preserve">
@@ -1243,7 +1243,7 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="Options_LB67" xml:space="preserve">
     <value>Nepřečteno</value>
   </data>
-  <data name="MainTabData_Mn09" xml:space="preserve">
+  <data name="MainTabData_Graphs" xml:space="preserve">
     <value>Grafy</value>
   </data>
   <data name="Zgc_GraphB04" xml:space="preserve">
@@ -1321,7 +1321,7 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="Anime_Export_WatchedDate" xml:space="preserve">
     <value>Shleduto (datum)</value>
   </data>
-  <data name="MainTabData_Mn10" xml:space="preserve">
+  <data name="MainTabData_Export" xml:space="preserve">
     <value>Export</value>
   </data>
   <data name="Anime_Export_UpdateYourStatistics" xml:space="preserve">

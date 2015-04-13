@@ -1766,92 +1766,92 @@ namespace AniDBClient.Lang {
         }
         
         /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný MyList.
+        ///   Vyhledá lokalizovaný řetězec podobný Anime.
         /// </summary>
-        internal static string MainTabData_Mn00 {
+        internal static string MainTabData_Anime {
             get {
-                return ResourceManager.GetString("MainTabData_Mn00", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Soubory.
-        /// </summary>
-        internal static string MainTabData_Mn01 {
-            get {
-                return ResourceManager.GetString("MainTabData_Mn01", resourceCulture);
+                return ResourceManager.GetString("MainTabData_Anime", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Anime.
         /// </summary>
-        internal static string MainTabData_Mn02 {
+        internal static string MainTabData_Anime2 {
             get {
-                return ResourceManager.GetString("MainTabData_Mn02", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Anime.
-        /// </summary>
-        internal static string MainTabData_Mn03 {
-            get {
-                return ResourceManager.GetString("MainTabData_Mn03", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Žánry.
-        /// </summary>
-        internal static string MainTabData_Mn04 {
-            get {
-                return ResourceManager.GetString("MainTabData_Mn04", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Skupiny.
-        /// </summary>
-        internal static string MainTabData_Mn05 {
-            get {
-                return ResourceManager.GetString("MainTabData_Mn05", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Vyhledávání.
-        /// </summary>
-        internal static string MainTabData_Mn07 {
-            get {
-                return ResourceManager.GetString("MainTabData_Mn07", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Ostatní.
-        /// </summary>
-        internal static string MainTabData_Mn08 {
-            get {
-                return ResourceManager.GetString("MainTabData_Mn08", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Grafy.
-        /// </summary>
-        internal static string MainTabData_Mn09 {
-            get {
-                return ResourceManager.GetString("MainTabData_Mn09", resourceCulture);
+                return ResourceManager.GetString("MainTabData_Anime2", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Export.
         /// </summary>
-        internal static string MainTabData_Mn10 {
+        internal static string MainTabData_Export {
             get {
-                return ResourceManager.GetString("MainTabData_Mn10", resourceCulture);
+                return ResourceManager.GetString("MainTabData_Export", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Soubory.
+        /// </summary>
+        internal static string MainTabData_Files {
+            get {
+                return ResourceManager.GetString("MainTabData_Files", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Žánry.
+        /// </summary>
+        internal static string MainTabData_Genres {
+            get {
+                return ResourceManager.GetString("MainTabData_Genres", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Grafy.
+        /// </summary>
+        internal static string MainTabData_Graphs {
+            get {
+                return ResourceManager.GetString("MainTabData_Graphs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Skupiny.
+        /// </summary>
+        internal static string MainTabData_Groups {
+            get {
+                return ResourceManager.GetString("MainTabData_Groups", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný MyList.
+        /// </summary>
+        internal static string MainTabData_MyList {
+            get {
+                return ResourceManager.GetString("MainTabData_MyList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Ostatní.
+        /// </summary>
+        internal static string MainTabData_Others {
+            get {
+                return ResourceManager.GetString("MainTabData_Others", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Vyhledávání.
+        /// </summary>
+        internal static string MainTabData_Search {
+            get {
+                return ResourceManager.GetString("MainTabData_Search", resourceCulture);
             }
         }
         

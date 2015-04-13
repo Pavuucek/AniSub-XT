@@ -312,85 +312,85 @@
   <data name="DataFiles_Size" xml:space="preserve">
     <value>Size</value>
   </data>
-  <data name="DataFiles_RB01" xml:space="preserve">
+  <data name="DataFiles_Today" xml:space="preserve">
     <value>Today</value>
   </data>
-  <data name="DataFiles_RB02" xml:space="preserve">
+  <data name="DataFiles_Yesterday" xml:space="preserve">
     <value>Yesterday</value>
   </data>
-  <data name="DataFiles_RB03" xml:space="preserve">
+  <data name="DataFiles_Date" xml:space="preserve">
     <value>Date</value>
   </data>
-  <data name="DataFiles_RB04" xml:space="preserve">
+  <data name="DataFiles_Nothing" xml:space="preserve">
     <value>Nothing</value>
   </data>
-  <data name="DataSearch_CH02" xml:space="preserve">
+  <data name="DataSearch_Watched" xml:space="preserve">
     <value>Watched</value>
   </data>
-  <data name="DataSearch_Clear" xml:space="preserve">
+  <data name="DataSearch_New" xml:space="preserve">
     <value>New</value>
   </data>
-  <data name="DataSearch_LB01" xml:space="preserve">
+  <data name="DataSearch_AnimeId" xml:space="preserve">
     <value>ID Anime</value>
   </data>
-  <data name="DataSearch_LB02" xml:space="preserve">
+  <data name="DataSearch_EpisodeId" xml:space="preserve">
     <value>ID Episode</value>
   </data>
-  <data name="DataSearch_LB03" xml:space="preserve">
+  <data name="DataSearch_FileId" xml:space="preserve">
     <value>ID File</value>
   </data>
-  <data name="DataSearch_LB04" xml:space="preserve">
+  <data name="DataSearch_MyListId" xml:space="preserve">
     <value>ID MyList</value>
   </data>
-  <data name="DataSearch_LB05" xml:space="preserve">
+  <data name="DataSearch_Episodes" xml:space="preserve">
     <value>Episodes</value>
   </data>
-  <data name="DataSearch_LB06" xml:space="preserve">
+  <data name="DataSearch_AnimeName" xml:space="preserve">
     <value>Title</value>
   </data>
-  <data name="DataSearch_LB07" xml:space="preserve">
+  <data name="DataSearch_EpisodeName" xml:space="preserve">
     <value>Episode title</value>
   </data>
-  <data name="DataSearch_LB08" xml:space="preserve">
+  <data name="DataSearch_Storage" xml:space="preserve">
     <value>Storage</value>
   </data>
-  <data name="DataSearch_LB09" xml:space="preserve">
+  <data name="DataSearch_Source" xml:space="preserve">
     <value>Source</value>
   </data>
-  <data name="DataSearch_LB10" xml:space="preserve">
+  <data name="DataSearch_Other" xml:space="preserve">
     <value>Other</value>
   </data>
-  <data name="DataSearch_LB11" xml:space="preserve">
+  <data name="DataSearch_AnimeType" xml:space="preserve">
     <value>Type</value>
   </data>
-  <data name="DataSearch_LB12" xml:space="preserve">
+  <data name="DataSearch_FileType" xml:space="preserve">
     <value>File type</value>
   </data>
-  <data name="DataSearch_LB13" xml:space="preserve">
+  <data name="DataSearch_Dub" xml:space="preserve">
     <value>Dub</value>
   </data>
-  <data name="DataSearch_LB14" xml:space="preserve">
+  <data name="DataSearch_Sub" xml:space="preserve">
     <value>Sub</value>
   </data>
-  <data name="DataSearch_LB15" xml:space="preserve">
+  <data name="DataSearch_Group" xml:space="preserve">
     <value>Group</value>
   </data>
-  <data name="DataSearch_LB16" xml:space="preserve">
+  <data name="DataSearch_Genres" xml:space="preserve">
     <value>Genres</value>
   </data>
-  <data name="DataSearch_Select" xml:space="preserve">
+  <data name="DataSearch_Search" xml:space="preserve">
     <value>Search</value>
   </data>
   <data name="Hash" xml:space="preserve">
     <value>Hash</value>
   </data>
-  <data name="Hash_LB01" xml:space="preserve">
+  <data name="Hash_Path" xml:space="preserve">
     <value>Path:</value>
   </data>
   <data name="Hash_Stop_Total" xml:space="preserve">
     <value>Stop</value>
   </data>
-  <data name="LogIn_CH01" xml:space="preserve">
+  <data name="LogIn_AutoLogin" xml:space="preserve">
     <value>Remember me</value>
   </data>
   <data name="LogIn_LogIn" xml:space="preserve">
@@ -429,22 +429,22 @@
   <data name="MainTabLog_Mn03" xml:space="preserve">
     <value>Tasks</value>
   </data>
-  <data name="MainTab_Mn01" xml:space="preserve">
+  <data name="MainTab_Settings" xml:space="preserve">
     <value>Settings</value>
   </data>
-  <data name="MainTab_Mn02" xml:space="preserve">
+  <data name="MainTab_Rules" xml:space="preserve">
     <value>Rules</value>
   </data>
-  <data name="MainTab_Mn03" xml:space="preserve">
+  <data name="MainTab_Anime" xml:space="preserve">
     <value>Anime</value>
   </data>
-  <data name="MainTab_Mn04" xml:space="preserve">
+  <data name="MainTab_Log" xml:space="preserve">
     <value>Log</value>
   </data>
   <data name="MainTabData_Mn00" xml:space="preserve">
     <value>MyList</value>
   </data>
-  <data name="MainTab_Mn06" xml:space="preserve">
+  <data name="MainTab_Hash" xml:space="preserve">
     <value>Hash</value>
   </data>
   <data name="MessageBox_Accout" xml:space="preserve">
@@ -789,16 +789,16 @@
   <data name="Rules_CH03" xml:space="preserve">
     <value>Replace existing files</value>
   </data>
-  <data name="DataFilesTree_Mn05" xml:space="preserve">
+  <data name="DataFilesTree_Clear2" xml:space="preserve">
     <value>Clear</value>
   </data>
   <data name="DataFiles_Menu_Win" xml:space="preserve">
     <value>Win</value>
   </data>
-  <data name="DataSQL_Select" xml:space="preserve">
+  <data name="DataSQL_Filter" xml:space="preserve">
     <value>Do it!</value>
   </data>
-  <data name="MainTab_Mn05" xml:space="preserve">
+  <data name="MainTab_Sql" xml:space="preserve">
     <value>SQL</value>
   </data>
   <data name="MainTabLog_Mn04" xml:space="preserve">
@@ -891,7 +891,7 @@
   <data name="LogIn_LogOut" xml:space="preserve">
     <value>Exit</value>
   </data>
-  <data name="LogIn_LB03" xml:space="preserve">
+  <data name="LogIn_WelcomeMessage" xml:space="preserve">
     <value>Welcome
 AniSub is client for communication with AniDB.
 AniSub is alternative client for AOM. AniSub is small, fast and also it is for low-end computers. It can do the same things as AOM. And it is much faster than any Java client.
@@ -904,7 +904,7 @@ Before you can use AniSub, please fill your name and password:</value>
   <data name="DataFiles_Menu_ExportSha1" xml:space="preserve">
     <value>SHA1</value>
   </data>
-  <data name="Hash_LB02" xml:space="preserve">
+  <data name="Hash_Waiting" xml:space="preserve">
     <value>Waiting:</value>
   </data>
   <data name="StatusBar_Mn05" xml:space="preserve">
@@ -946,34 +946,34 @@ Before you can use AniSub, please fill your name and password:</value>
   <data name="Options_MyList_GR01" xml:space="preserve">
     <value>Update</value>
   </data>
-  <data name="DataFilesTree_CH01" xml:space="preserve">
+  <data name="DataFilesTree_Clear" xml:space="preserve">
     <value>Clear</value>
   </data>
-  <data name="DataFilesTree_CH02" xml:space="preserve">
+  <data name="DataFilesTree_Expand" xml:space="preserve">
     <value>Expand</value>
   </data>
   <data name="Hash_DeleteAll" xml:space="preserve">
     <value>Delete All</value>
   </data>
-  <data name="DataSQL_BT01" xml:space="preserve">
+  <data name="DataSQL_Anime" xml:space="preserve">
     <value>Anime</value>
   </data>
-  <data name="DataSQL_BT02" xml:space="preserve">
+  <data name="DataSQL_Episodes" xml:space="preserve">
     <value>Episodes</value>
   </data>
-  <data name="DataSQL_BT03" xml:space="preserve">
+  <data name="DataSQL_Files" xml:space="preserve">
     <value>Files</value>
   </data>
-  <data name="DataSQL_BT04" xml:space="preserve">
+  <data name="DataSQL_MyList" xml:space="preserve">
     <value>MyList</value>
   </data>
-  <data name="DataSQL_GR01" xml:space="preserve">
+  <data name="DataSQL_Check" xml:space="preserve">
     <value>Check</value>
   </data>
-  <data name="DataFilesTree_CH03" xml:space="preserve">
+  <data name="DataFilesTree_FilesOnly" xml:space="preserve">
     <value>Only files</value>
   </data>
-  <data name="DataFiles_RB05" xml:space="preserve">
+  <data name="DataFiles_Unknown" xml:space="preserve">
     <value>Unknown</value>
   </data>
   <data name="AnimeTree_Adult" xml:space="preserve">
@@ -985,7 +985,7 @@ Before you can use AniSub, please fill your name and password:</value>
   <data name="MainTabManga_Mn02" xml:space="preserve">
     <value>New manga</value>
   </data>
-  <data name="MainTab_Mn07" xml:space="preserve">
+  <data name="MainTab_Manga" xml:space="preserve">
     <value>Manga</value>
   </data>
   <data name="Manga_Gr02" xml:space="preserve">
@@ -1222,13 +1222,13 @@ Before you can use AniSub, please fill your name and password:</value>
   <data name="AnimeRating" xml:space="preserve">
     <value>Rating</value>
   </data>
-  <data name="Hash_GR01" xml:space="preserve">
+  <data name="Hash_FileHashing" xml:space="preserve">
     <value>Hashing files</value>
   </data>
-  <data name="Hash_GR02" xml:space="preserve">
+  <data name="Hash_Watcher" xml:space="preserve">
     <value>Watch dog **</value>
   </data>
-  <data name="MainTab_Mn00" xml:space="preserve">
+  <data name="MainTab_Index" xml:space="preserve">
     <value>Index</value>
   </data>
   <data name="MessageBox_ClearDatabase" xml:space="preserve">
@@ -1252,7 +1252,7 @@ Before you can use AniSub, please fill your name and password:</value>
   <data name="Zgc_GraphB04" xml:space="preserve">
     <value>Watched timeline</value>
   </data>
-  <data name="DataFilesTree_CH04" xml:space="preserve">
+  <data name="DataFilesTree_ReverseFilter" xml:space="preserve">
     <value>Reverse filter</value>
   </data>
   <data name="Anime_RelDel" xml:space="preserve">
@@ -1261,7 +1261,7 @@ Before you can use AniSub, please fill your name and password:</value>
   <data name="Manga_Data_Mn10" xml:space="preserve">
     <value>Chapter</value>
   </data>
-  <data name="LogIn_LB04" xml:space="preserve">
+  <data name="LogIn_FirstUse" xml:space="preserve">
     <value>First use:</value>
   </data>
   <data name="Anime_Export_Xml" xml:space="preserve">
@@ -1330,10 +1330,10 @@ Before you can use AniSub, please fill your name and password:</value>
   <data name="Anime_Export_UpdateYourStatistics" xml:space="preserve">
     <value>Please update your statistic before apply export.</value>
   </data>
-  <data name="LogIn_LB07" xml:space="preserve">
+  <data name="LogIn_LicenseAgreement" xml:space="preserve">
     <value>End User License Agreement</value>
   </data>
-  <data name="MainTab_Mn08" xml:space="preserve">
+  <data name="MainTab_About" xml:space="preserve">
     <value>About AniSub</value>
   </data>
   <data name="Options_LB68" xml:space="preserve">

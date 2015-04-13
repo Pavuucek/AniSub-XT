@@ -189,7 +189,7 @@
   <data name="DataAnime_Source" xml:space="preserve">
     <value>Zdroj</value>
   </data>
-  <data name="LogIn_CH01" xml:space="preserve">
+  <data name="LogIn_AutoLogin" xml:space="preserve">
     <value>Automaticky přihlásit</value>
   </data>
   <data name="LogIn_LogIn" xml:space="preserve">
@@ -225,16 +225,16 @@
   <data name="MainTabLog_Mn03" xml:space="preserve">
     <value>Úlohy</value>
   </data>
-  <data name="MainTab_Mn01" xml:space="preserve">
+  <data name="MainTab_Settings" xml:space="preserve">
     <value>Nastavení</value>
   </data>
-  <data name="MainTab_Mn02" xml:space="preserve">
+  <data name="MainTab_Rules" xml:space="preserve">
     <value>Pravidla</value>
   </data>
-  <data name="MainTab_Mn03" xml:space="preserve">
+  <data name="MainTab_Anime" xml:space="preserve">
     <value>Anime</value>
   </data>
-  <data name="MainTab_Mn04" xml:space="preserve">
+  <data name="MainTab_Log" xml:space="preserve">
     <value>Log</value>
   </data>
   <data name="MainTabData_Mn00" xml:space="preserve">
@@ -501,7 +501,7 @@
   <data name="DataAnime_Menu_DatabaseDelete" xml:space="preserve">
     <value>Smazat</value>
   </data>
-  <data name="DataFiles_RB01" xml:space="preserve">
+  <data name="DataFiles_Today" xml:space="preserve">
     <value>Dnes</value>
   </data>
   <data name="Rules_FilesRulesMove_RB01" xml:space="preserve">
@@ -552,7 +552,7 @@
   <data name="Hash" xml:space="preserve">
     <value>Hash</value>
   </data>
-  <data name="Hash_LB01" xml:space="preserve">
+  <data name="Hash_Path" xml:space="preserve">
     <value>Cesta:</value>
   </data>
   <data name="Hash_Stop_Total" xml:space="preserve">
@@ -567,16 +567,16 @@
   <data name="MessageBox_RegisterI" xml:space="preserve">
     <value>Účet byl vytvořen.</value>
   </data>
-  <data name="MainTab_Mn06" xml:space="preserve">
+  <data name="MainTab_Hash" xml:space="preserve">
     <value>Hash</value>
   </data>
-  <data name="DataFiles_RB02" xml:space="preserve">
+  <data name="DataFiles_Yesterday" xml:space="preserve">
     <value>Včera</value>
   </data>
-  <data name="DataFiles_RB03" xml:space="preserve">
+  <data name="DataFiles_Date" xml:space="preserve">
     <value>Datum</value>
   </data>
-  <data name="DataFiles_RB04" xml:space="preserve">
+  <data name="DataFiles_Nothing" xml:space="preserve">
     <value>Nic</value>
   </data>
   <data name="Options_CH03" xml:space="preserve">
@@ -651,61 +651,61 @@
   <data name="DataFiles_Bt18_ToolTip" xml:space="preserve">
     <value>Filtr: není v MyListu</value>
   </data>
-  <data name="DataSearch_CH02" xml:space="preserve">
+  <data name="DataSearch_Watched" xml:space="preserve">
     <value>Shlédnuto</value>
   </data>
-  <data name="DataSearch_Clear" xml:space="preserve">
+  <data name="DataSearch_New" xml:space="preserve">
     <value>Nové</value>
   </data>
-  <data name="DataSearch_LB01" xml:space="preserve">
+  <data name="DataSearch_AnimeId" xml:space="preserve">
     <value>ID Anime</value>
   </data>
-  <data name="DataSearch_LB02" xml:space="preserve">
+  <data name="DataSearch_EpisodeId" xml:space="preserve">
     <value>ID Episody</value>
   </data>
-  <data name="DataSearch_LB03" xml:space="preserve">
+  <data name="DataSearch_FileId" xml:space="preserve">
     <value>ID Souboru</value>
   </data>
-  <data name="DataSearch_LB04" xml:space="preserve">
+  <data name="DataSearch_MyListId" xml:space="preserve">
     <value>ID MyListu</value>
   </data>
-  <data name="DataSearch_LB05" xml:space="preserve">
+  <data name="DataSearch_Episodes" xml:space="preserve">
     <value>Počet Epizod</value>
   </data>
-  <data name="DataSearch_LB06" xml:space="preserve">
+  <data name="DataSearch_AnimeName" xml:space="preserve">
     <value>Název Anime</value>
   </data>
-  <data name="DataSearch_LB07" xml:space="preserve">
+  <data name="DataSearch_EpisodeName" xml:space="preserve">
     <value>Název Episody</value>
   </data>
-  <data name="DataSearch_LB08" xml:space="preserve">
+  <data name="DataSearch_Storage" xml:space="preserve">
     <value>Úložiště</value>
   </data>
-  <data name="DataSearch_LB09" xml:space="preserve">
+  <data name="DataSearch_Source" xml:space="preserve">
     <value>Zdroj</value>
   </data>
-  <data name="DataSearch_LB10" xml:space="preserve">
+  <data name="DataSearch_Other" xml:space="preserve">
     <value>Ostatní</value>
   </data>
-  <data name="DataSearch_LB11" xml:space="preserve">
+  <data name="DataSearch_AnimeType" xml:space="preserve">
     <value>Typ Anime</value>
   </data>
-  <data name="DataSearch_LB12" xml:space="preserve">
+  <data name="DataSearch_FileType" xml:space="preserve">
     <value>Typ Souboru</value>
   </data>
-  <data name="DataSearch_LB13" xml:space="preserve">
+  <data name="DataSearch_Dub" xml:space="preserve">
     <value>Dabing</value>
   </data>
-  <data name="DataSearch_LB14" xml:space="preserve">
+  <data name="DataSearch_Sub" xml:space="preserve">
     <value>Titulky</value>
   </data>
-  <data name="DataSearch_LB15" xml:space="preserve">
+  <data name="DataSearch_Group" xml:space="preserve">
     <value>Název Skupiny</value>
   </data>
-  <data name="DataSearch_LB16" xml:space="preserve">
+  <data name="DataSearch_Genres" xml:space="preserve">
     <value>Žánry</value>
   </data>
-  <data name="DataSearch_Select" xml:space="preserve">
+  <data name="DataSearch_Search" xml:space="preserve">
     <value>Vyhledat</value>
   </data>
   <data name="MainTabData_Mn07" xml:space="preserve">
@@ -789,16 +789,16 @@
   <data name="Rules_CH03" xml:space="preserve">
     <value>Nahrazovat existující soubory</value>
   </data>
-  <data name="DataFilesTree_Mn05" xml:space="preserve">
+  <data name="DataFilesTree_Clear2" xml:space="preserve">
     <value>Vyčistit</value>
   </data>
   <data name="DataFiles_Menu_Win" xml:space="preserve">
     <value>Win</value>
   </data>
-  <data name="DataSQL_Select" xml:space="preserve">
+  <data name="DataSQL_Filter" xml:space="preserve">
     <value>Filtr</value>
   </data>
-  <data name="MainTab_Mn05" xml:space="preserve">
+  <data name="MainTab_Sql" xml:space="preserve">
     <value>SQL</value>
   </data>
   <data name="MainTabLog_Mn04" xml:space="preserve">
@@ -891,7 +891,7 @@
   <data name="LogIn_LogOut" xml:space="preserve">
     <value>Konec</value>
   </data>
-  <data name="LogIn_LB03" xml:space="preserve">
+  <data name="LogIn_WelcomeMessage" xml:space="preserve">
     <value>Vítejte
 AniSub je klient pro komunikaci s AniDB.
 AniSub je alternativou za AOM. AniSub je malý, rychlý a hlavně také nenáročný. Umí toho stejně mnoho jako AOM ba dokonce i víc. A je také rychlý než jakýkoliv Java client.
@@ -904,7 +904,7 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="DataFiles_Menu_ExportSha1" xml:space="preserve">
     <value>SHA1</value>
   </data>
-  <data name="Hash_LB02" xml:space="preserve">
+  <data name="Hash_Waiting" xml:space="preserve">
     <value>Čekání:</value>
   </data>
   <data name="StatusBar_Mn05" xml:space="preserve">
@@ -949,34 +949,34 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="Options_MyList_GR01" xml:space="preserve">
     <value>Aktualizace</value>
   </data>
-  <data name="DataFilesTree_CH01" xml:space="preserve">
+  <data name="DataFilesTree_Clear" xml:space="preserve">
     <value>Vyčistit</value>
   </data>
-  <data name="DataFilesTree_CH02" xml:space="preserve">
+  <data name="DataFilesTree_Expand" xml:space="preserve">
     <value>Rozevírat</value>
   </data>
   <data name="Hash_DeleteAll" xml:space="preserve">
     <value>Vše vymazat</value>
   </data>
-  <data name="DataSQL_BT01" xml:space="preserve">
+  <data name="DataSQL_Anime" xml:space="preserve">
     <value>Anime</value>
   </data>
-  <data name="DataSQL_BT02" xml:space="preserve">
+  <data name="DataSQL_Episodes" xml:space="preserve">
     <value>Episody</value>
   </data>
-  <data name="DataSQL_BT03" xml:space="preserve">
+  <data name="DataSQL_Files" xml:space="preserve">
     <value>Soubory</value>
   </data>
-  <data name="DataSQL_BT04" xml:space="preserve">
+  <data name="DataSQL_MyList" xml:space="preserve">
     <value>MyList</value>
   </data>
-  <data name="DataSQL_GR01" xml:space="preserve">
+  <data name="DataSQL_Check" xml:space="preserve">
     <value>Zkontroluj</value>
   </data>
-  <data name="DataFilesTree_CH03" xml:space="preserve">
+  <data name="DataFilesTree_FilesOnly" xml:space="preserve">
     <value>Pouze soubory</value>
   </data>
-  <data name="DataFiles_RB05" xml:space="preserve">
+  <data name="DataFiles_Unknown" xml:space="preserve">
     <value>Neznámé</value>
   </data>
   <data name="AnimeTree_Adult" xml:space="preserve">
@@ -988,7 +988,7 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="MainTabManga_Mn02" xml:space="preserve">
     <value>Nová manga</value>
   </data>
-  <data name="MainTab_Mn07" xml:space="preserve">
+  <data name="MainTab_Manga" xml:space="preserve">
     <value>Manga</value>
   </data>
   <data name="MangaTree_CH01" xml:space="preserve">
@@ -1219,13 +1219,13 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="AnimeRating" xml:space="preserve">
     <value>Hodnocení</value>
   </data>
-  <data name="Hash_GR01" xml:space="preserve">
+  <data name="Hash_FileHashing" xml:space="preserve">
     <value>Hashování souborů</value>
   </data>
-  <data name="Hash_GR02" xml:space="preserve">
+  <data name="Hash_Watcher" xml:space="preserve">
     <value>Hlídací pes **</value>
   </data>
-  <data name="MainTab_Mn00" xml:space="preserve">
+  <data name="MainTab_Index" xml:space="preserve">
     <value>Úvod</value>
   </data>
   <data name="MessageBox_ClearDatabase" xml:space="preserve">
@@ -1249,7 +1249,7 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="Zgc_GraphB04" xml:space="preserve">
     <value>Časová posloupnost shlédnutí</value>
   </data>
-  <data name="DataFilesTree_CH04" xml:space="preserve">
+  <data name="DataFilesTree_ReverseFilter" xml:space="preserve">
     <value>Negovat filtr</value>
   </data>
   <data name="Anime_RelDel" xml:space="preserve">
@@ -1258,7 +1258,7 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="Manga_Data_Mn10" xml:space="preserve">
     <value>Chapter</value>
   </data>
-  <data name="LogIn_LB04" xml:space="preserve">
+  <data name="LogIn_FirstUse" xml:space="preserve">
     <value>První použití:</value>
   </data>
   <data name="Anime_Export_Xml" xml:space="preserve">
@@ -1327,10 +1327,10 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="Anime_Export_UpdateYourStatistics" xml:space="preserve">
     <value>Před vytvořením exportu doporučuju provést přepočítání statistik!</value>
   </data>
-  <data name="LogIn_LB07" xml:space="preserve">
+  <data name="LogIn_LicenseAgreement" xml:space="preserve">
     <value>Licenční smlouva s koncovým uživatelem</value>
   </data>
-  <data name="MainTab_Mn08" xml:space="preserve">
+  <data name="MainTab_About" xml:space="preserve">
     <value>O programu AniSub</value>
   </data>
   <data name="Options_LB68" xml:space="preserve">

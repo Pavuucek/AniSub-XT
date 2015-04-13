@@ -970,6 +970,15 @@ namespace AniDBClient.Lang {
         }
         
         /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Datum.
+        /// </summary>
+        internal static string DataFiles_Date {
+            get {
+                return ResourceManager.GetString("DataFiles_Date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Episoda.
         /// </summary>
         internal static string DataFiles_Episode {
@@ -1141,6 +1150,15 @@ namespace AniDBClient.Lang {
         }
         
         /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Nic.
+        /// </summary>
+        internal static string DataFiles_Nothing {
+            get {
+                return ResourceManager.GetString("DataFiles_Nothing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Cesta:.
         /// </summary>
         internal static string DataFiles_Path {
@@ -1155,51 +1173,6 @@ namespace AniDBClient.Lang {
         internal static string DataFiles_Path2 {
             get {
                 return ResourceManager.GetString("DataFiles_Path2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Dnes.
-        /// </summary>
-        internal static string DataFiles_RB01 {
-            get {
-                return ResourceManager.GetString("DataFiles_RB01", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Včera.
-        /// </summary>
-        internal static string DataFiles_RB02 {
-            get {
-                return ResourceManager.GetString("DataFiles_RB02", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Datum.
-        /// </summary>
-        internal static string DataFiles_RB03 {
-            get {
-                return ResourceManager.GetString("DataFiles_RB03", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Nic.
-        /// </summary>
-        internal static string DataFiles_RB04 {
-            get {
-                return ResourceManager.GetString("DataFiles_RB04", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Neznámé.
-        /// </summary>
-        internal static string DataFiles_RB05 {
-            get {
-                return ResourceManager.GetString("DataFiles_RB05", resourceCulture);
             }
         }
         
@@ -1249,6 +1222,24 @@ namespace AniDBClient.Lang {
         }
         
         /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Dnes.
+        /// </summary>
+        internal static string DataFiles_Today {
+            get {
+                return ResourceManager.GetString("DataFiles_Today", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Neznámé.
+        /// </summary>
+        internal static string DataFiles_Unknown {
+            get {
+                return ResourceManager.GetString("DataFiles_Unknown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Aktualizuji....
         /// </summary>
         internal static string DataFiles_Updating {
@@ -1258,272 +1249,281 @@ namespace AniDBClient.Lang {
         }
         
         /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Včera.
+        /// </summary>
+        internal static string DataFiles_Yesterday {
+            get {
+                return ResourceManager.GetString("DataFiles_Yesterday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Vyčistit.
         /// </summary>
-        internal static string DataFilesTree_CH01 {
+        internal static string DataFilesTree_Clear {
             get {
-                return ResourceManager.GetString("DataFilesTree_CH01", resourceCulture);
+                return ResourceManager.GetString("DataFilesTree_Clear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Vyčistit.
+        /// </summary>
+        internal static string DataFilesTree_Clear2 {
+            get {
+                return ResourceManager.GetString("DataFilesTree_Clear2", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Rozevírat.
         /// </summary>
-        internal static string DataFilesTree_CH02 {
+        internal static string DataFilesTree_Expand {
             get {
-                return ResourceManager.GetString("DataFilesTree_CH02", resourceCulture);
+                return ResourceManager.GetString("DataFilesTree_Expand", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Pouze soubory.
         /// </summary>
-        internal static string DataFilesTree_CH03 {
+        internal static string DataFilesTree_FilesOnly {
             get {
-                return ResourceManager.GetString("DataFilesTree_CH03", resourceCulture);
+                return ResourceManager.GetString("DataFilesTree_FilesOnly", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Negovat filtr.
         /// </summary>
-        internal static string DataFilesTree_CH04 {
+        internal static string DataFilesTree_ReverseFilter {
             get {
-                return ResourceManager.GetString("DataFilesTree_CH04", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Vyčistit.
-        /// </summary>
-        internal static string DataFilesTree_Mn05 {
-            get {
-                return ResourceManager.GetString("DataFilesTree_Mn05", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Shlédnuto.
-        /// </summary>
-        internal static string DataSearch_CH02 {
-            get {
-                return ResourceManager.GetString("DataSearch_CH02", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Nové.
-        /// </summary>
-        internal static string DataSearch_Clear {
-            get {
-                return ResourceManager.GetString("DataSearch_Clear", resourceCulture);
+                return ResourceManager.GetString("DataFilesTree_ReverseFilter", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný ID Anime.
         /// </summary>
-        internal static string DataSearch_LB01 {
+        internal static string DataSearch_AnimeId {
             get {
-                return ResourceManager.GetString("DataSearch_LB01", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný ID Episody.
-        /// </summary>
-        internal static string DataSearch_LB02 {
-            get {
-                return ResourceManager.GetString("DataSearch_LB02", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný ID Souboru.
-        /// </summary>
-        internal static string DataSearch_LB03 {
-            get {
-                return ResourceManager.GetString("DataSearch_LB03", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný ID MyListu.
-        /// </summary>
-        internal static string DataSearch_LB04 {
-            get {
-                return ResourceManager.GetString("DataSearch_LB04", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Počet Epizod.
-        /// </summary>
-        internal static string DataSearch_LB05 {
-            get {
-                return ResourceManager.GetString("DataSearch_LB05", resourceCulture);
+                return ResourceManager.GetString("DataSearch_AnimeId", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Název Anime.
         /// </summary>
-        internal static string DataSearch_LB06 {
+        internal static string DataSearch_AnimeName {
             get {
-                return ResourceManager.GetString("DataSearch_LB06", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Název Episody.
-        /// </summary>
-        internal static string DataSearch_LB07 {
-            get {
-                return ResourceManager.GetString("DataSearch_LB07", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Úložiště.
-        /// </summary>
-        internal static string DataSearch_LB08 {
-            get {
-                return ResourceManager.GetString("DataSearch_LB08", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Zdroj.
-        /// </summary>
-        internal static string DataSearch_LB09 {
-            get {
-                return ResourceManager.GetString("DataSearch_LB09", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Ostatní.
-        /// </summary>
-        internal static string DataSearch_LB10 {
-            get {
-                return ResourceManager.GetString("DataSearch_LB10", resourceCulture);
+                return ResourceManager.GetString("DataSearch_AnimeName", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Typ Anime.
         /// </summary>
-        internal static string DataSearch_LB11 {
+        internal static string DataSearch_AnimeType {
             get {
-                return ResourceManager.GetString("DataSearch_LB11", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Typ Souboru.
-        /// </summary>
-        internal static string DataSearch_LB12 {
-            get {
-                return ResourceManager.GetString("DataSearch_LB12", resourceCulture);
+                return ResourceManager.GetString("DataSearch_AnimeType", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Dabing.
         /// </summary>
-        internal static string DataSearch_LB13 {
+        internal static string DataSearch_Dub {
             get {
-                return ResourceManager.GetString("DataSearch_LB13", resourceCulture);
+                return ResourceManager.GetString("DataSearch_Dub", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Titulky.
+        ///   Vyhledá lokalizovaný řetězec podobný ID Episody.
         /// </summary>
-        internal static string DataSearch_LB14 {
+        internal static string DataSearch_EpisodeId {
             get {
-                return ResourceManager.GetString("DataSearch_LB14", resourceCulture);
+                return ResourceManager.GetString("DataSearch_EpisodeId", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Název Skupiny.
+        ///   Vyhledá lokalizovaný řetězec podobný Název Episody.
         /// </summary>
-        internal static string DataSearch_LB15 {
+        internal static string DataSearch_EpisodeName {
             get {
-                return ResourceManager.GetString("DataSearch_LB15", resourceCulture);
+                return ResourceManager.GetString("DataSearch_EpisodeName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Počet Epizod.
+        /// </summary>
+        internal static string DataSearch_Episodes {
+            get {
+                return ResourceManager.GetString("DataSearch_Episodes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný ID Souboru.
+        /// </summary>
+        internal static string DataSearch_FileId {
+            get {
+                return ResourceManager.GetString("DataSearch_FileId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Typ Souboru.
+        /// </summary>
+        internal static string DataSearch_FileType {
+            get {
+                return ResourceManager.GetString("DataSearch_FileType", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Žánry.
         /// </summary>
-        internal static string DataSearch_LB16 {
+        internal static string DataSearch_Genres {
             get {
-                return ResourceManager.GetString("DataSearch_LB16", resourceCulture);
+                return ResourceManager.GetString("DataSearch_Genres", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Název Skupiny.
+        /// </summary>
+        internal static string DataSearch_Group {
+            get {
+                return ResourceManager.GetString("DataSearch_Group", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný ID MyListu.
+        /// </summary>
+        internal static string DataSearch_MyListId {
+            get {
+                return ResourceManager.GetString("DataSearch_MyListId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Nové.
+        /// </summary>
+        internal static string DataSearch_New {
+            get {
+                return ResourceManager.GetString("DataSearch_New", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Ostatní.
+        /// </summary>
+        internal static string DataSearch_Other {
+            get {
+                return ResourceManager.GetString("DataSearch_Other", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Vyhledat.
         /// </summary>
-        internal static string DataSearch_Select {
+        internal static string DataSearch_Search {
             get {
-                return ResourceManager.GetString("DataSearch_Select", resourceCulture);
+                return ResourceManager.GetString("DataSearch_Search", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Zdroj.
+        /// </summary>
+        internal static string DataSearch_Source {
+            get {
+                return ResourceManager.GetString("DataSearch_Source", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Úložiště.
+        /// </summary>
+        internal static string DataSearch_Storage {
+            get {
+                return ResourceManager.GetString("DataSearch_Storage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Titulky.
+        /// </summary>
+        internal static string DataSearch_Sub {
+            get {
+                return ResourceManager.GetString("DataSearch_Sub", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Shlédnuto.
+        /// </summary>
+        internal static string DataSearch_Watched {
+            get {
+                return ResourceManager.GetString("DataSearch_Watched", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Anime.
         /// </summary>
-        internal static string DataSQL_BT01 {
+        internal static string DataSQL_Anime {
             get {
-                return ResourceManager.GetString("DataSQL_BT01", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Episody.
-        /// </summary>
-        internal static string DataSQL_BT02 {
-            get {
-                return ResourceManager.GetString("DataSQL_BT02", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Soubory.
-        /// </summary>
-        internal static string DataSQL_BT03 {
-            get {
-                return ResourceManager.GetString("DataSQL_BT03", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný MyList.
-        /// </summary>
-        internal static string DataSQL_BT04 {
-            get {
-                return ResourceManager.GetString("DataSQL_BT04", resourceCulture);
+                return ResourceManager.GetString("DataSQL_Anime", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Zkontroluj.
         /// </summary>
-        internal static string DataSQL_GR01 {
+        internal static string DataSQL_Check {
             get {
-                return ResourceManager.GetString("DataSQL_GR01", resourceCulture);
+                return ResourceManager.GetString("DataSQL_Check", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Episody.
+        /// </summary>
+        internal static string DataSQL_Episodes {
+            get {
+                return ResourceManager.GetString("DataSQL_Episodes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Soubory.
+        /// </summary>
+        internal static string DataSQL_Files {
+            get {
+                return ResourceManager.GetString("DataSQL_Files", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Filtr.
         /// </summary>
-        internal static string DataSQL_Select {
+        internal static string DataSQL_Filter {
             get {
-                return ResourceManager.GetString("DataSQL_Select", resourceCulture);
+                return ResourceManager.GetString("DataSQL_Filter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný MyList.
+        /// </summary>
+        internal static string DataSQL_MyList {
+            get {
+                return ResourceManager.GetString("DataSQL_MyList", resourceCulture);
             }
         }
         
@@ -1566,36 +1566,18 @@ namespace AniDBClient.Lang {
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Hashování souborů.
         /// </summary>
-        internal static string Hash_GR01 {
+        internal static string Hash_FileHashing {
             get {
-                return ResourceManager.GetString("Hash_GR01", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Hlídací pes **.
-        /// </summary>
-        internal static string Hash_GR02 {
-            get {
-                return ResourceManager.GetString("Hash_GR02", resourceCulture);
+                return ResourceManager.GetString("Hash_FileHashing", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Cesta:.
         /// </summary>
-        internal static string Hash_LB01 {
+        internal static string Hash_Path {
             get {
-                return ResourceManager.GetString("Hash_LB01", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Čekání:.
-        /// </summary>
-        internal static string Hash_LB02 {
-            get {
-                return ResourceManager.GetString("Hash_LB02", resourceCulture);
+                return ResourceManager.GetString("Hash_Path", resourceCulture);
             }
         }
         
@@ -1609,42 +1591,47 @@ namespace AniDBClient.Lang {
         }
         
         /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Automaticky přihlásit.
+        ///   Vyhledá lokalizovaný řetězec podobný Čekání:.
         /// </summary>
-        internal static string LogIn_CH01 {
+        internal static string Hash_Waiting {
             get {
-                return ResourceManager.GetString("LogIn_CH01", resourceCulture);
+                return ResourceManager.GetString("Hash_Waiting", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Vítejte
-        ///AniSub je klient pro komunikaci s AniDB.
-        ///AniSub je alternativou za AOM. AniSub je malý, rychlý a hlavně také nenáročný. Umí toho stejně mnoho jako AOM ba dokonce i víc. A je také rychlý než jakýkoliv Java client.
-        ///
-        ///Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlašovací jméno a heslo:.
+        ///   Vyhledá lokalizovaný řetězec podobný Hlídací pes **.
         /// </summary>
-        internal static string LogIn_LB03 {
+        internal static string Hash_Watcher {
             get {
-                return ResourceManager.GetString("LogIn_LB03", resourceCulture);
+                return ResourceManager.GetString("Hash_Watcher", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Automaticky přihlásit.
+        /// </summary>
+        internal static string LogIn_AutoLogin {
+            get {
+                return ResourceManager.GetString("LogIn_AutoLogin", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný První použití:.
         /// </summary>
-        internal static string LogIn_LB04 {
+        internal static string LogIn_FirstUse {
             get {
-                return ResourceManager.GetString("LogIn_LB04", resourceCulture);
+                return ResourceManager.GetString("LogIn_FirstUse", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Licenční smlouva s koncovým uživatelem.
         /// </summary>
-        internal static string LogIn_LB07 {
+        internal static string LogIn_LicenseAgreement {
             get {
-                return ResourceManager.GetString("LogIn_LB07", resourceCulture);
+                return ResourceManager.GetString("LogIn_LicenseAgreement", resourceCulture);
             }
         }
         
@@ -1676,6 +1663,19 @@ namespace AniDBClient.Lang {
         }
         
         /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Vítejte
+        ///AniSub je klient pro komunikaci s AniDB.
+        ///AniSub je alternativou za AOM. AniSub je malý, rychlý a hlavně také nenáročný. Umí toho stejně mnoho jako AOM ba dokonce i víc. A je také rychlý než jakýkoliv Java client.
+        ///
+        ///Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlašovací jméno a heslo:.
+        /// </summary>
+        internal static string LogIn_WelcomeMessage {
+            get {
+                return ResourceManager.GetString("LogIn_WelcomeMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Vymazat.
         /// </summary>
         internal static string LogTasksDel {
@@ -1685,83 +1685,83 @@ namespace AniDBClient.Lang {
         }
         
         /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Úvod.
+        ///   Vyhledá lokalizovaný řetězec podobný O programu AniSub.
         /// </summary>
-        internal static string MainTab_Mn00 {
+        internal static string MainTab_About {
             get {
-                return ResourceManager.GetString("MainTab_Mn00", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Nastavení.
-        /// </summary>
-        internal static string MainTab_Mn01 {
-            get {
-                return ResourceManager.GetString("MainTab_Mn01", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Pravidla.
-        /// </summary>
-        internal static string MainTab_Mn02 {
-            get {
-                return ResourceManager.GetString("MainTab_Mn02", resourceCulture);
+                return ResourceManager.GetString("MainTab_About", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Anime.
         /// </summary>
-        internal static string MainTab_Mn03 {
+        internal static string MainTab_Anime {
             get {
-                return ResourceManager.GetString("MainTab_Mn03", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Log.
-        /// </summary>
-        internal static string MainTab_Mn04 {
-            get {
-                return ResourceManager.GetString("MainTab_Mn04", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný SQL.
-        /// </summary>
-        internal static string MainTab_Mn05 {
-            get {
-                return ResourceManager.GetString("MainTab_Mn05", resourceCulture);
+                return ResourceManager.GetString("MainTab_Anime", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Hash.
         /// </summary>
-        internal static string MainTab_Mn06 {
+        internal static string MainTab_Hash {
             get {
-                return ResourceManager.GetString("MainTab_Mn06", resourceCulture);
+                return ResourceManager.GetString("MainTab_Hash", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Úvod.
+        /// </summary>
+        internal static string MainTab_Index {
+            get {
+                return ResourceManager.GetString("MainTab_Index", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Log.
+        /// </summary>
+        internal static string MainTab_Log {
+            get {
+                return ResourceManager.GetString("MainTab_Log", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Manga.
         /// </summary>
-        internal static string MainTab_Mn07 {
+        internal static string MainTab_Manga {
             get {
-                return ResourceManager.GetString("MainTab_Mn07", resourceCulture);
+                return ResourceManager.GetString("MainTab_Manga", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný O programu AniSub.
+        ///   Vyhledá lokalizovaný řetězec podobný Pravidla.
         /// </summary>
-        internal static string MainTab_Mn08 {
+        internal static string MainTab_Rules {
             get {
-                return ResourceManager.GetString("MainTab_Mn08", resourceCulture);
+                return ResourceManager.GetString("MainTab_Rules", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Nastavení.
+        /// </summary>
+        internal static string MainTab_Settings {
+            get {
+                return ResourceManager.GetString("MainTab_Settings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný SQL.
+        /// </summary>
+        internal static string MainTab_Sql {
+            get {
+                return ResourceManager.GetString("MainTab_Sql", resourceCulture);
             }
         }
         

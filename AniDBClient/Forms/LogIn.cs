@@ -104,12 +104,12 @@ namespace AniDBClient.Forms
         {
             LogIn_LB01.Text = Language.Options_LB03;
             LogIn_LB02.Text = Language.Options_LB04;
-            LogIn_LB03.Text = Language.LogIn_LB03;
-            LogIn_LB04.Text = Language.LogIn_LB04;
-            LogIn_LB07.Text = Language.LogIn_LB07;
+            LogIn_LB03.Text = Language.LogIn_WelcomeMessage;
+            LogIn_LB04.Text = Language.LogIn_FirstUse;
+            LogIn_LB07.Text = Language.LogIn_LicenseAgreement;
             LogIn_Register.Text = Language.LogIn_Register;
             LogIn_LogIn.Text = Language.LogIn_LogIn;
-            LogIn_CH01.Text = Language.LogIn_CH01;
+            LogIn_CH01.Text = Language.LogIn_AutoLogin;
             LogIn_LogOut.Text = Language.LogIn_LogOut;
         }
 

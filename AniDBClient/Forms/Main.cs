@@ -231,14 +231,14 @@ namespace AniDBClient.Forms
         //Načtení Lokolizace
         private void InitializeComponentLanguage()
         {
-            MainTab_Mn00.Text = Language.MainTab_Mn00;
-            MainTab_Mn01.Text = Language.MainTab_Mn01;
-            MainTab_Mn02.Text = Language.MainTab_Mn02;
-            MainTab_Mn03.Text = Language.MainTab_Mn03;
-            MainTab_Mn04.Text = Language.MainTab_Mn04;
-            MainTab_Mn05.Text = Language.MainTab_Mn05;
-            MainTab_Mn06.Text = Language.MainTab_Mn06;
-            MainTab_Mn07.Text = Language.MainTab_Mn07;
+            MainTab_Mn00.Text = Language.MainTab_Index;
+            MainTab_Mn01.Text = Language.MainTab_Settings;
+            MainTab_Mn02.Text = Language.MainTab_Rules;
+            MainTab_Mn03.Text = Language.MainTab_Anime;
+            MainTab_Mn04.Text = Language.MainTab_Log;
+            MainTab_Mn05.Text = Language.MainTab_Sql;
+            MainTab_Mn06.Text = Language.MainTab_Hash;
+            MainTab_Mn07.Text = Language.MainTab_Manga;
 
             StatusBar_ConnectLB.Text = Language.StatusBar_ConnectLBOff;
 
@@ -335,7 +335,7 @@ namespace AniDBClient.Forms
 
             Options_LB11.Text = Language.Options_Network;
             Options_LB12.Text = Language.Options_GR03;
-            Options_LB13.Text = Language.Hash_GR02;
+            Options_LB13.Text = Language.Hash_Watcher;
 
             Rules_FilesRulesRename_RB01.Text = Language.Rules_FilesRulesRename_RB01;
             Rules_FilesRulesRename_RB02.Text = Language.Rules_FilesRulesRename_RB02;
@@ -368,11 +368,11 @@ namespace AniDBClient.Forms
             MainTabData_Mn09.Text = Language.MainTabData_Mn09;
             MainTabData_Mn10.Text = Language.MainTabData_Mn10;
 
-            DataSQL_BT01.Text = Language.DataSQL_BT01;
-            DataSQL_BT02.Text = Language.DataSQL_BT02;
-            DataSQL_BT03.Text = Language.DataSQL_BT03;
-            DataSQL_BT04.Text = Language.DataSQL_BT04;
-            DataSQL_GR01.Text = Language.DataSQL_GR01;
+            DataSQL_BT01.Text = Language.DataSQL_Anime;
+            DataSQL_BT02.Text = Language.DataSQL_Episodes;
+            DataSQL_BT03.Text = Language.DataSQL_Files;
+            DataSQL_BT04.Text = Language.DataSQL_MyList;
+            DataSQL_GR01.Text = Language.DataSQL_Check;
 
             DataAnime_Menu_Mn02_Mn01.Text = Language.DataAnime_Menu_MyListAddModify;
             DataAnime_Menu_Mn02_Mn02.Text = Language.DataAnime_Menu_MyListDelete;
@@ -392,15 +392,15 @@ namespace AniDBClient.Forms
 
             DataFiles_Menu_Mn02_Mn01.Text = Language.DataAnime_Menu_DatabaseDelete;
 
-            DataFilesTree_CH01.Text = Language.DataFilesTree_CH01;
-            DataFilesTree_CH02.Text = Language.DataFilesTree_CH02;
-            DataFilesTree_CH03.Text = Language.DataFilesTree_CH03;
+            DataFilesTree_CH01.Text = Language.DataFilesTree_Clear;
+            DataFilesTree_CH02.Text = Language.DataFilesTree_Expand;
+            DataFilesTree_CH03.Text = Language.DataFilesTree_FilesOnly;
 
             DataFilesTree_Mn01.Text = Language.DataAnime_Menu_Expand;
             DataFilesTree_Mn02.Text = Language.DataAnime_Menu_MyList;
             DataFilesTree_Mn03.Text = Language.DataAnime_Menu_Database;
             DataFilesTree_Mn04.Text = Language.DataFiles_Menu_Win;
-            DataFilesTree_Mn05.Text = Language.DataFilesTree_Mn05;
+            DataFilesTree_Mn05.Text = Language.DataFilesTree_Clear2;
             DataFilesTree_Mn06.Text = Language.DataFiles_Menu_Rename;
             DataFilesTree_Mn08.Text = Language.DataFiles_Menu_Rehash;
 
@@ -420,11 +420,11 @@ namespace AniDBClient.Forms
             Anime_LB10.Text = Language.Anime_Length;
             Anime_LB11.Text = Language.Anime_Tags;
 
-            DataFiles_RB01.Text = Language.DataFiles_RB01;
-            DataFiles_RB02.Text = Language.DataFiles_RB02;
-            DataFiles_RB03.Text = Language.DataFiles_RB03;
-            DataFiles_RB04.Text = Language.DataFiles_RB04;
-            DataFiles_RB05.Text = Language.DataFiles_RB05;
+            DataFiles_RB01.Text = Language.DataFiles_Today;
+            DataFiles_RB02.Text = Language.DataFiles_Yesterday;
+            DataFiles_RB03.Text = Language.DataFiles_Date;
+            DataFiles_RB04.Text = Language.DataFiles_Nothing;
+            DataFiles_RB05.Text = Language.DataFiles_Unknown;
 
             Add_LB01.Text = Language.Add_Id;
 
@@ -446,8 +446,8 @@ namespace AniDBClient.Forms
             AnimeData_Mn04.HeaderText = Language.AnimeData_Name;
             AnimeData_Mn05.HeaderText = Language.AnimeData_Length;
 
-            Hash_GR01.Text = Language.Hash_GR01;
-            Hash_LB02.Text = Language.Hash_LB02;
+            Hash_GR01.Text = Language.Hash_FileHashing;
+            Hash_LB02.Text = Language.Hash_Waiting;
 
             AnimeData_Menu_Mn01.Text = Language.DataAnime_Menu_Expand;
             AnimeData_Menu_Mn02.Text = Language.DataAnime_Menu_MyList;
@@ -486,30 +486,30 @@ namespace AniDBClient.Forms
             ToolTip.SetToolTip(DataFiles_Bt20, Language.DataFiles_Bt20_ToolTip);
             ToolTip.SetToolTip(DataFiles_Bt21, Language.DataFiles_Bt21_ToolTip);
             ToolTip.SetToolTip(DataFiles_Bt22, Language.DataFiles_Bt22_ToolTip);
-            ToolTip.SetToolTip(DataFilesTree_CH04, Language.DataFilesTree_CH04);
+            ToolTip.SetToolTip(DataFilesTree_CH04, Language.DataFilesTree_ReverseFilter);
             ToolTip.SetToolTip(Options_SetingsDefault, Language.Options_SetingsDefault_ToolTip);
 
-            DataSearch_LB01.Text = Language.DataSearch_LB01;
-            DataSearch_LB02.Text = Language.DataSearch_LB02;
-            DataSearch_LB03.Text = Language.DataSearch_LB03;
-            DataSearch_LB04.Text = Language.DataSearch_LB04;
-            DataSearch_LB05.Text = Language.DataSearch_LB05;
-            DataSearch_LB06.Text = Language.DataSearch_LB06;
-            DataSearch_LB07.Text = Language.DataSearch_LB07;
-            DataSearch_LB08.Text = Language.DataSearch_LB08;
-            DataSearch_LB09.Text = Language.DataSearch_LB09;
-            DataSearch_LB10.Text = Language.DataSearch_LB10;
-            DataSearch_LB11.Text = Language.DataSearch_LB11;
-            DataSearch_LB12.Text = Language.DataSearch_LB12;
-            DataSearch_LB13.Text = Language.DataSearch_LB13;
-            DataSearch_LB14.Text = Language.DataSearch_LB14;
-            DataSearch_LB15.Text = Language.DataSearch_LB15;
-            DataSearch_LB16.Text = Language.DataSearch_LB16;
+            DataSearch_LB01.Text = Language.DataSearch_AnimeId;
+            DataSearch_LB02.Text = Language.DataSearch_EpisodeId;
+            DataSearch_LB03.Text = Language.DataSearch_FileId;
+            DataSearch_LB04.Text = Language.DataSearch_MyListId;
+            DataSearch_LB05.Text = Language.DataSearch_Episodes;
+            DataSearch_LB06.Text = Language.DataSearch_AnimeName;
+            DataSearch_LB07.Text = Language.DataSearch_EpisodeName;
+            DataSearch_LB08.Text = Language.DataSearch_Storage;
+            DataSearch_LB09.Text = Language.DataSearch_Source;
+            DataSearch_LB10.Text = Language.DataSearch_Other;
+            DataSearch_LB11.Text = Language.DataSearch_AnimeType;
+            DataSearch_LB12.Text = Language.DataSearch_FileType;
+            DataSearch_LB13.Text = Language.DataSearch_Dub;
+            DataSearch_LB14.Text = Language.DataSearch_Sub;
+            DataSearch_LB15.Text = Language.DataSearch_Group;
+            DataSearch_LB16.Text = Language.DataSearch_Genres;
 
-            DataSearch_CH02.Text = Language.DataSearch_CH02;
+            DataSearch_CH02.Text = Language.DataSearch_Watched;
 
-            DataSearch_Clear.Text = Language.DataSearch_Clear;
-            DataSearch_Select.Text = Language.DataSearch_Select;
+            DataSearch_Clear.Text = Language.DataSearch_New;
+            DataSearch_Select.Text = Language.DataSearch_Search;
 
             DataFiles_Menu_Mn05.Text = Language.DataFiles_Menu_Download;
             DataFiles_Menu_Mn05_Mn01.Text = Language.DataFiles_Menu_DownloadAnime;
@@ -534,7 +534,7 @@ namespace AniDBClient.Forms
             AnimeTree_Menu_Mn02.Text = Language.AnimeTree_Menu_DeleteAnime;
 
             AnimeTree_CH01.Text = Language.AnimeTree_Adult;
-            AnimeTree_CH02.Text = Language.DataSearch_CH02;
+            AnimeTree_CH02.Text = Language.DataSearch_Watched;
 
             DataFilesTree_Mn07.Text = Language.DataFiles_Menu_Download;
             DataFilesTree_Mn07_Mn01.Text = Language.DataFiles_Menu_DownloadAnime;
@@ -615,8 +615,8 @@ namespace AniDBClient.Forms
             MangaSearch_LB09.Text = Language.Manga_LB22;
             MangaSearch_LB10.Text = Language.Manga_LB25;
 
-            MangaSearch_New.Text = Language.DataSearch_Clear;
-            MangaSearch_Search.Text = Language.DataSearch_Select;
+            MangaSearch_New.Text = Language.DataSearch_New;
+            MangaSearch_Search.Text = Language.DataSearch_Search;
 
             MangaTree_CH01.Text = Language.MangaTree_CH01;
 
@@ -9356,7 +9356,7 @@ namespace AniDBClient.Forms
 
                 if (DRelations.Rows.Count > 0)
                 {
-                    Anime_RelationTree.Nodes.Add("N", Language.MainTab_Mn03);
+                    Anime_RelationTree.Nodes.Add("N", Language.MainTab_Anime);
 
                     foreach (DataRow row in DRelations.Rows)
                     {
@@ -9418,7 +9418,7 @@ namespace AniDBClient.Forms
 
                 if (DManga.Rows.Count > 0)
                 {
-                    Anime_RelationTree.Nodes.Add("N", Language.MainTab_Mn07);
+                    Anime_RelationTree.Nodes.Add("N", Language.MainTab_Manga);
                     foreach (DataRow row in DManga.Rows)
                         Anime_RelationTree.Nodes.Add("M" + row["id_manga"].ToString(), row["manga_nazevjap"].ToString());
 
@@ -12003,7 +12003,7 @@ namespace AniDBClient.Forms
 
                     Hash_JeSmazano = true;
 
-                    Hash_GR01.Text = Language.Hash_GR01 + " (" + Hash_Nazvy_Souboru.Items.Count + ")";
+                    Hash_GR01.Text = Language.Hash_FileHashing + " (" + Hash_Nazvy_Souboru.Items.Count + ")";
                 }
 
                 int x = e.ProgressPercentage;
@@ -12088,7 +12088,7 @@ namespace AniDBClient.Forms
                     Hash_DeleteAll.Enabled = true;
                     StatusBar_Hash.Enabled = true;
 
-                    Hash_GR01.Text = Language.Hash_GR01 + " (" + Hash_Nazvy_Souboru.Items.Count + ")";
+                    Hash_GR01.Text = Language.Hash_FileHashing + " (" + Hash_Nazvy_Souboru.Items.Count + ")";
                 }
                 else
                 {
@@ -12101,7 +12101,7 @@ namespace AniDBClient.Forms
                     Hash_Delete.Enabled = false;
                     Hash_DeleteAll.Enabled = false;
 
-                    Hash_GR01.Text = Language.Hash_GR01;
+                    Hash_GR01.Text = Language.Hash_FileHashing;
                 }
             }
 
@@ -13380,7 +13380,7 @@ namespace AniDBClient.Forms
             {
                 if (DMangaRel.Rows.Count > 0)
                 {
-                    Manga_RelationTree.Nodes.Add("N", Language.MainTab_Mn07);
+                    Manga_RelationTree.Nodes.Add("N", Language.MainTab_Manga);
 
                     for (int i = 0; i < DMangaRel.Rows.Count; i++)
                         Manga_RelationTree.Nodes.Add("M" + DMangaRel.Rows[i]["id_manga_related"].ToString(), DMangaRel.Rows[i]["manga_nazevjap"].ToString());
@@ -13391,7 +13391,7 @@ namespace AniDBClient.Forms
 
                 if (DAnime.Rows.Count > 0)
                 {
-                    Manga_RelationTree.Nodes.Add("N", Language.MainTab_Mn03);
+                    Manga_RelationTree.Nodes.Add("N", Language.MainTab_Anime);
 
                     for (int i = 0; i < DAnime.Rows.Count; i++)
                         Manga_RelationTree.Nodes.Add("A" + DAnime.Rows[i]["id_anime"].ToString(), DAnime.Rows[i]["anime_nazevjap"].ToString());

@@ -153,40 +153,40 @@
   <data name="DataAnime_Menu_Database" xml:space="preserve">
     <value>Databáze</value>
   </data>
-  <data name="DataAnime_Mn04" xml:space="preserve">
+  <data name="DataAnime_JapName" xml:space="preserve">
     <value>Název JAP *</value>
   </data>
-  <data name="DataAnime_Mn05" xml:space="preserve">
+  <data name="DataAnime_EngName" xml:space="preserve">
     <value>Název ENG</value>
   </data>
-  <data name="DataAnime_Mn06" xml:space="preserve">
+  <data name="DataAnime_Year" xml:space="preserve">
     <value>Rok</value>
   </data>
-  <data name="DataAnime_Mn07" xml:space="preserve">
+  <data name="DataAnime_Type" xml:space="preserve">
     <value>Typ série</value>
   </data>
-  <data name="DataAnime_Mn08" xml:space="preserve">
+  <data name="DataAnime_Dub" xml:space="preserve">
     <value>Dabing</value>
   </data>
-  <data name="DataAnime_Mn09" xml:space="preserve">
+  <data name="DataAnime_Sub" xml:space="preserve">
     <value>Titulky</value>
   </data>
-  <data name="DataAnime_Mn10" xml:space="preserve">
+  <data name="DataAnime_Episodes" xml:space="preserve">
     <value>Epizody</value>
   </data>
-  <data name="DataAnime_Mn11" xml:space="preserve">
+  <data name="DataAnime_Size" xml:space="preserve">
     <value>Velikost</value>
   </data>
-  <data name="DataAnime_Mn12" xml:space="preserve">
+  <data name="DataAnime_Length" xml:space="preserve">
     <value>Délka</value>
   </data>
-  <data name="DataAnime_Mn13" xml:space="preserve">
+  <data name="DataAnime_Watched" xml:space="preserve">
     <value>Shlédnuto</value>
   </data>
-  <data name="DataAnime_Mn14" xml:space="preserve">
+  <data name="DataAnime_Storage" xml:space="preserve">
     <value>Úložiště</value>
   </data>
-  <data name="DataAnime_Mn15" xml:space="preserve">
+  <data name="DataAnime_Source" xml:space="preserve">
     <value>Zdroj</value>
   </data>
   <data name="LogIn_CH01" xml:space="preserve">
@@ -510,7 +510,7 @@
   <data name="Rules_FilesRulesMove_RB02" xml:space="preserve">
     <value>Kopírovat</value>
   </data>
-  <data name="DataFiles_Menu_Mn03" xml:space="preserve">
+  <data name="DataFiles_Menu_Rename" xml:space="preserve">
     <value>Přejmenovat</value>
   </data>
   <data name="DataFiles_Mn02" xml:space="preserve">
@@ -792,7 +792,7 @@
   <data name="DataFilesTree_Mn05" xml:space="preserve">
     <value>Vyčistit</value>
   </data>
-  <data name="DataFiles_Menu_Mn04" xml:space="preserve">
+  <data name="DataFiles_Menu_Win" xml:space="preserve">
     <value>Win</value>
   </data>
   <data name="DataSQL_Select" xml:space="preserve">
@@ -807,22 +807,22 @@
   <data name="Options_VL86" xml:space="preserve">
     <value>18+:</value>
   </data>
-  <data name="DataFiles_Menu_Mn05" xml:space="preserve">
+  <data name="DataFiles_Menu_Download" xml:space="preserve">
     <value>Stáhnout</value>
   </data>
-  <data name="DataFiles_Menu_Mn05_Mn01" xml:space="preserve">
+  <data name="DataFiles_Menu_DownloadAnime" xml:space="preserve">
     <value>Anime</value>
   </data>
-  <data name="DataFiles_Menu_Mn05_Mn02" xml:space="preserve">
+  <data name="DataFiles_Menu_DownloadEpisodes" xml:space="preserve">
     <value>Episody</value>
   </data>
-  <data name="DataFiles_Menu_Mn05_Mn03" xml:space="preserve">
+  <data name="DataFiles_Menu_DownloadFiles" xml:space="preserve">
     <value>Soubory</value>
   </data>
-  <data name="DataFiles_Menu_Mn05_Mn04" xml:space="preserve">
+  <data name="DataFiles_Menu_DownloadMyList" xml:space="preserve">
     <value>MyList</value>
   </data>
-  <data name="DataFiles_Menu_Mn05_Mn05" xml:space="preserve">
+  <data name="DataFiles_Menu_DownloadAll" xml:space="preserve">
     <value>Vše</value>
   </data>
   <data name="Options_CH07" xml:space="preserve">
@@ -873,16 +873,16 @@
   <data name="Anime_RelationTree_Other" xml:space="preserve">
     <value>Other: </value>
   </data>
-  <data name="DataFiles_Menu_Mn06" xml:space="preserve">
+  <data name="DataFiles_Menu_Export" xml:space="preserve">
     <value>Exportovat</value>
   </data>
-  <data name="DataFiles_Menu_Mn06_Mn01" xml:space="preserve">
+  <data name="DataFiles_Menu_ExportMd5" xml:space="preserve">
     <value>MD5</value>
   </data>
-  <data name="DataFiles_Menu_Mn06_Mn02" xml:space="preserve">
+  <data name="DataFiles_Menu_ExportCrc32" xml:space="preserve">
     <value>CRC32</value>
   </data>
-  <data name="DataFiles_Menu_Mn06_Mn03" xml:space="preserve">
+  <data name="DataFiles_Menu_ExportEd2k" xml:space="preserve">
     <value>ED2K</value>
   </data>
   <data name="Anime_Date" xml:space="preserve">
@@ -901,7 +901,7 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="Rules_LB01" xml:space="preserve">
     <value>Pozice čísel:</value>
   </data>
-  <data name="DataFiles_Menu_Mn06_Mn04" xml:space="preserve">
+  <data name="DataFiles_Menu_ExportSha1" xml:space="preserve">
     <value>SHA1</value>
   </data>
   <data name="Hash_LB02" xml:space="preserve">
@@ -910,16 +910,16 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="StatusBar_Mn05" xml:space="preserve">
     <value>Verze: </value>
   </data>
-  <data name="DataFiles_LB01" xml:space="preserve">
+  <data name="DataFiles_Name" xml:space="preserve">
     <value>Název:</value>
   </data>
-  <data name="DataFiles_LB02" xml:space="preserve">
+  <data name="DataFiles_Path" xml:space="preserve">
     <value>Cesta:</value>
   </data>
-  <data name="DataFiles_LB03" xml:space="preserve">
+  <data name="DataFiles_Storage" xml:space="preserve">
     <value>Úložna:</value>
   </data>
-  <data name="DataFiles_LB04" xml:space="preserve">
+  <data name="DataFiles_Source" xml:space="preserve">
     <value>Zdroj:</value>
   </data>
   <data name="Watcher_Add" xml:space="preserve">
@@ -934,7 +934,7 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="Anime_RelationTree_AlternativeStory" xml:space="preserve">
     <value>Alternativní příběh</value>
   </data>
-  <data name="DataFiles_Menu_Mn07" xml:space="preserve">
+  <data name="DataFiles_Menu_Rehash" xml:space="preserve">
     <value>Rehash</value>
   </data>
   <data name="Options_CH03BT" xml:space="preserve">
@@ -1180,7 +1180,7 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="MessageBox_Anime" xml:space="preserve">
     <value>Z AniDB nebudou ostraněny informace vašeho mylistu. Opravdu chcete smazat anime?</value>
   </data>
-  <data name="DataFiles_LB05" xml:space="preserve">
+  <data name="DataFiles_Updating" xml:space="preserve">
     <value>Aktualizuji...</value>
   </data>
   <data name="DataFiles_Bt20_ToolTip" xml:space="preserve">
@@ -1405,7 +1405,7 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="Rules_CH04" xml:space="preserve">
     <value>Smazat adresář pokud je prázdný</value>
   </data>
-  <data name="DataFiles_LB06" xml:space="preserve">
+  <data name="DataFiles_Files" xml:space="preserve">
     <value>Souborů</value>
   </data>
   <data name="DataFiles_Bt22_ToolTip" xml:space="preserve">

@@ -426,7 +426,7 @@ namespace AniDBClient.Forms
             DataFiles_RB04.Text = Language.DataFiles_RB04;
             DataFiles_RB05.Text = Language.DataFiles_RB05;
 
-            Add_LB01.Text = Language.Add_LB01;
+            Add_LB01.Text = Language.Add_Id;
 
             Rules_FilesRulesMove_RB01.Text = Language.Rules_FilesRulesMove_RB01;
             Rules_FilesRulesMove_RB02.Text = Language.Rules_FilesRulesMove_RB02;
@@ -635,26 +635,26 @@ namespace AniDBClient.Forms
 
             Anime_RelDel.Text = Language.Anime_RelDel;
 
-            Anime_ExportCH01.Text = Language.Anime_ExportCH01;
-            Anime_ExportCH02.Text = Language.Anime_ExportCH02;
-            Anime_ExportCH03.Text = Language.Anime_ExportCH03;
-            Anime_ExportCH04.Text = Language.Anime_ExportCH04;
-            Anime_ExportCH05.Text = Language.Anime_ExportCH05;
-            Anime_ExportCH06.Text = Language.Anime_ExportCH06;
-            Anime_ExportCH07.Text = Language.Anime_ExportCH07;
-            Anime_ExportCH08.Text = Language.Anime_ExportCH08;
-            Anime_ExportCH09.Text = Language.Anime_ExportCH09;
-            Anime_ExportCH10.Text = Language.Anime_ExportCH10;
-            Anime_ExportCH11.Text = Language.Anime_ExportCH11;
-            Anime_ExportCH12.Text = Language.Anime_ExportCH12;
-            Anime_ExportCH13.Text = Language.Anime_ExportCH13;
-            Anime_ExportCH14.Text = Language.Anime_ExportCH14;
-            Anime_ExportCH15.Text = Language.Anime_ExportCH15;
-            Anime_ExportCH16.Text = Language.Anime_ExportCH16;
-            Anime_ExportCH17.Text = Language.Anime_ExportCH17;
-            Anime_ExportCH18.Text = Language.Anime_ExportCH18;
-            Anime_ExportBT01.Text = Language.Anime_ExportBT01;
-            Anime_ExportBT02.Text = Language.Anime_ExportBT02;
+            Anime_ExportCH01.Text = Language.Anime_Export_Id;
+            Anime_ExportCH02.Text = Language.Anime_Export_JapName;
+            Anime_ExportCH03.Text = Language.Anime_Export_KanjiName;
+            Anime_ExportCH04.Text = Language.Anime_Export_EngName;
+            Anime_ExportCH05.Text = Language.Anime_Export_Year;
+            Anime_ExportCH06.Text = Language.Anime_Export_Type;
+            Anime_ExportCH07.Text = Language.Anime_Export_Episodes;
+            Anime_ExportCH08.Text = Language.Anime_Export_Dub;
+            Anime_ExportCH09.Text = Language.Anime_Export_Sub;
+            Anime_ExportCH10.Text = Language.Anime_Export_Size;
+            Anime_ExportCH11.Text = Language.Anime_Export_Storage;
+            Anime_ExportCH12.Text = Language.Anime_Export_Source;
+            Anime_ExportCH13.Text = Language.Anime_Export_Date;
+            Anime_ExportCH14.Text = Language.Anime_Export_Adult;
+            Anime_ExportCH15.Text = Language.Anime_Export_Length;
+            Anime_ExportCH16.Text = Language.Anime_Export_Watched;
+            Anime_ExportCH17.Text = Language.Anime_Export_Ratings;
+            Anime_ExportCH18.Text = Language.Anime_Export_WatchedDate;
+            Anime_ExportBT01.Text = Language.Anime_Export_Xml;
+            Anime_ExportBT02.Text = Language.Anime_Export_Cvs;
             Anime_ExportLB01.Text = Language.Anime_ExportLB01;
 
             Manga_ChaptersCM02.HeaderText = Language.Manga_LB28;

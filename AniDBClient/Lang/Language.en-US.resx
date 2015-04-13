@@ -120,7 +120,7 @@
   <data name="Add_Add" xml:space="preserve">
     <value>Add</value>
   </data>
-  <data name="Add_LB01" xml:space="preserve">
+  <data name="Add_Id" xml:space="preserve">
     <value>ID</value>
   </data>
   <data name="AnimeData_Mn03" xml:space="preserve">
@@ -1264,64 +1264,64 @@ Before you can use AniSub, please fill your name and password:</value>
   <data name="LogIn_LB04" xml:space="preserve">
     <value>First use:</value>
   </data>
-  <data name="Anime_ExportBT01" xml:space="preserve">
+  <data name="Anime_Export_Xml" xml:space="preserve">
     <value>Export to xml</value>
   </data>
-  <data name="Anime_ExportBT02" xml:space="preserve">
+  <data name="Anime_Export_Cvs" xml:space="preserve">
     <value>Export to csv</value>
   </data>
-  <data name="Anime_ExportCH01" xml:space="preserve">
+  <data name="Anime_Export_Id" xml:space="preserve">
     <value>ID</value>
   </data>
-  <data name="Anime_ExportCH02" xml:space="preserve">
+  <data name="Anime_Export_JapName" xml:space="preserve">
     <value>Japanese title</value>
   </data>
-  <data name="Anime_ExportCH03" xml:space="preserve">
+  <data name="Anime_Export_KanjiName" xml:space="preserve">
     <value>Kanji title</value>
   </data>
-  <data name="Anime_ExportCH04" xml:space="preserve">
+  <data name="Anime_Export_EngName" xml:space="preserve">
     <value>English title</value>
   </data>
-  <data name="Anime_ExportCH05" xml:space="preserve">
+  <data name="Anime_Export_Year" xml:space="preserve">
     <value>Year</value>
   </data>
-  <data name="Anime_ExportCH06" xml:space="preserve">
+  <data name="Anime_Export_Type" xml:space="preserve">
     <value>Type</value>
   </data>
-  <data name="Anime_ExportCH07" xml:space="preserve">
+  <data name="Anime_Export_Episodes" xml:space="preserve">
     <value>Episodes</value>
   </data>
-  <data name="Anime_ExportCH08" xml:space="preserve">
+  <data name="Anime_Export_Dub" xml:space="preserve">
     <value>Dub</value>
   </data>
-  <data name="Anime_ExportCH09" xml:space="preserve">
+  <data name="Anime_Export_Sub" xml:space="preserve">
     <value>Sub</value>
   </data>
-  <data name="Anime_ExportCH10" xml:space="preserve">
+  <data name="Anime_Export_Size" xml:space="preserve">
     <value>Size</value>
   </data>
-  <data name="Anime_ExportCH11" xml:space="preserve">
+  <data name="Anime_Export_Storage" xml:space="preserve">
     <value>Storage</value>
   </data>
-  <data name="Anime_ExportCH12" xml:space="preserve">
+  <data name="Anime_Export_Source" xml:space="preserve">
     <value>Source</value>
   </data>
-  <data name="Anime_ExportCH13" xml:space="preserve">
+  <data name="Anime_Export_Date" xml:space="preserve">
     <value>Date</value>
   </data>
-  <data name="Anime_ExportCH14" xml:space="preserve">
+  <data name="Anime_Export_Adult" xml:space="preserve">
     <value>18+</value>
   </data>
-  <data name="Anime_ExportCH15" xml:space="preserve">
-    <value>Lenght</value>
+  <data name="Anime_Export_Length" xml:space="preserve">
+    <value>Length</value>
   </data>
-  <data name="Anime_ExportCH16" xml:space="preserve">
+  <data name="Anime_Export_Watched" xml:space="preserve">
     <value>Seen</value>
   </data>
-  <data name="Anime_ExportCH17" xml:space="preserve">
+  <data name="Anime_Export_Ratings" xml:space="preserve">
     <value>Ratings</value>
   </data>
-  <data name="Anime_ExportCH18" xml:space="preserve">
+  <data name="Anime_Export_WatchedDate" xml:space="preserve">
     <value>Seen (date)</value>
   </data>
   <data name="MainTabData_Mn10" xml:space="preserve">

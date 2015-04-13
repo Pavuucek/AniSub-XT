@@ -513,28 +513,28 @@
   <data name="DataFiles_Menu_Rename" xml:space="preserve">
     <value>Přejmenovat</value>
   </data>
-  <data name="DataFiles_Mn02" xml:space="preserve">
+  <data name="DataFiles_Anime" xml:space="preserve">
     <value>Anime *</value>
   </data>
-  <data name="DataFiles_Mn03" xml:space="preserve">
+  <data name="DataFiles_Episode" xml:space="preserve">
     <value>Episoda</value>
   </data>
-  <data name="DataFiles_Mn04" xml:space="preserve">
+  <data name="DataFiles_File" xml:space="preserve">
     <value>Soubor</value>
   </data>
-  <data name="DataFiles_Mn05" xml:space="preserve">
+  <data name="DataFiles_Storage2" xml:space="preserve">
     <value>Úložiště</value>
   </data>
-  <data name="DataFiles_Mn06" xml:space="preserve">
+  <data name="DataFiles_Source2" xml:space="preserve">
     <value>Zdroj</value>
   </data>
-  <data name="DataFiles_Mn07" xml:space="preserve">
+  <data name="DataFiles_Group" xml:space="preserve">
     <value>Skupina</value>
   </data>
-  <data name="DataFiles_Mn08" xml:space="preserve">
+  <data name="DataFiles_Path2" xml:space="preserve">
     <value>Cesta *</value>
   </data>
-  <data name="DataFiles_Mn09" xml:space="preserve">
+  <data name="DataFiles_Size" xml:space="preserve">
     <value>Velikost</value>
   </data>
   <data name="Add_Id" xml:space="preserve">

@@ -432,15 +432,15 @@ namespace AniDBClient.Forms
             Rules_FilesRulesMove_RB02.Text = Language.Rules_FilesRulesMove_RB02;
             Rules_FilesRulesMove_RB03.Text = Language.Rules_FilesRulesMove_RB03;
 
-            DataFiles_Mn05.HeaderText = Language.DataFiles_Mn02;
-            DataFiles_Mn06.HeaderText = Language.DataFiles_Mn03;
-            DataFiles_Mn07.HeaderText = Language.DataFiles_Mn07;
-            DataFiles_Mn08.HeaderText = Language.DataFiles_Mn04;
-            DataFiles_Mn09.HeaderText = Language.DataFiles_Mn05;
-            DataFiles_Mn10.HeaderText = Language.DataFiles_Mn06;
+            DataFiles_Mn05.HeaderText = Language.DataFiles_Anime;
+            DataFiles_Mn06.HeaderText = Language.DataFiles_Episode;
+            DataFiles_Mn07.HeaderText = Language.DataFiles_Group;
+            DataFiles_Mn08.HeaderText = Language.DataFiles_File;
+            DataFiles_Mn09.HeaderText = Language.DataFiles_Storage2;
+            DataFiles_Mn10.HeaderText = Language.DataFiles_Source2;
 
-            DataFiles_Mn16.HeaderText = Language.DataFiles_Mn08;
-            DataFiles_Mn17.HeaderText = Language.DataFiles_Mn09;
+            DataFiles_Mn16.HeaderText = Language.DataFiles_Path2;
+            DataFiles_Mn17.HeaderText = Language.DataFiles_Size;
 
             AnimeData_Mn03.HeaderText = Language.AnimeData_Episode;
             AnimeData_Mn04.HeaderText = Language.AnimeData_Name;

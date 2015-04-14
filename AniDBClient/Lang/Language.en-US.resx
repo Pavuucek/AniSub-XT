@@ -552,112 +552,112 @@
   <data name="Options_lblOther" xml:space="preserve">
     <value>Other:</value>
   </data>
-  <data name="Options_LB11" xml:space="preserve">
+  <data name="Options_lblAnime" xml:space="preserve">
     <value>Anime:</value>
   </data>
-  <data name="Options_LB12" xml:space="preserve">
+  <data name="Options_lblEpisodes" xml:space="preserve">
     <value>Episodes:</value>
   </data>
-  <data name="Options_LB13" xml:space="preserve">
+  <data name="Options_lblFiles" xml:space="preserve">
     <value>Files:</value>
   </data>
-  <data name="Options_LB14" xml:space="preserve">
+  <data name="Options_lblSizeOfFiles" xml:space="preserve">
     <value>Size of files:</value>
   </data>
-  <data name="Options_LB15" xml:space="preserve">
+  <data name="Options_lblWatchedAnime" xml:space="preserve">
     <value>Watched anime:</value>
   </data>
-  <data name="Options_LB16" xml:space="preserve">
+  <data name="Options_lblSizeOfWatchedAnime" xml:space="preserve">
     <value>Size of watched anime</value>
   </data>
-  <data name="Options_LB17" xml:space="preserve">
+  <data name="Options_lblType" xml:space="preserve">
     <value>Type</value>
   </data>
-  <data name="Options_LB18" xml:space="preserve">
+  <data name="Options_lblCount" xml:space="preserve">
     <value>Count</value>
   </data>
-  <data name="Options_LB19" xml:space="preserve">
+  <data name="Options_lblWatched" xml:space="preserve">
     <value>Watched</value>
   </data>
-  <data name="Options_LB20" xml:space="preserve">
+  <data name="Options_lblSize2" xml:space="preserve">
     <value>Size</value>
   </data>
-  <data name="Options_LB21" xml:space="preserve">
+  <data name="Options_lblLength" xml:space="preserve">
     <value>Length</value>
   </data>
-  <data name="Options_LB22" xml:space="preserve">
+  <data name="Options_lblStatus2" xml:space="preserve">
     <value>Status</value>
   </data>
-  <data name="Options_LB23" xml:space="preserve">
+  <data name="Options_Count2" xml:space="preserve">
     <value>Count</value>
   </data>
-  <data name="Options_LB24" xml:space="preserve">
+  <data name="Options_lblSize3" xml:space="preserve">
     <value>Size</value>
   </data>
-  <data name="Options_LB25" xml:space="preserve">
+  <data name="Options_lblLength2" xml:space="preserve">
     <value>Length</value>
   </data>
-  <data name="Options_LB26" xml:space="preserve">
+  <data name="Options_lblWatched2" xml:space="preserve">
     <value>Watched</value>
   </data>
-  <data name="Options_LB27" xml:space="preserve">
+  <data name="Options_lblAnime2" xml:space="preserve">
     <value>Anime:</value>
   </data>
-  <data name="Options_LB28" xml:space="preserve">
+  <data name="Options_lblEpisodes2" xml:space="preserve">
     <value>Episodes:</value>
   </data>
-  <data name="Options_LB29" xml:space="preserve">
+  <data name="Options_lblFiles2" xml:space="preserve">
     <value>Files:</value>
   </data>
-  <data name="Options_LB30" xml:space="preserve">
+  <data name="Options_lblTotalSize" xml:space="preserve">
     <value>Total size:</value>
   </data>
-  <data name="Options_LB31" xml:space="preserve">
+  <data name="Options_lblAddedAnime" xml:space="preserve">
     <value>Added anime:</value>
   </data>
-  <data name="Options_LB32" xml:space="preserve">
+  <data name="Options_lblAddedEpisodes" xml:space="preserve">
     <value>Added episodes:</value>
   </data>
-  <data name="Options_LB33" xml:space="preserve">
+  <data name="Options_lblAddedFiles" xml:space="preserve">
     <value>Added files</value>
   </data>
-  <data name="Options_LB34" xml:space="preserve">
+  <data name="Options_lblAddedGroups" xml:space="preserve">
     <value>Added groups:</value>
   </data>
-  <data name="Options_LB35" xml:space="preserve">
+  <data name="Options_lblLeech" xml:space="preserve">
     <value>Leech:</value>
   </data>
-  <data name="Options_LB36" xml:space="preserve">
+  <data name="Options_lblGlory" xml:space="preserve">
     <value>Glory:</value>
   </data>
-  <data name="Options_LB37" xml:space="preserve">
+  <data name="Options_lblAniDbWatched" xml:space="preserve">
     <value>AniDB watched:</value>
   </data>
-  <data name="Options_LB38" xml:space="preserve">
+  <data name="Options_lblLocalMyList" xml:space="preserve">
     <value>Local MyList</value>
   </data>
-  <data name="Options_LB39" xml:space="preserve">
+  <data name="Options_lblAniDbMyList" xml:space="preserve">
     <value>AniDB Mylist</value>
   </data>
-  <data name="Options_LB40" xml:space="preserve">
+  <data name="Options_lblAniDbMyList2" xml:space="preserve">
     <value>AniDB MyList:</value>
   </data>
-  <data name="Options_LB42" xml:space="preserve">
+  <data name="Options_lblWatched3" xml:space="preserve">
     <value>Watched:</value>
   </data>
-  <data name="Options_LB43" xml:space="preserve">
+  <data name="Options_lblVotes" xml:space="preserve">
     <value>Votes:</value>
   </data>
-  <data name="Options_LB44" xml:space="preserve">
+  <data name="Options_lblReviews" xml:space="preserve">
     <value>Reviews:</value>
   </data>
-  <data name="Options_LB45" xml:space="preserve">
+  <data name="Options_lblLocalPort" xml:space="preserve">
     <value>Local port:</value>
   </data>
-  <data name="Options_LB46" xml:space="preserve">
+  <data name="Options_lblGroups" xml:space="preserve">
     <value>Groups:</value>
   </data>
-  <data name="Options_LB47" xml:space="preserve">
+  <data name="Options_lblTotalLength" xml:space="preserve">
     <value>Total lenght:</value>
   </data>
   <data name="Options_MylistOk" xml:space="preserve">
@@ -678,43 +678,43 @@
   <data name="Options_StartComunicationOn" xml:space="preserve">
     <value>Disconnect</value>
   </data>
-  <data name="Options_VL07" xml:space="preserve">
+  <data name="Options_lblTvSeries" xml:space="preserve">
     <value>TV Series:</value>
   </data>
-  <data name="Options_VL08" xml:space="preserve">
+  <data name="Options_lblTvSpecials" xml:space="preserve">
     <value>TV Specials:</value>
   </data>
-  <data name="Options_VL09" xml:space="preserve">
+  <data name="Options_lblMovies" xml:space="preserve">
     <value>Movies:</value>
   </data>
-  <data name="Options_VL10" xml:space="preserve">
+  <data name="Options_lblOva" xml:space="preserve">
     <value>OVA:</value>
   </data>
-  <data name="Options_VL11" xml:space="preserve">
+  <data name="Options_lblWww" xml:space="preserve">
     <value>Www:</value>
   </data>
-  <data name="Options_VL12" xml:space="preserve">
+  <data name="Options_lblOthers" xml:space="preserve">
     <value>Others:</value>
   </data>
-  <data name="Options_VL13" xml:space="preserve">
+  <data name="Options_lblUnknown" xml:space="preserve">
     <value>Unknown:</value>
   </data>
-  <data name="Options_VL21" xml:space="preserve">
+  <data name="Options_lblSummary" xml:space="preserve">
     <value>Summary:</value>
   </data>
-  <data name="Options_VL25" xml:space="preserve">
+  <data name="Options_lblSummary2" xml:space="preserve">
     <value>Summary:</value>
   </data>
-  <data name="Options_VL43" xml:space="preserve">
+  <data name="Options_lblUnknown2" xml:space="preserve">
     <value>Unknown:</value>
   </data>
-  <data name="Options_VL44" xml:space="preserve">
+  <data name="Options_lblOnHdd" xml:space="preserve">
     <value>On HDD:</value>
   </data>
-  <data name="Options_VL45" xml:space="preserve">
+  <data name="Options_lblOnOptical" xml:space="preserve">
     <value>Na CD/DVD:</value>
   </data>
-  <data name="Options_VL46" xml:space="preserve">
+  <data name="Options_lblDeleted" xml:space="preserve">
     <value>Deleted:</value>
   </data>
   <data name="Rules_FilesRulesMoveAdd" xml:space="preserve">
@@ -723,13 +723,13 @@
   <data name="Rules_FilesRulesMoveDel" xml:space="preserve">
     <value>Delete</value>
   </data>
-  <data name="Rules_FilesRulesMove_RB01" xml:space="preserve">
+  <data name="Rules_FilesRulesMoveMove" xml:space="preserve">
     <value>Move</value>
   </data>
-  <data name="Rules_FilesRulesMove_RB02" xml:space="preserve">
+  <data name="Rules_FilesRulesMoveCopy" xml:space="preserve">
     <value>Copy</value>
   </data>
-  <data name="Rules_FilesRulesMove_RB03" xml:space="preserve">
+  <data name="Rules_FilesRulesMoveDoNothing" xml:space="preserve">
     <value>Do nothing</value>
   </data>
   <data name="Rules_FilesRulesRenameAdd" xml:space="preserve">
@@ -738,14 +738,14 @@
   <data name="Rules_FilesRulesRenameDel" xml:space="preserve">
     <value>Delete</value>
   </data>
-  <data name="Rules_GR01" xml:space="preserve">
+  <data name="Rules_RulesForFileRenaming" xml:space="preserve">
     <value>Rules for files renaming</value>
   </data>
-  <data name="Rules_GR02" xml:space="preserve">
+  <data name="Rules_RulesForCreatingDirectories" xml:space="preserve">
     <value>Rules for creating directories</value>
   </data>
-  <data name="Rules_GR03" xml:space="preserve">
-    <value>Rules for chars renaming</value>
+  <data name="Rules_RulesForCharacterReplacing" xml:space="preserve">
+    <value>Rules for character replacing</value>
   </data>
   <data name="StatusBar_ConnectLBOff" xml:space="preserve">
     <value>Disconnected</value>
@@ -753,7 +753,7 @@
   <data name="StatusBar_ConnectLBOn" xml:space="preserve">
     <value>Connected</value>
   </data>
-  <data name="StatusBar_Mn01" xml:space="preserve">
+  <data name="StatusBar_TasksRemaining" xml:space="preserve">
     <value>Tasks remain:</value>
   </data>
   <data name="Hash_Delete" xml:space="preserve">
@@ -765,28 +765,28 @@
   <data name="MessageBox_DB" xml:space="preserve">
     <value>The file OriginalDatabase.mdb doesn't exist!</value>
   </data>
-  <data name="Options_VL66" xml:space="preserve">
+  <data name="Options_lblMusicVideo" xml:space="preserve">
     <value>Music Video</value>
   </data>
-  <data name="Options_LB48" xml:space="preserve">
+  <data name="Options_lblStorage2" xml:space="preserve">
     <value>Storage</value>
   </data>
-  <data name="Options_LB49" xml:space="preserve">
+  <data name="Options_lblSource2" xml:space="preserve">
     <value>Source</value>
   </data>
-  <data name="Rules_FilesRulesRename_RB01" xml:space="preserve">
+  <data name="Rules_FilesRulesRenameRename" xml:space="preserve">
     <value>Rename</value>
   </data>
-  <data name="Rules_FilesRulesRename_RB02" xml:space="preserve">
+  <data name="Rules_FilesRulesRenameDoNothing" xml:space="preserve">
     <value>Do nothing</value>
   </data>
-  <data name="Rules_CH01" xml:space="preserve">
+  <data name="Rules_AutomaticRenaming" xml:space="preserve">
     <value>Automatic renaming</value>
   </data>
-  <data name="Rules_CH02" xml:space="preserve">
+  <data name="Rules_DontMoveToAnotherDisk" xml:space="preserve">
     <value>Do not copy/move to another disk</value>
   </data>
-  <data name="Rules_CH03" xml:space="preserve">
+  <data name="Rules_ReplaceExisting" xml:space="preserve">
     <value>Replace existing files</value>
   </data>
   <data name="DataFilesTree_Clear2" xml:space="preserve">
@@ -804,7 +804,7 @@
   <data name="MainTabLog_Error" xml:space="preserve">
     <value>Error</value>
   </data>
-  <data name="Options_VL86" xml:space="preserve">
+  <data name="Options_lblAdult2" xml:space="preserve">
     <value>18+:</value>
   </data>
   <data name="DataFiles_Menu_Download" xml:space="preserve">
@@ -828,7 +828,7 @@
   <data name="Options_CompactAndRepairDb" xml:space="preserve">
     <value>Compact and repair database</value>
   </data>
-  <data name="StatusBar_Mn03" xml:space="preserve">
+  <data name="StatusBar_Status" xml:space="preserve">
     <value>Status:</value>
   </data>
   <data name="StatusBar_Mn04_Off" xml:space="preserve">
@@ -898,7 +898,7 @@ AniSub is alternative client for AOM. AniSub is small, fast and also it is for l
 
 Before you can use AniSub, please fill your name and password:</value>
   </data>
-  <data name="Rules_LB01" xml:space="preserve">
+  <data name="Rules_NumberPosition" xml:space="preserve">
     <value>Number position:</value>
   </data>
   <data name="DataFiles_Menu_ExportSha1" xml:space="preserve">
@@ -907,7 +907,7 @@ Before you can use AniSub, please fill your name and password:</value>
   <data name="Hash_Waiting" xml:space="preserve">
     <value>Waiting:</value>
   </data>
-  <data name="StatusBar_Mn05" xml:space="preserve">
+  <data name="StatusBar_Version" xml:space="preserve">
     <value>Version: </value>
   </data>
   <data name="DataFiles_Name" xml:space="preserve">
@@ -925,7 +925,7 @@ Before you can use AniSub, please fill your name and password:</value>
   <data name="Watcher_Add" xml:space="preserve">
     <value>Add</value>
   </data>
-  <data name="Watcher_CH01" xml:space="preserve">
+  <data name="Watcher_Enable" xml:space="preserve">
     <value>Enable</value>
   </data>
   <data name="Watcher_Delete" xml:space="preserve">
@@ -943,7 +943,7 @@ Before you can use AniSub, please fill your name and password:</value>
   <data name="Options_MyListRefreshMin" xml:space="preserve">
     <value>Update statistics (minimal)</value>
   </data>
-  <data name="Options_MyList_GR01" xml:space="preserve">
+  <data name="Options_MyListUpdate" xml:space="preserve">
     <value>Update</value>
   </data>
   <data name="DataFilesTree_Clear" xml:space="preserve">
@@ -1147,28 +1147,28 @@ Before you can use AniSub, please fill your name and password:</value>
   <data name="MainTabManga_MyList" xml:space="preserve">
     <value>MyList</value>
   </data>
-  <data name="Options_LB50" xml:space="preserve">
+  <data name="Options_lblMyList" xml:space="preserve">
     <value>MyList</value>
   </data>
-  <data name="Options_LB51" xml:space="preserve">
+  <data name="Options_lblManga" xml:space="preserve">
     <value>Manga</value>
   </data>
-  <data name="Options_LB53" xml:space="preserve">
+  <data name="Options_lblVolumes" xml:space="preserve">
     <value>Volumes</value>
   </data>
-  <data name="Options_LB55" xml:space="preserve">
+  <data name="Options_lblChapters" xml:space="preserve">
     <value>Chapters</value>
   </data>
-  <data name="Options_LB57" xml:space="preserve">
+  <data name="Options_lblFileSize" xml:space="preserve">
     <value>Size of files</value>
   </data>
-  <data name="Options_LB59" xml:space="preserve">
+  <data name="Options_lblRead" xml:space="preserve">
     <value>Read</value>
   </data>
-  <data name="Options_LB61" xml:space="preserve">
+  <data name="Options_lblTotalPages" xml:space="preserve">
     <value>Total pages</value>
   </data>
-  <data name="Options_LB63" xml:space="preserve">
+  <data name="Options_lblAdult" xml:space="preserve">
     <value>18+</value>
   </data>
   <data name="Options_MyListRefreshManga" xml:space="preserve">
@@ -1240,16 +1240,16 @@ Before you can use AniSub, please fill your name and password:</value>
   <data name="Options_DeleteDb" xml:space="preserve">
     <value>Clear database</value>
   </data>
-  <data name="Options_LB66" xml:space="preserve">
+  <data name="Options_lblRead2" xml:space="preserve">
     <value>Read</value>
   </data>
-  <data name="Options_LB67" xml:space="preserve">
+  <data name="Options_lblUnread" xml:space="preserve">
     <value>Unread</value>
   </data>
   <data name="MainTabData_Graphs" xml:space="preserve">
     <value>Graphs</value>
   </data>
-  <data name="Zgc_GraphB04" xml:space="preserve">
+  <data name="Zgc_WatchedTimeline" xml:space="preserve">
     <value>Watched timeline</value>
   </data>
   <data name="DataFilesTree_ReverseFilter" xml:space="preserve">
@@ -1336,16 +1336,16 @@ Before you can use AniSub, please fill your name and password:</value>
   <data name="MainTab_About" xml:space="preserve">
     <value>About AniSub</value>
   </data>
-  <data name="Options_LB68" xml:space="preserve">
+  <data name="Options_lblResetCount" xml:space="preserve">
     <value>Reset counts:</value>
   </data>
   <data name="Options_ClassicFolderSelectDialog" xml:space="preserve">
     <value>Classic open folder dialog</value>
   </data>
-  <data name="Rules_GR04" xml:space="preserve">
+  <data name="Rules_ExportInfo" xml:space="preserve">
     <value>Export informations</value>
   </data>
-  <data name="Rules_InfoRB01" xml:space="preserve">
+  <data name="Rules_InfoExport" xml:space="preserve">
     <value>Export</value>
   </data>
   <data name="Options_ShowAdultOnWelcomeScreen" xml:space="preserve">
@@ -1405,7 +1405,7 @@ Before you can use AniSub, please fill your name and password:</value>
   <data name="Options_FlatStyle" xml:space="preserve">
     <value>Flat style</value>
   </data>
-  <data name="Rules_CH04" xml:space="preserve">
+  <data name="Rules_DeleteSourceIfEmpty" xml:space="preserve">
     <value>Delete source directory if empty</value>
   </data>
   <data name="DataFiles_Files" xml:space="preserve">
@@ -1420,7 +1420,7 @@ Before you can use AniSub, please fill your name and password:</value>
   <data name="MessageBox_Restart" xml:space="preserve">
     <value>AniSub will be restarted. Please be patient.</value>
   </data>
-  <data name="Options_LB69" xml:space="preserve">
+  <data name="Options_lblDbBackupCount" xml:space="preserve">
     <value>Count of DB backups</value>
   </data>
   <data name="Manga_MyAnimeListUrl" xml:space="preserve">

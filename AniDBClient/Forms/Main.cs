@@ -280,11 +280,11 @@ namespace AniDBClient.Forms
             DataSearch.Columns[3].HeaderText = Language.DataAnime_Year;
             DataSearch.Columns[4].HeaderText = Language.DataAnime_Type;
 
-            Rules_LB01.Text = Language.Rules_LB01;
+            Rules_LB01.Text = Language.Rules_NumberPosition;
 
-            Rules_GR01.Text = Language.Rules_GR01;
-            Rules_GR02.Text = Language.Rules_GR02;
-            Rules_GR03.Text = Language.Rules_GR03;
+            Rules_GR01.Text = Language.Rules_RulesForFileRenaming;
+            Rules_GR02.Text = Language.Rules_RulesForCreatingDirectories;
+            Rules_GR03.Text = Language.Rules_RulesForCharacterReplacing;
 
             Options_CH01.Text = Language.Options_AutoAddToMyList;
             Options_CH02.Text = Language.Options_Watched;
@@ -321,36 +321,36 @@ namespace AniDBClient.Forms
             Options_LB08.Text = Language.Options_lblSource;
             Options_LB09.Text = Language.Options_lblStorage;
             Options_LB10.Text = Language.Options_lblOther;
-            Options_LB45.Text = Language.Options_LB45;
-            Options_LB51.Text = Language.Options_LB51;
-            Options_LB53.Text = Language.Options_LB53;
-            Options_LB55.Text = Language.Options_LB55;
-            Options_LB57.Text = Language.Options_LB57;
-            Options_LB59.Text = Language.Options_LB59;
-            Options_LB61.Text = Language.Options_LB61;
-            Options_LB63.Text = Language.Options_LB63;
-            Options_LB67.Text = Language.Options_LB66;
-            Options_LB68.Text = Language.Options_LB68;
-            Options_LB69.Text = Language.Options_LB69;
+            Options_LB45.Text = Language.Options_lblLocalPort;
+            Options_LB51.Text = Language.Options_lblManga;
+            Options_LB53.Text = Language.Options_lblVolumes;
+            Options_LB55.Text = Language.Options_lblChapters;
+            Options_LB57.Text = Language.Options_lblFileSize;
+            Options_LB59.Text = Language.Options_lblRead;
+            Options_LB61.Text = Language.Options_lblTotalPages;
+            Options_LB63.Text = Language.Options_lblAdult;
+            Options_LB67.Text = Language.Options_lblRead2;
+            Options_LB68.Text = Language.Options_lblResetCount;
+            Options_LB69.Text = Language.Options_lblDbBackupCount;
 
             Options_LB11.Text = Language.Options_Network;
             Options_LB12.Text = Language.Options_FileTypes;
             Options_LB13.Text = Language.Hash_Watcher;
 
-            Rules_FilesRulesRename_RB01.Text = Language.Rules_FilesRulesRename_RB01;
-            Rules_FilesRulesRename_RB02.Text = Language.Rules_FilesRulesRename_RB02;
-            Rules_CH01.Text = Language.Rules_CH01;
-            Rules_CH02.Text = Language.Rules_CH02;
-            Rules_CH03.Text = Language.Rules_CH03;
-            Rules_CH04.Text = Language.Rules_CH04;
+            Rules_FilesRulesRename_RB01.Text = Language.Rules_FilesRulesRenameRename;
+            Rules_FilesRulesRename_RB02.Text = Language.Rules_FilesRulesRenameDoNothing;
+            Rules_CH01.Text = Language.Rules_AutomaticRenaming;
+            Rules_CH02.Text = Language.Rules_DontCopyToAnotherDisk;
+            Rules_CH03.Text = Language.Rules_ReplaceExisting;
+            Rules_CH04.Text = Language.Rules_DeleteSourceIfEmpty;
 
             Rules_Tags.Text = Language.Rules_Tags;
 
-            Rules_InfoRB01.Text = Language.Rules_InfoRB01;
-            Rules_InfoRB02.Text = Language.Rules_FilesRulesRename_RB02;
-            Rules_GR04.Text = Language.Rules_GR04;
+            Rules_InfoRB01.Text = Language.Rules_InfoExport;
+            Rules_InfoRB02.Text = Language.Rules_FilesRulesRenameDoNothing;
+            Rules_GR04.Text = Language.Rules_ExportInfo;
 
-            StatusBar_Mn01.Text = Language.StatusBar_Mn01;
+            StatusBar_Mn01.Text = Language.StatusBar_TasksRemaining;
 
             MainTabLog_Mn01.Text = Language.MainTabLog_AniDb;
             MainTabLog_Mn02.Text = Language.MainTabLog_Sql;
@@ -428,9 +428,9 @@ namespace AniDBClient.Forms
 
             Add_LB01.Text = Language.Add_Id;
 
-            Rules_FilesRulesMove_RB01.Text = Language.Rules_FilesRulesMove_RB01;
-            Rules_FilesRulesMove_RB02.Text = Language.Rules_FilesRulesMove_RB02;
-            Rules_FilesRulesMove_RB03.Text = Language.Rules_FilesRulesMove_RB03;
+            Rules_FilesRulesMove_RB01.Text = Language.Rules_FilesRulesMoveMove;
+            Rules_FilesRulesMove_RB02.Text = Language.Rules_FilesRulesMoveCopy;
+            Rules_FilesRulesMove_RB03.Text = Language.Rules_FilesRulesMoveDoNothing;
 
             DataFiles_Mn05.HeaderText = Language.DataFiles_Anime;
             DataFiles_Mn06.HeaderText = Language.DataFiles_Episode;
@@ -550,9 +550,9 @@ namespace AniDBClient.Forms
             DataAnime_Menu_Mn04_Mn04.Text = Language.DataFiles_Menu_DownloadMyList;
             DataAnime_Menu_Mn04_Mn05.Text = Language.DataFiles_Menu_DownloadAll;
 
-            StatusBar_Mn03.Text = Language.StatusBar_Mn03;
+            StatusBar_Mn03.Text = Language.StatusBar_Status;
             StatusBar_Mn04.Text = Language.StatusBar_Mn04_Off;
-            StatusBar_Mn05.Text = Language.StatusBar_Mn05;
+            StatusBar_Mn05.Text = Language.StatusBar_Version;
             StatusBar_Mn05.Text += AniSubV;
 
             DataFiles_Menu_Mn06.Text = Language.DataFiles_Menu_Export;
@@ -567,7 +567,7 @@ namespace AniDBClient.Forms
             DataFiles_LB04.Text = Language.DataFiles_Source;
             DataFiles_LB05.Text = Language.DataFiles_Updating;
 
-            Watcher_CH01.Text = Language.Watcher_CH01;
+            Watcher_CH01.Text = Language.Watcher_Enable;
 
             Manga_Gr04.Text = Language.MainTabManga_MyList;
             MainTabManga_Mn01.Text = Language.MainTabManga_Manga;
@@ -719,7 +719,7 @@ namespace AniDBClient.Forms
             ToolTip.SetToolTip(Zgc_GraphB01, Language.MainTabData_Anime2);
             ToolTip.SetToolTip(Zgc_GraphB02, Language.DataAnime_Storage);
             ToolTip.SetToolTip(Zgc_GraphB03, Language.DataAnime_Source);
-            ToolTip.SetToolTip(Zgc_GraphB04, Language.Zgc_GraphB04);
+            ToolTip.SetToolTip(Zgc_GraphB04, Language.Zgc_WatchedTimeline);
             ToolTip.SetToolTip(Zgc_GraphB05, Language.Anime_Tags);
             ToolTip.SetToolTip(Zgc_GraphB06, Language.AnimeRating);
             ToolTip.SetToolTip(Options_Color01, Language.Options_DarkColor);
@@ -762,27 +762,27 @@ namespace AniDBClient.Forms
                 MyListAnime.Columns.Add("MyListAnime_CM09", "");
 
 
-                MyListAnime.Rows.Add(Language.Options_LB38, "", "", "", Language.Options_LB39);
+                MyListAnime.Rows.Add(Language.Options_lblLocalMyList, "", "", "", Language.Options_lblAniDbMyList);
 
-                MyListAnime.Rows.Add("", Language.Options_LB11, rowML["mylist_local_anime"].ToString(), "", "", Language.Options_LB11, rowMA["mylist_anidb_anime"].ToString());
-                MyListAnime.Rows.Add("", Language.Options_LB12, rowML["mylist_local_episodes"].ToString(), "", "", Language.Options_LB12, rowMA["mylist_anidb_epn"].ToString());
-                MyListAnime.Rows.Add("", Language.Options_LB13, rowML["mylist_local_files"].ToString(), "", "", Language.Options_LB13, rowMA["mylist_anidb_files"].ToString());
-                MyListAnime.Rows.Add("", Language.Options_LB14, rowML["mylist_local_sizetotal"].ToString(), "", "", Language.Options_LB14, rowMA["mylist_anidb_filessize"].ToString());
-                MyListAnime.Rows.Add("", Language.Options_LB47, rowML["mylist_local_lenghtwatched"].ToString(), "", "", Language.Options_LB47, GetLenght((Convert.ToInt64(rowMA["mylist_anidb_mylistviewedmin"].ToString()) * 60).ToString()));
+                MyListAnime.Rows.Add("", Language.Options_lblAnime, rowML["mylist_local_anime"].ToString(), "", "", Language.Options_lblAnime, rowMA["mylist_anidb_anime"].ToString());
+                MyListAnime.Rows.Add("", Language.Options_lblEpisodes, rowML["mylist_local_episodes"].ToString(), "", "", Language.Options_lblEpisodes, rowMA["mylist_anidb_epn"].ToString());
+                MyListAnime.Rows.Add("", Language.Options_lblFiles, rowML["mylist_local_files"].ToString(), "", "", Language.Options_lblFiles, rowMA["mylist_anidb_files"].ToString());
+                MyListAnime.Rows.Add("", Language.Options_lblSizeOfFiles, rowML["mylist_local_sizetotal"].ToString(), "", "", Language.Options_lblSizeOfFiles, rowMA["mylist_anidb_filessize"].ToString());
+                MyListAnime.Rows.Add("", Language.Options_lblTotalLength, rowML["mylist_local_lenghtwatched"].ToString(), "", "", Language.Options_lblTotalLength, GetLenght((Convert.ToInt64(rowMA["mylist_anidb_mylistviewedmin"].ToString()) * 60).ToString()));
 
                 MyListAnime.Rows.Add("");
 
-                MyListAnime.Rows.Add("", Language.Options_LB15, rowML["mylist_local_watchedanime"].ToString(), "", "", Language.Options_LB47, rowMA["mylist_anidb_mylistviewednum"].ToString() + " (" + rowMA["mylist_anidb_mylistviewed"].ToString() + ")");
-                MyListAnime.Rows.Add("", Language.Options_LB16, rowML["mylist_local_watchedsize"].ToString(), "", "", Language.Options_LB37, rowMA["mylist_anidb_viewed"].ToString());
-                MyListAnime.Rows.Add("", Language.Options_LB46, rowML["mylist_local_groups"].ToString(), "", "", Language.Options_LB40, rowMA["mylist_anidb_mylist"].ToString());
-                MyListAnime.Rows.Add("", Language.Options_VL86, rowML["mylist_local_18"].ToString() + " (" + rowML["mylist_local_18P"].ToString() + ")", "", "", Language.Options_LB35, rowMA["mylist_anidb_leech"].ToString());
-                MyListAnime.Rows.Add("", "", "", "", "", Language.Options_LB36, rowMA["mylist_anidb_glory"].ToString());
-                MyListAnime.Rows.Add("", "", "", "", "", Language.Options_LB43, rowMA["mylist_anidb_votes"].ToString());
-                MyListAnime.Rows.Add("", "", "", "", "", Language.Options_LB31, rowMA["mylist_anidb_addanime"].ToString());
-                MyListAnime.Rows.Add("", "", "", "", "", Language.Options_LB32, rowMA["mylist_anidb_addepn"].ToString());
-                MyListAnime.Rows.Add("", "", "", "", "", Language.Options_LB33, rowMA["mylist_anidb_addfiles"].ToString());
-                MyListAnime.Rows.Add("", "", "", "", "", Language.Options_LB44, rowMA["mylist_anidb_revies"].ToString());
-                MyListAnime.Rows.Add("", "", "", "", "", Language.Options_LB34, rowMA["mylist_anidb_addgroups"].ToString());
+                MyListAnime.Rows.Add("", Language.Options_lblWatchedAnime, rowML["mylist_local_watchedanime"].ToString(), "", "", Language.Options_lblTotalLength, rowMA["mylist_anidb_mylistviewednum"].ToString() + " (" + rowMA["mylist_anidb_mylistviewed"].ToString() + ")");
+                MyListAnime.Rows.Add("", Language.Options_lblSizeOfWatchedAnime, rowML["mylist_local_watchedsize"].ToString(), "", "", Language.Options_lblAniDbWatched, rowMA["mylist_anidb_viewed"].ToString());
+                MyListAnime.Rows.Add("", Language.Options_lblGroups, rowML["mylist_local_groups"].ToString(), "", "", Language.Options_lblAniDbMylist2, rowMA["mylist_anidb_mylist"].ToString());
+                MyListAnime.Rows.Add("", Language.Options_lblAdult2, rowML["mylist_local_18"].ToString() + " (" + rowML["mylist_local_18P"].ToString() + ")", "", "", Language.Options_lblLeech, rowMA["mylist_anidb_leech"].ToString());
+                MyListAnime.Rows.Add("", "", "", "", "", Language.Options_lblGlory, rowMA["mylist_anidb_glory"].ToString());
+                MyListAnime.Rows.Add("", "", "", "", "", Language.Options_lblVotes, rowMA["mylist_anidb_votes"].ToString());
+                MyListAnime.Rows.Add("", "", "", "", "", Language.Options_AddedAnime, rowMA["mylist_anidb_addanime"].ToString());
+                MyListAnime.Rows.Add("", "", "", "", "", Language.Options_lblAddedEpisodes, rowMA["mylist_anidb_addepn"].ToString());
+                MyListAnime.Rows.Add("", "", "", "", "", Language.Options_lblAddedFiles, rowMA["mylist_anidb_addfiles"].ToString());
+                MyListAnime.Rows.Add("", "", "", "", "", Language.Options_lblReviews, rowMA["mylist_anidb_revies"].ToString());
+                MyListAnime.Rows.Add("", "", "", "", "", Language.Options_lblAddedGroups, rowMA["mylist_anidb_addgroups"].ToString());
 
 
                 MyListAnime.Rows.Add("");
@@ -790,94 +790,94 @@ namespace AniDBClient.Forms
                 MyListAnime.Rows.Add("");
 
                 //TV Serie
-                MyListAnime.Rows.Add(Language.Options_VL07);
-                MyListAnime.Rows.Add("", Language.Options_LB18, rowML["mylist_local_tvW"].ToString(), rowML["mylist_local_tv"].ToString(), rowML["mylist_local_tvpercent"].ToString());
-                MyListAnime.Rows.Add("", Language.Options_LB20, rowML["mylist_local_tvSizeW"].ToString(), rowML["mylist_local_tvSize"].ToString(), rowML["mylist_local_tvpercentsize"].ToString());
-                MyListAnime.Rows.Add("", Language.Options_LB21, rowML["mylist_local_tvLW"].ToString(), rowML["mylist_local_tvL"].ToString(), rowML["mylist_local_tvLP"].ToString());
+                MyListAnime.Rows.Add(Language.Options_lblTvSeries);
+                MyListAnime.Rows.Add("", Language.Options_lblCount, rowML["mylist_local_tvW"].ToString(), rowML["mylist_local_tv"].ToString(), rowML["mylist_local_tvpercent"].ToString());
+                MyListAnime.Rows.Add("", Language.Options_lblSize, rowML["mylist_local_tvSizeW"].ToString(), rowML["mylist_local_tvSize"].ToString(), rowML["mylist_local_tvpercentsize"].ToString());
+                MyListAnime.Rows.Add("", Language.Options_lblSize2, rowML["mylist_local_tvLW"].ToString(), rowML["mylist_local_tvL"].ToString(), rowML["mylist_local_tvLP"].ToString());
 
                 MyListAnime.Rows.Add("");
 
                 //TV Specials
-                MyListAnime.Rows.Add(Language.Options_VL08);
-                MyListAnime.Rows.Add("", Language.Options_LB18, rowML["mylist_local_tvsW"].ToString(), rowML["mylist_local_tvs"].ToString(), rowML["mylist_local_tvspercent"].ToString());
-                MyListAnime.Rows.Add("", Language.Options_LB20, rowML["mylist_local_tvsSizeW"].ToString(), rowML["mylist_local_tvsSize"].ToString(), rowML["mylist_local_tvspercentsize"].ToString());
-                MyListAnime.Rows.Add("", Language.Options_LB21, rowML["mylist_local_tvsLW"].ToString(), rowML["mylist_local_tvsL"].ToString(), rowML["mylist_local_tvsLP"].ToString());
+                MyListAnime.Rows.Add(Language.Options_lblTvSpecials);
+                MyListAnime.Rows.Add("", Language.Options_lblCount, rowML["mylist_local_tvsW"].ToString(), rowML["mylist_local_tvs"].ToString(), rowML["mylist_local_tvspercent"].ToString());
+                MyListAnime.Rows.Add("", Language.Options_lblSize, rowML["mylist_local_tvsSizeW"].ToString(), rowML["mylist_local_tvsSize"].ToString(), rowML["mylist_local_tvspercentsize"].ToString());
+                MyListAnime.Rows.Add("", Language.Options_lblSize2, rowML["mylist_local_tvsLW"].ToString(), rowML["mylist_local_tvsL"].ToString(), rowML["mylist_local_tvsLP"].ToString());
 
                 MyListAnime.Rows.Add("");
 
                 //Movies
-                MyListAnime.Rows.Add(Language.Options_VL09);
-                MyListAnime.Rows.Add("", Language.Options_LB18, rowML["mylist_local_moviesW"].ToString(), rowML["mylist_local_movies"].ToString(), rowML["mylist_local_moviespercent"].ToString());
-                MyListAnime.Rows.Add("", Language.Options_LB20, rowML["mylist_local_moviesSizeW"].ToString(), rowML["mylist_local_moviesSize"].ToString(), rowML["mylist_local_moviespercentsize"].ToString());
-                MyListAnime.Rows.Add("", Language.Options_LB21, rowML["mylist_local_moviesLW"].ToString(), rowML["mylist_local_moviesL"].ToString(), rowML["mylist_local_moviesLP"].ToString());
+                MyListAnime.Rows.Add(Language.Options_lblMovies);
+                MyListAnime.Rows.Add("", Language.Options_lblCount, rowML["mylist_local_moviesW"].ToString(), rowML["mylist_local_movies"].ToString(), rowML["mylist_local_moviespercent"].ToString());
+                MyListAnime.Rows.Add("", Language.Options_lblSize, rowML["mylist_local_moviesSizeW"].ToString(), rowML["mylist_local_moviesSize"].ToString(), rowML["mylist_local_moviespercentsize"].ToString());
+                MyListAnime.Rows.Add("", Language.Options_lblSize2, rowML["mylist_local_moviesLW"].ToString(), rowML["mylist_local_moviesL"].ToString(), rowML["mylist_local_moviesLP"].ToString());
 
                 MyListAnime.Rows.Add("");
 
                 //OVA
-                MyListAnime.Rows.Add(Language.Options_VL10);
-                MyListAnime.Rows.Add("", Language.Options_LB18, rowML["mylist_local_ovaW"].ToString(), rowML["mylist_local_ova"].ToString(), rowML["mylist_local_ovapercent"].ToString());
-                MyListAnime.Rows.Add("", Language.Options_LB20, rowML["mylist_local_ovaSizeW"].ToString(), rowML["mylist_local_ovaSize"].ToString(), rowML["mylist_local_ovapercentsize"].ToString());
-                MyListAnime.Rows.Add("", Language.Options_LB21, rowML["mylist_local_ovaLW"].ToString(), rowML["mylist_local_ovaL"].ToString(), rowML["mylist_local_ovaLP"].ToString());
+                MyListAnime.Rows.Add(Language.Options_lblOva);
+                MyListAnime.Rows.Add("", Language.Options_lblCount, rowML["mylist_local_ovaW"].ToString(), rowML["mylist_local_ova"].ToString(), rowML["mylist_local_ovapercent"].ToString());
+                MyListAnime.Rows.Add("", Language.Options_lblSize, rowML["mylist_local_ovaSizeW"].ToString(), rowML["mylist_local_ovaSize"].ToString(), rowML["mylist_local_ovapercentsize"].ToString());
+                MyListAnime.Rows.Add("", Language.Options_lblSize2, rowML["mylist_local_ovaLW"].ToString(), rowML["mylist_local_ovaL"].ToString(), rowML["mylist_local_ovaLP"].ToString());
 
                 MyListAnime.Rows.Add("");
 
                 //WWW
-                MyListAnime.Rows.Add(Language.Options_VL11);
-                MyListAnime.Rows.Add("", Language.Options_LB18, rowML["mylist_local_webW"].ToString(), rowML["mylist_local_ova"].ToString(), rowML["mylist_local_web"].ToString());
-                MyListAnime.Rows.Add("", Language.Options_LB20, rowML["mylist_local_webSizeW"].ToString(), rowML["mylist_local_webSize"].ToString(), rowML["mylist_local_webpercentsize"].ToString());
-                MyListAnime.Rows.Add("", Language.Options_LB21, rowML["mylist_local_webLW"].ToString(), rowML["mylist_local_webL"].ToString(), rowML["mylist_local_webLP"].ToString());
+                MyListAnime.Rows.Add(Language.Options_lblWww);
+                MyListAnime.Rows.Add("", Language.Options_lblCount, rowML["mylist_local_webW"].ToString(), rowML["mylist_local_ova"].ToString(), rowML["mylist_local_web"].ToString());
+                MyListAnime.Rows.Add("", Language.Options_lblSize, rowML["mylist_local_webSizeW"].ToString(), rowML["mylist_local_webSize"].ToString(), rowML["mylist_local_webpercentsize"].ToString());
+                MyListAnime.Rows.Add("", Language.Options_lblSize2, rowML["mylist_local_webLW"].ToString(), rowML["mylist_local_webL"].ToString(), rowML["mylist_local_webLP"].ToString());
 
                 MyListAnime.Rows.Add("");
 
                 //Music video
-                MyListAnime.Rows.Add(Language.Options_VL66);
-                MyListAnime.Rows.Add("", Language.Options_LB18, rowML["mylist_local_musicW"].ToString(), rowML["mylist_local_music"].ToString(), rowML["mylist_local_musicpercent"].ToString());
-                MyListAnime.Rows.Add("", Language.Options_LB20, rowML["mylist_local_musicSizeW"].ToString(), rowML["mylist_local_musicSize"].ToString(), rowML["mylist_local_musicpercentsize"].ToString());
-                MyListAnime.Rows.Add("", Language.Options_LB21, rowML["mylist_local_musicLW"].ToString(), rowML["mylist_local_musicL"].ToString(), rowML["mylist_local_musicLP"].ToString());
+                MyListAnime.Rows.Add(Language.Options_lblMusicVideo);
+                MyListAnime.Rows.Add("", Language.Options_lblCount, rowML["mylist_local_musicW"].ToString(), rowML["mylist_local_music"].ToString(), rowML["mylist_local_musicpercent"].ToString());
+                MyListAnime.Rows.Add("", Language.Options_lblSize, rowML["mylist_local_musicSizeW"].ToString(), rowML["mylist_local_musicSize"].ToString(), rowML["mylist_local_musicpercentsize"].ToString());
+                MyListAnime.Rows.Add("", Language.Options_lblSize2, rowML["mylist_local_musicLW"].ToString(), rowML["mylist_local_musicL"].ToString(), rowML["mylist_local_musicLP"].ToString());
 
                 MyListAnime.Rows.Add("");
 
                 //Other
-                MyListAnime.Rows.Add(Language.Options_VL12);
-                MyListAnime.Rows.Add("", Language.Options_LB18, rowML["mylist_local_othersW"].ToString(), rowML["mylist_local_others"].ToString(), rowML["mylist_local_otherspercent"].ToString());
-                MyListAnime.Rows.Add("", Language.Options_LB20, rowML["mylist_local_othersSizeW"].ToString(), rowML["mylist_local_othersSize"].ToString(), rowML["mylist_local_otherspercentsize"].ToString());
-                MyListAnime.Rows.Add("", Language.Options_LB21, rowML["mylist_local_othersLW"].ToString(), rowML["mylist_local_othersL"].ToString(), rowML["mylist_local_othersLP"].ToString());
+                MyListAnime.Rows.Add(Language.Options_lblOthers);
+                MyListAnime.Rows.Add("", Language.Options_lblCount, rowML["mylist_local_othersW"].ToString(), rowML["mylist_local_others"].ToString(), rowML["mylist_local_otherspercent"].ToString());
+                MyListAnime.Rows.Add("", Language.Options_lblSize, rowML["mylist_local_othersSizeW"].ToString(), rowML["mylist_local_othersSize"].ToString(), rowML["mylist_local_otherspercentsize"].ToString());
+                MyListAnime.Rows.Add("", Language.Options_lblSize2, rowML["mylist_local_othersLW"].ToString(), rowML["mylist_local_othersL"].ToString(), rowML["mylist_local_othersLP"].ToString());
 
                 MyListAnime.Rows.Add("");
 
                 //Unknown
-                MyListAnime.Rows.Add(Language.Options_VL13);
-                MyListAnime.Rows.Add("", Language.Options_LB18, rowML["mylist_local_unknownW"].ToString(), rowML["mylist_local_unknown"].ToString(), rowML["mylist_local_unknownpercent"].ToString());
-                MyListAnime.Rows.Add("", Language.Options_LB20, rowML["mylist_local_unknownSizeW"].ToString(), rowML["mylist_local_unknownSize"].ToString(), rowML["mylist_local_unknownpercentsize"].ToString());
-                MyListAnime.Rows.Add("", Language.Options_LB21, rowML["mylist_local_unknownLW"].ToString(), rowML["mylist_local_unknownL"].ToString(), rowML["mylist_local_unknownLP"].ToString());
+                MyListAnime.Rows.Add(Language.Options_lblUnknown);
+                MyListAnime.Rows.Add("", Language.Options_lblCount, rowML["mylist_local_unknownW"].ToString(), rowML["mylist_local_unknown"].ToString(), rowML["mylist_local_unknownpercent"].ToString());
+                MyListAnime.Rows.Add("", Language.Options_lblSize, rowML["mylist_local_unknownSizeW"].ToString(), rowML["mylist_local_unknownSize"].ToString(), rowML["mylist_local_unknownpercentsize"].ToString());
+                MyListAnime.Rows.Add("", Language.Options_lblSize2, rowML["mylist_local_unknownLW"].ToString(), rowML["mylist_local_unknownL"].ToString(), rowML["mylist_local_unknownLP"].ToString());
 
                 MyListAnime.Rows.Add("");
 
                 //Sum
-                MyListAnime.Rows.Add(Language.Options_VL21);
-                MyListAnime.Rows.Add("", Language.Options_LB18, rowML["mylist_local_sumW"].ToString(), rowML["mylist_local_sum"].ToString(), rowML["mylist_local_sumpercent"].ToString());
-                MyListAnime.Rows.Add("", Language.Options_LB20, rowML["mylist_local_sumSizeW"].ToString(), rowML["mylist_local_sumSize"].ToString(), rowML["mylist_local_sumpercentsize"].ToString());
-                MyListAnime.Rows.Add("", Language.Options_LB21, rowML["mylist_local_sumLW"].ToString(), rowML["mylist_local_sumL"].ToString(), rowML["mylist_local_sumLP"].ToString());
+                MyListAnime.Rows.Add(Language.Options_lblSummary);
+                MyListAnime.Rows.Add("", Language.Options_lblCount, rowML["mylist_local_sumW"].ToString(), rowML["mylist_local_sum"].ToString(), rowML["mylist_local_sumpercent"].ToString());
+                MyListAnime.Rows.Add("", Language.Options_lblSize, rowML["mylist_local_sumSizeW"].ToString(), rowML["mylist_local_sumSize"].ToString(), rowML["mylist_local_sumpercentsize"].ToString());
+                MyListAnime.Rows.Add("", Language.Options_lblSize2, rowML["mylist_local_sumLW"].ToString(), rowML["mylist_local_sumL"].ToString(), rowML["mylist_local_sumLP"].ToString());
 
                 MyListAnime.Rows.Add("");
 
                 //Status
-                MyListAnime.Rows.Add(Language.Options_LB22, Language.Options_LB23, Language.Options_LB24, Language.Options_LB25, Language.Options_LB26);
-                MyListAnime.Rows.Add(Language.Options_VL44, rowML["mylist_local_counthdd"].ToString(), rowML["mylist_local_sizehdd"].ToString(), rowML["mylist_local_lenhdd"].ToString(), rowML["mylist_local_watchedhdd"].ToString() + " (" + rowML["mylist_local_watchedhddpercent"].ToString() + ")");
-                MyListAnime.Rows.Add(Language.Options_VL45, rowML["mylist_local_countcd"].ToString(), rowML["mylist_local_sizecd"].ToString(), rowML["mylist_local_lencd"].ToString(), rowML["mylist_local_watchedcd"].ToString() + " (" + rowML["mylist_local_watchedcdpercent"].ToString() + ")");
-                MyListAnime.Rows.Add(Language.Options_VL46, rowML["mylist_local_countdeleted"].ToString(), rowML["mylist_local_sizedeleted"].ToString(), rowML["mylist_local_lendeleted"].ToString(), rowML["mylist_local_watcheddeleted"].ToString() + " (" + rowML["mylist_local_watcheddeletedpercent"].ToString() + ")");
-                MyListAnime.Rows.Add(Language.Options_VL43, rowML["mylist_local_countunknown"].ToString(), rowML["mylist_local_sizeunknown"].ToString(), rowML["mylist_local_lenunknown"].ToString(), rowML["mylist_local_watchedunknown"].ToString() + " (" + rowML["mylist_local_watchedunknownpercent"].ToString() + ")");
-                MyListAnime.Rows.Add(Language.Options_VL25, rowML["mylist_local_countsum"].ToString(), rowML["mylist_local_sizesum"].ToString(), rowML["mylist_local_lensum"].ToString(), rowML["mylist_local_watchedsum"].ToString() + " (" + rowML["mylist_local_watchedsumpercent"].ToString() + ")");
+                MyListAnime.Rows.Add(Language.Options_lblStatus2, Language.Options_lblCount2, Language.Options_lblSize3, Language.Options_lblLength, Language.Options_lblWatched2);
+                MyListAnime.Rows.Add(Language.Options_lblOnHdd, rowML["mylist_local_counthdd"].ToString(), rowML["mylist_local_sizehdd"].ToString(), rowML["mylist_local_lenhdd"].ToString(), rowML["mylist_local_watchedhdd"].ToString() + " (" + rowML["mylist_local_watchedhddpercent"].ToString() + ")");
+                MyListAnime.Rows.Add(Language.Options_lblOnOptical, rowML["mylist_local_countcd"].ToString(), rowML["mylist_local_sizecd"].ToString(), rowML["mylist_local_lencd"].ToString(), rowML["mylist_local_watchedcd"].ToString() + " (" + rowML["mylist_local_watchedcdpercent"].ToString() + ")");
+                MyListAnime.Rows.Add(Language.Options_lblDeleted, rowML["mylist_local_countdeleted"].ToString(), rowML["mylist_local_sizedeleted"].ToString(), rowML["mylist_local_lendeleted"].ToString(), rowML["mylist_local_watcheddeleted"].ToString() + " (" + rowML["mylist_local_watcheddeletedpercent"].ToString() + ")");
+                MyListAnime.Rows.Add(Language.Options_lblUnknown2, rowML["mylist_local_countunknown"].ToString(), rowML["mylist_local_sizeunknown"].ToString(), rowML["mylist_local_lenunknown"].ToString(), rowML["mylist_local_watchedunknown"].ToString() + " (" + rowML["mylist_local_watchedunknownpercent"].ToString() + ")");
+                MyListAnime.Rows.Add(Language.Options_lblSummary2, rowML["mylist_local_countsum"].ToString(), rowML["mylist_local_sizesum"].ToString(), rowML["mylist_local_lensum"].ToString(), rowML["mylist_local_watchedsum"].ToString() + " (" + rowML["mylist_local_watchedsumpercent"].ToString() + ")");
 
                 //Storage & source
                 MyListAnime.Rows.Add("");
-                MyListAnime.Rows.Add(Language.Options_LB48);
+                MyListAnime.Rows.Add(Language.Options_lblStorage2);
 
                 foreach (DataRow rowX in DTStorage.Rows)
                     MyListAnime.Rows.Add("", rowX["mylist_storages_storage"].ToString(), rowX["mylist_storages_count"].ToString(), rowX["mylist_storages_size"].ToString(), rowX["mylist_storages_percent"].ToString());
 
                 MyListAnime.Rows.Add("");
-                MyListAnime.Rows.Add(Language.Options_LB49);
+                MyListAnime.Rows.Add(Language.Options_lblSource2);
 
                 foreach (DataRow rowX in DTsource.Rows)
                     MyListAnime.Rows.Add("", rowX["mylist_storages_storage"].ToString(), rowX["mylist_storages_count"].ToString(), rowX["mylist_storages_size"].ToString(), rowX["mylist_storages_percent"].ToString());
@@ -14996,21 +14996,21 @@ namespace AniDBClient.Forms
 
                 PieItem PI;
 
-                PI = Gp.AddPieSlice(Convert.ToDouble(row["mylist_local_tv"].ToString()), Color.Silver, 0.1, Language.Options_VL07.Replace(":", ""));
+                PI = Gp.AddPieSlice(Convert.ToDouble(row["mylist_local_tv"].ToString()), Color.Silver, 0.1, Language.Options_lblTvSeries.Replace(":", ""));
                 PI.LabelDetail.IsVisible = false;
-                PI = Gp.AddPieSlice(Convert.ToDouble(row["mylist_local_tvs"].ToString()), Color.Green, 0.1, Language.Options_VL08.Replace(":", ""));
+                PI = Gp.AddPieSlice(Convert.ToDouble(row["mylist_local_tvs"].ToString()), Color.Green, 0.1, Language.Options_lblTvSpecials.Replace(":", ""));
                 PI.LabelDetail.IsVisible = false;
-                PI = Gp.AddPieSlice(Convert.ToDouble(row["mylist_local_movies"].ToString()), Color.Orange, 0.1, Language.Options_VL09.Replace(":", ""));
+                PI = Gp.AddPieSlice(Convert.ToDouble(row["mylist_local_movies"].ToString()), Color.Orange, 0.1, Language.Options_lblMovies.Replace(":", ""));
                 PI.LabelDetail.IsVisible = false;
-                PI = Gp.AddPieSlice(Convert.ToDouble(row["mylist_local_ova"].ToString()), Color.Yellow, 0.1, Language.Options_VL10.Replace(":", ""));
+                PI = Gp.AddPieSlice(Convert.ToDouble(row["mylist_local_ova"].ToString()), Color.Yellow, 0.1, Language.Options_lblOva.Replace(":", ""));
                 PI.LabelDetail.IsVisible = false;
-                PI = Gp.AddPieSlice(Convert.ToDouble(row["mylist_local_web"].ToString()), Color.Navy, 0.1, Language.Options_VL11.Replace(":", ""));
+                PI = Gp.AddPieSlice(Convert.ToDouble(row["mylist_local_web"].ToString()), Color.Navy, 0.1, Language.Options_lblWww.Replace(":", ""));
                 PI.LabelDetail.IsVisible = false;
-                PI = Gp.AddPieSlice(Convert.ToDouble(row["mylist_local_others"].ToString()), Color.White, 0.1, Language.Options_VL66.Replace(":", ""));
+                PI = Gp.AddPieSlice(Convert.ToDouble(row["mylist_local_others"].ToString()), Color.White, 0.1, Language.Options_lblMusicVideo.Replace(":", ""));
                 PI.LabelDetail.IsVisible = false;
-                PI = Gp.AddPieSlice(Convert.ToDouble(row["mylist_local_unknown"].ToString()), Color.Violet, 0.1, Language.Options_VL12.Replace(":", ""));
+                PI = Gp.AddPieSlice(Convert.ToDouble(row["mylist_local_unknown"].ToString()), Color.Violet, 0.1, Language.Options_lblOthers.Replace(":", ""));
                 PI.LabelDetail.IsVisible = false;
-                PI = Gp.AddPieSlice(Convert.ToDouble(row["mylist_local_music"].ToString()), Color.Purple, 0.1, Language.Options_VL13.Replace(":", ""));
+                PI = Gp.AddPieSlice(Convert.ToDouble(row["mylist_local_music"].ToString()), Color.Purple, 0.1, Language.Options_lblUnknown.Replace(":", ""));
                 PI.LabelDetail.IsVisible = false;
             }
 

@@ -2621,6 +2621,15 @@ namespace AniDBClient.Lang {
         }
         
         /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Přidaných anime:.
+        /// </summary>
+        internal static string Options_AddedAnime {
+            get {
+                return ResourceManager.GetString("Options_AddedAnime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Přidat stejné soubory vícekrát.
         /// </summary>
         internal static string Options_AddSameFilesMultipleTimes {
@@ -2828,452 +2837,128 @@ namespace AniDBClient.Lang {
         }
         
         /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Anime:.
-        /// </summary>
-        internal static string Options_LB11 {
-            get {
-                return ResourceManager.GetString("Options_LB11", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Episod:.
-        /// </summary>
-        internal static string Options_LB12 {
-            get {
-                return ResourceManager.GetString("Options_LB12", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Souborů:.
-        /// </summary>
-        internal static string Options_LB13 {
-            get {
-                return ResourceManager.GetString("Options_LB13", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Velikost souborů:.
-        /// </summary>
-        internal static string Options_LB14 {
-            get {
-                return ResourceManager.GetString("Options_LB14", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Shlednutých anime:.
-        /// </summary>
-        internal static string Options_LB15 {
-            get {
-                return ResourceManager.GetString("Options_LB15", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Velikost shlednutých anime:.
-        /// </summary>
-        internal static string Options_LB16 {
-            get {
-                return ResourceManager.GetString("Options_LB16", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Typ.
-        /// </summary>
-        internal static string Options_LB17 {
-            get {
-                return ResourceManager.GetString("Options_LB17", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Počet.
-        /// </summary>
-        internal static string Options_LB18 {
-            get {
-                return ResourceManager.GetString("Options_LB18", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Shlédnuto.
-        /// </summary>
-        internal static string Options_LB19 {
-            get {
-                return ResourceManager.GetString("Options_LB19", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Velikost.
-        /// </summary>
-        internal static string Options_LB20 {
-            get {
-                return ResourceManager.GetString("Options_LB20", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Délka.
-        /// </summary>
-        internal static string Options_LB21 {
-            get {
-                return ResourceManager.GetString("Options_LB21", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Status.
-        /// </summary>
-        internal static string Options_LB22 {
-            get {
-                return ResourceManager.GetString("Options_LB22", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Počet.
-        /// </summary>
-        internal static string Options_LB23 {
-            get {
-                return ResourceManager.GetString("Options_LB23", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Velikost.
-        /// </summary>
-        internal static string Options_LB24 {
-            get {
-                return ResourceManager.GetString("Options_LB24", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Délka.
-        /// </summary>
-        internal static string Options_LB25 {
-            get {
-                return ResourceManager.GetString("Options_LB25", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Shlédnuto.
-        /// </summary>
-        internal static string Options_LB26 {
-            get {
-                return ResourceManager.GetString("Options_LB26", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Anime:.
-        /// </summary>
-        internal static string Options_LB27 {
-            get {
-                return ResourceManager.GetString("Options_LB27", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Episod:.
-        /// </summary>
-        internal static string Options_LB28 {
-            get {
-                return ResourceManager.GetString("Options_LB28", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Souborů:.
-        /// </summary>
-        internal static string Options_LB29 {
-            get {
-                return ResourceManager.GetString("Options_LB29", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Celková velikost:.
-        /// </summary>
-        internal static string Options_LB30 {
-            get {
-                return ResourceManager.GetString("Options_LB30", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Přidaných anime:.
-        /// </summary>
-        internal static string Options_LB31 {
-            get {
-                return ResourceManager.GetString("Options_LB31", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Přidaných episod:.
         /// </summary>
-        internal static string Options_LB32 {
+        internal static string Options_lblAddedEpisodes {
             get {
-                return ResourceManager.GetString("Options_LB32", resourceCulture);
+                return ResourceManager.GetString("Options_lblAddedEpisodes", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Přidaných souborů:.
         /// </summary>
-        internal static string Options_LB33 {
+        internal static string Options_lblAddedFiles {
             get {
-                return ResourceManager.GetString("Options_LB33", resourceCulture);
+                return ResourceManager.GetString("Options_lblAddedFiles", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Přidaných skupin:.
         /// </summary>
-        internal static string Options_LB34 {
+        internal static string Options_lblAddedGroups {
             get {
-                return ResourceManager.GetString("Options_LB34", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Leech:.
-        /// </summary>
-        internal static string Options_LB35 {
-            get {
-                return ResourceManager.GetString("Options_LB35", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Glory:.
-        /// </summary>
-        internal static string Options_LB36 {
-            get {
-                return ResourceManager.GetString("Options_LB36", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný AniDB Shlédnuto:.
-        /// </summary>
-        internal static string Options_LB37 {
-            get {
-                return ResourceManager.GetString("Options_LB37", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Lokální MyList.
-        /// </summary>
-        internal static string Options_LB38 {
-            get {
-                return ResourceManager.GetString("Options_LB38", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný AniDB Mylist.
-        /// </summary>
-        internal static string Options_LB39 {
-            get {
-                return ResourceManager.GetString("Options_LB39", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný AniDB MyList:.
-        /// </summary>
-        internal static string Options_LB40 {
-            get {
-                return ResourceManager.GetString("Options_LB40", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Shlédnuto:.
-        /// </summary>
-        internal static string Options_LB42 {
-            get {
-                return ResourceManager.GetString("Options_LB42", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Hlasováno:.
-        /// </summary>
-        internal static string Options_LB43 {
-            get {
-                return ResourceManager.GetString("Options_LB43", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Přidaných recenzí:.
-        /// </summary>
-        internal static string Options_LB44 {
-            get {
-                return ResourceManager.GetString("Options_LB44", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Lokální port:.
-        /// </summary>
-        internal static string Options_LB45 {
-            get {
-                return ResourceManager.GetString("Options_LB45", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Skupin:.
-        /// </summary>
-        internal static string Options_LB46 {
-            get {
-                return ResourceManager.GetString("Options_LB46", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Celková délka:.
-        /// </summary>
-        internal static string Options_LB47 {
-            get {
-                return ResourceManager.GetString("Options_LB47", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Úložiště.
-        /// </summary>
-        internal static string Options_LB48 {
-            get {
-                return ResourceManager.GetString("Options_LB48", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Zdroj.
-        /// </summary>
-        internal static string Options_LB49 {
-            get {
-                return ResourceManager.GetString("Options_LB49", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný MyList.
-        /// </summary>
-        internal static string Options_LB50 {
-            get {
-                return ResourceManager.GetString("Options_LB50", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Manga.
-        /// </summary>
-        internal static string Options_LB51 {
-            get {
-                return ResourceManager.GetString("Options_LB51", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Volumes.
-        /// </summary>
-        internal static string Options_LB53 {
-            get {
-                return ResourceManager.GetString("Options_LB53", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Chapters.
-        /// </summary>
-        internal static string Options_LB55 {
-            get {
-                return ResourceManager.GetString("Options_LB55", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Velikost souborů.
-        /// </summary>
-        internal static string Options_LB57 {
-            get {
-                return ResourceManager.GetString("Options_LB57", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Přečteno.
-        /// </summary>
-        internal static string Options_LB59 {
-            get {
-                return ResourceManager.GetString("Options_LB59", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Celkem stránek.
-        /// </summary>
-        internal static string Options_LB61 {
-            get {
-                return ResourceManager.GetString("Options_LB61", resourceCulture);
+                return ResourceManager.GetString("Options_lblAddedGroups", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný 18+.
         /// </summary>
-        internal static string Options_LB63 {
+        internal static string Options_lblAdult {
             get {
-                return ResourceManager.GetString("Options_LB63", resourceCulture);
+                return ResourceManager.GetString("Options_lblAdult", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Přečteno.
+        ///   Vyhledá lokalizovaný řetězec podobný 18+:.
         /// </summary>
-        internal static string Options_LB66 {
+        internal static string Options_lblAdult2 {
             get {
-                return ResourceManager.GetString("Options_LB66", resourceCulture);
+                return ResourceManager.GetString("Options_lblAdult2", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Nepřečteno.
+        ///   Vyhledá lokalizovaný řetězec podobný AniDB Mylist.
         /// </summary>
-        internal static string Options_LB67 {
+        internal static string Options_lblAniDbMyList {
             get {
-                return ResourceManager.GetString("Options_LB67", resourceCulture);
+                return ResourceManager.GetString("Options_lblAniDbMyList", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Počet opakování:.
+        ///   Vyhledá lokalizovaný řetězec podobný AniDB MyList:.
         /// </summary>
-        internal static string Options_LB68 {
+        internal static string Options_lblAniDbMylist2 {
             get {
-                return ResourceManager.GetString("Options_LB68", resourceCulture);
+                return ResourceManager.GetString("Options_lblAniDbMylist2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný AniDB Shlédnuto:.
+        /// </summary>
+        internal static string Options_lblAniDbWatched {
+            get {
+                return ResourceManager.GetString("Options_lblAniDbWatched", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Anime:.
+        /// </summary>
+        internal static string Options_lblAnime {
+            get {
+                return ResourceManager.GetString("Options_lblAnime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Anime:.
+        /// </summary>
+        internal static string Options_lblAnime2 {
+            get {
+                return ResourceManager.GetString("Options_lblAnime2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Chapters.
+        /// </summary>
+        internal static string Options_lblChapters {
+            get {
+                return ResourceManager.GetString("Options_lblChapters", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Počet.
+        /// </summary>
+        internal static string Options_lblCount {
+            get {
+                return ResourceManager.GetString("Options_lblCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Počet.
+        /// </summary>
+        internal static string Options_lblCount2 {
+            get {
+                return ResourceManager.GetString("Options_lblCount2", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Počet záloh DB.
         /// </summary>
-        internal static string Options_LB69 {
+        internal static string Options_lblDbBackupCount {
             get {
-                return ResourceManager.GetString("Options_LB69", resourceCulture);
+                return ResourceManager.GetString("Options_lblDbBackupCount", resourceCulture);
             }
         }
         
@@ -3287,11 +2972,191 @@ namespace AniDBClient.Lang {
         }
         
         /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Smazáno:.
+        /// </summary>
+        internal static string Options_lblDeleted {
+            get {
+                return ResourceManager.GetString("Options_lblDeleted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Episod:.
+        /// </summary>
+        internal static string Options_lblEpisodes {
+            get {
+                return ResourceManager.GetString("Options_lblEpisodes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Episod:.
+        /// </summary>
+        internal static string Options_lblEpisodes2 {
+            get {
+                return ResourceManager.GetString("Options_lblEpisodes2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Souborů:.
+        /// </summary>
+        internal static string Options_lblFiles {
+            get {
+                return ResourceManager.GetString("Options_lblFiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Souborů:.
+        /// </summary>
+        internal static string Options_lblFiles2 {
+            get {
+                return ResourceManager.GetString("Options_lblFiles2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Velikost souborů.
+        /// </summary>
+        internal static string Options_lblFileSize {
+            get {
+                return ResourceManager.GetString("Options_lblFileSize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Glory:.
+        /// </summary>
+        internal static string Options_lblGlory {
+            get {
+                return ResourceManager.GetString("Options_lblGlory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Skupin:.
+        /// </summary>
+        internal static string Options_lblGroups {
+            get {
+                return ResourceManager.GetString("Options_lblGroups", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Leech:.
+        /// </summary>
+        internal static string Options_lblLeech {
+            get {
+                return ResourceManager.GetString("Options_lblLeech", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Délka.
+        /// </summary>
+        internal static string Options_lblLength {
+            get {
+                return ResourceManager.GetString("Options_lblLength", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Lokální MyList.
+        /// </summary>
+        internal static string Options_lblLocalMyList {
+            get {
+                return ResourceManager.GetString("Options_lblLocalMyList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Lokální port:.
+        /// </summary>
+        internal static string Options_lblLocalPort {
+            get {
+                return ResourceManager.GetString("Options_lblLocalPort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Manga.
+        /// </summary>
+        internal static string Options_lblManga {
+            get {
+                return ResourceManager.GetString("Options_lblManga", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Filmy:.
+        /// </summary>
+        internal static string Options_lblMovies {
+            get {
+                return ResourceManager.GetString("Options_lblMovies", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Music Video.
+        /// </summary>
+        internal static string Options_lblMusicVideo {
+            get {
+                return ResourceManager.GetString("Options_lblMusicVideo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný MyList.
+        /// </summary>
+        internal static string Options_lblMyList {
+            get {
+                return ResourceManager.GetString("Options_lblMyList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Na HDD:.
+        /// </summary>
+        internal static string Options_lblOnHdd {
+            get {
+                return ResourceManager.GetString("Options_lblOnHdd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Na CD/DVD:.
+        /// </summary>
+        internal static string Options_lblOnOptical {
+            get {
+                return ResourceManager.GetString("Options_lblOnOptical", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Ostatní:.
         /// </summary>
         internal static string Options_lblOther {
             get {
                 return ResourceManager.GetString("Options_lblOther", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Ostatní:.
+        /// </summary>
+        internal static string Options_lblOthers {
+            get {
+                return ResourceManager.GetString("Options_lblOthers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný OVA:.
+        /// </summary>
+        internal static string Options_lblOva {
+            get {
+                return ResourceManager.GetString("Options_lblOva", resourceCulture);
             }
         }
         
@@ -3314,11 +3179,92 @@ namespace AniDBClient.Lang {
         }
         
         /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Přečteno.
+        /// </summary>
+        internal static string Options_lblRead {
+            get {
+                return ResourceManager.GetString("Options_lblRead", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Přečteno.
+        /// </summary>
+        internal static string Options_lblRead2 {
+            get {
+                return ResourceManager.GetString("Options_lblRead2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Počet opakování:.
+        /// </summary>
+        internal static string Options_lblResetCount {
+            get {
+                return ResourceManager.GetString("Options_lblResetCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Přidaných recenzí:.
+        /// </summary>
+        internal static string Options_lblReviews {
+            get {
+                return ResourceManager.GetString("Options_lblReviews", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Server:.
         /// </summary>
         internal static string Options_lblServer {
             get {
                 return ResourceManager.GetString("Options_lblServer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Velikost.
+        /// </summary>
+        internal static string Options_lblSize {
+            get {
+                return ResourceManager.GetString("Options_lblSize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Délka.
+        /// </summary>
+        internal static string Options_lblSize2 {
+            get {
+                return ResourceManager.GetString("Options_lblSize2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Velikost.
+        /// </summary>
+        internal static string Options_lblSize3 {
+            get {
+                return ResourceManager.GetString("Options_lblSize3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Velikost souborů:.
+        /// </summary>
+        internal static string Options_lblSizeOfFiles {
+            get {
+                return ResourceManager.GetString("Options_lblSizeOfFiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Velikost shlednutých anime:.
+        /// </summary>
+        internal static string Options_lblSizeOfWatchedAnime {
+            get {
+                return ResourceManager.GetString("Options_lblSizeOfWatchedAnime", resourceCulture);
             }
         }
         
@@ -3332,11 +3278,29 @@ namespace AniDBClient.Lang {
         }
         
         /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Zdroj.
+        /// </summary>
+        internal static string Options_lblSource2 {
+            get {
+                return ResourceManager.GetString("Options_lblSource2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Status:.
         /// </summary>
         internal static string Options_lblStatus {
             get {
                 return ResourceManager.GetString("Options_lblStatus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Status.
+        /// </summary>
+        internal static string Options_lblStatus2 {
+            get {
+                return ResourceManager.GetString("Options_lblStatus2", resourceCulture);
             }
         }
         
@@ -3350,6 +3314,33 @@ namespace AniDBClient.Lang {
         }
         
         /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Úložiště.
+        /// </summary>
+        internal static string Options_lblStorage2 {
+            get {
+                return ResourceManager.GetString("Options_lblStorage2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Celkem:.
+        /// </summary>
+        internal static string Options_lblSummary {
+            get {
+                return ResourceManager.GetString("Options_lblSummary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Celkem:.
+        /// </summary>
+        internal static string Options_lblSummary2 {
+            get {
+                return ResourceManager.GetString("Options_lblSummary2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Timeout:.
         /// </summary>
         internal static string Options_lblTimeout {
@@ -3359,11 +3350,155 @@ namespace AniDBClient.Lang {
         }
         
         /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Celková délka:.
+        /// </summary>
+        internal static string Options_lblTotalLength {
+            get {
+                return ResourceManager.GetString("Options_lblTotalLength", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Celkem stránek.
+        /// </summary>
+        internal static string Options_lblTotalPages {
+            get {
+                return ResourceManager.GetString("Options_lblTotalPages", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Celková velikost:.
+        /// </summary>
+        internal static string Options_lblTotalSize {
+            get {
+                return ResourceManager.GetString("Options_lblTotalSize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný TV Série:.
+        /// </summary>
+        internal static string Options_lblTvSeries {
+            get {
+                return ResourceManager.GetString("Options_lblTvSeries", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný TV Speciály:.
+        /// </summary>
+        internal static string Options_lblTvSpecials {
+            get {
+                return ResourceManager.GetString("Options_lblTvSpecials", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Typ.
+        /// </summary>
+        internal static string Options_lblType {
+            get {
+                return ResourceManager.GetString("Options_lblType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Neznámé:.
+        /// </summary>
+        internal static string Options_lblUnknown {
+            get {
+                return ResourceManager.GetString("Options_lblUnknown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Neznámé:.
+        /// </summary>
+        internal static string Options_lblUnknown2 {
+            get {
+                return ResourceManager.GetString("Options_lblUnknown2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Nepřečteno.
+        /// </summary>
+        internal static string Options_lblUnread {
+            get {
+                return ResourceManager.GetString("Options_lblUnread", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Jméno:.
         /// </summary>
         internal static string Options_lblUserName {
             get {
                 return ResourceManager.GetString("Options_lblUserName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Volumes.
+        /// </summary>
+        internal static string Options_lblVolumes {
+            get {
+                return ResourceManager.GetString("Options_lblVolumes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Hlasováno:.
+        /// </summary>
+        internal static string Options_lblVotes {
+            get {
+                return ResourceManager.GetString("Options_lblVotes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Shlédnuto.
+        /// </summary>
+        internal static string Options_lblWatched {
+            get {
+                return ResourceManager.GetString("Options_lblWatched", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Shlédnuto.
+        /// </summary>
+        internal static string Options_lblWatched2 {
+            get {
+                return ResourceManager.GetString("Options_lblWatched2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Shlédnuto:.
+        /// </summary>
+        internal static string Options_lblWatched3 {
+            get {
+                return ResourceManager.GetString("Options_lblWatched3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Shlednutých anime:.
+        /// </summary>
+        internal static string Options_lblWatchedAnime {
+            get {
+                return ResourceManager.GetString("Options_lblWatchedAnime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Www:.
+        /// </summary>
+        internal static string Options_lblWww {
+            get {
+                return ResourceManager.GetString("Options_lblWww", resourceCulture);
             }
         }
         
@@ -3422,15 +3557,6 @@ namespace AniDBClient.Lang {
         }
         
         /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Aktualizace.
-        /// </summary>
-        internal static string Options_MyList_GR01 {
-            get {
-                return ResourceManager.GetString("Options_MyList_GR01", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný MyList.
         /// </summary>
         internal static string Options_MyList2 {
@@ -3472,6 +3598,15 @@ namespace AniDBClient.Lang {
         internal static string Options_MyListRefreshMin {
             get {
                 return ResourceManager.GetString("Options_MyListRefreshMin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Aktualizace.
+        /// </summary>
+        internal static string Options_MyListUpdate {
+            get {
+                return ResourceManager.GetString("Options_MyListUpdate", resourceCulture);
             }
         }
         
@@ -3638,141 +3773,6 @@ namespace AniDBClient.Lang {
         }
         
         /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný TV Série:.
-        /// </summary>
-        internal static string Options_VL07 {
-            get {
-                return ResourceManager.GetString("Options_VL07", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný TV Speciály:.
-        /// </summary>
-        internal static string Options_VL08 {
-            get {
-                return ResourceManager.GetString("Options_VL08", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Filmy:.
-        /// </summary>
-        internal static string Options_VL09 {
-            get {
-                return ResourceManager.GetString("Options_VL09", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný OVA:.
-        /// </summary>
-        internal static string Options_VL10 {
-            get {
-                return ResourceManager.GetString("Options_VL10", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Www:.
-        /// </summary>
-        internal static string Options_VL11 {
-            get {
-                return ResourceManager.GetString("Options_VL11", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Ostatní:.
-        /// </summary>
-        internal static string Options_VL12 {
-            get {
-                return ResourceManager.GetString("Options_VL12", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Neznámé:.
-        /// </summary>
-        internal static string Options_VL13 {
-            get {
-                return ResourceManager.GetString("Options_VL13", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Celkem:.
-        /// </summary>
-        internal static string Options_VL21 {
-            get {
-                return ResourceManager.GetString("Options_VL21", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Celkem:.
-        /// </summary>
-        internal static string Options_VL25 {
-            get {
-                return ResourceManager.GetString("Options_VL25", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Neznámé:.
-        /// </summary>
-        internal static string Options_VL43 {
-            get {
-                return ResourceManager.GetString("Options_VL43", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Na HDD:.
-        /// </summary>
-        internal static string Options_VL44 {
-            get {
-                return ResourceManager.GetString("Options_VL44", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Na CD/DVD:.
-        /// </summary>
-        internal static string Options_VL45 {
-            get {
-                return ResourceManager.GetString("Options_VL45", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Smazáno:.
-        /// </summary>
-        internal static string Options_VL46 {
-            get {
-                return ResourceManager.GetString("Options_VL46", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Music Video.
-        /// </summary>
-        internal static string Options_VL66 {
-            get {
-                return ResourceManager.GetString("Options_VL66", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný 18+:.
-        /// </summary>
-        internal static string Options_VL86 {
-            get {
-                return ResourceManager.GetString("Options_VL86", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Patch pro Windows 8.
         /// </summary>
         internal static string Options_w8Hack {
@@ -3811,63 +3811,36 @@ namespace AniDBClient.Lang {
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Automaticky přejmenovat.
         /// </summary>
-        internal static string Rules_CH01 {
+        internal static string Rules_AutomaticRenaming {
             get {
-                return ResourceManager.GetString("Rules_CH01", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Nekopírovat/Nepřesouvat na jiný disk.
-        /// </summary>
-        internal static string Rules_CH02 {
-            get {
-                return ResourceManager.GetString("Rules_CH02", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Nahrazovat existující soubory.
-        /// </summary>
-        internal static string Rules_CH03 {
-            get {
-                return ResourceManager.GetString("Rules_CH03", resourceCulture);
+                return ResourceManager.GetString("Rules_AutomaticRenaming", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Smazat adresář pokud je prázdný.
         /// </summary>
-        internal static string Rules_CH04 {
+        internal static string Rules_DeleteSourceIfEmpty {
             get {
-                return ResourceManager.GetString("Rules_CH04", resourceCulture);
+                return ResourceManager.GetString("Rules_DeleteSourceIfEmpty", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Přesunout.
+        ///   Vyhledá lokalizovaný řetězec podobný Nekopírovat/Nepřesouvat na jiný disk.
         /// </summary>
-        internal static string Rules_FilesRulesMove_RB01 {
+        internal static string Rules_DontCopyToAnotherDisk {
             get {
-                return ResourceManager.GetString("Rules_FilesRulesMove_RB01", resourceCulture);
+                return ResourceManager.GetString("Rules_DontCopyToAnotherDisk", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Kopírovat.
+        ///   Vyhledá lokalizovaný řetězec podobný Exportovat informace.
         /// </summary>
-        internal static string Rules_FilesRulesMove_RB02 {
+        internal static string Rules_ExportInfo {
             get {
-                return ResourceManager.GetString("Rules_FilesRulesMove_RB02", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Nedělat nic.
-        /// </summary>
-        internal static string Rules_FilesRulesMove_RB03 {
-            get {
-                return ResourceManager.GetString("Rules_FilesRulesMove_RB03", resourceCulture);
+                return ResourceManager.GetString("Rules_ExportInfo", resourceCulture);
             }
         }
         
@@ -3881,6 +3854,15 @@ namespace AniDBClient.Lang {
         }
         
         /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Kopírovat.
+        /// </summary>
+        internal static string Rules_FilesRulesMoveCopy {
+            get {
+                return ResourceManager.GetString("Rules_FilesRulesMoveCopy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Vymazat.
         /// </summary>
         internal static string Rules_FilesRulesMoveDel {
@@ -3890,20 +3872,20 @@ namespace AniDBClient.Lang {
         }
         
         /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Přejmenovat.
+        ///   Vyhledá lokalizovaný řetězec podobný Nedělat nic.
         /// </summary>
-        internal static string Rules_FilesRulesRename_RB01 {
+        internal static string Rules_FilesRulesMoveDoNothing {
             get {
-                return ResourceManager.GetString("Rules_FilesRulesRename_RB01", resourceCulture);
+                return ResourceManager.GetString("Rules_FilesRulesMoveDoNothing", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Nedělat nic.
+        ///   Vyhledá lokalizovaný řetězec podobný Přesunout.
         /// </summary>
-        internal static string Rules_FilesRulesRename_RB02 {
+        internal static string Rules_FilesRulesMoveMove {
             get {
-                return ResourceManager.GetString("Rules_FilesRulesRename_RB02", resourceCulture);
+                return ResourceManager.GetString("Rules_FilesRulesMoveMove", resourceCulture);
             }
         }
         
@@ -3926,56 +3908,74 @@ namespace AniDBClient.Lang {
         }
         
         /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Pravidla pro přejmenování souborů.
+        ///   Vyhledá lokalizovaný řetězec podobný Nedělat nic.
         /// </summary>
-        internal static string Rules_GR01 {
+        internal static string Rules_FilesRulesRenameDoNothing {
             get {
-                return ResourceManager.GetString("Rules_GR01", resourceCulture);
+                return ResourceManager.GetString("Rules_FilesRulesRenameDoNothing", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Pravidla pro vytváření adresářů.
+        ///   Vyhledá lokalizovaný řetězec podobný Přejmenovat.
         /// </summary>
-        internal static string Rules_GR02 {
+        internal static string Rules_FilesRulesRenameRename {
             get {
-                return ResourceManager.GetString("Rules_GR02", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Pravidla pro nahrazování znaků.
-        /// </summary>
-        internal static string Rules_GR03 {
-            get {
-                return ResourceManager.GetString("Rules_GR03", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Exportovat informace.
-        /// </summary>
-        internal static string Rules_GR04 {
-            get {
-                return ResourceManager.GetString("Rules_GR04", resourceCulture);
+                return ResourceManager.GetString("Rules_FilesRulesRenameRename", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Exportovat.
         /// </summary>
-        internal static string Rules_InfoRB01 {
+        internal static string Rules_InfoExport {
             get {
-                return ResourceManager.GetString("Rules_InfoRB01", resourceCulture);
+                return ResourceManager.GetString("Rules_InfoExport", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Pozice čísel:.
         /// </summary>
-        internal static string Rules_LB01 {
+        internal static string Rules_NumberPosition {
             get {
-                return ResourceManager.GetString("Rules_LB01", resourceCulture);
+                return ResourceManager.GetString("Rules_NumberPosition", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Nahrazovat existující soubory.
+        /// </summary>
+        internal static string Rules_ReplaceExisting {
+            get {
+                return ResourceManager.GetString("Rules_ReplaceExisting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Pravidla pro nahrazování znaků.
+        /// </summary>
+        internal static string Rules_RulesForCharacterReplacing {
+            get {
+                return ResourceManager.GetString("Rules_RulesForCharacterReplacing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Pravidla pro vytváření adresářů.
+        /// </summary>
+        internal static string Rules_RulesForCreatingDirectories {
+            get {
+                return ResourceManager.GetString("Rules_RulesForCreatingDirectories", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Pravidla pro přejmenování souborů.
+        /// </summary>
+        internal static string Rules_RulesForFileRenaming {
+            get {
+                return ResourceManager.GetString("Rules_RulesForFileRenaming", resourceCulture);
             }
         }
         
@@ -4007,24 +4007,6 @@ namespace AniDBClient.Lang {
         }
         
         /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Zbývá úloh:.
-        /// </summary>
-        internal static string StatusBar_Mn01 {
-            get {
-                return ResourceManager.GetString("StatusBar_Mn01", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Status:.
-        /// </summary>
-        internal static string StatusBar_Mn03 {
-            get {
-                return ResourceManager.GetString("StatusBar_Mn03", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Hotovo.
         /// </summary>
         internal static string StatusBar_Mn04_Off {
@@ -4043,11 +4025,29 @@ namespace AniDBClient.Lang {
         }
         
         /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Status:.
+        /// </summary>
+        internal static string StatusBar_Status {
+            get {
+                return ResourceManager.GetString("StatusBar_Status", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Zbývá úloh:.
+        /// </summary>
+        internal static string StatusBar_TasksRemaining {
+            get {
+                return ResourceManager.GetString("StatusBar_TasksRemaining", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Verze: .
         /// </summary>
-        internal static string StatusBar_Mn05 {
+        internal static string StatusBar_Version {
             get {
-                return ResourceManager.GetString("StatusBar_Mn05", resourceCulture);
+                return ResourceManager.GetString("StatusBar_Version", resourceCulture);
             }
         }
         
@@ -4061,15 +4061,6 @@ namespace AniDBClient.Lang {
         }
         
         /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Povolit.
-        /// </summary>
-        internal static string Watcher_CH01 {
-            get {
-                return ResourceManager.GetString("Watcher_CH01", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Smazat.
         /// </summary>
         internal static string Watcher_Delete {
@@ -4079,11 +4070,20 @@ namespace AniDBClient.Lang {
         }
         
         /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Povolit.
+        /// </summary>
+        internal static string Watcher_Enable {
+            get {
+                return ResourceManager.GetString("Watcher_Enable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Časová posloupnost shlédnutí.
         /// </summary>
-        internal static string Zgc_GraphB04 {
+        internal static string Zgc_WatchedTimeline {
             get {
-                return ResourceManager.GetString("Zgc_GraphB04", resourceCulture);
+                return ResourceManager.GetString("Zgc_WatchedTimeline", resourceCulture);
             }
         }
     }

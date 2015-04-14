@@ -294,112 +294,112 @@
   <data name="Options_lblOther" xml:space="preserve">
     <value>Ostatní:</value>
   </data>
-  <data name="Options_LB11" xml:space="preserve">
+  <data name="Options_lblAnime" xml:space="preserve">
     <value>Anime:</value>
   </data>
-  <data name="Options_LB12" xml:space="preserve">
+  <data name="Options_lblEpisodes" xml:space="preserve">
     <value>Episod:</value>
   </data>
-  <data name="Options_LB13" xml:space="preserve">
+  <data name="Options_lblFiles" xml:space="preserve">
     <value>Souborů:</value>
   </data>
-  <data name="Options_LB14" xml:space="preserve">
+  <data name="Options_lblSizeOfFiles" xml:space="preserve">
     <value>Velikost souborů:</value>
   </data>
-  <data name="Options_LB15" xml:space="preserve">
+  <data name="Options_lblWatchedAnime" xml:space="preserve">
     <value>Shlednutých anime:</value>
   </data>
-  <data name="Options_LB16" xml:space="preserve">
+  <data name="Options_lblSizeOfWatchedAnime" xml:space="preserve">
     <value>Velikost shlednutých anime:</value>
   </data>
-  <data name="Options_LB17" xml:space="preserve">
+  <data name="Options_lblType" xml:space="preserve">
     <value>Typ</value>
   </data>
-  <data name="Options_LB18" xml:space="preserve">
+  <data name="Options_lblCount" xml:space="preserve">
     <value>Počet</value>
   </data>
-  <data name="Options_LB19" xml:space="preserve">
+  <data name="Options_lblWatched" xml:space="preserve">
     <value>Shlédnuto</value>
   </data>
-  <data name="Options_LB20" xml:space="preserve">
+  <data name="Options_lblSize" xml:space="preserve">
     <value>Velikost</value>
   </data>
-  <data name="Options_LB21" xml:space="preserve">
+  <data name="Options_lblSize2" xml:space="preserve">
     <value>Délka</value>
   </data>
-  <data name="Options_LB22" xml:space="preserve">
+  <data name="Options_lblStatus2" xml:space="preserve">
     <value>Status</value>
   </data>
-  <data name="Options_LB23" xml:space="preserve">
+  <data name="Options_lblCount2" xml:space="preserve">
     <value>Počet</value>
   </data>
-  <data name="Options_LB24" xml:space="preserve">
+  <data name="Options_lblSize3" xml:space="preserve">
     <value>Velikost</value>
   </data>
-  <data name="Options_LB25" xml:space="preserve">
+  <data name="Options_lblLength" xml:space="preserve">
     <value>Délka</value>
   </data>
-  <data name="Options_LB26" xml:space="preserve">
+  <data name="Options_lblWatched2" xml:space="preserve">
     <value>Shlédnuto</value>
   </data>
-  <data name="Options_LB27" xml:space="preserve">
+  <data name="Options_lblAnime2" xml:space="preserve">
     <value>Anime:</value>
   </data>
-  <data name="Options_LB28" xml:space="preserve">
+  <data name="Options_lblEpisodes2" xml:space="preserve">
     <value>Episod:</value>
   </data>
-  <data name="Options_LB29" xml:space="preserve">
+  <data name="Options_lblFiles2" xml:space="preserve">
     <value>Souborů:</value>
   </data>
-  <data name="Options_LB30" xml:space="preserve">
+  <data name="Options_lblTotalSize" xml:space="preserve">
     <value>Celková velikost:</value>
   </data>
-  <data name="Options_LB31" xml:space="preserve">
+  <data name="Options_AddedAnime" xml:space="preserve">
     <value>Přidaných anime:</value>
   </data>
-  <data name="Options_LB32" xml:space="preserve">
+  <data name="Options_lblAddedEpisodes" xml:space="preserve">
     <value>Přidaných episod:</value>
   </data>
-  <data name="Options_LB33" xml:space="preserve">
+  <data name="Options_lblAddedFiles" xml:space="preserve">
     <value>Přidaných souborů:</value>
   </data>
-  <data name="Options_LB34" xml:space="preserve">
+  <data name="Options_lblAddedGroups" xml:space="preserve">
     <value>Přidaných skupin:</value>
   </data>
-  <data name="Options_LB35" xml:space="preserve">
+  <data name="Options_lblLeech" xml:space="preserve">
     <value>Leech:</value>
   </data>
-  <data name="Options_LB36" xml:space="preserve">
+  <data name="Options_lblGlory" xml:space="preserve">
     <value>Glory:</value>
   </data>
-  <data name="Options_LB37" xml:space="preserve">
+  <data name="Options_lblAniDbWatched" xml:space="preserve">
     <value>AniDB Shlédnuto:</value>
   </data>
-  <data name="Options_LB38" xml:space="preserve">
+  <data name="Options_lblLocalMyList" xml:space="preserve">
     <value>Lokální MyList</value>
   </data>
-  <data name="Options_LB39" xml:space="preserve">
+  <data name="Options_lblAniDbMyList" xml:space="preserve">
     <value>AniDB Mylist</value>
   </data>
-  <data name="Options_LB40" xml:space="preserve">
+  <data name="Options_lblAniDbMylist2" xml:space="preserve">
     <value>AniDB MyList:</value>
   </data>
-  <data name="Options_LB42" xml:space="preserve">
+  <data name="Options_lblWatched3" xml:space="preserve">
     <value>Shlédnuto:</value>
   </data>
-  <data name="Options_LB43" xml:space="preserve">
+  <data name="Options_lblVotes" xml:space="preserve">
     <value>Hlasováno:</value>
   </data>
-  <data name="Options_LB44" xml:space="preserve">
+  <data name="Options_lblReviews" xml:space="preserve">
     <value>Přidaných recenzí:</value>
   </data>
-  <data name="Options_LB45" xml:space="preserve">
+  <data name="Options_lblLocalPort" xml:space="preserve">
     <value>Lokální port:</value>
   </data>
-  <data name="Options_LB46" xml:space="preserve">
+  <data name="Options_lblGroups" xml:space="preserve">
     <value>Skupin:</value>
   </data>
-  <data name="Options_LB47" xml:space="preserve">
+  <data name="Options_lblTotalLength" xml:space="preserve">
     <value>Celková délka:</value>
   </data>
   <data name="Options_MylistOk" xml:space="preserve">
@@ -420,37 +420,37 @@
   <data name="Options_StartComunicationOn" xml:space="preserve">
     <value>Odpojit</value>
   </data>
-  <data name="Options_VL07" xml:space="preserve">
+  <data name="Options_lblTvSeries" xml:space="preserve">
     <value>TV Série:</value>
   </data>
-  <data name="Options_VL08" xml:space="preserve">
+  <data name="Options_lblTvSpecials" xml:space="preserve">
     <value>TV Speciály:</value>
   </data>
-  <data name="Options_VL09" xml:space="preserve">
+  <data name="Options_lblMovies" xml:space="preserve">
     <value>Filmy:</value>
   </data>
-  <data name="Options_VL10" xml:space="preserve">
+  <data name="Options_lblOva" xml:space="preserve">
     <value>OVA:</value>
   </data>
-  <data name="Options_VL11" xml:space="preserve">
+  <data name="Options_lblWww" xml:space="preserve">
     <value>Www:</value>
   </data>
-  <data name="Options_VL12" xml:space="preserve">
+  <data name="Options_lblOthers" xml:space="preserve">
     <value>Ostatní:</value>
   </data>
-  <data name="Options_VL13" xml:space="preserve">
+  <data name="Options_lblUnknown" xml:space="preserve">
     <value>Neznámé:</value>
   </data>
-  <data name="Options_VL43" xml:space="preserve">
+  <data name="Options_lblUnknown2" xml:space="preserve">
     <value>Neznámé:</value>
   </data>
-  <data name="Options_VL44" xml:space="preserve">
+  <data name="Options_lblOnHdd" xml:space="preserve">
     <value>Na HDD:</value>
   </data>
-  <data name="Options_VL45" xml:space="preserve">
+  <data name="Options_lblOnOptical" xml:space="preserve">
     <value>Na CD/DVD:</value>
   </data>
-  <data name="Options_VL46" xml:space="preserve">
+  <data name="Options_lblDeleted" xml:space="preserve">
     <value>Smazáno:</value>
   </data>
   <data name="Rules_FilesRulesMoveAdd" xml:space="preserve">
@@ -465,16 +465,16 @@
   <data name="Rules_FilesRulesRenameDel" xml:space="preserve">
     <value>Vymazat</value>
   </data>
-  <data name="Rules_GR01" xml:space="preserve">
+  <data name="Rules_RulesForFileRenaming" xml:space="preserve">
     <value>Pravidla pro přejmenování souborů</value>
   </data>
-  <data name="Rules_GR02" xml:space="preserve">
+  <data name="Rules_RulesForCreatingDirectories" xml:space="preserve">
     <value>Pravidla pro vytváření adresářů</value>
   </data>
-  <data name="Rules_GR03" xml:space="preserve">
+  <data name="Rules_RulesForCharacterReplacing" xml:space="preserve">
     <value>Pravidla pro nahrazování znaků</value>
   </data>
-  <data name="StatusBar_Mn01" xml:space="preserve">
+  <data name="StatusBar_TasksRemaining" xml:space="preserve">
     <value>Zbývá úloh:</value>
   </data>
   <data name="Add_Add" xml:space="preserve">
@@ -504,10 +504,10 @@
   <data name="DataFiles_Today" xml:space="preserve">
     <value>Dnes</value>
   </data>
-  <data name="Rules_FilesRulesMove_RB01" xml:space="preserve">
+  <data name="Rules_FilesRulesMoveMove" xml:space="preserve">
     <value>Přesunout</value>
   </data>
-  <data name="Rules_FilesRulesMove_RB02" xml:space="preserve">
+  <data name="Rules_FilesRulesMoveCopy" xml:space="preserve">
     <value>Kopírovat</value>
   </data>
   <data name="DataFiles_Menu_Rename" xml:space="preserve">
@@ -714,7 +714,7 @@
   <data name="Options_DeleteDuplicates" xml:space="preserve">
     <value>Vymazat zdvojené soubory</value>
   </data>
-  <data name="Rules_FilesRulesMove_RB03" xml:space="preserve">
+  <data name="Rules_FilesRulesMoveDoNothing" xml:space="preserve">
     <value>Nedělat nic</value>
   </data>
   <data name="StatusBar_ConnectLBOff" xml:space="preserve">
@@ -750,10 +750,10 @@
   <data name="MessageBox_RenameI" xml:space="preserve">
     <value>Opravdu chcete přepsat soubor, který již existuje.</value>
   </data>
-  <data name="Options_VL21" xml:space="preserve">
+  <data name="Options_lblSummary" xml:space="preserve">
     <value>Celkem:</value>
   </data>
-  <data name="Options_VL25" xml:space="preserve">
+  <data name="Options_lblSummary2" xml:space="preserve">
     <value>Celkem:</value>
   </data>
   <data name="Hash_Delete" xml:space="preserve">
@@ -765,28 +765,28 @@
   <data name="MessageBox_DB" xml:space="preserve">
     <value>Soubor OriginalDatabase.mdb neexistuje!</value>
   </data>
-  <data name="Options_VL66" xml:space="preserve">
+  <data name="Options_lblMusicVideo" xml:space="preserve">
     <value>Music Video</value>
   </data>
-  <data name="Options_LB48" xml:space="preserve">
+  <data name="Options_lblStorage2" xml:space="preserve">
     <value>Úložiště</value>
   </data>
-  <data name="Options_LB49" xml:space="preserve">
+  <data name="Options_lblSource2" xml:space="preserve">
     <value>Zdroj</value>
   </data>
-  <data name="Rules_FilesRulesRename_RB01" xml:space="preserve">
+  <data name="Rules_FilesRulesRenameRename" xml:space="preserve">
     <value>Přejmenovat</value>
   </data>
-  <data name="Rules_FilesRulesRename_RB02" xml:space="preserve">
+  <data name="Rules_FilesRulesRenameDoNothing" xml:space="preserve">
     <value>Nedělat nic</value>
   </data>
-  <data name="Rules_CH01" xml:space="preserve">
+  <data name="Rules_AutomaticRenaming" xml:space="preserve">
     <value>Automaticky přejmenovat</value>
   </data>
-  <data name="Rules_CH02" xml:space="preserve">
+  <data name="Rules_DontCopyToAnotherDisk" xml:space="preserve">
     <value>Nekopírovat/Nepřesouvat na jiný disk</value>
   </data>
-  <data name="Rules_CH03" xml:space="preserve">
+  <data name="Rules_ReplaceExisting" xml:space="preserve">
     <value>Nahrazovat existující soubory</value>
   </data>
   <data name="DataFilesTree_Clear2" xml:space="preserve">
@@ -804,7 +804,7 @@
   <data name="MainTabLog_Error" xml:space="preserve">
     <value>Error</value>
   </data>
-  <data name="Options_VL86" xml:space="preserve">
+  <data name="Options_lblAdult2" xml:space="preserve">
     <value>18+:</value>
   </data>
   <data name="DataFiles_Menu_Download" xml:space="preserve">
@@ -828,7 +828,7 @@
   <data name="Options_CompactAndRepairDb" xml:space="preserve">
     <value>Komprimovat a opravit databázi</value>
   </data>
-  <data name="StatusBar_Mn03" xml:space="preserve">
+  <data name="StatusBar_Status" xml:space="preserve">
     <value>Status:</value>
   </data>
   <data name="StatusBar_Mn04_Off" xml:space="preserve">
@@ -898,7 +898,7 @@ AniSub je alternativou za AOM. AniSub je malý, rychlý a hlavně také nenáro�
 
 Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlašovací jméno a heslo:</value>
   </data>
-  <data name="Rules_LB01" xml:space="preserve">
+  <data name="Rules_NumberPosition" xml:space="preserve">
     <value>Pozice čísel:</value>
   </data>
   <data name="DataFiles_Menu_ExportSha1" xml:space="preserve">
@@ -907,7 +907,7 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="Hash_Waiting" xml:space="preserve">
     <value>Čekání:</value>
   </data>
-  <data name="StatusBar_Mn05" xml:space="preserve">
+  <data name="StatusBar_Version" xml:space="preserve">
     <value>Verze: </value>
   </data>
   <data name="DataFiles_Name" xml:space="preserve">
@@ -925,7 +925,7 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="Watcher_Add" xml:space="preserve">
     <value>Přidat</value>
   </data>
-  <data name="Watcher_CH01" xml:space="preserve">
+  <data name="Watcher_Enable" xml:space="preserve">
     <value>Povolit</value>
   </data>
   <data name="Watcher_Delete" xml:space="preserve">
@@ -946,7 +946,7 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="Options_MyListRefreshMin" xml:space="preserve">
     <value>Aktualizace statistik (minimální)</value>
   </data>
-  <data name="Options_MyList_GR01" xml:space="preserve">
+  <data name="Options_MyListUpdate" xml:space="preserve">
     <value>Aktualizace</value>
   </data>
   <data name="DataFilesTree_Clear" xml:space="preserve">
@@ -1144,28 +1144,28 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="MainTabManga_MyList" xml:space="preserve">
     <value>MyList</value>
   </data>
-  <data name="Options_LB50" xml:space="preserve">
+  <data name="Options_lblMyList" xml:space="preserve">
     <value>MyList</value>
   </data>
-  <data name="Options_LB51" xml:space="preserve">
+  <data name="Options_lblManga" xml:space="preserve">
     <value>Manga</value>
   </data>
-  <data name="Options_LB53" xml:space="preserve">
+  <data name="Options_lblVolumes" xml:space="preserve">
     <value>Volumes</value>
   </data>
-  <data name="Options_LB55" xml:space="preserve">
+  <data name="Options_lblChapters" xml:space="preserve">
     <value>Chapters</value>
   </data>
-  <data name="Options_LB57" xml:space="preserve">
+  <data name="Options_lblFileSize" xml:space="preserve">
     <value>Velikost souborů</value>
   </data>
-  <data name="Options_LB59" xml:space="preserve">
+  <data name="Options_lblRead" xml:space="preserve">
     <value>Přečteno</value>
   </data>
-  <data name="Options_LB61" xml:space="preserve">
+  <data name="Options_lblTotalPages" xml:space="preserve">
     <value>Celkem stránek</value>
   </data>
-  <data name="Options_LB63" xml:space="preserve">
+  <data name="Options_lblAdult" xml:space="preserve">
     <value>18+</value>
   </data>
   <data name="Options_MyListRefreshManga" xml:space="preserve">
@@ -1237,16 +1237,16 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="Options_DeleteDb" xml:space="preserve">
     <value>Vymazat databázi</value>
   </data>
-  <data name="Options_LB66" xml:space="preserve">
+  <data name="Options_lblRead2" xml:space="preserve">
     <value>Přečteno</value>
   </data>
-  <data name="Options_LB67" xml:space="preserve">
+  <data name="Options_lblUnread" xml:space="preserve">
     <value>Nepřečteno</value>
   </data>
   <data name="MainTabData_Graphs" xml:space="preserve">
     <value>Grafy</value>
   </data>
-  <data name="Zgc_GraphB04" xml:space="preserve">
+  <data name="Zgc_WatchedTimeline" xml:space="preserve">
     <value>Časová posloupnost shlédnutí</value>
   </data>
   <data name="DataFilesTree_ReverseFilter" xml:space="preserve">
@@ -1333,16 +1333,16 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="MainTab_About" xml:space="preserve">
     <value>O programu AniSub</value>
   </data>
-  <data name="Options_LB68" xml:space="preserve">
+  <data name="Options_lblResetCount" xml:space="preserve">
     <value>Počet opakování:</value>
   </data>
   <data name="Options_ClassicFolderSelectDialog" xml:space="preserve">
     <value>Klasický dialog pro vybrání adresáře</value>
   </data>
-  <data name="Rules_GR04" xml:space="preserve">
+  <data name="Rules_ExportInfo" xml:space="preserve">
     <value>Exportovat informace</value>
   </data>
-  <data name="Rules_InfoRB01" xml:space="preserve">
+  <data name="Rules_InfoExport" xml:space="preserve">
     <value>Exportovat</value>
   </data>
   <data name="Options_ShowAdultOnWelcomeScreen" xml:space="preserve">
@@ -1402,7 +1402,7 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="Options_FlatStyle" xml:space="preserve">
     <value>Plochý vzhled</value>
   </data>
-  <data name="Rules_CH04" xml:space="preserve">
+  <data name="Rules_DeleteSourceIfEmpty" xml:space="preserve">
     <value>Smazat adresář pokud je prázdný</value>
   </data>
   <data name="DataFiles_Files" xml:space="preserve">
@@ -1417,7 +1417,7 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="MessageBox_Restart" xml:space="preserve">
     <value>AniSub bude restartován. Prosím o strpení.</value>
   </data>
-  <data name="Options_LB69" xml:space="preserve">
+  <data name="Options_lblDbBackupCount" xml:space="preserve">
     <value>Počet záloh DB</value>
   </data>
   <data name="Manga_MyAnimeListUrl" xml:space="preserve">

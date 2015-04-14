@@ -106,7 +106,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\Communication.cs" />
+    <Compile Include="Utilities\Communication.cs" />
     <Compile Include="Helpers\OtherHelpers.cs" />
     <Compile Include="Utilities\AniDbClient2.cs" />
     <Compile Include="Utilities\AniDbMsgs.cs" />

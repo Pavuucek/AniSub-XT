@@ -34,8 +34,8 @@ namespace AniDBClient.Forms
 {
     public partial class Main : Form
     {
-        private Utilities.Database db = new Database();
-        private AniDbClient2 aniDBClient = null;
+        public Utilities.Database db = new Database();
+        public AniDbClient2 aniDBClient = null;
         private string GlobalAdresar = null;
         private string GlobalAdresarAccount = null;
         private string AniSubV = "84";
@@ -62,7 +62,7 @@ namespace AniDBClient.Forms
         private string ComunicationW_DataReceive = null;
         private string ComunicationW_DataSend = null;
         private string ComunicationW_Task = "";
-        private string AniDBSessions = null;
+        public string AniDBSessions = null;
         private string MangaUrlObr = "";
         private string Hash_String;
         #endregion
@@ -74,12 +74,13 @@ namespace AniDBClient.Forms
         #endregion
 
         #region IMPORT
-        private AniDbMsgs AniDBStatus = AniDbMsgs.A_DISCONNECT;
+        public AniDbMsgs AniDBStatus = AniDbMsgs.A_DISCONNECT;
         private List<string> FRename_List = new List<string>();
         private List<object[]> GlobalMyList = new List<object[]>();
         private FileInfo Watcher_SouborOldM = null;
         private FileInfo Watcher_SouborOldR = null;
         private UnZipRar UnZip = new UnZipRar();
+        private readonly Communication _communication;
 
         #endregion
 
@@ -130,6 +131,12 @@ namespace AniDBClient.Forms
                     }
                 }
             }
+            _communication = new Communication(this);
+        }
+
+        public Communication Communication
+        {
+            get { return _communication; }
         }
 
         //Spojení cross-instance
@@ -207,13 +214,13 @@ namespace AniDBClient.Forms
                     if (Exist.Rows.Count == 0)
                     {
                         db.DatabaseAdd("INSERT INTO files (files_ed2k, files_localfile, files_size, files_date) VALUES ('" + AgrsT[0].ToLower() + "', '" + AgrsT[1] + "', " + AgrsT[2] + ", NOW())");
-                        ComunicationNewTask("FILE size=" + AgrsT[2] + "&ed2k=" + AgrsT[0].ToLower() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
+                        Communication.ComunicationNewTask("FILE size=" + AgrsT[2] + "&ed2k=" + AgrsT[0].ToLower() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
 
                     }
                     else
                     {
                         db.DatabaseAdd("UPDATE files SET files_localfile='" + AgrsT[1] + "', files_date=NOW() WHERE files_ed2k='" + AgrsT[0].ToLower() + "'");
-                        ComunicationNewTask("FILE size=" + AgrsT[2] + "&ed2k=" + AgrsT[0].ToLower() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
+                        Communication.ComunicationNewTask("FILE size=" + AgrsT[2] + "&ed2k=" + AgrsT[0].ToLower() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
                     }
                 }
             }
@@ -1572,7 +1579,7 @@ namespace AniDBClient.Forms
             foreach (DataRow row in dataTable.Rows)
             {
                 Application.DoEvents();
-                ComunicationNewTaskKO(row["task_task"].ToString());
+                Communication.ComunicationNewTaskKO(row["task_task"].ToString());
             }
 
             db.DatabaseAdd("UPDATE files SET files_date=NOW() WHERE ((Len([files].[files_date] & '')=0))");
@@ -1588,7 +1595,7 @@ namespace AniDBClient.Forms
             foreach (DataRow row in dataTable.Rows)
             {
                 Application.DoEvents();
-                ComunicationNewTask("FILE size=" + row["files_size"] + "&ed2k=" + row["files_ed2k"] + "&fmask=7FFAFFF9&amask=FEE0F0C1");
+                Communication.ComunicationNewTask("FILE size=" + row["files_size"] + "&ed2k=" + row["files_ed2k"] + "&fmask=7FFAFFF9&amask=FEE0F0C1");
             }
 
             //Načtení Unknown files
@@ -1596,7 +1603,7 @@ namespace AniDBClient.Forms
             foreach (DataRow row in dataTable.Rows)
             {
                 Application.DoEvents();
-                ComunicationNewTask("FILE fid=" + row["id_files"] + "&fmask=7FFAFFF9&amask=FEE0F0C1");
+                Communication.ComunicationNewTask("FILE fid=" + row["id_files"] + "&fmask=7FFAFFF9&amask=FEE0F0C1");
             }
 
             logger.LogAddError("CHECK > U N K N O W N   F I L E S   W E R E   C H E C K E D");
@@ -1623,7 +1630,7 @@ namespace AniDBClient.Forms
                 {
                     Application.DoEvents();
                     if (!Epizody.Contains(i.ToString()))
-                        ComunicationNewTask("EPISODE aid=" + row["id_anime"] + "&epno=" + i.ToString());
+                        Communication.ComunicationNewTask("EPISODE aid=" + row["id_anime"] + "&epno=" + i.ToString());
                 }
             }
 
@@ -1639,7 +1646,7 @@ namespace AniDBClient.Forms
             {
                 Application.DoEvents();
                 if (row["id_files"].ToString() == "")
-                    ComunicationNewTask("MYLIST aid=" + row["id_anime"] + "&epno=" + row["episodes_epn"]);
+                    Communication.ComunicationNewTask("MYLIST aid=" + row["id_anime"] + "&epno=" + row["episodes_epn"]);
             }
 
             logger.LogAddError("CHECK > E P I S O D E S   W E R E   C H E C K E D");
@@ -1674,7 +1681,7 @@ namespace AniDBClient.Forms
                 else
                     db.DatabaseSelect("DELETE FROM files WHERE id_files_local=" + IDFile.Rows[1]["id_files_local"]);
 
-                ComunicationNewTask("FILE fid=" + IDFile.Rows[0]["id_files"] + "&fmask=7FFAFFF9&amask=FEE0F0C1");
+                Communication.ComunicationNewTask("FILE fid=" + IDFile.Rows[0]["id_files"] + "&fmask=7FFAFFF9&amask=FEE0F0C1");
             }
 
             logger.LogAddError("CHECK > D O U B L E   F I L E S   W E R E   C H E C K E D");
@@ -3066,317 +3073,15 @@ namespace AniDBClient.Forms
         }
 
         //Odešli správu + log
-        private void CommunicationSend(string message)
-        {
-            while (true)
-            {
-                if (aniDBClient.Status != AniDbClient2.SocketMsgs.SSending)
-                    break;
-
-                Thread.Sleep(500);
-            }
-
-            if (!message.Contains("PING") &&
-                !message.Contains("AUTH") &&
-                !message.Contains("LOGOUT") &&
-                !message.Contains("MYLISTSTATS"))
-                message += "&s=" + AniDBSessions;
-
-            byte[] buffer = aniDBClient.ConvertToByte(message);
-            aniDBClient.Send(buffer, 0, buffer.Length);
-        }
 
         //Získej zprávu + log
-        private string CommunicationReceive()
-        {
-            if (aniDBClient.SocketAniDb != null)
-            {
-                while (true)
-                {
-                    Thread.Sleep(500);
-                    if (aniDBClient.Status != AniDbClient2.SocketMsgs.SReceiveing)
-                        break;
-                }
-
-                Thread.Sleep(500);
-
-                int nBytesReceive = aniDBClient.SocketAniDb.Available;
-
-                int k = 0;
-
-                while (nBytesReceive == 0)
-                {
-                    nBytesReceive = aniDBClient.SocketAniDb.Available;
-                    Thread.Sleep(500);
-                    k++;
-                    if (k > 10)
-                    {
-                        nBytesReceive = 10240;
-                        break;
-                    }
-                }
-
-                byte[] buffer = new byte[nBytesReceive];
-
-
-                buffer = aniDBClient.Receive(buffer, 0, nBytesReceive);
-
-                string message = aniDBClient.ConvertFromByte(buffer);
-
-                if (message != null)
-                {
-                    message = message.Replace("\0", "");
-                    message = message.Replace("\n", "\r\n");
-                }
-                else
-                    message = "";
-
-                AniDBMsgsParser(message);
-
-                return message;
-            }
-
-            return "";
-        }
 
         //Zjisti zprávu
-        private void AniDBMsgsParser(string message)
-        {
-            if (message != null)
-            {
-                if (message.Length > 0)
-                {
-                    if (message.Contains("\n"))
-                    {
-                        AniDBStatus = AniDbMsgs.A__NOTHING_;
 
-                        string[] T = message.Split('\n');
-
-                        if (T[0].Contains("CONNECT"))
-                            AniDBStatus = AniDbMsgs.A_CONNECT;
-
-                        if (T[0].Contains("DISCONNECT"))
-                            AniDBStatus = AniDbMsgs.A_DISCONNECT;
-
-                        if (T[0].Contains("ILLEGAL INPUT"))
-                            AniDBStatus = AniDbMsgs.A_ILLEGAL_INPUT;
-
-                        if (T[0].Contains("BANNED"))
-                            AniDBStatus = AniDbMsgs.A_BANNED;
-
-                        if (T[0].Contains("UNKNOWN COMMAND"))
-                            AniDBStatus = AniDbMsgs.A_UNKNOWN_COMMAND;
-
-                        if (T[0].Contains("INTERNAL SERVER ERROR"))
-                            AniDBStatus = AniDbMsgs.A_INTERNAL_SERVER_ERROR;
-
-                        if (T[0].Contains("OUT OF SERVICE"))
-                            AniDBStatus = AniDbMsgs.A_OUT_OF_SERVICE;
-
-                        if (T[0].Contains("SERVER BUSY"))
-                            AniDBStatus = AniDbMsgs.A_SERVER_BUSY;
-
-                        if (T[0].Contains("LOGIN FIRST"))
-                            AniDBStatus = AniDbMsgs.A_LOGIN_FIRST;
-
-                        if (T[0].Contains("ACCESS DENIED"))
-                            AniDBStatus = AniDbMsgs.A_ACCESS_DENIED;
-
-                        if (T[0].Contains("INVALID SESSION"))
-                            AniDBStatus = AniDbMsgs.A_INVALID_SESSION;
-
-                        if (T[0].Contains("ERROR"))
-                            AniDBStatus = AniDbMsgs.A_ERROR;
-
-                        if (T[0].Contains("AUTH"))
-                            AniDBStatus = AniDbMsgs.A_AUTH;
-
-                        if (T[0].Contains("A_AUTH"))
-                            AniDBStatus = AniDbMsgs.A_SERVER_BUSY;
-
-                        if (T[0].Contains("LOGOUT"))
-                            AniDBStatus = AniDbMsgs.A_LOGOUT;
-
-                        if (T[0].Contains("LOGGED OUT"))
-                            AniDBStatus = AniDbMsgs.A_LOGGED_OUT;
-
-                        if (T[0].Contains("LOGIN ACCEPTED"))
-                            AniDBStatus = AniDbMsgs.A_LOGIN_ACCEPTED;
-
-                        if (T[0].Contains("LOGIN ACCEPTED NEW VER"))
-                            AniDBStatus = AniDbMsgs.A_LOGIN_ACCEPTED_NEW_VER;
-
-                        if (T[0].Contains("LOGIN FAILED"))
-                            AniDBStatus = AniDbMsgs.A_LOGIN_FAILED;
-
-                        if (T[0].Contains("CLIENT BANNED"))
-                            AniDBStatus = AniDbMsgs.A_CLIENT_BANNED;
-
-                        if (T[0].Contains("NOT LOGGED"))
-                            AniDBStatus = AniDbMsgs.A_NOT_LOGGED;
-
-                        if (T[0].Contains("NOTIFICATION ENABLED"))
-                            AniDBStatus = AniDbMsgs.A_NOTIFICATION_ENABLED;
-
-                        if (T[0].Contains("NOTIFICATION DISABLED"))
-                            AniDBStatus = AniDbMsgs.A_NOTIFICATION_DISABLED;
-
-                        if (T[0].Contains("NOTIFYLIST"))
-                            AniDBStatus = AniDbMsgs.A_NOTIFYLIST;
-
-                        if (T[0].Contains("NOTIFYGET"))
-                            AniDBStatus = AniDbMsgs.A_NOTIFYGET;
-
-                        if (T[0].Contains("NO SUCH ENTRY"))
-                            AniDBStatus = AniDbMsgs.A_NO_SUCH_ENTRY;
-
-                        if (T[0].Contains("NOTIFYACK"))
-                            AniDBStatus = AniDbMsgs.A_NOTIFYACK;
-
-                        if (T[0].Contains("BUDDYDEL"))
-                            AniDBStatus = AniDbMsgs.A_BUDDYDEL;
-
-                        if (T[0].Contains("BUDDYACCEPT"))
-                            AniDBStatus = AniDbMsgs.A_BUDDYACCEPT;
-
-                        if (T[0].Contains("BUDDYDENY"))
-                            AniDBStatus = AniDbMsgs.A_BUDDYDENY;
-
-                        if (T[0].Contains("BUDDYLIST"))
-                            AniDBStatus = AniDbMsgs.A_BUDDYLIST;
-
-                        if (T[0].Contains("ANIME"))
-                            AniDBStatus = AniDbMsgs.A_ANIME;
-
-                        if (T[0].Contains("NO SUCH ANIME"))
-                            AniDBStatus = AniDbMsgs.A_NO_SUCH_ANIME;
-
-                        if (T[0].Contains("EPISODE"))
-                            AniDBStatus = AniDbMsgs.A_EPISODE;
-
-                        if (T[0].Contains("NO SUCH EPISODE"))
-                            AniDBStatus = AniDbMsgs.A_NO_SUCH_EPISODE;
-
-                        if (T[0].Contains("FILE"))
-                            AniDBStatus = AniDbMsgs.A_FILE;
-
-                        if (T[0].Contains("NO SUCH FILE"))
-                            AniDBStatus = AniDbMsgs.A_NO_SUCH_FILE;
-
-                        if (T[0].Contains("MULTIPLE FILES FOUND"))
-                            AniDBStatus = AniDbMsgs.A_MULTIPLE_FILES_FOUND;
-
-                        if (T[0].Contains("GROUP"))
-                            AniDBStatus = AniDbMsgs.A_GROUP;
-
-                        if (T[0].Contains("NO SUCH GROUP"))
-                            AniDBStatus = AniDbMsgs.A_NO_SUCH_GROUP;
-
-                        if (T[0].Contains("GROUPSTATUS"))
-                            AniDBStatus = AniDbMsgs.A_GROUPSTATUS;
-
-                        if (T[0].Contains("MYLIST"))
-                            AniDBStatus = AniDbMsgs.A_MYLIST;
-
-                        if (T[0].Contains("NO SUCH MYLIST ENTRY"))
-                            AniDBStatus = AniDbMsgs.A_NO_SUCH_MYLIST_ENTRY;
-
-                        if (T[0].Contains("MULTIPLE MYLIST ENTRIES"))
-                            AniDBStatus = AniDbMsgs.A_MULTIPLE_MYLIST_ENTRIES;
-
-                        if (T[0].Contains("MYLISTADD"))
-                            AniDBStatus = AniDbMsgs.A_MYLISTADD;
-
-                        if (T[0].Contains("MYLIST ENTRY ADDED"))
-                            AniDBStatus = AniDbMsgs.A_MYLIST_ENTRY_ADDED;
-
-                        if (T[0].Contains("FILE ALREADY IN MYLIST"))
-                            AniDBStatus = AniDbMsgs.A_FILE_ALREADY_IN_MYLIST;
-
-                        if (T[0].Contains("MULTIPLE FILES FOUND"))
-                            AniDBStatus = AniDbMsgs.A_MULTIPLE_FILES_FOUND;
-
-                        if (T[0].Contains("MYLISTDEL"))
-                            AniDBStatus = AniDbMsgs.A_MYLISTDEL;
-
-                        if (T[0].Contains("MYLIST ENTRY DELETED"))
-                            AniDBStatus = AniDbMsgs.A_MYLIST_ENTRY_DELETED;
-
-                        if (T[0].Contains("MYLIST STATS"))
-                            AniDBStatus = AniDbMsgs.A_MYLISTSTATS;
-
-                        if (T[0].Contains("VOTE"))
-                            AniDBStatus = AniDbMsgs.A_VOTE;
-
-                        if (T[0].Contains("INVALID VOTE TYPE"))
-                            AniDBStatus = AniDbMsgs.A_INVALID_VOTE_TYPE;
-
-                        if (T[0].Contains("PERMVOTE NOT ALLOWED"))
-                            AniDBStatus = AniDbMsgs.A_PERMVOTE_NOT_ALLOWED;
-
-                        if (T[0].Contains("RANDOMANIME"))
-                            AniDBStatus = AniDbMsgs.A_RANDOMANIME;
-
-                        if (T[0].Contains("MYLISTEXPORT"))
-                            AniDBStatus = AniDbMsgs.A_MYLISTEXPORT;
-
-                        if (T[0].Contains("PING"))
-                            AniDBStatus = AniDbMsgs.A_VOTE;
-
-                        if (T[0].Contains("PONG"))
-                            AniDBStatus = AniDbMsgs.A_PONG;
-
-                        if (T[0].Contains("VERSION"))
-                            AniDBStatus = AniDbMsgs.A_VERSION;
-
-                        if (T[0].Contains("UPTIME"))
-                            AniDBStatus = AniDbMsgs.A_UPTIME;
-
-                        if (T[0].Contains("USER"))
-                            AniDBStatus = AniDbMsgs.A_USER;
-
-                        if (T[0].Contains("UNKNOWN COMMAND"))
-                            AniDBStatus = AniDbMsgs.A_UNKNOWN_COMMAND;
-
-                        if (T[0].Contains("LOGIN FIRST"))
-                            AniDBStatus = AniDbMsgs.A_LOGIN_FIRST;
-
-                        if (T[0].Contains("MYLIST ENTRY EDITED"))
-                            AniDBStatus = AniDbMsgs.A_MYLIST_ENTRY_EDITED;
-                    }
-                    else
-                        AniDBStatus = AniDbMsgs.A_DISCONNECT;
-                }
-                else
-                    AniDBStatus = AniDbMsgs.A_DISCONNECT;
-            }
-            else
-                AniDBStatus = AniDbMsgs.A_DISCONNECT;
-        }
-
-       
 
         //Úlohy pro připojení
-        private void ComunicationNewTask(string Task)
-        {
-            if (!LogTasks.Items.Contains(Task))
-            {
-                LogTasks.Items.Add(Task);
-                StatusBar_Mn02.Text = LogTasks.Items.Count.ToString();
-
-                db.DatabaseAdd("INSERT INTO task (task_task) VALUES ('" + Task + "')");
-            }
-        }
 
         //Úlohy pro připojení
-        private void ComunicationNewTaskKO(string Task)
-        {
-            if (!LogTasks.Items.Contains(Task))
-            {
-                StatusBar_Mn02.Text = LogTasks.Items.Count.ToString();
-                LogTasks.Items.Add(Task);
-            }
-        }
 
         //Recconcet
         private void ComunicationRec_Tick(object sender, EventArgs e)
@@ -3398,11 +3103,11 @@ namespace AniDBClient.Forms
                 aniDBClient.Connnect();
 
                 ComunicationW_DataSend = "AUTH user=" + Options_User.Text + "&pass=" + Options_Password.Text + "&protover=3&client=" + AniSubC + "&clientver=" + AniSubV + "&enc=utf8";
-                CommunicationSend(ComunicationW_DataSend);
+                Communication.CommunicationSend(ComunicationW_DataSend);
                 ComunicationW_DataSend = ComunicationW_DataSend.Replace(Options_Password.Text, "XXXX");
                 ComunicationW_WaitW("Send");
 
-                ComunicationW_DataReceive = CommunicationReceive();
+                ComunicationW_DataReceive = Communication.CommunicationReceive();
                 ComunicationW_WaitW("Receive");
             }
             else if (AniDBSessions == null)
@@ -3458,10 +3163,10 @@ namespace AniDBClient.Forms
                                 break;
 
                             ComunicationW_DataSend = LogTasks.Items[0].ToString();
-                            CommunicationSend(ComunicationW_DataSend);
+                            Communication.CommunicationSend(ComunicationW_DataSend);
                             ComunicationW_WaitW("Send");
 
-                            ComunicationW_DataReceive = CommunicationReceive();
+                            ComunicationW_DataReceive = Communication.CommunicationReceive();
 
                             if (AniDBStatus == AniDbMsgs.A_DISCONNECT || ComunicationW_ReLogIn || AniDBStatus == AniDbMsgs.A_LOGIN_FIRST)
                             {
@@ -3500,10 +3205,10 @@ namespace AniDBClient.Forms
                         if (AniDBSessions != null)
                         {
                             ComunicationW_DataSend = "LOGOUT s=" + AniDBSessions;
-                            CommunicationSend(ComunicationW_DataSend);
+                            Communication.CommunicationSend(ComunicationW_DataSend);
                             ComunicationW_WaitW("Send");
 
-                            ComunicationW_DataReceive = CommunicationReceive();
+                            ComunicationW_DataReceive = Communication.CommunicationReceive();
 
                             ComunicationW_Task = "";
                             ComunicationW_WaitW("Receive");
@@ -3698,7 +3403,7 @@ namespace AniDBClient.Forms
                             {
                                 string fid = Parse(ComunicationW_DataSend, "fid=", "&", false);
                                 if (fid != "")
-                                    ComunicationNewTask("MYLIST fid=" + fid);
+                                    Communication.ComunicationNewTask("MYLIST fid=" + fid);
                             }
                         }
 
@@ -3828,7 +3533,7 @@ namespace AniDBClient.Forms
                     if (ComunicationW_DataReceive.Contains("|N|N|N|N|N|N|N|N"))
                     {
                         db.DatabaseAdd("INSERT INTO anime (id_anime, anime_rok, anime_typ, anime_nazevjap, anime_nazevkaj, anime_nazeveng, anime_watched, anime_seen, anime_rating, anime_18, anime_epn_spec, anime_epn) VALUES (" + T[0] + ", '" + T[1] + "', '" + T[2] + "', '" + T[6] + "', '" + T[7] + "', '" + T[8] + "', 0, #" + Database.DateFormat(new DateTime(2000, 1, 1)) + "#, 0, 0, 0, 0)");
-                        ComunicationNewTask("ANIME aid=" + T[0] + "&amask=BEE0FE01");
+                        Communication.ComunicationNewTask("ANIME aid=" + T[0] + "&amask=BEE0FE01");
                     }
                     else
                         db.DatabaseAdd("INSERT INTO anime (id_anime, anime_rok, anime_typ, anime_nazevjap, anime_nazevkaj, anime_nazeveng, anime_epn, anime_epn_spec, anime_date_air, anime_date_end, anime_url, anime_obr, anime_18, anime_watched) VALUES (" + T[0] + ", '" + T[1] + "', '" + T[2] + "', '" + T[6] + "', '" + T[7] + "', '" + T[8] + "', " + T[10] + ", " + T[11] + ", #" + Database.DateFormat(GetDateFromSeconds(T[13])) + "#, #" + Database.DateFormat(GetDateFromSeconds(T[12])) + "#, '" + T[14] + "', '" + T[15] + "', " + T[16] + ", 0)");
@@ -3928,7 +3633,7 @@ namespace AniDBClient.Forms
                     {
                         db.DatabaseAdd("INSERT INTO files (files_lid, files_status, files_other, files_source, files_storage, id_files, files_date) VALUES (" + T[0] + ", " + T[6] + ", '" + T[10] + "', '" + T[9] + "', '" + T[8] + "', " + T[1] + ", NOW())");
                         db.DatabaseAdd("UPDATE files SET files_watched=" + Watched + ", files_lid=" + T[0] + ", files_dateAdded=#" + Database.DateFormat(GetDateFromSeconds(T[5])) + "#, files_status=" + T[6] + ", files_other='" + T[10] + "', files_seen=#" + Database.DateFormat(GetDateFromSeconds(T[7])) + "#, files_source='" + T[9] + "', files_storage='" + T[8] + "' WHERE id_files=" + T[1]);
-                        ComunicationNewTask("FILE fid=" + T[1] + "&fmask=7FFAFFF9&amask=FEE0F0C1");
+                        Communication.ComunicationNewTask("FILE fid=" + T[1] + "&fmask=7FFAFFF9&amask=FEE0F0C1");
                     }
                 }
                 else
@@ -4087,7 +3792,7 @@ namespace AniDBClient.Forms
                 db.DatabaseAdd("UPDATE files SET files_depth='" + T[13] + "', files_sha1='" + T[11] + "', files_date_air=#" + Database.DateFormat(GetDateFromSeconds(T[26])) + "#, files_anidb_name='" + T[27].Replace("'", "''") + "', files_biterate_audio=" + T[17] + ", files_biterate_video=" + T[19] + ", files_extension='" + T[21] + "', files_lenght=" + T[24] + ", id_files=" + T[0] + ", id_episodes=" + T[2] + ", id_anime=" + T[1] + ", id_groups=" + T[3] + ", files_lid=" + T[4] + ", files_crc32='" + T[12] + "', files_md5='" + T[10] + "', files_dub='" + T[22] + "', files_sub='" + T[23] + "', files_quality='" + T[14].Replace("'", "''") + "', files_audio='" + T[16].Replace("'", "''") + "', files_video='" + T[18] + "', files_resultion='" + T[20] + "', files_typ='" + T[15] + "', files_state=" + T[7] + " WHERE files_ed2k='" + T[9] + "' AND files_size=" + T[8]);
 
                 if (dataTableIDFile.Rows.Count == 0 && Options_DetectMyListStatusCheckBox.Checked)
-                    ComunicationNewTask("MYLIST fid=" + T[0]);
+                    Communication.ComunicationNewTask("MYLIST fid=" + T[0]);
 
                 dataTable = db.DatabaseSelect("SELECT * FROM groups WHERE id_groups=" + T[3]);
 
@@ -4168,7 +3873,7 @@ namespace AniDBClient.Forms
                 {
                     if (Episodes[i] > AnimeEpn)
                     {
-                        ComunicationNewTask("ANIME aid=" + T[1] + "&amask=BEE0FE01");
+                        Communication.ComunicationNewTask("ANIME aid=" + T[1] + "&amask=BEE0FE01");
 
                         dataTable = db.DatabaseSelect("SELECT * FROM episodes WHERE id_anime=" + T[1]);
 
@@ -4179,7 +3884,7 @@ namespace AniDBClient.Forms
 
                         for (int j = 1; j <= AnimeEpn; j++)
                             if (!Epizody.Contains(j.ToString()))
-                                ComunicationNewTask("EPISODE aid=" + T[1] + "&epno=" + j.ToString());
+                                Communication.ComunicationNewTask("EPISODE aid=" + T[1] + "&epno=" + j.ToString());
                     }
 
                     dataTable = db.DatabaseSelect("SELECT * FROM episodes WHERE id_episodes=" + T[2] + " AND episodes_epn=" + Episodes[i].ToString());
@@ -4207,11 +3912,11 @@ namespace AniDBClient.Forms
                         Watched = "1";
 
                     if (x > 0)
-                        ComunicationNewTask("MYLISTADD edit=1&fid=" + T[0] + "&source=" + Options_MylistSource.Text + "&storage=" + Options_MylistStorage.Text + "&other=" + Options_MylistOther.Text + "&state=" + Options_MylistState.SelectedIndex.ToString() + "&viewed=" + Watched);
+                        Communication.ComunicationNewTask("MYLISTADD edit=1&fid=" + T[0] + "&source=" + Options_MylistSource.Text + "&storage=" + Options_MylistStorage.Text + "&other=" + Options_MylistOther.Text + "&state=" + Options_MylistState.SelectedIndex.ToString() + "&viewed=" + Watched);
                     else
-                        ComunicationNewTask("MYLISTADD edit=0&fid=" + T[0] + "&source=" + Options_MylistSource.Text + "&storage=" + Options_MylistStorage.Text + "&other=" + Options_MylistOther.Text + "&state=" + Options_MylistState.SelectedIndex.ToString() + "&viewed=" + Watched);
+                        Communication.ComunicationNewTask("MYLISTADD edit=0&fid=" + T[0] + "&source=" + Options_MylistSource.Text + "&storage=" + Options_MylistStorage.Text + "&other=" + Options_MylistOther.Text + "&state=" + Options_MylistState.SelectedIndex.ToString() + "&viewed=" + Watched);
 
-                    ComunicationNewTask("MYLIST fid=" + T[0]);
+                    Communication.ComunicationNewTask("MYLIST fid=" + T[0]);
                 }
 
                 if (Rules_AutomaticRenamingCheckBox.Checked)
@@ -4228,7 +3933,7 @@ namespace AniDBClient.Forms
             else
             {
                 if (!ComunicationW_Task.Contains("&amask=FEE080C1"))
-                    ComunicationNewTask(ComunicationW_Task.Replace("&amask=FEE0F0C1", "&amask=FEE080C1"));
+                    Communication.ComunicationNewTask(ComunicationW_Task.Replace("&amask=FEE0F0C1", "&amask=FEE080C1"));
 
                 logger.LogAddError("Input string isn't valid format: " + ComunicationW_DataReceive + ", Array lenght != 45");
             }
@@ -6463,10 +6168,10 @@ namespace AniDBClient.Forms
                     if (Id[2] != "0")
                     {
                         if (Id[1] != "-1" && Id[1] != "0")
-                            ComunicationNewTask("MYLISTADD edit=1&fid=" + Id[1] + "&source=" + MSource + "&storage=" + MStorage + "&other=" + MOther + "&state=" + MState + "&viewed=" + MWatched);
+                            Communication.ComunicationNewTask("MYLISTADD edit=1&fid=" + Id[1] + "&source=" + MSource + "&storage=" + MStorage + "&other=" + MOther + "&state=" + MState + "&viewed=" + MWatched);
                     }
                     else if (Id[1] != "-1" && Id[1] != "0")
-                        ComunicationNewTask("MYLISTADD edit=0&fid=" + Id[1] + "&source=" + MSource + "&storage=" + MStorage + "&other=" + MOther + "&state=" + MState + "&viewed=" + MWatched);
+                        Communication.ComunicationNewTask("MYLISTADD edit=0&fid=" + Id[1] + "&source=" + MSource + "&storage=" + MStorage + "&other=" + MOther + "&state=" + MState + "&viewed=" + MWatched);
                 }
             }
         }
@@ -6479,7 +6184,7 @@ namespace AniDBClient.Forms
                 string[] Id = (string[])DataFiles[0, Row.Index].Value;
 
                 if (Id[1] != "-1" && Id[1] != "0" && Id[2] != "0")
-                    ComunicationNewTask("MYLISTDEL fid=" + Id[1]);
+                    Communication.ComunicationNewTask("MYLISTDEL fid=" + Id[1]);
             }
         }
 
@@ -6493,10 +6198,10 @@ namespace AniDBClient.Forms
                 if (Id[2] != "0")
                 {
                     if (Id[1] != "-1" && Id[1] != "0")
-                        ComunicationNewTask("MYLISTADD edit=1&fid=" + Id[1] + "&state=1&viewed=1");
+                        Communication.ComunicationNewTask("MYLISTADD edit=1&fid=" + Id[1] + "&state=1&viewed=1");
                 }
                 else if (Id[1] != "-1" && Id[1] != "0")
-                    ComunicationNewTask("MYLISTADD edit=0&fid=" + Id[1] + "&state=1&viewed=1");
+                    Communication.ComunicationNewTask("MYLISTADD edit=0&fid=" + Id[1] + "&state=1&viewed=1");
             }
         }
 
@@ -6522,9 +6227,9 @@ namespace AniDBClient.Forms
                 DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + Id[0]);
 
                 if (Convert.ToInt32(DFiles.Rows[0]["id_anime"].ToString()) > 0)
-                    ComunicationNewTask("ANIME aid=" + DFiles.Rows[0]["id_anime"].ToString() + "&amask=BEE0FE01");
+                    Communication.ComunicationNewTask("ANIME aid=" + DFiles.Rows[0]["id_anime"].ToString() + "&amask=BEE0FE01");
                 else
-                    ComunicationNewTask("FILE size=" + DFiles.Rows[0]["files_size"].ToString() + "&ed2k=" + DFiles.Rows[0]["files_ed2k"].ToString() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
+                    Communication.ComunicationNewTask("FILE size=" + DFiles.Rows[0]["files_size"].ToString() + "&ed2k=" + DFiles.Rows[0]["files_ed2k"].ToString() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
             }
         }
 
@@ -6539,11 +6244,11 @@ namespace AniDBClient.Forms
                 DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + Id[0]);
 
                 if (Convert.ToInt32(DFiles.Rows[0]["id_episodes"].ToString()) > 0)
-                    ComunicationNewTask("EPISODE eid=" + DFiles.Rows[0]["id_episodes"].ToString());
+                    Communication.ComunicationNewTask("EPISODE eid=" + DFiles.Rows[0]["id_episodes"].ToString());
                 else if (Convert.ToInt32(DFiles.Rows[0]["id_anime"].ToString()) > 0)
-                    ComunicationNewTask("ANIME aid=" + DFiles.Rows[0]["id_anime"].ToString() + "&amask=BEE0FE01");
+                    Communication.ComunicationNewTask("ANIME aid=" + DFiles.Rows[0]["id_anime"].ToString() + "&amask=BEE0FE01");
                 else
-                    ComunicationNewTask("FILE size=" + DFiles.Rows[0]["files_size"].ToString() + "&ed2k=" + DFiles.Rows[0]["files_ed2k"].ToString() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
+                    Communication.ComunicationNewTask("FILE size=" + DFiles.Rows[0]["files_size"].ToString() + "&ed2k=" + DFiles.Rows[0]["files_ed2k"].ToString() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
             }
         }
 
@@ -6557,7 +6262,7 @@ namespace AniDBClient.Forms
                 string[] Id = (string[])DataFiles[0, Row.Index].Value;
                 DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + Id[0]);
 
-                ComunicationNewTask("FILE size=" + DFiles.Rows[0]["files_size"].ToString() + "&ed2k=" + DFiles.Rows[0]["files_ed2k"].ToString() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
+                Communication.ComunicationNewTask("FILE size=" + DFiles.Rows[0]["files_size"].ToString() + "&ed2k=" + DFiles.Rows[0]["files_ed2k"].ToString() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
             }
         }
 
@@ -6572,9 +6277,9 @@ namespace AniDBClient.Forms
                 DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + Id[0]);
 
                 if (Convert.ToInt32(DFiles.Rows[0]["id_files"].ToString()) > 0)
-                    ComunicationNewTask("MYLIST fid=" + DFiles.Rows[0]["id_files"].ToString());
+                    Communication.ComunicationNewTask("MYLIST fid=" + DFiles.Rows[0]["id_files"].ToString());
                 else
-                    ComunicationNewTask("FILE size=" + DFiles.Rows[0]["files_size"].ToString() + "&ed2k=" + DFiles.Rows[0]["files_ed2k"].ToString() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
+                    Communication.ComunicationNewTask("FILE size=" + DFiles.Rows[0]["files_size"].ToString() + "&ed2k=" + DFiles.Rows[0]["files_ed2k"].ToString() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
             }
         }
 
@@ -7346,7 +7051,7 @@ namespace AniDBClient.Forms
                     DataTable DFile = db.DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + DataFilesTree.SelectedNode.Name);
 
                     if (DFile.Rows.Count > 0)
-                        ComunicationNewTask("MYLISTADD edit=1&fid=" + DFile.Rows[0]["id_files"] + "&source=" + MSource + "&storage=" + MStorage + "&other=" + MOther + "&state=" + MState + "&viewed=" + MWatched);
+                        Communication.ComunicationNewTask("MYLISTADD edit=1&fid=" + DFile.Rows[0]["id_files"] + "&source=" + MSource + "&storage=" + MStorage + "&other=" + MOther + "&state=" + MState + "&viewed=" + MWatched);
                 }
             }
             else if (DataFilesTree.SelectedNode.Name != null)
@@ -7390,9 +7095,9 @@ namespace AniDBClient.Forms
 
                     foreach (DataRow Row in DFiles.Rows)
                         if (Row["files_lid"].ToString() != "0")
-                            ComunicationNewTask("MYLISTADD edit=1&fid=" + Row["id_files"] + "&source=" + MSource + "&storage=" + MStorage + "&other=" + MOther + "&state=" + MState + "&viewed=" + MWatched);
+                            Communication.ComunicationNewTask("MYLISTADD edit=1&fid=" + Row["id_files"] + "&source=" + MSource + "&storage=" + MStorage + "&other=" + MOther + "&state=" + MState + "&viewed=" + MWatched);
                         else
-                            ComunicationNewTask("MYLISTADD edit=0&fid=" + Row["id_files"] + "&source=" + MSource + "&storage=" + MStorage + "&other=" + MOther + "&state=" + MState + "&viewed=" + MWatched);
+                            Communication.ComunicationNewTask("MYLISTADD edit=0&fid=" + Row["id_files"] + "&source=" + MSource + "&storage=" + MStorage + "&other=" + MOther + "&state=" + MState + "&viewed=" + MWatched);
                 }
             }
         }
@@ -7404,14 +7109,14 @@ namespace AniDBClient.Forms
             {
                 DataTable DFile = db.DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + DataFilesTree.SelectedNode.Name);
 
-                ComunicationNewTask("MYLISTDEL fid=" + DFile.Rows[0]["id_files"]);
+                Communication.ComunicationNewTask("MYLISTDEL fid=" + DFile.Rows[0]["id_files"]);
             }
             else if (DataFilesTree.SelectedNode.Name != null)
             {
                 DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_anime=" + DataFilesTree.SelectedNode.Name);
 
                 foreach (DataRow Row in DFiles.Rows)
-                    ComunicationNewTask("MYLISTDEL fid=" + Row["id_files"]);
+                    Communication.ComunicationNewTask("MYLISTDEL fid=" + Row["id_files"]);
             }
         }
 
@@ -7423,9 +7128,9 @@ namespace AniDBClient.Forms
                 DataTable DFile = db.DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + DataFilesTree.SelectedNode.Name);
 
                 if (DFile.Rows[0]["files_lid"].ToString() != "0")
-                    ComunicationNewTask("MYLISTADD edit=1&fid=" + DFile.Rows[0]["id_files"] + "&viewed=1");
+                    Communication.ComunicationNewTask("MYLISTADD edit=1&fid=" + DFile.Rows[0]["id_files"] + "&viewed=1");
                 else
-                    ComunicationNewTask("MYLISTADD edit=0&fid=" + DFile.Rows[0]["id_files"] + "&viewed=1");
+                    Communication.ComunicationNewTask("MYLISTADD edit=0&fid=" + DFile.Rows[0]["id_files"] + "&viewed=1");
             }
             else if (DataFilesTree.SelectedNode.Name != null)
             {
@@ -7433,9 +7138,9 @@ namespace AniDBClient.Forms
 
                 foreach (DataRow Row in DFiles.Rows)
                     if (Row["files_lid"].ToString() != "0")
-                        ComunicationNewTask("MYLISTADD edit=1&fid=" + Row["id_files"] + "&viewed=1");
+                        Communication.ComunicationNewTask("MYLISTADD edit=1&fid=" + Row["id_files"] + "&viewed=1");
                     else
-                        ComunicationNewTask("MYLISTADD edit=0&fid=" + Row["id_files"] + "&viewed=1");
+                        Communication.ComunicationNewTask("MYLISTADD edit=0&fid=" + Row["id_files"] + "&viewed=1");
             }
         }
 
@@ -7449,13 +7154,13 @@ namespace AniDBClient.Forms
                 DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + DataFilesTree.SelectedNode.Name);
 
                 if (Convert.ToInt32(DFiles.Rows[0]["id_anime"].ToString()) > 0)
-                    ComunicationNewTask("ANIME aid=" + DFiles.Rows[0]["id_anime"].ToString() + "&amask=BEE0FE01");
+                    Communication.ComunicationNewTask("ANIME aid=" + DFiles.Rows[0]["id_anime"].ToString() + "&amask=BEE0FE01");
                 else
-                    ComunicationNewTask("FILE size=" + DFiles.Rows[0]["files_size"].ToString() + "&ed2k=" + DFiles.Rows[0]["files_ed2k"].ToString() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
+                    Communication.ComunicationNewTask("FILE size=" + DFiles.Rows[0]["files_size"].ToString() + "&ed2k=" + DFiles.Rows[0]["files_ed2k"].ToString() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
             }
             else if (DataFilesTree.SelectedNode.Name != null)
             {
-                ComunicationNewTask("ANIME aid=" + DataFilesTree.SelectedNode.Name + "&amask=BEE0FE01");
+                Communication.ComunicationNewTask("ANIME aid=" + DataFilesTree.SelectedNode.Name + "&amask=BEE0FE01");
             }
         }
 
@@ -7469,11 +7174,11 @@ namespace AniDBClient.Forms
                 DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + DataFilesTree.SelectedNode.Name);
 
                 if (Convert.ToInt32(DFiles.Rows[0]["id_episodes"].ToString()) > 0)
-                    ComunicationNewTask("EPISODE eid=" + DFiles.Rows[0]["id_episodes"].ToString());
+                    Communication.ComunicationNewTask("EPISODE eid=" + DFiles.Rows[0]["id_episodes"].ToString());
                 else if (Convert.ToInt32(DFiles.Rows[0]["id_anime"].ToString()) > 0)
-                    ComunicationNewTask("ANIME aid=" + DFiles.Rows[0]["id_anime"].ToString() + "&amask=BEE0FE01");
+                    Communication.ComunicationNewTask("ANIME aid=" + DFiles.Rows[0]["id_anime"].ToString() + "&amask=BEE0FE01");
                 else
-                    ComunicationNewTask("FILE size=" + DFiles.Rows[0]["files_size"].ToString() + "&ed2k=" + DFiles.Rows[0]["files_ed2k"].ToString() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
+                    Communication.ComunicationNewTask("FILE size=" + DFiles.Rows[0]["files_size"].ToString() + "&ed2k=" + DFiles.Rows[0]["files_ed2k"].ToString() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
             }
             else if (DataFilesTree.SelectedNode.Name != null)
             {
@@ -7482,11 +7187,11 @@ namespace AniDBClient.Forms
                 for (int i = 0; i < DFiles.Rows.Count; i++)
                 {
                     if (Convert.ToInt32(DFiles.Rows[i]["id_episodes"].ToString()) > 0)
-                        ComunicationNewTask("EPISODE eid=" + DFiles.Rows[i]["id_episodes"].ToString());
+                        Communication.ComunicationNewTask("EPISODE eid=" + DFiles.Rows[i]["id_episodes"].ToString());
                     else if (Convert.ToInt32(DFiles.Rows[0]["id_anime"].ToString()) > 0)
-                        ComunicationNewTask("ANIME aid=" + DFiles.Rows[i]["id_anime"].ToString() + "&amask=BEE0FE01");
+                        Communication.ComunicationNewTask("ANIME aid=" + DFiles.Rows[i]["id_anime"].ToString() + "&amask=BEE0FE01");
                     else
-                        ComunicationNewTask("FILE size=" + DFiles.Rows[i]["files_size"].ToString() + "&ed2k=" + DFiles.Rows[i]["files_ed2k"].ToString() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
+                        Communication.ComunicationNewTask("FILE size=" + DFiles.Rows[i]["files_size"].ToString() + "&ed2k=" + DFiles.Rows[i]["files_ed2k"].ToString() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
                 }
             }
         }
@@ -7500,14 +7205,14 @@ namespace AniDBClient.Forms
             {
                 DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + DataFilesTree.SelectedNode.Name);
 
-                ComunicationNewTask("FILE size=" + DFiles.Rows[0]["files_size"].ToString() + "&ed2k=" + DFiles.Rows[0]["files_ed2k"].ToString() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
+                Communication.ComunicationNewTask("FILE size=" + DFiles.Rows[0]["files_size"].ToString() + "&ed2k=" + DFiles.Rows[0]["files_ed2k"].ToString() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
             }
             else if (DataFilesTree.SelectedNode.Name != null)
             {
                 DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_anime=" + DataFilesTree.SelectedNode.Name);
 
                 for (int i = 0; i < DFiles.Rows.Count; i++)
-                    ComunicationNewTask("FILE size=" + DFiles.Rows[i]["files_size"].ToString() + "&ed2k=" + DFiles.Rows[i]["files_ed2k"].ToString() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
+                    Communication.ComunicationNewTask("FILE size=" + DFiles.Rows[i]["files_size"].ToString() + "&ed2k=" + DFiles.Rows[i]["files_ed2k"].ToString() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
             }
         }
 
@@ -7521,9 +7226,9 @@ namespace AniDBClient.Forms
                 DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + DataFilesTree.SelectedNode.Name);
 
                 if (Convert.ToInt32(DFiles.Rows[0]["id_files"].ToString()) > 0)
-                    ComunicationNewTask("MYLIST fid=" + DFiles.Rows[0]["id_files"].ToString());
+                    Communication.ComunicationNewTask("MYLIST fid=" + DFiles.Rows[0]["id_files"].ToString());
                 else
-                    ComunicationNewTask("FILE size=" + DFiles.Rows[0]["files_size"].ToString() + "&ed2k=" + DFiles.Rows[0]["files_ed2k"].ToString() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
+                    Communication.ComunicationNewTask("FILE size=" + DFiles.Rows[0]["files_size"].ToString() + "&ed2k=" + DFiles.Rows[0]["files_ed2k"].ToString() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
             }
             else if (DataFilesTree.SelectedNode.Name != null)
             {
@@ -7532,9 +7237,9 @@ namespace AniDBClient.Forms
                 for (int i = 0; i < DFiles.Rows.Count; i++)
                 {
                     if (Convert.ToInt32(DFiles.Rows[i]["id_files"].ToString()) > 0)
-                        ComunicationNewTask("MYLIST fid=" + DFiles.Rows[i]["id_files"].ToString());
+                        Communication.ComunicationNewTask("MYLIST fid=" + DFiles.Rows[i]["id_files"].ToString());
                     else
-                        ComunicationNewTask("FILE size=" + DFiles.Rows[i]["files_size"].ToString() + "&ed2k=" + DFiles.Rows[i]["files_ed2k"].ToString() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
+                        Communication.ComunicationNewTask("FILE size=" + DFiles.Rows[i]["files_size"].ToString() + "&ed2k=" + DFiles.Rows[i]["files_ed2k"].ToString() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
                 }
             }
         }
@@ -8285,9 +7990,9 @@ namespace AniDBClient.Forms
 
                         foreach (DataRow RowF in DFiles.Rows)
                             if (RowF["files_lid"].ToString() != "0")
-                                ComunicationNewTask("MYLISTADD edit=1&fid=" + RowF["id_files"] + "&source=" + MSource + "&storage=" + MStorage + "&other=" + MOther + "&state=" + MState + "&viewed=" + MWatched);
+                                Communication.ComunicationNewTask("MYLISTADD edit=1&fid=" + RowF["id_files"] + "&source=" + MSource + "&storage=" + MStorage + "&other=" + MOther + "&state=" + MState + "&viewed=" + MWatched);
                             else
-                                ComunicationNewTask("MYLISTADD edit=0&fid=" + RowF["id_files"] + "&source=" + MSource + "&storage=" + MStorage + "&other=" + MOther + "&state=" + MState + "&viewed=" + MWatched);
+                                Communication.ComunicationNewTask("MYLISTADD edit=0&fid=" + RowF["id_files"] + "&source=" + MSource + "&storage=" + MStorage + "&other=" + MOther + "&state=" + MState + "&viewed=" + MWatched);
                     }
                     else if (WTF[1] && !WTF[2])
                     {
@@ -8295,18 +8000,18 @@ namespace AniDBClient.Forms
 
                         foreach (DataRow RowF in DFiles.Rows)
                             if (RowF["files_lid"].ToString() != "0")
-                                ComunicationNewTask("MYLISTADD edit=1&fid=" + RowF["id_files"] + "&source=" + MSource + "&storage=" + MStorage + "&other=" + MOther + "&state=" + MState + "&viewed=" + MWatched);
+                                Communication.ComunicationNewTask("MYLISTADD edit=1&fid=" + RowF["id_files"] + "&source=" + MSource + "&storage=" + MStorage + "&other=" + MOther + "&state=" + MState + "&viewed=" + MWatched);
                             else
-                                ComunicationNewTask("MYLISTADD edit=0&fid=" + RowF["id_files"] + "&source=" + MSource + "&storage=" + MStorage + "&other=" + MOther + "&state=" + MState + "&viewed=" + MWatched);
+                                Communication.ComunicationNewTask("MYLISTADD edit=0&fid=" + RowF["id_files"] + "&source=" + MSource + "&storage=" + MStorage + "&other=" + MOther + "&state=" + MState + "&viewed=" + MWatched);
                     }
                     else if (!WTF[1] && WTF[2])
                     {
                         string[] Id = DataAnime[3, Row.Index].Value.ToString().Split('/');
 
                         if (Id[1] != "0")
-                            ComunicationNewTask("MYLISTADD edit=1&fid=" + Id[0] + "&source=" + MSource + "&storage=" + MStorage + "&other=" + MOther + "&state=" + MState + "&viewed=" + MWatched);
+                            Communication.ComunicationNewTask("MYLISTADD edit=1&fid=" + Id[0] + "&source=" + MSource + "&storage=" + MStorage + "&other=" + MOther + "&state=" + MState + "&viewed=" + MWatched);
                         else
-                            ComunicationNewTask("MYLISTADD edit=0&fid=" + Id[0] + "&source=" + MSource + "&storage=" + MStorage + "&other=" + MOther + "&state=" + MState + "&viewed=" + MWatched);
+                            Communication.ComunicationNewTask("MYLISTADD edit=0&fid=" + Id[0] + "&source=" + MSource + "&storage=" + MStorage + "&other=" + MOther + "&state=" + MState + "&viewed=" + MWatched);
                     }
                 }
             }
@@ -8324,7 +8029,7 @@ namespace AniDBClient.Forms
                     DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_anime=" + DataAnime[3, Row.Index].Value.ToString());
 
                     foreach (DataRow RowF in DFiles.Rows)
-                        ComunicationNewTask("MYLISTDEL fid=" + RowF["id_files"]);
+                        Communication.ComunicationNewTask("MYLISTDEL fid=" + RowF["id_files"]);
                 }
 
                 if (WTF[1] && !WTF[2])
@@ -8332,7 +8037,7 @@ namespace AniDBClient.Forms
                     DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_episodes=" + DataAnime[3, Row.Index].Value.ToString());
 
                     foreach (DataRow RowF in DFiles.Rows)
-                        ComunicationNewTask("MYLISTDEL fid=" + RowF["id_files"]);
+                        Communication.ComunicationNewTask("MYLISTDEL fid=" + RowF["id_files"]);
                 }
 
                 if (!WTF[1] && WTF[2])
@@ -8340,7 +8045,7 @@ namespace AniDBClient.Forms
                     string[] Id = DataAnime[3, Row.Index].Value.ToString().Split('/');
 
                     if (Id[1] != "0")
-                        ComunicationNewTask("MYLISTDEL fid=" + Id[0]);
+                        Communication.ComunicationNewTask("MYLISTDEL fid=" + Id[0]);
                 }
             }
         }
@@ -8358,9 +8063,9 @@ namespace AniDBClient.Forms
 
                     foreach (DataRow RowF in DFiles.Rows)
                         if (RowF["files_lid"].ToString() != "0")
-                            ComunicationNewTask("MYLISTADD edit=1&fid=" + RowF["id_files"] + "&state=1&viewed=1");
+                            Communication.ComunicationNewTask("MYLISTADD edit=1&fid=" + RowF["id_files"] + "&state=1&viewed=1");
                         else
-                            ComunicationNewTask("MYLISTADD edit=0&fid=" + RowF["id_files"] + "&state=1&viewed=1");
+                            Communication.ComunicationNewTask("MYLISTADD edit=0&fid=" + RowF["id_files"] + "&state=1&viewed=1");
                 }
 
                 if (WTF[1] && !WTF[2])
@@ -8369,9 +8074,9 @@ namespace AniDBClient.Forms
 
                     foreach (DataRow RowF in DFiles.Rows)
                         if (RowF["files_lid"].ToString() != "0")
-                            ComunicationNewTask("MYLISTADD edit=1&fid=" + RowF["id_files"] + "&state=1&viewed=1");
+                            Communication.ComunicationNewTask("MYLISTADD edit=1&fid=" + RowF["id_files"] + "&state=1&viewed=1");
                         else
-                            ComunicationNewTask("MYLISTADD edit=0&fid=" + RowF["id_files"] + "&state=1&viewed=1");
+                            Communication.ComunicationNewTask("MYLISTADD edit=0&fid=" + RowF["id_files"] + "&state=1&viewed=1");
                 }
 
                 if (!WTF[1] && WTF[2])
@@ -8379,9 +8084,9 @@ namespace AniDBClient.Forms
                     string[] Id = DataAnime[3, Row.Index].Value.ToString().Split('/');
 
                     if (Id[1] != "0")
-                        ComunicationNewTask("MYLISTADD edit=1&fid=" + Id[0] + "&state=1&viewed=1");
+                        Communication.ComunicationNewTask("MYLISTADD edit=1&fid=" + Id[0] + "&state=1&viewed=1");
                     else
-                        ComunicationNewTask("MYLISTADD edit=0&fid=" + Id[0] + "&state=1&viewed=1");
+                        Communication.ComunicationNewTask("MYLISTADD edit=0&fid=" + Id[0] + "&state=1&viewed=1");
                 }
             }
         }
@@ -8396,13 +8101,13 @@ namespace AniDBClient.Forms
                 bool[] WTF = (bool[])DataAnime[0, Row.Index].Value;
 
                 if (!WTF[1] && !WTF[2])
-                    ComunicationNewTask("ANIME aid=" + DataAnime[3, Row.Index].Value.ToString() + "&amask=BEE0FE01");
+                    Communication.ComunicationNewTask("ANIME aid=" + DataAnime[3, Row.Index].Value.ToString() + "&amask=BEE0FE01");
 
                 if (WTF[1] && !WTF[2])
                 {
                     DataTable DEpisodes = db.DatabaseSelect("SELECT * FROM episodes WHERE id_episodes=" + DataAnime[3, Row.Index].Value.ToString());
 
-                    ComunicationNewTask("ANIME aid=" + DEpisodes.Rows[0]["id_anime"].ToString() + "&amask=BEE0FE01");
+                    Communication.ComunicationNewTask("ANIME aid=" + DEpisodes.Rows[0]["id_anime"].ToString() + "&amask=BEE0FE01");
                 }
 
                 if (!WTF[1] && WTF[2])
@@ -8410,7 +8115,7 @@ namespace AniDBClient.Forms
                     string[] Id = DataAnime[3, Row.Index].Value.ToString().Split('/');
                     DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_files=" + Id[0]);
 
-                    ComunicationNewTask("ANIME aid=" + DFiles.Rows[0]["id_anime"].ToString() + "&amask=BEE0FE01");
+                    Communication.ComunicationNewTask("ANIME aid=" + DFiles.Rows[0]["id_anime"].ToString() + "&amask=BEE0FE01");
                 }
             }
         }
@@ -8429,11 +8134,11 @@ namespace AniDBClient.Forms
                     DataTable DEpisodes = db.DatabaseSelect("SELECT * FROM episodes WHERE id_anime=" + DataAnime[3, Row.Index].Value.ToString());
 
                     for (int i = 0; i < DEpisodes.Rows.Count; i++)
-                        ComunicationNewTask("EPISODE eid=" + DEpisodes.Rows[i]["id_episodes"].ToString());
+                        Communication.ComunicationNewTask("EPISODE eid=" + DEpisodes.Rows[i]["id_episodes"].ToString());
                 }
 
                 if (WTF[1] && !WTF[2])
-                    ComunicationNewTask("EPISODE eid=" + DataAnime[3, Row.Index].Value.ToString());
+                    Communication.ComunicationNewTask("EPISODE eid=" + DataAnime[3, Row.Index].Value.ToString());
 
                 if (!WTF[1] && WTF[2])
                 {
@@ -8441,7 +8146,7 @@ namespace AniDBClient.Forms
                     DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_files=" + Id[0]);
 
                     for (int i = 0; i < DFiles.Rows.Count; i++)
-                        ComunicationNewTask("EPISODE eid=" + DFiles.Rows[i]["id_episodes"].ToString());
+                        Communication.ComunicationNewTask("EPISODE eid=" + DFiles.Rows[i]["id_episodes"].ToString());
                 }
             }
         }
@@ -8460,7 +8165,7 @@ namespace AniDBClient.Forms
                     DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_anime=" + DataAnime[3, Row.Index].Value.ToString());
 
                     for (int i = 0; i < DFiles.Rows.Count; i++)
-                        ComunicationNewTask("FILE size=" + DFiles.Rows[i]["files_size"].ToString() + "&ed2k=" + DFiles.Rows[i]["files_ed2k"].ToString() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
+                        Communication.ComunicationNewTask("FILE size=" + DFiles.Rows[i]["files_size"].ToString() + "&ed2k=" + DFiles.Rows[i]["files_ed2k"].ToString() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
                 }
 
                 if (WTF[1] && !WTF[2])
@@ -8468,7 +8173,7 @@ namespace AniDBClient.Forms
                     DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_episodes=" + DataAnime[3, Row.Index].Value.ToString());
 
                     for (int i = 0; i < DFiles.Rows.Count; i++)
-                        ComunicationNewTask("FILE size=" + DFiles.Rows[i]["files_size"].ToString() + "&ed2k=" + DFiles.Rows[i]["files_ed2k"].ToString() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
+                        Communication.ComunicationNewTask("FILE size=" + DFiles.Rows[i]["files_size"].ToString() + "&ed2k=" + DFiles.Rows[i]["files_ed2k"].ToString() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
                 }
 
                 if (!WTF[1] && WTF[2])
@@ -8476,7 +8181,7 @@ namespace AniDBClient.Forms
                     string[] Id = DataAnime[3, Row.Index].Value.ToString().Split('/');
                     DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_files=" + Id[0]);
 
-                    ComunicationNewTask("FILE size=" + DFiles.Rows[0]["files_size"].ToString() + "&ed2k=" + DFiles.Rows[0]["files_ed2k"].ToString() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
+                    Communication.ComunicationNewTask("FILE size=" + DFiles.Rows[0]["files_size"].ToString() + "&ed2k=" + DFiles.Rows[0]["files_ed2k"].ToString() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
                 }
             }
         }
@@ -8495,7 +8200,7 @@ namespace AniDBClient.Forms
                     DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_anime=" + DataAnime[3, Row.Index].Value.ToString());
 
                     for (int i = 0; i < DFiles.Rows.Count; i++)
-                        ComunicationNewTask("MYLIST fid=" + DFiles.Rows[i]["id_files"].ToString());
+                        Communication.ComunicationNewTask("MYLIST fid=" + DFiles.Rows[i]["id_files"].ToString());
                 }
 
                 if (WTF[1] && !WTF[2])
@@ -8503,7 +8208,7 @@ namespace AniDBClient.Forms
                     DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_episodes=" + DataAnime[3, Row.Index].Value.ToString());
 
                     for (int i = 0; i < DFiles.Rows.Count; i++)
-                        ComunicationNewTask("MYLIST fid=" + DFiles.Rows[i]["id_files"].ToString());
+                        Communication.ComunicationNewTask("MYLIST fid=" + DFiles.Rows[i]["id_files"].ToString());
                 }
 
                 if (!WTF[1] && WTF[2])
@@ -8511,7 +8216,7 @@ namespace AniDBClient.Forms
                     string[] Id = DataAnime[3, Row.Index].Value.ToString().Split('/');
                     DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_files=" + Id[0]);
 
-                    ComunicationNewTask("MYLIST fid=" + DFiles.Rows[0]["id_files"].ToString());
+                    Communication.ComunicationNewTask("MYLIST fid=" + DFiles.Rows[0]["id_files"].ToString());
                 }
             }
         }
@@ -8753,7 +8458,7 @@ namespace AniDBClient.Forms
                     WBC.DownloadFileCompleted += new AsyncCompletedEventHandler(WBC_DownloadFileCompleted);
                 }
                 else
-                    ComunicationNewTask("ANIME aid=" + DAnime.Rows[0]["id_anime"].ToString() + "&amask=BEE0FE01");
+                    Communication.ComunicationNewTask("ANIME aid=" + DAnime.Rows[0]["id_anime"].ToString() + "&amask=BEE0FE01");
             }
             else
             {
@@ -9240,18 +8945,18 @@ namespace AniDBClient.Forms
 
                         foreach (DataRow RowF in DFiles.Rows)
                             if (RowF["files_lid"].ToString() != "0")
-                                ComunicationNewTask("MYLISTADD edit=1&fid=" + RowF["id_files"] + "&source=" + MSource + "&storage=" + MStorage + "&other=" + MOther + "&state=" + MState + "&viewed=" + MWatched);
+                                Communication.ComunicationNewTask("MYLISTADD edit=1&fid=" + RowF["id_files"] + "&source=" + MSource + "&storage=" + MStorage + "&other=" + MOther + "&state=" + MState + "&viewed=" + MWatched);
                             else
-                                ComunicationNewTask("MYLISTADD edit=0&fid=" + RowF["id_files"] + "&source=" + MSource + "&storage=" + MStorage + "&other=" + MOther + "&state=" + MState + "&viewed=" + MWatched);
+                                Communication.ComunicationNewTask("MYLISTADD edit=0&fid=" + RowF["id_files"] + "&source=" + MSource + "&storage=" + MStorage + "&other=" + MOther + "&state=" + MState + "&viewed=" + MWatched);
                     }
                     else if (WTF[1])
                     {
                         DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_files=" + AnimeData[5, Row.Index].Value.ToString());
 
                         if (DFiles.Rows[0]["files_lid"].ToString() != "0")
-                            ComunicationNewTask("MYLISTADD edit=1&fid=" + AnimeData[5, Row.Index].Value.ToString() + "&source=" + MSource + "&storage=" + MStorage + "&other=" + MOther + "&state=" + MState + "&viewed=" + MWatched);
+                            Communication.ComunicationNewTask("MYLISTADD edit=1&fid=" + AnimeData[5, Row.Index].Value.ToString() + "&source=" + MSource + "&storage=" + MStorage + "&other=" + MOther + "&state=" + MState + "&viewed=" + MWatched);
                         else
-                            ComunicationNewTask("MYLISTADD edit=0&fid=" + AnimeData[5, Row.Index].Value.ToString() + "&source=" + MSource + "&storage=" + MStorage + "&other=" + MOther + "&state=" + MState + "&viewed=" + MWatched);
+                            Communication.ComunicationNewTask("MYLISTADD edit=0&fid=" + AnimeData[5, Row.Index].Value.ToString() + "&source=" + MSource + "&storage=" + MStorage + "&other=" + MOther + "&state=" + MState + "&viewed=" + MWatched);
                     }
                 }
             }
@@ -9269,12 +8974,12 @@ namespace AniDBClient.Forms
                     DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_episodes=" + AnimeData[5, Row.Index].Value.ToString());
 
                     foreach (DataRow RowF in DFiles.Rows)
-                        ComunicationNewTask("MYLISTDEL fid=" + RowF["id_files"]);
+                        Communication.ComunicationNewTask("MYLISTDEL fid=" + RowF["id_files"]);
                 }
 
                 if (WTF[1])
                 {
-                    ComunicationNewTask("MYLISTDEL fid=" + AnimeData[5, Row.Index].Value.ToString());
+                    Communication.ComunicationNewTask("MYLISTDEL fid=" + AnimeData[5, Row.Index].Value.ToString());
                 }
             }
         }
@@ -9291,9 +8996,9 @@ namespace AniDBClient.Forms
                     DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_files=" + AnimeData[5, Row.Index].Value.ToString());
 
                     if (DFiles.Rows[0]["files_lid"].ToString() != "0")
-                        ComunicationNewTask("MYLISTADD edit=1&fid=" + DFiles.Rows[0]["id_files"].ToString() + "&state=1&viewed=1");
+                        Communication.ComunicationNewTask("MYLISTADD edit=1&fid=" + DFiles.Rows[0]["id_files"].ToString() + "&state=1&viewed=1");
                     else
-                        ComunicationNewTask("MYLISTADD edit=0&fid=" + DFiles.Rows[0]["id_files"].ToString() + "&state=1&viewed=1");
+                        Communication.ComunicationNewTask("MYLISTADD edit=0&fid=" + DFiles.Rows[0]["id_files"].ToString() + "&state=1&viewed=1");
                 }
                 else if (!WTF[1])
                 {
@@ -9302,9 +9007,9 @@ namespace AniDBClient.Forms
                     for (int i = 0; i < DEpisodes.Rows.Count; i++)
                     {
                         if (DEpisodes.Rows[i]["files_lid"].ToString() != "0")
-                            ComunicationNewTask("MYLISTADD edit=1&fid=" + DEpisodes.Rows[0]["id_files"].ToString() + "&state=1&viewed=1");
+                            Communication.ComunicationNewTask("MYLISTADD edit=1&fid=" + DEpisodes.Rows[0]["id_files"].ToString() + "&state=1&viewed=1");
                         else
-                            ComunicationNewTask("MYLISTADD edit=0&fid=" + DEpisodes.Rows[0]["id_files"].ToString() + "&state=1&viewed=1");
+                            Communication.ComunicationNewTask("MYLISTADD edit=0&fid=" + DEpisodes.Rows[0]["id_files"].ToString() + "&state=1&viewed=1");
                     }
                 }
             }
@@ -9378,7 +9083,7 @@ namespace AniDBClient.Forms
         {
             AnimeData_Menu.Hide();
 
-            ComunicationNewTask("ANIME aid=" + AnimeTree.SelectedNode.Name + "&amask=BEE0FE01");
+            Communication.ComunicationNewTask("ANIME aid=" + AnimeTree.SelectedNode.Name + "&amask=BEE0FE01");
         }
 
         //Aktualizace - Episodes
@@ -9391,7 +9096,7 @@ namespace AniDBClient.Forms
                 bool[] T = (bool[])AnimeData[0, row.Index].Value;
 
                 if (!T[1])
-                    ComunicationNewTask("EPISODE eid=" + AnimeData[5, row.Index].Value.ToString());
+                    Communication.ComunicationNewTask("EPISODE eid=" + AnimeData[5, row.Index].Value.ToString());
             }
         }
 
@@ -9405,7 +9110,7 @@ namespace AniDBClient.Forms
                 bool[] T = (bool[])AnimeData[0, row.Index].Value;
 
                 if (T[1])
-                    ComunicationNewTask("FILE fid=" + AnimeData[5, row.Index].Value.ToString() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
+                    Communication.ComunicationNewTask("FILE fid=" + AnimeData[5, row.Index].Value.ToString() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
             }
         }
 
@@ -9419,7 +9124,7 @@ namespace AniDBClient.Forms
                 bool[] T = (bool[])AnimeData[0, row.Index].Value;
 
                 if (T[1])
-                    ComunicationNewTask("MYLIST fid=" + AnimeData[5, row.Index].Value.ToString());
+                    Communication.ComunicationNewTask("MYLIST fid=" + AnimeData[5, row.Index].Value.ToString());
             }
         }
 
@@ -9468,7 +9173,7 @@ namespace AniDBClient.Forms
                 WBC.DownloadFileCompleted += new AsyncCompletedEventHandler(WBC_DownloadFileCompleted);
             }
             else
-                ComunicationNewTask("ANIME aid=" + DAnime.Rows[0]["id_anime"].ToString() + "&amask=BEE0FE01");
+                Communication.ComunicationNewTask("ANIME aid=" + DAnime.Rows[0]["id_anime"].ToString() + "&amask=BEE0FE01");
         }
 
         //Kliknutí na odkaz
@@ -9502,7 +9207,7 @@ namespace AniDBClient.Forms
         {
             AnimeTree_Menu.Hide();
 
-            ComunicationNewTask("ANIME aid=" + AnimeTree.SelectedNode.Name + "&amask=BEE0FE01");
+            Communication.ComunicationNewTask("ANIME aid=" + AnimeTree.SelectedNode.Name + "&amask=BEE0FE01");
         }
 
         //Aktualizace - Episodes
@@ -9536,12 +9241,12 @@ namespace AniDBClient.Forms
                 {
                 }
 
-                ComunicationNewTask("EPISODE eid=" + DEpisodes.Rows[i]["id_episodes"].ToString());
+                Communication.ComunicationNewTask("EPISODE eid=" + DEpisodes.Rows[i]["id_episodes"].ToString());
             }
 
             for (int i = 1; i <= x; i++)
                 if (!Dily.Contains(i))
-                    ComunicationNewTask("EPISODE aid=" + AnimeTree.SelectedNode.Name + "&epno=" + i.ToString());
+                    Communication.ComunicationNewTask("EPISODE aid=" + AnimeTree.SelectedNode.Name + "&epno=" + i.ToString());
         }
 
         //Aktualizace - Files
@@ -9552,7 +9257,7 @@ namespace AniDBClient.Forms
             DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_anime=" + AnimeTree.SelectedNode.Name);
 
             for (int i = 0; i < DFiles.Rows.Count; i++)
-                ComunicationNewTask("FILE size=" + DFiles.Rows[i]["files_size"].ToString() + "&ed2k=" + DFiles.Rows[i]["files_ed2k"].ToString() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
+                Communication.ComunicationNewTask("FILE size=" + DFiles.Rows[i]["files_size"].ToString() + "&ed2k=" + DFiles.Rows[i]["files_ed2k"].ToString() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
         }
 
         //Aktualizace - Mylist
@@ -9586,12 +9291,12 @@ namespace AniDBClient.Forms
                 {
                 }
 
-                ComunicationNewTask("MYLIST fid=" + DFiles.Rows[i]["id_files"].ToString());
+                Communication.ComunicationNewTask("MYLIST fid=" + DFiles.Rows[i]["id_files"].ToString());
             }
 
             for (int i = 1; i <= x; i++)
                 if (!Dily.Contains(i))
-                    ComunicationNewTask("MYLIST aid=" + AnimeTree.SelectedNode.Name + "&epno=" + i.ToString());
+                    Communication.ComunicationNewTask("MYLIST aid=" + AnimeTree.SelectedNode.Name + "&epno=" + i.ToString());
         }
 
         //Aktualizace - All
@@ -10876,16 +10581,16 @@ namespace AniDBClient.Forms
                     switch (Add_Text02.SelectedIndex)
                     {
                         case 0:
-                            ComunicationNewTask("ANIME aid=" + Add_Text01.Text + "&amask=BEE0FE01");
+                            Communication.ComunicationNewTask("ANIME aid=" + Add_Text01.Text + "&amask=BEE0FE01");
                             break;
 
                         case 1:
-                            ComunicationNewTask("FILE fid=" + Add_Text01.Text + "&fmask=7FFAFFF9&amask=FEE0F0C1");
-                            ComunicationNewTask("MYLIST fid=" + Add_Text01.Text);
+                            Communication.ComunicationNewTask("FILE fid=" + Add_Text01.Text + "&fmask=7FFAFFF9&amask=FEE0F0C1");
+                            Communication.ComunicationNewTask("MYLIST fid=" + Add_Text01.Text);
                             break;
 
                         case 2:
-                            ComunicationNewTask("EPISODE eid=" + Add_Text01.Text);
+                            Communication.ComunicationNewTask("EPISODE eid=" + Add_Text01.Text);
                             break;
                     }
                 }
@@ -11632,7 +11337,7 @@ namespace AniDBClient.Forms
                                                 if (dataTable.Rows.Count == 1)
                                                 {
                                                     db.DatabaseAdd("UPDATE files set files_size='" + CtiSoubor.Length + "', files_localfile='" + CtiSoubor.FullName.Replace("'", "''") + "' WHERE files_crc32='" + T[T.Length - 1] + "'");
-                                                    ComunicationNewTask("FILE size=" + CtiSoubor.Length + "&ed2k=" + dataTable.Rows[0]["files_ed2k"].ToString().ToLower() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
+                                                    Communication.ComunicationNewTask("FILE size=" + CtiSoubor.Length + "&ed2k=" + dataTable.Rows[0]["files_ed2k"].ToString().ToLower() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
                                                 }
                                                 else if (Options_ExtensionList.Items.Contains(CtiSoubor.Extension.ToLower()))
                                                 {
@@ -11680,7 +11385,7 @@ namespace AniDBClient.Forms
                                                 if (dataTable.Rows.Count == 1)
                                                 {
                                                     db.DatabaseAdd("UPDATE files set files_size='" + CtiSoubor.Length + "', files_localfile='" + CtiSoubor.FullName.Replace("'", "''") + "' WHERE files_md5='" + T[0].Replace(" ", "").ToLower() + "'");
-                                                    ComunicationNewTask("FILE size=" + CtiSoubor.Length + "&ed2k=" + dataTable.Rows[0]["files_ed2k"].ToString().ToLower() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
+                                                    Communication.ComunicationNewTask("FILE size=" + CtiSoubor.Length + "&ed2k=" + dataTable.Rows[0]["files_ed2k"].ToString().ToLower() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
                                                 }
                                                 else if (Options_ExtensionList.Items.Contains(CtiSoubor.Extension.ToLower()))
                                                 {
@@ -11728,7 +11433,7 @@ namespace AniDBClient.Forms
                                                 if (dataTable.Rows.Count == 1)
                                                 {
                                                     db.DatabaseAdd("UPDATE files set files_size='" + CtiSoubor.Length + "', files_localfile='" + CtiSoubor.FullName.Replace("'", "''") + "' WHERE files_ed2k='" + T[4].ToLower() + "'");
-                                                    ComunicationNewTask("FILE size=" + CtiSoubor.Length + "&ed2k=" + dataTable.Rows[0]["files_ed2k"].ToString().ToLower() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
+                                                    Communication.ComunicationNewTask("FILE size=" + CtiSoubor.Length + "&ed2k=" + dataTable.Rows[0]["files_ed2k"].ToString().ToLower() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
                                                 }
                                                 else if (Options_ExtensionList.Items.Contains(CtiSoubor.Extension.ToLower()))
                                                     InitializeComponentArgs(T[4].ToLower() + "*" + CtiSoubor.FullName + "*" + CtiSoubor.Length);
@@ -12423,7 +12128,7 @@ namespace AniDBClient.Forms
 
             if (x != -1)
                 foreach (DataGridViewRow row in DataSQL.SelectedRows)
-                    ComunicationNewTask("ANIME aid=" + DataSQL[x, row.Index].Value.ToString() + "&amask=BEE0FE01");
+                    Communication.ComunicationNewTask("ANIME aid=" + DataSQL[x, row.Index].Value.ToString() + "&amask=BEE0FE01");
         }
 
         //Aktualizace episod
@@ -12440,7 +12145,7 @@ namespace AniDBClient.Forms
 
             if (x != -1)
                 foreach (DataGridViewRow row in DataSQL.SelectedRows)
-                    ComunicationNewTask("EPISODE eid=" + DataSQL[x, row.Index].Value.ToString());
+                    Communication.ComunicationNewTask("EPISODE eid=" + DataSQL[x, row.Index].Value.ToString());
         }
 
         //Aktualizace souborů
@@ -12457,7 +12162,7 @@ namespace AniDBClient.Forms
 
             if (x != -1)
                 foreach (DataGridViewRow row in DataSQL.SelectedRows)
-                    ComunicationNewTask("FILE fid=" + DataSQL[x, row.Index].Value.ToString() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
+                    Communication.ComunicationNewTask("FILE fid=" + DataSQL[x, row.Index].Value.ToString() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
         }
 
         //Aktualizace Mylist
@@ -12474,7 +12179,7 @@ namespace AniDBClient.Forms
 
             if (x != -1)
                 foreach (DataGridViewRow row in DataSQL.SelectedRows)
-                    ComunicationNewTask("MYLIST fid=" + DataSQL[x, row.Index].Value.ToString());
+                    Communication.ComunicationNewTask("MYLIST fid=" + DataSQL[x, row.Index].Value.ToString());
         }
 
         //Apliku SQL dotaz

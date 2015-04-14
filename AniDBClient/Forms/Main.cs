@@ -286,9 +286,9 @@ namespace AniDBClient.Forms
             Rules_GR02.Text = Language.Rules_GR02;
             Rules_GR03.Text = Language.Rules_GR03;
 
-            Options_CH01.Text = Language.Options_CH01;
-            Options_CH02.Text = Language.Options_CH02;
-            Options_CH03.Text = Language.Options_CH03;
+            Options_CH01.Text = Language.Options_AutoAddToMyList;
+            Options_CH02.Text = Language.Options_Watched;
+            Options_CH03.Text = Language.Options_CheckUnknownFiles;
             Options_CH04.Text = Language.Options_CH04;
             Options_CH05.Text = Language.Options_CH05;
             Options_CH06.Text = Language.Options_CH06;
@@ -593,22 +593,22 @@ namespace AniDBClient.Forms
             Manga_LB22.Text = Language.Manga_lblVolume;
             Manga_LB23.Text = Language.Manga_Picture;
             Manga_LB24.Text = Language.Manga_lblAdult;
-            Manga_LB35.Text = Language.Manga_LB35;
-            Manga_LB36.Text = Language.Manga_LB36;
-            Manga_LB37.Text = Language.Manga_LB37;
-            Manga_LB39.Text = Language.Manga_LB39;
-            Manga_LB41.Text = Language.Manga_LB29;
-            Manga_LB42.Text = Language.Manga_LB33;
+            Manga_LB35.Text = Language.Manga_Author;
+            Manga_LB36.Text = Language.Manga_Artist;
+            Manga_LB37.Text = Language.Manga_Author2;
+            Manga_LB39.Text = Language.Manga_Artist2;
+            Manga_LB41.Text = Language.Manga_File;
+            Manga_LB42.Text = Language.Manga_Language;
             Manga_LB43.Text = Language.Manga_lblVolume2;
-            Manga_LB44.Text = Language.Manga_LB44;
-            Manga_LB50.Text = Language.Manga_LB50;
-            Manga_LB51.Text = Language.Manga_LB51;
+            Manga_LB44.Text = Language.Manga_CustomUrl;
+            Manga_LB50.Text = Language.Manga_MyAnimeListUrl;
+            Manga_LB51.Text = Language.Manga_MugiMugiUrl;
 
             MangaSearch_LB01.Text = Language.Manga_lblMainName;
             MangaSearch_LB02.Text = Language.Manga_lblJapName;
             MangaSearch_LB03.Text = Language.Manga_lblEngName;
-            MangaSearch_LB04.Text = Language.Manga_LB35;
-            MangaSearch_LB05.Text = Language.Manga_LB36;
+            MangaSearch_LB04.Text = Language.Manga_Author;
+            MangaSearch_LB05.Text = Language.Manga_Artist;
             MangaSearch_LB06.Text = Language.Manga_UpdatesId;
             MangaSearch_LB07.Text = Language.Manga_TradersId;
             MangaSearch_LB08.Text = Language.Manga_lblYear;
@@ -631,7 +631,7 @@ namespace AniDBClient.Forms
             Manga_Data_Mn09.HeaderText = Language.Manga_Data_File;
             Manga_Data_Mn10.HeaderText = Language.Manga_Data_Chapter;
 
-            Manga_Tree_Menu_Mn01.Text = Language.Manga_Tree_Menu_Mn01;
+            Manga_Tree_Menu_Mn01.Text = Language.Manga_Tree_Menu_Delete;
 
             Anime_RelDel.Text = Language.Anime_RelDel;
 
@@ -657,11 +657,11 @@ namespace AniDBClient.Forms
             Anime_ExportBT02.Text = Language.Anime_Export_Cvs;
             Anime_ExportLB01.Text = Language.Anime_Export_UpdateYourStatistics;
 
-            Manga_ChaptersCM02.HeaderText = Language.Manga_LB28;
-            Manga_ChaptersCM03.HeaderText = Language.Manga_LB32;
-            Manga_ChaptersCM04.HeaderText = Language.Manga_LB31;
-            Manga_ChaptersCM05.HeaderText = Language.Manga_LB34;
-            Manga_ChaptersCM06.HeaderText = Language.Manga_LB29;
+            Manga_ChaptersCM02.HeaderText = Language.Manga_lblChapter;
+            Manga_ChaptersCM03.HeaderText = Language.Manga_Pages;
+            Manga_ChaptersCM04.HeaderText = Language.Manga_Read;
+            Manga_ChaptersCM05.HeaderText = Language.Manga_Name;
+            Manga_ChaptersCM06.HeaderText = Language.Manga_File;
 
             Options_GR01.Text = Language.Options_GR02;
             Options_GR02.Text = Language.Options_GR06Tab01;
@@ -677,17 +677,17 @@ namespace AniDBClient.Forms
             ToolTip.SetToolTip(Options_AccountChange, Language.Options_AccountChange);
             ToolTip.SetToolTip(Options_StartComunication, Language.Options_StartComunicationOff);
             ToolTip.SetToolTip(Options_ExtensionAdd, Language.Options_ExtensionAdd);
-            ToolTip.SetToolTip(Options_CH03BT, Language.Options_CH03BT);
-            ToolTip.SetToolTip(Options_CH04BT, Language.Options_CH03BT);
-            ToolTip.SetToolTip(Options_CH05BT, Language.Options_CH03BT);
-            ToolTip.SetToolTip(Options_CH06BT, Language.Options_CH03BT);
-            ToolTip.SetToolTip(Options_CH07BT, Language.Options_CH03BT);
-            ToolTip.SetToolTip(Options_CH08BT, Language.Options_CH03BT);
-            ToolTip.SetToolTip(Options_CH09BT, Language.Options_CH03BT);
-            ToolTip.SetToolTip(Options_CH10BT, Language.Options_CH03BT);
-            ToolTip.SetToolTip(Options_CH11BT, Language.Options_CH03BT);
-            ToolTip.SetToolTip(Options_CH12BT, Language.Options_CH03BT);
-            ToolTip.SetToolTip(Options_CH13BT, Language.Options_CH03BT);
+            ToolTip.SetToolTip(Options_CH03BT, Language.Options_Update);
+            ToolTip.SetToolTip(Options_CH04BT, Language.Options_Update);
+            ToolTip.SetToolTip(Options_CH05BT, Language.Options_Update);
+            ToolTip.SetToolTip(Options_CH06BT, Language.Options_Update);
+            ToolTip.SetToolTip(Options_CH07BT, Language.Options_Update);
+            ToolTip.SetToolTip(Options_CH08BT, Language.Options_Update);
+            ToolTip.SetToolTip(Options_CH09BT, Language.Options_Update);
+            ToolTip.SetToolTip(Options_CH10BT, Language.Options_Update);
+            ToolTip.SetToolTip(Options_CH11BT, Language.Options_Update);
+            ToolTip.SetToolTip(Options_CH12BT, Language.Options_Update);
+            ToolTip.SetToolTip(Options_CH13BT, Language.Options_Update);
 
             ToolTip.SetToolTip(Rules_FilesRulesMoveAdd, Language.Rules_FilesRulesMoveAdd);
             ToolTip.SetToolTip(Rules_FilesRulesMoveDel, Language.Rules_FilesRulesMoveDel);
@@ -1353,7 +1353,7 @@ namespace AniDBClient.Forms
                     {
                         this.MainTab.Enabled = false;
                         this.StatusBar_Connect.Enabled = false;
-                        MessageBox.Show(Language.MessageBox_AccoutI, Language.MessageBox_Accout);
+                        MessageBox.Show(Language.MessageBox_AccountLoadFailed, Language.MessageBox_Account);
                         Options_AccountLoad(false);
                     }
 
@@ -4197,23 +4197,23 @@ namespace AniDBClient.Forms
 
                     if (AniDBStatus == AniDbMsgs.A_LOGIN_FAILED)
                     {
-                        MessageBox.Show(Language.MSG03, "AniSub - Error", MessageBoxButtons.OK);
+                        MessageBox.Show(Language.MessageBox_LoginFailed, "AniSub - Error", MessageBoxButtons.OK);
                     }
 
                     if (AniDBStatus == AniDbMsgs.A_LOGIN_FIRST)
                     {
-                        MessageBox.Show(Language.MSG03, "AniSub - Error", MessageBoxButtons.OK);
+                        MessageBox.Show(Language.MessageBox_LoginFailed, "AniSub - Error", MessageBoxButtons.OK);
                         ComunicationW_Reconncect = true;
                     }
 
                     if (AniDBStatus == AniDbMsgs.A_LOGIN_ACCEPTED_NEW_VER)
                     {
-                        MessageBox.Show(Language.MSG05, "AniSub", MessageBoxButtons.OK);
+                        MessageBox.Show(Language.MessageBox_NewVersionAvailable, "AniSub", MessageBoxButtons.OK);
                     }
 
                     if (AniDBStatus == AniDbMsgs.A_VERSION_OUTDATED)
                     {
-                        MessageBox.Show(Language.MSG01, "AniSub - Error", MessageBoxButtons.OK);
+                        MessageBox.Show(Language.MessageBox_OutdatedVersion, "AniSub - Error", MessageBoxButtons.OK);
                     }
 
                     if (AniDBStatus == AniDbMsgs.A_BANNED ||
@@ -4221,7 +4221,7 @@ namespace AniDBClient.Forms
                     {
                         ComunicationW_Reconncect = false;
                         ComunicationW.CancelAsync();
-                        MessageBox.Show(Language.MSG02, "AniSub - Error", MessageBoxButtons.OK);
+                        MessageBox.Show(Language.MessageBox_ClientBanned, "AniSub - Error", MessageBoxButtons.OK);
                     }
 
                     if (AniDBStatus == AniDbMsgs.A_SERVER_BUSY)
@@ -4234,13 +4234,13 @@ namespace AniDBClient.Forms
                         AniDBStatus == AniDbMsgs.A_OUT_OF_SERVICE)
                     {
 
-                        MessageBox.Show(Language.MSG04, "AniSub - Error", MessageBoxButtons.OK);
+                        MessageBox.Show(Language.MessageBox_AniDbNotResponding, "AniSub - Error", MessageBoxButtons.OK);
                     }
 
                     if (AniDBStatus == AniDbMsgs.A_UNKNOWN_COMMAND ||
                         AniDBStatus == AniDbMsgs.A_ILLEGAL_INPUT)
                     {
-                        MessageBox.Show(Language.MSG02, "AniSub - Error", MessageBoxButtons.OK);
+                        MessageBox.Show(Language.MessageBox_ClientBanned, "AniSub - Error", MessageBoxButtons.OK);
                     }
 
                     if (T.Length >= 2)

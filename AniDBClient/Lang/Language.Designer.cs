@@ -1928,11 +1928,56 @@ namespace AniDBClient.Lang {
         }
         
         /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Kreslíř.
+        /// </summary>
+        internal static string Manga_Artist {
+            get {
+                return ResourceManager.GetString("Manga_Artist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Kreslíř.
+        /// </summary>
+        internal static string Manga_Artist2 {
+            get {
+                return ResourceManager.GetString("Manga_Artist2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Autor.
+        /// </summary>
+        internal static string Manga_Author {
+            get {
+                return ResourceManager.GetString("Manga_Author", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Autor.
+        /// </summary>
+        internal static string Manga_Author2 {
+            get {
+                return ResourceManager.GetString("Manga_Author2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Chapter.
         /// </summary>
         internal static string Manga_Chapter {
             get {
                 return ResourceManager.GetString("Manga_Chapter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Vlastní URL:.
+        /// </summary>
+        internal static string Manga_CustomUrl {
+            get {
+                return ResourceManager.GetString("Manga_CustomUrl", resourceCulture);
             }
         }
         
@@ -2063,6 +2108,15 @@ namespace AniDBClient.Lang {
         }
         
         /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Soubor.
+        /// </summary>
+        internal static string Manga_File {
+            get {
+                return ResourceManager.GetString("Manga_File", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Vložit.
         /// </summary>
         internal static string Manga_Insert {
@@ -2090,128 +2144,11 @@ namespace AniDBClient.Lang {
         }
         
         /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Chapter.
-        /// </summary>
-        internal static string Manga_LB28 {
-            get {
-                return ResourceManager.GetString("Manga_LB28", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Soubor.
-        /// </summary>
-        internal static string Manga_LB29 {
-            get {
-                return ResourceManager.GetString("Manga_LB29", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Datum vydání.
-        /// </summary>
-        internal static string Manga_LB30 {
-            get {
-                return ResourceManager.GetString("Manga_LB30", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Přečteno.
-        /// </summary>
-        internal static string Manga_LB31 {
-            get {
-                return ResourceManager.GetString("Manga_LB31", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Stránek.
-        /// </summary>
-        internal static string Manga_LB32 {
-            get {
-                return ResourceManager.GetString("Manga_LB32", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Jazyk.
         /// </summary>
-        internal static string Manga_LB33 {
+        internal static string Manga_Language {
             get {
-                return ResourceManager.GetString("Manga_LB33", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Název.
-        /// </summary>
-        internal static string Manga_LB34 {
-            get {
-                return ResourceManager.GetString("Manga_LB34", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Autor.
-        /// </summary>
-        internal static string Manga_LB35 {
-            get {
-                return ResourceManager.GetString("Manga_LB35", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Kreslíř.
-        /// </summary>
-        internal static string Manga_LB36 {
-            get {
-                return ResourceManager.GetString("Manga_LB36", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Autor.
-        /// </summary>
-        internal static string Manga_LB37 {
-            get {
-                return ResourceManager.GetString("Manga_LB37", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Kreslíř.
-        /// </summary>
-        internal static string Manga_LB39 {
-            get {
-                return ResourceManager.GetString("Manga_LB39", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Vlastní URL:.
-        /// </summary>
-        internal static string Manga_LB44 {
-            get {
-                return ResourceManager.GetString("Manga_LB44", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný My Anime List ID/URL.
-        /// </summary>
-        internal static string Manga_LB50 {
-            get {
-                return ResourceManager.GetString("Manga_LB50", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný MugiMugi ID/URL.
-        /// </summary>
-        internal static string Manga_LB51 {
-            get {
-                return ResourceManager.GetString("Manga_LB51", resourceCulture);
+                return ResourceManager.GetString("Manga_Language", resourceCulture);
             }
         }
         
@@ -2221,6 +2158,15 @@ namespace AniDBClient.Lang {
         internal static string Manga_lblAdult {
             get {
                 return ResourceManager.GetString("Manga_lblAdult", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Chapter.
+        /// </summary>
+        internal static string Manga_lblChapter {
+            get {
+                return ResourceManager.GetString("Manga_lblChapter", resourceCulture);
             }
         }
         
@@ -2315,11 +2261,65 @@ namespace AniDBClient.Lang {
         }
         
         /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný MugiMugi ID/URL.
+        /// </summary>
+        internal static string Manga_MugiMugiUrl {
+            get {
+                return ResourceManager.GetString("Manga_MugiMugiUrl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný My Anime List ID/URL.
+        /// </summary>
+        internal static string Manga_MyAnimeListUrl {
+            get {
+                return ResourceManager.GetString("Manga_MyAnimeListUrl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Název.
+        /// </summary>
+        internal static string Manga_Name {
+            get {
+                return ResourceManager.GetString("Manga_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Stránek.
+        /// </summary>
+        internal static string Manga_Pages {
+            get {
+                return ResourceManager.GetString("Manga_Pages", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Obrázek.
         /// </summary>
         internal static string Manga_Picture {
             get {
                 return ResourceManager.GetString("Manga_Picture", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Přečteno.
+        /// </summary>
+        internal static string Manga_Read {
+            get {
+                return ResourceManager.GetString("Manga_Read", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Datum vydání.
+        /// </summary>
+        internal static string Manga_ReleaseDate {
+            get {
+                return ResourceManager.GetString("Manga_ReleaseDate", resourceCulture);
             }
         }
         
@@ -2335,9 +2335,9 @@ namespace AniDBClient.Lang {
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Smazat Mangu.
         /// </summary>
-        internal static string Manga_Tree_Menu_Mn01 {
+        internal static string Manga_Tree_Menu_Delete {
             get {
-                return ResourceManager.GetString("Manga_Tree_Menu_Mn01", resourceCulture);
+                return ResourceManager.GetString("Manga_Tree_Menu_Delete", resourceCulture);
             }
         }
         
@@ -2353,9 +2353,9 @@ namespace AniDBClient.Lang {
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Aktualizovat.
         /// </summary>
-        internal static string Manga_Update_CH {
+        internal static string Manga_Update_Ch {
             get {
-                return ResourceManager.GetString("Manga_Update_CH", resourceCulture);
+                return ResourceManager.GetString("Manga_Update_Ch", resourceCulture);
             }
         }
         
@@ -2398,18 +2398,27 @@ namespace AniDBClient.Lang {
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Účet....
         /// </summary>
-        internal static string MessageBox_Accout {
+        internal static string MessageBox_Account {
             get {
-                return ResourceManager.GetString("MessageBox_Accout", resourceCulture);
+                return ResourceManager.GetString("MessageBox_Account", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Nepovedlo se načíst uživatelská data..
         /// </summary>
-        internal static string MessageBox_AccoutI {
+        internal static string MessageBox_AccountLoadFailed {
             get {
-                return ResourceManager.GetString("MessageBox_AccoutI", resourceCulture);
+                return ResourceManager.GetString("MessageBox_AccountLoadFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný AniDB neodpovídá!.
+        /// </summary>
+        internal static string MessageBox_AniDbNotResponding {
+            get {
+                return ResourceManager.GetString("MessageBox_AniDbNotResponding", resourceCulture);
             }
         }
         
@@ -2428,6 +2437,15 @@ namespace AniDBClient.Lang {
         internal static string MessageBox_ClearDatabase {
             get {
                 return ResourceManager.GetString("MessageBox_ClearDatabase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Client je zabanován!.
+        /// </summary>
+        internal static string MessageBox_ClientBanned {
+            get {
+                return ResourceManager.GetString("MessageBox_ClientBanned", resourceCulture);
             }
         }
         
@@ -2477,11 +2495,38 @@ namespace AniDBClient.Lang {
         }
         
         /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Nezdařilo se přihlášení.
+        /// </summary>
+        internal static string MessageBox_LoginFailed {
+            get {
+                return ResourceManager.GetString("MessageBox_LoginFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Špatné heslo!.
         /// </summary>
         internal static string MessageBox_LogInI {
             get {
                 return ResourceManager.GetString("MessageBox_LogInI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Nová verze AniSub!.
+        /// </summary>
+        internal static string MessageBox_NewVersionAvailable {
+            get {
+                return ResourceManager.GetString("MessageBox_NewVersionAvailable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Zastaralá verze AniSub!.
+        /// </summary>
+        internal static string MessageBox_OutdatedVersion {
+            get {
+                return ResourceManager.GetString("MessageBox_OutdatedVersion", resourceCulture);
             }
         }
         
@@ -2567,51 +2612,6 @@ namespace AniDBClient.Lang {
         }
         
         /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Zastaralá verze AniSub!.
-        /// </summary>
-        internal static string MSG01 {
-            get {
-                return ResourceManager.GetString("MSG01", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Client je zabanován!.
-        /// </summary>
-        internal static string MSG02 {
-            get {
-                return ResourceManager.GetString("MSG02", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Nezdařilo se přihlášení.
-        /// </summary>
-        internal static string MSG03 {
-            get {
-                return ResourceManager.GetString("MSG03", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný AniDB neodpovídá!.
-        /// </summary>
-        internal static string MSG04 {
-            get {
-                return ResourceManager.GetString("MSG04", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Nová verze AniSub!.
-        /// </summary>
-        internal static string MSG05 {
-            get {
-                return ResourceManager.GetString("MSG05", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Odhlásit.
         /// </summary>
         internal static string Options_AccountChange {
@@ -2623,36 +2623,9 @@ namespace AniDBClient.Lang {
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Přidat do MyListu automaticky.
         /// </summary>
-        internal static string Options_CH01 {
+        internal static string Options_AutoAddToMyList {
             get {
-                return ResourceManager.GetString("Options_CH01", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Shlédnuto.
-        /// </summary>
-        internal static string Options_CH02 {
-            get {
-                return ResourceManager.GetString("Options_CH02", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Zkontrolovat neznámé soubory.
-        /// </summary>
-        internal static string Options_CH03 {
-            get {
-                return ResourceManager.GetString("Options_CH03", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Aktualizuj.
-        /// </summary>
-        internal static string Options_CH03BT {
-            get {
-                return ResourceManager.GetString("Options_CH03BT", resourceCulture);
+                return ResourceManager.GetString("Options_AutoAddToMyList", resourceCulture);
             }
         }
         
@@ -2842,6 +2815,15 @@ namespace AniDBClient.Lang {
         internal static string Options_CH24 {
             get {
                 return ResourceManager.GetString("Options_CH24", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Zkontrolovat neznámé soubory.
+        /// </summary>
+        internal static string Options_CheckUnknownFiles {
+            get {
+                return ResourceManager.GetString("Options_CheckUnknownFiles", resourceCulture);
             }
         }
         
@@ -3665,6 +3647,15 @@ namespace AniDBClient.Lang {
         }
         
         /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Aktualizuj.
+        /// </summary>
+        internal static string Options_Update {
+            get {
+                return ResourceManager.GetString("Options_Update", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný TV Série:.
         /// </summary>
         internal static string Options_VL07 {
@@ -3805,6 +3796,15 @@ namespace AniDBClient.Lang {
         internal static string Options_w8Hack {
             get {
                 return ResourceManager.GetString("Options_w8Hack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Shlédnuto.
+        /// </summary>
+        internal static string Options_Watched {
+            get {
+                return ResourceManager.GetString("Options_Watched", resourceCulture);
             }
         }
         

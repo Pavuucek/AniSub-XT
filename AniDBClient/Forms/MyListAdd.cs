@@ -28,7 +28,7 @@ namespace AniDBClient.Forms
             Options_LB08.Text = Language.Options_LB08;
             Options_LB07.Text = Language.Options_LB07;
             Options_GR02.Text = Language.Options_GR02;
-            Options_CH02.Text = Language.Options_CH02;
+            Options_CH02.Text = Language.Options_Watched;
 
             ML = ml;
 

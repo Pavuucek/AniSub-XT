@@ -243,10 +243,10 @@
   <data name="Options_AccountChange" xml:space="preserve">
     <value>Odhlásit</value>
   </data>
-  <data name="Options_CH01" xml:space="preserve">
+  <data name="Options_AutoAddToMyList" xml:space="preserve">
     <value>Přidat do MyListu automaticky</value>
   </data>
-  <data name="Options_CH02" xml:space="preserve">
+  <data name="Options_Watched" xml:space="preserve">
     <value>Shlédnuto</value>
   </data>
   <data name="Options_ExtensionAdd" xml:space="preserve">
@@ -579,7 +579,7 @@
   <data name="DataFiles_Nothing" xml:space="preserve">
     <value>Nic</value>
   </data>
-  <data name="Options_CH03" xml:space="preserve">
+  <data name="Options_CheckUnknownFiles" xml:space="preserve">
     <value>Zkontrolovat neznámé soubory</value>
   </data>
   <data name="Options_CH04" xml:space="preserve">
@@ -723,10 +723,10 @@
   <data name="StatusBar_ConnectLBOn" xml:space="preserve">
     <value>Připojeno</value>
   </data>
-  <data name="MessageBox_Accout" xml:space="preserve">
+  <data name="MessageBox_Account" xml:space="preserve">
     <value>Účet...</value>
   </data>
-  <data name="MessageBox_AccoutI" xml:space="preserve">
+  <data name="MessageBox_AccountLoadFailed" xml:space="preserve">
     <value>Nepovedlo se načíst uživatelská data.</value>
   </data>
   <data name="MessageBox_Delete" xml:space="preserve">
@@ -937,7 +937,7 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="DataFiles_Menu_Rehash" xml:space="preserve">
     <value>Rehash</value>
   </data>
-  <data name="Options_CH03BT" xml:space="preserve">
+  <data name="Options_Update" xml:space="preserve">
     <value>Aktualizuj</value>
   </data>
   <data name="Options_CH08" xml:space="preserve">
@@ -1057,19 +1057,19 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="Manga_Update" xml:space="preserve">
     <value>Aktualizovat</value>
   </data>
-  <data name="MSG01" xml:space="preserve">
+  <data name="MessageBox_OutdatedVersion" xml:space="preserve">
     <value>Zastaralá verze AniSub!</value>
   </data>
-  <data name="MSG02" xml:space="preserve">
+  <data name="MessageBox_ClientBanned" xml:space="preserve">
     <value>Client je zabanován!</value>
   </data>
-  <data name="MSG03" xml:space="preserve">
+  <data name="MessageBox_LoginFailed" xml:space="preserve">
     <value>Nezdařilo se přihlášení</value>
   </data>
-  <data name="MSG04" xml:space="preserve">
+  <data name="MessageBox_AniDbNotResponding" xml:space="preserve">
     <value>AniDB neodpovídá!</value>
   </data>
-  <data name="MSG05" xml:space="preserve">
+  <data name="MessageBox_NewVersionAvailable" xml:space="preserve">
     <value>Nová verze AniSub!</value>
   </data>
   <data name="Manga_Chapter" xml:space="preserve">
@@ -1105,40 +1105,40 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="Manga_lblVolume2" xml:space="preserve">
     <value>Volume</value>
   </data>
-  <data name="Manga_LB28" xml:space="preserve">
+  <data name="Manga_lblChapter" xml:space="preserve">
     <value>Chapter</value>
   </data>
-  <data name="Manga_LB29" xml:space="preserve">
+  <data name="Manga_File" xml:space="preserve">
     <value>Soubor</value>
   </data>
-  <data name="Manga_LB30" xml:space="preserve">
+  <data name="Manga_ReleaseDate" xml:space="preserve">
     <value>Datum vydání</value>
   </data>
-  <data name="Manga_LB31" xml:space="preserve">
+  <data name="Manga_Read" xml:space="preserve">
     <value>Přečteno</value>
   </data>
-  <data name="Manga_LB32" xml:space="preserve">
+  <data name="Manga_Pages" xml:space="preserve">
     <value>Stránek</value>
   </data>
-  <data name="Manga_LB33" xml:space="preserve">
+  <data name="Manga_Language" xml:space="preserve">
     <value>Jazyk</value>
   </data>
-  <data name="Manga_LB34" xml:space="preserve">
+  <data name="Manga_Name" xml:space="preserve">
     <value>Název</value>
   </data>
-  <data name="Manga_Update_CH" xml:space="preserve">
+  <data name="Manga_Update_Ch" xml:space="preserve">
     <value>Aktualizovat</value>
   </data>
-  <data name="Manga_LB35" xml:space="preserve">
+  <data name="Manga_Author" xml:space="preserve">
     <value>Autor</value>
   </data>
-  <data name="Manga_LB36" xml:space="preserve">
+  <data name="Manga_Artist" xml:space="preserve">
     <value>Kreslíř</value>
   </data>
-  <data name="Manga_LB37" xml:space="preserve">
+  <data name="Manga_Author2" xml:space="preserve">
     <value>Autor</value>
   </data>
-  <data name="Manga_LB39" xml:space="preserve">
+  <data name="Manga_Artist2" xml:space="preserve">
     <value>Kreslíř</value>
   </data>
   <data name="MainTabManga_MyList" xml:space="preserve">
@@ -1198,7 +1198,7 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="Manga_Data_Menu_Delete" xml:space="preserve">
     <value>Smazat</value>
   </data>
-  <data name="Manga_Tree_Menu_Mn01" xml:space="preserve">
+  <data name="Manga_Tree_Menu_Delete" xml:space="preserve">
     <value>Smazat Mangu</value>
   </data>
   <data name="Options_CH09" xml:space="preserve">
@@ -1351,7 +1351,7 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="Options_CH15" xml:space="preserve">
     <value>Přidat stejné soubory vícekrát</value>
   </data>
-  <data name="Manga_LB44" xml:space="preserve">
+  <data name="Manga_CustomUrl" xml:space="preserve">
     <value>Vlastní URL:</value>
   </data>
   <data name="MessageBox_DBC" xml:space="preserve">
@@ -1420,10 +1420,10 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="Options_LB69" xml:space="preserve">
     <value>Počet záloh DB</value>
   </data>
-  <data name="Manga_LB50" xml:space="preserve">
+  <data name="Manga_MyAnimeListUrl" xml:space="preserve">
     <value>My Anime List ID/URL</value>
   </data>
-  <data name="Manga_LB51" xml:space="preserve">
+  <data name="Manga_MugiMugiUrl" xml:space="preserve">
     <value>MugiMugi ID/URL</value>
   </data>
   <data name="Options_CH19" xml:space="preserve">

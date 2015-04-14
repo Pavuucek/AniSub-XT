@@ -447,10 +447,10 @@
   <data name="MainTab_Hash" xml:space="preserve">
     <value>Hash</value>
   </data>
-  <data name="MessageBox_Accout" xml:space="preserve">
+  <data name="MessageBox_Account" xml:space="preserve">
     <value>Account...</value>
   </data>
-  <data name="MessageBox_AccoutI" xml:space="preserve">
+  <data name="MessageBox_AccountLoadFailed" xml:space="preserve">
     <value>Filed to load accout data.</value>
   </data>
   <data name="MessageBox_Delete" xml:space="preserve">
@@ -486,13 +486,13 @@
   <data name="Options_AccountChange" xml:space="preserve">
     <value>Log out</value>
   </data>
-  <data name="Options_CH01" xml:space="preserve">
+  <data name="Options_AutoAddToMyList" xml:space="preserve">
     <value>Add files to MyList automatically</value>
   </data>
-  <data name="Options_CH02" xml:space="preserve">
+  <data name="Options_Watched" xml:space="preserve">
     <value>Watched</value>
   </data>
-  <data name="Options_CH03" xml:space="preserve">
+  <data name="Options_CheckUnknownFiles" xml:space="preserve">
     <value>Check unknown files</value>
   </data>
   <data name="Options_CH04" xml:space="preserve">
@@ -934,7 +934,7 @@ Before you can use AniSub, please fill your name and password:</value>
   <data name="DataFiles_Menu_Rehash" xml:space="preserve">
     <value>Rehash</value>
   </data>
-  <data name="Options_CH03BT" xml:space="preserve">
+  <data name="Options_Update" xml:space="preserve">
     <value>Do it!</value>
   </data>
   <data name="Options_CH08" xml:space="preserve">
@@ -994,22 +994,22 @@ Before you can use AniSub, please fill your name and password:</value>
   <data name="Manga_Chapters" xml:space="preserve">
     <value>Manga Chapters</value>
   </data>
-  <data name="MSG01" xml:space="preserve">
+  <data name="MessageBox_OutdatedVersion" xml:space="preserve">
     <value>Client version is out dated!</value>
   </data>
-  <data name="MSG02" xml:space="preserve">
+  <data name="MessageBox_ClientBanned" xml:space="preserve">
     <value>Client banned!</value>
   </data>
-  <data name="MSG03" xml:space="preserve">
+  <data name="MessageBox_LoginFailed" xml:space="preserve">
     <value>Login failed!</value>
   </data>
-  <data name="MSG04" xml:space="preserve">
-    <value>AniDB not response!</value>
+  <data name="MessageBox_AniDbNotResponding" xml:space="preserve">
+    <value>AniDb is not responding!</value>
   </data>
-  <data name="MSG05" xml:space="preserve">
+  <data name="MessageBox_NewVersionAvailable" xml:space="preserve">
     <value>New versions of AniSub</value>
   </data>
-  <data name="MangaTree_CH01" xml:space="preserve">
+  <data name="MangaTree_Adult" xml:space="preserve">
     <value>18+</value>
   </data>
   <data name="Manga_Chapter" xml:space="preserve">
@@ -1105,43 +1105,43 @@ Before you can use AniSub, please fill your name and password:</value>
   <data name="Manga_lblVolume2" xml:space="preserve">
     <value>Volume</value>
   </data>
-  <data name="Manga_LB28" xml:space="preserve">
+  <data name="Manga_lblChapter" xml:space="preserve">
     <value>Chapter</value>
   </data>
-  <data name="Manga_LB29" xml:space="preserve">
+  <data name="Manga_File" xml:space="preserve">
     <value>File</value>
   </data>
-  <data name="Manga_LB30" xml:space="preserve">
+  <data name="Manga_ReleaseDate" xml:space="preserve">
     <value>Date of release</value>
   </data>
-  <data name="Manga_LB31" xml:space="preserve">
+  <data name="Manga_Read" xml:space="preserve">
     <value>Read</value>
   </data>
-  <data name="Manga_LB32" xml:space="preserve">
+  <data name="Manga_Pages" xml:space="preserve">
     <value>Pages</value>
   </data>
-  <data name="Manga_LB33" xml:space="preserve">
+  <data name="Manga_Language" xml:space="preserve">
     <value>Language</value>
   </data>
-  <data name="Manga_LB34" xml:space="preserve">
+  <data name="Manga_Name" xml:space="preserve">
     <value>Title</value>
   </data>
   <data name="Manga_Update" xml:space="preserve">
     <value>Update</value>
   </data>
-  <data name="Manga_Update_CH" xml:space="preserve">
+  <data name="Manga_Update_Ch" xml:space="preserve">
     <value>Update</value>
   </data>
-  <data name="Manga_LB35" xml:space="preserve">
+  <data name="Manga_Author" xml:space="preserve">
     <value>Author</value>
   </data>
-  <data name="Manga_LB36" xml:space="preserve">
+  <data name="Manga_Artist" xml:space="preserve">
     <value>Artist</value>
   </data>
-  <data name="Manga_LB37" xml:space="preserve">
+  <data name="Manga_Author2" xml:space="preserve">
     <value>Author</value>
   </data>
-  <data name="Manga_LB39" xml:space="preserve">
+  <data name="Manga_Artist2" xml:space="preserve">
     <value>Artist</value>
   </data>
   <data name="MainTabManga_MyList" xml:space="preserve">
@@ -1201,7 +1201,7 @@ Before you can use AniSub, please fill your name and password:</value>
   <data name="Manga_Data_Menu_Delete" xml:space="preserve">
     <value>Delete</value>
   </data>
-  <data name="Manga_Tree_Menu_Mn01" xml:space="preserve">
+  <data name="Manga_Tree_Menu_Delete" xml:space="preserve">
     <value>Delete Manga</value>
   </data>
   <data name="Options_CH09" xml:space="preserve">
@@ -1354,7 +1354,7 @@ Before you can use AniSub, please fill your name and password:</value>
   <data name="Options_CH15" xml:space="preserve">
     <value>Add the same file multiple times</value>
   </data>
-  <data name="Manga_LB44" xml:space="preserve">
+  <data name="Manga_CustomUrl" xml:space="preserve">
     <value>Own URL:</value>
   </data>
   <data name="MessageBox_DBC" xml:space="preserve">
@@ -1423,10 +1423,10 @@ Before you can use AniSub, please fill your name and password:</value>
   <data name="Options_LB69" xml:space="preserve">
     <value>Count of DB backups</value>
   </data>
-  <data name="Manga_LB50" xml:space="preserve">
+  <data name="Manga_MyAnimeListUrl" xml:space="preserve">
     <value>My Anime List ID/URL</value>
   </data>
-  <data name="Manga_LB51" xml:space="preserve">
+  <data name="Manga_MugiMugiUrl" xml:space="preserve">
     <value>MugiMugi ID/URL</value>
   </data>
   <data name="Options_CH19" xml:space="preserve">

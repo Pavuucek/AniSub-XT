@@ -102,8 +102,8 @@ namespace AniDBClient.Forms
         //Načti jazykovou sadu
         private void InitializeLanguage()
         {
-            LogIn_LB01.Text = Language.Options_LB03;
-            LogIn_LB02.Text = Language.Options_LB04;
+            LogIn_LB01.Text = Language.Options_lblUserName;
+            LogIn_LB02.Text = Language.Options_lblPassword;
             LogIn_LB03.Text = Language.LogIn_WelcomeMessage;
             LogIn_LB04.Text = Language.LogIn_FirstUse;
             LogIn_LB07.Text = Language.LogIn_LicenseAgreement;

@@ -23,11 +23,11 @@ namespace AniDBClient.Forms
             if (watched == "1")
                 Options_CH02.Checked = true;
 
-            Options_LB10.Text = Language.Options_LB10;
-            Options_LB09.Text = Language.Options_LB09;
-            Options_LB08.Text = Language.Options_LB08;
-            Options_LB07.Text = Language.Options_LB07;
-            Options_GR02.Text = Language.Options_GR02;
+            Options_LB10.Text = Language.Options_lblOther;
+            Options_LB09.Text = Language.Options_lblStorage;
+            Options_LB08.Text = Language.Options_lblSource;
+            Options_LB07.Text = Language.Options_lblStatus;
+            Options_GR02.Text = Language.Options_MyList;
             Options_CH02.Text = Language.Options_Watched;
 
             ML = ml;

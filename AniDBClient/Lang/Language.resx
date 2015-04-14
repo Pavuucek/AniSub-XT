@@ -252,46 +252,46 @@
   <data name="Options_ExtensionAdd" xml:space="preserve">
     <value>Přidat</value>
   </data>
-  <data name="Options_GR01" xml:space="preserve">
+  <data name="Options_Interface" xml:space="preserve">
     <value>Připojení</value>
   </data>
-  <data name="Options_GR02" xml:space="preserve">
+  <data name="Options_MyList" xml:space="preserve">
     <value>MyList</value>
   </data>
-  <data name="Options_GR03" xml:space="preserve">
+  <data name="Options_FileTypes" xml:space="preserve">
     <value>Typy souborů</value>
   </data>
-  <data name="Options_GR04" xml:space="preserve">
+  <data name="Options_MyList2" xml:space="preserve">
     <value>MyList</value>
   </data>
-  <data name="Options_LB01" xml:space="preserve">
+  <data name="Options_lblServer" xml:space="preserve">
     <value>Server:</value>
   </data>
-  <data name="Options_LB02" xml:space="preserve">
+  <data name="Options_lblPort" xml:space="preserve">
     <value>Vzdálený port:</value>
   </data>
-  <data name="Options_LB03" xml:space="preserve">
+  <data name="Options_lblUserName" xml:space="preserve">
     <value>Jméno:</value>
   </data>
-  <data name="Options_LB04" xml:space="preserve">
+  <data name="Options_lblPassword" xml:space="preserve">
     <value>Heslo:</value>
   </data>
-  <data name="Options_LB05" xml:space="preserve">
-    <value>TimeOut:</value>
+  <data name="Options_lblTimeout" xml:space="preserve">
+    <value>Timeout:</value>
   </data>
-  <data name="Options_LB06" xml:space="preserve">
+  <data name="Options_lblDelay" xml:space="preserve">
     <value>Spoždění:</value>
   </data>
-  <data name="Options_LB07" xml:space="preserve">
+  <data name="Options_lblStatus" xml:space="preserve">
     <value>Status:</value>
   </data>
-  <data name="Options_LB08" xml:space="preserve">
+  <data name="Options_lblSource" xml:space="preserve">
     <value>Zdroj:</value>
   </data>
-  <data name="Options_LB09" xml:space="preserve">
+  <data name="Options_lblStorage" xml:space="preserve">
     <value>Úložiště</value>
   </data>
-  <data name="Options_LB10" xml:space="preserve">
+  <data name="Options_lblOther" xml:space="preserve">
     <value>Ostatní:</value>
   </data>
   <data name="Options_LB11" xml:space="preserve">
@@ -582,13 +582,13 @@
   <data name="Options_CheckUnknownFiles" xml:space="preserve">
     <value>Zkontrolovat neznámé soubory</value>
   </data>
-  <data name="Options_CH04" xml:space="preserve">
+  <data name="Options_DownloadAllAnimeEpisodes" xml:space="preserve">
     <value>Stáhnout všechny epizody k anime</value>
   </data>
-  <data name="Options_CH05" xml:space="preserve">
+  <data name="Options_DownloadAllFiles" xml:space="preserve">
     <value>Stáhnout soubory k epizodám</value>
   </data>
-  <data name="Options_GR05" xml:space="preserve">
+  <data name="Options_Settings" xml:space="preserve">
     <value>Nastavení</value>
   </data>
   <data name="DataAnime_Menu_MyListCheck" xml:space="preserve">
@@ -711,7 +711,7 @@
   <data name="MainTabData_Search" xml:space="preserve">
     <value>Vyhledávání</value>
   </data>
-  <data name="Options_CH06" xml:space="preserve">
+  <data name="Options_DeleteDuplicates" xml:space="preserve">
     <value>Vymazat zdvojené soubory</value>
   </data>
   <data name="Rules_FilesRulesMove_RB03" xml:space="preserve">
@@ -825,7 +825,7 @@
   <data name="DataFiles_Menu_DownloadAll" xml:space="preserve">
     <value>Vše</value>
   </data>
-  <data name="Options_CH07" xml:space="preserve">
+  <data name="Options_CompactAndRepairDb" xml:space="preserve">
     <value>Komprimovat a opravit databázi</value>
   </data>
   <data name="StatusBar_Mn03" xml:space="preserve">
@@ -940,7 +940,7 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="Options_Update" xml:space="preserve">
     <value>Aktualizuj</value>
   </data>
-  <data name="Options_CH08" xml:space="preserve">
+  <data name="Options_SaveSettingsOnExit" xml:space="preserve">
     <value>Při ukončení: uložit nastavení</value>
   </data>
   <data name="Options_MyListRefreshMin" xml:space="preserve">
@@ -1201,10 +1201,10 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="Manga_Tree_Menu_Delete" xml:space="preserve">
     <value>Smazat Mangu</value>
   </data>
-  <data name="Options_CH09" xml:space="preserve">
+  <data name="Options_CreateBackup" xml:space="preserve">
     <value>Vytvořit zálohu</value>
   </data>
-  <data name="Options_CH10" xml:space="preserve">
+  <data name="Options_RestoreBackup" xml:space="preserve">
     <value>Obnovit ze zálohy</value>
   </data>
   <data name="Anime_BT01" xml:space="preserve">
@@ -1231,10 +1231,10 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="MessageBox_ClearDatabase" xml:space="preserve">
     <value>Jseš si jistí, že chceš smazat celou databázi?</value>
   </data>
-  <data name="Options_CH11" xml:space="preserve">
+  <data name="Options_ForceDbUpdate" xml:space="preserve">
     <value>Aktualizovat databázi</value>
   </data>
-  <data name="Options_CH12" xml:space="preserve">
+  <data name="Options_DeleteDb" xml:space="preserve">
     <value>Vymazat databázi</value>
   </data>
   <data name="Options_LB66" xml:space="preserve">
@@ -1336,7 +1336,7 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="Options_LB68" xml:space="preserve">
     <value>Počet opakování:</value>
   </data>
-  <data name="Options_CH13" xml:space="preserve">
+  <data name="Options_ClassicFolderSelectDialog" xml:space="preserve">
     <value>Klasický dialog pro vybrání adresáře</value>
   </data>
   <data name="Rules_GR04" xml:space="preserve">
@@ -1345,10 +1345,10 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="Rules_InfoRB01" xml:space="preserve">
     <value>Exportovat</value>
   </data>
-  <data name="Options_CH14" xml:space="preserve">
+  <data name="Options_ShowAdultOnWelcomeScreen" xml:space="preserve">
     <value>Zobrazit 18+ v uvítací obrazovce</value>
   </data>
-  <data name="Options_CH15" xml:space="preserve">
+  <data name="Options_AddSameFilesMultipleTimes" xml:space="preserve">
     <value>Přidat stejné soubory vícekrát</value>
   </data>
   <data name="Manga_CustomUrl" xml:space="preserve">
@@ -1357,49 +1357,49 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="MessageBox_DBC" xml:space="preserve">
     <value>Nebyl nalezen zavaděč OleDb pro Microsoft Access. Prosím stáhněte a naistalujte následující balíček: http://www.microsoft.com/download/en/details.aspx?id=13255</value>
   </data>
-  <data name="Options_GR06Tab01" xml:space="preserve">
+  <data name="Options_Basic" xml:space="preserve">
     <value>Základní</value>
   </data>
-  <data name="Options_GR06Tab02" xml:space="preserve">
+  <data name="Options_Colors" xml:space="preserve">
     <value>Barvy</value>
   </data>
-  <data name="Options_GR06Tab03" xml:space="preserve">
+  <data name="Options_Maintenance" xml:space="preserve">
     <value>Údržba</value>
   </data>
-  <data name="Options_Color01" xml:space="preserve">
+  <data name="Options_DarkColor" xml:space="preserve">
     <value>Tmavší barva pro řádky</value>
   </data>
-  <data name="Options_Color02" xml:space="preserve">
+  <data name="Options_NormalColor" xml:space="preserve">
     <value>Normální barva pro řádky</value>
   </data>
-  <data name="Options_Color03" xml:space="preserve">
+  <data name="Options_LightColor" xml:space="preserve">
     <value>Světlá barva pro řádky</value>
   </data>
-  <data name="Options_Color04" xml:space="preserve">
+  <data name="Options_MissingFilesColor" xml:space="preserve">
     <value>Barva pro chybějící soubory</value>
   </data>
-  <data name="Options_Color05" xml:space="preserve">
+  <data name="Options_SelectedRowsColor" xml:space="preserve">
     <value>Barva pro zvýraznění</value>
   </data>
-  <data name="Options_Color06" xml:space="preserve">
+  <data name="Options_TextColor" xml:space="preserve">
     <value>Barva textu</value>
   </data>
-  <data name="Options_Color07" xml:space="preserve">
+  <data name="Options_TextInputColor" xml:space="preserve">
     <value>Barva textu pro psaní</value>
   </data>
-  <data name="Options_Color08" xml:space="preserve">
+  <data name="Options_BackgroundColor" xml:space="preserve">
     <value>Barva pozadí</value>
   </data>
-  <data name="Options_Color09" xml:space="preserve">
+  <data name="Options_TablesBackgroundColor" xml:space="preserve">
     <value>Barva pozadí pro tabulky</value>
   </data>
-  <data name="Options_Color10" xml:space="preserve">
+  <data name="Options_ProgressBarColor" xml:space="preserve">
     <value>Barva progress baru</value>
   </data>
-  <data name="Options_CH16" xml:space="preserve">
+  <data name="Options_MinimizeToTray" xml:space="preserve">
     <value>Minimalizovat do lišty</value>
   </data>
-  <data name="Options_CH17" xml:space="preserve">
+  <data name="Options_FlatStyle" xml:space="preserve">
     <value>Plochý vzhled</value>
   </data>
   <data name="Rules_CH04" xml:space="preserve">
@@ -1411,7 +1411,7 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="DataFiles_Bt22_ToolTip" xml:space="preserve">
     <value>Zobrazit duplikátní soubory</value>
   </data>
-  <data name="Options_CH18" xml:space="preserve">
+  <data name="Options_DontGenerateWelcomeScreen" xml:space="preserve">
     <value>Negenerovat úvodní stránku (rychlejší start)</value>
   </data>
   <data name="MessageBox_Restart" xml:space="preserve">
@@ -1426,10 +1426,10 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="Manga_MugiMugiUrl" xml:space="preserve">
     <value>MugiMugi ID/URL</value>
   </data>
-  <data name="Options_CH19" xml:space="preserve">
+  <data name="Options_DetectMyListStatus" xml:space="preserve">
     <value>Zjišťovat mylist status z AniDB</value>
   </data>
-  <data name="Options_CH20" xml:space="preserve">
+  <data name="Options_CheckNewMangaChapters" xml:space="preserve">
     <value>Zkontrolovat nové chaptery u mang</value>
   </data>
   <data name="Options_Network" xml:space="preserve">
@@ -1441,19 +1441,19 @@ Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlaš
   <data name="Options_SetingsDefault_ToolTip" xml:space="preserve">
     <value>Načíst defaultní nastavení</value>
   </data>
-  <data name="Options_CH21" xml:space="preserve">
+  <data name="Options_SaveLogsToFiles" xml:space="preserve">
     <value>Ukládat hlášení do souborů</value>
   </data>
-  <data name="Options_CH22" xml:space="preserve">
+  <data name="Options_WebServerPort" xml:space="preserve">
     <value>Webserver port</value>
   </data>
-  <data name="Options_CH23" xml:space="preserve">
+  <data name="Options_MpcHcPort" xml:space="preserve">
     <value>MPC-HC port</value>
   </data>
-  <data name="Options_CH24" xml:space="preserve">
+  <data name="Options_LaunchWebServerOnStartup" xml:space="preserve">
     <value>Spustit webserver při startu</value>
   </data>
-  <data name="Options_GR06" xml:space="preserve">
+  <data name="Options_WebServer" xml:space="preserve">
     <value>Webserver</value>
   </data>
   <data name="MessageBox_W8Hack" xml:space="preserve">

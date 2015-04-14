@@ -150,22 +150,22 @@
   <data name="DataAnime_Menu_Expand" xml:space="preserve">
     <value>Expand</value>
   </data>
-  <data name="DataAnime_Menu_ExpandAnime" xml:space="preserve">
+  <data name="DataAnime_Menu_Expand_Anime" xml:space="preserve">
     <value>Expand anime</value>
   </data>
-  <data name="DataAnime_Menu_ExpandEpisodes" xml:space="preserve">
+  <data name="DataAnime_Menu_Expand_Episodes" xml:space="preserve">
     <value>Expand episodes</value>
   </data>
-  <data name="DataAnime_Menu_ExpandAll" xml:space="preserve">
+  <data name="DataAnime_Menu_Expand_All" xml:space="preserve">
     <value>Expand all</value>
   </data>
-  <data name="DataAnime_Menu_CollapseEpisodes" xml:space="preserve">
+  <data name="DataAnime_Menu_Expand_CollapseEpisodes" xml:space="preserve">
     <value>Collapse episodes</value>
   </data>
-  <data name="DataAnime_Menu_CollapseAllEpisodes" xml:space="preserve">
+  <data name="DataAnime_Menu_Expand_CollapseAllEpisodes" xml:space="preserve">
     <value>Collapse all episodes</value>
   </data>
-  <data name="DataAnime_Menu_CollapseAll" xml:space="preserve">
+  <data name="DataAnime_Menu_Expand_CollapseAll" xml:space="preserve">
     <value>Collapse all</value>
   </data>
   <data name="DataAnime_Menu_MyList" xml:space="preserve">
@@ -429,22 +429,22 @@
   <data name="MainTabLog_Tasks" xml:space="preserve">
     <value>Tasks</value>
   </data>
-  <data name="MainTab_Settings" xml:space="preserve">
+  <data name="MainTab_SettingsPage" xml:space="preserve">
     <value>Settings</value>
   </data>
-  <data name="MainTab_Rules" xml:space="preserve">
+  <data name="MainTab_RulesPage" xml:space="preserve">
     <value>Rules</value>
   </data>
-  <data name="MainTab_Anime" xml:space="preserve">
+  <data name="MainTab_AnimePage" xml:space="preserve">
     <value>Anime</value>
   </data>
-  <data name="MainTab_Log" xml:space="preserve">
+  <data name="MainTab_LogPage" xml:space="preserve">
     <value>Log</value>
   </data>
   <data name="MainTabData_MyList" xml:space="preserve">
     <value>MyList</value>
   </data>
-  <data name="MainTab_Hash" xml:space="preserve">
+  <data name="MainTab_HashPage" xml:space="preserve">
     <value>Hash</value>
   </data>
   <data name="MessageBox_Account" xml:space="preserve">
@@ -747,7 +747,7 @@
   <data name="Rules_RulesForCharacterReplacing" xml:space="preserve">
     <value>Rules for character replacing</value>
   </data>
-  <data name="StatusBar_ConnectLBOff" xml:space="preserve">
+  <data name="StatusBar_Disconnected" xml:space="preserve">
     <value>Disconnected</value>
   </data>
   <data name="StatusBar_ConnectLBOn" xml:space="preserve">
@@ -798,7 +798,7 @@
   <data name="DataSQL_Filter" xml:space="preserve">
     <value>Do it!</value>
   </data>
-  <data name="MainTab_Sql" xml:space="preserve">
+  <data name="MainTab_SqlPage" xml:space="preserve">
     <value>SQL</value>
   </data>
   <data name="MainTabLog_Error" xml:space="preserve">
@@ -985,7 +985,7 @@ Before you can use AniSub, please fill your name and password:</value>
   <data name="MainTabManga_NewManga" xml:space="preserve">
     <value>New manga</value>
   </data>
-  <data name="MainTab_Manga" xml:space="preserve">
+  <data name="MainTab_MangaPage" xml:space="preserve">
     <value>Manga</value>
   </data>
   <data name="Manga_Manga" xml:space="preserve">
@@ -1228,7 +1228,7 @@ Before you can use AniSub, please fill your name and password:</value>
   <data name="Hash_Watcher" xml:space="preserve">
     <value>Watch dog **</value>
   </data>
-  <data name="MainTab_Index" xml:space="preserve">
+  <data name="MainTab_IndexPage" xml:space="preserve">
     <value>Index</value>
   </data>
   <data name="MessageBox_ClearDatabase" xml:space="preserve">

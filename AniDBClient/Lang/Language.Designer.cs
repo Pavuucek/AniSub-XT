@@ -565,33 +565,6 @@ namespace AniDBClient.Lang {
         }
         
         /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Sbalit vše.
-        /// </summary>
-        internal static string DataAnime_Menu_CollapseAll {
-            get {
-                return ResourceManager.GetString("DataAnime_Menu_CollapseAll", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Sbalit všechny episody.
-        /// </summary>
-        internal static string DataAnime_Menu_CollapseAllEpisodes {
-            get {
-                return ResourceManager.GetString("DataAnime_Menu_CollapseAllEpisodes", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Sbalit episody.
-        /// </summary>
-        internal static string DataAnime_Menu_CollapseEpisodes {
-            get {
-                return ResourceManager.GetString("DataAnime_Menu_CollapseEpisodes", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Databáze.
         /// </summary>
         internal static string DataAnime_Menu_Database {
@@ -621,27 +594,54 @@ namespace AniDBClient.Lang {
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Rozevřít vše.
         /// </summary>
-        internal static string DataAnime_Menu_ExpandAll {
+        internal static string DataAnime_Menu_Expand_All {
             get {
-                return ResourceManager.GetString("DataAnime_Menu_ExpandAll", resourceCulture);
+                return ResourceManager.GetString("DataAnime_Menu_Expand_All", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Rozevřít anime.
         /// </summary>
-        internal static string DataAnime_Menu_ExpandAnime {
+        internal static string DataAnime_Menu_Expand_Anime {
             get {
-                return ResourceManager.GetString("DataAnime_Menu_ExpandAnime", resourceCulture);
+                return ResourceManager.GetString("DataAnime_Menu_Expand_Anime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Sbalit vše.
+        /// </summary>
+        internal static string DataAnime_Menu_Expand_CollapseAll {
+            get {
+                return ResourceManager.GetString("DataAnime_Menu_Expand_CollapseAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Sbalit všechny episody.
+        /// </summary>
+        internal static string DataAnime_Menu_Expand_CollapseAllEpisodes {
+            get {
+                return ResourceManager.GetString("DataAnime_Menu_Expand_CollapseAllEpisodes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Sbalit episody.
+        /// </summary>
+        internal static string DataAnime_Menu_Expand_CollapseEpisodes {
+            get {
+                return ResourceManager.GetString("DataAnime_Menu_Expand_CollapseEpisodes", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Rozevřít episody.
         /// </summary>
-        internal static string DataAnime_Menu_ExpandEpisodes {
+        internal static string DataAnime_Menu_Expand_Episodes {
             get {
-                return ResourceManager.GetString("DataAnime_Menu_ExpandEpisodes", resourceCulture);
+                return ResourceManager.GetString("DataAnime_Menu_Expand_Episodes", resourceCulture);
             }
         }
         
@@ -1696,72 +1696,72 @@ namespace AniDBClient.Lang {
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Anime.
         /// </summary>
-        internal static string MainTab_Anime {
+        internal static string MainTab_AnimePage {
             get {
-                return ResourceManager.GetString("MainTab_Anime", resourceCulture);
+                return ResourceManager.GetString("MainTab_AnimePage", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Hash.
         /// </summary>
-        internal static string MainTab_Hash {
+        internal static string MainTab_HashPage {
             get {
-                return ResourceManager.GetString("MainTab_Hash", resourceCulture);
+                return ResourceManager.GetString("MainTab_HashPage", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Úvod.
         /// </summary>
-        internal static string MainTab_Index {
+        internal static string MainTab_IndexPage {
             get {
-                return ResourceManager.GetString("MainTab_Index", resourceCulture);
+                return ResourceManager.GetString("MainTab_IndexPage", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Log.
         /// </summary>
-        internal static string MainTab_Log {
+        internal static string MainTab_LogPage {
             get {
-                return ResourceManager.GetString("MainTab_Log", resourceCulture);
+                return ResourceManager.GetString("MainTab_LogPage", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Manga.
         /// </summary>
-        internal static string MainTab_Manga {
+        internal static string MainTab_MangaPage {
             get {
-                return ResourceManager.GetString("MainTab_Manga", resourceCulture);
+                return ResourceManager.GetString("MainTab_MangaPage", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Pravidla.
         /// </summary>
-        internal static string MainTab_Rules {
+        internal static string MainTab_RulesPage {
             get {
-                return ResourceManager.GetString("MainTab_Rules", resourceCulture);
+                return ResourceManager.GetString("MainTab_RulesPage", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Nastavení.
         /// </summary>
-        internal static string MainTab_Settings {
+        internal static string MainTab_SettingsPage {
             get {
-                return ResourceManager.GetString("MainTab_Settings", resourceCulture);
+                return ResourceManager.GetString("MainTab_SettingsPage", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný SQL.
         /// </summary>
-        internal static string MainTab_Sql {
+        internal static string MainTab_SqlPage {
             get {
-                return ResourceManager.GetString("MainTab_Sql", resourceCulture);
+                return ResourceManager.GetString("MainTab_SqlPage", resourceCulture);
             }
         }
         
@@ -3989,20 +3989,20 @@ namespace AniDBClient.Lang {
         }
         
         /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Odpojeno.
-        /// </summary>
-        internal static string StatusBar_ConnectLBOff {
-            get {
-                return ResourceManager.GetString("StatusBar_ConnectLBOff", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Připojeno.
         /// </summary>
         internal static string StatusBar_ConnectLBOn {
             get {
                 return ResourceManager.GetString("StatusBar_ConnectLBOn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Odpojeno.
+        /// </summary>
+        internal static string StatusBar_Disconnected {
+            get {
+                return ResourceManager.GetString("StatusBar_Disconnected", resourceCulture);
             }
         }
         

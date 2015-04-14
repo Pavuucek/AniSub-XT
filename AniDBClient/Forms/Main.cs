@@ -190,7 +190,7 @@ namespace AniDBClient.Forms
                     DataFiles_Month.Value = DateTime.Now.Month;
                     DataFiles_Day.Value = DateTime.Now.Day;
 
-                    if (Options_CH24.Checked)
+                    if (Options_LaunchWebServerOnStartupCheckBox.Checked)
                         WebServerStart();
 
                     Watcher_Run();
@@ -231,16 +231,16 @@ namespace AniDBClient.Forms
         //Načtení Lokolizace
         private void InitializeComponentLanguage()
         {
-            MainTab_Mn00.Text = Language.MainTab_Index;
-            MainTab_Mn01.Text = Language.MainTab_Settings;
-            MainTab_Mn02.Text = Language.MainTab_Rules;
-            MainTab_Mn03.Text = Language.MainTab_Anime;
-            MainTab_Mn04.Text = Language.MainTab_Log;
-            MainTab_Mn05.Text = Language.MainTab_Sql;
-            MainTab_Mn06.Text = Language.MainTab_Hash;
-            MainTab_Mn07.Text = Language.MainTab_Manga;
+            MainTab_IndexPage.Text = Language.MainTab_IndexPage;
+            MainTab_SettinsPage.Text = Language.MainTab_SettingsPage;
+            MainTab_RulesPage.Text = Language.MainTab_RulesPage;
+            MainTab_AnimePage.Text = Language.MainTab_AnimePage;
+            MainTab_LogPage.Text = Language.MainTab_LogPage;
+            MainTab_SqlPage.Text = Language.MainTab_SqlPage;
+            MainTab_HashPage.Text = Language.MainTab_HashPage;
+            MainTab_MangaPage.Text = Language.MainTab_MangaPage;
 
-            StatusBar_ConnectLB.Text = Language.StatusBar_ConnectLBOff;
+            StatusBar_ConnectLabel.Text = Language.StatusBar_Disconnected;
 
             DataAnime.Columns[4].HeaderText = Language.DataAnime_JapName;
             DataAnime.Columns[5].HeaderText = Language.DataAnime_EngName;
@@ -255,15 +255,15 @@ namespace AniDBClient.Forms
             DataAnime.Columns[14].HeaderText = Language.DataAnime_Storage;
             DataAnime.Columns[15].HeaderText = Language.DataAnime_Source;
 
-            DataAnime_Menu_Mn01.Text = Language.DataAnime_Menu_Expand;
-            DataAnime_Menu_Mn02.Text = Language.DataAnime_Menu_MyList;
-            DataAnime_Menu_Mn03.Text = Language.DataAnime_Menu_Database;
-            DataAnime_Menu_Mn01_Mn01.Text = Language.DataAnime_Menu_ExpandAnime;
-            DataAnime_Menu_Mn01_Mn02.Text = Language.DataAnime_Menu_ExpandEpisodes;
-            DataAnime_Menu_Mn01_Mn03.Text = Language.DataAnime_Menu_ExpandAll;
-            DataAnime_Menu_Mn01_Mn04.Text = Language.DataAnime_Menu_CollapseEpisodes;
-            DataAnime_Menu_Mn01_Mn05.Text = Language.DataAnime_Menu_CollapseAllEpisodes;
-            DataAnime_Menu_Mn01_Mn06.Text = Language.DataAnime_Menu_CollapseAll;
+            DataAnime_Menu_Expand.Text = Language.DataAnime_Menu_Expand;
+            DataAnime_Menu_MyList.Text = Language.DataAnime_Menu_MyList;
+            DataAnime_Menu_Database.Text = Language.DataAnime_Menu_Database;
+            DataAnime_Menu_Expand_Anime.Text = Language.DataAnime_Menu_Expand_Anime;
+            DataAnime_Menu_Expand_Episodes.Text = Language.DataAnime_Menu_Expand_Episodes;
+            DataAnime_Menu_Expand_All.Text = Language.DataAnime_Menu_Expand_All;
+            DataAnime_Menu_Expand_CollapseEpisodes.Text = Language.DataAnime_Menu_Expand_CollapseEpisodes;
+            DataAnime_Menu_Expand_CollapseAllEpisodes.Text = Language.DataAnime_Menu_Expand_CollapseAllEpisodes;
+            DataAnime_Menu_Expand_CollapseAll.Text = Language.DataAnime_Menu_Expand_CollapseAll;
 
             DataGenres.Columns[3].HeaderText = Language.DataAnime_JapName;
             DataGenres.Columns[4].HeaderText = Language.DataAnime_EngName;
@@ -280,36 +280,36 @@ namespace AniDBClient.Forms
             DataSearch.Columns[3].HeaderText = Language.DataAnime_Year;
             DataSearch.Columns[4].HeaderText = Language.DataAnime_Type;
 
-            Rules_LB01.Text = Language.Rules_NumberPosition;
+            Rules_RulesNumberPositionLabel.Text = Language.Rules_NumberPosition;
 
-            Rules_GR01.Text = Language.Rules_RulesForFileRenaming;
-            Rules_GR02.Text = Language.Rules_RulesForCreatingDirectories;
-            Rules_GR03.Text = Language.Rules_RulesForCharacterReplacing;
+            Rules_RulesForFileRenamingGroupBox.Text = Language.Rules_RulesForFileRenaming;
+            Rules_RulesForGeneratingDirectoriesGroupBox.Text = Language.Rules_RulesForCreatingDirectories;
+            Rules_RulesForCharacterReplacingGroupBox.Text = Language.Rules_RulesForCharacterReplacing;
 
-            Options_CH01.Text = Language.Options_AutoAddToMyList;
-            Options_CH02.Text = Language.Options_Watched;
-            Options_CH03.Text = Language.Options_CheckUnknownFiles;
-            Options_CH04.Text = Language.Options_DownloadAllAnimeEpisodes;
-            Options_CH05.Text = Language.Options_DownloadAllFiles;
-            Options_CH06.Text = Language.Options_DeleteDuplicates;
-            Options_CH07.Text = Language.Options_CompactAndRepairDb;
-            Options_CH08.Text = Language.Options_SaveSettingsOnExit;
-            Options_CH09.Text = Language.Options_CreateBackup;
-            Options_CH10.Text = Language.Options_RestoreBackup;
-            Options_CH11.Text = Language.Options_ForceDbUpdate;
-            Options_CH12.Text = Language.Options_DeleteDb;
-            Options_CH13.Text = Language.Options_ClassicFolderSelectDialog;
-            Options_CH14.Text = Language.Options_ShowAdultOnWelcomeScreen;
-            Options_CH15.Text = Language.Options_AddSameFilesMultipleTimes;
-            Options_CH16.Text = Language.Options_MinimizeToTray;
-            Options_CH17.Text = Language.Options_FlatStyle;
-            Options_CH18.Text = Language.Options_DontGenerateWelcomeScreen;
-            Options_CH19.Text = Language.Options_DetectMyListStatus;
-            Options_CH20.Text = Language.Options_CheckNewMangaChapters;
-            Options_CH21.Text = Language.Options_SaveLogsToFiles;
-            Options_CH22.Text = Language.Options_WebServerPort;
-            Options_CH23.Text = Language.Options_MpcHcPort;
-            Options_CH24.Text = Language.Options_LaunchWebServerOnStartup;
+            Options_AutoAddToMyListCheckBox.Text = Language.Options_AutoAddToMyList;
+            Options_WatchedCheckbox.Text = Language.Options_Watched;
+            Options_CheckUnknownFilesLabel.Text = Language.Options_CheckUnknownFiles;
+            Options_DownloadAllAnimeEpisodesLabel.Text = Language.Options_DownloadAllAnimeEpisodes;
+            Options_DownloadAllFilesLabel.Text = Language.Options_DownloadAllFiles;
+            Options_DeleteDuplicatesLabel.Text = Language.Options_DeleteDuplicates;
+            Options_CompactAndRepairDbLabel.Text = Language.Options_CompactAndRepairDb;
+            Options_SaveSettingsOnExitCheckBox.Text = Language.Options_SaveSettingsOnExit;
+            Options_CreateBackupLabel.Text = Language.Options_CreateBackup;
+            Options_RestoreBackupLabel.Text = Language.Options_RestoreBackup;
+            Options_ForceDbUpdateLabel.Text = Language.Options_ForceDbUpdate;
+            Options_DeleteDbLabel.Text = Language.Options_DeleteDb;
+            Options_ClassicFolderSelectDialogCheckBox.Text = Language.Options_ClassicFolderSelectDialog;
+            Options_ShowAdultOnWelcomeScreenCheckBox.Text = Language.Options_ShowAdultOnWelcomeScreen;
+            Options_AddSameFilesMultipleTimesCheckBox.Text = Language.Options_AddSameFilesMultipleTimes;
+            Options_MinimizeToTrayCheckBox.Text = Language.Options_MinimizeToTray;
+            Options_FlatStyleCheckBox.Text = Language.Options_FlatStyle;
+            Options_DontGenerateWelcomeSceenCheckBox.Text = Language.Options_DontGenerateWelcomeScreen;
+            Options_DetectMyListStatusCheckBox.Text = Language.Options_DetectMyListStatus;
+            Options_CheckNewMangaChaptersLabel.Text = Language.Options_CheckNewMangaChapters;
+            Options_SaveLogsToFilesCheckBox.Text = Language.Options_SaveLogsToFiles;
+            Options_WebServerPortLabel.Text = Language.Options_WebServerPort;
+            Options_MpcHcPortLabel.Text = Language.Options_MpcHcPort;
+            Options_LaunchWebServerOnStartupCheckBox.Text = Language.Options_LaunchWebServerOnStartup;
 
             Options_LB01.Text = Language.Options_lblServer;
             Options_LB02.Text = Language.Options_lblPort;
@@ -404,8 +404,8 @@ namespace AniDBClient.Forms
             DataFilesTree_Mn06.Text = Language.DataFiles_Menu_Rename;
             DataFilesTree_Mn08.Text = Language.DataFiles_Menu_Rehash;
 
-            DataFilesTree_Mn01_Mn01.Text = Language.DataAnime_Menu_ExpandAll;
-            DataFilesTree_Mn01_Mn02.Text = Language.DataAnime_Menu_CollapseAll;
+            DataFilesTree_Mn01_Mn01.Text = Language.DataAnime_Menu_Expand_All;
+            DataFilesTree_Mn01_Mn02.Text = Language.DataAnime_Menu_Expand_CollapseAll;
             DataFilesTree_Mn02_Mn01.Text = Language.DataAnime_Menu_MyListAddModify;
             DataFilesTree_Mn02_Mn02.Text = Language.DataAnime_Menu_MyListDelete;
             DataFilesTree_Mn02_Mn03.Text = Language.DataAnime_Menu_MyListWatched;
@@ -456,8 +456,8 @@ namespace AniDBClient.Forms
             AnimeData_Menu_Mn05.Text = Language.DataFiles_Menu_Rehash;
             AnimeData_Menu_Mn06.Text = Language.DataFiles_Menu_Rehash;
 
-            AnimeData_Menu_Mn01_Mn01.Text = Language.DataAnime_Menu_ExpandEpisodes;
-            AnimeData_Menu_Mn01_Mn02.Text = Language.DataAnime_Menu_CollapseEpisodes;
+            AnimeData_Menu_Mn01_Mn01.Text = Language.DataAnime_Menu_Expand_Episodes;
+            AnimeData_Menu_Mn01_Mn02.Text = Language.DataAnime_Menu_Expand_CollapseEpisodes;
             AnimeData_Menu_Mn02_Mn01.Text = Language.DataAnime_Menu_MyListAddModify;
             AnimeData_Menu_Mn02_Mn02.Text = Language.DataAnime_Menu_MyListDelete;
             AnimeData_Menu_Mn02_Mn03.Text = Language.DataAnime_Menu_MyListWatched;
@@ -913,16 +913,16 @@ namespace AniDBClient.Forms
             settingsData.Name = Options_User.Text;
             settingsData.TimeOut = (int)Options_TimeOut.Value;
             settingsData.Delay = (int)Options_Delay.Value;
-            settingsData.MyListAdd = Options_CH01.Checked;
-            settingsData.OptionsCh13 = Options_CH13.Checked;
-            settingsData.OptionsCh14 = Options_CH14.Checked;
-            settingsData.OptionsCh15 = Options_CH15.Checked;
-            settingsData.OptionsCh16 = Options_CH16.Checked;
-            settingsData.OptionsCh17 = Options_CH17.Checked;
-            settingsData.OptionsCh18 = Options_CH18.Checked;
-            settingsData.OptionsCh19 = Options_CH19.Checked;
-            settingsData.OptionsCh21 = Options_CH21.Checked;
-            settingsData.OptionsCh24 = Options_CH24.Checked;
+            settingsData.MyListAdd = Options_AutoAddToMyListCheckBox.Checked;
+            settingsData.OptionsCh13 = Options_ClassicFolderSelectDialogCheckBox.Checked;
+            settingsData.OptionsCh14 = Options_ShowAdultOnWelcomeScreenCheckBox.Checked;
+            settingsData.OptionsCh15 = Options_AddSameFilesMultipleTimesCheckBox.Checked;
+            settingsData.OptionsCh16 = Options_MinimizeToTrayCheckBox.Checked;
+            settingsData.OptionsCh17 = Options_FlatStyleCheckBox.Checked;
+            settingsData.OptionsCh18 = Options_DontGenerateWelcomeSceenCheckBox.Checked;
+            settingsData.OptionsCh19 = Options_DetectMyListStatusCheckBox.Checked;
+            settingsData.OptionsCh21 = Options_SaveLogsToFilesCheckBox.Checked;
+            settingsData.OptionsCh24 = Options_LaunchWebServerOnStartupCheckBox.Checked;
             settingsData.Reset = (int)Options_Reset.Value;
             settingsData.OptionsNetwork = Options_Network.SelectedItem.ToString();
             settingsData.MyList = GlobalMyList;
@@ -931,11 +931,11 @@ namespace AniDBClient.Forms
             settingsData.MyListPre.Add(Options_MylistSource.Text);
             settingsData.MyListPre.Add(Options_MylistOther.Text);
             settingsData.MyListPre.Add(Options_MylistState.SelectedIndex);
-            settingsData.MyListPre.Add(Options_CH02.Checked);
+            settingsData.MyListPre.Add(Options_WatchedCheckbox.Checked);
             settingsData.PortLocal = Options_LocalPort.Text;
             settingsData.PagesFile = (int)DataFiles_Rows.Value;
             settingsData.PagesAnime = (int)DataAnime_Rows.Value;
-            settingsData.OptionsCh08 = Options_CH08.Checked;
+            settingsData.OptionsCh08 = Options_SaveSettingsOnExitCheckBox.Checked;
             settingsData.HashCh01 = Hash_CH01.Checked;
             settingsData.HashCh02 = Hash_CH02.Checked;
             settingsData.HashCh03 = Hash_CH03.Checked;
@@ -1075,18 +1075,18 @@ namespace AniDBClient.Forms
 
             Options_TimeOut.Value = settingsData.TimeOut;
             Options_Delay.Value = settingsData.Delay;
-            Options_CH01.Checked = settingsData.MyListAdd;
+            Options_AutoAddToMyListCheckBox.Checked = settingsData.MyListAdd;
             GlobalMyList = settingsData.MyList;
             Options_Reset.Value = settingsData.Reset == 0 ? 3 : settingsData.Reset;
-            Options_CH13.Checked = settingsData.OptionsCh13;
-            Options_CH14.Checked = settingsData.OptionsCh14;
-            Options_CH15.Checked = settingsData.OptionsCh15;
-            Options_CH16.Checked = settingsData.OptionsCh16;
-            Options_CH17.Checked = settingsData.OptionsCh17;
-            Options_CH18.Checked = settingsData.OptionsCh18;
-            Options_CH19.Checked = settingsData.OptionsCh19;
-            Options_CH21.Checked = settingsData.OptionsCh21;
-            Options_CH24.Checked = settingsData.OptionsCh24;
+            Options_ClassicFolderSelectDialogCheckBox.Checked = settingsData.OptionsCh13;
+            Options_ShowAdultOnWelcomeScreenCheckBox.Checked = settingsData.OptionsCh14;
+            Options_AddSameFilesMultipleTimesCheckBox.Checked = settingsData.OptionsCh15;
+            Options_MinimizeToTrayCheckBox.Checked = settingsData.OptionsCh16;
+            Options_FlatStyleCheckBox.Checked = settingsData.OptionsCh17;
+            Options_DontGenerateWelcomeSceenCheckBox.Checked = settingsData.OptionsCh18;
+            Options_DetectMyListStatusCheckBox.Checked = settingsData.OptionsCh19;
+            Options_SaveLogsToFilesCheckBox.Checked = settingsData.OptionsCh21;
+            Options_LaunchWebServerOnStartupCheckBox.Checked = settingsData.OptionsCh24;
 
             try
             {
@@ -1119,7 +1119,7 @@ namespace AniDBClient.Forms
                         Options_MylistSource.Text = (string)settingsData.MyListPre[1].ToString();
                         Options_MylistOther.Text = (string)settingsData.MyListPre[2].ToString();
                         Options_MylistState.SelectedIndex = (int)settingsData.MyListPre[3];
-                        Options_CH02.Checked = (bool)settingsData.MyListPre[4];
+                        Options_WatchedCheckbox.Checked = (bool)settingsData.MyListPre[4];
                     }
                     catch
                     {
@@ -1148,7 +1148,7 @@ namespace AniDBClient.Forms
 
             DataAnime_Rows.Value = settingsData.PagesAnime > 5000 ? 5000 : settingsData.PagesAnime;
 
-            Options_CH08.Checked = settingsData.OptionsCh08;
+            Options_SaveSettingsOnExitCheckBox.Checked = settingsData.OptionsCh08;
             Hash_CH01.Checked = settingsData.HashCh01;
             Hash_CH02.Checked = settingsData.HashCh02;
             Hash_CH03.Checked = settingsData.HashCh03;
@@ -1411,7 +1411,7 @@ namespace AniDBClient.Forms
 
             if (e.Url.AbsolutePath.Contains("index.en-US.html"))
             {
-                if (Options_CH18.Checked)
+                if (Options_DontGenerateWelcomeSceenCheckBox.Checked)
                 {
                     StreamReader Cti = new StreamReader(GlobalAdresar + @"Manual\index.en-US.html");
                     string TxO = Cti.ReadToEnd();
@@ -1430,7 +1430,7 @@ namespace AniDBClient.Forms
                 {
                     DataTable DT;
 
-                    if (Options_CH14.Checked)
+                    if (Options_ShowAdultOnWelcomeScreenCheckBox.Checked)
                         DT = DatabaseSelect("SELECT id_anime, anime_nazevjap, anime_obr FROM anime ORDER BY anime_nazevjap");
                     else
                         DT = DatabaseSelect("SELECT id_anime, anime_nazevjap, anime_obr FROM anime WHERE anime_18=0 ORDER BY anime_nazevjap");
@@ -3237,7 +3237,7 @@ namespace AniDBClient.Forms
         {
             if (!LogonKill)
             {
-                if (Options_CH08.Checked)
+                if (Options_SaveSettingsOnExitCheckBox.Checked)
                     Options_SetingsSave_Click(null, null);
 
                 if (isConnected)
@@ -3280,10 +3280,10 @@ namespace AniDBClient.Forms
                 int y = MainTab.Height / 2 - 30;
                 int z = ((MainTab.Height / 100) * 60) - 12;
 
-                Rules_GR03.Width = MainTab.Width - 24;
-                Rules_GR03.Height = MainTab.Height - z - 48;
+                Rules_RulesForCharacterReplacingGroupBox.Width = MainTab.Width - 24;
+                Rules_RulesForCharacterReplacingGroupBox.Height = MainTab.Height - z - 48;
 
-                Rules_GR03.Location = new Point(6, z + 18);
+                Rules_RulesForCharacterReplacingGroupBox.Location = new Point(6, z + 18);
 
                 Manga_Gr02.Height = y - 5;
                 Manga_Gr03.Height = y;
@@ -3304,17 +3304,17 @@ namespace AniDBClient.Forms
 
                 x = (MainTab.Width - 4 * 10) / 3;
 
-                Rules_GR01.Width = x;
-                Rules_GR01.Height = z - 48;
+                Rules_RulesForFileRenamingGroupBox.Width = x;
+                Rules_RulesForFileRenamingGroupBox.Height = z - 48;
 
-                Rules_GR02.Width = x;
-                Rules_GR02.Height = z - 48;
+                Rules_RulesForGeneratingDirectoriesGroupBox.Width = x;
+                Rules_RulesForGeneratingDirectoriesGroupBox.Height = z - 48;
 
                 Rules_GR04.Width = x;
                 Rules_GR04.Height = z - 48;
 
-                Rules_GR01.Location = new Point(10, 49);
-                Rules_GR02.Location = new Point(20 + x, 49);
+                Rules_RulesForFileRenamingGroupBox.Location = new Point(10, 49);
+                Rules_RulesForGeneratingDirectoriesGroupBox.Location = new Point(20 + x, 49);
                 Rules_GR04.Location = new Point(30 + x + x, 49);
 
                 x = (Manga_Gr02.Width - 4 * 10) / 3;
@@ -3331,7 +3331,7 @@ namespace AniDBClient.Forms
                 this.Invalidate();
             }
 
-            if (Options_CH16.Checked)
+            if (Options_MinimizeToTrayCheckBox.Checked)
             {
                 if (FormWindowState.Minimized == WindowState)
                 {
@@ -4185,7 +4185,7 @@ namespace AniDBClient.Forms
                     if (AniDBStatus == AniDbMsgs.A_LOGIN_ACCEPTED ||
                         AniDBStatus == AniDbMsgs.A_LOGIN_ACCEPTED_NEW_VER)
                     {
-                        StatusBar_ConnectLB.Text = Language.StatusBar_ConnectLBOn;
+                        StatusBar_ConnectLabel.Text = Language.StatusBar_ConnectLBOn;
                         ToolTip.SetToolTip(Options_StartComunication, Language.Options_StartComunicationOn);
                         ToolTip.SetToolTip(StatusBar_Connect, Language.Options_StartComunicationOn);
                         Options_StartComunication.BackgroundImage = Resources.i_GlobeG;
@@ -4349,7 +4349,7 @@ namespace AniDBClient.Forms
                 this.ToolTip.SetToolTip(StatusBar_Connect, Language.Options_StartComunicationOff);
                 this.ToolTip.SetToolTip(Options_StartComunication, Language.Options_StartComunicationOn);
 
-                StatusBar_ConnectLB.Text = Language.StatusBar_ConnectLBOff;
+                StatusBar_ConnectLabel.Text = Language.StatusBar_Disconnected;
 
                 Options_StartComunication.BackgroundImage = Resources.i_GlobeR;
                 StatusBar_Connect.BackgroundImage = Resources.i_GlobeR;
@@ -4658,7 +4658,7 @@ namespace AniDBClient.Forms
 
                 DatabaseAdd("UPDATE files SET files_depth='" + T[13] + "', files_sha1='" + T[11] + "', files_date_air=#" + DatumFormat(GetDateFromSeconds(T[26])) + "#, files_anidb_name='" + T[27].Replace("'", "''") + "', files_biterate_audio=" + T[17] + ", files_biterate_video=" + T[19] + ", files_extension='" + T[21] + "', files_lenght=" + T[24] + ", id_files=" + T[0] + ", id_episodes=" + T[2] + ", id_anime=" + T[1] + ", id_groups=" + T[3] + ", files_lid=" + T[4] + ", files_crc32='" + T[12] + "', files_md5='" + T[10] + "', files_dub='" + T[22] + "', files_sub='" + T[23] + "', files_quality='" + T[14].Replace("'", "''") + "', files_audio='" + T[16].Replace("'", "''") + "', files_video='" + T[18] + "', files_resultion='" + T[20] + "', files_typ='" + T[15] + "', files_state=" + T[7] + " WHERE files_ed2k='" + T[9] + "' AND files_size=" + T[8]);
 
-                if (dataTableIDFile.Rows.Count == 0 && Options_CH19.Checked)
+                if (dataTableIDFile.Rows.Count == 0 && Options_DetectMyListStatusCheckBox.Checked)
                     ComunicationNewTask("MYLIST fid=" + T[0]);
 
                 dataTable = DatabaseSelect("SELECT * FROM groups WHERE id_groups=" + T[3]);
@@ -4762,7 +4762,7 @@ namespace AniDBClient.Forms
                         DatabaseAdd("UPDATE episodes SET episodes_lenght=" + LenghtM + ", episodes_nazeveng='" + T[39] + "', episodes_nazevkan='" + T[41] + "', episodes_nazevjap='" + T[40] + "', id_anime=" + T[1] + ", episodes_spec='" + EpisodeSpec + "' WHERE id_episodes=" + T[2]);
                 }
 
-                if (Options_CH01.Checked)
+                if (Options_AutoAddToMyListCheckBox.Checked)
                 {
                     int x = 0;
 
@@ -4775,7 +4775,7 @@ namespace AniDBClient.Forms
                     }
 
                     string Watched = "0";
-                    if (Options_CH02.Checked)
+                    if (Options_WatchedCheckbox.Checked)
                         Watched = "1";
 
                     if (x > 0)
@@ -6986,7 +6986,7 @@ namespace AniDBClient.Forms
                 MStorage = Options_MylistStorage.Text;
                 MOther = Options_MylistOther.Text;
                 MState = Options_MylistState.SelectedIndex.ToString();
-                if (Options_CH02.Checked)
+                if (Options_WatchedCheckbox.Checked)
                     MWatched = "1";
                 else
                     MWatched = "0";
@@ -8820,7 +8820,7 @@ namespace AniDBClient.Forms
                 MStorage = Options_MylistStorage.Text;
                 MOther = Options_MylistOther.Text;
                 MState = Options_MylistState.SelectedIndex.ToString();
-                if (Options_CH02.Checked)
+                if (Options_WatchedCheckbox.Checked)
                     MWatched = "1";
                 else
                     MWatched = "0";
@@ -9356,7 +9356,7 @@ namespace AniDBClient.Forms
 
                 if (DRelations.Rows.Count > 0)
                 {
-                    Anime_RelationTree.Nodes.Add("N", Language.MainTab_Anime);
+                    Anime_RelationTree.Nodes.Add("N", Language.MainTab_AnimePage);
 
                     foreach (DataRow row in DRelations.Rows)
                     {
@@ -9418,7 +9418,7 @@ namespace AniDBClient.Forms
 
                 if (DManga.Rows.Count > 0)
                 {
-                    Anime_RelationTree.Nodes.Add("N", Language.MainTab_Manga);
+                    Anime_RelationTree.Nodes.Add("N", Language.MainTab_MangaPage);
                     foreach (DataRow row in DManga.Rows)
                         Anime_RelationTree.Nodes.Add("M" + row["id_manga"].ToString(), row["manga_nazevjap"].ToString());
 
@@ -9751,7 +9751,7 @@ namespace AniDBClient.Forms
                 MStorage = Options_MylistStorage.Text;
                 MOther = Options_MylistOther.Text;
                 MState = Options_MylistState.SelectedIndex.ToString();
-                if (Options_CH02.Checked)
+                if (Options_WatchedCheckbox.Checked)
                     MWatched = "1";
                 else
                     MWatched = "0";
@@ -11582,7 +11582,7 @@ namespace AniDBClient.Forms
                         System.Windows.Forms.Label cl = cc as System.Windows.Forms.Label;
                         cl.ForeColor = Options_Color06.BackColor;
 
-                        if (Options_CH17.Checked && cl.FlatStyle == FlatStyle.Standard)
+                        if (Options_FlatStyleCheckBox.Checked && cl.FlatStyle == FlatStyle.Standard)
                             cl.FlatStyle = FlatStyle.Flat;
                         else if (cl.FlatStyle == FlatStyle.Flat)
                             cl.FlatStyle = FlatStyle.Standard;
@@ -11593,7 +11593,7 @@ namespace AniDBClient.Forms
                         System.Windows.Forms.CheckBox cl = cc as System.Windows.Forms.CheckBox;
                         cl.ForeColor = Options_Color06.BackColor;
 
-                        if (Options_CH17.Checked && cl.FlatStyle == FlatStyle.Standard)
+                        if (Options_FlatStyleCheckBox.Checked && cl.FlatStyle == FlatStyle.Standard)
                             cl.FlatStyle = FlatStyle.Flat;
                         else if (cl.FlatStyle == FlatStyle.Flat)
                             cl.FlatStyle = FlatStyle.Standard;
@@ -11604,7 +11604,7 @@ namespace AniDBClient.Forms
                         System.Windows.Forms.RadioButton cl = cc as System.Windows.Forms.RadioButton;
                         cl.ForeColor = Options_Color06.BackColor;
 
-                        if (Options_CH17.Checked && cl.FlatStyle == FlatStyle.Standard)
+                        if (Options_FlatStyleCheckBox.Checked && cl.FlatStyle == FlatStyle.Standard)
                             cl.FlatStyle = FlatStyle.Flat;
                         else if (cl.FlatStyle == FlatStyle.Flat)
                             cl.FlatStyle = FlatStyle.Standard;
@@ -11623,7 +11623,7 @@ namespace AniDBClient.Forms
                         cl.ForeColor = Options_Color07.BackColor;
                         cl.BackColor = Options_Color09.BackColor;
 
-                        if (Options_CH17.Checked && cl.FlatStyle == FlatStyle.Standard)
+                        if (Options_FlatStyleCheckBox.Checked && cl.FlatStyle == FlatStyle.Standard)
                             cl.FlatStyle = FlatStyle.Flat;
                         else if (cl.FlatStyle == FlatStyle.Flat)
                             cl.FlatStyle = FlatStyle.Standard;
@@ -11655,7 +11655,7 @@ namespace AniDBClient.Forms
                         cl.ForeColor = Options_Color06.BackColor;
                         cl.BackColor = Options_Color08.BackColor;
 
-                        if (Options_CH17.Checked && cl.FlatStyle == FlatStyle.Standard)
+                        if (Options_FlatStyleCheckBox.Checked && cl.FlatStyle == FlatStyle.Standard)
                             cl.FlatStyle = FlatStyle.Flat;
                         else if (cl.FlatStyle == FlatStyle.Flat)
                             cl.FlatStyle = FlatStyle.Standard;
@@ -11667,7 +11667,7 @@ namespace AniDBClient.Forms
                         cl.ForeColor = Options_Color06.BackColor;
                         cl.BackColor = Options_Color08.BackColor;
 
-                        if (Options_CH17.Checked && cl.Appearance == TabAppearance.Normal)
+                        if (Options_FlatStyleCheckBox.Checked && cl.Appearance == TabAppearance.Normal)
                             cl.Appearance = TabAppearance.FlatButtons;
                         else if (cl.Appearance == TabAppearance.FlatButtons)
                             cl.Appearance = TabAppearance.Normal;
@@ -11677,7 +11677,7 @@ namespace AniDBClient.Forms
                     {
                         System.Windows.Forms.Button cl = cc as System.Windows.Forms.Button;
 
-                        if (Options_CH17.Checked)
+                        if (Options_FlatStyleCheckBox.Checked)
                             cl.FlatStyle = FlatStyle.Flat;
                         else if (cl.FlatStyle == FlatStyle.Flat)
                             cl.FlatStyle = FlatStyle.Standard;
@@ -11724,7 +11724,7 @@ namespace AniDBClient.Forms
         //Vyber adresář
         private void Hash_Cesta_Click(object sender, EventArgs e)
         {
-            Nacti_Hash(FileHelpers.OpenDirectoryDialog("", Options_CH13.Checked));
+            Nacti_Hash(FileHelpers.OpenDirectoryDialog("", Options_ClassicFolderSelectDialogCheckBox.Checked));
         }
 
         private List<DirectoryInfo> Hash_Directories(string Cesta)
@@ -11773,7 +11773,7 @@ namespace AniDBClient.Forms
                     if (Options_ExtensionList.Items.Contains(SouborF.Extension.ToLower()))
                         pridat = true;
 
-                    if (!Options_CH15.Checked && Hash_Nazvy_Souboru.Items.Contains(SouborF.FullName))
+                    if (!Options_AddSameFilesMultipleTimesCheckBox.Checked && Hash_Nazvy_Souboru.Items.Contains(SouborF.FullName))
                         pridat = false;
 
                     if (pridat)
@@ -13056,7 +13056,7 @@ namespace AniDBClient.Forms
         //Přidání adresáře
         private void Watcher_Add_Click(object sender, EventArgs e)
         {
-            string path = FileHelpers.OpenDirectoryDialog("", Options_CH13.Checked);
+            string path = FileHelpers.OpenDirectoryDialog("", Options_ClassicFolderSelectDialogCheckBox.Checked);
 
             if (Directory.Exists(path))
             {
@@ -13380,7 +13380,7 @@ namespace AniDBClient.Forms
             {
                 if (DMangaRel.Rows.Count > 0)
                 {
-                    Manga_RelationTree.Nodes.Add("N", Language.MainTab_Manga);
+                    Manga_RelationTree.Nodes.Add("N", Language.MainTab_MangaPage);
 
                     for (int i = 0; i < DMangaRel.Rows.Count; i++)
                         Manga_RelationTree.Nodes.Add("M" + DMangaRel.Rows[i]["id_manga_related"].ToString(), DMangaRel.Rows[i]["manga_nazevjap"].ToString());
@@ -13391,7 +13391,7 @@ namespace AniDBClient.Forms
 
                 if (DAnime.Rows.Count > 0)
                 {
-                    Manga_RelationTree.Nodes.Add("N", Language.MainTab_Anime);
+                    Manga_RelationTree.Nodes.Add("N", Language.MainTab_AnimePage);
 
                     for (int i = 0; i < DAnime.Rows.Count; i++)
                         Manga_RelationTree.Nodes.Add("A" + DAnime.Rows[i]["id_anime"].ToString(), DAnime.Rows[i]["anime_nazevjap"].ToString());
@@ -14549,7 +14549,7 @@ namespace AniDBClient.Forms
         //Chapters Directory
         private void Manga_Obr_CHD_Click(object sender, EventArgs e)
         {
-            string path = FileHelpers.OpenDirectoryDialog(Manga_Tx19.Text, Options_CH13.Checked);
+            string path = FileHelpers.OpenDirectoryDialog(Manga_Tx19.Text, Options_ClassicFolderSelectDialogCheckBox.Checked);
 
             if (Directory.Exists(path))
             {

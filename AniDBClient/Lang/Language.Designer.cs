@@ -576,9 +576,9 @@ namespace AniDBClient.Lang {
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Smazat.
         /// </summary>
-        internal static string DataAnime_Menu_DatabaseDelete {
+        internal static string DataAnime_Menu_Database_Delete {
             get {
-                return ResourceManager.GetString("DataAnime_Menu_DatabaseDelete", resourceCulture);
+                return ResourceManager.GetString("DataAnime_Menu_Database_Delete", resourceCulture);
             }
         }
         
@@ -655,6 +655,24 @@ namespace AniDBClient.Lang {
         }
         
         /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Vymazat.
+        /// </summary>
+        internal static string DataAnime_Menu_MyList_Delete {
+            get {
+                return ResourceManager.GetString("DataAnime_Menu_MyList_Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Shlédnuto.
+        /// </summary>
+        internal static string DataAnime_Menu_MyList_Watched {
+            get {
+                return ResourceManager.GetString("DataAnime_Menu_MyList_Watched", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Přidat / Upravit.
         /// </summary>
         internal static string DataAnime_Menu_MyListAddModify {
@@ -673,29 +691,11 @@ namespace AniDBClient.Lang {
         }
         
         /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Vymazat.
-        /// </summary>
-        internal static string DataAnime_Menu_MyListDelete {
-            get {
-                return ResourceManager.GetString("DataAnime_Menu_MyListDelete", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Aktualizovat.
         /// </summary>
         internal static string DataAnime_Menu_MyListUpdate {
             get {
                 return ResourceManager.GetString("DataAnime_Menu_MyListUpdate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný Shlédnuto.
-        /// </summary>
-        internal static string DataAnime_Menu_MyListWatched {
-            get {
-                return ResourceManager.GetString("DataAnime_Menu_MyListWatched", resourceCulture);
             }
         }
         
@@ -1476,36 +1476,36 @@ namespace AniDBClient.Lang {
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Anime.
         /// </summary>
-        internal static string DataSQL_Anime {
+        internal static string DataSql_Anime {
             get {
-                return ResourceManager.GetString("DataSQL_Anime", resourceCulture);
+                return ResourceManager.GetString("DataSql_Anime", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Zkontroluj.
         /// </summary>
-        internal static string DataSQL_Check {
+        internal static string DataSql_Check {
             get {
-                return ResourceManager.GetString("DataSQL_Check", resourceCulture);
+                return ResourceManager.GetString("DataSql_Check", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Episody.
         /// </summary>
-        internal static string DataSQL_Episodes {
+        internal static string DataSql_Episodes {
             get {
-                return ResourceManager.GetString("DataSQL_Episodes", resourceCulture);
+                return ResourceManager.GetString("DataSql_Episodes", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Soubory.
         /// </summary>
-        internal static string DataSQL_Files {
+        internal static string DataSql_Files {
             get {
-                return ResourceManager.GetString("DataSQL_Files", resourceCulture);
+                return ResourceManager.GetString("DataSql_Files", resourceCulture);
             }
         }
         
@@ -1521,9 +1521,9 @@ namespace AniDBClient.Lang {
         /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný MyList.
         /// </summary>
-        internal static string DataSQL_MyList {
+        internal static string DataSql_MyList {
             get {
-                return ResourceManager.GetString("DataSQL_MyList", resourceCulture);
+                return ResourceManager.GetString("DataSql_MyList", resourceCulture);
             }
         }
         

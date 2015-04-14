@@ -346,43 +346,43 @@ namespace AniDBClient.Forms
 
             Rules_TagsButton.Text = Language.Rules_Tags;
 
-            Rules_InfoRB01.Text = Language.Rules_InfoExport;
-            Rules_InfoRB02.Text = Language.Rules_FilesRulesRenameDoNothing;
-            Rules_GR04.Text = Language.Rules_ExportInfo;
+            Rules_InfoExportRadioButton.Text = Language.Rules_InfoExport;
+            Rules_InfoRenameDoNothingRadioButton.Text = Language.Rules_FilesRulesRenameDoNothing;
+            Rules_ExportInfoGroupBox.Text = Language.Rules_ExportInfo;
 
-            StatusBar_Mn01.Text = Language.StatusBar_TasksRemaining;
+            StatusBar_TasksRemainingLabel.Text = Language.StatusBar_TasksRemaining;
 
-            MainTabLog_Mn01.Text = Language.MainTabLog_AniDb;
-            MainTabLog_Mn02.Text = Language.MainTabLog_Sql;
-            MainTabLog_Mn03.Text = Language.MainTabLog_Tasks;
-            MainTabLog_Mn04.Text = Language.MainTabLog_Error;
+            MainTabLog_AniDbTabPage.Text = Language.MainTabLog_AniDb;
+            MainTabLog_SqlTabPage.Text = Language.MainTabLog_Sql;
+            MainTabLog_TasksTabPage.Text = Language.MainTabLog_Tasks;
+            MainTabLog_ErrorTabPage.Text = Language.MainTabLog_Error;
 
-            MainTabData_Mn00.Text = Language.MainTabData_MyList;
-            MainTabData_Mn01.Text = Language.MainTabData_Files;
-            MainTabData_Mn02.Text = Language.MainTabData_Anime;
-            MainTabData_Mn03.Text = Language.MainTabData_Anime2;
-            MainTabData_Mn04.Text = Language.MainTabData_Genres;
-            MainTabData_Mn05.Text = Language.MainTabData_Groups;
-            MainTabData_Mn07.Text = Language.MainTabData_Search;
-            MainTabData_Mn08.Text = Language.MainTabData_Others;
-            MainTabData_Mn09.Text = Language.MainTabData_Graphs;
-            MainTabData_Mn10.Text = Language.MainTabData_Export;
+            MainTabData_MyListTabPage.Text = Language.MainTabData_MyList;
+            MainTabData_FilesTabPage.Text = Language.MainTabData_Files;
+            MainTabData_AnimeTabPage.Text = Language.MainTabData_Anime;
+            MainTabData_Anime2TabPage.Text = Language.MainTabData_Anime2;
+            MainTabData_GenresTabPage.Text = Language.MainTabData_Genres;
+            MainTabData_GroupsTabPage.Text = Language.MainTabData_Groups;
+            MainTabData_SearchTabPage.Text = Language.MainTabData_Search;
+            MainTabData_OthersTabPage.Text = Language.MainTabData_Others;
+            MainTabData_GraphsTabPage.Text = Language.MainTabData_Graphs;
+            MainTabData_ExportTabPage.Text = Language.MainTabData_Export;
 
-            DataSQL_BT01.Text = Language.DataSQL_Anime;
-            DataSQL_BT02.Text = Language.DataSQL_Episodes;
-            DataSQL_BT03.Text = Language.DataSQL_Files;
-            DataSQL_BT04.Text = Language.DataSQL_MyList;
-            DataSQL_GR01.Text = Language.DataSQL_Check;
+            DataSql_AnimeButton.Text = Language.DataSql_Anime;
+            DataSql_EpisodesButton.Text = Language.DataSql_Episodes;
+            DataSql_FilesButton.Text = Language.DataSql_Files;
+            DataSql_MyListButton.Text = Language.DataSql_MyList;
+            DataSql_CheckGroupBox.Text = Language.DataSql_Check;
 
-            DataAnime_Menu_Mn02_Mn01.Text = Language.DataAnime_Menu_MyListAddModify;
-            DataAnime_Menu_Mn02_Mn02.Text = Language.DataAnime_Menu_MyListDelete;
-            DataAnime_Menu_Mn02_Mn03.Text = Language.DataAnime_Menu_MyListWatched;
+            DataAnime_Menu_MyList_AddModify.Text = Language.DataAnime_Menu_MyListAddModify;
+            DataAnime_Menu_MyList_Delete.Text = Language.DataAnime_Menu_MyList_Delete;
+            DataAnime_Menu_MyList_Watched.Text = Language.DataAnime_Menu_MyList_Watched;
 
-            DataAnime_Menu_Mn03_Mn01.Text = Language.DataAnime_Menu_DatabaseDelete;
+            DataAnime_Menu_Database_Delete.Text = Language.DataAnime_Menu_Database_Delete;
 
             DataFiles_Menu_Mn01_Mn01.Text = Language.DataAnime_Menu_MyListAddModify;
-            DataFiles_Menu_Mn01_Mn02.Text = Language.DataAnime_Menu_MyListDelete;
-            DataFiles_Menu_Mn01_Mn03.Text = Language.DataAnime_Menu_MyListWatched;
+            DataFiles_Menu_Mn01_Mn02.Text = Language.DataAnime_Menu_MyList_Delete;
+            DataFiles_Menu_Mn01_Mn03.Text = Language.DataAnime_Menu_MyList_Watched;
 
             DataFiles_Menu_Mn01.Text = Language.DataAnime_Menu_MyList;
             DataFiles_Menu_Mn02.Text = Language.DataAnime_Menu_Database;
@@ -390,7 +390,7 @@ namespace AniDBClient.Forms
             DataFiles_Menu_Mn04.Text = Language.DataFiles_Menu_Win;
             DataFiles_Menu_Mn07.Text = Language.DataFiles_Menu_Rehash;
 
-            DataFiles_Menu_Mn02_Mn01.Text = Language.DataAnime_Menu_DatabaseDelete;
+            DataFiles_Menu_Mn02_Mn01.Text = Language.DataAnime_Menu_Database_Delete;
 
             DataFilesTree_CH01.Text = Language.DataFilesTree_Clear;
             DataFilesTree_CH02.Text = Language.DataFilesTree_Expand;
@@ -407,9 +407,9 @@ namespace AniDBClient.Forms
             DataFilesTree_Mn01_Mn01.Text = Language.DataAnime_Menu_Expand_All;
             DataFilesTree_Mn01_Mn02.Text = Language.DataAnime_Menu_Expand_CollapseAll;
             DataFilesTree_Mn02_Mn01.Text = Language.DataAnime_Menu_MyListAddModify;
-            DataFilesTree_Mn02_Mn02.Text = Language.DataAnime_Menu_MyListDelete;
-            DataFilesTree_Mn02_Mn03.Text = Language.DataAnime_Menu_MyListWatched;
-            DataFilesTree_Mn03_Mn01.Text = Language.DataAnime_Menu_DatabaseDelete;
+            DataFilesTree_Mn02_Mn02.Text = Language.DataAnime_Menu_MyList_Delete;
+            DataFilesTree_Mn02_Mn03.Text = Language.DataAnime_Menu_MyList_Watched;
+            DataFilesTree_Mn03_Mn01.Text = Language.DataAnime_Menu_Database_Delete;
 
             Anime_LB03.Text = Language.Anime_KanjiName;
             Anime_LB04.Text = Language.Anime_Type;
@@ -459,9 +459,9 @@ namespace AniDBClient.Forms
             AnimeData_Menu_Mn01_Mn01.Text = Language.DataAnime_Menu_Expand_Episodes;
             AnimeData_Menu_Mn01_Mn02.Text = Language.DataAnime_Menu_Expand_CollapseEpisodes;
             AnimeData_Menu_Mn02_Mn01.Text = Language.DataAnime_Menu_MyListAddModify;
-            AnimeData_Menu_Mn02_Mn02.Text = Language.DataAnime_Menu_MyListDelete;
-            AnimeData_Menu_Mn02_Mn03.Text = Language.DataAnime_Menu_MyListWatched;
-            AnimeData_Menu_Mn03_Mn01.Text = Language.DataAnime_Menu_DatabaseDelete;
+            AnimeData_Menu_Mn02_Mn02.Text = Language.DataAnime_Menu_MyList_Delete;
+            AnimeData_Menu_Mn02_Mn03.Text = Language.DataAnime_Menu_MyList_Watched;
+            AnimeData_Menu_Mn03_Mn01.Text = Language.DataAnime_Menu_Database_Delete;
 
             ToolTip.SetToolTip(DataFiles_Bt00, Language.DataFiles_Bt00_ToolTip);
             ToolTip.SetToolTip(StatusBar_Refresh, Language.DataFiles_Bt00_ToolTip);
@@ -963,7 +963,7 @@ namespace AniDBClient.Forms
 
             settingsData.MangaDirectory = Manga_Tx19.Text;
 
-            foreach (Control c in MainTabData_Mn01.Controls)
+            foreach (Control c in MainTabData_FilesTabPage.Controls)
             {
                 if (c is System.Windows.Forms.RadioButton)
                 {
@@ -986,7 +986,7 @@ namespace AniDBClient.Forms
             else
                 settingsData.RenameRb = 2;
 
-            if (Rules_InfoRB01.Checked)
+            if (Rules_InfoExportRadioButton.Checked)
                 settingsData.InfoRb = 1;
             else
                 settingsData.InfoRb = 2;
@@ -1127,7 +1127,7 @@ namespace AniDBClient.Forms
                 }
             }
 
-            foreach (Control c in MainTabData_Mn01.Controls)
+            foreach (Control c in MainTabData_FilesTabPage.Controls)
             {
                 if (c is System.Windows.Forms.RadioButton)
                 {
@@ -1216,15 +1216,15 @@ namespace AniDBClient.Forms
             switch (settingsData.InfoRb)
             {
                 case 1:
-                    Rules_InfoRB01.Checked = true;
+                    Rules_InfoExportRadioButton.Checked = true;
                     break;
 
                 case 2:
-                    Rules_InfoRB02.Checked = true;
+                    Rules_InfoRenameDoNothingRadioButton.Checked = true;
                     break;
 
                 default:
-                    Rules_InfoRB02.Checked = true;
+                    Rules_InfoRenameDoNothingRadioButton.Checked = true;
                     break;
             }
 
@@ -3290,13 +3290,13 @@ namespace AniDBClient.Forms
 
                 Manga_Gr03.Location = new Point(Manga_Gr02.Location.X, Manga_Gr02.Height + 5);
 
-                AnimeTags.Height = MainTabData_Mn08.Height - 20;
-                AnimeRating.Height = MainTabData_Mn08.Height - 20;
-                AnimeSeen.Height = MainTabData_Mn08.Height - 20;
+                AnimeTags.Height = MainTabData_OthersTabPage.Height - 20;
+                AnimeRating.Height = MainTabData_OthersTabPage.Height - 20;
+                AnimeSeen.Height = MainTabData_OthersTabPage.Height - 20;
 
-                AnimeTags.Width = (MainTabData_Mn08.Width / 3) - 20;
-                AnimeRating.Width = (MainTabData_Mn08.Width / 3) - 20;
-                AnimeSeen.Width = (MainTabData_Mn08.Width / 3) - 20;
+                AnimeTags.Width = (MainTabData_OthersTabPage.Width / 3) - 20;
+                AnimeRating.Width = (MainTabData_OthersTabPage.Width / 3) - 20;
+                AnimeSeen.Width = (MainTabData_OthersTabPage.Width / 3) - 20;
 
                 AnimeTags.Location = new Point(10, 10);
                 AnimeRating.Location = new Point(AnimeRating.Width + 30, 10);
@@ -3310,12 +3310,12 @@ namespace AniDBClient.Forms
                 Rules_RulesForGeneratingDirectoriesGroupBox.Width = x;
                 Rules_RulesForGeneratingDirectoriesGroupBox.Height = z - 48;
 
-                Rules_GR04.Width = x;
-                Rules_GR04.Height = z - 48;
+                Rules_ExportInfoGroupBox.Width = x;
+                Rules_ExportInfoGroupBox.Height = z - 48;
 
                 Rules_RulesForFileRenamingGroupBox.Location = new Point(10, 49);
                 Rules_RulesForGeneratingDirectoriesGroupBox.Location = new Point(20 + x, 49);
-                Rules_GR04.Location = new Point(30 + x + x, 49);
+                Rules_ExportInfoGroupBox.Location = new Point(30 + x + x, 49);
 
                 x = (Manga_Gr02.Width - 4 * 10) / 3;
 
@@ -5314,7 +5314,7 @@ namespace AniDBClient.Forms
                     }
                 }
 
-                if (Rules_InfoRB01.Checked)
+                if (Rules_InfoExportRadioButton.Checked)
                     Rules_InfoE(DFilesID);
             }
             catch (Exception ee)

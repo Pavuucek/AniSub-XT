@@ -151,9 +151,9 @@ namespace AniDBClient.Forms
             this.Rules_Replace = new System.Windows.Forms.DataGridView();
             this.Rules_Replace_Mn01 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Rules_Replace_Mn02 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Rules_GR04 = new System.Windows.Forms.GroupBox();
-            this.Rules_InfoRB02 = new System.Windows.Forms.RadioButton();
-            this.Rules_InfoRB01 = new System.Windows.Forms.RadioButton();
+            this.Rules_ExportInfoGroupBox = new System.Windows.Forms.GroupBox();
+            this.Rules_InfoRenameDoNothingRadioButton = new System.Windows.Forms.RadioButton();
+            this.Rules_InfoExportRadioButton = new System.Windows.Forms.RadioButton();
             this.Rules_InfoC = new System.Windows.Forms.ComboBox();
             this.Rules_Info = new System.Windows.Forms.TextBox();
             this.Rules_RulesForGeneratingDirectoriesGroupBox = new System.Windows.Forms.GroupBox();
@@ -184,10 +184,10 @@ namespace AniDBClient.Forms
             this.Hash_CH01 = new System.Windows.Forms.CheckBox();
             this.MainTab_AnimePage = new System.Windows.Forms.TabPage();
             this.MainTabData = new System.Windows.Forms.TabControl();
-            this.MainTabData_Mn00 = new System.Windows.Forms.TabPage();
+            this.MainTabData_MyListTabPage = new System.Windows.Forms.TabPage();
             this.Options_GR04 = new System.Windows.Forms.GroupBox();
             this.MyListAnime = new System.Windows.Forms.DataGridView();
-            this.MainTabData_Mn01 = new System.Windows.Forms.TabPage();
+            this.MainTabData_FilesTabPage = new System.Windows.Forms.TabPage();
             this.DataFilesTree_CH04 = new System.Windows.Forms.CheckBox();
             this.DataFilesTree_CH03 = new System.Windows.Forms.CheckBox();
             this.DataFilesTree_CH02 = new System.Windows.Forms.CheckBox();
@@ -274,7 +274,7 @@ namespace AniDBClient.Forms
             this.DataFiles_Menu_Mn03 = new System.Windows.Forms.ToolStripMenuItem();
             this.DataFiles_Menu_Mn04 = new System.Windows.Forms.ToolStripMenuItem();
             this.DataFiles_Menu_Mn07 = new System.Windows.Forms.ToolStripMenuItem();
-            this.MainTabData_Mn02 = new System.Windows.Forms.TabPage();
+            this.MainTabData_AnimeTabPage = new System.Windows.Forms.TabPage();
             this.DataAnime_Page = new System.Windows.Forms.NumericUpDown();
             this.DataAnime_Rows = new System.Windows.Forms.NumericUpDown();
             this.DataAnime = new System.Windows.Forms.DataGridView();
@@ -303,18 +303,18 @@ namespace AniDBClient.Forms
             this.DataAnime_Menu_Expand_CollapseAllEpisodes = new System.Windows.Forms.ToolStripMenuItem();
             this.DataAnime_Menu_Expand_CollapseAll = new System.Windows.Forms.ToolStripMenuItem();
             this.DataAnime_Menu_MyList = new System.Windows.Forms.ToolStripMenuItem();
-            this.DataAnime_Menu_Mn02_Mn01 = new System.Windows.Forms.ToolStripMenuItem();
-            this.DataAnime_Menu_Mn02_Mn02 = new System.Windows.Forms.ToolStripMenuItem();
-            this.DataAnime_Menu_Mn02_Mn03 = new System.Windows.Forms.ToolStripMenuItem();
+            this.DataAnime_Menu_MyList_AddModify = new System.Windows.Forms.ToolStripMenuItem();
+            this.DataAnime_Menu_MyList_Delete = new System.Windows.Forms.ToolStripMenuItem();
+            this.DataAnime_Menu_MyList_Watched = new System.Windows.Forms.ToolStripMenuItem();
             this.DataAnime_Menu_Database = new System.Windows.Forms.ToolStripMenuItem();
-            this.DataAnime_Menu_Mn03_Mn01 = new System.Windows.Forms.ToolStripMenuItem();
+            this.DataAnime_Menu_Database_Delete = new System.Windows.Forms.ToolStripMenuItem();
             this.DataAnime_Menu_Mn04 = new System.Windows.Forms.ToolStripMenuItem();
             this.DataAnime_Menu_Mn04_Mn01 = new System.Windows.Forms.ToolStripMenuItem();
             this.DataAnime_Menu_Mn04_Mn02 = new System.Windows.Forms.ToolStripMenuItem();
             this.DataAnime_Menu_Mn04_Mn03 = new System.Windows.Forms.ToolStripMenuItem();
             this.DataAnime_Menu_Mn04_Mn04 = new System.Windows.Forms.ToolStripMenuItem();
             this.DataAnime_Menu_Mn04_Mn05 = new System.Windows.Forms.ToolStripMenuItem();
-            this.MainTabData_Mn03 = new System.Windows.Forms.TabPage();
+            this.MainTabData_Anime2TabPage = new System.Windows.Forms.TabPage();
             this.Anime_RelDel = new System.Windows.Forms.Button();
             this.AnimeTree_CH02 = new System.Windows.Forms.CheckBox();
             this.AnimeTree_CH01 = new System.Windows.Forms.CheckBox();
@@ -364,7 +364,7 @@ namespace AniDBClient.Forms
             this.AnimeTree_Menu_Mn01_Mn04 = new System.Windows.Forms.ToolStripMenuItem();
             this.AnimeTree_Menu_Mn01_Mn05 = new System.Windows.Forms.ToolStripMenuItem();
             this.AnimeTree_Menu_Mn02 = new System.Windows.Forms.ToolStripMenuItem();
-            this.MainTabData_Mn04 = new System.Windows.Forms.TabPage();
+            this.MainTabData_GenresTabPage = new System.Windows.Forms.TabPage();
             this.DataGenres_Page = new System.Windows.Forms.NumericUpDown();
             this.DataGenres_Rows = new System.Windows.Forms.NumericUpDown();
             this.DataGenres = new System.Windows.Forms.DataGridView();
@@ -375,7 +375,7 @@ namespace AniDBClient.Forms
             this.DataGenres_Mn05 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataGenres_Mn06 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataGenres_Mn07 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MainTabData_Mn05 = new System.Windows.Forms.TabPage();
+            this.MainTabData_GroupsTabPage = new System.Windows.Forms.TabPage();
             this.DataGroups_Page = new System.Windows.Forms.NumericUpDown();
             this.DataGroups_Rows = new System.Windows.Forms.NumericUpDown();
             this.DataGroups = new System.Windows.Forms.DataGridView();
@@ -386,7 +386,7 @@ namespace AniDBClient.Forms
             this.DataGroups_Mn05 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataGroups_Mn06 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataGroups_Mn07 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MainTabData_Mn07 = new System.Windows.Forms.TabPage();
+            this.MainTabData_SearchTabPage = new System.Windows.Forms.TabPage();
             this.DataSearch_CH02 = new System.Windows.Forms.CheckBox();
             this.DataSearch_CH01 = new System.Windows.Forms.CheckBox();
             this.DataSearch_NM05 = new System.Windows.Forms.NumericUpDown();
@@ -429,14 +429,14 @@ namespace AniDBClient.Forms
             this.DataSearch_Mn03 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataSearch_Mn04 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataSearch_Mn05 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MainTabData_Mn08 = new System.Windows.Forms.TabPage();
+            this.MainTabData_OthersTabPage = new System.Windows.Forms.TabPage();
             this.AnimeSeen = new System.Windows.Forms.TreeView();
             this.AnimeRating = new System.Windows.Forms.TreeView();
             this.AnimeTags = new System.Windows.Forms.TreeView();
-            this.MainTabData_Mn09 = new System.Windows.Forms.TabPage();
+            this.MainTabData_GraphsTabPage = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Zgc_Graph = new ZedGraph.ZedGraphControl();
-            this.MainTabData_Mn10 = new System.Windows.Forms.TabPage();
+            this.MainTabData_ExportTabPage = new System.Windows.Forms.TabPage();
             this.Anime_ExportLB01 = new System.Windows.Forms.Label();
             this.Anime_ExportBT02 = new System.Windows.Forms.Button();
             this.Anime_ExportBT01 = new System.Windows.Forms.Button();
@@ -600,23 +600,23 @@ namespace AniDBClient.Forms
             this.MangaSearch_Mn04 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MainTab_LogPage = new System.Windows.Forms.TabPage();
             this.MainTabLog = new System.Windows.Forms.TabControl();
-            this.MainTabLog_Mn01 = new System.Windows.Forms.TabPage();
+            this.MainTabLog_AniDbTabPage = new System.Windows.Forms.TabPage();
             this.Log = new System.Windows.Forms.TextBox();
-            this.MainTabLog_Mn02 = new System.Windows.Forms.TabPage();
+            this.MainTabLog_SqlTabPage = new System.Windows.Forms.TabPage();
             this.LogSQL = new System.Windows.Forms.TextBox();
-            this.MainTabLog_Mn04 = new System.Windows.Forms.TabPage();
+            this.MainTabLog_ErrorTabPage = new System.Windows.Forms.TabPage();
             this.LogError = new System.Windows.Forms.TextBox();
-            this.MainTabLog_Mn03 = new System.Windows.Forms.TabPage();
+            this.MainTabLog_TasksTabPage = new System.Windows.Forms.TabPage();
             this.Add_Text02 = new System.Windows.Forms.ComboBox();
             this.Add_Text01 = new System.Windows.Forms.TextBox();
             this.Add_LB01 = new System.Windows.Forms.Label();
             this.LogTasks = new System.Windows.Forms.ListBox();
             this.MainTab_SqlPage = new System.Windows.Forms.TabPage();
-            this.DataSQL_GR01 = new System.Windows.Forms.GroupBox();
-            this.DataSQL_BT03 = new System.Windows.Forms.Button();
-            this.DataSQL_BT04 = new System.Windows.Forms.Button();
-            this.DataSQL_BT02 = new System.Windows.Forms.Button();
-            this.DataSQL_BT01 = new System.Windows.Forms.Button();
+            this.DataSql_CheckGroupBox = new System.Windows.Forms.GroupBox();
+            this.DataSql_FilesButton = new System.Windows.Forms.Button();
+            this.DataSql_MyListButton = new System.Windows.Forms.Button();
+            this.DataSql_EpisodesButton = new System.Windows.Forms.Button();
+            this.DataSql_AnimeButton = new System.Windows.Forms.Button();
             this.DataSQL_Text = new System.Windows.Forms.ComboBox();
             this.DataSQL_Columns = new System.Windows.Forms.ListBox();
             this.DataSQL_Tables = new System.Windows.Forms.ListBox();
@@ -658,7 +658,7 @@ namespace AniDBClient.Forms
             this.StatusBar_Mn04 = new System.Windows.Forms.Label();
             this.StatusBar_Mn03 = new System.Windows.Forms.Label();
             this.StatusBar_Mn02 = new System.Windows.Forms.Label();
-            this.StatusBar_Mn01 = new System.Windows.Forms.Label();
+            this.StatusBar_TasksRemainingLabel = new System.Windows.Forms.Label();
             this.ToolTipAnimeRel = new System.Windows.Forms.ToolTip(this.components);
             this.Notify = new System.Windows.Forms.NotifyIcon(this.components);
             this.StatusBar_Connect = new System.Windows.Forms.Button();
@@ -777,7 +777,7 @@ namespace AniDBClient.Forms
             this.MainTab_RulesPage.SuspendLayout();
             this.Rules_RulesForCharacterReplacingGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Rules_Replace)).BeginInit();
-            this.Rules_GR04.SuspendLayout();
+            this.Rules_ExportInfoGroupBox.SuspendLayout();
             this.Rules_RulesForGeneratingDirectoriesGroupBox.SuspendLayout();
             this.Rules_RulesForFileRenamingGroupBox.SuspendLayout();
             this.MainTab_HashPage.SuspendLayout();
@@ -785,10 +785,10 @@ namespace AniDBClient.Forms
             ((System.ComponentModel.ISupportInitialize)(this.Hash_Waiting)).BeginInit();
             this.MainTab_AnimePage.SuspendLayout();
             this.MainTabData.SuspendLayout();
-            this.MainTabData_Mn00.SuspendLayout();
+            this.MainTabData_MyListTabPage.SuspendLayout();
             this.Options_GR04.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MyListAnime)).BeginInit();
-            this.MainTabData_Mn01.SuspendLayout();
+            this.MainTabData_FilesTabPage.SuspendLayout();
             this.DataFilesTree_Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataFiles_Year)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataFiles_Month)).BeginInit();
@@ -797,35 +797,35 @@ namespace AniDBClient.Forms
             ((System.ComponentModel.ISupportInitialize)(this.DataFiles_Rows)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataFiles)).BeginInit();
             this.DataFiles_Menu.SuspendLayout();
-            this.MainTabData_Mn02.SuspendLayout();
+            this.MainTabData_AnimeTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataAnime_Page)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataAnime_Rows)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataAnime)).BeginInit();
             this.DataAnime_Menu.SuspendLayout();
-            this.MainTabData_Mn03.SuspendLayout();
+            this.MainTabData_Anime2TabPage.SuspendLayout();
             this.Anime_GR01.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Anime_Rat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AnimeData)).BeginInit();
             this.AnimeTree_Menu.SuspendLayout();
-            this.MainTabData_Mn04.SuspendLayout();
+            this.MainTabData_GenresTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGenres_Page)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGenres_Rows)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGenres)).BeginInit();
-            this.MainTabData_Mn05.SuspendLayout();
+            this.MainTabData_GroupsTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGroups_Page)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGroups_Rows)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGroups)).BeginInit();
-            this.MainTabData_Mn07.SuspendLayout();
+            this.MainTabData_SearchTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataSearch_NM05)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSearch_NM04)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSearch_NM03)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSearch_NM02)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSearch_NM01)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSearch)).BeginInit();
-            this.MainTabData_Mn08.SuspendLayout();
-            this.MainTabData_Mn09.SuspendLayout();
+            this.MainTabData_OthersTabPage.SuspendLayout();
+            this.MainTabData_GraphsTabPage.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.MainTabData_Mn10.SuspendLayout();
+            this.MainTabData_ExportTabPage.SuspendLayout();
             this.MainTab_MangaPage.SuspendLayout();
             this.MainTabManga.SuspendLayout();
             this.MainTabManga_Mn01.SuspendLayout();
@@ -848,12 +848,12 @@ namespace AniDBClient.Forms
             ((System.ComponentModel.ISupportInitialize)(this.MangaSearch)).BeginInit();
             this.MainTab_LogPage.SuspendLayout();
             this.MainTabLog.SuspendLayout();
-            this.MainTabLog_Mn01.SuspendLayout();
-            this.MainTabLog_Mn02.SuspendLayout();
-            this.MainTabLog_Mn04.SuspendLayout();
-            this.MainTabLog_Mn03.SuspendLayout();
+            this.MainTabLog_AniDbTabPage.SuspendLayout();
+            this.MainTabLog_SqlTabPage.SuspendLayout();
+            this.MainTabLog_ErrorTabPage.SuspendLayout();
+            this.MainTabLog_TasksTabPage.SuspendLayout();
             this.MainTab_SqlPage.SuspendLayout();
-            this.DataSQL_GR01.SuspendLayout();
+            this.DataSql_CheckGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataSQL)).BeginInit();
             this.AnimeData_Menu.SuspendLayout();
             this.Manga_Data_Menu.SuspendLayout();
@@ -1977,7 +1977,7 @@ namespace AniDBClient.Forms
             this.MainTab_RulesPage.Controls.Add(this.Rules_DontCopyToAnotherDiskCheckBox);
             this.MainTab_RulesPage.Controls.Add(this.Rules_AutomaticRenamingCheckBox);
             this.MainTab_RulesPage.Controls.Add(this.Rules_RulesForCharacterReplacingGroupBox);
-            this.MainTab_RulesPage.Controls.Add(this.Rules_GR04);
+            this.MainTab_RulesPage.Controls.Add(this.Rules_ExportInfoGroupBox);
             this.MainTab_RulesPage.Controls.Add(this.Rules_RulesForGeneratingDirectoriesGroupBox);
             this.MainTab_RulesPage.Controls.Add(this.Rules_RulesForFileRenamingGroupBox);
             this.MainTab_RulesPage.Location = new System.Drawing.Point(4, 22);
@@ -2120,48 +2120,48 @@ namespace AniDBClient.Forms
             this.Rules_Replace_Mn02.HeaderText = "";
             this.Rules_Replace_Mn02.Name = "Rules_Replace_Mn02";
             // 
-            // Rules_GR04
+            // Rules_ExportInfoGroupBox
             // 
-            this.Rules_GR04.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Rules_GR04.Controls.Add(this.Rules_InfoDell);
-            this.Rules_GR04.Controls.Add(this.Rules_InfoRB02);
-            this.Rules_GR04.Controls.Add(this.Rules_InfoRB01);
-            this.Rules_GR04.Controls.Add(this.Rules_InfoAdd);
-            this.Rules_GR04.Controls.Add(this.Rules_InfoC);
-            this.Rules_GR04.Controls.Add(this.Rules_Info);
-            this.Rules_GR04.ForeColor = System.Drawing.Color.Black;
-            this.Rules_GR04.Location = new System.Drawing.Point(789, 49);
-            this.Rules_GR04.Name = "Rules_GR04";
-            this.Rules_GR04.Size = new System.Drawing.Size(291, 354);
-            this.Rules_GR04.TabIndex = 0;
-            this.Rules_GR04.TabStop = false;
-            this.Rules_GR04.Text = "groupBox2";
+            this.Rules_ExportInfoGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Rules_ExportInfoGroupBox.Controls.Add(this.Rules_InfoDell);
+            this.Rules_ExportInfoGroupBox.Controls.Add(this.Rules_InfoRenameDoNothingRadioButton);
+            this.Rules_ExportInfoGroupBox.Controls.Add(this.Rules_InfoExportRadioButton);
+            this.Rules_ExportInfoGroupBox.Controls.Add(this.Rules_InfoAdd);
+            this.Rules_ExportInfoGroupBox.Controls.Add(this.Rules_InfoC);
+            this.Rules_ExportInfoGroupBox.Controls.Add(this.Rules_Info);
+            this.Rules_ExportInfoGroupBox.ForeColor = System.Drawing.Color.Black;
+            this.Rules_ExportInfoGroupBox.Location = new System.Drawing.Point(789, 49);
+            this.Rules_ExportInfoGroupBox.Name = "Rules_ExportInfoGroupBox";
+            this.Rules_ExportInfoGroupBox.Size = new System.Drawing.Size(291, 354);
+            this.Rules_ExportInfoGroupBox.TabIndex = 0;
+            this.Rules_ExportInfoGroupBox.TabStop = false;
+            this.Rules_ExportInfoGroupBox.Text = "groupBox2";
             // 
-            // Rules_InfoRB02
+            // Rules_InfoRenameDoNothingRadioButton
             // 
-            this.Rules_InfoRB02.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Rules_InfoRB02.AutoSize = true;
-            this.Rules_InfoRB02.Checked = true;
-            this.Rules_InfoRB02.ForeColor = System.Drawing.Color.Black;
-            this.Rules_InfoRB02.Location = new System.Drawing.Point(180, 19);
-            this.Rules_InfoRB02.Name = "Rules_InfoRB02";
-            this.Rules_InfoRB02.Size = new System.Drawing.Size(85, 17);
-            this.Rules_InfoRB02.TabIndex = 0;
-            this.Rules_InfoRB02.TabStop = true;
-            this.Rules_InfoRB02.Text = "radioButton1";
-            this.Rules_InfoRB02.UseVisualStyleBackColor = true;
+            this.Rules_InfoRenameDoNothingRadioButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Rules_InfoRenameDoNothingRadioButton.AutoSize = true;
+            this.Rules_InfoRenameDoNothingRadioButton.Checked = true;
+            this.Rules_InfoRenameDoNothingRadioButton.ForeColor = System.Drawing.Color.Black;
+            this.Rules_InfoRenameDoNothingRadioButton.Location = new System.Drawing.Point(180, 19);
+            this.Rules_InfoRenameDoNothingRadioButton.Name = "Rules_InfoRenameDoNothingRadioButton";
+            this.Rules_InfoRenameDoNothingRadioButton.Size = new System.Drawing.Size(85, 17);
+            this.Rules_InfoRenameDoNothingRadioButton.TabIndex = 0;
+            this.Rules_InfoRenameDoNothingRadioButton.TabStop = true;
+            this.Rules_InfoRenameDoNothingRadioButton.Text = "radioButton1";
+            this.Rules_InfoRenameDoNothingRadioButton.UseVisualStyleBackColor = true;
             // 
-            // Rules_InfoRB01
+            // Rules_InfoExportRadioButton
             // 
-            this.Rules_InfoRB01.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Rules_InfoRB01.AutoSize = true;
-            this.Rules_InfoRB01.ForeColor = System.Drawing.Color.Black;
-            this.Rules_InfoRB01.Location = new System.Drawing.Point(89, 19);
-            this.Rules_InfoRB01.Name = "Rules_InfoRB01";
-            this.Rules_InfoRB01.Size = new System.Drawing.Size(85, 17);
-            this.Rules_InfoRB01.TabIndex = 0;
-            this.Rules_InfoRB01.Text = "radioButton1";
-            this.Rules_InfoRB01.UseVisualStyleBackColor = true;
+            this.Rules_InfoExportRadioButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Rules_InfoExportRadioButton.AutoSize = true;
+            this.Rules_InfoExportRadioButton.ForeColor = System.Drawing.Color.Black;
+            this.Rules_InfoExportRadioButton.Location = new System.Drawing.Point(89, 19);
+            this.Rules_InfoExportRadioButton.Name = "Rules_InfoExportRadioButton";
+            this.Rules_InfoExportRadioButton.Size = new System.Drawing.Size(85, 17);
+            this.Rules_InfoExportRadioButton.TabIndex = 0;
+            this.Rules_InfoExportRadioButton.Text = "radioButton1";
+            this.Rules_InfoExportRadioButton.UseVisualStyleBackColor = true;
             // 
             // Rules_InfoC
             // 
@@ -2569,16 +2569,16 @@ namespace AniDBClient.Forms
             this.MainTabData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.MainTabData.Controls.Add(this.MainTabData_Mn00);
-            this.MainTabData.Controls.Add(this.MainTabData_Mn01);
-            this.MainTabData.Controls.Add(this.MainTabData_Mn02);
-            this.MainTabData.Controls.Add(this.MainTabData_Mn03);
-            this.MainTabData.Controls.Add(this.MainTabData_Mn04);
-            this.MainTabData.Controls.Add(this.MainTabData_Mn05);
-            this.MainTabData.Controls.Add(this.MainTabData_Mn07);
-            this.MainTabData.Controls.Add(this.MainTabData_Mn08);
-            this.MainTabData.Controls.Add(this.MainTabData_Mn09);
-            this.MainTabData.Controls.Add(this.MainTabData_Mn10);
+            this.MainTabData.Controls.Add(this.MainTabData_MyListTabPage);
+            this.MainTabData.Controls.Add(this.MainTabData_FilesTabPage);
+            this.MainTabData.Controls.Add(this.MainTabData_AnimeTabPage);
+            this.MainTabData.Controls.Add(this.MainTabData_Anime2TabPage);
+            this.MainTabData.Controls.Add(this.MainTabData_GenresTabPage);
+            this.MainTabData.Controls.Add(this.MainTabData_GroupsTabPage);
+            this.MainTabData.Controls.Add(this.MainTabData_SearchTabPage);
+            this.MainTabData.Controls.Add(this.MainTabData_OthersTabPage);
+            this.MainTabData.Controls.Add(this.MainTabData_GraphsTabPage);
+            this.MainTabData.Controls.Add(this.MainTabData_ExportTabPage);
             this.MainTabData.Location = new System.Drawing.Point(3, 3);
             this.MainTabData.Name = "MainTabData";
             this.MainTabData.SelectedIndex = 0;
@@ -2587,16 +2587,16 @@ namespace AniDBClient.Forms
             this.MainTabData.SelectedIndexChanged += new System.EventHandler(this.MainTabData_SelectedIndexChanged);
             this.MainTabData.MouseEnter += new System.EventHandler(this.MainTabData_MouseEnter);
             // 
-            // MainTabData_Mn00
+            // MainTabData_MyListTabPage
             // 
-            this.MainTabData_Mn00.BackColor = System.Drawing.Color.White;
-            this.MainTabData_Mn00.Controls.Add(this.Options_GR04);
-            this.MainTabData_Mn00.Location = new System.Drawing.Point(4, 22);
-            this.MainTabData_Mn00.Name = "MainTabData_Mn00";
-            this.MainTabData_Mn00.Size = new System.Drawing.Size(1105, 648);
-            this.MainTabData_Mn00.TabIndex = 0;
-            this.MainTabData_Mn00.Text = "0";
-            this.MainTabData_Mn00.UseVisualStyleBackColor = true;
+            this.MainTabData_MyListTabPage.BackColor = System.Drawing.Color.White;
+            this.MainTabData_MyListTabPage.Controls.Add(this.Options_GR04);
+            this.MainTabData_MyListTabPage.Location = new System.Drawing.Point(4, 22);
+            this.MainTabData_MyListTabPage.Name = "MainTabData_MyListTabPage";
+            this.MainTabData_MyListTabPage.Size = new System.Drawing.Size(1105, 648);
+            this.MainTabData_MyListTabPage.TabIndex = 0;
+            this.MainTabData_MyListTabPage.Text = "0";
+            this.MainTabData_MyListTabPage.UseVisualStyleBackColor = true;
             // 
             // Options_GR04
             // 
@@ -2651,65 +2651,65 @@ namespace AniDBClient.Forms
             this.MyListAnime.Size = new System.Drawing.Size(1099, 597);
             this.MyListAnime.TabIndex = 1;
             // 
-            // MainTabData_Mn01
+            // MainTabData_FilesTabPage
             // 
-            this.MainTabData_Mn01.BackColor = System.Drawing.Color.White;
-            this.MainTabData_Mn01.Controls.Add(this.DataFilesTree_CH04);
-            this.MainTabData_Mn01.Controls.Add(this.DataFilesTree_CH03);
-            this.MainTabData_Mn01.Controls.Add(this.DataFilesTree_CH02);
-            this.MainTabData_Mn01.Controls.Add(this.DataFilesTree_CH01);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_LB06);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_LB05);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_LB04);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_LB03);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_LB02);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_LB01);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Filtr04);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Filtr03);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Filtr02);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Filtr01);
-            this.MainTabData_Mn01.Controls.Add(this.DataFilesTree);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_RB05);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_RB04);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Year);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Month);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Day);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_RB03);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_RB02);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_RB01);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Page);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Rows);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt21);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt22);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt20);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt19);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt00);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt01);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt18);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt17);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt16);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt15);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt14);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt13);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt12);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt11);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt10);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt09);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt08);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt07);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt06);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt05);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt04);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt03);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt02);
-            this.MainTabData_Mn01.Location = new System.Drawing.Point(4, 22);
-            this.MainTabData_Mn01.Name = "MainTabData_Mn01";
-            this.MainTabData_Mn01.Padding = new System.Windows.Forms.Padding(3);
-            this.MainTabData_Mn01.Size = new System.Drawing.Size(1105, 648);
-            this.MainTabData_Mn01.TabIndex = 0;
-            this.MainTabData_Mn01.Text = "1";
-            this.MainTabData_Mn01.UseVisualStyleBackColor = true;
+            this.MainTabData_FilesTabPage.BackColor = System.Drawing.Color.White;
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFilesTree_CH04);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFilesTree_CH03);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFilesTree_CH02);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFilesTree_CH01);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_LB06);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_LB05);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_LB04);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_LB03);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_LB02);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_LB01);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Filtr04);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Filtr03);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Filtr02);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Filtr01);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFilesTree);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_RB05);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_RB04);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Year);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Month);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Day);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_RB03);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_RB02);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_RB01);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Page);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Rows);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt21);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt22);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt20);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt19);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt00);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt01);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt18);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt17);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt16);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt15);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt14);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt13);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt12);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt11);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt10);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt09);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt08);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt07);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt06);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt05);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt04);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt03);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt02);
+            this.MainTabData_FilesTabPage.Location = new System.Drawing.Point(4, 22);
+            this.MainTabData_FilesTabPage.Name = "MainTabData_FilesTabPage";
+            this.MainTabData_FilesTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.MainTabData_FilesTabPage.Size = new System.Drawing.Size(1105, 648);
+            this.MainTabData_FilesTabPage.TabIndex = 0;
+            this.MainTabData_FilesTabPage.Text = "1";
+            this.MainTabData_FilesTabPage.UseVisualStyleBackColor = true;
             // 
             // DataFilesTree_CH04
             // 
@@ -3741,19 +3741,19 @@ namespace AniDBClient.Forms
             this.DataFiles_Menu_Mn07.Text = "7";
             this.DataFiles_Menu_Mn07.Click += new System.EventHandler(this.DataFiles_Menu_Mn07_Click);
             // 
-            // MainTabData_Mn02
+            // MainTabData_AnimeTabPage
             // 
-            this.MainTabData_Mn02.BackColor = System.Drawing.Color.White;
-            this.MainTabData_Mn02.Controls.Add(this.DataAnime_Page);
-            this.MainTabData_Mn02.Controls.Add(this.DataAnime_Rows);
-            this.MainTabData_Mn02.Controls.Add(this.DataAnime);
-            this.MainTabData_Mn02.Location = new System.Drawing.Point(4, 22);
-            this.MainTabData_Mn02.Name = "MainTabData_Mn02";
-            this.MainTabData_Mn02.Padding = new System.Windows.Forms.Padding(3);
-            this.MainTabData_Mn02.Size = new System.Drawing.Size(1105, 648);
-            this.MainTabData_Mn02.TabIndex = 0;
-            this.MainTabData_Mn02.Text = "2";
-            this.MainTabData_Mn02.UseVisualStyleBackColor = true;
+            this.MainTabData_AnimeTabPage.BackColor = System.Drawing.Color.White;
+            this.MainTabData_AnimeTabPage.Controls.Add(this.DataAnime_Page);
+            this.MainTabData_AnimeTabPage.Controls.Add(this.DataAnime_Rows);
+            this.MainTabData_AnimeTabPage.Controls.Add(this.DataAnime);
+            this.MainTabData_AnimeTabPage.Location = new System.Drawing.Point(4, 22);
+            this.MainTabData_AnimeTabPage.Name = "MainTabData_AnimeTabPage";
+            this.MainTabData_AnimeTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.MainTabData_AnimeTabPage.Size = new System.Drawing.Size(1105, 648);
+            this.MainTabData_AnimeTabPage.TabIndex = 0;
+            this.MainTabData_AnimeTabPage.Text = "2";
+            this.MainTabData_AnimeTabPage.UseVisualStyleBackColor = true;
             // 
             // DataAnime_Page
             // 
@@ -4060,48 +4060,48 @@ namespace AniDBClient.Forms
             // DataAnime_Menu_MyList
             // 
             this.DataAnime_Menu_MyList.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.DataAnime_Menu_Mn02_Mn01,
-            this.DataAnime_Menu_Mn02_Mn02,
-            this.DataAnime_Menu_Mn02_Mn03});
+            this.DataAnime_Menu_MyList_AddModify,
+            this.DataAnime_Menu_MyList_Delete,
+            this.DataAnime_Menu_MyList_Watched});
             this.DataAnime_Menu_MyList.Name = "DataAnime_Menu_MyList";
             this.DataAnime_Menu_MyList.Size = new System.Drawing.Size(80, 22);
             this.DataAnime_Menu_MyList.Text = "2";
             // 
-            // DataAnime_Menu_Mn02_Mn01
+            // DataAnime_Menu_MyList_AddModify
             // 
-            this.DataAnime_Menu_Mn02_Mn01.Name = "DataAnime_Menu_Mn02_Mn01";
-            this.DataAnime_Menu_Mn02_Mn01.Size = new System.Drawing.Size(80, 22);
-            this.DataAnime_Menu_Mn02_Mn01.Text = "1";
-            this.DataAnime_Menu_Mn02_Mn01.Click += new System.EventHandler(this.DataAnime_Menu_Mn02_Mn01_Click);
+            this.DataAnime_Menu_MyList_AddModify.Name = "DataAnime_Menu_MyList_AddModify";
+            this.DataAnime_Menu_MyList_AddModify.Size = new System.Drawing.Size(80, 22);
+            this.DataAnime_Menu_MyList_AddModify.Text = "1";
+            this.DataAnime_Menu_MyList_AddModify.Click += new System.EventHandler(this.DataAnime_Menu_Mn02_Mn01_Click);
             // 
-            // DataAnime_Menu_Mn02_Mn02
+            // DataAnime_Menu_MyList_Delete
             // 
-            this.DataAnime_Menu_Mn02_Mn02.Name = "DataAnime_Menu_Mn02_Mn02";
-            this.DataAnime_Menu_Mn02_Mn02.Size = new System.Drawing.Size(80, 22);
-            this.DataAnime_Menu_Mn02_Mn02.Text = "2";
-            this.DataAnime_Menu_Mn02_Mn02.Click += new System.EventHandler(this.DataAnime_Menu_Mn02_Mn02_Click);
+            this.DataAnime_Menu_MyList_Delete.Name = "DataAnime_Menu_MyList_Delete";
+            this.DataAnime_Menu_MyList_Delete.Size = new System.Drawing.Size(80, 22);
+            this.DataAnime_Menu_MyList_Delete.Text = "2";
+            this.DataAnime_Menu_MyList_Delete.Click += new System.EventHandler(this.DataAnime_Menu_Mn02_Mn02_Click);
             // 
-            // DataAnime_Menu_Mn02_Mn03
+            // DataAnime_Menu_MyList_Watched
             // 
-            this.DataAnime_Menu_Mn02_Mn03.Name = "DataAnime_Menu_Mn02_Mn03";
-            this.DataAnime_Menu_Mn02_Mn03.Size = new System.Drawing.Size(80, 22);
-            this.DataAnime_Menu_Mn02_Mn03.Text = "3";
-            this.DataAnime_Menu_Mn02_Mn03.Click += new System.EventHandler(this.DataAnime_Menu_Mn02_Mn03_Click);
+            this.DataAnime_Menu_MyList_Watched.Name = "DataAnime_Menu_MyList_Watched";
+            this.DataAnime_Menu_MyList_Watched.Size = new System.Drawing.Size(80, 22);
+            this.DataAnime_Menu_MyList_Watched.Text = "3";
+            this.DataAnime_Menu_MyList_Watched.Click += new System.EventHandler(this.DataAnime_Menu_Mn02_Mn03_Click);
             // 
             // DataAnime_Menu_Database
             // 
             this.DataAnime_Menu_Database.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.DataAnime_Menu_Mn03_Mn01});
+            this.DataAnime_Menu_Database_Delete});
             this.DataAnime_Menu_Database.Name = "DataAnime_Menu_Database";
             this.DataAnime_Menu_Database.Size = new System.Drawing.Size(80, 22);
             this.DataAnime_Menu_Database.Text = "3";
             // 
-            // DataAnime_Menu_Mn03_Mn01
+            // DataAnime_Menu_Database_Delete
             // 
-            this.DataAnime_Menu_Mn03_Mn01.Name = "DataAnime_Menu_Mn03_Mn01";
-            this.DataAnime_Menu_Mn03_Mn01.Size = new System.Drawing.Size(80, 22);
-            this.DataAnime_Menu_Mn03_Mn01.Text = "1";
-            this.DataAnime_Menu_Mn03_Mn01.Click += new System.EventHandler(this.DataAnime_Menu_Mn03_Mn01_Click);
+            this.DataAnime_Menu_Database_Delete.Name = "DataAnime_Menu_Database_Delete";
+            this.DataAnime_Menu_Database_Delete.Size = new System.Drawing.Size(80, 22);
+            this.DataAnime_Menu_Database_Delete.Text = "1";
+            this.DataAnime_Menu_Database_Delete.Click += new System.EventHandler(this.DataAnime_Menu_Mn03_Mn01_Click);
             // 
             // DataAnime_Menu_Mn04
             // 
@@ -4150,24 +4150,24 @@ namespace AniDBClient.Forms
             this.DataAnime_Menu_Mn04_Mn05.Text = "5";
             this.DataAnime_Menu_Mn04_Mn05.Click += new System.EventHandler(this.DataAnime_Menu_Mn04_Mn05_Click);
             // 
-            // MainTabData_Mn03
+            // MainTabData_Anime2TabPage
             // 
-            this.MainTabData_Mn03.BackColor = System.Drawing.Color.White;
-            this.MainTabData_Mn03.Controls.Add(this.Anime_Rel);
-            this.MainTabData_Mn03.Controls.Add(this.Anime_RelDel);
-            this.MainTabData_Mn03.Controls.Add(this.AnimeTree_CH02);
-            this.MainTabData_Mn03.Controls.Add(this.AnimeTree_CH01);
-            this.MainTabData_Mn03.Controls.Add(this.Anime_GR01);
-            this.MainTabData_Mn03.Controls.Add(this.AnimeTree);
-            this.MainTabData_Mn03.Controls.Add(this.Anime_Lang03);
-            this.MainTabData_Mn03.Controls.Add(this.Anime_Lang02);
-            this.MainTabData_Mn03.Controls.Add(this.Anime_Lang01);
-            this.MainTabData_Mn03.Location = new System.Drawing.Point(4, 22);
-            this.MainTabData_Mn03.Name = "MainTabData_Mn03";
-            this.MainTabData_Mn03.Size = new System.Drawing.Size(1105, 648);
-            this.MainTabData_Mn03.TabIndex = 0;
-            this.MainTabData_Mn03.Text = "3";
-            this.MainTabData_Mn03.UseVisualStyleBackColor = true;
+            this.MainTabData_Anime2TabPage.BackColor = System.Drawing.Color.White;
+            this.MainTabData_Anime2TabPage.Controls.Add(this.Anime_Rel);
+            this.MainTabData_Anime2TabPage.Controls.Add(this.Anime_RelDel);
+            this.MainTabData_Anime2TabPage.Controls.Add(this.AnimeTree_CH02);
+            this.MainTabData_Anime2TabPage.Controls.Add(this.AnimeTree_CH01);
+            this.MainTabData_Anime2TabPage.Controls.Add(this.Anime_GR01);
+            this.MainTabData_Anime2TabPage.Controls.Add(this.AnimeTree);
+            this.MainTabData_Anime2TabPage.Controls.Add(this.Anime_Lang03);
+            this.MainTabData_Anime2TabPage.Controls.Add(this.Anime_Lang02);
+            this.MainTabData_Anime2TabPage.Controls.Add(this.Anime_Lang01);
+            this.MainTabData_Anime2TabPage.Location = new System.Drawing.Point(4, 22);
+            this.MainTabData_Anime2TabPage.Name = "MainTabData_Anime2TabPage";
+            this.MainTabData_Anime2TabPage.Size = new System.Drawing.Size(1105, 648);
+            this.MainTabData_Anime2TabPage.TabIndex = 0;
+            this.MainTabData_Anime2TabPage.Text = "3";
+            this.MainTabData_Anime2TabPage.UseVisualStyleBackColor = true;
             // 
             // Anime_RelDel
             // 
@@ -4767,18 +4767,18 @@ namespace AniDBClient.Forms
             this.AnimeTree_Menu_Mn02.Text = "2";
             this.AnimeTree_Menu_Mn02.Click += new System.EventHandler(this.AnimeTree_Menu_Mn02_Click);
             // 
-            // MainTabData_Mn04
+            // MainTabData_GenresTabPage
             // 
-            this.MainTabData_Mn04.BackColor = System.Drawing.Color.White;
-            this.MainTabData_Mn04.Controls.Add(this.DataGenres_Page);
-            this.MainTabData_Mn04.Controls.Add(this.DataGenres_Rows);
-            this.MainTabData_Mn04.Controls.Add(this.DataGenres);
-            this.MainTabData_Mn04.Location = new System.Drawing.Point(4, 22);
-            this.MainTabData_Mn04.Name = "MainTabData_Mn04";
-            this.MainTabData_Mn04.Size = new System.Drawing.Size(1105, 648);
-            this.MainTabData_Mn04.TabIndex = 0;
-            this.MainTabData_Mn04.Text = "4";
-            this.MainTabData_Mn04.UseVisualStyleBackColor = true;
+            this.MainTabData_GenresTabPage.BackColor = System.Drawing.Color.White;
+            this.MainTabData_GenresTabPage.Controls.Add(this.DataGenres_Page);
+            this.MainTabData_GenresTabPage.Controls.Add(this.DataGenres_Rows);
+            this.MainTabData_GenresTabPage.Controls.Add(this.DataGenres);
+            this.MainTabData_GenresTabPage.Location = new System.Drawing.Point(4, 22);
+            this.MainTabData_GenresTabPage.Name = "MainTabData_GenresTabPage";
+            this.MainTabData_GenresTabPage.Size = new System.Drawing.Size(1105, 648);
+            this.MainTabData_GenresTabPage.TabIndex = 0;
+            this.MainTabData_GenresTabPage.Text = "4";
+            this.MainTabData_GenresTabPage.UseVisualStyleBackColor = true;
             // 
             // DataGenres_Page
             // 
@@ -4926,18 +4926,18 @@ namespace AniDBClient.Forms
             this.DataGenres_Mn07.ReadOnly = true;
             this.DataGenres_Mn07.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // MainTabData_Mn05
+            // MainTabData_GroupsTabPage
             // 
-            this.MainTabData_Mn05.BackColor = System.Drawing.Color.White;
-            this.MainTabData_Mn05.Controls.Add(this.DataGroups_Page);
-            this.MainTabData_Mn05.Controls.Add(this.DataGroups_Rows);
-            this.MainTabData_Mn05.Controls.Add(this.DataGroups);
-            this.MainTabData_Mn05.Location = new System.Drawing.Point(4, 22);
-            this.MainTabData_Mn05.Name = "MainTabData_Mn05";
-            this.MainTabData_Mn05.Size = new System.Drawing.Size(1105, 648);
-            this.MainTabData_Mn05.TabIndex = 0;
-            this.MainTabData_Mn05.Text = "5";
-            this.MainTabData_Mn05.UseVisualStyleBackColor = true;
+            this.MainTabData_GroupsTabPage.BackColor = System.Drawing.Color.White;
+            this.MainTabData_GroupsTabPage.Controls.Add(this.DataGroups_Page);
+            this.MainTabData_GroupsTabPage.Controls.Add(this.DataGroups_Rows);
+            this.MainTabData_GroupsTabPage.Controls.Add(this.DataGroups);
+            this.MainTabData_GroupsTabPage.Location = new System.Drawing.Point(4, 22);
+            this.MainTabData_GroupsTabPage.Name = "MainTabData_GroupsTabPage";
+            this.MainTabData_GroupsTabPage.Size = new System.Drawing.Size(1105, 648);
+            this.MainTabData_GroupsTabPage.TabIndex = 0;
+            this.MainTabData_GroupsTabPage.Text = "5";
+            this.MainTabData_GroupsTabPage.UseVisualStyleBackColor = true;
             // 
             // DataGroups_Page
             // 
@@ -5083,53 +5083,53 @@ namespace AniDBClient.Forms
             this.DataGroups_Mn07.ReadOnly = true;
             this.DataGroups_Mn07.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // MainTabData_Mn07
+            // MainTabData_SearchTabPage
             // 
-            this.MainTabData_Mn07.BackColor = System.Drawing.Color.White;
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_CH02);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_CH01);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_NM05);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_NM04);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_NM03);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_NM02);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_NM01);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_CB01);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_CB02);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_TX05);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_TX04);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_TX08);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_TX03);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_TX07);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_TX02);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_TX06);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_TX01);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_LB15);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_LB10);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_LB05);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_LB14);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_LB09);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_LB04);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_LB13);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_LB08);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_LB03);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_LB12);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_LB07);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_LB02);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_LB11);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_LB06);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_LB01);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_LB16);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_Genres);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_Clear);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_Select);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch);
-            this.MainTabData_Mn07.ForeColor = System.Drawing.Color.Black;
-            this.MainTabData_Mn07.Location = new System.Drawing.Point(4, 22);
-            this.MainTabData_Mn07.Name = "MainTabData_Mn07";
-            this.MainTabData_Mn07.Size = new System.Drawing.Size(1105, 648);
-            this.MainTabData_Mn07.TabIndex = 0;
-            this.MainTabData_Mn07.Text = "7";
-            this.MainTabData_Mn07.UseVisualStyleBackColor = true;
+            this.MainTabData_SearchTabPage.BackColor = System.Drawing.Color.White;
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_CH02);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_CH01);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_NM05);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_NM04);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_NM03);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_NM02);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_NM01);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_CB01);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_CB02);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_TX05);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_TX04);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_TX08);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_TX03);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_TX07);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_TX02);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_TX06);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_TX01);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_LB15);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_LB10);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_LB05);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_LB14);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_LB09);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_LB04);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_LB13);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_LB08);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_LB03);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_LB12);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_LB07);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_LB02);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_LB11);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_LB06);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_LB01);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_LB16);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_Genres);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_Clear);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_Select);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch);
+            this.MainTabData_SearchTabPage.ForeColor = System.Drawing.Color.Black;
+            this.MainTabData_SearchTabPage.Location = new System.Drawing.Point(4, 22);
+            this.MainTabData_SearchTabPage.Name = "MainTabData_SearchTabPage";
+            this.MainTabData_SearchTabPage.Size = new System.Drawing.Size(1105, 648);
+            this.MainTabData_SearchTabPage.TabIndex = 0;
+            this.MainTabData_SearchTabPage.Text = "7";
+            this.MainTabData_SearchTabPage.UseVisualStyleBackColor = true;
             // 
             // DataSearch_CH02
             // 
@@ -5637,17 +5637,17 @@ namespace AniDBClient.Forms
             this.DataSearch_Mn05.Name = "DataSearch_Mn05";
             this.DataSearch_Mn05.ReadOnly = true;
             // 
-            // MainTabData_Mn08
+            // MainTabData_OthersTabPage
             // 
-            this.MainTabData_Mn08.BackColor = System.Drawing.Color.White;
-            this.MainTabData_Mn08.Controls.Add(this.AnimeSeen);
-            this.MainTabData_Mn08.Controls.Add(this.AnimeRating);
-            this.MainTabData_Mn08.Controls.Add(this.AnimeTags);
-            this.MainTabData_Mn08.Location = new System.Drawing.Point(4, 22);
-            this.MainTabData_Mn08.Name = "MainTabData_Mn08";
-            this.MainTabData_Mn08.Size = new System.Drawing.Size(1105, 648);
-            this.MainTabData_Mn08.TabIndex = 0;
-            this.MainTabData_Mn08.Text = "8";
+            this.MainTabData_OthersTabPage.BackColor = System.Drawing.Color.White;
+            this.MainTabData_OthersTabPage.Controls.Add(this.AnimeSeen);
+            this.MainTabData_OthersTabPage.Controls.Add(this.AnimeRating);
+            this.MainTabData_OthersTabPage.Controls.Add(this.AnimeTags);
+            this.MainTabData_OthersTabPage.Location = new System.Drawing.Point(4, 22);
+            this.MainTabData_OthersTabPage.Name = "MainTabData_OthersTabPage";
+            this.MainTabData_OthersTabPage.Size = new System.Drawing.Size(1105, 648);
+            this.MainTabData_OthersTabPage.TabIndex = 0;
+            this.MainTabData_OthersTabPage.Text = "8";
             // 
             // AnimeSeen
             // 
@@ -5691,16 +5691,16 @@ namespace AniDBClient.Forms
             this.AnimeTags.TabIndex = 0;
             this.AnimeTags.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.AnimeTags_MouseDoubleClick);
             // 
-            // MainTabData_Mn09
+            // MainTabData_GraphsTabPage
             // 
-            this.MainTabData_Mn09.BackColor = System.Drawing.Color.White;
-            this.MainTabData_Mn09.Controls.Add(this.panel1);
-            this.MainTabData_Mn09.Controls.Add(this.Zgc_Graph);
-            this.MainTabData_Mn09.Location = new System.Drawing.Point(4, 22);
-            this.MainTabData_Mn09.Name = "MainTabData_Mn09";
-            this.MainTabData_Mn09.Size = new System.Drawing.Size(1105, 648);
-            this.MainTabData_Mn09.TabIndex = 0;
-            this.MainTabData_Mn09.Text = "9";
+            this.MainTabData_GraphsTabPage.BackColor = System.Drawing.Color.White;
+            this.MainTabData_GraphsTabPage.Controls.Add(this.panel1);
+            this.MainTabData_GraphsTabPage.Controls.Add(this.Zgc_Graph);
+            this.MainTabData_GraphsTabPage.Location = new System.Drawing.Point(4, 22);
+            this.MainTabData_GraphsTabPage.Name = "MainTabData_GraphsTabPage";
+            this.MainTabData_GraphsTabPage.Size = new System.Drawing.Size(1105, 648);
+            this.MainTabData_GraphsTabPage.TabIndex = 0;
+            this.MainTabData_GraphsTabPage.Text = "9";
             // 
             // panel1
             // 
@@ -5754,35 +5754,35 @@ namespace AniDBClient.Forms
             this.Zgc_Graph.TabIndex = 0;
             this.Zgc_Graph.ZoomButtons = System.Windows.Forms.MouseButtons.None;
             // 
-            // MainTabData_Mn10
+            // MainTabData_ExportTabPage
             // 
-            this.MainTabData_Mn10.BackColor = System.Drawing.Color.White;
-            this.MainTabData_Mn10.Controls.Add(this.Anime_ExportLB01);
-            this.MainTabData_Mn10.Controls.Add(this.Anime_ExportBT02);
-            this.MainTabData_Mn10.Controls.Add(this.Anime_ExportBT01);
-            this.MainTabData_Mn10.Controls.Add(this.Anime_ExportCH18);
-            this.MainTabData_Mn10.Controls.Add(this.Anime_ExportCH17);
-            this.MainTabData_Mn10.Controls.Add(this.Anime_ExportCH16);
-            this.MainTabData_Mn10.Controls.Add(this.Anime_ExportCH15);
-            this.MainTabData_Mn10.Controls.Add(this.Anime_ExportCH14);
-            this.MainTabData_Mn10.Controls.Add(this.Anime_ExportCH13);
-            this.MainTabData_Mn10.Controls.Add(this.Anime_ExportCH12);
-            this.MainTabData_Mn10.Controls.Add(this.Anime_ExportCH11);
-            this.MainTabData_Mn10.Controls.Add(this.Anime_ExportCH10);
-            this.MainTabData_Mn10.Controls.Add(this.Anime_ExportCH09);
-            this.MainTabData_Mn10.Controls.Add(this.Anime_ExportCH08);
-            this.MainTabData_Mn10.Controls.Add(this.Anime_ExportCH07);
-            this.MainTabData_Mn10.Controls.Add(this.Anime_ExportCH06);
-            this.MainTabData_Mn10.Controls.Add(this.Anime_ExportCH05);
-            this.MainTabData_Mn10.Controls.Add(this.Anime_ExportCH04);
-            this.MainTabData_Mn10.Controls.Add(this.Anime_ExportCH03);
-            this.MainTabData_Mn10.Controls.Add(this.Anime_ExportCH02);
-            this.MainTabData_Mn10.Controls.Add(this.Anime_ExportCH01);
-            this.MainTabData_Mn10.Location = new System.Drawing.Point(4, 22);
-            this.MainTabData_Mn10.Name = "MainTabData_Mn10";
-            this.MainTabData_Mn10.Size = new System.Drawing.Size(1105, 648);
-            this.MainTabData_Mn10.TabIndex = 0;
-            this.MainTabData_Mn10.Text = "10";
+            this.MainTabData_ExportTabPage.BackColor = System.Drawing.Color.White;
+            this.MainTabData_ExportTabPage.Controls.Add(this.Anime_ExportLB01);
+            this.MainTabData_ExportTabPage.Controls.Add(this.Anime_ExportBT02);
+            this.MainTabData_ExportTabPage.Controls.Add(this.Anime_ExportBT01);
+            this.MainTabData_ExportTabPage.Controls.Add(this.Anime_ExportCH18);
+            this.MainTabData_ExportTabPage.Controls.Add(this.Anime_ExportCH17);
+            this.MainTabData_ExportTabPage.Controls.Add(this.Anime_ExportCH16);
+            this.MainTabData_ExportTabPage.Controls.Add(this.Anime_ExportCH15);
+            this.MainTabData_ExportTabPage.Controls.Add(this.Anime_ExportCH14);
+            this.MainTabData_ExportTabPage.Controls.Add(this.Anime_ExportCH13);
+            this.MainTabData_ExportTabPage.Controls.Add(this.Anime_ExportCH12);
+            this.MainTabData_ExportTabPage.Controls.Add(this.Anime_ExportCH11);
+            this.MainTabData_ExportTabPage.Controls.Add(this.Anime_ExportCH10);
+            this.MainTabData_ExportTabPage.Controls.Add(this.Anime_ExportCH09);
+            this.MainTabData_ExportTabPage.Controls.Add(this.Anime_ExportCH08);
+            this.MainTabData_ExportTabPage.Controls.Add(this.Anime_ExportCH07);
+            this.MainTabData_ExportTabPage.Controls.Add(this.Anime_ExportCH06);
+            this.MainTabData_ExportTabPage.Controls.Add(this.Anime_ExportCH05);
+            this.MainTabData_ExportTabPage.Controls.Add(this.Anime_ExportCH04);
+            this.MainTabData_ExportTabPage.Controls.Add(this.Anime_ExportCH03);
+            this.MainTabData_ExportTabPage.Controls.Add(this.Anime_ExportCH02);
+            this.MainTabData_ExportTabPage.Controls.Add(this.Anime_ExportCH01);
+            this.MainTabData_ExportTabPage.Location = new System.Drawing.Point(4, 22);
+            this.MainTabData_ExportTabPage.Name = "MainTabData_ExportTabPage";
+            this.MainTabData_ExportTabPage.Size = new System.Drawing.Size(1105, 648);
+            this.MainTabData_ExportTabPage.TabIndex = 0;
+            this.MainTabData_ExportTabPage.Text = "10";
             // 
             // Anime_ExportLB01
             // 
@@ -7765,27 +7765,27 @@ namespace AniDBClient.Forms
             this.MainTabLog.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.MainTabLog.Controls.Add(this.MainTabLog_Mn01);
-            this.MainTabLog.Controls.Add(this.MainTabLog_Mn02);
-            this.MainTabLog.Controls.Add(this.MainTabLog_Mn04);
-            this.MainTabLog.Controls.Add(this.MainTabLog_Mn03);
+            this.MainTabLog.Controls.Add(this.MainTabLog_AniDbTabPage);
+            this.MainTabLog.Controls.Add(this.MainTabLog_SqlTabPage);
+            this.MainTabLog.Controls.Add(this.MainTabLog_ErrorTabPage);
+            this.MainTabLog.Controls.Add(this.MainTabLog_TasksTabPage);
             this.MainTabLog.Location = new System.Drawing.Point(3, 3);
             this.MainTabLog.Name = "MainTabLog";
             this.MainTabLog.SelectedIndex = 0;
             this.MainTabLog.Size = new System.Drawing.Size(1104, 674);
             this.MainTabLog.TabIndex = 0;
             // 
-            // MainTabLog_Mn01
+            // MainTabLog_AniDbTabPage
             // 
-            this.MainTabLog_Mn01.BackColor = System.Drawing.Color.White;
-            this.MainTabLog_Mn01.Controls.Add(this.Log);
-            this.MainTabLog_Mn01.Location = new System.Drawing.Point(4, 22);
-            this.MainTabLog_Mn01.Name = "MainTabLog_Mn01";
-            this.MainTabLog_Mn01.Padding = new System.Windows.Forms.Padding(3);
-            this.MainTabLog_Mn01.Size = new System.Drawing.Size(1096, 648);
-            this.MainTabLog_Mn01.TabIndex = 0;
-            this.MainTabLog_Mn01.Text = "1";
-            this.MainTabLog_Mn01.UseVisualStyleBackColor = true;
+            this.MainTabLog_AniDbTabPage.BackColor = System.Drawing.Color.White;
+            this.MainTabLog_AniDbTabPage.Controls.Add(this.Log);
+            this.MainTabLog_AniDbTabPage.Location = new System.Drawing.Point(4, 22);
+            this.MainTabLog_AniDbTabPage.Name = "MainTabLog_AniDbTabPage";
+            this.MainTabLog_AniDbTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.MainTabLog_AniDbTabPage.Size = new System.Drawing.Size(1096, 648);
+            this.MainTabLog_AniDbTabPage.TabIndex = 0;
+            this.MainTabLog_AniDbTabPage.Text = "1";
+            this.MainTabLog_AniDbTabPage.UseVisualStyleBackColor = true;
             // 
             // Log
             // 
@@ -7804,17 +7804,17 @@ namespace AniDBClient.Forms
             this.Log.Size = new System.Drawing.Size(1087, 636);
             this.Log.TabIndex = 0;
             // 
-            // MainTabLog_Mn02
+            // MainTabLog_SqlTabPage
             // 
-            this.MainTabLog_Mn02.BackColor = System.Drawing.Color.White;
-            this.MainTabLog_Mn02.Controls.Add(this.LogSQL);
-            this.MainTabLog_Mn02.Location = new System.Drawing.Point(4, 22);
-            this.MainTabLog_Mn02.Name = "MainTabLog_Mn02";
-            this.MainTabLog_Mn02.Padding = new System.Windows.Forms.Padding(3);
-            this.MainTabLog_Mn02.Size = new System.Drawing.Size(1096, 648);
-            this.MainTabLog_Mn02.TabIndex = 0;
-            this.MainTabLog_Mn02.Text = "2";
-            this.MainTabLog_Mn02.UseVisualStyleBackColor = true;
+            this.MainTabLog_SqlTabPage.BackColor = System.Drawing.Color.White;
+            this.MainTabLog_SqlTabPage.Controls.Add(this.LogSQL);
+            this.MainTabLog_SqlTabPage.Location = new System.Drawing.Point(4, 22);
+            this.MainTabLog_SqlTabPage.Name = "MainTabLog_SqlTabPage";
+            this.MainTabLog_SqlTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.MainTabLog_SqlTabPage.Size = new System.Drawing.Size(1096, 648);
+            this.MainTabLog_SqlTabPage.TabIndex = 0;
+            this.MainTabLog_SqlTabPage.Text = "2";
+            this.MainTabLog_SqlTabPage.UseVisualStyleBackColor = true;
             // 
             // LogSQL
             // 
@@ -7833,16 +7833,16 @@ namespace AniDBClient.Forms
             this.LogSQL.Size = new System.Drawing.Size(1087, 636);
             this.LogSQL.TabIndex = 0;
             // 
-            // MainTabLog_Mn04
+            // MainTabLog_ErrorTabPage
             // 
-            this.MainTabLog_Mn04.BackColor = System.Drawing.Color.White;
-            this.MainTabLog_Mn04.Controls.Add(this.LogError);
-            this.MainTabLog_Mn04.Location = new System.Drawing.Point(4, 22);
-            this.MainTabLog_Mn04.Name = "MainTabLog_Mn04";
-            this.MainTabLog_Mn04.Size = new System.Drawing.Size(1096, 648);
-            this.MainTabLog_Mn04.TabIndex = 0;
-            this.MainTabLog_Mn04.Text = "4";
-            this.MainTabLog_Mn04.UseVisualStyleBackColor = true;
+            this.MainTabLog_ErrorTabPage.BackColor = System.Drawing.Color.White;
+            this.MainTabLog_ErrorTabPage.Controls.Add(this.LogError);
+            this.MainTabLog_ErrorTabPage.Location = new System.Drawing.Point(4, 22);
+            this.MainTabLog_ErrorTabPage.Name = "MainTabLog_ErrorTabPage";
+            this.MainTabLog_ErrorTabPage.Size = new System.Drawing.Size(1096, 648);
+            this.MainTabLog_ErrorTabPage.TabIndex = 0;
+            this.MainTabLog_ErrorTabPage.Text = "4";
+            this.MainTabLog_ErrorTabPage.UseVisualStyleBackColor = true;
             // 
             // LogError
             // 
@@ -7861,22 +7861,22 @@ namespace AniDBClient.Forms
             this.LogError.Size = new System.Drawing.Size(1087, 636);
             this.LogError.TabIndex = 0;
             // 
-            // MainTabLog_Mn03
+            // MainTabLog_TasksTabPage
             // 
-            this.MainTabLog_Mn03.BackColor = System.Drawing.Color.White;
-            this.MainTabLog_Mn03.Controls.Add(this.Add_Text02);
-            this.MainTabLog_Mn03.Controls.Add(this.Add_Text01);
-            this.MainTabLog_Mn03.Controls.Add(this.Add_LB01);
-            this.MainTabLog_Mn03.Controls.Add(this.Add_Add);
-            this.MainTabLog_Mn03.Controls.Add(this.LogTasksDelAll);
-            this.MainTabLog_Mn03.Controls.Add(this.LogTasksDel);
-            this.MainTabLog_Mn03.Controls.Add(this.LogTasks);
-            this.MainTabLog_Mn03.Location = new System.Drawing.Point(4, 22);
-            this.MainTabLog_Mn03.Name = "MainTabLog_Mn03";
-            this.MainTabLog_Mn03.Size = new System.Drawing.Size(1096, 648);
-            this.MainTabLog_Mn03.TabIndex = 0;
-            this.MainTabLog_Mn03.Text = "3";
-            this.MainTabLog_Mn03.UseVisualStyleBackColor = true;
+            this.MainTabLog_TasksTabPage.BackColor = System.Drawing.Color.White;
+            this.MainTabLog_TasksTabPage.Controls.Add(this.Add_Text02);
+            this.MainTabLog_TasksTabPage.Controls.Add(this.Add_Text01);
+            this.MainTabLog_TasksTabPage.Controls.Add(this.Add_LB01);
+            this.MainTabLog_TasksTabPage.Controls.Add(this.Add_Add);
+            this.MainTabLog_TasksTabPage.Controls.Add(this.LogTasksDelAll);
+            this.MainTabLog_TasksTabPage.Controls.Add(this.LogTasksDel);
+            this.MainTabLog_TasksTabPage.Controls.Add(this.LogTasks);
+            this.MainTabLog_TasksTabPage.Location = new System.Drawing.Point(4, 22);
+            this.MainTabLog_TasksTabPage.Name = "MainTabLog_TasksTabPage";
+            this.MainTabLog_TasksTabPage.Size = new System.Drawing.Size(1096, 648);
+            this.MainTabLog_TasksTabPage.TabIndex = 0;
+            this.MainTabLog_TasksTabPage.Text = "3";
+            this.MainTabLog_TasksTabPage.UseVisualStyleBackColor = true;
             // 
             // Add_Text02
             // 
@@ -7934,7 +7934,7 @@ namespace AniDBClient.Forms
             // MainTab_SqlPage
             // 
             this.MainTab_SqlPage.BackColor = System.Drawing.Color.White;
-            this.MainTab_SqlPage.Controls.Add(this.DataSQL_GR01);
+            this.MainTab_SqlPage.Controls.Add(this.DataSql_CheckGroupBox);
             this.MainTab_SqlPage.Controls.Add(this.DataSQL_Text);
             this.MainTab_SqlPage.Controls.Add(this.DataSQL_Columns);
             this.MainTab_SqlPage.Controls.Add(this.DataSQL_Tables);
@@ -7947,64 +7947,64 @@ namespace AniDBClient.Forms
             this.MainTab_SqlPage.Text = "5";
             this.MainTab_SqlPage.UseVisualStyleBackColor = true;
             // 
-            // DataSQL_GR01
+            // DataSql_CheckGroupBox
             // 
-            this.DataSQL_GR01.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.DataSQL_GR01.Controls.Add(this.DataSQL_BT03);
-            this.DataSQL_GR01.Controls.Add(this.DataSQL_BT04);
-            this.DataSQL_GR01.Controls.Add(this.DataSQL_BT02);
-            this.DataSQL_GR01.Controls.Add(this.DataSQL_BT01);
-            this.DataSQL_GR01.ForeColor = System.Drawing.Color.Black;
-            this.DataSQL_GR01.Location = new System.Drawing.Point(900, 427);
-            this.DataSQL_GR01.Name = "DataSQL_GR01";
-            this.DataSQL_GR01.Size = new System.Drawing.Size(207, 250);
-            this.DataSQL_GR01.TabIndex = 0;
-            this.DataSQL_GR01.TabStop = false;
-            this.DataSQL_GR01.Text = "groupBox1";
+            this.DataSql_CheckGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.DataSql_CheckGroupBox.Controls.Add(this.DataSql_FilesButton);
+            this.DataSql_CheckGroupBox.Controls.Add(this.DataSql_MyListButton);
+            this.DataSql_CheckGroupBox.Controls.Add(this.DataSql_EpisodesButton);
+            this.DataSql_CheckGroupBox.Controls.Add(this.DataSql_AnimeButton);
+            this.DataSql_CheckGroupBox.ForeColor = System.Drawing.Color.Black;
+            this.DataSql_CheckGroupBox.Location = new System.Drawing.Point(900, 427);
+            this.DataSql_CheckGroupBox.Name = "DataSql_CheckGroupBox";
+            this.DataSql_CheckGroupBox.Size = new System.Drawing.Size(207, 250);
+            this.DataSql_CheckGroupBox.TabIndex = 0;
+            this.DataSql_CheckGroupBox.TabStop = false;
+            this.DataSql_CheckGroupBox.Text = "groupBox1";
             // 
-            // DataSQL_BT03
+            // DataSql_FilesButton
             // 
-            this.DataSQL_BT03.ForeColor = System.Drawing.Color.Black;
-            this.DataSQL_BT03.Location = new System.Drawing.Point(126, 19);
-            this.DataSQL_BT03.Name = "DataSQL_BT03";
-            this.DataSQL_BT03.Size = new System.Drawing.Size(75, 23);
-            this.DataSQL_BT03.TabIndex = 0;
-            this.DataSQL_BT03.Text = "button4";
-            this.DataSQL_BT03.UseVisualStyleBackColor = true;
-            this.DataSQL_BT03.Click += new System.EventHandler(this.DataSQL_BT03_Click);
+            this.DataSql_FilesButton.ForeColor = System.Drawing.Color.Black;
+            this.DataSql_FilesButton.Location = new System.Drawing.Point(126, 19);
+            this.DataSql_FilesButton.Name = "DataSql_FilesButton";
+            this.DataSql_FilesButton.Size = new System.Drawing.Size(75, 23);
+            this.DataSql_FilesButton.TabIndex = 0;
+            this.DataSql_FilesButton.Text = "button4";
+            this.DataSql_FilesButton.UseVisualStyleBackColor = true;
+            this.DataSql_FilesButton.Click += new System.EventHandler(this.DataSQL_BT03_Click);
             // 
-            // DataSQL_BT04
+            // DataSql_MyListButton
             // 
-            this.DataSQL_BT04.ForeColor = System.Drawing.Color.Black;
-            this.DataSQL_BT04.Location = new System.Drawing.Point(126, 48);
-            this.DataSQL_BT04.Name = "DataSQL_BT04";
-            this.DataSQL_BT04.Size = new System.Drawing.Size(75, 23);
-            this.DataSQL_BT04.TabIndex = 0;
-            this.DataSQL_BT04.Text = "button3";
-            this.DataSQL_BT04.UseVisualStyleBackColor = true;
-            this.DataSQL_BT04.Click += new System.EventHandler(this.DataSQL_BT04_Click);
+            this.DataSql_MyListButton.ForeColor = System.Drawing.Color.Black;
+            this.DataSql_MyListButton.Location = new System.Drawing.Point(126, 48);
+            this.DataSql_MyListButton.Name = "DataSql_MyListButton";
+            this.DataSql_MyListButton.Size = new System.Drawing.Size(75, 23);
+            this.DataSql_MyListButton.TabIndex = 0;
+            this.DataSql_MyListButton.Text = "button3";
+            this.DataSql_MyListButton.UseVisualStyleBackColor = true;
+            this.DataSql_MyListButton.Click += new System.EventHandler(this.DataSQL_BT04_Click);
             // 
-            // DataSQL_BT02
+            // DataSql_EpisodesButton
             // 
-            this.DataSQL_BT02.ForeColor = System.Drawing.Color.Black;
-            this.DataSQL_BT02.Location = new System.Drawing.Point(6, 48);
-            this.DataSQL_BT02.Name = "DataSQL_BT02";
-            this.DataSQL_BT02.Size = new System.Drawing.Size(75, 23);
-            this.DataSQL_BT02.TabIndex = 0;
-            this.DataSQL_BT02.Text = "button2";
-            this.DataSQL_BT02.UseVisualStyleBackColor = true;
-            this.DataSQL_BT02.Click += new System.EventHandler(this.DataSQL_BT02_Click);
+            this.DataSql_EpisodesButton.ForeColor = System.Drawing.Color.Black;
+            this.DataSql_EpisodesButton.Location = new System.Drawing.Point(6, 48);
+            this.DataSql_EpisodesButton.Name = "DataSql_EpisodesButton";
+            this.DataSql_EpisodesButton.Size = new System.Drawing.Size(75, 23);
+            this.DataSql_EpisodesButton.TabIndex = 0;
+            this.DataSql_EpisodesButton.Text = "button2";
+            this.DataSql_EpisodesButton.UseVisualStyleBackColor = true;
+            this.DataSql_EpisodesButton.Click += new System.EventHandler(this.DataSQL_BT02_Click);
             // 
-            // DataSQL_BT01
+            // DataSql_AnimeButton
             // 
-            this.DataSQL_BT01.ForeColor = System.Drawing.Color.Black;
-            this.DataSQL_BT01.Location = new System.Drawing.Point(6, 19);
-            this.DataSQL_BT01.Name = "DataSQL_BT01";
-            this.DataSQL_BT01.Size = new System.Drawing.Size(75, 23);
-            this.DataSQL_BT01.TabIndex = 0;
-            this.DataSQL_BT01.Text = "button1";
-            this.DataSQL_BT01.UseVisualStyleBackColor = true;
-            this.DataSQL_BT01.Click += new System.EventHandler(this.DataSQL_BT01_Click);
+            this.DataSql_AnimeButton.ForeColor = System.Drawing.Color.Black;
+            this.DataSql_AnimeButton.Location = new System.Drawing.Point(6, 19);
+            this.DataSql_AnimeButton.Name = "DataSql_AnimeButton";
+            this.DataSql_AnimeButton.Size = new System.Drawing.Size(75, 23);
+            this.DataSql_AnimeButton.TabIndex = 0;
+            this.DataSql_AnimeButton.Text = "button1";
+            this.DataSql_AnimeButton.UseVisualStyleBackColor = true;
+            this.DataSql_AnimeButton.Click += new System.EventHandler(this.DataSQL_BT01_Click);
             // 
             // DataSQL_Text
             // 
@@ -8291,7 +8291,7 @@ namespace AniDBClient.Forms
             this.panel2.Controls.Add(this.StatusBar_Mn04);
             this.panel2.Controls.Add(this.StatusBar_Mn03);
             this.panel2.Controls.Add(this.StatusBar_Mn02);
-            this.panel2.Controls.Add(this.StatusBar_Mn01);
+            this.panel2.Controls.Add(this.StatusBar_TasksRemainingLabel);
             this.panel2.Controls.Add(this.StatusBar_ConnectLabel);
             this.panel2.Controls.Add(this.StatusBar_Connect);
             this.panel2.Controls.Add(this.StatusBar_Hash);
@@ -8362,15 +8362,15 @@ namespace AniDBClient.Forms
             this.StatusBar_Mn02.Text = "label1";
             this.StatusBar_Mn02.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // StatusBar_Mn01
+            // StatusBar_TasksRemainingLabel
             // 
-            this.StatusBar_Mn01.Location = new System.Drawing.Point(68, 0);
-            this.StatusBar_Mn01.Margin = new System.Windows.Forms.Padding(0);
-            this.StatusBar_Mn01.Name = "StatusBar_Mn01";
-            this.StatusBar_Mn01.Size = new System.Drawing.Size(100, 23);
-            this.StatusBar_Mn01.TabIndex = 0;
-            this.StatusBar_Mn01.Text = "label1";
-            this.StatusBar_Mn01.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.StatusBar_TasksRemainingLabel.Location = new System.Drawing.Point(68, 0);
+            this.StatusBar_TasksRemainingLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.StatusBar_TasksRemainingLabel.Name = "StatusBar_TasksRemainingLabel";
+            this.StatusBar_TasksRemainingLabel.Size = new System.Drawing.Size(100, 23);
+            this.StatusBar_TasksRemainingLabel.TabIndex = 0;
+            this.StatusBar_TasksRemainingLabel.Text = "label1";
+            this.StatusBar_TasksRemainingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Notify
             // 
@@ -9597,8 +9597,8 @@ namespace AniDBClient.Forms
             this.MainTab_RulesPage.PerformLayout();
             this.Rules_RulesForCharacterReplacingGroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Rules_Replace)).EndInit();
-            this.Rules_GR04.ResumeLayout(false);
-            this.Rules_GR04.PerformLayout();
+            this.Rules_ExportInfoGroupBox.ResumeLayout(false);
+            this.Rules_ExportInfoGroupBox.PerformLayout();
             this.Rules_RulesForGeneratingDirectoriesGroupBox.ResumeLayout(false);
             this.Rules_RulesForGeneratingDirectoriesGroupBox.PerformLayout();
             this.Rules_RulesForFileRenamingGroupBox.ResumeLayout(false);
@@ -9609,11 +9609,11 @@ namespace AniDBClient.Forms
             ((System.ComponentModel.ISupportInitialize)(this.Hash_Waiting)).EndInit();
             this.MainTab_AnimePage.ResumeLayout(false);
             this.MainTabData.ResumeLayout(false);
-            this.MainTabData_Mn00.ResumeLayout(false);
+            this.MainTabData_MyListTabPage.ResumeLayout(false);
             this.Options_GR04.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MyListAnime)).EndInit();
-            this.MainTabData_Mn01.ResumeLayout(false);
-            this.MainTabData_Mn01.PerformLayout();
+            this.MainTabData_FilesTabPage.ResumeLayout(false);
+            this.MainTabData_FilesTabPage.PerformLayout();
             this.DataFilesTree_Menu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataFiles_Year)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataFiles_Month)).EndInit();
@@ -9622,40 +9622,40 @@ namespace AniDBClient.Forms
             ((System.ComponentModel.ISupportInitialize)(this.DataFiles_Rows)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataFiles)).EndInit();
             this.DataFiles_Menu.ResumeLayout(false);
-            this.MainTabData_Mn02.ResumeLayout(false);
+            this.MainTabData_AnimeTabPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataAnime_Page)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataAnime_Rows)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataAnime)).EndInit();
             this.DataAnime_Menu.ResumeLayout(false);
-            this.MainTabData_Mn03.ResumeLayout(false);
-            this.MainTabData_Mn03.PerformLayout();
+            this.MainTabData_Anime2TabPage.ResumeLayout(false);
+            this.MainTabData_Anime2TabPage.PerformLayout();
             this.Anime_GR01.ResumeLayout(false);
             this.Anime_GR01.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Anime_Rat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AnimeData)).EndInit();
             this.AnimeTree_Menu.ResumeLayout(false);
-            this.MainTabData_Mn04.ResumeLayout(false);
+            this.MainTabData_GenresTabPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataGenres_Page)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGenres_Rows)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGenres)).EndInit();
-            this.MainTabData_Mn05.ResumeLayout(false);
+            this.MainTabData_GroupsTabPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataGroups_Page)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGroups_Rows)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGroups)).EndInit();
-            this.MainTabData_Mn07.ResumeLayout(false);
-            this.MainTabData_Mn07.PerformLayout();
+            this.MainTabData_SearchTabPage.ResumeLayout(false);
+            this.MainTabData_SearchTabPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataSearch_NM05)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSearch_NM04)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSearch_NM03)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSearch_NM02)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSearch_NM01)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSearch)).EndInit();
-            this.MainTabData_Mn08.ResumeLayout(false);
-            this.MainTabData_Mn09.ResumeLayout(false);
-            this.MainTabData_Mn09.PerformLayout();
+            this.MainTabData_OthersTabPage.ResumeLayout(false);
+            this.MainTabData_GraphsTabPage.ResumeLayout(false);
+            this.MainTabData_GraphsTabPage.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.MainTabData_Mn10.ResumeLayout(false);
-            this.MainTabData_Mn10.PerformLayout();
+            this.MainTabData_ExportTabPage.ResumeLayout(false);
+            this.MainTabData_ExportTabPage.PerformLayout();
             this.MainTab_MangaPage.ResumeLayout(false);
             this.MainTabManga.ResumeLayout(false);
             this.MainTabManga_Mn01.ResumeLayout(false);
@@ -9684,16 +9684,16 @@ namespace AniDBClient.Forms
             ((System.ComponentModel.ISupportInitialize)(this.MangaSearch)).EndInit();
             this.MainTab_LogPage.ResumeLayout(false);
             this.MainTabLog.ResumeLayout(false);
-            this.MainTabLog_Mn01.ResumeLayout(false);
-            this.MainTabLog_Mn01.PerformLayout();
-            this.MainTabLog_Mn02.ResumeLayout(false);
-            this.MainTabLog_Mn02.PerformLayout();
-            this.MainTabLog_Mn04.ResumeLayout(false);
-            this.MainTabLog_Mn04.PerformLayout();
-            this.MainTabLog_Mn03.ResumeLayout(false);
-            this.MainTabLog_Mn03.PerformLayout();
+            this.MainTabLog_AniDbTabPage.ResumeLayout(false);
+            this.MainTabLog_AniDbTabPage.PerformLayout();
+            this.MainTabLog_SqlTabPage.ResumeLayout(false);
+            this.MainTabLog_SqlTabPage.PerformLayout();
+            this.MainTabLog_ErrorTabPage.ResumeLayout(false);
+            this.MainTabLog_ErrorTabPage.PerformLayout();
+            this.MainTabLog_TasksTabPage.ResumeLayout(false);
+            this.MainTabLog_TasksTabPage.PerformLayout();
             this.MainTab_SqlPage.ResumeLayout(false);
-            this.DataSQL_GR01.ResumeLayout(false);
+            this.DataSql_CheckGroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataSQL)).EndInit();
             this.AnimeData_Menu.ResumeLayout(false);
             this.Manga_Data_Menu.ResumeLayout(false);
@@ -9767,15 +9767,15 @@ namespace AniDBClient.Forms
         private System.Windows.Forms.Label Options_LocalPortLabel;
         private System.Windows.Forms.Timer ComunicationRec;
         private System.Windows.Forms.TabControl MainTabData;
-        private System.Windows.Forms.TabPage MainTabData_Mn01;
-        private System.Windows.Forms.TabPage MainTabData_Mn02;
-        private System.Windows.Forms.TabPage MainTabData_Mn03;
-        private System.Windows.Forms.TabPage MainTabData_Mn04;
-        private System.Windows.Forms.TabPage MainTabData_Mn05;
+        private System.Windows.Forms.TabPage MainTabData_FilesTabPage;
+        private System.Windows.Forms.TabPage MainTabData_AnimeTabPage;
+        private System.Windows.Forms.TabPage MainTabData_Anime2TabPage;
+        private System.Windows.Forms.TabPage MainTabData_GenresTabPage;
+        private System.Windows.Forms.TabPage MainTabData_GroupsTabPage;
         private System.Windows.Forms.DataGridView DataAnime;
         private System.Windows.Forms.TabControl MainTabLog;
-        private System.Windows.Forms.TabPage MainTabLog_Mn01;
-        private System.Windows.Forms.TabPage MainTabLog_Mn02;
+        private System.Windows.Forms.TabPage MainTabLog_AniDbTabPage;
+        private System.Windows.Forms.TabPage MainTabLog_SqlTabPage;
         private System.Windows.Forms.TextBox LogSQL;
         private System.Windows.Forms.ListBox LogTasks;
         private System.Windows.Forms.DataGridView DataFiles;
@@ -9789,10 +9789,10 @@ namespace AniDBClient.Forms
         private System.Windows.Forms.Label Anime_LB06;
         private System.Windows.Forms.Label Anime_LB03;
         private System.Windows.Forms.LinkLabel Anime_LB02;
-        private System.Windows.Forms.ToolStripMenuItem DataAnime_Menu_Mn02_Mn01;
-        private System.Windows.Forms.ToolStripMenuItem DataAnime_Menu_Mn02_Mn02;
-        private System.Windows.Forms.ToolStripMenuItem DataAnime_Menu_Mn02_Mn03;
-        private System.Windows.Forms.TabPage MainTabLog_Mn03;
+        private System.Windows.Forms.ToolStripMenuItem DataAnime_Menu_MyList_AddModify;
+        private System.Windows.Forms.ToolStripMenuItem DataAnime_Menu_MyList_Delete;
+        private System.Windows.Forms.ToolStripMenuItem DataAnime_Menu_MyList_Watched;
+        private System.Windows.Forms.TabPage MainTabLog_TasksTabPage;
         private System.Windows.Forms.Button LogTasksDel;
         private System.Windows.Forms.NumericUpDown DataAnime_Rows;
         private System.Windows.Forms.NumericUpDown DataAnime_Page;
@@ -9808,7 +9808,7 @@ namespace AniDBClient.Forms
         private System.Windows.Forms.Label Anime_OP03;
         private System.Windows.Forms.Label Anime_OP02;
         private System.Windows.Forms.Label Anime_OP01;
-        private System.Windows.Forms.ToolStripMenuItem DataAnime_Menu_Mn03_Mn01;
+        private System.Windows.Forms.ToolStripMenuItem DataAnime_Menu_Database_Delete;
         private System.Windows.Forms.ToolStripMenuItem DataFiles_Menu_Mn02_Mn01;
         private System.Windows.Forms.ToolStripMenuItem DataFiles_Menu_Mn03;
         private System.Windows.Forms.RadioButton Rules_FilesRulesMove_RB01;
@@ -9871,7 +9871,7 @@ namespace AniDBClient.Forms
         private System.Windows.Forms.ToolTip ToolTip;
         private System.Windows.Forms.Button DataFiles_Bt18;
         private System.Windows.Forms.Button DataFiles_Bt17;
-        private System.Windows.Forms.TabPage MainTabData_Mn07;
+        private System.Windows.Forms.TabPage MainTabData_SearchTabPage;
         private System.Windows.Forms.CheckedListBox DataSearch_Genres;
         private System.Windows.Forms.Button DataSearch_Select;
         private System.Windows.Forms.DataGridView DataSearch;
@@ -9943,7 +9943,7 @@ namespace AniDBClient.Forms
         private System.Windows.Forms.ImageList DataFilesTreeImages;
         private System.Windows.Forms.ToolStripMenuItem DataFilesTree_Mn06;
         private System.Windows.Forms.TextBox DataFiles_Filtr01;
-        private System.Windows.Forms.TabPage MainTabLog_Mn04;
+        private System.Windows.Forms.TabPage MainTabLog_ErrorTabPage;
         private System.Windows.Forms.TextBox LogError;
         private System.Windows.Forms.ComboBox Options_Language;
         private System.Windows.Forms.ToolStripMenuItem DataFiles_Menu_Mn05;
@@ -10043,7 +10043,7 @@ namespace AniDBClient.Forms
         private System.Windows.Forms.DataGridView Manga_Data;
         private System.Windows.Forms.TreeView Manga_Tree;
         private System.Windows.Forms.LinkLabel Manga_LB14;
-        private System.Windows.Forms.TabPage MainTabData_Mn00;
+        private System.Windows.Forms.TabPage MainTabData_MyListTabPage;
         private System.Windows.Forms.GroupBox Options_GR04;
         private System.Windows.Forms.Button Options_MyListRefresh;
         private System.Windows.Forms.Button Options_MyListRefreshMin;
@@ -10076,11 +10076,11 @@ namespace AniDBClient.Forms
         private System.Windows.Forms.TextBox Manga_Tx12;
         private System.Windows.Forms.Button Manga_Chapter;
         private System.Windows.Forms.TabPage MainTab_SqlPage;
-        private System.Windows.Forms.GroupBox DataSQL_GR01;
-        private System.Windows.Forms.Button DataSQL_BT03;
-        private System.Windows.Forms.Button DataSQL_BT04;
-        private System.Windows.Forms.Button DataSQL_BT02;
-        private System.Windows.Forms.Button DataSQL_BT01;
+        private System.Windows.Forms.GroupBox DataSql_CheckGroupBox;
+        private System.Windows.Forms.Button DataSql_FilesButton;
+        private System.Windows.Forms.Button DataSql_MyListButton;
+        private System.Windows.Forms.Button DataSql_EpisodesButton;
+        private System.Windows.Forms.Button DataSql_AnimeButton;
         private System.Windows.Forms.ComboBox DataSQL_Text;
         private System.Windows.Forms.ListBox DataSQL_Columns;
         private System.Windows.Forms.ListBox DataSQL_Tables;
@@ -10161,7 +10161,7 @@ namespace AniDBClient.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn MangaSearch_Mn04;
         private System.Windows.Forms.Button Anime_BT01;
         private System.Windows.Forms.Label Anime_LB11;
-        private System.Windows.Forms.TabPage MainTabData_Mn08;
+        private System.Windows.Forms.TabPage MainTabData_OthersTabPage;
         private System.Windows.Forms.TreeView AnimeTags;
         private System.Windows.Forms.TreeView AnimeSeen;
         private System.Windows.Forms.TreeView AnimeRating;
@@ -10180,7 +10180,7 @@ namespace AniDBClient.Forms
         private System.Windows.Forms.Button Options_CH10BT;
         private System.Windows.Forms.Label StatusBar_ConnectLabel;
         private System.Windows.Forms.Button StatusBar_Hash;
-        private System.Windows.Forms.TabPage MainTabData_Mn09;
+        private System.Windows.Forms.TabPage MainTabData_GraphsTabPage;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button Zgc_GraphB03;
         private System.Windows.Forms.Button Zgc_GraphB02;
@@ -10199,7 +10199,7 @@ namespace AniDBClient.Forms
         private System.Windows.Forms.Label StatusBar_Mn04;
         private System.Windows.Forms.Label StatusBar_Mn03;
         private System.Windows.Forms.Label StatusBar_Mn02;
-        private System.Windows.Forms.Label StatusBar_Mn01;
+        private System.Windows.Forms.Label StatusBar_TasksRemainingLabel;
         private System.Windows.Forms.NumericUpDown Manga_Tx20;
         private System.Windows.Forms.DataGridViewTextBoxColumn Manga_Data_Mn01;
         private System.Windows.Forms.DataGridViewImageColumn Manga_Data_Mn02;
@@ -10211,7 +10211,7 @@ namespace AniDBClient.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn Manga_Data_Mn09;
         private System.Windows.Forms.DataGridViewImageColumn Manga_Data_Mn06;
         private System.Windows.Forms.DataGridViewImageColumn Manga_Data_Mn07;
-        private System.Windows.Forms.TabPage MainTabData_Mn10;
+        private System.Windows.Forms.TabPage MainTabData_ExportTabPage;
         private System.Windows.Forms.Button Anime_ExportBT02;
         private System.Windows.Forms.Button Anime_ExportBT01;
         private System.Windows.Forms.CheckBox Anime_ExportCH18;
@@ -10248,10 +10248,10 @@ namespace AniDBClient.Forms
         private System.Windows.Forms.DataGridViewCheckBoxColumn Manga_ChaptersCM04;
         private System.Windows.Forms.DataGridViewTextBoxColumn Manga_ChaptersCM05;
         private System.Windows.Forms.DataGridViewTextBoxColumn Manga_ChaptersCM06;
-        private System.Windows.Forms.GroupBox Rules_GR04;
+        private System.Windows.Forms.GroupBox Rules_ExportInfoGroupBox;
         private System.Windows.Forms.Button Rules_InfoDell;
-        private System.Windows.Forms.RadioButton Rules_InfoRB02;
-        private System.Windows.Forms.RadioButton Rules_InfoRB01;
+        private System.Windows.Forms.RadioButton Rules_InfoRenameDoNothingRadioButton;
+        private System.Windows.Forms.RadioButton Rules_InfoExportRadioButton;
         private System.Windows.Forms.Button Rules_InfoAdd;
         private System.Windows.Forms.ComboBox Rules_InfoC;
         private System.Windows.Forms.TextBox Rules_Info;

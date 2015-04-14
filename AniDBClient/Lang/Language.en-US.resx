@@ -174,10 +174,10 @@
   <data name="DataAnime_Menu_MyListAddModify" xml:space="preserve">
     <value>Add / Modify</value>
   </data>
-  <data name="DataAnime_Menu_MyListDelete" xml:space="preserve">
+  <data name="DataAnime_Menu_MyList_Delete" xml:space="preserve">
     <value>Delete</value>
   </data>
-  <data name="DataAnime_Menu_MyListWatched" xml:space="preserve">
+  <data name="DataAnime_Menu_MyList_Watched" xml:space="preserve">
     <value>Watched</value>
   </data>
   <data name="DataAnime_Menu_MyListUpdate" xml:space="preserve">
@@ -189,7 +189,7 @@
   <data name="DataAnime_Menu_Database" xml:space="preserve">
     <value>Database</value>
   </data>
-  <data name="DataAnime_Menu_DatabaseDelete" xml:space="preserve">
+  <data name="DataAnime_Menu_Database_Delete" xml:space="preserve">
     <value>Delete</value>
   </data>
   <data name="DataAnime_JapName" xml:space="preserve">
@@ -955,19 +955,19 @@ Before you can use AniSub, please fill your name and password:</value>
   <data name="Hash_DeleteAll" xml:space="preserve">
     <value>Delete All</value>
   </data>
-  <data name="DataSQL_Anime" xml:space="preserve">
+  <data name="DataSql_Anime" xml:space="preserve">
     <value>Anime</value>
   </data>
-  <data name="DataSQL_Episodes" xml:space="preserve">
+  <data name="DataSql_Episodes" xml:space="preserve">
     <value>Episodes</value>
   </data>
-  <data name="DataSQL_Files" xml:space="preserve">
+  <data name="DataSql_Files" xml:space="preserve">
     <value>Files</value>
   </data>
-  <data name="DataSQL_MyList" xml:space="preserve">
+  <data name="DataSql_MyList" xml:space="preserve">
     <value>MyList</value>
   </data>
-  <data name="DataSQL_Check" xml:space="preserve">
+  <data name="DataSql_Check" xml:space="preserve">
     <value>Check</value>
   </data>
   <data name="DataFilesTree_FilesOnly" xml:space="preserve">

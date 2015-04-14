@@ -19,11 +19,11 @@ using System.Threading;
 using System.Windows.Forms;
 using System.Xml;
 using AniDBClient.Helpers;
+using AniDBClient.Hash;
 using AniDBClient.Lang;
 using AniDBClient.Pack;
 using AniDBClient.Properties;
 using AniDBClient.Utilities;
-using Cryptography;
 using HttpServer;
 using WinAPI;
 using ZedGraph;
@@ -11073,7 +11073,7 @@ namespace AniDBClient.Forms
                             foreach (byte b in (byte[])ed2k.Hash)
                                 Hash_String += b.ToString("X2");
 
-                            if (!ed2k.BlueIsRed())
+                            if (!ed2k.BlueIsRed)
                             {
                                 Hash_String += ";";
                                 for (int j = 0; j < ed2k.BlueHash.Length; j++)

@@ -161,6 +161,7 @@
     <Compile Include="7z\Ole32.cs" />
     <Compile Include="7z\Pack.cs" />
     <Compile Include="Helpers\ImageHelpers.cs" />
+    <Compile Include="Utilities\Global.cs" />
     <Compile Include="Utilities\NPanel.cs">
       <SubType>Component</SubType>
     </Compile>

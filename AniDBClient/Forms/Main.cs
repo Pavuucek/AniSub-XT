@@ -83,33 +83,12 @@ namespace AniDBClient.Forms
 
         #endregion
 
-        private const string DirAccounts = @"Accounts";
-        private const string DirInfo = @"Accounts\!info";
-        private const string DirImages = @"Accounts\!imgs";
-        private const string DirMove = @"Accounts\!move";
-        private const string DirRename = @"Accounts\!rename";
-        private const string DirImagesSmall = @"Accounts\!imgsm";
-        private const string DirWeb = @"Web\";
-        private const string FileOriginalDb = @"Accounts\OriginalDatabase.mdb";
-        private const string FileEnglishManual = @"Manual\index.en-US.html";
-        private const string FileEnglishManualFullFile = @"Manual\index.en-US-Full-1.html";
-        private const string FileAccountHash = @"AniSub-Account.hash";
-        private const string FileUpdateSql = @"Update.sql";
-        private const string FileUpdateSqlOld = @"Update-Old.sql";
-        private const string FileAniSubMyListLog = @"AniSub-MyList.log";
-        private const string FileAvDumpLog = @"avdumpLog.txt";
-        private const string FileImageNone = "None.jpg";
-        private const string FileExportXml = "Export.xml";
-        private const string FileExportCsv = @"Export.csv";
-        private const string FileLicense = @"License.rtf";
-        private const string FileAvDump2Exe = @"avdump2\AVDump2CL.exe";
-
         public Main(string globalAdresar)
         {
-            Directory.CreateDirectory(globalAdresar + DirImages);
-            Directory.CreateDirectory(globalAdresar + DirMove);
-            Directory.CreateDirectory(globalAdresar + DirRename);
-            Directory.CreateDirectory(globalAdresar + DirImagesSmall);
+            Directory.CreateDirectory(globalAdresar + Global.DirImages);
+            Directory.CreateDirectory(globalAdresar + Global.DirMove);
+            Directory.CreateDirectory(globalAdresar + Global.DirRename);
+            Directory.CreateDirectory(globalAdresar + Global.DirImagesSmall);
 
             this.Visible = false;
             this.GlobalAdresar = globalAdresar;
@@ -174,7 +153,7 @@ namespace AniDBClient.Forms
         //Načtení uživatele
         private void Main_Load(object sender, EventArgs e)
         {
-            if (!File.Exists(GlobalAdresar + FileOriginalDb))
+            if (!File.Exists(GlobalAdresar + Global.FileOriginalDb))
             {
                 MessageBox.Show(Language.MessageBox_DB, "Error");
                 this.Close();
@@ -189,7 +168,7 @@ namespace AniDBClient.Forms
                 else
                 {
                     WEB.SuspendLayout();
-                    WEB.Navigate(GlobalAdresar + FileEnglishManual);
+                    WEB.Navigate(GlobalAdresar + Global.FileEnglishManual);
                     WEB.ResumeLayout();
 
                     AnimeData.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -1295,7 +1274,7 @@ namespace AniDBClient.Forms
         //Změna účtu
         private void Options_AccountChange_Click(object sender, EventArgs e)
         {
-            FileHelpers.FileDelete(GlobalAdresar + FileAccountHash);
+            FileHelpers.FileDelete(GlobalAdresar + Global.FileAccountHash);
 
             this.MainTab.Enabled = false;
             if (!Options_AccountLoad(false))
@@ -1324,7 +1303,7 @@ namespace AniDBClient.Forms
                     Rules_Replace.Rows.Clear();
                     Rules_Replace.ResumeLayout();
 
-                    DirectoryInfo Adresar = new DirectoryInfo(GlobalAdresar + DirImages);
+                    DirectoryInfo Adresar = new DirectoryInfo(GlobalAdresar + Global.DirImages);
 
                     foreach (FileInfo Soubor in Adresar.GetFiles())
                     {
@@ -1332,15 +1311,15 @@ namespace AniDBClient.Forms
                             FileHelpers.FileDelete(Soubor.FullName);
                     }
 
-                    Adresar = new DirectoryInfo(GlobalAdresar + DirRename);
+                    Adresar = new DirectoryInfo(GlobalAdresar + Global.DirRename);
                     foreach (FileInfo Soubor in Adresar.GetFiles("*.txt"))
                         Rules_FilesRulesRenameC.Items.Add(Soubor.Name.Replace(".txt", ""));
 
-                    Adresar = new DirectoryInfo(GlobalAdresar + DirMove);
+                    Adresar = new DirectoryInfo(GlobalAdresar + Global.DirMove);
                     foreach (FileInfo Soubor in Adresar.GetFiles("*.txt"))
                         Rules_FilesRulesMoveC.Items.Add(Soubor.Name.Replace(".txt", ""));
 
-                    Adresar = new DirectoryInfo(GlobalAdresar + DirInfo);
+                    Adresar = new DirectoryInfo(GlobalAdresar + Global.DirInfo);
                     foreach (FileInfo Soubor in Adresar.GetFiles("*.txt"))
                         Rules_InfoC.Items.Add(Soubor.Name.Replace(".txt", ""));
 
@@ -1349,7 +1328,7 @@ namespace AniDBClient.Forms
 
                     this.Options_SetingsLoadApply(logIn.SettingsData, false);
 
-                    GlobalAdresarAccount = GlobalAdresar + DirAccounts + "\\" + logIn.SettingsData.Name + "\\" +
+                    GlobalAdresarAccount = GlobalAdresar + Global.DirAccounts + "\\" + logIn.SettingsData.Name + "\\" +
                                            logIn.SettingsData.Name + ".dat";
 
                     ChBackup();
@@ -1357,8 +1336,7 @@ namespace AniDBClient.Forms
 
                     try
                     {
-                        string AniDatabasePripojeni = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=\"" + GlobalAdresar +
-                                                      DirAccounts + "\\" + logIn.SettingsData.Name + "\\" +
+                        string AniDatabasePripojeni = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=\"" + GlobalAdresar + Global.DirAccounts + "\\" + logIn.SettingsData.Name + "\\" +
                                                       logIn.SettingsData.Name + ".mdb\";User Id=Admin;Password=;";
                         this.db.AniDbDatabase = new OleDbConnection();
                         db.LoggerE = logger;
@@ -1429,18 +1407,18 @@ namespace AniDBClient.Forms
             {
                 if (Options_DontGenerateWelcomeSceenCheckBox.Checked)
                 {
-                    StreamReader Cti = new StreamReader(GlobalAdresar + FileEnglishManual);
+                    StreamReader Cti = new StreamReader(GlobalAdresar + Global.FileEnglishManual);
                     string TxO = Cti.ReadToEnd();
                     Cti.Close();
                     Cti.Dispose();
 
-                    StreamWriter Zapis = new StreamWriter(GlobalAdresar + FileEnglishManualFullFile);
+                    StreamWriter Zapis = new StreamWriter(GlobalAdresar + Global.FileEnglishManualFullFile);
                     Zapis.Write(TxO.Replace("%animes%", ""));
                     Zapis.Close();
                     Zapis.Dispose();
 
                     e.Cancel = true;
-                    WEB.Navigate(GlobalAdresar + FileEnglishManualFullFile);
+                    WEB.Navigate(GlobalAdresar + Global.FileEnglishManualFullFile);
                 }
                 else
                 {
@@ -1454,7 +1432,7 @@ namespace AniDBClient.Forms
                     string animes = "";
                     string lists = "";
 
-                    StreamReader Cti = new StreamReader(GlobalAdresar + FileEnglishManual);
+                    StreamReader Cti = new StreamReader(GlobalAdresar + Global.FileEnglishManual);
                     string TxO = Cti.ReadToEnd();
                     Cti.Close();
                     Cti.Dispose();
@@ -1499,8 +1477,8 @@ namespace AniDBClient.Forms
 
                         animes += "<div class=\"anime\">";
                         animes += "<a href=\"" + GlobalAdresar + @"Manual\anime" + DT.Rows[i]["id_anime"].ToString() + ".html\">";
-                        if (File.Exists(GlobalAdresar + DirImages + "\\" + DT.Rows[i]["anime_obr"].ToString()))
-                            animes += "<img src=\"" + GlobalAdresar + DirImages + "\\" +
+                        if (File.Exists(GlobalAdresar + Global.DirImages + "\\" + DT.Rows[i]["anime_obr"].ToString()))
+                            animes += "<img src=\"" + GlobalAdresar + Global.DirImages + "\\" +
                                       DT.Rows[i]["anime_obr"].ToString() + "\" alt=\"\" />";
                         animes += "<br />" + DT.Rows[i]["anime_nazevjap"].ToString() + "</a>\r\n";
                         animes += "</div>";
@@ -1525,7 +1503,7 @@ namespace AniDBClient.Forms
                     }
 
                     e.Cancel = true;
-                    WEB.Navigate(GlobalAdresar + FileEnglishManualFullFile);
+                    WEB.Navigate(GlobalAdresar + Global.FileEnglishManualFullFile);
                 }
             }
 
@@ -1546,14 +1524,14 @@ namespace AniDBClient.Forms
 
             string datum = DateTime.Now.Year.ToString() + "-" + String.Format("{0:00}", DateTime.Now.Month) + "-" + String.Format("{0:00}", DateTime.Now.Day);
 
-            if (!File.Exists(GlobalAdresar + DirAccounts + "\\" + Ucet + "\\" + Ucet + "-" + datum + ".mdb")
-                && File.Exists(GlobalAdresar + DirAccounts + "\\" + Ucet + "\\" + Ucet + ".mdb"))
-                File.Copy(GlobalAdresar + DirAccounts + "\\" + Ucet + "\\" + Ucet + ".mdb",
-                    GlobalAdresar + DirAccounts + "\\" + Ucet + "\\" + Ucet + "-" + datum + ".mdb");
+            if (!File.Exists(GlobalAdresar + Global.DirAccounts + "\\" + Ucet + "\\" + Ucet + "-" + datum + ".mdb")
+                && File.Exists(GlobalAdresar + Global.DirAccounts + "\\" + Ucet + "\\" + Ucet + ".mdb"))
+                File.Copy(GlobalAdresar + Global.DirAccounts + "\\" + Ucet + "\\" + Ucet + ".mdb",
+                    GlobalAdresar + Global.DirAccounts + "\\" + Ucet + "\\" + Ucet + "-" + datum + ".mdb");
 
-            FileHelpers.FileDelete(GlobalAdresar + DirAccounts + "\\" + Ucet + "\\" + Ucet + "-B.mdb");
+            FileHelpers.FileDelete(GlobalAdresar + Global.DirAccounts + "\\" + Ucet + "\\" + Ucet + "-B.mdb");
 
-            DirectoryInfo Adresar = new DirectoryInfo(GlobalAdresar + DirAccounts + "\\" + Ucet + "\\");
+            DirectoryInfo Adresar = new DirectoryInfo(GlobalAdresar + Global.DirAccounts + "\\" + Ucet + "\\");
 
             while (true)
             {
@@ -1716,11 +1694,11 @@ namespace AniDBClient.Forms
 
             string datum = DateTime.Now.Year.ToString() + "-" + String.Format("{0:00}", DateTime.Now.Month) + "-" + String.Format("{0:00}", DateTime.Now.Day);
 
-            FileHelpers.FileDelete(GlobalAdresar + DirAccounts+"\\" + Ucet + "\\" + Ucet + "-" + datum + ".mdb");
+            FileHelpers.FileDelete(GlobalAdresar + Global.DirAccounts+"\\" + Ucet + "\\" + Ucet + "-" + datum + ".mdb");
 
-            if (!File.Exists(GlobalAdresar + DirAccounts + "\\" + Ucet + "\\" + Ucet + "-" + datum + ".mdb"))
-                File.Copy(GlobalAdresar + DirAccounts + "\\" + Ucet + "\\" + Ucet + ".mdb",
-                    GlobalAdresar + DirAccounts + "\\" + Ucet + "\\" + Ucet + "-" + datum + ".mdb");
+            if (!File.Exists(GlobalAdresar + Global.DirAccounts + "\\" + Ucet + "\\" + Ucet + "-" + datum + ".mdb"))
+                File.Copy(GlobalAdresar + Global.DirAccounts + "\\" + Ucet + "\\" + Ucet + ".mdb",
+                    GlobalAdresar + Global.DirAccounts + "\\" + Ucet + "\\" + Ucet + "-" + datum + ".mdb");
 
             logger.LogAddError("BACKUP > B A C K U P   W A S   C R E A T E D");
         }
@@ -1741,19 +1719,19 @@ namespace AniDBClient.Forms
         //Updatovat databázi
         private void Options_CH10BT_Click(object sender, EventArgs e)
         {
-            StreamWriter Zapis = new StreamWriter(GlobalAdresar + FileUpdateSql);
+            StreamWriter Zapis = new StreamWriter(GlobalAdresar + Global.FileUpdateSql);
 
-            if (File.Exists(GlobalAdresar + FileUpdateSqlOld))
+            if (File.Exists(GlobalAdresar + Global.FileUpdateSqlOld))
             {
-                StreamReader Cti = new StreamReader(GlobalAdresar + FileUpdateSqlOld);
+                StreamReader Cti = new StreamReader(GlobalAdresar + Global.FileUpdateSqlOld);
                 Zapis.Write(Cti.ReadToEnd());
                 Cti.Close();
                 Cti.Dispose();
             }
 
-            if (File.Exists(GlobalAdresar + FileUpdateSql))
+            if (File.Exists(GlobalAdresar + Global.FileUpdateSql))
             {
-                StreamReader Cti = new StreamReader(GlobalAdresar + FileUpdateSql);
+                StreamReader Cti = new StreamReader(GlobalAdresar + Global.FileUpdateSql);
                 Zapis.Write(Cti.ReadToEnd());
                 Cti.Close();
                 Cti.Dispose();
@@ -2703,8 +2681,8 @@ namespace AniDBClient.Forms
                 if (db.AniDbDatabase != null)
                     this.db.AniDbDatabase.Close();
 
-                FileHelpers.FileDelete(GlobalAdresar + FileAniSubMyListLog);
-                FileHelpers.FileDelete(GlobalAdresar + FileAvDumpLog);
+                FileHelpers.FileDelete(GlobalAdresar + Global.FileAniSubMyListLog);
+                FileHelpers.FileDelete(GlobalAdresar + Global.FileAvDumpLog);
 
                 EncDec.Encrypt(GlobalAdresarAccount, GlobalAdresarAccount + ".enc", "4651511fac9cbbc80c8417779620b893");
                 FileHelpers.FileDelete(GlobalAdresarAccount);
@@ -4562,7 +4540,7 @@ namespace AniDBClient.Forms
         private void Rules_FilesRulesRenameAdd_Click(object sender, EventArgs e)
         {
             bool Prepis = false;
-            if (File.Exists(GlobalAdresar + DirRename + "\\" + Rules_FilesRulesRenameC.Text + ".txt"))
+            if (File.Exists(GlobalAdresar + Global.DirRename + "\\" + Rules_FilesRulesRenameC.Text + ".txt"))
             {
                 if (MessageBox.Show(Language.MessageBox_RenameI, Language.MessageBox_Rename, MessageBoxButtons.YesNo) ==
                     DialogResult.Yes)
@@ -4574,7 +4552,7 @@ namespace AniDBClient.Forms
             if (Prepis)
             {
                 StreamWriter Zapis =
-                    new StreamWriter(GlobalAdresar + DirRename + "\\" + Rules_FilesRulesRenameC.Text + ".txt");
+                    new StreamWriter(GlobalAdresar + Global.DirRename + "\\" + Rules_FilesRulesRenameC.Text + ".txt");
                 if (!Rules_FilesRulesRenameC.Items.Contains(Rules_FilesRulesRenameC.Text))
                     Rules_FilesRulesRenameC.Items.Add(Rules_FilesRulesRenameC.Text);
                 Zapis.WriteLine(Rules_FilesRulesRename.Text);
@@ -4586,7 +4564,7 @@ namespace AniDBClient.Forms
         private void Rules_FilesRulesMoveAdd_Click(object sender, EventArgs e)
         {
             bool Prepis = false;
-            if (File.Exists(GlobalAdresar + DirMove + "\\" + Rules_FilesRulesMoveC.Text + ".txt"))
+            if (File.Exists(GlobalAdresar + Global.DirMove + "\\" + Rules_FilesRulesMoveC.Text + ".txt"))
             {
                 if (MessageBox.Show(Language.MessageBox_RenameI, Language.MessageBox_Rename, MessageBoxButtons.YesNo) ==
                     DialogResult.Yes)
@@ -4598,7 +4576,7 @@ namespace AniDBClient.Forms
             if (Prepis)
             {
                 StreamWriter Zapis =
-                    new StreamWriter(GlobalAdresar + DirMove + "\\" + Rules_FilesRulesMoveC.Text + ".txt");
+                    new StreamWriter(GlobalAdresar + Global.DirMove + "\\" + Rules_FilesRulesMoveC.Text + ".txt");
                 if (!Rules_FilesRulesMoveC.Items.Contains(Rules_FilesRulesMoveC.Text))
                     Rules_FilesRulesMoveC.Items.Add(Rules_FilesRulesMoveC.Text);
                 Zapis.WriteLine(Rules_FilesRulesMove.Text);
@@ -4609,24 +4587,24 @@ namespace AniDBClient.Forms
         //Smaž rename
         private void Rules_FilesRulesRenameDel_Click(object sender, EventArgs e)
         {
-            FileHelpers.FileDelete(GlobalAdresar + DirRename + "\\" + Rules_FilesRulesRenameC.Text + ".txt");
+            FileHelpers.FileDelete(GlobalAdresar + Global.DirRename + "\\" + Rules_FilesRulesRenameC.Text + ".txt");
             Rules_FilesRulesRenameC.Items.Remove(Rules_FilesRulesRenameC.Text);
         }
 
         //Smaž move
         private void Rules_FilesRulesMoveDel_Click(object sender, EventArgs e)
         {
-            FileHelpers.FileDelete(GlobalAdresar + DirMove + "\\" + Rules_FilesRulesMoveC.Text + ".txt");
+            FileHelpers.FileDelete(GlobalAdresar + Global.DirMove + "\\" + Rules_FilesRulesMoveC.Text + ".txt");
             Rules_FilesRulesMoveC.Items.Remove(Rules_FilesRulesMoveC.Text);
         }
 
         //Čti rename
         private void Rules_FilesRulesRenameC_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (File.Exists(GlobalAdresar + DirRename + "\\" + Rules_FilesRulesRenameC.Text + ".txt"))
+            if (File.Exists(GlobalAdresar + Global.DirRename + "\\" + Rules_FilesRulesRenameC.Text + ".txt"))
             {
                 StreamReader Cti =
-                    new StreamReader(GlobalAdresar + DirRename + "\\" + Rules_FilesRulesRenameC.Text + ".txt");
+                    new StreamReader(GlobalAdresar + Global.DirRename + "\\" + Rules_FilesRulesRenameC.Text + ".txt");
                 Rules_FilesRulesRename.Text = Cti.ReadToEnd();
                 Cti.Close();
             }
@@ -4635,9 +4613,9 @@ namespace AniDBClient.Forms
         //Čti move
         private void Rules_FilesRulesMoveC_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (File.Exists(GlobalAdresar + DirMove + "\\" + Rules_FilesRulesMoveC.Text + ".txt"))
+            if (File.Exists(GlobalAdresar + Global.DirMove + "\\" + Rules_FilesRulesMoveC.Text + ".txt"))
             {
-                StreamReader Cti = new StreamReader(GlobalAdresar + DirMove + "\\" + Rules_FilesRulesMoveC.Text + ".txt");
+                StreamReader Cti = new StreamReader(GlobalAdresar + Global.DirMove + "\\" + Rules_FilesRulesMoveC.Text + ".txt");
                 Rules_FilesRulesMove.Text = Cti.ReadToEnd();
                 Cti.Close();
             }
@@ -6382,7 +6360,7 @@ namespace AniDBClient.Forms
         private void Rules_InfoAdd_Click(object sender, EventArgs e)
         {
             bool Prepis = false;
-            if (File.Exists(GlobalAdresar + DirInfo+"\\" + Rules_InfoC.Text + ".txt"))
+            if (File.Exists(GlobalAdresar + Global.DirInfo+"\\" + Rules_InfoC.Text + ".txt"))
             {
                 if (MessageBox.Show(Language.MessageBox_RenameI, Language.MessageBox_Rename, MessageBoxButtons.YesNo) == DialogResult.Yes)
                     Prepis = true;
@@ -6392,7 +6370,7 @@ namespace AniDBClient.Forms
 
             if (Prepis)
             {
-                StreamWriter Zapis = new StreamWriter(GlobalAdresar + DirInfo+"\\" + Rules_InfoC.Text + ".txt");
+                StreamWriter Zapis = new StreamWriter(GlobalAdresar + Global.DirInfo+"\\" + Rules_InfoC.Text + ".txt");
                 if (!Rules_InfoC.Items.Contains(Rules_InfoC.Text))
                     Rules_InfoC.Items.Add(Rules_InfoC.Text);
                 Zapis.WriteLine(Rules_Info.Text);
@@ -6403,16 +6381,16 @@ namespace AniDBClient.Forms
         //Smaž Info
         private void Rules_InfoDell_Click(object sender, EventArgs e)
         {
-            FileHelpers.FileDelete(GlobalAdresar + DirInfo + "\\" + Rules_InfoC.Text + ".txt");
+            FileHelpers.FileDelete(GlobalAdresar + Global.DirInfo + "\\" + Rules_InfoC.Text + ".txt");
             Rules_InfoC.Items.Remove(Rules_InfoC.Text);
         }
 
         //Čti Info
         private void Rules_InfoC_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (File.Exists(GlobalAdresar + DirInfo + "\\" + Rules_InfoC.Text + ".txt"))
+            if (File.Exists(GlobalAdresar + Global.DirInfo + "\\" + Rules_InfoC.Text + ".txt"))
             {
-                StreamReader Cti = new StreamReader(GlobalAdresar + DirInfo + "\\" + Rules_InfoC.Text + ".txt");
+                StreamReader Cti = new StreamReader(GlobalAdresar + Global.DirInfo + "\\" + Rules_InfoC.Text + ".txt");
                 Rules_Info.Text = Cti.ReadToEnd();
                 Cti.Close();
             }
@@ -8751,11 +8729,11 @@ namespace AniDBClient.Forms
             }
 
             Anime_Img.BackgroundImage = null;
-            if (DAnime.Rows[0]["anime_obr"].ToString() == FileImageNone)
+            if (DAnime.Rows[0]["anime_obr"].ToString() == Global.FileImageNone)
             {
-                if (File.Exists(GlobalAdresar + DirImages+"\\" + DAnime.Rows[0]["anime_obr"].ToString()))
+                if (File.Exists(GlobalAdresar + Global.DirImages+"\\" + DAnime.Rows[0]["anime_obr"].ToString()))
                 {
-                    StreamReader Cti = new StreamReader(GlobalAdresar + DirImages+"\\" + DAnime.Rows[0]["anime_obr"].ToString());
+                    StreamReader Cti = new StreamReader(GlobalAdresar + Global.DirImages+"\\" + DAnime.Rows[0]["anime_obr"].ToString());
 
                     Image img = Image.FromStream(Cti.BaseStream);
 
@@ -8766,12 +8744,12 @@ namespace AniDBClient.Forms
                 }
 
             }
-            else if (!File.Exists(GlobalAdresar + DirImages+"\\" + DAnime.Rows[0]["anime_obr"].ToString()))
+            else if (!File.Exists(GlobalAdresar + Global.DirImages+"\\" + DAnime.Rows[0]["anime_obr"].ToString()))
             {
                 if (DAnime.Rows[0]["anime_obr"].ToString() != "")
                 {
                     WebClient WBC = new WebClient();
-                    WBC.DownloadFileAsync(new Uri(AniSubImgUrl + DAnime.Rows[0]["anime_obr"].ToString()), GlobalAdresar + DirImages+"\\" + DAnime.Rows[0]["anime_obr"].ToString());
+                    WBC.DownloadFileAsync(new Uri(AniSubImgUrl + DAnime.Rows[0]["anime_obr"].ToString()), GlobalAdresar + Global.DirImages+"\\" + DAnime.Rows[0]["anime_obr"].ToString());
                     WBC.DownloadFileCompleted += new AsyncCompletedEventHandler(WBC_DownloadFileCompleted);
                 }
                 else
@@ -8781,7 +8759,7 @@ namespace AniDBClient.Forms
             {
                 try
                 {
-                    StreamReader Cti = new StreamReader(GlobalAdresar + DirImages+"\\" + DAnime.Rows[0]["anime_obr"].ToString());
+                    StreamReader Cti = new StreamReader(GlobalAdresar + Global.DirImages+"\\" + DAnime.Rows[0]["anime_obr"].ToString());
 
                     Image img = Image.FromStream(Cti.BaseStream);
 
@@ -8792,15 +8770,15 @@ namespace AniDBClient.Forms
                     {
                         img = ImageHelpers.ResizeImage(img, new Size(225, 279));
 
-                        FileHelpers.FileDelete(GlobalAdresar + DirImages+"\\" + DAnime.Rows[0]["anime_obr"].ToString());
-                        img.Save(GlobalAdresar + DirImages+"\\" + DAnime.Rows[0]["anime_obr"].ToString(), System.Drawing.Imaging.ImageFormat.Jpeg);
+                        FileHelpers.FileDelete(GlobalAdresar + Global.DirImages+"\\" + DAnime.Rows[0]["anime_obr"].ToString());
+                        img.Save(GlobalAdresar + Global.DirImages+"\\" + DAnime.Rows[0]["anime_obr"].ToString(), System.Drawing.Imaging.ImageFormat.Jpeg);
                     }
 
                     Anime_Img.BackgroundImage = img;
                 }
                 catch
                 {
-                    FileHelpers.FileDelete(GlobalAdresar + DirImages+"\\" + DAnime.Rows[0]["anime_obr"].ToString());
+                    FileHelpers.FileDelete(GlobalAdresar + Global.DirImages+"\\" + DAnime.Rows[0]["anime_obr"].ToString());
                 }
             }
 
@@ -8889,7 +8867,7 @@ namespace AniDBClient.Forms
             try
             {
                 DataTable DAnime = db.DatabaseSelect("SELECT * FROM anime WHERE id_anime=" + AnimeTree.SelectedNode.Name);
-                StreamReader Cti = new StreamReader(GlobalAdresar + DirImages+"\\" + DAnime.Rows[0]["anime_obr"].ToString());
+                StreamReader Cti = new StreamReader(GlobalAdresar + Global.DirImages+"\\" + DAnime.Rows[0]["anime_obr"].ToString());
 
                 Image img = Image.FromStream(Cti.BaseStream);
 
@@ -8899,8 +8877,8 @@ namespace AniDBClient.Forms
                 if (img.Height > 279 || img.Width > 255)
                 {
                     img = ImageHelpers.ResizeImage(img, new Size(225, 279));
-                    FileHelpers.FileDelete(GlobalAdresar + DirImages+"\\" + DAnime.Rows[0]["anime_obr"].ToString());
-                    img.Save(GlobalAdresar + DirImages+"\\" + DAnime.Rows[0]["anime_obr"].ToString(), System.Drawing.Imaging.ImageFormat.Jpeg);
+                    FileHelpers.FileDelete(GlobalAdresar + Global.DirImages+"\\" + DAnime.Rows[0]["anime_obr"].ToString());
+                    img.Save(GlobalAdresar + Global.DirImages+"\\" + DAnime.Rows[0]["anime_obr"].ToString(), System.Drawing.Imaging.ImageFormat.Jpeg);
                 }
 
                 Anime_Img.BackgroundImage = img;
@@ -9481,12 +9459,12 @@ namespace AniDBClient.Forms
 
             Anime_Img.BackgroundImage = new Bitmap(1, 1);
 
-            FileHelpers.FileDelete(GlobalAdresar + DirImages+"\\" + DAnime.Rows[0]["anime_obr"].ToString());
+            FileHelpers.FileDelete(GlobalAdresar + Global.DirImages+"\\" + DAnime.Rows[0]["anime_obr"].ToString());
 
             if (DAnime.Rows[0]["anime_obr"].ToString() != "")
             {
                 WebClient WBC = new WebClient();
-                WBC.DownloadFileAsync(new Uri(AniSubImgUrl + DAnime.Rows[0]["anime_obr"].ToString()), GlobalAdresar + DirImages+"\\" + DAnime.Rows[0]["anime_obr"].ToString());
+                WBC.DownloadFileAsync(new Uri(AniSubImgUrl + DAnime.Rows[0]["anime_obr"].ToString()), GlobalAdresar + Global.DirImages+"\\" + DAnime.Rows[0]["anime_obr"].ToString());
                 WBC.DownloadFileCompleted += new AsyncCompletedEventHandler(WBC_DownloadFileCompleted);
             }
             else
@@ -9643,7 +9621,7 @@ namespace AniDBClient.Forms
                 db.DatabaseAdd("DELETE FROM manga_anime WHERE id_anime=" + AnimeTree.SelectedNode.Name);
 
                 if (DAnime.Rows.Count > 0)
-                    FileHelpers.FileDelete(GlobalAdresar + DirImages+"\\" + DAnime.Rows[0]["anime_obr"].ToString());
+                    FileHelpers.FileDelete(GlobalAdresar + Global.DirImages+"\\" + DAnime.Rows[0]["anime_obr"].ToString());
 
                 DatabaseSelectAnimeTree(1);
             }
@@ -9992,9 +9970,9 @@ namespace AniDBClient.Forms
 
                     for (int i = 0; i < Anime.Count; i++)
                     {
-                        if (File.Exists(GlobalAdresar + DirImages+"\\" + Anime[i].Key[2].ToString()))
+                        if (File.Exists(GlobalAdresar + Global.DirImages+"\\" + Anime[i].Key[2].ToString()))
                         {
-                            StreamReader Cti = new StreamReader(GlobalAdresar + DirImages+"\\" + Anime[i].Key[2].ToString());
+                            StreamReader Cti = new StreamReader(GlobalAdresar + Global.DirImages+"\\" + Anime[i].Key[2].ToString());
                             Bitmap res = (Bitmap)ImageHelpers.ResizeImage(Image.FromStream(Cti.BaseStream), new Size(W, H));
                             int w = (W - res.Width) / 4;
                             int h = (H - res.Height) / 4;
@@ -10167,7 +10145,7 @@ namespace AniDBClient.Forms
         private void Anime_ExportBT01_Click(object sender, EventArgs e)
         {
             SaveFileDialog OFD = new SaveFileDialog();
-            OFD.FileName = FileExportXml;
+            OFD.FileName = Global.FileExportXml;
 
             if (OFD.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
@@ -10325,7 +10303,7 @@ namespace AniDBClient.Forms
         private void Anime_ExportBT02_Click(object sender, EventArgs e)
         {
             SaveFileDialog OFD = new SaveFileDialog();
-            OFD.FileName = FileExportCsv;
+            OFD.FileName = Global.FileExportCsv;
 
             if (OFD.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
@@ -10937,7 +10915,7 @@ namespace AniDBClient.Forms
         //Licence
         private void About_LB02_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start(GlobalAdresar + FileLicense);
+            Process.Start(GlobalAdresar + Global.FileLicense);
         }
 
         //Vynulování vyhledávání
@@ -11295,7 +11273,7 @@ namespace AniDBClient.Forms
                     {
                         FileInfo Soubor = new FileInfo(Hash_Nazvy_Souboru.Items[0].ToString());
 
-                        if (Hash_CH01.Checked && File.Exists(GlobalAdresar + FileAvDump2Exe) && q < 10)
+                        if (Hash_CH01.Checked && File.Exists(GlobalAdresar + Global.FileAvDump2Exe) && q < 10)
                         {
                             q++;
 
@@ -11304,7 +11282,7 @@ namespace AniDBClient.Forms
                                 Arguments = " --Log=\"" + GlobalAdresar + @"avdumpLog.txt" + "\" ";
 
                             Process Proc = new Process();
-                            Proc.StartInfo.FileName = GlobalAdresar + FileAvDump2Exe;
+                            Proc.StartInfo.FileName = GlobalAdresar + Global.FileAvDump2Exe;
                             Proc.StartInfo.Arguments = "\"" + Soubor.FullName + "\"" + Arguments + " --Exp=\"" + GlobalAdresar + "avdump.txt" + "\" --Auth=" + Options_User.Text + ":" + Options_Password.Text + " -a";
 
                             if (!Hash_CH03.Checked)
@@ -12797,9 +12775,9 @@ namespace AniDBClient.Forms
 
             try
             {
-                if (File.Exists(GlobalAdresar + DirImagesSmall+"\\" + DManga.Rows[0]["manga_obr"].ToString()))
+                if (File.Exists(GlobalAdresar + Global.DirImagesSmall+"\\" + DManga.Rows[0]["manga_obr"].ToString()))
                 {
-                    StreamReader Cti = new StreamReader(GlobalAdresar + DirImagesSmall+"\\" + DManga.Rows[0]["manga_obr"].ToString());
+                    StreamReader Cti = new StreamReader(GlobalAdresar + Global.DirImagesSmall+"\\" + DManga.Rows[0]["manga_obr"].ToString());
 
                     Image img = Image.FromStream(Cti.BaseStream);
 
@@ -13153,8 +13131,8 @@ namespace AniDBClient.Forms
                                 WB.Headers.Clear();
                                 WB.Headers.Add("User-Agent", "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729;)");
                                 WB.Headers.Add("Referer", Manga_Tx08.Text);
-                                WB.DownloadFile(Manga_Tx08.Text, GlobalAdresar + DirImagesSmall+"\\" + ID.ToString() + ".jpg");
-                                Manga_Tx08.Text = GlobalAdresar + DirImagesSmall+"\\" + ID.ToString() + ".jpg";
+                                WB.DownloadFile(Manga_Tx08.Text, GlobalAdresar + Global.DirImagesSmall+"\\" + ID.ToString() + ".jpg");
+                                Manga_Tx08.Text = GlobalAdresar + Global.DirImagesSmall+"\\" + ID.ToString() + ".jpg";
                             }
 
                             StreamReader Cti = new StreamReader(Manga_Tx08.Text);
@@ -13163,7 +13141,7 @@ namespace AniDBClient.Forms
                             Cti.Dispose();
 
                             img = ImageHelpers.ResizeImage(img, new Size(225, 279));
-                            img.Save(GlobalAdresar + DirImagesSmall+"\\" + ID.ToString() + ".jpg", System.Drawing.Imaging.ImageFormat.Jpeg);
+                            img.Save(GlobalAdresar + Global.DirImagesSmall+"\\" + ID.ToString() + ".jpg", System.Drawing.Imaging.ImageFormat.Jpeg);
 
 
                             db.DatabaseAdd("UPDATE manga SET manga_obr='" + ID.ToString() + ".jpg' WHERE id_manga=" + ID.ToString());
@@ -13415,8 +13393,8 @@ namespace AniDBClient.Forms
                     img = ImageHelpers.ResizeImage(img, new Size(225, 279));
                     Manga_Picture.BackgroundImage = img;
 
-                    FileHelpers.FileDelete(GlobalAdresar + DirImagesSmall+"\\" + ID.ToString() + ".jpg");
-                    img.Save(GlobalAdresar + DirImagesSmall+"\\" + ID.ToString() + ".jpg", System.Drawing.Imaging.ImageFormat.Jpeg);
+                    FileHelpers.FileDelete(GlobalAdresar + Global.DirImagesSmall+"\\" + ID.ToString() + ".jpg");
+                    img.Save(GlobalAdresar + Global.DirImagesSmall+"\\" + ID.ToString() + ".jpg", System.Drawing.Imaging.ImageFormat.Jpeg);
 
                     db.DatabaseAdd("UPDATE manga SET manga_obr='" + ID.ToString() + ".jpg' WHERE id_manga=" + ID.ToString());
                 }
@@ -13439,8 +13417,8 @@ namespace AniDBClient.Forms
                         WB.Headers.Clear();
                         WB.Headers.Add("User-Agent", "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729;)");
                         WB.Headers.Add("Referer", Manga_Tx08.Text);
-                        WB.DownloadFile(Manga_Tx08.Text, GlobalAdresar + DirImagesSmall+"\\" + ID.ToString() + ".jpg");
-                        Manga_Tx08.Text = GlobalAdresar + DirImagesSmall+"\\" + ID.ToString() + ".jpg";
+                        WB.DownloadFile(Manga_Tx08.Text, GlobalAdresar + Global.DirImagesSmall+"\\" + ID.ToString() + ".jpg");
+                        Manga_Tx08.Text = GlobalAdresar + Global.DirImagesSmall+"\\" + ID.ToString() + ".jpg";
                     }
                 }
                 catch
@@ -14333,7 +14311,7 @@ namespace AniDBClient.Forms
                 db.DatabaseAdd("DELETE FROM manga_genres WHERE id_manga=" + ID);
                 db.DatabaseAdd("DELETE FROM manga_anime WHERE id_manga=" + ID);
 
-                FileHelpers.FileDelete(GlobalAdresar + DirImagesSmall+"\\" + ID + ".jpg");
+                FileHelpers.FileDelete(GlobalAdresar + Global.DirImagesSmall+"\\" + ID + ".jpg");
                 DatabaseSelectMangaTree(0);
                 MainTabManga.SelectedIndex = 0;
             }
@@ -14828,8 +14806,8 @@ namespace AniDBClient.Forms
             string sText = null;
             string uriReguire = request.UriPath.Replace("|", ".").Replace("*", ":");
 
-            if (File.Exists(GlobalAdresar + DirWeb + request.UriPath.Replace("|", ".").Replace("*", ":")))
-                uriReguire = GlobalAdresar + DirWeb + request.UriPath.Replace("|", ".").Replace("*", ":");
+            if (File.Exists(GlobalAdresar + Global.DirWeb + request.UriPath.Replace("|", ".").Replace("*", ":")))
+                uriReguire = GlobalAdresar + Global.DirWeb + request.UriPath.Replace("|", ".").Replace("*", ":");
 
             if (request.UriPath.Length > 1)
             {
@@ -14954,7 +14932,7 @@ namespace AniDBClient.Forms
                         {
                             TxP += "<div class=\"anime\">";
                             TxP += "<a href=\"anime-" + DT.Rows[i]["id_anime"].ToString() + ".html\">";
-                            if (File.Exists(GlobalAdresar + DirImages+"\\" + DT.Rows[i]["anime_obr"].ToString()))
+                            if (File.Exists(GlobalAdresar + Global.DirImages+"\\" + DT.Rows[i]["anime_obr"].ToString()))
                             {
                                 string x = DT.Rows[i]["anime_nazevjap"].ToString().Substring(0, DT.Rows[i]["anime_nazevjap"].ToString().Length > 25 ? 25 : DT.Rows[i]["anime_nazevjap"].ToString().Length);
 
@@ -15008,7 +14986,7 @@ namespace AniDBClient.Forms
                         {
                             TxP += "<div class=\"anime\">";
                             TxP += "<a href=\"anime-" + DT.Rows[i]["id_anime"].ToString() + "-" + sText + ".html\">";
-                            if (File.Exists(GlobalAdresar + DirImages+"\\" + DT.Rows[i]["anime_obr"].ToString()))
+                            if (File.Exists(GlobalAdresar + Global.DirImages+"\\" + DT.Rows[i]["anime_obr"].ToString()))
                             {
                                 string x = DT.Rows[i]["anime_nazevjap"].ToString().Substring(0, DT.Rows[i]["anime_nazevjap"].ToString().Length > 25 ? 25 : DT.Rows[i]["anime_nazevjap"].ToString().Length);
 
@@ -15041,7 +15019,7 @@ namespace AniDBClient.Forms
 
                         if (DT.Rows.Count > 0)
                         {
-                            if (File.Exists(GlobalAdresar + DirImages+"\\" + DT.Rows[0]["anime_obr"].ToString()))
+                            if (File.Exists(GlobalAdresar + Global.DirImages+"\\" + DT.Rows[0]["anime_obr"].ToString()))
                                 TxP += "<img src=\"||\\Accounts\\!imgs\\" + DT.Rows[0]["anime_obr"].ToString() + "\" alt=\"\" />";
 
                             TxP += "<br />" + DT.Rows[0]["anime_nazevjap"].ToString() + "\r\n";

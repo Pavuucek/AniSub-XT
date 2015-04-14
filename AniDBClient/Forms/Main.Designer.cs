@@ -107,46 +107,46 @@ namespace AniDBClient.Forms
             this.Watcher_List = new System.Windows.Forms.ComboBox();
             this.Options_GR01 = new System.Windows.Forms.GroupBox();
             this.Options_WatchedCheckbox = new System.Windows.Forms.CheckBox();
-            this.Options_LB10 = new System.Windows.Forms.Label();
-            this.Options_LB09 = new System.Windows.Forms.Label();
-            this.Options_LB08 = new System.Windows.Forms.Label();
-            this.Options_LB07 = new System.Windows.Forms.Label();
+            this.Options_OtherLabel = new System.Windows.Forms.Label();
+            this.Options_StorageLabel = new System.Windows.Forms.Label();
+            this.Options_SourceLabel = new System.Windows.Forms.Label();
+            this.Options_StatusLabel = new System.Windows.Forms.Label();
             this.Options_MylistOther = new System.Windows.Forms.TextBox();
             this.Options_MylistStorage = new System.Windows.Forms.TextBox();
             this.Options_AutoAddToMyListCheckBox = new System.Windows.Forms.CheckBox();
             this.Options_MylistSource = new System.Windows.Forms.TextBox();
             this.Options_MylistState = new System.Windows.Forms.ComboBox();
-            this.Options_LB11 = new System.Windows.Forms.Label();
+            this.Options_NetworkLabel = new System.Windows.Forms.Label();
             this.Watcher_CH01 = new System.Windows.Forms.CheckBox();
-            this.Options_LB01 = new System.Windows.Forms.Label();
+            this.Options_ServerLabel = new System.Windows.Forms.Label();
             this.Options_Network = new System.Windows.Forms.ComboBox();
             this.Options_Delay = new System.Windows.Forms.NumericUpDown();
             this.Options_Password = new System.Windows.Forms.TextBox();
             this.Options_Reset = new System.Windows.Forms.NumericUpDown();
             this.Options_ServerPort = new System.Windows.Forms.NumericUpDown();
-            this.Options_LB02 = new System.Windows.Forms.Label();
+            this.Options_PortLabel = new System.Windows.Forms.Label();
             this.Options_Backup = new System.Windows.Forms.NumericUpDown();
             this.Options_LocalPort = new System.Windows.Forms.NumericUpDown();
             this.Options_User = new System.Windows.Forms.TextBox();
-            this.Options_LB03 = new System.Windows.Forms.Label();
-            this.Options_LB13 = new System.Windows.Forms.Label();
-            this.Options_LB45 = new System.Windows.Forms.Label();
-            this.Options_LB04 = new System.Windows.Forms.Label();
-            this.Options_LB12 = new System.Windows.Forms.Label();
-            this.Options_LB05 = new System.Windows.Forms.Label();
-            this.Options_LB69 = new System.Windows.Forms.Label();
+            this.Options_UserNameLabel = new System.Windows.Forms.Label();
+            this.Options_Hash_WatcherLabel = new System.Windows.Forms.Label();
+            this.Options_LocalPortLabel = new System.Windows.Forms.Label();
+            this.Options_PasswordLabel = new System.Windows.Forms.Label();
+            this.Options_FileTypesLabel = new System.Windows.Forms.Label();
+            this.Options_TimeoutLabel = new System.Windows.Forms.Label();
+            this.Options_DbBackupCountLabel = new System.Windows.Forms.Label();
             this.Options_Language = new System.Windows.Forms.ComboBox();
             this.Options_TimeOut = new System.Windows.Forms.NumericUpDown();
-            this.Options_LB06 = new System.Windows.Forms.Label();
-            this.Options_LB68 = new System.Windows.Forms.Label();
+            this.Options_DelayLabel = new System.Windows.Forms.Label();
+            this.Options_ResetCountLabel = new System.Windows.Forms.Label();
             this.Options_ServerName = new System.Windows.Forms.TextBox();
             this.Options_ExtensionList = new System.Windows.Forms.ComboBox();
             this.MainTab_RulesPage = new System.Windows.Forms.TabPage();
-            this.Rules_CH04 = new System.Windows.Forms.CheckBox();
-            this.Rules_Tags = new System.Windows.Forms.Button();
-            this.Rules_CH03 = new System.Windows.Forms.CheckBox();
-            this.Rules_CH02 = new System.Windows.Forms.CheckBox();
-            this.Rules_CH01 = new System.Windows.Forms.CheckBox();
+            this.Rules_DeleteSourceIfEmptyCheckBox = new System.Windows.Forms.CheckBox();
+            this.Rules_TagsButton = new System.Windows.Forms.Button();
+            this.Rules_ReplaceExistingCheckBox = new System.Windows.Forms.CheckBox();
+            this.Rules_DontCopyToAnotherDiskCheckBox = new System.Windows.Forms.CheckBox();
+            this.Rules_AutomaticRenamingCheckBox = new System.Windows.Forms.CheckBox();
             this.Rules_RulesForCharacterReplacingGroupBox = new System.Windows.Forms.GroupBox();
             this.Rules_Replace = new System.Windows.Forms.DataGridView();
             this.Rules_Replace_Mn01 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -165,8 +165,8 @@ namespace AniDBClient.Forms
             this.Rules_RulesForFileRenamingGroupBox = new System.Windows.Forms.GroupBox();
             this.Rules_Position = new System.Windows.Forms.ComboBox();
             this.Rules_RulesNumberPositionLabel = new System.Windows.Forms.Label();
-            this.Rules_FilesRulesRename_RB02 = new System.Windows.Forms.RadioButton();
-            this.Rules_FilesRulesRename_RB01 = new System.Windows.Forms.RadioButton();
+            this.Rules_FilesRulesRename_DoNothingRadioButton = new System.Windows.Forms.RadioButton();
+            this.Rules_FilesRulesRename_RenameRadioButton = new System.Windows.Forms.RadioButton();
             this.Rules_FilesRulesRenameC = new System.Windows.Forms.ComboBox();
             this.Rules_FilesRulesRename = new System.Windows.Forms.TextBox();
             this.MainTab_HashPage = new System.Windows.Forms.TabPage();
@@ -462,21 +462,21 @@ namespace AniDBClient.Forms
             this.MainTabManga = new System.Windows.Forms.TabControl();
             this.MainTabManga_Mn01 = new System.Windows.Forms.TabPage();
             this.Manga_Gr04 = new System.Windows.Forms.GroupBox();
-            this.Options_LB51 = new System.Windows.Forms.Label();
+            this.Options_MangaLabel = new System.Windows.Forms.Label();
             this.Options_LB65 = new System.Windows.Forms.Label();
-            this.Options_LB53 = new System.Windows.Forms.Label();
+            this.Options_VolumesLabel = new System.Windows.Forms.Label();
             this.Options_LB54 = new System.Windows.Forms.Label();
-            this.Options_LB59 = new System.Windows.Forms.Label();
+            this.Options_ReadLabel = new System.Windows.Forms.Label();
             this.Options_LB56 = new System.Windows.Forms.Label();
-            this.Options_LB55 = new System.Windows.Forms.Label();
+            this.Options_ChaptersLabel = new System.Windows.Forms.Label();
             this.Options_LB64 = new System.Windows.Forms.Label();
-            this.Options_LB61 = new System.Windows.Forms.Label();
+            this.Options_TotalPagesLabel = new System.Windows.Forms.Label();
             this.Options_LB62 = new System.Windows.Forms.Label();
-            this.Options_LB63 = new System.Windows.Forms.Label();
+            this.Options_AdultLabel = new System.Windows.Forms.Label();
             this.Options_LB58 = new System.Windows.Forms.Label();
-            this.Options_LB67 = new System.Windows.Forms.Label();
+            this.Options_ReadLabel2 = new System.Windows.Forms.Label();
             this.Options_LB60 = new System.Windows.Forms.Label();
-            this.Options_LB57 = new System.Windows.Forms.Label();
+            this.Options_FileSizeLabel = new System.Windows.Forms.Label();
             this.Options_LB52 = new System.Windows.Forms.Label();
             this.MangaTree_CH01 = new System.Windows.Forms.CheckBox();
             this.Manga_Gr01 = new System.Windows.Forms.GroupBox();
@@ -920,9 +920,9 @@ namespace AniDBClient.Forms
             this.MainTab_SettinsPage.Controls.Add(this.Options_GR02);
             this.MainTab_SettinsPage.Controls.Add(this.Watcher_List);
             this.MainTab_SettinsPage.Controls.Add(this.Options_GR01);
-            this.MainTab_SettinsPage.Controls.Add(this.Options_LB11);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_NetworkLabel);
             this.MainTab_SettinsPage.Controls.Add(this.Watcher_CH01);
-            this.MainTab_SettinsPage.Controls.Add(this.Options_LB01);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_ServerLabel);
             this.MainTab_SettinsPage.Controls.Add(this.Options_Network);
             this.MainTab_SettinsPage.Controls.Add(this.Watcher_Delete);
             this.MainTab_SettinsPage.Controls.Add(this.Options_Delay);
@@ -930,29 +930,29 @@ namespace AniDBClient.Forms
             this.MainTab_SettinsPage.Controls.Add(this.Options_Reset);
             this.MainTab_SettinsPage.Controls.Add(this.Watcher_Add);
             this.MainTab_SettinsPage.Controls.Add(this.Options_ServerPort);
-            this.MainTab_SettinsPage.Controls.Add(this.Options_LB02);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_PortLabel);
             this.MainTab_SettinsPage.Controls.Add(this.Options_Backup);
             this.MainTab_SettinsPage.Controls.Add(this.Options_ExtensionRem);
             this.MainTab_SettinsPage.Controls.Add(this.Options_LocalPort);
             this.MainTab_SettinsPage.Controls.Add(this.Options_User);
             this.MainTab_SettinsPage.Controls.Add(this.Options_AccountChange);
-            this.MainTab_SettinsPage.Controls.Add(this.Options_LB03);
-            this.MainTab_SettinsPage.Controls.Add(this.Options_LB13);
-            this.MainTab_SettinsPage.Controls.Add(this.Options_LB45);
-            this.MainTab_SettinsPage.Controls.Add(this.Options_LB04);
-            this.MainTab_SettinsPage.Controls.Add(this.Options_LB12);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_UserNameLabel);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_Hash_WatcherLabel);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_LocalPortLabel);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_PasswordLabel);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_FileTypesLabel);
             this.MainTab_SettinsPage.Controls.Add(this.Options_ExtensionAdd);
             this.MainTab_SettinsPage.Controls.Add(this.Options_w8Hack);
             this.MainTab_SettinsPage.Controls.Add(this.Options_SetingsDefault);
             this.MainTab_SettinsPage.Controls.Add(this.Options_SetingsLoad);
-            this.MainTab_SettinsPage.Controls.Add(this.Options_LB05);
-            this.MainTab_SettinsPage.Controls.Add(this.Options_LB69);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_TimeoutLabel);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_DbBackupCountLabel);
             this.MainTab_SettinsPage.Controls.Add(this.Options_Language);
             this.MainTab_SettinsPage.Controls.Add(this.Options_TimeOut);
-            this.MainTab_SettinsPage.Controls.Add(this.Options_LB06);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_DelayLabel);
             this.MainTab_SettinsPage.Controls.Add(this.Options_SetingsSave);
             this.MainTab_SettinsPage.Controls.Add(this.Options_StartComunication);
-            this.MainTab_SettinsPage.Controls.Add(this.Options_LB68);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_ResetCountLabel);
             this.MainTab_SettinsPage.Controls.Add(this.Options_ServerName);
             this.MainTab_SettinsPage.Controls.Add(this.Options_ExtensionList);
             this.MainTab_SettinsPage.Location = new System.Drawing.Point(4, 22);
@@ -1467,10 +1467,10 @@ namespace AniDBClient.Forms
             // Options_GR01
             // 
             this.Options_GR01.Controls.Add(this.Options_WatchedCheckbox);
-            this.Options_GR01.Controls.Add(this.Options_LB10);
-            this.Options_GR01.Controls.Add(this.Options_LB09);
-            this.Options_GR01.Controls.Add(this.Options_LB08);
-            this.Options_GR01.Controls.Add(this.Options_LB07);
+            this.Options_GR01.Controls.Add(this.Options_OtherLabel);
+            this.Options_GR01.Controls.Add(this.Options_StorageLabel);
+            this.Options_GR01.Controls.Add(this.Options_SourceLabel);
+            this.Options_GR01.Controls.Add(this.Options_StatusLabel);
             this.Options_GR01.Controls.Add(this.Options_MylistOther);
             this.Options_GR01.Controls.Add(this.Options_MylistStorage);
             this.Options_GR01.Controls.Add(this.Options_AutoAddToMyListCheckBox);
@@ -1498,49 +1498,49 @@ namespace AniDBClient.Forms
             this.Options_WatchedCheckbox.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Options_WatchedCheckbox.UseVisualStyleBackColor = true;
             // 
-            // Options_LB10
+            // Options_OtherLabel
             // 
-            this.Options_LB10.AutoSize = true;
-            this.Options_LB10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB10.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB10.Location = new System.Drawing.Point(6, 101);
-            this.Options_LB10.Name = "Options_LB10";
-            this.Options_LB10.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB10.TabIndex = 0;
-            this.Options_LB10.Text = "Nadpis";
+            this.Options_OtherLabel.AutoSize = true;
+            this.Options_OtherLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_OtherLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_OtherLabel.Location = new System.Drawing.Point(6, 101);
+            this.Options_OtherLabel.Name = "Options_OtherLabel";
+            this.Options_OtherLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_OtherLabel.TabIndex = 0;
+            this.Options_OtherLabel.Text = "Nadpis";
             // 
-            // Options_LB09
+            // Options_StorageLabel
             // 
-            this.Options_LB09.AutoSize = true;
-            this.Options_LB09.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB09.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB09.Location = new System.Drawing.Point(6, 75);
-            this.Options_LB09.Name = "Options_LB09";
-            this.Options_LB09.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB09.TabIndex = 0;
-            this.Options_LB09.Text = "Nadpis";
+            this.Options_StorageLabel.AutoSize = true;
+            this.Options_StorageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_StorageLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_StorageLabel.Location = new System.Drawing.Point(6, 75);
+            this.Options_StorageLabel.Name = "Options_StorageLabel";
+            this.Options_StorageLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_StorageLabel.TabIndex = 0;
+            this.Options_StorageLabel.Text = "Nadpis";
             // 
-            // Options_LB08
+            // Options_SourceLabel
             // 
-            this.Options_LB08.AutoSize = true;
-            this.Options_LB08.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB08.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB08.Location = new System.Drawing.Point(6, 49);
-            this.Options_LB08.Name = "Options_LB08";
-            this.Options_LB08.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB08.TabIndex = 0;
-            this.Options_LB08.Text = "Nadpis";
+            this.Options_SourceLabel.AutoSize = true;
+            this.Options_SourceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_SourceLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_SourceLabel.Location = new System.Drawing.Point(6, 49);
+            this.Options_SourceLabel.Name = "Options_SourceLabel";
+            this.Options_SourceLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_SourceLabel.TabIndex = 0;
+            this.Options_SourceLabel.Text = "Nadpis";
             // 
-            // Options_LB07
+            // Options_StatusLabel
             // 
-            this.Options_LB07.AutoSize = true;
-            this.Options_LB07.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB07.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB07.Location = new System.Drawing.Point(6, 22);
-            this.Options_LB07.Name = "Options_LB07";
-            this.Options_LB07.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB07.TabIndex = 0;
-            this.Options_LB07.Text = "Nadpis";
+            this.Options_StatusLabel.AutoSize = true;
+            this.Options_StatusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_StatusLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_StatusLabel.Location = new System.Drawing.Point(6, 22);
+            this.Options_StatusLabel.Name = "Options_StatusLabel";
+            this.Options_StatusLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_StatusLabel.TabIndex = 0;
+            this.Options_StatusLabel.Text = "Nadpis";
             // 
             // Options_MylistOther
             // 
@@ -1601,16 +1601,16 @@ namespace AniDBClient.Forms
             this.Options_MylistState.Size = new System.Drawing.Size(304, 21);
             this.Options_MylistState.TabIndex = 0;
             // 
-            // Options_LB11
+            // Options_NetworkLabel
             // 
-            this.Options_LB11.AutoSize = true;
-            this.Options_LB11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB11.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB11.Location = new System.Drawing.Point(10, 17);
-            this.Options_LB11.Name = "Options_LB11";
-            this.Options_LB11.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB11.TabIndex = 0;
-            this.Options_LB11.Text = "Nadpis";
+            this.Options_NetworkLabel.AutoSize = true;
+            this.Options_NetworkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_NetworkLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_NetworkLabel.Location = new System.Drawing.Point(10, 17);
+            this.Options_NetworkLabel.Name = "Options_NetworkLabel";
+            this.Options_NetworkLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_NetworkLabel.TabIndex = 0;
+            this.Options_NetworkLabel.Text = "Nadpis";
             // 
             // Watcher_CH01
             // 
@@ -1623,16 +1623,16 @@ namespace AniDBClient.Forms
             this.Watcher_CH01.Text = "checkBox1";
             this.Watcher_CH01.UseVisualStyleBackColor = true;
             // 
-            // Options_LB01
+            // Options_ServerLabel
             // 
-            this.Options_LB01.AutoSize = true;
-            this.Options_LB01.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB01.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB01.Location = new System.Drawing.Point(10, 70);
-            this.Options_LB01.Name = "Options_LB01";
-            this.Options_LB01.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB01.TabIndex = 0;
-            this.Options_LB01.Text = "Nadpis";
+            this.Options_ServerLabel.AutoSize = true;
+            this.Options_ServerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_ServerLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_ServerLabel.Location = new System.Drawing.Point(10, 70);
+            this.Options_ServerLabel.Name = "Options_ServerLabel";
+            this.Options_ServerLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_ServerLabel.TabIndex = 0;
+            this.Options_ServerLabel.Text = "Nadpis";
             // 
             // Options_Network
             // 
@@ -1730,16 +1730,16 @@ namespace AniDBClient.Forms
             0,
             0});
             // 
-            // Options_LB02
+            // Options_PortLabel
             // 
-            this.Options_LB02.AutoSize = true;
-            this.Options_LB02.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB02.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB02.Location = new System.Drawing.Point(10, 96);
-            this.Options_LB02.Name = "Options_LB02";
-            this.Options_LB02.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB02.TabIndex = 0;
-            this.Options_LB02.Text = "Nadpis";
+            this.Options_PortLabel.AutoSize = true;
+            this.Options_PortLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_PortLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_PortLabel.Location = new System.Drawing.Point(10, 96);
+            this.Options_PortLabel.Name = "Options_PortLabel";
+            this.Options_PortLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_PortLabel.TabIndex = 0;
+            this.Options_PortLabel.Text = "Nadpis";
             // 
             // Options_Backup
             // 
@@ -1802,82 +1802,82 @@ namespace AniDBClient.Forms
             this.Options_User.TabIndex = 0;
             this.Options_User.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // Options_LB03
+            // Options_UserNameLabel
             // 
-            this.Options_LB03.AutoSize = true;
-            this.Options_LB03.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB03.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB03.Location = new System.Drawing.Point(10, 122);
-            this.Options_LB03.Name = "Options_LB03";
-            this.Options_LB03.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB03.TabIndex = 0;
-            this.Options_LB03.Text = "Nadpis";
+            this.Options_UserNameLabel.AutoSize = true;
+            this.Options_UserNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_UserNameLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_UserNameLabel.Location = new System.Drawing.Point(10, 122);
+            this.Options_UserNameLabel.Name = "Options_UserNameLabel";
+            this.Options_UserNameLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_UserNameLabel.TabIndex = 0;
+            this.Options_UserNameLabel.Text = "Nadpis";
             // 
-            // Options_LB13
+            // Options_Hash_WatcherLabel
             // 
-            this.Options_LB13.AutoSize = true;
-            this.Options_LB13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB13.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB13.Location = new System.Drawing.Point(10, 305);
-            this.Options_LB13.Name = "Options_LB13";
-            this.Options_LB13.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB13.TabIndex = 0;
-            this.Options_LB13.Text = "Nadpis";
+            this.Options_Hash_WatcherLabel.AutoSize = true;
+            this.Options_Hash_WatcherLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_Hash_WatcherLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_Hash_WatcherLabel.Location = new System.Drawing.Point(10, 305);
+            this.Options_Hash_WatcherLabel.Name = "Options_Hash_WatcherLabel";
+            this.Options_Hash_WatcherLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_Hash_WatcherLabel.TabIndex = 0;
+            this.Options_Hash_WatcherLabel.Text = "Nadpis";
             // 
-            // Options_LB45
+            // Options_LocalPortLabel
             // 
-            this.Options_LB45.AutoSize = true;
-            this.Options_LB45.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB45.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB45.Location = new System.Drawing.Point(10, 43);
-            this.Options_LB45.Name = "Options_LB45";
-            this.Options_LB45.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB45.TabIndex = 0;
-            this.Options_LB45.Text = "Nadpis";
+            this.Options_LocalPortLabel.AutoSize = true;
+            this.Options_LocalPortLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_LocalPortLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_LocalPortLabel.Location = new System.Drawing.Point(10, 43);
+            this.Options_LocalPortLabel.Name = "Options_LocalPortLabel";
+            this.Options_LocalPortLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_LocalPortLabel.TabIndex = 0;
+            this.Options_LocalPortLabel.Text = "Nadpis";
             // 
-            // Options_LB04
+            // Options_PasswordLabel
             // 
-            this.Options_LB04.AutoSize = true;
-            this.Options_LB04.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB04.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB04.Location = new System.Drawing.Point(10, 148);
-            this.Options_LB04.Name = "Options_LB04";
-            this.Options_LB04.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB04.TabIndex = 0;
-            this.Options_LB04.Text = "Nadpis";
+            this.Options_PasswordLabel.AutoSize = true;
+            this.Options_PasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_PasswordLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_PasswordLabel.Location = new System.Drawing.Point(10, 148);
+            this.Options_PasswordLabel.Name = "Options_PasswordLabel";
+            this.Options_PasswordLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_PasswordLabel.TabIndex = 0;
+            this.Options_PasswordLabel.Text = "Nadpis";
             // 
-            // Options_LB12
+            // Options_FileTypesLabel
             // 
-            this.Options_LB12.AutoSize = true;
-            this.Options_LB12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB12.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB12.Location = new System.Drawing.Point(10, 279);
-            this.Options_LB12.Name = "Options_LB12";
-            this.Options_LB12.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB12.TabIndex = 0;
-            this.Options_LB12.Text = "Nadpis";
+            this.Options_FileTypesLabel.AutoSize = true;
+            this.Options_FileTypesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_FileTypesLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_FileTypesLabel.Location = new System.Drawing.Point(10, 279);
+            this.Options_FileTypesLabel.Name = "Options_FileTypesLabel";
+            this.Options_FileTypesLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_FileTypesLabel.TabIndex = 0;
+            this.Options_FileTypesLabel.Text = "Nadpis";
             // 
-            // Options_LB05
+            // Options_TimeoutLabel
             // 
-            this.Options_LB05.AutoSize = true;
-            this.Options_LB05.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB05.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB05.Location = new System.Drawing.Point(10, 173);
-            this.Options_LB05.Name = "Options_LB05";
-            this.Options_LB05.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB05.TabIndex = 0;
-            this.Options_LB05.Text = "Nadpis";
+            this.Options_TimeoutLabel.AutoSize = true;
+            this.Options_TimeoutLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_TimeoutLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_TimeoutLabel.Location = new System.Drawing.Point(10, 173);
+            this.Options_TimeoutLabel.Name = "Options_TimeoutLabel";
+            this.Options_TimeoutLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_TimeoutLabel.TabIndex = 0;
+            this.Options_TimeoutLabel.Text = "Nadpis";
             // 
-            // Options_LB69
+            // Options_DbBackupCountLabel
             // 
-            this.Options_LB69.AutoSize = true;
-            this.Options_LB69.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB69.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB69.Location = new System.Drawing.Point(10, 251);
-            this.Options_LB69.Name = "Options_LB69";
-            this.Options_LB69.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB69.TabIndex = 0;
-            this.Options_LB69.Text = "Nadpis";
+            this.Options_DbBackupCountLabel.AutoSize = true;
+            this.Options_DbBackupCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_DbBackupCountLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_DbBackupCountLabel.Location = new System.Drawing.Point(10, 251);
+            this.Options_DbBackupCountLabel.Name = "Options_DbBackupCountLabel";
+            this.Options_DbBackupCountLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_DbBackupCountLabel.TabIndex = 0;
+            this.Options_DbBackupCountLabel.Text = "Nadpis";
             // 
             // Options_Language
             // 
@@ -1923,27 +1923,27 @@ namespace AniDBClient.Forms
             0,
             0});
             // 
-            // Options_LB06
+            // Options_DelayLabel
             // 
-            this.Options_LB06.AutoSize = true;
-            this.Options_LB06.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB06.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB06.Location = new System.Drawing.Point(10, 199);
-            this.Options_LB06.Name = "Options_LB06";
-            this.Options_LB06.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB06.TabIndex = 0;
-            this.Options_LB06.Text = "Nadpis";
+            this.Options_DelayLabel.AutoSize = true;
+            this.Options_DelayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_DelayLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_DelayLabel.Location = new System.Drawing.Point(10, 199);
+            this.Options_DelayLabel.Name = "Options_DelayLabel";
+            this.Options_DelayLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_DelayLabel.TabIndex = 0;
+            this.Options_DelayLabel.Text = "Nadpis";
             // 
-            // Options_LB68
+            // Options_ResetCountLabel
             // 
-            this.Options_LB68.AutoSize = true;
-            this.Options_LB68.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB68.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB68.Location = new System.Drawing.Point(10, 225);
-            this.Options_LB68.Name = "Options_LB68";
-            this.Options_LB68.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB68.TabIndex = 0;
-            this.Options_LB68.Text = "Nadpis";
+            this.Options_ResetCountLabel.AutoSize = true;
+            this.Options_ResetCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_ResetCountLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_ResetCountLabel.Location = new System.Drawing.Point(10, 225);
+            this.Options_ResetCountLabel.Name = "Options_ResetCountLabel";
+            this.Options_ResetCountLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_ResetCountLabel.TabIndex = 0;
+            this.Options_ResetCountLabel.Text = "Nadpis";
             // 
             // Options_ServerName
             // 
@@ -1971,11 +1971,11 @@ namespace AniDBClient.Forms
             // MainTab_RulesPage
             // 
             this.MainTab_RulesPage.BackColor = System.Drawing.Color.White;
-            this.MainTab_RulesPage.Controls.Add(this.Rules_CH04);
-            this.MainTab_RulesPage.Controls.Add(this.Rules_Tags);
-            this.MainTab_RulesPage.Controls.Add(this.Rules_CH03);
-            this.MainTab_RulesPage.Controls.Add(this.Rules_CH02);
-            this.MainTab_RulesPage.Controls.Add(this.Rules_CH01);
+            this.MainTab_RulesPage.Controls.Add(this.Rules_DeleteSourceIfEmptyCheckBox);
+            this.MainTab_RulesPage.Controls.Add(this.Rules_TagsButton);
+            this.MainTab_RulesPage.Controls.Add(this.Rules_ReplaceExistingCheckBox);
+            this.MainTab_RulesPage.Controls.Add(this.Rules_DontCopyToAnotherDiskCheckBox);
+            this.MainTab_RulesPage.Controls.Add(this.Rules_AutomaticRenamingCheckBox);
             this.MainTab_RulesPage.Controls.Add(this.Rules_RulesForCharacterReplacingGroupBox);
             this.MainTab_RulesPage.Controls.Add(this.Rules_GR04);
             this.MainTab_RulesPage.Controls.Add(this.Rules_RulesForGeneratingDirectoriesGroupBox);
@@ -1988,60 +1988,60 @@ namespace AniDBClient.Forms
             this.MainTab_RulesPage.Text = "2";
             this.MainTab_RulesPage.UseVisualStyleBackColor = true;
             // 
-            // Rules_CH04
+            // Rules_DeleteSourceIfEmptyCheckBox
             // 
-            this.Rules_CH04.AutoSize = true;
-            this.Rules_CH04.Location = new System.Drawing.Point(756, 15);
-            this.Rules_CH04.Name = "Rules_CH04";
-            this.Rules_CH04.Size = new System.Drawing.Size(80, 17);
-            this.Rules_CH04.TabIndex = 1;
-            this.Rules_CH04.Text = "checkBox1";
-            this.Rules_CH04.UseVisualStyleBackColor = true;
+            this.Rules_DeleteSourceIfEmptyCheckBox.AutoSize = true;
+            this.Rules_DeleteSourceIfEmptyCheckBox.Location = new System.Drawing.Point(756, 15);
+            this.Rules_DeleteSourceIfEmptyCheckBox.Name = "Rules_DeleteSourceIfEmptyCheckBox";
+            this.Rules_DeleteSourceIfEmptyCheckBox.Size = new System.Drawing.Size(80, 17);
+            this.Rules_DeleteSourceIfEmptyCheckBox.TabIndex = 1;
+            this.Rules_DeleteSourceIfEmptyCheckBox.Text = "checkBox1";
+            this.Rules_DeleteSourceIfEmptyCheckBox.UseVisualStyleBackColor = true;
             // 
-            // Rules_Tags
+            // Rules_TagsButton
             // 
-            this.Rules_Tags.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.Rules_Tags.ForeColor = System.Drawing.Color.Black;
-            this.Rules_Tags.Location = new System.Drawing.Point(1006, 11);
-            this.Rules_Tags.Name = "Rules_Tags";
-            this.Rules_Tags.Size = new System.Drawing.Size(75, 23);
-            this.Rules_Tags.TabIndex = 0;
-            this.Rules_Tags.Text = "button1";
-            this.Rules_Tags.UseVisualStyleBackColor = true;
-            this.Rules_Tags.Click += new System.EventHandler(this.Rules_Tags_Click);
+            this.Rules_TagsButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.Rules_TagsButton.ForeColor = System.Drawing.Color.Black;
+            this.Rules_TagsButton.Location = new System.Drawing.Point(1006, 11);
+            this.Rules_TagsButton.Name = "Rules_TagsButton";
+            this.Rules_TagsButton.Size = new System.Drawing.Size(75, 23);
+            this.Rules_TagsButton.TabIndex = 0;
+            this.Rules_TagsButton.Text = "button1";
+            this.Rules_TagsButton.UseVisualStyleBackColor = true;
+            this.Rules_TagsButton.Click += new System.EventHandler(this.Rules_Tags_Click);
             // 
-            // Rules_CH03
+            // Rules_ReplaceExistingCheckBox
             // 
-            this.Rules_CH03.AutoSize = true;
-            this.Rules_CH03.ForeColor = System.Drawing.Color.Black;
-            this.Rules_CH03.Location = new System.Drawing.Point(506, 15);
-            this.Rules_CH03.Name = "Rules_CH03";
-            this.Rules_CH03.Size = new System.Drawing.Size(80, 17);
-            this.Rules_CH03.TabIndex = 0;
-            this.Rules_CH03.Text = "checkBox3";
-            this.Rules_CH03.UseVisualStyleBackColor = true;
+            this.Rules_ReplaceExistingCheckBox.AutoSize = true;
+            this.Rules_ReplaceExistingCheckBox.ForeColor = System.Drawing.Color.Black;
+            this.Rules_ReplaceExistingCheckBox.Location = new System.Drawing.Point(506, 15);
+            this.Rules_ReplaceExistingCheckBox.Name = "Rules_ReplaceExistingCheckBox";
+            this.Rules_ReplaceExistingCheckBox.Size = new System.Drawing.Size(80, 17);
+            this.Rules_ReplaceExistingCheckBox.TabIndex = 0;
+            this.Rules_ReplaceExistingCheckBox.Text = "checkBox3";
+            this.Rules_ReplaceExistingCheckBox.UseVisualStyleBackColor = true;
             // 
-            // Rules_CH02
+            // Rules_DontCopyToAnotherDiskCheckBox
             // 
-            this.Rules_CH02.AutoSize = true;
-            this.Rules_CH02.ForeColor = System.Drawing.Color.Black;
-            this.Rules_CH02.Location = new System.Drawing.Point(256, 15);
-            this.Rules_CH02.Name = "Rules_CH02";
-            this.Rules_CH02.Size = new System.Drawing.Size(80, 17);
-            this.Rules_CH02.TabIndex = 0;
-            this.Rules_CH02.Text = "checkBox2";
-            this.Rules_CH02.UseVisualStyleBackColor = true;
+            this.Rules_DontCopyToAnotherDiskCheckBox.AutoSize = true;
+            this.Rules_DontCopyToAnotherDiskCheckBox.ForeColor = System.Drawing.Color.Black;
+            this.Rules_DontCopyToAnotherDiskCheckBox.Location = new System.Drawing.Point(256, 15);
+            this.Rules_DontCopyToAnotherDiskCheckBox.Name = "Rules_DontCopyToAnotherDiskCheckBox";
+            this.Rules_DontCopyToAnotherDiskCheckBox.Size = new System.Drawing.Size(80, 17);
+            this.Rules_DontCopyToAnotherDiskCheckBox.TabIndex = 0;
+            this.Rules_DontCopyToAnotherDiskCheckBox.Text = "checkBox2";
+            this.Rules_DontCopyToAnotherDiskCheckBox.UseVisualStyleBackColor = true;
             // 
-            // Rules_CH01
+            // Rules_AutomaticRenamingCheckBox
             // 
-            this.Rules_CH01.AutoSize = true;
-            this.Rules_CH01.ForeColor = System.Drawing.Color.Black;
-            this.Rules_CH01.Location = new System.Drawing.Point(6, 15);
-            this.Rules_CH01.Name = "Rules_CH01";
-            this.Rules_CH01.Size = new System.Drawing.Size(80, 17);
-            this.Rules_CH01.TabIndex = 0;
-            this.Rules_CH01.Text = "checkBox1";
-            this.Rules_CH01.UseVisualStyleBackColor = true;
+            this.Rules_AutomaticRenamingCheckBox.AutoSize = true;
+            this.Rules_AutomaticRenamingCheckBox.ForeColor = System.Drawing.Color.Black;
+            this.Rules_AutomaticRenamingCheckBox.Location = new System.Drawing.Point(6, 15);
+            this.Rules_AutomaticRenamingCheckBox.Name = "Rules_AutomaticRenamingCheckBox";
+            this.Rules_AutomaticRenamingCheckBox.Size = new System.Drawing.Size(80, 17);
+            this.Rules_AutomaticRenamingCheckBox.TabIndex = 0;
+            this.Rules_AutomaticRenamingCheckBox.Text = "checkBox1";
+            this.Rules_AutomaticRenamingCheckBox.UseVisualStyleBackColor = true;
             // 
             // Rules_RulesForCharacterReplacingGroupBox
             // 
@@ -2280,8 +2280,8 @@ namespace AniDBClient.Forms
             this.Rules_RulesForFileRenamingGroupBox.BackColor = System.Drawing.Color.White;
             this.Rules_RulesForFileRenamingGroupBox.Controls.Add(this.Rules_Position);
             this.Rules_RulesForFileRenamingGroupBox.Controls.Add(this.Rules_RulesNumberPositionLabel);
-            this.Rules_RulesForFileRenamingGroupBox.Controls.Add(this.Rules_FilesRulesRename_RB02);
-            this.Rules_RulesForFileRenamingGroupBox.Controls.Add(this.Rules_FilesRulesRename_RB01);
+            this.Rules_RulesForFileRenamingGroupBox.Controls.Add(this.Rules_FilesRulesRename_DoNothingRadioButton);
+            this.Rules_RulesForFileRenamingGroupBox.Controls.Add(this.Rules_FilesRulesRename_RenameRadioButton);
             this.Rules_RulesForFileRenamingGroupBox.Controls.Add(this.Rules_FilesRulesRenameDel);
             this.Rules_RulesForFileRenamingGroupBox.Controls.Add(this.Rules_FilesRulesRenameAdd);
             this.Rules_RulesForFileRenamingGroupBox.Controls.Add(this.Rules_FilesRulesRenameC);
@@ -2323,31 +2323,31 @@ namespace AniDBClient.Forms
             this.Rules_RulesNumberPositionLabel.TabIndex = 0;
             this.Rules_RulesNumberPositionLabel.Text = "label1";
             // 
-            // Rules_FilesRulesRename_RB02
+            // Rules_FilesRulesRename_DoNothingRadioButton
             // 
-            this.Rules_FilesRulesRename_RB02.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Rules_FilesRulesRename_RB02.AutoSize = true;
-            this.Rules_FilesRulesRename_RB02.ForeColor = System.Drawing.Color.Black;
-            this.Rules_FilesRulesRename_RB02.Location = new System.Drawing.Point(358, 20);
-            this.Rules_FilesRulesRename_RB02.Name = "Rules_FilesRulesRename_RB02";
-            this.Rules_FilesRulesRename_RB02.Size = new System.Drawing.Size(85, 17);
-            this.Rules_FilesRulesRename_RB02.TabIndex = 0;
-            this.Rules_FilesRulesRename_RB02.TabStop = true;
-            this.Rules_FilesRulesRename_RB02.Text = "radioButton1";
-            this.Rules_FilesRulesRename_RB02.UseVisualStyleBackColor = true;
+            this.Rules_FilesRulesRename_DoNothingRadioButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Rules_FilesRulesRename_DoNothingRadioButton.AutoSize = true;
+            this.Rules_FilesRulesRename_DoNothingRadioButton.ForeColor = System.Drawing.Color.Black;
+            this.Rules_FilesRulesRename_DoNothingRadioButton.Location = new System.Drawing.Point(358, 20);
+            this.Rules_FilesRulesRename_DoNothingRadioButton.Name = "Rules_FilesRulesRename_DoNothingRadioButton";
+            this.Rules_FilesRulesRename_DoNothingRadioButton.Size = new System.Drawing.Size(85, 17);
+            this.Rules_FilesRulesRename_DoNothingRadioButton.TabIndex = 0;
+            this.Rules_FilesRulesRename_DoNothingRadioButton.TabStop = true;
+            this.Rules_FilesRulesRename_DoNothingRadioButton.Text = "radioButton1";
+            this.Rules_FilesRulesRename_DoNothingRadioButton.UseVisualStyleBackColor = true;
             // 
-            // Rules_FilesRulesRename_RB01
+            // Rules_FilesRulesRename_RenameRadioButton
             // 
-            this.Rules_FilesRulesRename_RB01.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Rules_FilesRulesRename_RB01.AutoSize = true;
-            this.Rules_FilesRulesRename_RB01.ForeColor = System.Drawing.Color.Black;
-            this.Rules_FilesRulesRename_RB01.Location = new System.Drawing.Point(267, 20);
-            this.Rules_FilesRulesRename_RB01.Name = "Rules_FilesRulesRename_RB01";
-            this.Rules_FilesRulesRename_RB01.Size = new System.Drawing.Size(85, 17);
-            this.Rules_FilesRulesRename_RB01.TabIndex = 0;
-            this.Rules_FilesRulesRename_RB01.TabStop = true;
-            this.Rules_FilesRulesRename_RB01.Text = "radioButton1";
-            this.Rules_FilesRulesRename_RB01.UseVisualStyleBackColor = true;
+            this.Rules_FilesRulesRename_RenameRadioButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Rules_FilesRulesRename_RenameRadioButton.AutoSize = true;
+            this.Rules_FilesRulesRename_RenameRadioButton.ForeColor = System.Drawing.Color.Black;
+            this.Rules_FilesRulesRename_RenameRadioButton.Location = new System.Drawing.Point(267, 20);
+            this.Rules_FilesRulesRename_RenameRadioButton.Name = "Rules_FilesRulesRename_RenameRadioButton";
+            this.Rules_FilesRulesRename_RenameRadioButton.Size = new System.Drawing.Size(85, 17);
+            this.Rules_FilesRulesRename_RenameRadioButton.TabIndex = 0;
+            this.Rules_FilesRulesRename_RenameRadioButton.TabStop = true;
+            this.Rules_FilesRulesRename_RenameRadioButton.Text = "radioButton1";
+            this.Rules_FilesRulesRename_RenameRadioButton.UseVisualStyleBackColor = true;
             // 
             // Rules_FilesRulesRenameC
             // 
@@ -6044,21 +6044,21 @@ namespace AniDBClient.Forms
             // 
             // Manga_Gr04
             // 
-            this.Manga_Gr04.Controls.Add(this.Options_LB51);
+            this.Manga_Gr04.Controls.Add(this.Options_MangaLabel);
             this.Manga_Gr04.Controls.Add(this.Options_LB65);
-            this.Manga_Gr04.Controls.Add(this.Options_LB53);
+            this.Manga_Gr04.Controls.Add(this.Options_VolumesLabel);
             this.Manga_Gr04.Controls.Add(this.Options_LB54);
-            this.Manga_Gr04.Controls.Add(this.Options_LB59);
+            this.Manga_Gr04.Controls.Add(this.Options_ReadLabel);
             this.Manga_Gr04.Controls.Add(this.Options_LB56);
-            this.Manga_Gr04.Controls.Add(this.Options_LB55);
+            this.Manga_Gr04.Controls.Add(this.Options_ChaptersLabel);
             this.Manga_Gr04.Controls.Add(this.Options_LB64);
-            this.Manga_Gr04.Controls.Add(this.Options_LB61);
+            this.Manga_Gr04.Controls.Add(this.Options_TotalPagesLabel);
             this.Manga_Gr04.Controls.Add(this.Options_LB62);
-            this.Manga_Gr04.Controls.Add(this.Options_LB63);
+            this.Manga_Gr04.Controls.Add(this.Options_AdultLabel);
             this.Manga_Gr04.Controls.Add(this.Options_LB58);
-            this.Manga_Gr04.Controls.Add(this.Options_LB67);
+            this.Manga_Gr04.Controls.Add(this.Options_ReadLabel2);
             this.Manga_Gr04.Controls.Add(this.Options_LB60);
-            this.Manga_Gr04.Controls.Add(this.Options_LB57);
+            this.Manga_Gr04.Controls.Add(this.Options_FileSizeLabel);
             this.Manga_Gr04.Controls.Add(this.Options_LB52);
             this.Manga_Gr04.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.Manga_Gr04.Location = new System.Drawing.Point(3, 6);
@@ -6068,17 +6068,17 @@ namespace AniDBClient.Forms
             this.Manga_Gr04.TabStop = false;
             this.Manga_Gr04.Text = "groupBox1";
             // 
-            // Options_LB51
+            // Options_MangaLabel
             // 
-            this.Options_LB51.AutoSize = true;
-            this.Options_LB51.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB51.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB51.Location = new System.Drawing.Point(10, 25);
-            this.Options_LB51.Margin = new System.Windows.Forms.Padding(3);
-            this.Options_LB51.Name = "Options_LB51";
-            this.Options_LB51.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB51.TabIndex = 0;
-            this.Options_LB51.Text = "Nadpis";
+            this.Options_MangaLabel.AutoSize = true;
+            this.Options_MangaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_MangaLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_MangaLabel.Location = new System.Drawing.Point(10, 25);
+            this.Options_MangaLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.Options_MangaLabel.Name = "Options_MangaLabel";
+            this.Options_MangaLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_MangaLabel.TabIndex = 0;
+            this.Options_MangaLabel.Text = "Nadpis";
             // 
             // Options_LB65
             // 
@@ -6093,17 +6093,17 @@ namespace AniDBClient.Forms
             this.Options_LB65.Text = "Value";
             this.Options_LB65.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Options_LB53
+            // Options_VolumesLabel
             // 
-            this.Options_LB53.AutoSize = true;
-            this.Options_LB53.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB53.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB53.Location = new System.Drawing.Point(10, 44);
-            this.Options_LB53.Margin = new System.Windows.Forms.Padding(3);
-            this.Options_LB53.Name = "Options_LB53";
-            this.Options_LB53.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB53.TabIndex = 0;
-            this.Options_LB53.Text = "Nadpis";
+            this.Options_VolumesLabel.AutoSize = true;
+            this.Options_VolumesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_VolumesLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_VolumesLabel.Location = new System.Drawing.Point(10, 44);
+            this.Options_VolumesLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.Options_VolumesLabel.Name = "Options_VolumesLabel";
+            this.Options_VolumesLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_VolumesLabel.TabIndex = 0;
+            this.Options_VolumesLabel.Text = "Nadpis";
             // 
             // Options_LB54
             // 
@@ -6118,17 +6118,17 @@ namespace AniDBClient.Forms
             this.Options_LB54.Text = "Value";
             this.Options_LB54.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // Options_LB59
+            // Options_ReadLabel
             // 
-            this.Options_LB59.AutoSize = true;
-            this.Options_LB59.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB59.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB59.Location = new System.Drawing.Point(10, 101);
-            this.Options_LB59.Margin = new System.Windows.Forms.Padding(3);
-            this.Options_LB59.Name = "Options_LB59";
-            this.Options_LB59.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB59.TabIndex = 0;
-            this.Options_LB59.Text = "Nadpis";
+            this.Options_ReadLabel.AutoSize = true;
+            this.Options_ReadLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_ReadLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_ReadLabel.Location = new System.Drawing.Point(10, 101);
+            this.Options_ReadLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.Options_ReadLabel.Name = "Options_ReadLabel";
+            this.Options_ReadLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_ReadLabel.TabIndex = 0;
+            this.Options_ReadLabel.Text = "Nadpis";
             // 
             // Options_LB56
             // 
@@ -6143,17 +6143,17 @@ namespace AniDBClient.Forms
             this.Options_LB56.Text = "Value";
             this.Options_LB56.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // Options_LB55
+            // Options_ChaptersLabel
             // 
-            this.Options_LB55.AutoSize = true;
-            this.Options_LB55.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB55.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB55.Location = new System.Drawing.Point(10, 63);
-            this.Options_LB55.Margin = new System.Windows.Forms.Padding(3);
-            this.Options_LB55.Name = "Options_LB55";
-            this.Options_LB55.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB55.TabIndex = 0;
-            this.Options_LB55.Text = "Nadpis";
+            this.Options_ChaptersLabel.AutoSize = true;
+            this.Options_ChaptersLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_ChaptersLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_ChaptersLabel.Location = new System.Drawing.Point(10, 63);
+            this.Options_ChaptersLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.Options_ChaptersLabel.Name = "Options_ChaptersLabel";
+            this.Options_ChaptersLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_ChaptersLabel.TabIndex = 0;
+            this.Options_ChaptersLabel.Text = "Nadpis";
             // 
             // Options_LB64
             // 
@@ -6168,17 +6168,17 @@ namespace AniDBClient.Forms
             this.Options_LB64.Text = "Value";
             this.Options_LB64.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // Options_LB61
+            // Options_TotalPagesLabel
             // 
-            this.Options_LB61.AutoSize = true;
-            this.Options_LB61.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB61.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB61.Location = new System.Drawing.Point(10, 120);
-            this.Options_LB61.Margin = new System.Windows.Forms.Padding(3);
-            this.Options_LB61.Name = "Options_LB61";
-            this.Options_LB61.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB61.TabIndex = 0;
-            this.Options_LB61.Text = "Nadpis";
+            this.Options_TotalPagesLabel.AutoSize = true;
+            this.Options_TotalPagesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_TotalPagesLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_TotalPagesLabel.Location = new System.Drawing.Point(10, 120);
+            this.Options_TotalPagesLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.Options_TotalPagesLabel.Name = "Options_TotalPagesLabel";
+            this.Options_TotalPagesLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_TotalPagesLabel.TabIndex = 0;
+            this.Options_TotalPagesLabel.Text = "Nadpis";
             // 
             // Options_LB62
             // 
@@ -6193,17 +6193,17 @@ namespace AniDBClient.Forms
             this.Options_LB62.Text = "Value";
             this.Options_LB62.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // Options_LB63
+            // Options_AdultLabel
             // 
-            this.Options_LB63.AutoSize = true;
-            this.Options_LB63.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB63.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB63.Location = new System.Drawing.Point(10, 139);
-            this.Options_LB63.Margin = new System.Windows.Forms.Padding(3);
-            this.Options_LB63.Name = "Options_LB63";
-            this.Options_LB63.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB63.TabIndex = 0;
-            this.Options_LB63.Text = "Nadpis";
+            this.Options_AdultLabel.AutoSize = true;
+            this.Options_AdultLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_AdultLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_AdultLabel.Location = new System.Drawing.Point(10, 139);
+            this.Options_AdultLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.Options_AdultLabel.Name = "Options_AdultLabel";
+            this.Options_AdultLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_AdultLabel.TabIndex = 0;
+            this.Options_AdultLabel.Text = "Nadpis";
             // 
             // Options_LB58
             // 
@@ -6218,17 +6218,17 @@ namespace AniDBClient.Forms
             this.Options_LB58.Text = "Value";
             this.Options_LB58.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // Options_LB67
+            // Options_ReadLabel2
             // 
-            this.Options_LB67.AutoSize = true;
-            this.Options_LB67.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB67.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB67.Location = new System.Drawing.Point(10, 158);
-            this.Options_LB67.Margin = new System.Windows.Forms.Padding(3);
-            this.Options_LB67.Name = "Options_LB67";
-            this.Options_LB67.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB67.TabIndex = 0;
-            this.Options_LB67.Text = "Nadpis";
+            this.Options_ReadLabel2.AutoSize = true;
+            this.Options_ReadLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_ReadLabel2.ForeColor = System.Drawing.Color.Black;
+            this.Options_ReadLabel2.Location = new System.Drawing.Point(10, 158);
+            this.Options_ReadLabel2.Margin = new System.Windows.Forms.Padding(3);
+            this.Options_ReadLabel2.Name = "Options_ReadLabel2";
+            this.Options_ReadLabel2.Size = new System.Drawing.Size(46, 13);
+            this.Options_ReadLabel2.TabIndex = 0;
+            this.Options_ReadLabel2.Text = "Nadpis";
             // 
             // Options_LB60
             // 
@@ -6243,17 +6243,17 @@ namespace AniDBClient.Forms
             this.Options_LB60.Text = "Value";
             this.Options_LB60.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // Options_LB57
+            // Options_FileSizeLabel
             // 
-            this.Options_LB57.AutoSize = true;
-            this.Options_LB57.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB57.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB57.Location = new System.Drawing.Point(10, 82);
-            this.Options_LB57.Margin = new System.Windows.Forms.Padding(3);
-            this.Options_LB57.Name = "Options_LB57";
-            this.Options_LB57.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB57.TabIndex = 0;
-            this.Options_LB57.Text = "Nadpis";
+            this.Options_FileSizeLabel.AutoSize = true;
+            this.Options_FileSizeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_FileSizeLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_FileSizeLabel.Location = new System.Drawing.Point(10, 82);
+            this.Options_FileSizeLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.Options_FileSizeLabel.Name = "Options_FileSizeLabel";
+            this.Options_FileSizeLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_FileSizeLabel.TabIndex = 0;
+            this.Options_FileSizeLabel.Text = "Nadpis";
             // 
             // Options_LB52
             // 
@@ -9721,24 +9721,24 @@ namespace AniDBClient.Forms
         private System.ComponentModel.BackgroundWorker ComunicationW;
         private System.Windows.Forms.TextBox Options_ServerName;
         private System.Windows.Forms.GroupBox Options_GR01;
-        private System.Windows.Forms.Label Options_LB04;
-        private System.Windows.Forms.Label Options_LB03;
-        private System.Windows.Forms.Label Options_LB02;
-        private System.Windows.Forms.Label Options_LB01;
+        private System.Windows.Forms.Label Options_PasswordLabel;
+        private System.Windows.Forms.Label Options_UserNameLabel;
+        private System.Windows.Forms.Label Options_PortLabel;
+        private System.Windows.Forms.Label Options_ServerLabel;
         private System.Windows.Forms.NumericUpDown Options_Delay;
         private System.Windows.Forms.NumericUpDown Options_TimeOut;
-        private System.Windows.Forms.Label Options_LB06;
-        private System.Windows.Forms.Label Options_LB05;
+        private System.Windows.Forms.Label Options_DelayLabel;
+        private System.Windows.Forms.Label Options_TimeoutLabel;
         private System.Windows.Forms.Button Options_ExtensionAdd;
-        private System.Windows.Forms.Label Options_LB09;
-        private System.Windows.Forms.Label Options_LB08;
-        private System.Windows.Forms.Label Options_LB07;
+        private System.Windows.Forms.Label Options_StorageLabel;
+        private System.Windows.Forms.Label Options_SourceLabel;
+        private System.Windows.Forms.Label Options_StatusLabel;
         private System.Windows.Forms.TextBox Options_MylistOther;
         private System.Windows.Forms.TextBox Options_MylistStorage;
         private System.Windows.Forms.TextBox Options_MylistSource;
         private System.Windows.Forms.ComboBox Options_MylistState;
         private System.Windows.Forms.CheckBox Options_AutoAddToMyListCheckBox;
-        private System.Windows.Forms.Label Options_LB10;
+        private System.Windows.Forms.Label Options_OtherLabel;
         private System.Windows.Forms.CheckBox Options_WatchedCheckbox;
         private System.Windows.Forms.GroupBox Rules_RulesForCharacterReplacingGroupBox;
         private System.Windows.Forms.GroupBox Rules_RulesForGeneratingDirectoriesGroupBox;
@@ -9764,7 +9764,7 @@ namespace AniDBClient.Forms
         private System.Windows.Forms.ToolStripMenuItem DataAnime_Menu_Expand_CollapseAllEpisodes;
         private System.Windows.Forms.ToolStripMenuItem DataAnime_Menu_Expand_CollapseAll;
         private System.Windows.Forms.Button Rules_FilesRulesRenameDel;
-        private System.Windows.Forms.Label Options_LB45;
+        private System.Windows.Forms.Label Options_LocalPortLabel;
         private System.Windows.Forms.Timer ComunicationRec;
         private System.Windows.Forms.TabControl MainTabData;
         private System.Windows.Forms.TabPage MainTabData_Mn01;
@@ -9918,11 +9918,11 @@ namespace AniDBClient.Forms
         private System.Windows.Forms.RadioButton Rules_FilesRulesMove_RB03;
         private System.Windows.Forms.Button Hash_Files;
         private System.Windows.Forms.Button Hash_Delete;
-        private System.Windows.Forms.RadioButton Rules_FilesRulesRename_RB02;
-        private System.Windows.Forms.RadioButton Rules_FilesRulesRename_RB01;
-        private System.Windows.Forms.CheckBox Rules_CH03;
-        private System.Windows.Forms.CheckBox Rules_CH02;
-        private System.Windows.Forms.CheckBox Rules_CH01;
+        private System.Windows.Forms.RadioButton Rules_FilesRulesRename_DoNothingRadioButton;
+        private System.Windows.Forms.RadioButton Rules_FilesRulesRename_RenameRadioButton;
+        private System.Windows.Forms.CheckBox Rules_ReplaceExistingCheckBox;
+        private System.Windows.Forms.CheckBox Rules_DontCopyToAnotherDiskCheckBox;
+        private System.Windows.Forms.CheckBox Rules_AutomaticRenamingCheckBox;
         private System.ComponentModel.BackgroundWorker FRename_W;
         private System.Windows.Forms.ToolStripMenuItem DataFiles_Menu_Mn04;
         private System.Windows.Forms.ToolStripMenuItem AnimeData_Menu_Mn04;
@@ -9970,7 +9970,7 @@ namespace AniDBClient.Forms
         private System.Windows.Forms.ToolStripMenuItem AnimeData_Menu_Mn05_Mn03;
         private System.Windows.Forms.ToolStripMenuItem AnimeData_Menu_Mn05_Mn04;
         private System.Windows.Forms.ToolStripMenuItem AnimeData_Menu_Mn05_Mn05;
-        private System.Windows.Forms.Button Rules_Tags;
+        private System.Windows.Forms.Button Rules_TagsButton;
         private System.Windows.Forms.LinkLabel Anime_LB08;
         private System.Windows.Forms.TreeView Anime_RelationTree;
         private System.Windows.Forms.ToolStripMenuItem DataFiles_Menu_Mn06;
@@ -10234,7 +10234,7 @@ namespace AniDBClient.Forms
         private System.Windows.Forms.CheckBox Anime_ExportCH01;
         private System.Windows.Forms.Label Anime_ExportLB01;
         private System.Windows.Forms.NumericUpDown Options_Reset;
-        private System.Windows.Forms.Label Options_LB68;
+        private System.Windows.Forms.Label Options_ResetCountLabel;
         private System.Windows.Forms.NumericUpDown Options_ServerPort;
         private System.Windows.Forms.NumericUpDown Options_LocalPort;
         private System.Windows.Forms.CheckBox Options_ClassicFolderSelectDialogCheckBox;
@@ -10259,21 +10259,21 @@ namespace AniDBClient.Forms
         private System.Windows.Forms.NumericUpDown Manga_Tx07;
         private System.Windows.Forms.NumericUpDown Manga_Tx04;
         private System.Windows.Forms.GroupBox Manga_Gr04;
-        private System.Windows.Forms.Label Options_LB51;
+        private System.Windows.Forms.Label Options_MangaLabel;
         private System.Windows.Forms.Label Options_LB65;
-        private System.Windows.Forms.Label Options_LB53;
+        private System.Windows.Forms.Label Options_VolumesLabel;
         private System.Windows.Forms.Label Options_LB54;
-        private System.Windows.Forms.Label Options_LB59;
+        private System.Windows.Forms.Label Options_ReadLabel;
         private System.Windows.Forms.Label Options_LB56;
-        private System.Windows.Forms.Label Options_LB55;
+        private System.Windows.Forms.Label Options_ChaptersLabel;
         private System.Windows.Forms.Label Options_LB64;
-        private System.Windows.Forms.Label Options_LB61;
+        private System.Windows.Forms.Label Options_TotalPagesLabel;
         private System.Windows.Forms.Label Options_LB62;
-        private System.Windows.Forms.Label Options_LB63;
+        private System.Windows.Forms.Label Options_AdultLabel;
         private System.Windows.Forms.Label Options_LB58;
-        private System.Windows.Forms.Label Options_LB67;
+        private System.Windows.Forms.Label Options_ReadLabel2;
         private System.Windows.Forms.Label Options_LB60;
-        private System.Windows.Forms.Label Options_LB57;
+        private System.Windows.Forms.Label Options_FileSizeLabel;
         private System.Windows.Forms.Label Options_LB52;
         private System.Windows.Forms.Button Options_MyListRefreshManga;
         private System.Windows.Forms.CheckBox Options_ShowAdultOnWelcomeScreenCheckBox;
@@ -10295,12 +10295,12 @@ namespace AniDBClient.Forms
         private System.Windows.Forms.CheckBox Options_FlatStyleCheckBox;
         private System.Windows.Forms.CheckBox Options_MinimizeToTrayCheckBox;
         private System.Windows.Forms.NotifyIcon Notify;
-        private System.Windows.Forms.CheckBox Rules_CH04;
+        private System.Windows.Forms.CheckBox Rules_DeleteSourceIfEmptyCheckBox;
         private System.Windows.Forms.Label DataFiles_LB06;
         private System.Windows.Forms.CheckBox Options_DontGenerateWelcomeSceenCheckBox;
         private System.Windows.Forms.Button DataFiles_Bt22;
         private System.Windows.Forms.NumericUpDown Options_Backup;
-        private System.Windows.Forms.Label Options_LB69;
+        private System.Windows.Forms.Label Options_DbBackupCountLabel;
         private System.Windows.Forms.ComboBox Anime_CB01;
         private System.Windows.Forms.ComboBox Anime_CB02;
         private System.Windows.Forms.ComboBox Manga_CB01;
@@ -10340,14 +10340,14 @@ namespace AniDBClient.Forms
         private System.Windows.Forms.DataGridView MyListAnime;
         private System.Windows.Forms.PictureBox Anime_DateOK;
         private System.Windows.Forms.ComboBox Options_Network;
-        private System.Windows.Forms.Label Options_LB11;
+        private System.Windows.Forms.Label Options_NetworkLabel;
         private System.Windows.Forms.ComboBox Options_ExtensionList;
-        private System.Windows.Forms.Label Options_LB12;
+        private System.Windows.Forms.Label Options_FileTypesLabel;
         private System.Windows.Forms.ComboBox Watcher_List;
         private System.Windows.Forms.CheckBox Watcher_CH01;
         private System.Windows.Forms.Button Watcher_Delete;
         private System.Windows.Forms.Button Watcher_Add;
-        private System.Windows.Forms.Label Options_LB13;
+        private System.Windows.Forms.Label Options_Hash_WatcherLabel;
         private System.Windows.Forms.DataGridViewTextBoxColumn DataAnime_Mn00;
         private System.Windows.Forms.DataGridViewImageColumn DataAnime_Mn01;
         private System.Windows.Forms.DataGridViewImageColumn DataAnime_Mn02;

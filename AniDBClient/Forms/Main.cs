@@ -311,40 +311,40 @@ namespace AniDBClient.Forms
             Options_MpcHcPortLabel.Text = Language.Options_MpcHcPort;
             Options_LaunchWebServerOnStartupCheckBox.Text = Language.Options_LaunchWebServerOnStartup;
 
-            Options_LB01.Text = Language.Options_lblServer;
-            Options_LB02.Text = Language.Options_lblPort;
-            Options_LB03.Text = Language.Options_lblUserName;
-            Options_LB04.Text = Language.Options_lblPassword;
-            Options_LB05.Text = Language.Options_lblTimeout;
-            Options_LB06.Text = Language.Options_lblDelay;
-            Options_LB07.Text = Language.Options_lblStatus;
-            Options_LB08.Text = Language.Options_lblSource;
-            Options_LB09.Text = Language.Options_lblStorage;
-            Options_LB10.Text = Language.Options_lblOther;
-            Options_LB45.Text = Language.Options_lblLocalPort;
-            Options_LB51.Text = Language.Options_lblManga;
-            Options_LB53.Text = Language.Options_lblVolumes;
-            Options_LB55.Text = Language.Options_lblChapters;
-            Options_LB57.Text = Language.Options_lblFileSize;
-            Options_LB59.Text = Language.Options_lblRead;
-            Options_LB61.Text = Language.Options_lblTotalPages;
-            Options_LB63.Text = Language.Options_lblAdult;
-            Options_LB67.Text = Language.Options_lblRead2;
-            Options_LB68.Text = Language.Options_lblResetCount;
-            Options_LB69.Text = Language.Options_lblDbBackupCount;
+            Options_ServerLabel.Text = Language.Options_lblServer;
+            Options_PortLabel.Text = Language.Options_lblPort;
+            Options_UserNameLabel.Text = Language.Options_lblUserName;
+            Options_PasswordLabel.Text = Language.Options_lblPassword;
+            Options_TimeoutLabel.Text = Language.Options_lblTimeout;
+            Options_DelayLabel.Text = Language.Options_lblDelay;
+            Options_StatusLabel.Text = Language.Options_lblStatus;
+            Options_SourceLabel.Text = Language.Options_lblSource;
+            Options_StorageLabel.Text = Language.Options_lblStorage;
+            Options_OtherLabel.Text = Language.Options_lblOther;
+            Options_LocalPortLabel.Text = Language.Options_lblLocalPort;
+            Options_MangaLabel.Text = Language.Options_lblManga;
+            Options_VolumesLabel.Text = Language.Options_lblVolumes;
+            Options_ChaptersLabel.Text = Language.Options_lblChapters;
+            Options_FileSizeLabel.Text = Language.Options_lblFileSize;
+            Options_ReadLabel.Text = Language.Options_lblRead;
+            Options_TotalPagesLabel.Text = Language.Options_lblTotalPages;
+            Options_AdultLabel.Text = Language.Options_lblAdult;
+            Options_ReadLabel2.Text = Language.Options_lblRead2;
+            Options_ResetCountLabel.Text = Language.Options_lblResetCount;
+            Options_DbBackupCountLabel.Text = Language.Options_lblDbBackupCount;
 
-            Options_LB11.Text = Language.Options_Network;
-            Options_LB12.Text = Language.Options_FileTypes;
-            Options_LB13.Text = Language.Hash_Watcher;
+            Options_NetworkLabel.Text = Language.Options_Network;
+            Options_FileTypesLabel.Text = Language.Options_FileTypes;
+            Options_Hash_WatcherLabel.Text = Language.Hash_Watcher;
 
-            Rules_FilesRulesRename_RB01.Text = Language.Rules_FilesRulesRenameRename;
-            Rules_FilesRulesRename_RB02.Text = Language.Rules_FilesRulesRenameDoNothing;
-            Rules_CH01.Text = Language.Rules_AutomaticRenaming;
-            Rules_CH02.Text = Language.Rules_DontCopyToAnotherDisk;
-            Rules_CH03.Text = Language.Rules_ReplaceExisting;
-            Rules_CH04.Text = Language.Rules_DeleteSourceIfEmpty;
+            Rules_FilesRulesRename_RenameRadioButton.Text = Language.Rules_FilesRulesRenameRename;
+            Rules_FilesRulesRename_DoNothingRadioButton.Text = Language.Rules_FilesRulesRenameDoNothing;
+            Rules_AutomaticRenamingCheckBox.Text = Language.Rules_AutomaticRenaming;
+            Rules_DontCopyToAnotherDiskCheckBox.Text = Language.Rules_DontCopyToAnotherDisk;
+            Rules_ReplaceExistingCheckBox.Text = Language.Rules_ReplaceExisting;
+            Rules_DeleteSourceIfEmptyCheckBox.Text = Language.Rules_DeleteSourceIfEmpty;
 
-            Rules_Tags.Text = Language.Rules_Tags;
+            Rules_TagsButton.Text = Language.Rules_Tags;
 
             Rules_InfoRB01.Text = Language.Rules_InfoExport;
             Rules_InfoRB02.Text = Language.Rules_FilesRulesRenameDoNothing;
@@ -981,7 +981,7 @@ namespace AniDBClient.Forms
             else
                 settingsData.MoveRb = 3;
 
-            if (Rules_FilesRulesRename_RB01.Checked)
+            if (Rules_FilesRulesRename_RenameRadioButton.Checked)
                 settingsData.RenameRb = 1;
             else
                 settingsData.RenameRb = 2;
@@ -991,22 +991,22 @@ namespace AniDBClient.Forms
             else
                 settingsData.InfoRb = 2;
 
-            if (Rules_CH01.Checked)
+            if (Rules_AutomaticRenamingCheckBox.Checked)
                 settingsData.RulesCh01 = true;
             else
                 settingsData.RulesCh01 = false;
 
-            if (Rules_CH02.Checked)
+            if (Rules_DontCopyToAnotherDiskCheckBox.Checked)
                 settingsData.RulesCh02 = true;
             else
                 settingsData.RulesCh02 = false;
 
-            if (Rules_CH03.Checked)
+            if (Rules_ReplaceExistingCheckBox.Checked)
                 settingsData.RulesCh03 = true;
             else
                 settingsData.RulesCh03 = false;
 
-            if (Rules_CH04.Checked)
+            if (Rules_DeleteSourceIfEmptyCheckBox.Checked)
                 settingsData.RulesCh04 = true;
             else
                 settingsData.RulesCh04 = false;
@@ -1201,15 +1201,15 @@ namespace AniDBClient.Forms
             switch (settingsData.RenameRb)
             {
                 case 1:
-                    Rules_FilesRulesRename_RB01.Checked = true;
+                    Rules_FilesRulesRename_RenameRadioButton.Checked = true;
                     break;
 
                 case 2:
-                    Rules_FilesRulesRename_RB02.Checked = true;
+                    Rules_FilesRulesRename_DoNothingRadioButton.Checked = true;
                     break;
 
                 default:
-                    Rules_FilesRulesRename_RB01.Checked = true;
+                    Rules_FilesRulesRename_RenameRadioButton.Checked = true;
                     break;
             }
 
@@ -1229,25 +1229,25 @@ namespace AniDBClient.Forms
             }
 
             if (settingsData.RulesCh01)
-                Rules_CH01.Checked = true;
+                Rules_AutomaticRenamingCheckBox.Checked = true;
             else
-                Rules_CH01.Checked = false;
+                Rules_AutomaticRenamingCheckBox.Checked = false;
 
 
             if (settingsData.RulesCh02)
-                Rules_CH02.Checked = true;
+                Rules_DontCopyToAnotherDiskCheckBox.Checked = true;
             else
-                Rules_CH02.Checked = false;
+                Rules_DontCopyToAnotherDiskCheckBox.Checked = false;
 
             if (settingsData.RulesCh03)
-                Rules_CH03.Checked = true;
+                Rules_ReplaceExistingCheckBox.Checked = true;
             else
-                Rules_CH03.Checked = false;
+                Rules_ReplaceExistingCheckBox.Checked = false;
 
             if (settingsData.RulesCh04)
-                Rules_CH04.Checked = true;
+                Rules_DeleteSourceIfEmptyCheckBox.Checked = true;
             else
-                Rules_CH04.Checked = false;
+                Rules_DeleteSourceIfEmptyCheckBox.Checked = false;
 
             if (settingsData.TreeList)
                 DataFiles_Bt19_Click(null, null);
@@ -4786,7 +4786,7 @@ namespace AniDBClient.Forms
                     ComunicationNewTask("MYLIST fid=" + T[0]);
                 }
 
-                if (Rules_CH01.Checked)
+                if (Rules_AutomaticRenamingCheckBox.Checked)
                 {
                     if (!FRename_List.Contains(T[0]))
                     {
@@ -5193,7 +5193,7 @@ namespace AniDBClient.Forms
         {
             try
             {
-                if (Rules_FilesRulesRename_RB02.Checked && Rules_FilesRulesMove_RB03.Checked)
+                if (Rules_FilesRulesRename_DoNothingRadioButton.Checked && Rules_FilesRulesMove_RB03.Checked)
                 {
                 }
                 else
@@ -5202,7 +5202,7 @@ namespace AniDBClient.Forms
                     string DPath = "N";
                     DataTable DFile = DatabaseSelectNoLog("SELECT * FROM files WHERE id_files=" + DFilesID);
 
-                    if (Rules_FilesRulesRename_RB01.Checked)
+                    if (Rules_FilesRulesRename_RenameRadioButton.Checked)
                         DSoubor = Rules_ParseFiles(DFilesID, true);
 
                     if (Rules_FilesRulesMove_RB01.Checked || Rules_FilesRulesMove_RB02.Checked)
@@ -5225,7 +5225,7 @@ namespace AniDBClient.Forms
 
                         DirectoryInfo Adresar = new DirectoryInfo(DPath);
 
-                        if (Rules_CH02.Checked)
+                        if (Rules_DontCopyToAnotherDiskCheckBox.Checked)
                         {
                             if (Adresar.Root.Name == Soubor.Directory.Root.Name)
                                 FRename = true;
@@ -5235,7 +5235,7 @@ namespace AniDBClient.Forms
                         else
                             FRename = true;
 
-                        if (Rules_CH03.Checked && FRename)
+                        if (Rules_ReplaceExistingCheckBox.Checked && FRename)
                         {
                             if (File.Exists(DPath + DSoubor + Soubor.Extension))
                             {
@@ -5274,7 +5274,7 @@ namespace AniDBClient.Forms
                                 logger.LogAddError("RENAME ! New name is same as old name * " + Soubor.FullName + " >!> " + DPath + DSoubor + Soubor.Extension);
                         }
 
-                        if (Rules_CH04.Checked)
+                        if (Rules_DeleteSourceIfEmptyCheckBox.Checked)
                         {
                             string[] T = (Soubor.Directory.FullName).Split('\\');
 
@@ -12908,7 +12908,7 @@ namespace AniDBClient.Forms
             StatusBar_Mn04.Text = Language.StatusBar_Mn04_On;
 
             if (Rules_FilesRulesRename.Text.Length == 0)
-                Rules_FilesRulesRename_RB02.Checked = true;
+                Rules_FilesRulesRename_DoNothingRadioButton.Checked = true;
 
             if (Rules_FilesRulesMove.Text.Length == 0)
                 Rules_FilesRulesMove_RB03.Checked = true;

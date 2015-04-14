@@ -106,6 +106,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helpers\OtherHelpers.cs" />
     <Compile Include="Utilities\AniDbClient2.cs" />
     <Compile Include="Utilities\AniDbMsgs.cs" />
     <Compile Include="Utilities\ControlSorter.cs" />

@@ -34,7 +34,7 @@ namespace AniDBClient.Forms
 {
     public partial class Main : Form
     {
-        private OleDbConnection AniDBDatabase = null;
+        private Utilities.Database db = new Database();
         private AniDbClient2 aniDBClient = null;
         private string GlobalAdresar = null;
         private string GlobalAdresarAccount = null;
@@ -70,7 +70,6 @@ namespace AniDBClient.Forms
         #region INT
         private Int64 Hash_TotalLenght = 0;
         private Int64 Hash_TotalLenghtCast = 0;
-        private const int ODBC_ADD_DSN = 1;
         private int CRessetCount = 0;
         #endregion
 
@@ -81,9 +80,6 @@ namespace AniDBClient.Forms
         private FileInfo Watcher_SouborOldM = null;
         private FileInfo Watcher_SouborOldR = null;
         private UnZipRar UnZip = new UnZipRar();
-
-        [DllImport("ODBCCP32.DLL", CharSet = CharSet.Unicode, SetLastError = true)]
-        private static extern bool SQLConfigDataSource(IntPtr parent, int request, string driver, string attributes);
 
         [DllImport("Explorerframe.dll")]
         private static extern bool SetProgressState(IntPtr hwnd, uint tbpFlags);
@@ -211,17 +207,17 @@ namespace AniDBClient.Forms
 
                 if (Options_ExtensionList.Items.Contains(Soubor.Extension.ToLower()))
                 {
-                    DataTable Exist = DatabaseSelect("SELECT * FROM files WHERE files_ed2k='" + AgrsT[0].ToLower() + "'");
+                    DataTable Exist = db.DatabaseSelect("SELECT * FROM files WHERE files_ed2k='" + AgrsT[0].ToLower() + "'");
 
                     if (Exist.Rows.Count == 0)
                     {
-                        DatabaseAdd("INSERT INTO files (files_ed2k, files_localfile, files_size, files_date) VALUES ('" + AgrsT[0].ToLower() + "', '" + AgrsT[1] + "', " + AgrsT[2] + ", NOW())");
+                        db.DatabaseAdd("INSERT INTO files (files_ed2k, files_localfile, files_size, files_date) VALUES ('" + AgrsT[0].ToLower() + "', '" + AgrsT[1] + "', " + AgrsT[2] + ", NOW())");
                         ComunicationNewTask("FILE size=" + AgrsT[2] + "&ed2k=" + AgrsT[0].ToLower() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
 
                     }
                     else
                     {
-                        DatabaseAdd("UPDATE files SET files_localfile='" + AgrsT[1] + "', files_date=NOW() WHERE files_ed2k='" + AgrsT[0].ToLower() + "'");
+                        db.DatabaseAdd("UPDATE files SET files_localfile='" + AgrsT[1] + "', files_date=NOW() WHERE files_ed2k='" + AgrsT[0].ToLower() + "'");
                         ComunicationNewTask("FILE size=" + AgrsT[2] + "&ed2k=" + AgrsT[0].ToLower() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
                     }
                 }
@@ -745,11 +741,11 @@ namespace AniDBClient.Forms
 
             try
             {
-                DataRow rowML = (DatabaseSelect("SELECT * FROM mylist_local")).Rows[0];
-                DataRow rowMA = (DatabaseSelect("SELECT * FROM mylist_anidb")).Rows[0];
-                DataRow rowMM = (DatabaseSelect("SELECT * FROM mylist_manga")).Rows[0];
-                DataTable DTStorage = DatabaseSelect("SELECT * FROM mylist_storages");
-                DataTable DTsource = DatabaseSelect("SELECT * FROM mylist_sources");
+                DataRow rowML = (db.DatabaseSelect("SELECT * FROM mylist_local")).Rows[0];
+                DataRow rowMA = (db.DatabaseSelect("SELECT * FROM mylist_anidb")).Rows[0];
+                DataRow rowMM = (db.DatabaseSelect("SELECT * FROM mylist_manga")).Rows[0];
+                DataTable DTStorage = db.DatabaseSelect("SELECT * FROM mylist_storages");
+                DataTable DTsource = db.DatabaseSelect("SELECT * FROM mylist_sources");
 
                 MyListAnime.Columns.Add("MyListAnime_CM01", "");
                 MyListAnime.Columns.Add("MyListAnime_CM02", "");
@@ -1345,9 +1341,10 @@ namespace AniDBClient.Forms
                     try
                     {
                         string AniDatabasePripojeni = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=\"" + this.GlobalAdresar + @"Accounts\" + logIn.SettingsData.Name + @"\" + logIn.SettingsData.Name + ".mdb\";User Id=Admin;Password=;";
-                        this.AniDBDatabase = new OleDbConnection();
-                        this.AniDBDatabase.ConnectionString = AniDatabasePripojeni;
-                        this.AniDBDatabase.Open();
+                        this.db.AniDbDatabase = new OleDbConnection();
+                        db.LoggerE = logger;
+                        this.db.AniDbDatabase.ConnectionString = AniDatabasePripojeni;
+                        this.db.AniDbDatabase.Open();
                     }
                     catch
                     {
@@ -1363,7 +1360,7 @@ namespace AniDBClient.Forms
                     //MyList
                     InitializeComponentMylist();
 
-                    DataTable HashTable = DatabaseSelect("SELECT * FROM hash_files");
+                    DataTable HashTable = db.DatabaseSelect("SELECT * FROM hash_files");
 
                     foreach (DataRow Row in HashTable.Rows)
                         Hash_Nazvy_Souboru.Items.Add(Row["hash_files_file"].ToString());
@@ -1431,9 +1428,9 @@ namespace AniDBClient.Forms
                     DataTable DT;
 
                     if (Options_ShowAdultOnWelcomeScreenCheckBox.Checked)
-                        DT = DatabaseSelect("SELECT id_anime, anime_nazevjap, anime_obr FROM anime ORDER BY anime_nazevjap");
+                        DT = db.DatabaseSelect("SELECT id_anime, anime_nazevjap, anime_obr FROM anime ORDER BY anime_nazevjap");
                     else
-                        DT = DatabaseSelect("SELECT id_anime, anime_nazevjap, anime_obr FROM anime WHERE anime_18=0 ORDER BY anime_nazevjap");
+                        DT = db.DatabaseSelect("SELECT id_anime, anime_nazevjap, anime_obr FROM anime WHERE anime_18=0 ORDER BY anime_nazevjap");
 
                     string animes = "";
                     string lists = "";
@@ -1572,14 +1569,14 @@ namespace AniDBClient.Forms
         private void InitializeComponentFilesMylist()
         {
             //Načtení předešlých úloh
-            DataTable dataTable = DatabaseSelect("SELECT * FROM task");
+            DataTable dataTable = db.DatabaseSelect("SELECT * FROM task");
             foreach (DataRow row in dataTable.Rows)
             {
                 Application.DoEvents();
                 ComunicationNewTaskKO(row["task_task"].ToString());
             }
 
-            DatabaseAdd("UPDATE files SET files_date=NOW() WHERE ((Len([files].[files_date] & '')=0))");
+            db.DatabaseAdd("UPDATE files SET files_date=NOW() WHERE ((Len([files].[files_date] & '')=0))");
 
             StatusBar_Mn02.Text = LogTasks.Items.Count.ToString();
         }
@@ -1588,7 +1585,7 @@ namespace AniDBClient.Forms
         private void Options_CH03BT_Click(object sender, EventArgs e)
         {
             //Načtení Unknown files
-            DataTable dataTable = DatabaseSelect("SELECT * FROM files WHERE id_files=0");
+            DataTable dataTable = db.DatabaseSelect("SELECT * FROM files WHERE id_files=0");
             foreach (DataRow row in dataTable.Rows)
             {
                 Application.DoEvents();
@@ -1596,7 +1593,7 @@ namespace AniDBClient.Forms
             }
 
             //Načtení Unknown files
-            dataTable = DatabaseSelect("SELECT * FROM files WHERE IsNull([files]![files_ed2k])=-1");
+            dataTable = db.DatabaseSelect("SELECT * FROM files WHERE IsNull([files]![files_ed2k])=-1");
             foreach (DataRow row in dataTable.Rows)
             {
                 Application.DoEvents();
@@ -1610,10 +1607,10 @@ namespace AniDBClient.Forms
         private void Options_CH04BT_Click(object sender, EventArgs e)
         {
             //Načtení nezkontrolovaných anime
-            DataTable dataTable = DatabaseSelect("SELECT * FROM anime");
+            DataTable dataTable = db.DatabaseSelect("SELECT * FROM anime");
             foreach (DataRow row in dataTable.Rows)
             {
-                DataTable dataTable2 = DatabaseSelect("SELECT * FROM episodes WHERE id_anime=" + row["id_anime"]);
+                DataTable dataTable2 = db.DatabaseSelect("SELECT * FROM episodes WHERE id_anime=" + row["id_anime"]);
 
                 List<string> Epizody = new List<string>();
 
@@ -1638,7 +1635,7 @@ namespace AniDBClient.Forms
         private void Options_CH05BT_Click(object sender, EventArgs e)
         {
             //Načtení nezkontrolovaných episod
-            DataTable dataTable = DatabaseSelect("SELECT files.id_files, episodes.id_anime, episodes.episodes_epn FROM episodes LEFT JOIN files ON files.id_episodes=episodes.id_episodes WHERE (((CStr([files]![id_files] & '0'))=0))");
+            DataTable dataTable = db.DatabaseSelect("SELECT files.id_files, episodes.id_anime, episodes.episodes_epn FROM episodes LEFT JOIN files ON files.id_episodes=episodes.id_episodes WHERE (((CStr([files]![id_files] & '0'))=0))");
             foreach (DataRow row in dataTable.Rows)
             {
                 Application.DoEvents();
@@ -1652,31 +1649,31 @@ namespace AniDBClient.Forms
         //Kontrola zdvojení
         private void Options_CH06BT_Click(object sender, EventArgs e)
         {
-            DataTable dataTable = DatabaseSelect("SELECT files.id_files, Count(files.id_files) AS CountOfid_files FROM files GROUP BY files.id_files HAVING (((Count(files.id_files))>1));");
+            DataTable dataTable = db.DatabaseSelect("SELECT files.id_files, Count(files.id_files) AS CountOfid_files FROM files GROUP BY files.id_files HAVING (((Count(files.id_files))>1));");
 
             foreach (DataRow row in dataTable.Rows)
             {
                 Application.DoEvents();
-                DataTable IDFile = DatabaseSelect("SELECT * FROM files WHERE id_files=" + row["id_files"]);
+                DataTable IDFile = db.DatabaseSelect("SELECT * FROM files WHERE id_files=" + row["id_files"]);
 
                 if (IDFile.Rows[0]["files_localfile"].ToString().Length == 0)
-                    DatabaseSelect("DELETE FROM files WHERE id_files_local=" + IDFile.Rows[0]["id_files_local"]);
+                    db.DatabaseSelect("DELETE FROM files WHERE id_files_local=" + IDFile.Rows[0]["id_files_local"]);
                 else if (IDFile.Rows[1]["files_localfile"].ToString().Length == 0)
-                    DatabaseSelect("DELETE FROM files WHERE id_files_local=" + IDFile.Rows[1]["id_files_local"]);
+                    db.DatabaseSelect("DELETE FROM files WHERE id_files_local=" + IDFile.Rows[1]["id_files_local"]);
                 else if (IDFile.Rows[0]["files_ed2k"].ToString().Length == 0)
-                    DatabaseSelect("DELETE FROM files WHERE id_files_local=" + IDFile.Rows[0]["id_files_local"]);
+                    db.DatabaseSelect("DELETE FROM files WHERE id_files_local=" + IDFile.Rows[0]["id_files_local"]);
                 else if (IDFile.Rows[1]["files_ed2k"].ToString().Length == 0)
-                    DatabaseSelect("DELETE FROM files WHERE id_files_local=" + IDFile.Rows[1]["id_files_local"]);
+                    db.DatabaseSelect("DELETE FROM files WHERE id_files_local=" + IDFile.Rows[1]["id_files_local"]);
                 else if (IDFile.Rows[0]["files_storage"].ToString().Length == 0)
-                    DatabaseSelect("DELETE FROM files WHERE id_files_local=" + IDFile.Rows[0]["id_files_local"]);
+                    db.DatabaseSelect("DELETE FROM files WHERE id_files_local=" + IDFile.Rows[0]["id_files_local"]);
                 else if (IDFile.Rows[1]["files_storage"].ToString().Length == 0)
-                    DatabaseSelect("DELETE FROM files WHERE id_files_local=" + IDFile.Rows[1]["id_files_local"]);
+                    db.DatabaseSelect("DELETE FROM files WHERE id_files_local=" + IDFile.Rows[1]["id_files_local"]);
                 else if (IDFile.Rows[0]["files_other"].ToString().Length == 0)
-                    DatabaseSelect("DELETE FROM files WHERE id_files_local=" + IDFile.Rows[0]["id_files_local"]);
+                    db.DatabaseSelect("DELETE FROM files WHERE id_files_local=" + IDFile.Rows[0]["id_files_local"]);
                 else if (IDFile.Rows[1]["files_other"].ToString().Length == 0)
-                    DatabaseSelect("DELETE FROM files WHERE id_files_local=" + IDFile.Rows[1]["id_files_local"]);
+                    db.DatabaseSelect("DELETE FROM files WHERE id_files_local=" + IDFile.Rows[1]["id_files_local"]);
                 else
-                    DatabaseSelect("DELETE FROM files WHERE id_files_local=" + IDFile.Rows[1]["id_files_local"]);
+                    db.DatabaseSelect("DELETE FROM files WHERE id_files_local=" + IDFile.Rows[1]["id_files_local"]);
 
                 ComunicationNewTask("FILE fid=" + IDFile.Rows[0]["id_files"] + "&fmask=7FFAFFF9&amask=FEE0F0C1");
             }
@@ -1687,7 +1684,7 @@ namespace AniDBClient.Forms
         //Komprimace DB
         private void Options_CH07BT_Click(object sender, EventArgs e)
         {
-            DatabaseCompact(GlobalAdresarAccount.Substring(0, GlobalAdresarAccount.Length - 3).Replace(" ", "?") + "mdb");
+            db.DatabaseCompact(GlobalAdresarAccount.Substring(0, GlobalAdresarAccount.Length - 3).Replace(" ", "?") + "mdb");
         }
 
         //Vytvořit zálohu
@@ -1709,14 +1706,14 @@ namespace AniDBClient.Forms
         //Obnovit ze zálohy
         private void Options_CH09BT_Click(object sender, EventArgs e)
         {
-            AniDBDatabase.Close();
+            db.AniDbDatabase.Close();
 
             Backups bck = new Backups(GlobalAdresarAccount, GlobalAdresar);
 
             if (bck.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 logger.LogAddError("BACKUP < R E S T O R E D   F R O M   B A C K U P");
 
-            AniDBDatabase.Open();
+            db.AniDbDatabase.Open();
         }
 
         //Updatovat databázi
@@ -1769,26 +1766,26 @@ namespace AniDBClient.Forms
 
                         Thread.Sleep(5000);
 
-                        DatabaseAdd("DELETE FROM anime_relations");
-                        DatabaseAdd("DELETE FROM genres_relations");
-                        DatabaseAdd("DELETE FROM anime");
-                        DatabaseAdd("DELETE FROM files");
-                        DatabaseAdd("DELETE FROM episodes");
-                        DatabaseAdd("DELETE FROM groups");
-                        DatabaseAdd("DELETE FROM hash_files");
-                        DatabaseAdd("DELETE FROM manga");
-                        DatabaseAdd("DELETE FROM manga_anime");
-                        DatabaseAdd("DELETE FROM manga_relations");
-                        DatabaseAdd("DELETE FROM manga_genres");
-                        DatabaseAdd("DELETE FROM manga_chapters");
-                        DatabaseAdd("DELETE FROM tags");
-                        DatabaseAdd("DELETE FROM task");
-                        DatabaseAdd("DELETE FROM watcher");
-                        DatabaseAdd("DELETE FROM genres");
-                        DatabaseAdd("DELETE FROM mylist_storages");
-                        DatabaseAdd("DELETE FROM mylist_sources");
-                        DatabaseAdd("DELETE FROM tags_relation");
-                        DatabaseAdd("DELETE FROM task");
+                        db.DatabaseAdd("DELETE FROM anime_relations");
+                        db.DatabaseAdd("DELETE FROM genres_relations");
+                        db.DatabaseAdd("DELETE FROM anime");
+                        db.DatabaseAdd("DELETE FROM files");
+                        db.DatabaseAdd("DELETE FROM episodes");
+                        db.DatabaseAdd("DELETE FROM groups");
+                        db.DatabaseAdd("DELETE FROM hash_files");
+                        db.DatabaseAdd("DELETE FROM manga");
+                        db.DatabaseAdd("DELETE FROM manga_anime");
+                        db.DatabaseAdd("DELETE FROM manga_relations");
+                        db.DatabaseAdd("DELETE FROM manga_genres");
+                        db.DatabaseAdd("DELETE FROM manga_chapters");
+                        db.DatabaseAdd("DELETE FROM tags");
+                        db.DatabaseAdd("DELETE FROM task");
+                        db.DatabaseAdd("DELETE FROM watcher");
+                        db.DatabaseAdd("DELETE FROM genres");
+                        db.DatabaseAdd("DELETE FROM mylist_storages");
+                        db.DatabaseAdd("DELETE FROM mylist_sources");
+                        db.DatabaseAdd("DELETE FROM tags_relation");
+                        db.DatabaseAdd("DELETE FROM task");
 
                         Hash_Nazvy_Souboru.Items.Clear();
                         Log.Text = "";
@@ -1805,7 +1802,7 @@ namespace AniDBClient.Forms
         {
             DataTable DT;
 
-            DT = DatabaseSelect("SELECT Max(id_manga_chatpers) FROM manga_chapters");
+            DT = db.DatabaseSelect("SELECT Max(id_manga_chatpers) FROM manga_chapters");
 
             int ID = 1;
 
@@ -1817,7 +1814,7 @@ namespace AniDBClient.Forms
             {
             }
 
-            DT = DatabaseSelect("SELECT id_manga, manga_chatpers_file FROM manga_chapters");
+            DT = db.DatabaseSelect("SELECT id_manga, manga_chatpers_file FROM manga_chapters");
 
             List<string> CHid = new List<string>();
             List<string> CHfile = new List<string>();
@@ -1842,7 +1839,7 @@ namespace AniDBClient.Forms
                         {
                             if (!CHfile.Contains(subsoubor.FullName))
                             {
-                                DatabaseAdd("INSERT INTO manga_chapters VALUES (" + ID + ", " + CHid[i] + ", " + Manga_Chapters(subsoubor.Name) + ", " + Manga_Volumes(subsoubor.FullName) + ", " + subsoubor.Length + ", 0, " + Manga_List(subsoubor) + ", 'english', '" + subsoubor.FullName.Replace("'", "''") + "', '" + subsoubor.Name.Replace("'", "''").Replace("_", " ").Replace(subsoubor.Extension, "") + "')");
+                                db.DatabaseAdd("INSERT INTO manga_chapters VALUES (" + ID + ", " + CHid[i] + ", " + Manga_Chapters(subsoubor.Name) + ", " + Manga_Volumes(subsoubor.FullName) + ", " + subsoubor.Length + ", 0, " + Manga_List(subsoubor) + ", 'english', '" + subsoubor.FullName.Replace("'", "''") + "', '" + subsoubor.Name.Replace("'", "''").Replace("_", " ").Replace(subsoubor.Extension, "") + "')");
                                 ID++;
 
                                 CHfile.Add(subsoubor.FullName);
@@ -1859,144 +1856,13 @@ namespace AniDBClient.Forms
         #endregion
 
         #region Databáze
-        //Komprimace databáze
-        public void DatabaseCompact(string mdbFileName)
-        {
-            AniDBDatabase.Close();
-            try
-            {
-                string cmd = string.Format("COMPACT_DB=\"{0}\" \"{0}\" General\0", mdbFileName);
-                SQLConfigDataSource((IntPtr)0, ODBC_ADD_DSN, "Microsoft Access Driver (*.mdb)", cmd);
-
-                logger.LogAddError("DB > D A T A B A S E   W A S   C O M P R I M E D");
-            }
-            catch
-            {
-                logger.LogAdd(Language.MessageBox_DBC);
-            }
-            AniDBDatabase.Open();
-        }
-
-        //Formát data
-        private string DatumFormat(DateTime datum)
-        {
-            return datum.Year + "-" + String.Format("{0:00}", datum.Month) + "-" + String.Format("{0:00}", datum.Day) + " " + String.Format("{0:00}", datum.Hour) + ":" + String.Format("{0:00}", datum.Minute) + ":" + String.Format("{0:00}", datum.Second);
-        }
-
-        //Přidání/editace/mazání z/do databáze - VOID
-        private void DatabaseAdd(string SQLString)
-        {
-            logger.LogAddSql("MySQL > " + SQLString);
-
-            OleDbCommand SQLCommand = new OleDbCommand();
-            SQLCommand.CommandText = SQLString;
-            SQLCommand.Connection = this.AniDBDatabase;
-
-            try
-            {
-                SQLCommand.ExecuteNonQuery();
-            }
-            catch (Exception e)
-            {
-                logger.LogAddError("MySQL ERROR > " + SQLString + "\r\n" + e.ToString());
-            }
-
-            SQLCommand.Dispose();
-            AniDBDatabase.ResetState();
-        }
-
-        //Výběr z databáze
-        private DataTable DatabaseSelect(string SQLString)
-        {
-            if (AniDBDatabase != null)
-            {
-                logger.LogAddSql("MySQL < " + SQLString);
-
-                OleDbCommand SQLQuery = new OleDbCommand();
-                SQLQuery.CommandText = SQLString;
-                SQLQuery.Connection = AniDBDatabase;
-                SQLQuery.CommandTimeout = 30;
-
-                DataTable Data = new DataTable();
-
-                OleDbDataAdapter dataAdapter = new OleDbDataAdapter(SQLQuery);
-
-                try
-                {
-                    dataAdapter.Fill(Data);
-                }
-                catch (Exception e)
-                {
-                    logger.LogAddError("MySQL ERROR > " + SQLString + "\r\n" + e.ToString());
-                }
-
-                SQLQuery.Dispose();
-                AniDBDatabase.ResetState();
-                return Data;
-            }
-
-            return new DataTable();
-        }
-
-        //Přidání/editace/mazání z/do databáze - VOID
-        private void DatabaseAddNoLog(string SQLString)
-        {
-            AniDBDatabase.ResetState();
-
-            OleDbCommand SQLCommand = new OleDbCommand();
-            SQLCommand.CommandText = SQLString;
-            SQLCommand.Connection = AniDBDatabase;
-
-            try
-            {
-                SQLCommand.ExecuteNonQuery();
-            }
-            catch (Exception e)
-            {
-                logger.LogAddError("MySQL ERROR > " + SQLString + "\r\n" + e.ToString());
-            }
-
-            SQLCommand.Dispose();
-
-            this.AniDBDatabase.ResetState();
-        }
-
-        //Výběr z databáze
-        private DataTable DatabaseSelectNoLog(string SQLString)
-        {
-            if (AniDBDatabase != null)
-            {
-                OleDbCommand SQLQuery = new OleDbCommand();
-                SQLQuery.CommandText = SQLString;
-                SQLQuery.Connection = AniDBDatabase;
-                SQLQuery.CommandTimeout = 30;
-
-                DataTable Data = new DataTable();
-
-                OleDbDataAdapter dataAdapter = new OleDbDataAdapter(SQLQuery);
-
-                try
-                {
-                    dataAdapter.Fill(Data);
-                }
-                catch (Exception e)
-                {
-                    logger.LogAddError("MySQL ERROR > " + SQLString + "\r\n" + e.ToString());
-                }
-
-                SQLQuery.Dispose();
-                return Data;
-            }
-
-            return new DataTable();
-        }
 
         //Výběr Anime z databáze
         private void DatabaseSelectAnime()
         {
-            if (AniDBDatabase != null && DataAnime.ReadOnly)
+            if (db.AniDbDatabase != null && DataAnime.ReadOnly)
             {
-                DataTable DAnime = DatabaseSelect("SELECT TOP " + DataAnime_Rows.Value + " * FROM (SELECT TOP " + DataAnime_Rows.Value + " * FROM (SELECT TOP " + (DataAnime_Page.Value * DataAnime_Rows.Value) + " * FROM anime ORDER BY CStr([anime]![anime_nazevjap]) ASC) ORDER BY CStr([anime]![anime_nazevjap]) DESC) ORDER by CStr([anime]![anime_nazevjap]) ASC");
+                DataTable DAnime = db.DatabaseSelect("SELECT TOP " + DataAnime_Rows.Value + " * FROM (SELECT TOP " + DataAnime_Rows.Value + " * FROM (SELECT TOP " + (DataAnime_Page.Value * DataAnime_Rows.Value) + " * FROM anime ORDER BY CStr([anime]![anime_nazevjap]) ASC) ORDER BY CStr([anime]![anime_nazevjap]) DESC) ORDER by CStr([anime]![anime_nazevjap]) ASC");
 
                 DataAnime.SuspendLayout();
                 DataAnime.Rows.Clear();
@@ -2039,7 +1905,7 @@ namespace AniDBClient.Forms
         //Výběr anime do stromu
         private void DatabaseSelectAnimeTree(int Lang)
         {
-            if (AniDBDatabase != null)
+            if (db.AniDbDatabase != null)
             {
                 DataTable dataTable;
 
@@ -2061,15 +1927,15 @@ namespace AniDBClient.Forms
                 switch (Lang)
                 {
                     case 2:
-                        dataTable = DatabaseSelect("SELECT id_anime, anime_nazevjap, anime_nazeveng, anime_nazevkaj FROM anime WHERE " + Podminka + " ORDER BY anime_nazeveng");
+                        dataTable = db.DatabaseSelect("SELECT id_anime, anime_nazevjap, anime_nazeveng, anime_nazevkaj FROM anime WHERE " + Podminka + " ORDER BY anime_nazeveng");
                         break;
 
                     case 3:
-                        dataTable = DatabaseSelect("SELECT id_anime, anime_nazevjap, anime_nazeveng, anime_nazevkaj FROM anime WHERE " + Podminka + " ORDER BY anime_nazevkaj");
+                        dataTable = db.DatabaseSelect("SELECT id_anime, anime_nazevjap, anime_nazeveng, anime_nazevkaj FROM anime WHERE " + Podminka + " ORDER BY anime_nazevkaj");
                         break;
 
                     default:
-                        dataTable = DatabaseSelect("SELECT id_anime, anime_nazevjap, anime_nazeveng, anime_nazevkaj FROM anime WHERE " + Podminka + " ORDER BY anime_nazevjap");
+                        dataTable = db.DatabaseSelect("SELECT id_anime, anime_nazevjap, anime_nazeveng, anime_nazevkaj FROM anime WHERE " + Podminka + " ORDER BY anime_nazevjap");
                         break;
                 }
 
@@ -2112,7 +1978,7 @@ namespace AniDBClient.Forms
         //Výběr anime do stromu
         private void DatabaseSelectMangaTree(int Lang)
         {
-            if (AniDBDatabase != null)
+            if (db.AniDbDatabase != null)
             {
                 DataTable dataTable;
 
@@ -2127,15 +1993,15 @@ namespace AniDBClient.Forms
                 switch (Lang)
                 {
                     case 2:
-                        dataTable = DatabaseSelect("SELECT id_manga, manga_nazevjap, manga_nazeveng, manga_nazevkaj FROM manga " + Podminka + " ORDER BY manga_nazeveng");
+                        dataTable = db.DatabaseSelect("SELECT id_manga, manga_nazevjap, manga_nazeveng, manga_nazevkaj FROM manga " + Podminka + " ORDER BY manga_nazeveng");
                         break;
 
                     case 3:
-                        dataTable = DatabaseSelect("SELECT id_manga, manga_nazevjap, manga_nazeveng, manga_nazevkaj FROM manga " + Podminka + " ORDER BY manga_nazevkaj");
+                        dataTable = db.DatabaseSelect("SELECT id_manga, manga_nazevjap, manga_nazeveng, manga_nazevkaj FROM manga " + Podminka + " ORDER BY manga_nazevkaj");
                         break;
 
                     default:
-                        dataTable = DatabaseSelect("SELECT id_manga, manga_nazevjap, manga_nazeveng, manga_nazevkaj FROM manga " + Podminka + " ORDER BY manga_nazevjap");
+                        dataTable = db.DatabaseSelect("SELECT id_manga, manga_nazevjap, manga_nazeveng, manga_nazevkaj FROM manga " + Podminka + " ORDER BY manga_nazevjap");
                         break;
                 }
 
@@ -2180,7 +2046,7 @@ namespace AniDBClient.Forms
         //Výběr souborů ve vláknu
         private void DatabaseSelectFiles()
         {
-            if (AniDBDatabase != null && DataFiles.ReadOnly)
+            if (db.AniDbDatabase != null && DataFiles.ReadOnly)
             {
                 DataFiles.ReadOnly = false;
                 DataFiles.SuspendLayout();
@@ -2210,7 +2076,7 @@ namespace AniDBClient.Forms
                     }
                     catch
                     {
-                        DataTable DAnime = DatabaseSelect("SELECT * FROM anime WHERE anime_nazevjap LIKE '%" + DataFiles_Filtr01.Text.Replace("'", "''") + "%' OR anime_nazevkaj LIKE '%" + DataFiles_Filtr01.Text.Replace("'", "''") + "%' OR anime_nazeveng LIKE '%" + DataFiles_Filtr01.Text.Replace("'", "''") + "%'");
+                        DataTable DAnime = db.DatabaseSelect("SELECT * FROM anime WHERE anime_nazevjap LIKE '%" + DataFiles_Filtr01.Text.Replace("'", "''") + "%' OR anime_nazevkaj LIKE '%" + DataFiles_Filtr01.Text.Replace("'", "''") + "%' OR anime_nazeveng LIKE '%" + DataFiles_Filtr01.Text.Replace("'", "''") + "%'");
 
                         if (DAnime.Rows.Count > 0)
                         {
@@ -2254,7 +2120,7 @@ namespace AniDBClient.Forms
                         Datum = new DateTime(Convert.ToInt32(DataFiles_Year.Value.ToString()), Convert.ToInt32(DataFiles_Month.Value.ToString()), Convert.ToInt32(DataFiles_Day.Value.ToString()));
                     }
 
-                    DFiles = DatabaseSelect("SELECT * FROM files WHERE files.id_anime=0 AND files.files_date>=#" + DatumFormat(Datum) + "#");
+                    DFiles = db.DatabaseSelect("SELECT * FROM files WHERE files.id_anime=0 AND files.files_date>=#" + Database.DateFormat(Datum) + "#");
 
                     for (int i = ((int)DataFiles_Page.Value - 1) * (int)DataFiles_Rows.Value; i < (((int)DataFiles_Page.Value - 1) * (int)DataFiles_Rows.Value) + (int)DataFiles_Rows.Value; i++)
                     {
@@ -2311,12 +2177,12 @@ namespace AniDBClient.Forms
 
                     if (!DataFilesTree_CH03.Checked || DataFilesTree.Visible)
                     {
-                        DFiles = DatabaseSelect("SELECT TOP " + DataFiles_Rows.Value + " * FROM [SELECT TOP " + DataFiles_Rows.Value + " * FROM (SELECT TOP " + (DataFiles_Page.Value * DataFiles_Rows.Value) + " * FROM (groups RIGHT JOIN (episodes RIGHT JOIN files ON episodes.id_episodes = files.id_episodes) ON  groups.id_groups = files.id_groups) INNER JOIN anime ON files.id_anime = anime.id_anime WHERE files.files_date>=#" + DatumFormat(Datum) + "#" + DatabaseSelectFilesCascade + Podminka + " ORDER BY CStr(anime.anime_nazevjap & '') ASC, episodes.episodes_epn ASC) ORDER BY CStr(anime.anime_nazevjap & '') DESC, episodes.episodes_epn DESC]. AS [ALIAS] ORDER BY CStr([anime].[anime_nazevjap] & ''), CStr([ALIAS].[episodes_spec] & ''), [ALIAS].episodes_epn");
+                        DFiles = db.DatabaseSelect("SELECT TOP " + DataFiles_Rows.Value + " * FROM [SELECT TOP " + DataFiles_Rows.Value + " * FROM (SELECT TOP " + (DataFiles_Page.Value * DataFiles_Rows.Value) + " * FROM (groups RIGHT JOIN (episodes RIGHT JOIN files ON episodes.id_episodes = files.id_episodes) ON  groups.id_groups = files.id_groups) INNER JOIN anime ON files.id_anime = anime.id_anime WHERE files.files_date>=#" + Database.DateFormat(Datum) + "#" + DatabaseSelectFilesCascade + Podminka + " ORDER BY CStr(anime.anime_nazevjap & '') ASC, episodes.episodes_epn ASC) ORDER BY CStr(anime.anime_nazevjap & '') DESC, episodes.episodes_epn DESC]. AS [ALIAS] ORDER BY CStr([anime].[anime_nazevjap] & ''), CStr([ALIAS].[episodes_spec] & ''), [ALIAS].episodes_epn");
                     }
                     else
                     {
                         Podminka = Podminka.Replace("anime.", "files.");
-                        DFiles = DatabaseSelect("SELECT TOP " + DataFiles_Rows.Value + " * FROM [SELECT TOP " + (DataFiles_Page.Value * DataFiles_Rows.Value) + " * FROM files WHERE files.files_date>=#" + DatumFormat(Datum) + "#" + DatabaseSelectFilesCascade + Podminka + " ORDER BY files_localfile ASC, id_files ASC]. AS [ALIAS] ORDER BY CStr([ALIAS].files_localfile & '') DESC, [ALIAS].id_files DESC");
+                        DFiles = db.DatabaseSelect("SELECT TOP " + DataFiles_Rows.Value + " * FROM [SELECT TOP " + (DataFiles_Page.Value * DataFiles_Rows.Value) + " * FROM files WHERE files.files_date>=#" + Database.DateFormat(Datum) + "#" + DatabaseSelectFilesCascade + Podminka + " ORDER BY files_localfile ASC, id_files ASC]. AS [ALIAS] ORDER BY CStr([ALIAS].files_localfile & '') DESC, [ALIAS].id_files DESC");
                     }
 
                     if (DataFilesTree.Visible)
@@ -3067,7 +2933,7 @@ namespace AniDBClient.Forms
         //Výběr žánrů z databáze
         private void DatabaseSelectGenres()
         {
-            DataTable DGenres = DatabaseSelect("SELECT TOP " + DataGenres_Rows.Value + " * FROM (SELECT TOP " + DataGenres_Rows.Value + " * FROM (SELECT TOP " + (DataGenres_Rows.Value * DataGenres_Page.Value) + " * FROM genres ORDER BY CStr(genres_genre) ASC) ORDER BY CStr(genres_genre) DESC) ORDER BY CStr(genres_genre) ASC");
+            DataTable DGenres = db.DatabaseSelect("SELECT TOP " + DataGenres_Rows.Value + " * FROM (SELECT TOP " + DataGenres_Rows.Value + " * FROM (SELECT TOP " + (DataGenres_Rows.Value * DataGenres_Page.Value) + " * FROM genres ORDER BY CStr(genres_genre) ASC) ORDER BY CStr(genres_genre) DESC) ORDER BY CStr(genres_genre) ASC");
 
             DataGenres.SuspendLayout();
             DataGenres.Rows.Clear();
@@ -3093,7 +2959,7 @@ namespace AniDBClient.Forms
         //Výběr skupin z databáze
         private void DatabaseSelectGroups()
         {
-            DataTable DGroups = DatabaseSelect("SELECT TOP " + DataGroups_Rows.Value + " * FROM (SELECT TOP " + DataGroups_Rows.Value + " * FROM (SELECT TOP " + (DataGroups_Rows.Value * DataGroups_Page.Value) + " * FROM groups ORDER BY CStr(groups_name) ASC) ORDER BY CStr(groups_name) DESC) ORDER BY CStr(groups_name) ASC");
+            DataTable DGroups = db.DatabaseSelect("SELECT TOP " + DataGroups_Rows.Value + " * FROM (SELECT TOP " + DataGroups_Rows.Value + " * FROM (SELECT TOP " + (DataGroups_Rows.Value * DataGroups_Page.Value) + " * FROM groups ORDER BY CStr(groups_name) ASC) ORDER BY CStr(groups_name) DESC) ORDER BY CStr(groups_name) ASC");
 
             DataGroups.SuspendLayout();
             DataGroups.Rows.Clear();
@@ -3130,7 +2996,7 @@ namespace AniDBClient.Forms
 
             DataTable DT;
 
-            DT = DatabaseSelect("SELECT anime.id_anime, tags_name, anime_nazevjap FROM (anime INNER JOIN tags_relation ON tags_relation.id_anime=anime.id_anime) INNER JOIN tags ON tags.id_tags=tags_relation.id_tags ORDER BY tags_name, anime_nazevjap");
+            DT = db.DatabaseSelect("SELECT anime.id_anime, tags_name, anime_nazevjap FROM (anime INNER JOIN tags_relation ON tags_relation.id_anime=anime.id_anime) INNER JOIN tags ON tags.id_tags=tags_relation.id_tags ORDER BY tags_name, anime_nazevjap");
 
             string tag = "";
             for (int i = 0; i < DT.Rows.Count; i++)
@@ -3152,7 +3018,7 @@ namespace AniDBClient.Forms
                 }
             }
 
-            DT = DatabaseSelect("SELECT id_anime, anime_nazevjap, anime_rating FROM anime ORDER BY anime_rating DESC, anime_nazevjap");
+            DT = db.DatabaseSelect("SELECT id_anime, anime_nazevjap, anime_rating FROM anime ORDER BY anime_rating DESC, anime_nazevjap");
 
             for (int i = 0; i < DT.Rows.Count; i++)
             {
@@ -3173,7 +3039,7 @@ namespace AniDBClient.Forms
                 }
             }
 
-            DT = DatabaseSelect("SELECT id_anime, anime_nazevjap, anime_seen FROM anime WHERE anime_watched=1 ORDER BY anime_seen DESC, anime_nazevjap");
+            DT = db.DatabaseSelect("SELECT id_anime, anime_nazevjap, anime_seen FROM anime WHERE anime_watched=1 ORDER BY anime_seen DESC, anime_nazevjap");
             for (int i = 0; i < DT.Rows.Count; i++)
             {
                 try
@@ -3203,13 +3069,13 @@ namespace AniDBClient.Forms
         //Výběr episod dle anime
         private DataTable DatabaseSelectAnimeID(string AnimeID)
         {
-            return DatabaseSelect("SELECT * FROM episodes WHERE id_anime=" + AnimeID + " ORDER BY episodes_spec DESC, episodes_epn DESC");
+            return db.DatabaseSelect("SELECT * FROM episodes WHERE id_anime=" + AnimeID + " ORDER BY episodes_spec DESC, episodes_epn DESC");
         }
 
         //Výběr souborů dle epizod
         private DataTable DatabaseSelectEpisodeID(string EpisodeID)
         {
-            return DatabaseSelect("SELECT * FROM files INNER JOIN groups ON groups.id_groups=files.id_groups WHERE id_episodes=" + EpisodeID + " ORDER BY id_files DESC");
+            return db.DatabaseSelect("SELECT * FROM files INNER JOIN groups ON groups.id_groups=files.id_groups WHERE id_episodes=" + EpisodeID + " ORDER BY id_files DESC");
         }
         #endregion
 
@@ -3250,8 +3116,8 @@ namespace AniDBClient.Forms
                 if (Hash_W.IsBusy)
                     Hash_W.CancelAsync();
 
-                if (AniDBDatabase != null)
-                    this.AniDBDatabase.Close();
+                if (db.AniDbDatabase != null)
+                    this.db.AniDbDatabase.Close();
 
                 FileHelpers.FileDelete(GlobalAdresar + @"AniSub-MyList.log");
                 FileHelpers.FileDelete(GlobalAdresar + @"avdumpLog.txt");
@@ -3259,7 +3125,7 @@ namespace AniDBClient.Forms
                 EncDec.Encrypt(GlobalAdresarAccount, GlobalAdresarAccount + ".enc", "4651511fac9cbbc80c8417779620b893");
                 FileHelpers.FileDelete(GlobalAdresarAccount);
 
-                DatabaseCompact(GlobalAdresarAccount.Substring(0, GlobalAdresarAccount.Length - 3).Replace(" ", "?") + "mdb");
+                db.DatabaseCompact(GlobalAdresarAccount.Substring(0, GlobalAdresarAccount.Length - 3).Replace(" ", "?") + "mdb");
 
             }
         }
@@ -3397,7 +3263,7 @@ namespace AniDBClient.Forms
                     DataSearch_Genres.BeginUpdate();
                     DataSearch_Genres.Items.Clear();
 
-                    DataTable dataTable = DatabaseSelect("SELECT * FROM genres");
+                    DataTable dataTable = db.DatabaseSelect("SELECT * FROM genres");
 
                     foreach (DataRow row in dataTable.Rows)
                         DataSearch_Genres.Items.Add(row["genres_genre"], false);
@@ -3462,7 +3328,7 @@ namespace AniDBClient.Forms
                         Manga_Anime.BeginUpdate();
                         Manga_Anime.Items.Clear();
 
-                        DataTable dataTable = DatabaseSelect("SELECT anime_nazevjap FROM anime");
+                        DataTable dataTable = db.DatabaseSelect("SELECT anime_nazevjap FROM anime");
 
                         foreach (DataRow row in dataTable.Rows)
                             Manga_Anime.Items.Add(row["anime_nazevjap"], false);
@@ -3475,7 +3341,7 @@ namespace AniDBClient.Forms
                         Manga_Manga.BeginUpdate();
                         Manga_Manga.Items.Clear();
 
-                        DataTable dataTable = DatabaseSelect("SELECT manga_nazevjap FROM manga");
+                        DataTable dataTable = db.DatabaseSelect("SELECT manga_nazevjap FROM manga");
 
                         foreach (DataRow row in dataTable.Rows)
                             Manga_Manga.Items.Add(row["manga_nazevjap"], false);
@@ -3488,7 +3354,7 @@ namespace AniDBClient.Forms
                         Manga_Genres.BeginUpdate();
                         Manga_Genres.Items.Clear();
 
-                        DataTable dataTable = DatabaseSelect("SELECT * FROM genres");
+                        DataTable dataTable = db.DatabaseSelect("SELECT * FROM genres");
 
                         foreach (DataRow row in dataTable.Rows)
                             Manga_Genres.Items.Add(row["genres_genre"], false);
@@ -3501,7 +3367,7 @@ namespace AniDBClient.Forms
                     MangaSearch_Genres.BeginUpdate();
                     MangaSearch_Genres.Items.Clear();
 
-                    DataTable dataTable = DatabaseSelect("SELECT * FROM genres");
+                    DataTable dataTable = db.DatabaseSelect("SELECT * FROM genres");
 
                     foreach (DataRow row in dataTable.Rows)
                         MangaSearch_Genres.Items.Add(row["genres_genre"], false);
@@ -3516,7 +3382,7 @@ namespace AniDBClient.Forms
 
                 if (DataSQL_Tables.Items.Count == 0 || force)
                 {
-                    DataTable Tabulky = DatabaseSelect("SELECT * FROM MSysObjects WHERE (((MSysObjects.Type)=1)) ORDER BY MSysObjects.Name");
+                    DataTable Tabulky = db.DatabaseSelect("SELECT * FROM MSysObjects WHERE (((MSysObjects.Type)=1)) ORDER BY MSysObjects.Name");
 
                     foreach (DataRow row in Tabulky.Rows)
                         if (!row["Name"].ToString().Contains("MSys"))
@@ -3936,7 +3802,7 @@ namespace AniDBClient.Forms
                 LogTasks.Items.Add(Task);
                 StatusBar_Mn02.Text = LogTasks.Items.Count.ToString();
 
-                DatabaseAdd("INSERT INTO task (task_task) VALUES ('" + Task + "')");
+                db.DatabaseAdd("INSERT INTO task (task_task) VALUES ('" + Task + "')");
             }
         }
 
@@ -4177,7 +4043,7 @@ namespace AniDBClient.Forms
                     if ((e.UserState.ToString() == "Receive" && ComunicationW_DataReceive != "") || AniDBStatus == AniDbMsgs.A_ACCESS_DENIED)
                     {
                         CRessetCount = 0;
-                        DatabaseAdd("DELETE FROM task WHERE task_task='" + ComunicationW_Task + "'");
+                        db.DatabaseAdd("DELETE FROM task WHERE task_task='" + ComunicationW_Task + "'");
                         LogTasks.Items.Remove(ComunicationW_Task);
                         StatusBar_Mn02.Text = LogTasks.Items.Count.ToString();
                     }
@@ -4281,7 +4147,7 @@ namespace AniDBClient.Forms
                                 string fid = ComunicationW_DataSend.Replace("MYLISTDEL fid=", "");
 
                                 if (fid != "")
-                                    DatabaseAdd("UPDATE files SET files_source='', files_storage='', files_watched=0, files_lid=0, files_other='', files_status=0, files_state=0 WHERE id_files=" + fid);
+                                    db.DatabaseAdd("UPDATE files SET files_source='', files_storage='', files_watched=0, files_lid=0, files_other='', files_status=0, files_state=0 WHERE id_files=" + fid);
                             }
                         }
 
@@ -4298,7 +4164,7 @@ namespace AniDBClient.Forms
                                 fid = fid.Replace("&", "");
 
                                 if (fid != "")
-                                    DatabaseAdd("UPDATE files SET files_other='', files_state=0, files_dateAdded=#" + DatumFormat(new DateTime(1, 1, 1, 0, 0, 0)) + "#, files_seen=#" + DatumFormat(new DateTime(1, 1, 1, 0, 0, 0)) + "#, files_watched=0, files_storage='', files_source='', files_status=0 WHERE id_files=" + fid);
+                                    db.DatabaseAdd("UPDATE files SET files_other='', files_state=0, files_dateAdded=#" + Database.DateFormat(new DateTime(1, 1, 1, 0, 0, 0)) + "#, files_seen=#" + Database.DateFormat(new DateTime(1, 1, 1, 0, 0, 0)) + "#, files_watched=0, files_storage='', files_source='', files_status=0 WHERE id_files=" + fid);
                             }
                         }
 
@@ -4309,7 +4175,7 @@ namespace AniDBClient.Forms
                                 string ed2k = Parse(ComunicationW_DataSend, "ed2k=", "&", false);
 
                                 if (ed2k != "")
-                                    DatabaseAdd("UPDATE files SET id_files=-1 WHERE files_ed2k='" + ed2k + "'");
+                                    db.DatabaseAdd("UPDATE files SET id_files=-1 WHERE files_ed2k='" + ed2k + "'");
                             }
                         }
 
@@ -4393,42 +4259,42 @@ namespace AniDBClient.Forms
                 if (T[15] != "N" && T[15] == "")
                     T[15] = "None.jpg";
 
-                DataTable dataTable = DatabaseSelect("SELECT * FROM anime WHERE id_anime=" + T[0]);
+                DataTable dataTable = db.DatabaseSelect("SELECT * FROM anime WHERE id_anime=" + T[0]);
 
                 if (dataTable.Rows.Count == 0)
                 {
                     if (ComunicationW_DataReceive.Contains("|N|N|N|N|N|N|N|N"))
                     {
-                        DatabaseAdd("INSERT INTO anime (id_anime, anime_rok, anime_typ, anime_nazevjap, anime_nazevkaj, anime_nazeveng, anime_watched, anime_seen, anime_rating, anime_18, anime_epn_spec, anime_epn) VALUES (" + T[0] + ", '" + T[1] + "', '" + T[2] + "', '" + T[6] + "', '" + T[7] + "', '" + T[8] + "', 0, #" + DatumFormat(new DateTime(2000, 1, 1)) + "#, 0, 0, 0, 0)");
+                        db.DatabaseAdd("INSERT INTO anime (id_anime, anime_rok, anime_typ, anime_nazevjap, anime_nazevkaj, anime_nazeveng, anime_watched, anime_seen, anime_rating, anime_18, anime_epn_spec, anime_epn) VALUES (" + T[0] + ", '" + T[1] + "', '" + T[2] + "', '" + T[6] + "', '" + T[7] + "', '" + T[8] + "', 0, #" + Database.DateFormat(new DateTime(2000, 1, 1)) + "#, 0, 0, 0, 0)");
                         ComunicationNewTask("ANIME aid=" + T[0] + "&amask=BEE0FE01");
                     }
                     else
-                        DatabaseAdd("INSERT INTO anime (id_anime, anime_rok, anime_typ, anime_nazevjap, anime_nazevkaj, anime_nazeveng, anime_epn, anime_epn_spec, anime_date_air, anime_date_end, anime_url, anime_obr, anime_18, anime_watched) VALUES (" + T[0] + ", '" + T[1] + "', '" + T[2] + "', '" + T[6] + "', '" + T[7] + "', '" + T[8] + "', " + T[10] + ", " + T[11] + ", #" + DatumFormat(GetDateFromSeconds(T[13])) + "#, #" + DatumFormat(GetDateFromSeconds(T[12])) + "#, '" + T[14] + "', '" + T[15] + "', " + T[16] + ", 0)");
+                        db.DatabaseAdd("INSERT INTO anime (id_anime, anime_rok, anime_typ, anime_nazevjap, anime_nazevkaj, anime_nazeveng, anime_epn, anime_epn_spec, anime_date_air, anime_date_end, anime_url, anime_obr, anime_18, anime_watched) VALUES (" + T[0] + ", '" + T[1] + "', '" + T[2] + "', '" + T[6] + "', '" + T[7] + "', '" + T[8] + "', " + T[10] + ", " + T[11] + ", #" + Database.DateFormat(GetDateFromSeconds(T[13])) + "#, #" + Database.DateFormat(GetDateFromSeconds(T[12])) + "#, '" + T[14] + "', '" + T[15] + "', " + T[16] + ", 0)");
                 }
                 else
                 {
                     if (ComunicationW_DataReceive.Contains("|N|N|N|N|N|N|N|N"))
-                        DatabaseAdd("UPDATE anime SET anime_nazeveng='" + T[8] + "', anime_nazevkaj='" + T[7] + "', anime_nazevjap='" + T[6] + "', anime_typ='" + T[2] + "', anime_rok='" + T[1] + "' WHERE id_anime=" + T[0]);
+                        db.DatabaseAdd("UPDATE anime SET anime_nazeveng='" + T[8] + "', anime_nazevkaj='" + T[7] + "', anime_nazevjap='" + T[6] + "', anime_typ='" + T[2] + "', anime_rok='" + T[1] + "' WHERE id_anime=" + T[0]);
                     else
-                        DatabaseAdd("UPDATE anime SET anime_18=" + T[16] + ", anime_obr='" + T[15] + "', anime_url='" + T[14] + "', anime_date_end=#" + DatumFormat(GetDateFromSeconds(T[12])) + "#, anime_date_air=#" + DatumFormat(GetDateFromSeconds(T[13])) + "#, anime_epn_spec=" + T[11] + ", anime_epn=" + T[10] + ", anime_nazeveng='" + T[8] + "', anime_nazevkaj='" + T[7] + "', anime_nazevjap='" + T[6] + "', anime_typ='" + T[2] + "', anime_rok='" + T[1] + "' WHERE id_anime=" + T[0]);
+                        db.DatabaseAdd("UPDATE anime SET anime_18=" + T[16] + ", anime_obr='" + T[15] + "', anime_url='" + T[14] + "', anime_date_end=#" + Database.DateFormat(GetDateFromSeconds(T[12])) + "#, anime_date_air=#" + Database.DateFormat(GetDateFromSeconds(T[13])) + "#, anime_epn_spec=" + T[11] + ", anime_epn=" + T[10] + ", anime_nazeveng='" + T[8] + "', anime_nazevkaj='" + T[7] + "', anime_nazevjap='" + T[6] + "', anime_typ='" + T[2] + "', anime_rok='" + T[1] + "' WHERE id_anime=" + T[0]);
                 }
 
                 foreach (string Genre in TC)
                 {
                     if (Genre != "")
                     {
-                        dataTable = DatabaseSelect("SELECT * FROM genres WHERE genres_genre='" + Genre + "'");
+                        dataTable = db.DatabaseSelect("SELECT * FROM genres WHERE genres_genre='" + Genre + "'");
                         if (dataTable.Rows.Count == 0)
                         {
-                            DatabaseAdd("INSERT INTO genres (genres_genre) VALUES ('" + Genre + "')");
-                            dataTable = DatabaseSelect("SELECT * FROM genres WHERE genres_genre='" + Genre + "'");
+                            db.DatabaseAdd("INSERT INTO genres (genres_genre) VALUES ('" + Genre + "')");
+                            dataTable = db.DatabaseSelect("SELECT * FROM genres WHERE genres_genre='" + Genre + "'");
                         }
 
                         string id_genre = dataTable.Rows[0]["id_grenres"].ToString();
-                        dataTable = DatabaseSelect("SELECT * FROM genres_relations WHERE id_anime=" + T[0] + " AND id_genres=" + id_genre + "");
+                        dataTable = db.DatabaseSelect("SELECT * FROM genres_relations WHERE id_anime=" + T[0] + " AND id_genres=" + id_genre + "");
 
                         if (dataTable.Rows.Count == 0)
-                            DatabaseAdd("INSERT INTO genres_relations (id_anime, id_genres) VALUES (" + T[0] + ", " + id_genre + ")");
+                            db.DatabaseAdd("INSERT INTO genres_relations (id_anime, id_genres) VALUES (" + T[0] + ", " + id_genre + ")");
                     }
                 }
 
@@ -4437,10 +4303,10 @@ namespace AniDBClient.Forms
                     {
                         if (TR[i] != "" || TRT[i] != "")
                         {
-                            dataTable = DatabaseSelect("SELECT * FROM anime_relations WHERE id_anime=" + T[0] + " AND id_relation=" + TRT[i] + " AND id_anime_related=" + TR[i]);
+                            dataTable = db.DatabaseSelect("SELECT * FROM anime_relations WHERE id_anime=" + T[0] + " AND id_relation=" + TRT[i] + " AND id_anime_related=" + TR[i]);
 
                             if (dataTable.Rows.Count == 0)
-                                DatabaseAdd("INSERT INTO anime_relations (id_anime, id_relation, id_anime_related) VALUES (" + T[0] + ", " + TRT[i] + ", " + TR[i] + ")");
+                                db.DatabaseAdd("INSERT INTO anime_relations (id_anime, id_relation, id_anime_related) VALUES (" + T[0] + ", " + TRT[i] + ", " + TR[i] + ")");
                         }
                     }
             }
@@ -4493,13 +4359,13 @@ namespace AniDBClient.Forms
                     if (T[0] == "")
                         T[0] = "0";
 
-                    DataTable dataTable = DatabaseSelect("SELECT * FROM files WHERE id_files=" + T[1]);
+                    DataTable dataTable = db.DatabaseSelect("SELECT * FROM files WHERE id_files=" + T[1]);
                     if (dataTable.Rows.Count > 0)
-                        DatabaseAdd("UPDATE files SET files_watched=" + Watched + ", files_lid=" + T[0] + ", files_dateAdded=#" + DatumFormat(GetDateFromSeconds(T[5])) + "#, files_status=" + T[6] + ", files_other='" + T[10] + "', files_seen=#" + DatumFormat(GetDateFromSeconds(T[7])) + "#, files_source='" + T[9] + "', files_storage='" + T[8] + "' WHERE id_files=" + T[1]);
+                        db.DatabaseAdd("UPDATE files SET files_watched=" + Watched + ", files_lid=" + T[0] + ", files_dateAdded=#" + Database.DateFormat(GetDateFromSeconds(T[5])) + "#, files_status=" + T[6] + ", files_other='" + T[10] + "', files_seen=#" + Database.DateFormat(GetDateFromSeconds(T[7])) + "#, files_source='" + T[9] + "', files_storage='" + T[8] + "' WHERE id_files=" + T[1]);
                     else
                     {
-                        DatabaseAdd("INSERT INTO files (files_lid, files_status, files_other, files_source, files_storage, id_files, files_date) VALUES (" + T[0] + ", " + T[6] + ", '" + T[10] + "', '" + T[9] + "', '" + T[8] + "', " + T[1] + ", NOW())");
-                        DatabaseAdd("UPDATE files SET files_watched=" + Watched + ", files_lid=" + T[0] + ", files_dateAdded=#" + DatumFormat(GetDateFromSeconds(T[5])) + "#, files_status=" + T[6] + ", files_other='" + T[10] + "', files_seen=#" + DatumFormat(GetDateFromSeconds(T[7])) + "#, files_source='" + T[9] + "', files_storage='" + T[8] + "' WHERE id_files=" + T[1]);
+                        db.DatabaseAdd("INSERT INTO files (files_lid, files_status, files_other, files_source, files_storage, id_files, files_date) VALUES (" + T[0] + ", " + T[6] + ", '" + T[10] + "', '" + T[9] + "', '" + T[8] + "', " + T[1] + ", NOW())");
+                        db.DatabaseAdd("UPDATE files SET files_watched=" + Watched + ", files_lid=" + T[0] + ", files_dateAdded=#" + Database.DateFormat(GetDateFromSeconds(T[5])) + "#, files_status=" + T[6] + ", files_other='" + T[10] + "', files_seen=#" + Database.DateFormat(GetDateFromSeconds(T[7])) + "#, files_source='" + T[9] + "', files_storage='" + T[8] + "' WHERE id_files=" + T[1]);
                         ComunicationNewTask("FILE fid=" + T[1] + "&fmask=7FFAFFF9&amask=FEE0F0C1");
                     }
                 }
@@ -4631,13 +4497,13 @@ namespace AniDBClient.Forms
                     EpisodeSpec = "C";
                 }
 
-                DataTable DFile = DatabaseSelect("SELECT * FROM files WHERE files_ed2k='" + T[9] + "' AND files_size=" + T[8]);
-                DataTable dataTableIDFile = DatabaseSelect("SELECT * FROM files WHERE id_files=" + T[0]);
+                DataTable DFile = db.DatabaseSelect("SELECT * FROM files WHERE files_ed2k='" + T[9] + "' AND files_size=" + T[8]);
+                DataTable dataTableIDFile = db.DatabaseSelect("SELECT * FROM files WHERE id_files=" + T[0]);
 
                 if (DFile.Rows.Count == 0)
                 {
                     if (dataTableIDFile.Rows.Count == 0)
-                        DatabaseAdd("INSERT INTO files (files_ed2k, files_size, id_files, files_dateadded, files_date) VALUES ('" + T[9] + "', " + T[8] + ",  " + T[0] + ", NOW(), NOW())");
+                        db.DatabaseAdd("INSERT INTO files (files_ed2k, files_size, id_files, files_dateadded, files_date) VALUES ('" + T[9] + "', " + T[8] + ",  " + T[0] + ", NOW(), NOW())");
                 }
                 else
                 {
@@ -4647,24 +4513,24 @@ namespace AniDBClient.Forms
 
 
                     if (T[27] == "" && z != "")
-                        DatabaseAdd("UPDATE files SET files_anidb_name='" + z + "' WHERE id_files_local=" + DFile.Rows[0]["id_files_local"].ToString());
+                        db.DatabaseAdd("UPDATE files SET files_anidb_name='" + z + "' WHERE id_files_local=" + DFile.Rows[0]["id_files_local"].ToString());
 
                     if (T[22] == "" && x != "")
-                        DatabaseAdd("UPDATE files SET files_dub='" + x + "' WHERE id_files_local=" + DFile.Rows[0]["id_files_local"].ToString());
+                        db.DatabaseAdd("UPDATE files SET files_dub='" + x + "' WHERE id_files_local=" + DFile.Rows[0]["id_files_local"].ToString());
 
                     if (T[23] == "" && y != "")
-                        DatabaseAdd("UPDATE files SET files_sub='" + y + "' WHERE id_files_local=" + DFile.Rows[0]["id_files_local"].ToString());
+                        db.DatabaseAdd("UPDATE files SET files_sub='" + y + "' WHERE id_files_local=" + DFile.Rows[0]["id_files_local"].ToString());
                 }
 
-                DatabaseAdd("UPDATE files SET files_depth='" + T[13] + "', files_sha1='" + T[11] + "', files_date_air=#" + DatumFormat(GetDateFromSeconds(T[26])) + "#, files_anidb_name='" + T[27].Replace("'", "''") + "', files_biterate_audio=" + T[17] + ", files_biterate_video=" + T[19] + ", files_extension='" + T[21] + "', files_lenght=" + T[24] + ", id_files=" + T[0] + ", id_episodes=" + T[2] + ", id_anime=" + T[1] + ", id_groups=" + T[3] + ", files_lid=" + T[4] + ", files_crc32='" + T[12] + "', files_md5='" + T[10] + "', files_dub='" + T[22] + "', files_sub='" + T[23] + "', files_quality='" + T[14].Replace("'", "''") + "', files_audio='" + T[16].Replace("'", "''") + "', files_video='" + T[18] + "', files_resultion='" + T[20] + "', files_typ='" + T[15] + "', files_state=" + T[7] + " WHERE files_ed2k='" + T[9] + "' AND files_size=" + T[8]);
+                db.DatabaseAdd("UPDATE files SET files_depth='" + T[13] + "', files_sha1='" + T[11] + "', files_date_air=#" + Database.DateFormat(GetDateFromSeconds(T[26])) + "#, files_anidb_name='" + T[27].Replace("'", "''") + "', files_biterate_audio=" + T[17] + ", files_biterate_video=" + T[19] + ", files_extension='" + T[21] + "', files_lenght=" + T[24] + ", id_files=" + T[0] + ", id_episodes=" + T[2] + ", id_anime=" + T[1] + ", id_groups=" + T[3] + ", files_lid=" + T[4] + ", files_crc32='" + T[12] + "', files_md5='" + T[10] + "', files_dub='" + T[22] + "', files_sub='" + T[23] + "', files_quality='" + T[14].Replace("'", "''") + "', files_audio='" + T[16].Replace("'", "''") + "', files_video='" + T[18] + "', files_resultion='" + T[20] + "', files_typ='" + T[15] + "', files_state=" + T[7] + " WHERE files_ed2k='" + T[9] + "' AND files_size=" + T[8]);
 
                 if (dataTableIDFile.Rows.Count == 0 && Options_DetectMyListStatusCheckBox.Checked)
                     ComunicationNewTask("MYLIST fid=" + T[0]);
 
-                dataTable = DatabaseSelect("SELECT * FROM groups WHERE id_groups=" + T[3]);
+                dataTable = db.DatabaseSelect("SELECT * FROM groups WHERE id_groups=" + T[3]);
 
                 if (dataTable.Rows.Count == 0)
-                    DatabaseAdd("INSERT INTO groups (id_groups, groups_name, groups_namezk) VALUES (" + T[3] + ", '" + T[42] + "', '" + T[43] + "')");
+                    db.DatabaseAdd("INSERT INTO groups (id_groups, groups_name, groups_namezk) VALUES (" + T[3] + ", '" + T[42] + "', '" + T[43] + "')");
 
                 List<int> Episodes = new List<int>();
                 string[] EpisodesO = T[38].Split(',');
@@ -4732,7 +4598,7 @@ namespace AniDBClient.Forms
                 int LenghtM = Convert.ToInt32(T[24]) / 60;
                 int AnimeEpn = 0;
 
-                dataTable = DatabaseSelect("SELECT anime_epn FROM anime WHERE id_anime=" + T[1]);
+                dataTable = db.DatabaseSelect("SELECT anime_epn FROM anime WHERE id_anime=" + T[1]);
                 if (dataTable.Rows.Count > 0)
                     AnimeEpn = Convert.ToInt32(dataTable.Rows[0]["anime_epn"].ToString());
 
@@ -4742,7 +4608,7 @@ namespace AniDBClient.Forms
                     {
                         ComunicationNewTask("ANIME aid=" + T[1] + "&amask=BEE0FE01");
 
-                        dataTable = DatabaseSelect("SELECT * FROM episodes WHERE id_anime=" + T[1]);
+                        dataTable = db.DatabaseSelect("SELECT * FROM episodes WHERE id_anime=" + T[1]);
 
                         List<string> Epizody = new List<string>();
 
@@ -4754,12 +4620,12 @@ namespace AniDBClient.Forms
                                 ComunicationNewTask("EPISODE aid=" + T[1] + "&epno=" + j.ToString());
                     }
 
-                    dataTable = DatabaseSelect("SELECT * FROM episodes WHERE id_episodes=" + T[2] + " AND episodes_epn=" + Episodes[i].ToString());
+                    dataTable = db.DatabaseSelect("SELECT * FROM episodes WHERE id_episodes=" + T[2] + " AND episodes_epn=" + Episodes[i].ToString());
 
                     if (dataTable.Rows.Count == 0)
-                        DatabaseAdd("INSERT INTO episodes (episodes_epn, episodes_nazeveng, episodes_nazevkan, episodes_nazevjap, id_anime, episodes_spec, id_episodes, episodes_lenght) VALUES (" + Episodes[i].ToString() + ", '" + T[39] + "',  '" + T[41] + "', '" + T[40] + "', " + T[1] + ", '" + EpisodeSpec + "', " + T[2] + ", " + LenghtM + ")");
+                        db.DatabaseAdd("INSERT INTO episodes (episodes_epn, episodes_nazeveng, episodes_nazevkan, episodes_nazevjap, id_anime, episodes_spec, id_episodes, episodes_lenght) VALUES (" + Episodes[i].ToString() + ", '" + T[39] + "',  '" + T[41] + "', '" + T[40] + "', " + T[1] + ", '" + EpisodeSpec + "', " + T[2] + ", " + LenghtM + ")");
                     else
-                        DatabaseAdd("UPDATE episodes SET episodes_lenght=" + LenghtM + ", episodes_nazeveng='" + T[39] + "', episodes_nazevkan='" + T[41] + "', episodes_nazevjap='" + T[40] + "', id_anime=" + T[1] + ", episodes_spec='" + EpisodeSpec + "' WHERE id_episodes=" + T[2]);
+                        db.DatabaseAdd("UPDATE episodes SET episodes_lenght=" + LenghtM + ", episodes_nazeveng='" + T[39] + "', episodes_nazevkan='" + T[41] + "', episodes_nazevjap='" + T[40] + "', id_anime=" + T[1] + ", episodes_spec='" + EpisodeSpec + "' WHERE id_episodes=" + T[2]);
                 }
 
                 if (Options_AutoAddToMyListCheckBox.Checked)
@@ -4852,13 +4718,13 @@ namespace AniDBClient.Forms
                     EpisodeSpec = "C";
                 }
 
-                DataTable dataTable = DatabaseSelect("SELECT * FROM episodes WHERE id_episodes=" + T[0]);
+                DataTable dataTable = db.DatabaseSelect("SELECT * FROM episodes WHERE id_episodes=" + T[0]);
                 if (dataTable.Rows.Count > 0)
-                    DatabaseAdd("UPDATE episodes SET episodes_spec='" + EpisodeSpec + "', episodes_epn='" + T[5] + "', episodes_nazeveng='" + T[6] + "', episodes_nazevjap='" + T[7] + "', episodes_nazevkan='" + T[8] + "', episodes_lenght=" + T[2] + ", episodes_rating=" + T[3] + ", episodes_votes=" + T[4] + ", episodes_date=#" + DatumFormat(GetDateFromSeconds(T[9])) + "# WHERE id_episodes=" + T[0]);
+                    db.DatabaseAdd("UPDATE episodes SET episodes_spec='" + EpisodeSpec + "', episodes_epn='" + T[5] + "', episodes_nazeveng='" + T[6] + "', episodes_nazevjap='" + T[7] + "', episodes_nazevkan='" + T[8] + "', episodes_lenght=" + T[2] + ", episodes_rating=" + T[3] + ", episodes_votes=" + T[4] + ", episodes_date=#" + Database.DateFormat(GetDateFromSeconds(T[9])) + "# WHERE id_episodes=" + T[0]);
                 else
                 {
-                    DatabaseAdd("INSERT INTO episodes (id_episodes, id_anime, episodes_epn, episodes_nazeveng, episodes_nazevkan, episodes_nazevjap, episodes_spec, episodes_lenght, episodes_rating, episodes_votes) VALUES (" + T[0] + ", " + T[1] + ", " + T[5] + ", '" + T[6] + "', '" + T[8] + "', '" + T[7] + "', '" + EpisodeSpec + "', " + T[2] + ", '" + T[3] + "', '" + T[4] + "')");
-                    DatabaseAdd("UPDATE episodes SET episodes_date=#" + DatumFormat(GetDateFromSeconds(T[9])) + "# WHERE id_episodes=" + T[0]);
+                    db.DatabaseAdd("INSERT INTO episodes (id_episodes, id_anime, episodes_epn, episodes_nazeveng, episodes_nazevkan, episodes_nazevjap, episodes_spec, episodes_lenght, episodes_rating, episodes_votes) VALUES (" + T[0] + ", " + T[1] + ", " + T[5] + ", '" + T[6] + "', '" + T[8] + "', '" + T[7] + "', '" + EpisodeSpec + "', " + T[2] + ", '" + T[3] + "', '" + T[4] + "')");
+                    db.DatabaseAdd("UPDATE episodes SET episodes_date=#" + Database.DateFormat(GetDateFromSeconds(T[9])) + "# WHERE id_episodes=" + T[0]);
                 }
             }
             else
@@ -4900,7 +4766,7 @@ namespace AniDBClient.Forms
                 else
                     T[3] = T[3].Replace("B", "MB");
 
-                DatabaseAdd("UPDATE mylist_anidb SET mylist_anidb_anime='" + T[0] + "', mylist_anidb_epn='" + T[1] + "', mylist_anidb_files='" + T[2] + "', mylist_anidb_filessize='" + T[3] + "', mylist_anidb_addanime='" + T[4] + "', mylist_anidb_addepn='" + T[5] + "', mylist_anidb_addfiles='" + T[6] + "', mylist_anidb_addgroups='" + T[7] + "', mylist_anidb_leech='" + T[8] + "%', mylist_anidb_glory='" + T[9] + "%', mylist_anidb_viewed='" + T[10] + "%', mylist_anidb_mylist='" + T[11] + "%', mylist_anidb_mylistviewed='" + T[12] + "%', mylist_anidb_mylistviewednum='" + T[13] + "', mylist_anidb_votes='" + T[14] + "', mylist_anidb_revies='" + T[15] + "', mylist_anidb_mylistviewedmin='" + T[16] + "' WHERE id_myslist_anidb=1");
+                db.DatabaseAdd("UPDATE mylist_anidb SET mylist_anidb_anime='" + T[0] + "', mylist_anidb_epn='" + T[1] + "', mylist_anidb_files='" + T[2] + "', mylist_anidb_filessize='" + T[3] + "', mylist_anidb_addanime='" + T[4] + "', mylist_anidb_addepn='" + T[5] + "', mylist_anidb_addfiles='" + T[6] + "', mylist_anidb_addgroups='" + T[7] + "', mylist_anidb_leech='" + T[8] + "%', mylist_anidb_glory='" + T[9] + "%', mylist_anidb_viewed='" + T[10] + "%', mylist_anidb_mylist='" + T[11] + "%', mylist_anidb_mylistviewed='" + T[12] + "%', mylist_anidb_mylistviewednum='" + T[13] + "', mylist_anidb_votes='" + T[14] + "', mylist_anidb_revies='" + T[15] + "', mylist_anidb_mylistviewedmin='" + T[16] + "' WHERE id_myslist_anidb=1");
             }
             else
                 logger.LogAddError("Input string isn't valid format: " + ComunicationW_DataReceive + ", Array lenght != 16");
@@ -5200,7 +5066,7 @@ namespace AniDBClient.Forms
                 {
                     string DSoubor = "N";
                     string DPath = "N";
-                    DataTable DFile = DatabaseSelectNoLog("SELECT * FROM files WHERE id_files=" + DFilesID);
+                    DataTable DFile = db.DatabaseSelectNoLog("SELECT * FROM files WHERE id_files=" + DFilesID);
 
                     if (Rules_FilesRulesRename_RenameRadioButton.Checked)
                         DSoubor = Rules_ParseFiles(DFilesID, true);
@@ -5263,7 +5129,7 @@ namespace AniDBClient.Forms
 
                             logger.LogAddError("RENAME > " + Soubor.FullName + " >> " + DPath + DSoubor + Soubor.Extension);
 
-                            DatabaseAdd("UPDATE files SET files_localfile='" + DPath.Replace("'", "''") + DSoubor.Replace("'", "''") + Soubor.Extension + "' WHERE id_files=" + DFilesID);
+                            db.DatabaseAdd("UPDATE files SET files_localfile='" + DPath.Replace("'", "''") + DSoubor.Replace("'", "''") + Soubor.Extension + "' WHERE id_files=" + DFilesID);
                         }
                         else
                         {
@@ -5326,11 +5192,11 @@ namespace AniDBClient.Forms
         //Aplikování pravidel pro přejmenování a přesun
         private string Rules_ParseFiles(string DFilesID, bool DFilesB)
         {
-            DataTable DFile = DatabaseSelectNoLog("SELECT * FROM files WHERE id_files=" + DFilesID);
-            DataTable DAnime = DatabaseSelectNoLog("SELECT * FROM anime WHERE id_anime=" + DFile.Rows[0]["id_anime"].ToString());
-            DataTable DEpisode = DatabaseSelectNoLog("SELECT * FROM episodes WHERE id_episodes=" + DFile.Rows[0]["id_episodes"].ToString());
-            DataTable DGroup = DatabaseSelectNoLog("SELECT * FROM groups WHERE id_groups=" + DFile.Rows[0]["id_groups"].ToString());
-            DataTable DGenres = DatabaseSelectNoLog("SELECT * FROM genres INNER JOIN genres_relations ON genres.id_grenres = genres_relations.id_genres WHERE id_anime=" + DFile.Rows[0]["id_anime"].ToString());
+            DataTable DFile = db.DatabaseSelectNoLog("SELECT * FROM files WHERE id_files=" + DFilesID);
+            DataTable DAnime = db.DatabaseSelectNoLog("SELECT * FROM anime WHERE id_anime=" + DFile.Rows[0]["id_anime"].ToString());
+            DataTable DEpisode = db.DatabaseSelectNoLog("SELECT * FROM episodes WHERE id_episodes=" + DFile.Rows[0]["id_episodes"].ToString());
+            DataTable DGroup = db.DatabaseSelectNoLog("SELECT * FROM groups WHERE id_groups=" + DFile.Rows[0]["id_groups"].ToString());
+            DataTable DGenres = db.DatabaseSelectNoLog("SELECT * FROM genres INNER JOIN genres_relations ON genres.id_grenres = genres_relations.id_genres WHERE id_anime=" + DFile.Rows[0]["id_anime"].ToString());
 
             DFile = Rules_ParseFilesChars(DFile);
             DAnime = Rules_ParseFilesChars(DAnime);
@@ -5347,7 +5213,7 @@ namespace AniDBClient.Forms
                     int DepnLE = DEpisode.Rows[0]["episodes_epn"].ToString().Length;
                     int DepnLEmax = -1;
 
-                    DataTable DepnMax = DatabaseSelect("SELECT Max(episodes.episodes_epn) FROM episodes GROUP BY episodes.id_anime HAVING (((episodes.id_anime)=" + DAnime.Rows[0]["id_anime"].ToString() + "))");
+                    DataTable DepnMax = db.DatabaseSelect("SELECT Max(episodes.episodes_epn) FROM episodes GROUP BY episodes.id_anime HAVING (((episodes.id_anime)=" + DAnime.Rows[0]["id_anime"].ToString() + "))");
                     DepnLEmax = DepnMax.Rows[0][0].ToString().Length;
 
                     if (DepnLEmax > DepnLA)
@@ -6799,15 +6665,15 @@ namespace AniDBClient.Forms
         //Export informací
         private void Rules_InfoE(string DFilesID)
         {
-            DataTable DFile = DatabaseSelectNoLog("SELECT * FROM files WHERE id_files=" + DFilesID);
+            DataTable DFile = db.DatabaseSelectNoLog("SELECT * FROM files WHERE id_files=" + DFilesID);
 
             FileInfo Soubor = new FileInfo(DFile.Rows[0]["files_localfile"].ToString());
             if (Soubor.Exists)
             {
-                DataTable DAnime = DatabaseSelectNoLog("SELECT * FROM anime WHERE id_anime=" + DFile.Rows[0]["id_anime"].ToString());
-                DataTable DEpisode = DatabaseSelectNoLog("SELECT * FROM episodes WHERE id_episodes=" + DFile.Rows[0]["id_episodes"].ToString());
-                DataTable DGroup = DatabaseSelectNoLog("SELECT * FROM groups WHERE id_groups=" + DFile.Rows[0]["id_groups"].ToString());
-                DataTable DGenres = DatabaseSelectNoLog("SELECT * FROM genres INNER JOIN genres_relations ON genres.id_grenres = genres_relations.id_genres WHERE id_anime=" + DFile.Rows[0]["id_anime"].ToString());
+                DataTable DAnime = db.DatabaseSelectNoLog("SELECT * FROM anime WHERE id_anime=" + DFile.Rows[0]["id_anime"].ToString());
+                DataTable DEpisode = db.DatabaseSelectNoLog("SELECT * FROM episodes WHERE id_episodes=" + DFile.Rows[0]["id_episodes"].ToString());
+                DataTable DGroup = db.DatabaseSelectNoLog("SELECT * FROM groups WHERE id_groups=" + DFile.Rows[0]["id_groups"].ToString());
+                DataTable DGenres = db.DatabaseSelectNoLog("SELECT * FROM genres INNER JOIN genres_relations ON genres.id_grenres = genres_relations.id_genres WHERE id_anime=" + DFile.Rows[0]["id_anime"].ToString());
 
                 string Drot = new FileInfo(DFile.Rows[0]["files_localfile"].ToString()).Directory.Root.FullName;
                 string Depn = "";
@@ -6995,7 +6861,7 @@ namespace AniDBClient.Forms
             {
                 string[] Id = (string[])DataFiles[0, DataFiles.SelectedRows[0].Index].Value;
 
-                DataTable DataFile = DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + Id[0]);
+                DataTable DataFile = db.DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + Id[0]);
 
                 if (DataFile.Rows.Count > 0)
                 {
@@ -7074,7 +6940,7 @@ namespace AniDBClient.Forms
                 foreach (DataGridViewRow Row in DataFiles.SelectedRows)
                 {
                     string[] Id = (string[])DataFiles[0, Row.Index].Value;
-                    DatabaseAdd("DELETE FROM files WHERE id_files_local=" + Id[0]);
+                    db.DatabaseAdd("DELETE FROM files WHERE id_files_local=" + Id[0]);
                 }
         }
 
@@ -7086,7 +6952,7 @@ namespace AniDBClient.Forms
             foreach (DataGridViewRow Row in DataFiles.SelectedRows)
             {
                 string[] Id = (string[])DataFiles[0, Row.Index].Value;
-                DataTable DFiles = DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + Id[0]);
+                DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + Id[0]);
 
                 if (Convert.ToInt32(DFiles.Rows[0]["id_anime"].ToString()) > 0)
                     ComunicationNewTask("ANIME aid=" + DFiles.Rows[0]["id_anime"].ToString() + "&amask=BEE0FE01");
@@ -7103,7 +6969,7 @@ namespace AniDBClient.Forms
             foreach (DataGridViewRow Row in DataFiles.SelectedRows)
             {
                 string[] Id = (string[])DataFiles[0, Row.Index].Value;
-                DataTable DFiles = DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + Id[0]);
+                DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + Id[0]);
 
                 if (Convert.ToInt32(DFiles.Rows[0]["id_episodes"].ToString()) > 0)
                     ComunicationNewTask("EPISODE eid=" + DFiles.Rows[0]["id_episodes"].ToString());
@@ -7122,7 +6988,7 @@ namespace AniDBClient.Forms
             foreach (DataGridViewRow Row in DataFiles.SelectedRows)
             {
                 string[] Id = (string[])DataFiles[0, Row.Index].Value;
-                DataTable DFiles = DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + Id[0]);
+                DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + Id[0]);
 
                 ComunicationNewTask("FILE size=" + DFiles.Rows[0]["files_size"].ToString() + "&ed2k=" + DFiles.Rows[0]["files_ed2k"].ToString() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
             }
@@ -7136,7 +7002,7 @@ namespace AniDBClient.Forms
             foreach (DataGridViewRow Row in DataFiles.SelectedRows)
             {
                 string[] Id = (string[])DataFiles[0, Row.Index].Value;
-                DataTable DFiles = DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + Id[0]);
+                DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + Id[0]);
 
                 if (Convert.ToInt32(DFiles.Rows[0]["id_files"].ToString()) > 0)
                     ComunicationNewTask("MYLIST fid=" + DFiles.Rows[0]["id_files"].ToString());
@@ -7623,7 +7489,7 @@ namespace AniDBClient.Forms
 
             if (SFD.ShowDialog() == DialogResult.OK)
             {
-                DataTable DFiles = DatabaseSelect("SELECT * FROM files ORDER BY files_localfile");
+                DataTable DFiles = db.DatabaseSelect("SELECT * FROM files ORDER BY files_localfile");
 
                 StreamWriter Zapis = new StreamWriter(SFD.FileName, false, Encoding.UTF8, 512);
 
@@ -7670,7 +7536,7 @@ namespace AniDBClient.Forms
 
             if (SFD.ShowDialog() == DialogResult.OK)
             {
-                DataTable DFiles = DatabaseSelect("SELECT * FROM files ORDER BY files_localfile");
+                DataTable DFiles = db.DatabaseSelect("SELECT * FROM files ORDER BY files_localfile");
 
                 StreamWriter Zapis = new StreamWriter(SFD.FileName, false, Encoding.UTF8);
 
@@ -7783,7 +7649,7 @@ namespace AniDBClient.Forms
             DataFilesTree_CH01.Visible = false;
             DataFilesTree_CH02.Visible = false;
 
-            DataTable DFiles = DatabaseSelect("SELECT * FROM (groups RIGHT JOIN (episodes RIGHT JOIN files ON episodes.id_episodes = files.id_episodes) ON  groups.id_groups = files.id_groups) INNER JOIN anime ON files.id_anime = anime.id_anime WHERE files.id_episodes IN (SELECT files.id_episodes FROM files GROUP BY files.id_episodes HAVING COUNT(files.id_episodes) > 1) ORDER BY CStr(anime.anime_nazevjap & '') ASC, episodes.episodes_epn ASC");
+            DataTable DFiles = db.DatabaseSelect("SELECT * FROM (groups RIGHT JOIN (episodes RIGHT JOIN files ON episodes.id_episodes = files.id_episodes) ON  groups.id_groups = files.id_groups) INNER JOIN anime ON files.id_anime = anime.id_anime WHERE files.id_episodes IN (SELECT files.id_episodes FROM files GROUP BY files.id_episodes HAVING COUNT(files.id_episodes) > 1) ORDER BY CStr(anime.anime_nazevjap & '') ASC, episodes.episodes_epn ASC");
 
             for (int i = 0; i < DFiles.Rows.Count; i++)
             {
@@ -7883,7 +7749,7 @@ namespace AniDBClient.Forms
                 string MOther = "";
                 string MWatched = "0";
 
-                DataTable DataFile = DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + DataFilesTree.SelectedNode.Name);
+                DataTable DataFile = db.DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + DataFilesTree.SelectedNode.Name);
 
                 if (DataFile.Rows.Count > 0)
                 {
@@ -7910,7 +7776,7 @@ namespace AniDBClient.Forms
                     if (myListAdd.Options_CH02.Checked)
                         MWatched = "1";
 
-                    DataTable DFile = DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + DataFilesTree.SelectedNode.Name);
+                    DataTable DFile = db.DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + DataFilesTree.SelectedNode.Name);
 
                     if (DFile.Rows.Count > 0)
                         ComunicationNewTask("MYLISTADD edit=1&fid=" + DFile.Rows[0]["id_files"] + "&source=" + MSource + "&storage=" + MStorage + "&other=" + MOther + "&state=" + MState + "&viewed=" + MWatched);
@@ -7926,7 +7792,7 @@ namespace AniDBClient.Forms
 
                 string[] Id = (string[])DataFiles[0, DataFiles.SelectedRows[0].Index].Value;
 
-                DataTable DataFile = DatabaseSelect("SELECT * FROM files WHERE id_anime=" + DataFilesTree.SelectedNode.Name);
+                DataTable DataFile = db.DatabaseSelect("SELECT * FROM files WHERE id_anime=" + DataFilesTree.SelectedNode.Name);
 
                 if (DataFile.Rows.Count > 0)
                 {
@@ -7953,7 +7819,7 @@ namespace AniDBClient.Forms
                     if (myListAdd.Options_CH02.Checked)
                         MWatched = "1";
 
-                    DataTable DFiles = DatabaseSelect("SELECT * FROM files WHERE id_anime=" + DataFilesTree.SelectedNode.Name);
+                    DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_anime=" + DataFilesTree.SelectedNode.Name);
 
                     foreach (DataRow Row in DFiles.Rows)
                         if (Row["files_lid"].ToString() != "0")
@@ -7969,13 +7835,13 @@ namespace AniDBClient.Forms
         {
             if (DataFilesTree.SelectedNode.Checked)
             {
-                DataTable DFile = DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + DataFilesTree.SelectedNode.Name);
+                DataTable DFile = db.DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + DataFilesTree.SelectedNode.Name);
 
                 ComunicationNewTask("MYLISTDEL fid=" + DFile.Rows[0]["id_files"]);
             }
             else if (DataFilesTree.SelectedNode.Name != null)
             {
-                DataTable DFiles = DatabaseSelect("SELECT * FROM files WHERE id_anime=" + DataFilesTree.SelectedNode.Name);
+                DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_anime=" + DataFilesTree.SelectedNode.Name);
 
                 foreach (DataRow Row in DFiles.Rows)
                     ComunicationNewTask("MYLISTDEL fid=" + Row["id_files"]);
@@ -7987,7 +7853,7 @@ namespace AniDBClient.Forms
         {
             if (DataFilesTree.SelectedNode.Checked)
             {
-                DataTable DFile = DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + DataFilesTree.SelectedNode.Name);
+                DataTable DFile = db.DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + DataFilesTree.SelectedNode.Name);
 
                 if (DFile.Rows[0]["files_lid"].ToString() != "0")
                     ComunicationNewTask("MYLISTADD edit=1&fid=" + DFile.Rows[0]["id_files"] + "&viewed=1");
@@ -7996,7 +7862,7 @@ namespace AniDBClient.Forms
             }
             else if (DataFilesTree.SelectedNode.Name != null)
             {
-                DataTable DFiles = DatabaseSelect("SELECT * FROM files WHERE id_anime=" + DataFilesTree.SelectedNode.Name);
+                DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_anime=" + DataFilesTree.SelectedNode.Name);
 
                 foreach (DataRow Row in DFiles.Rows)
                     if (Row["files_lid"].ToString() != "0")
@@ -8013,7 +7879,7 @@ namespace AniDBClient.Forms
 
             if (DataFilesTree.SelectedNode.Checked)
             {
-                DataTable DFiles = DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + DataFilesTree.SelectedNode.Name);
+                DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + DataFilesTree.SelectedNode.Name);
 
                 if (Convert.ToInt32(DFiles.Rows[0]["id_anime"].ToString()) > 0)
                     ComunicationNewTask("ANIME aid=" + DFiles.Rows[0]["id_anime"].ToString() + "&amask=BEE0FE01");
@@ -8033,7 +7899,7 @@ namespace AniDBClient.Forms
 
             if (DataFilesTree.SelectedNode.Checked)
             {
-                DataTable DFiles = DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + DataFilesTree.SelectedNode.Name);
+                DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + DataFilesTree.SelectedNode.Name);
 
                 if (Convert.ToInt32(DFiles.Rows[0]["id_episodes"].ToString()) > 0)
                     ComunicationNewTask("EPISODE eid=" + DFiles.Rows[0]["id_episodes"].ToString());
@@ -8044,7 +7910,7 @@ namespace AniDBClient.Forms
             }
             else if (DataFilesTree.SelectedNode.Name != null)
             {
-                DataTable DFiles = DatabaseSelect("SELECT * FROM files WHERE id_anime=" + DataFilesTree.SelectedNode.Name);
+                DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_anime=" + DataFilesTree.SelectedNode.Name);
 
                 for (int i = 0; i < DFiles.Rows.Count; i++)
                 {
@@ -8065,13 +7931,13 @@ namespace AniDBClient.Forms
 
             if (DataFilesTree.SelectedNode.Checked)
             {
-                DataTable DFiles = DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + DataFilesTree.SelectedNode.Name);
+                DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + DataFilesTree.SelectedNode.Name);
 
                 ComunicationNewTask("FILE size=" + DFiles.Rows[0]["files_size"].ToString() + "&ed2k=" + DFiles.Rows[0]["files_ed2k"].ToString() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
             }
             else if (DataFilesTree.SelectedNode.Name != null)
             {
-                DataTable DFiles = DatabaseSelect("SELECT * FROM files WHERE id_anime=" + DataFilesTree.SelectedNode.Name);
+                DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_anime=" + DataFilesTree.SelectedNode.Name);
 
                 for (int i = 0; i < DFiles.Rows.Count; i++)
                     ComunicationNewTask("FILE size=" + DFiles.Rows[i]["files_size"].ToString() + "&ed2k=" + DFiles.Rows[i]["files_ed2k"].ToString() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
@@ -8085,7 +7951,7 @@ namespace AniDBClient.Forms
 
             if (DataFilesTree.SelectedNode.Checked)
             {
-                DataTable DFiles = DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + DataFilesTree.SelectedNode.Name);
+                DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + DataFilesTree.SelectedNode.Name);
 
                 if (Convert.ToInt32(DFiles.Rows[0]["id_files"].ToString()) > 0)
                     ComunicationNewTask("MYLIST fid=" + DFiles.Rows[0]["id_files"].ToString());
@@ -8094,7 +7960,7 @@ namespace AniDBClient.Forms
             }
             else if (DataFilesTree.SelectedNode.Name != null)
             {
-                DataTable DFiles = DatabaseSelect("SELECT * FROM files WHERE id_anime=" + DataFilesTree.SelectedNode.Name);
+                DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_anime=" + DataFilesTree.SelectedNode.Name);
 
                 for (int i = 0; i < DFiles.Rows.Count; i++)
                 {
@@ -8123,13 +7989,13 @@ namespace AniDBClient.Forms
             if (DataFilesTree.SelectedNode.Checked)
             {
                 if (MessageBox.Show(Language.MessageBox_DeleteI, Language.MessageBox_Delete, MessageBoxButtons.YesNo) == DialogResult.Yes)
-                    DatabaseAdd("DELETE FROM files WHERE id_files_local=" + DataFilesTree.SelectedNode.Name);
+                    db.DatabaseAdd("DELETE FROM files WHERE id_files_local=" + DataFilesTree.SelectedNode.Name);
             }
 
             else if (DataFilesTree.SelectedNode.Name != null)
             {
                 if (MessageBox.Show(Language.MessageBox_DeleteI, Language.MessageBox_Delete, MessageBoxButtons.YesNo) == DialogResult.Yes)
-                    DatabaseAdd("DELETE FROM files WHERE id_anime=" + DataFilesTree.SelectedNode.Name);
+                    db.DatabaseAdd("DELETE FROM files WHERE id_anime=" + DataFilesTree.SelectedNode.Name);
             }
         }
 
@@ -8280,7 +8146,7 @@ namespace AniDBClient.Forms
                 foreach (DataGridViewRow Row in DataFiles.SelectedRows)
                 {
                     string[] Id = (string[])DataFiles[0, Row.Index].Value;
-                    DataTable DFiles = DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + Id[0]);
+                    DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + Id[0]);
 
                     if (File.Exists(DFiles.Rows[0]["files_localfile"].ToString()))
                     {
@@ -8356,7 +8222,7 @@ namespace AniDBClient.Forms
             foreach (DataGridViewRow Row in DataFiles.SelectedRows)
             {
                 string[] Id = (string[])DataFiles[0, Row.Index].Value;
-                DataTable DFiles = DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + Id[0]);
+                DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + Id[0]);
 
                 if (DFiles.Rows.Count > 0)
                     Nacti_Hash(DFiles.Rows[0]["files_localfile"].ToString());
@@ -8370,7 +8236,7 @@ namespace AniDBClient.Forms
             {
                 if (DataFilesTree.SelectedNode.Checked)
                 {
-                    DataTable DataFile = DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + DataFilesTree.SelectedNode.Name);
+                    DataTable DataFile = db.DatabaseSelect("SELECT * FROM files WHERE id_files_local=" + DataFilesTree.SelectedNode.Name);
 
                     if (DataFile.Rows.Count > 0)
                         Nacti_Hash(DataFile.Rows[0]["files_localfile"].ToString());
@@ -8378,7 +8244,7 @@ namespace AniDBClient.Forms
 
                 else if (DataFilesTree.SelectedNode.Name != null)
                 {
-                    DataTable DataFile = DatabaseSelect("SELECT * FROM files WHERE id_anime=" + DataFilesTree.SelectedNode.Name);
+                    DataTable DataFile = db.DatabaseSelect("SELECT * FROM files WHERE id_anime=" + DataFilesTree.SelectedNode.Name);
 
                     for (int i = 0; i < DataFile.Rows.Count; i++)
                         Nacti_Hash(DataFile.Rows[i]["files_localfile"].ToString());
@@ -8464,7 +8330,7 @@ namespace AniDBClient.Forms
             int k = 0;
             foreach (DataRow row in dataTable.Rows)
             {
-                DataTable dataTable2 = DatabaseSelect("SELECT files_size FROM files WHERE id_episodes=" + row["id_episodes"]);
+                DataTable dataTable2 = db.DatabaseSelect("SELECT files_size FROM files WHERE id_episodes=" + row["id_episodes"]);
 
                 int SUM = 0;
                 string SUMFilesSize = "-";
@@ -8848,7 +8714,7 @@ namespace AniDBClient.Forms
 
                     if (!WTF[1] && !WTF[2])
                     {
-                        DataTable DFiles = DatabaseSelect("SELECT * FROM files WHERE id_anime=" + DataAnime[3, Row.Index].Value.ToString());
+                        DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_anime=" + DataAnime[3, Row.Index].Value.ToString());
 
                         foreach (DataRow RowF in DFiles.Rows)
                             if (RowF["files_lid"].ToString() != "0")
@@ -8858,7 +8724,7 @@ namespace AniDBClient.Forms
                     }
                     else if (WTF[1] && !WTF[2])
                     {
-                        DataTable DFiles = DatabaseSelect("SELECT * FROM files WHERE id_episodes=" + DataAnime[3, Row.Index].Value.ToString());
+                        DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_episodes=" + DataAnime[3, Row.Index].Value.ToString());
 
                         foreach (DataRow RowF in DFiles.Rows)
                             if (RowF["files_lid"].ToString() != "0")
@@ -8888,7 +8754,7 @@ namespace AniDBClient.Forms
 
                 if (!WTF[1] && !WTF[2])
                 {
-                    DataTable DFiles = DatabaseSelect("SELECT * FROM files WHERE id_anime=" + DataAnime[3, Row.Index].Value.ToString());
+                    DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_anime=" + DataAnime[3, Row.Index].Value.ToString());
 
                     foreach (DataRow RowF in DFiles.Rows)
                         ComunicationNewTask("MYLISTDEL fid=" + RowF["id_files"]);
@@ -8896,7 +8762,7 @@ namespace AniDBClient.Forms
 
                 if (WTF[1] && !WTF[2])
                 {
-                    DataTable DFiles = DatabaseSelect("SELECT * FROM files WHERE id_episodes=" + DataAnime[3, Row.Index].Value.ToString());
+                    DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_episodes=" + DataAnime[3, Row.Index].Value.ToString());
 
                     foreach (DataRow RowF in DFiles.Rows)
                         ComunicationNewTask("MYLISTDEL fid=" + RowF["id_files"]);
@@ -8921,7 +8787,7 @@ namespace AniDBClient.Forms
 
                 if (!WTF[1] && !WTF[2])
                 {
-                    DataTable DFiles = DatabaseSelect("SELECT * FROM files WHERE id_anime=" + DataAnime[3, Row.Index].Value.ToString());
+                    DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_anime=" + DataAnime[3, Row.Index].Value.ToString());
 
                     foreach (DataRow RowF in DFiles.Rows)
                         if (RowF["files_lid"].ToString() != "0")
@@ -8932,7 +8798,7 @@ namespace AniDBClient.Forms
 
                 if (WTF[1] && !WTF[2])
                 {
-                    DataTable DFiles = DatabaseSelect("SELECT * FROM files WHERE id_episodes=" + DataAnime[3, Row.Index].Value.ToString());
+                    DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_episodes=" + DataAnime[3, Row.Index].Value.ToString());
 
                     foreach (DataRow RowF in DFiles.Rows)
                         if (RowF["files_lid"].ToString() != "0")
@@ -8967,7 +8833,7 @@ namespace AniDBClient.Forms
 
                 if (WTF[1] && !WTF[2])
                 {
-                    DataTable DEpisodes = DatabaseSelect("SELECT * FROM episodes WHERE id_episodes=" + DataAnime[3, Row.Index].Value.ToString());
+                    DataTable DEpisodes = db.DatabaseSelect("SELECT * FROM episodes WHERE id_episodes=" + DataAnime[3, Row.Index].Value.ToString());
 
                     ComunicationNewTask("ANIME aid=" + DEpisodes.Rows[0]["id_anime"].ToString() + "&amask=BEE0FE01");
                 }
@@ -8975,7 +8841,7 @@ namespace AniDBClient.Forms
                 if (!WTF[1] && WTF[2])
                 {
                     string[] Id = DataAnime[3, Row.Index].Value.ToString().Split('/');
-                    DataTable DFiles = DatabaseSelect("SELECT * FROM files WHERE id_files=" + Id[0]);
+                    DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_files=" + Id[0]);
 
                     ComunicationNewTask("ANIME aid=" + DFiles.Rows[0]["id_anime"].ToString() + "&amask=BEE0FE01");
                 }
@@ -8993,7 +8859,7 @@ namespace AniDBClient.Forms
 
                 if (!WTF[1] && !WTF[2])
                 {
-                    DataTable DEpisodes = DatabaseSelect("SELECT * FROM episodes WHERE id_anime=" + DataAnime[3, Row.Index].Value.ToString());
+                    DataTable DEpisodes = db.DatabaseSelect("SELECT * FROM episodes WHERE id_anime=" + DataAnime[3, Row.Index].Value.ToString());
 
                     for (int i = 0; i < DEpisodes.Rows.Count; i++)
                         ComunicationNewTask("EPISODE eid=" + DEpisodes.Rows[i]["id_episodes"].ToString());
@@ -9005,7 +8871,7 @@ namespace AniDBClient.Forms
                 if (!WTF[1] && WTF[2])
                 {
                     string[] Id = DataAnime[3, Row.Index].Value.ToString().Split('/');
-                    DataTable DFiles = DatabaseSelect("SELECT * FROM files WHERE id_files=" + Id[0]);
+                    DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_files=" + Id[0]);
 
                     for (int i = 0; i < DFiles.Rows.Count; i++)
                         ComunicationNewTask("EPISODE eid=" + DFiles.Rows[i]["id_episodes"].ToString());
@@ -9024,7 +8890,7 @@ namespace AniDBClient.Forms
 
                 if (!WTF[1] && !WTF[2])
                 {
-                    DataTable DFiles = DatabaseSelect("SELECT * FROM files WHERE id_anime=" + DataAnime[3, Row.Index].Value.ToString());
+                    DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_anime=" + DataAnime[3, Row.Index].Value.ToString());
 
                     for (int i = 0; i < DFiles.Rows.Count; i++)
                         ComunicationNewTask("FILE size=" + DFiles.Rows[i]["files_size"].ToString() + "&ed2k=" + DFiles.Rows[i]["files_ed2k"].ToString() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
@@ -9032,7 +8898,7 @@ namespace AniDBClient.Forms
 
                 if (WTF[1] && !WTF[2])
                 {
-                    DataTable DFiles = DatabaseSelect("SELECT * FROM files WHERE id_episodes=" + DataAnime[3, Row.Index].Value.ToString());
+                    DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_episodes=" + DataAnime[3, Row.Index].Value.ToString());
 
                     for (int i = 0; i < DFiles.Rows.Count; i++)
                         ComunicationNewTask("FILE size=" + DFiles.Rows[i]["files_size"].ToString() + "&ed2k=" + DFiles.Rows[i]["files_ed2k"].ToString() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
@@ -9041,7 +8907,7 @@ namespace AniDBClient.Forms
                 if (!WTF[1] && WTF[2])
                 {
                     string[] Id = DataAnime[3, Row.Index].Value.ToString().Split('/');
-                    DataTable DFiles = DatabaseSelect("SELECT * FROM files WHERE id_files=" + Id[0]);
+                    DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_files=" + Id[0]);
 
                     ComunicationNewTask("FILE size=" + DFiles.Rows[0]["files_size"].ToString() + "&ed2k=" + DFiles.Rows[0]["files_ed2k"].ToString() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
                 }
@@ -9059,7 +8925,7 @@ namespace AniDBClient.Forms
 
                 if (!WTF[1] && !WTF[2])
                 {
-                    DataTable DFiles = DatabaseSelect("SELECT * FROM files WHERE id_anime=" + DataAnime[3, Row.Index].Value.ToString());
+                    DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_anime=" + DataAnime[3, Row.Index].Value.ToString());
 
                     for (int i = 0; i < DFiles.Rows.Count; i++)
                         ComunicationNewTask("MYLIST fid=" + DFiles.Rows[i]["id_files"].ToString());
@@ -9067,7 +8933,7 @@ namespace AniDBClient.Forms
 
                 if (WTF[1] && !WTF[2])
                 {
-                    DataTable DFiles = DatabaseSelect("SELECT * FROM files WHERE id_episodes=" + DataAnime[3, Row.Index].Value.ToString());
+                    DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_episodes=" + DataAnime[3, Row.Index].Value.ToString());
 
                     for (int i = 0; i < DFiles.Rows.Count; i++)
                         ComunicationNewTask("MYLIST fid=" + DFiles.Rows[i]["id_files"].ToString());
@@ -9076,7 +8942,7 @@ namespace AniDBClient.Forms
                 if (!WTF[1] && WTF[2])
                 {
                     string[] Id = DataAnime[3, Row.Index].Value.ToString().Split('/');
-                    DataTable DFiles = DatabaseSelect("SELECT * FROM files WHERE id_files=" + Id[0]);
+                    DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_files=" + Id[0]);
 
                     ComunicationNewTask("MYLIST fid=" + DFiles.Rows[0]["id_files"].ToString());
                 }
@@ -9105,20 +8971,20 @@ namespace AniDBClient.Forms
 
                     if (!WTF[1] && !WTF[2])
                     {
-                        DatabaseAdd("DELETE FROM anime where id_anime=" + DataAnime[3, Row.Index].Value.ToString());
-                        DatabaseAdd("DELETE FROM episodes where id_anime=" + DataAnime[3, Row.Index].Value.ToString());
-                        DatabaseAdd("DELETE FROM files where id_anime=" + DataAnime[3, Row.Index].Value.ToString());
+                        db.DatabaseAdd("DELETE FROM anime where id_anime=" + DataAnime[3, Row.Index].Value.ToString());
+                        db.DatabaseAdd("DELETE FROM episodes where id_anime=" + DataAnime[3, Row.Index].Value.ToString());
+                        db.DatabaseAdd("DELETE FROM files where id_anime=" + DataAnime[3, Row.Index].Value.ToString());
                     }
 
                     if (WTF[1] && !WTF[2])
                     {
-                        DatabaseAdd("DELETE FROM episodes where id_episodes=" + DataAnime[3, Row.Index].Value.ToString());
-                        DatabaseAdd("DELETE FROM files where id_episodes=" + DataAnime[3, Row.Index].Value.ToString());
+                        db.DatabaseAdd("DELETE FROM episodes where id_episodes=" + DataAnime[3, Row.Index].Value.ToString());
+                        db.DatabaseAdd("DELETE FROM files where id_episodes=" + DataAnime[3, Row.Index].Value.ToString());
                     }
 
                     if (!WTF[1] && WTF[2])
                     {
-                        DatabaseAdd("DELETE FROM files where id_files=" + DataAnime[3, Row.Index].Value.ToString());
+                        db.DatabaseAdd("DELETE FROM files where id_files=" + DataAnime[3, Row.Index].Value.ToString());
                     }
                 }
         }
@@ -9135,12 +9001,12 @@ namespace AniDBClient.Forms
             Anime_Rel.Visible = false;
             Anime_RelDel.Visible = false;
 
-            DataTable DAnime = DatabaseSelect("SELECT * FROM anime WHERE id_anime=" + AnimeTree.SelectedNode.Name);
-            DataTable DGenres = DatabaseSelect("SELECT * FROM genres INNER JOIN genres_relations ON genres.id_grenres = genres_relations.id_genres WHERE id_anime=" + AnimeTree.SelectedNode.Name + " ORDER BY genres_genre");
-            DataTable DEpisodes = DatabaseSelect("SELECT * FROM episodes WHERE id_anime=" + AnimeTree.SelectedNode.Name + " ORDER BY episodes_spec ASC, episodes_epn ASC");
-            DataTable DRelations = DatabaseSelect("SELECT * FROM anime_relations INNER JOIN anime ON anime.id_anime=anime_relations.id_anime_related WHERE anime_relations.id_anime=" + AnimeTree.SelectedNode.Name + " ORDER BY id_relation");
-            DataTable DTags = DatabaseSelect("SELECT tags_name FROM tags_relation INNER JOIN tags ON tags.id_tags=tags_relation.id_tags WHERE id_anime=" + AnimeTree.SelectedNode.Name + " ORDER BY tags_name");
-            DataTable DManga = DatabaseSelect("SELECT manga_anime.id_manga, manga_nazevjap FROM manga_anime INNER JOIN manga On manga.id_manga=manga_anime.id_manga WHERE manga_anime.id_anime=" + AnimeTree.SelectedNode.Name);
+            DataTable DAnime = db.DatabaseSelect("SELECT * FROM anime WHERE id_anime=" + AnimeTree.SelectedNode.Name);
+            DataTable DGenres = db.DatabaseSelect("SELECT * FROM genres INNER JOIN genres_relations ON genres.id_grenres = genres_relations.id_genres WHERE id_anime=" + AnimeTree.SelectedNode.Name + " ORDER BY genres_genre");
+            DataTable DEpisodes = db.DatabaseSelect("SELECT * FROM episodes WHERE id_anime=" + AnimeTree.SelectedNode.Name + " ORDER BY episodes_spec ASC, episodes_epn ASC");
+            DataTable DRelations = db.DatabaseSelect("SELECT * FROM anime_relations INNER JOIN anime ON anime.id_anime=anime_relations.id_anime_related WHERE anime_relations.id_anime=" + AnimeTree.SelectedNode.Name + " ORDER BY id_relation");
+            DataTable DTags = db.DatabaseSelect("SELECT tags_name FROM tags_relation INNER JOIN tags ON tags.id_tags=tags_relation.id_tags WHERE id_anime=" + AnimeTree.SelectedNode.Name + " ORDER BY tags_name");
+            DataTable DManga = db.DatabaseSelect("SELECT manga_anime.id_manga, manga_nazevjap FROM manga_anime INNER JOIN manga On manga.id_manga=manga_anime.id_manga WHERE manga_anime.id_anime=" + AnimeTree.SelectedNode.Name);
 
             try
             {
@@ -9433,7 +9299,7 @@ namespace AniDBClient.Forms
         {
             try
             {
-                DataTable DAnime = DatabaseSelect("SELECT * FROM anime WHERE id_anime=" + AnimeTree.SelectedNode.Name);
+                DataTable DAnime = db.DatabaseSelect("SELECT * FROM anime WHERE id_anime=" + AnimeTree.SelectedNode.Name);
                 StreamReader Cti = new StreamReader(GlobalAdresar + @"Accounts\!imgs\" + DAnime.Rows[0]["anime_obr"].ToString());
 
                 Image img = Image.FromStream(Cti.BaseStream);
@@ -9512,7 +9378,7 @@ namespace AniDBClient.Forms
         //Spustit soubor
         private void AnimeData_PustiAnime(int RowIndex)
         {
-            DataTable Files = DatabaseSelect("SELECT * FROM files WHERE id_files=" + AnimeData[5, RowIndex].Value.ToString());
+            DataTable Files = db.DatabaseSelect("SELECT * FROM files WHERE id_files=" + AnimeData[5, RowIndex].Value.ToString());
 
             if (File.Exists(Files.Rows[0]["files_localfile"].ToString()))
                 Process.Start(Files.Rows[0]["files_localfile"].ToString());
@@ -9524,7 +9390,7 @@ namespace AniDBClient.Forms
             AnimeData[0, RowIndex].Value = new bool[2] { true, false };
             AnimeData[1, RowIndex].Value = Resources.i_Collapse;
 
-            DataTable dataTable = DatabaseSelect("SELECT * FROM files INNER JOIN groups ON groups.id_groups=files.id_groups WHERE id_episodes=" + AnimeData[5, RowIndex].Value.ToString());
+            DataTable dataTable = db.DatabaseSelect("SELECT * FROM files INNER JOIN groups ON groups.id_groups=files.id_groups WHERE id_episodes=" + AnimeData[5, RowIndex].Value.ToString());
 
             foreach (DataRow row in dataTable.Rows)
             {
@@ -9764,11 +9630,11 @@ namespace AniDBClient.Forms
 
                 if (!WTF[1])
                 {
-                    DataFile = DatabaseSelect("SELECT * FROM files WHERE id_episodes=" + AnimeData[5, AnimeData.SelectedRows[0].Index].Value.ToString());
+                    DataFile = db.DatabaseSelect("SELECT * FROM files WHERE id_episodes=" + AnimeData[5, AnimeData.SelectedRows[0].Index].Value.ToString());
                 }
                 else if (WTF[1])
                 {
-                    DataFile = DatabaseSelect("SELECT * FROM files WHERE id_files=" + AnimeData[5, AnimeData.SelectedRows[0].Index].Value.ToString());
+                    DataFile = db.DatabaseSelect("SELECT * FROM files WHERE id_files=" + AnimeData[5, AnimeData.SelectedRows[0].Index].Value.ToString());
                 }
 
                 if (DataFile.Rows.Count > 0)
@@ -9803,7 +9669,7 @@ namespace AniDBClient.Forms
 
                     if (!WTF[1])
                     {
-                        DataTable DFiles = DatabaseSelect("SELECT * FROM files WHERE id_episodes=" + AnimeData[5, Row.Index].Value.ToString());
+                        DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_episodes=" + AnimeData[5, Row.Index].Value.ToString());
 
                         foreach (DataRow RowF in DFiles.Rows)
                             if (RowF["files_lid"].ToString() != "0")
@@ -9813,7 +9679,7 @@ namespace AniDBClient.Forms
                     }
                     else if (WTF[1])
                     {
-                        DataTable DFiles = DatabaseSelect("SELECT * FROM files WHERE id_files=" + AnimeData[5, Row.Index].Value.ToString());
+                        DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_files=" + AnimeData[5, Row.Index].Value.ToString());
 
                         if (DFiles.Rows[0]["files_lid"].ToString() != "0")
                             ComunicationNewTask("MYLISTADD edit=1&fid=" + AnimeData[5, Row.Index].Value.ToString() + "&source=" + MSource + "&storage=" + MStorage + "&other=" + MOther + "&state=" + MState + "&viewed=" + MWatched);
@@ -9833,7 +9699,7 @@ namespace AniDBClient.Forms
 
                 if (!WTF[1])
                 {
-                    DataTable DFiles = DatabaseSelect("SELECT * FROM files WHERE id_episodes=" + AnimeData[5, Row.Index].Value.ToString());
+                    DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_episodes=" + AnimeData[5, Row.Index].Value.ToString());
 
                     foreach (DataRow RowF in DFiles.Rows)
                         ComunicationNewTask("MYLISTDEL fid=" + RowF["id_files"]);
@@ -9855,7 +9721,7 @@ namespace AniDBClient.Forms
 
                 if (WTF[1])
                 {
-                    DataTable DFiles = DatabaseSelect("SELECT * FROM files WHERE id_files=" + AnimeData[5, Row.Index].Value.ToString());
+                    DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_files=" + AnimeData[5, Row.Index].Value.ToString());
 
                     if (DFiles.Rows[0]["files_lid"].ToString() != "0")
                         ComunicationNewTask("MYLISTADD edit=1&fid=" + DFiles.Rows[0]["id_files"].ToString() + "&state=1&viewed=1");
@@ -9864,7 +9730,7 @@ namespace AniDBClient.Forms
                 }
                 else if (!WTF[1])
                 {
-                    DataTable DEpisodes = DatabaseSelect("SELECT * FROM files WHERE id_episodes=" + AnimeData[5, Row.Index].Value.ToString());
+                    DataTable DEpisodes = db.DatabaseSelect("SELECT * FROM files WHERE id_episodes=" + AnimeData[5, Row.Index].Value.ToString());
 
                     for (int i = 0; i < DEpisodes.Rows.Count; i++)
                     {
@@ -9887,13 +9753,13 @@ namespace AniDBClient.Forms
 
                     if (!WTF[1])
                     {
-                        DatabaseAdd("DELETE FROM episodes where id_episodes=" + AnimeData[5, Row.Index].Value.ToString());
-                        DatabaseAdd("DELETE FROM files where id_episodes=" + AnimeData[5, Row.Index].Value.ToString());
+                        db.DatabaseAdd("DELETE FROM episodes where id_episodes=" + AnimeData[5, Row.Index].Value.ToString());
+                        db.DatabaseAdd("DELETE FROM files where id_episodes=" + AnimeData[5, Row.Index].Value.ToString());
                     }
 
                     if (WTF[1])
                     {
-                        DatabaseAdd("DELETE FROM files where id_files=" + AnimeData[5, Row.Index].Value.ToString());
+                        db.DatabaseAdd("DELETE FROM files where id_files=" + AnimeData[5, Row.Index].Value.ToString());
                     }
                 }
         }
@@ -9903,7 +9769,7 @@ namespace AniDBClient.Forms
         {
             if (AnimeData.SelectedRows.Count > 0)
             {
-                DataTable Files = DatabaseSelect("SELECT * FROM files WHERE id_files=" + AnimeData[5, AnimeData.SelectedRows[0].Index].Value.ToString());
+                DataTable Files = db.DatabaseSelect("SELECT * FROM files WHERE id_files=" + AnimeData[5, AnimeData.SelectedRows[0].Index].Value.ToString());
 
                 if (Files.Rows.Count > 0)
                     if (File.Exists(Files.Rows[0]["files_localfile"].ToString()))
@@ -9925,14 +9791,14 @@ namespace AniDBClient.Forms
 
                 if (WTF[1])
                 {
-                    DataTable DFiles = DatabaseSelect("SELECT * FROM files WHERE id_files=" + AnimeData[5, Row.Index].Value.ToString());
+                    DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_files=" + AnimeData[5, Row.Index].Value.ToString());
 
                     if (DFiles.Rows.Count > 0)
                         Nacti_Hash(DFiles.Rows[0]["files_localfile"].ToString());
                 }
                 else if (!WTF[1])
                 {
-                    DataTable DEpisodes = DatabaseSelect("SELECT * FROM files WHERE id_episodes=" + AnimeData[5, Row.Index].Value.ToString());
+                    DataTable DEpisodes = db.DatabaseSelect("SELECT * FROM files WHERE id_episodes=" + AnimeData[5, Row.Index].Value.ToString());
 
                     for (int i = 0; i < DEpisodes.Rows.Count; i++)
                         Nacti_Hash(DEpisodes.Rows[i]["files_localfile"].ToString());
@@ -10022,7 +9888,7 @@ namespace AniDBClient.Forms
         //Refresh obrázku
         private void Anime_Img_DoubleClick(object sender, EventArgs e)
         {
-            DataTable DAnime = DatabaseSelect("SELECT * FROM anime WHERE id_anime=" + AnimeTree.SelectedNode.Name);
+            DataTable DAnime = db.DatabaseSelect("SELECT * FROM anime WHERE id_anime=" + AnimeTree.SelectedNode.Name);
 
             Anime_Img.BackgroundImage = new Bitmap(1, 1);
 
@@ -10079,7 +9945,7 @@ namespace AniDBClient.Forms
 
             List<int> Dily = new List<int>();
 
-            DataTable DAnime = DatabaseSelect("SELECT * FROM anime WHERE id_anime=" + AnimeTree.SelectedNode.Name);
+            DataTable DAnime = db.DatabaseSelect("SELECT * FROM anime WHERE id_anime=" + AnimeTree.SelectedNode.Name);
 
             int x = 0;
 
@@ -10091,7 +9957,7 @@ namespace AniDBClient.Forms
             {
             }
 
-            DataTable DEpisodes = DatabaseSelect("SELECT * FROM episodes WHERE id_anime=" + AnimeTree.SelectedNode.Name);
+            DataTable DEpisodes = db.DatabaseSelect("SELECT * FROM episodes WHERE id_anime=" + AnimeTree.SelectedNode.Name);
 
             for (int i = 0; i < DEpisodes.Rows.Count; i++)
             {
@@ -10116,7 +9982,7 @@ namespace AniDBClient.Forms
         {
             AnimeTree_Menu.Hide();
 
-            DataTable DFiles = DatabaseSelect("SELECT * FROM files WHERE id_anime=" + AnimeTree.SelectedNode.Name);
+            DataTable DFiles = db.DatabaseSelect("SELECT * FROM files WHERE id_anime=" + AnimeTree.SelectedNode.Name);
 
             for (int i = 0; i < DFiles.Rows.Count; i++)
                 ComunicationNewTask("FILE size=" + DFiles.Rows[i]["files_size"].ToString() + "&ed2k=" + DFiles.Rows[i]["files_ed2k"].ToString() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
@@ -10129,7 +9995,7 @@ namespace AniDBClient.Forms
 
             List<int> Dily = new List<int>();
 
-            DataTable DAnime = DatabaseSelect("SELECT * FROM anime WHERE id_anime=" + AnimeTree.SelectedNode.Name);
+            DataTable DAnime = db.DatabaseSelect("SELECT * FROM anime WHERE id_anime=" + AnimeTree.SelectedNode.Name);
 
             int x = 0;
 
@@ -10141,7 +10007,7 @@ namespace AniDBClient.Forms
             {
             }
 
-            DataTable DFiles = DatabaseSelect("SELECT * FROM files INNER JOIN episodes ON episodes.id_episodes=files.id_episodes WHERE files.id_anime=" + AnimeTree.SelectedNode.Name);
+            DataTable DFiles = db.DatabaseSelect("SELECT * FROM files INNER JOIN episodes ON episodes.id_episodes=files.id_episodes WHERE files.id_anime=" + AnimeTree.SelectedNode.Name);
 
             for (int i = 0; i < DFiles.Rows.Count; i++)
             {
@@ -10177,15 +10043,15 @@ namespace AniDBClient.Forms
         {
             if (MessageBox.Show(Language.MessageBox_Anime, "Anime", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                DataTable DAnime = DatabaseSelect("SELECT * FROM anime WHERE id_anime=" + AnimeTree.SelectedNode.Name);
+                DataTable DAnime = db.DatabaseSelect("SELECT * FROM anime WHERE id_anime=" + AnimeTree.SelectedNode.Name);
 
-                DatabaseAdd("DELETE FROM anime WHERE id_anime=" + AnimeTree.SelectedNode.Name);
-                DatabaseAdd("DELETE FROM anime_relations WHERE id_anime=" + AnimeTree.SelectedNode.Name);
-                DatabaseAdd("DELETE FROM anime_relations WHERE id_relation=" + AnimeTree.SelectedNode.Name);
-                DatabaseAdd("DELETE FROM episodes WHERE id_anime=" + AnimeTree.SelectedNode.Name);
-                DatabaseAdd("DELETE FROM files WHERE id_anime=" + AnimeTree.SelectedNode.Name);
-                DatabaseAdd("DELETE FROM genres_relations WHERE id_anime=" + AnimeTree.SelectedNode.Name);
-                DatabaseAdd("DELETE FROM manga_anime WHERE id_anime=" + AnimeTree.SelectedNode.Name);
+                db.DatabaseAdd("DELETE FROM anime WHERE id_anime=" + AnimeTree.SelectedNode.Name);
+                db.DatabaseAdd("DELETE FROM anime_relations WHERE id_anime=" + AnimeTree.SelectedNode.Name);
+                db.DatabaseAdd("DELETE FROM anime_relations WHERE id_relation=" + AnimeTree.SelectedNode.Name);
+                db.DatabaseAdd("DELETE FROM episodes WHERE id_anime=" + AnimeTree.SelectedNode.Name);
+                db.DatabaseAdd("DELETE FROM files WHERE id_anime=" + AnimeTree.SelectedNode.Name);
+                db.DatabaseAdd("DELETE FROM genres_relations WHERE id_anime=" + AnimeTree.SelectedNode.Name);
+                db.DatabaseAdd("DELETE FROM manga_anime WHERE id_anime=" + AnimeTree.SelectedNode.Name);
 
                 if (DAnime.Rows.Count > 0)
                     FileHelpers.FileDelete(GlobalAdresar + @"Accounts\!imgs\" + DAnime.Rows[0]["anime_obr"].ToString());
@@ -10231,30 +10097,30 @@ namespace AniDBClient.Forms
         //Přidání tagů
         private void Anime_BT01_Click(object sender, EventArgs e)
         {
-            DataTable DTags = DatabaseSelect("SELECT tags_name FROM tags_relation INNER JOIN tags ON tags.id_tags=tags_relation.id_tags WHERE id_anime=" + AnimeTree.SelectedNode.Name + " ORDER BY tags_name");
-            DataTable DT = DatabaseSelect("SELECT tags_name FROM tags");
+            DataTable DTags = db.DatabaseSelect("SELECT tags_name FROM tags_relation INNER JOIN tags ON tags.id_tags=tags_relation.id_tags WHERE id_anime=" + AnimeTree.SelectedNode.Name + " ORDER BY tags_name");
+            DataTable DT = db.DatabaseSelect("SELECT tags_name FROM tags");
 
             Tags Tag = new Tags(DT, DTags);
 
             if (Tag.ShowDialog() == DialogResult.OK)
             {
-                DatabaseAdd("DELETE FROM tags_relation WHERE id_anime=" + AnimeTree.SelectedNode.Name);
+                db.DatabaseAdd("DELETE FROM tags_relation WHERE id_anime=" + AnimeTree.SelectedNode.Name);
 
                 for (int i = 0; i < Tag.Tagy.Count; i++)
                 {
                     if (Tag.Tagy[i] != "")
                     {
-                        DT = DatabaseSelect("SELECT id_tags FROM tags WHERE tags_name='" + Tag.Tagy[i] + "'");
+                        DT = db.DatabaseSelect("SELECT id_tags FROM tags WHERE tags_name='" + Tag.Tagy[i] + "'");
 
                         if (DT.Rows.Count > 0)
                         {
-                            DatabaseAdd("INSERT INTO tags_relation (id_tags, id_anime) VALUES(" + DT.Rows[0]["id_tags"].ToString() + ", " + AnimeTree.SelectedNode.Name + ")");
+                            db.DatabaseAdd("INSERT INTO tags_relation (id_tags, id_anime) VALUES(" + DT.Rows[0]["id_tags"].ToString() + ", " + AnimeTree.SelectedNode.Name + ")");
                         }
                         else
                         {
-                            DatabaseAdd("INSERT INTO tags (tags_name) VALUES ('" + Tag.Tagy[i] + "')");
-                            DT = DatabaseSelect("SELECT id_tags FROM tags WHERE tags_name='" + Tag.Tagy[i] + "'");
-                            DatabaseAdd("INSERT INTO tags_relation (id_tags, id_anime) VALUES(" + DT.Rows[0]["id_tags"].ToString() + ", " + AnimeTree.SelectedNode.Name + ")");
+                            db.DatabaseAdd("INSERT INTO tags (tags_name) VALUES ('" + Tag.Tagy[i] + "')");
+                            DT = db.DatabaseSelect("SELECT id_tags FROM tags WHERE tags_name='" + Tag.Tagy[i] + "'");
+                            db.DatabaseAdd("INSERT INTO tags_relation (id_tags, id_anime) VALUES(" + DT.Rows[0]["id_tags"].ToString() + ", " + AnimeTree.SelectedNode.Name + ")");
                         }
                     }
                 }
@@ -10265,7 +10131,7 @@ namespace AniDBClient.Forms
         private void Anime_CB01_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataSearch.Rows.Clear();
-            DataTable DTA = DatabaseSelect("SELECT anime.* FROM (anime INNER JOIN genres_relations ON anime.id_anime=genres_relations.id_anime) INNER JOIN genres ON genres.id_grenres=genres_relations.id_genres WHERE genres_genre='" + Anime_CB01.Text.Replace("'", "''") + "' ORDER BY anime_nazevjap");
+            DataTable DTA = db.DatabaseSelect("SELECT anime.* FROM (anime INNER JOIN genres_relations ON anime.id_anime=genres_relations.id_anime) INNER JOIN genres ON genres.id_grenres=genres_relations.id_genres WHERE genres_genre='" + Anime_CB01.Text.Replace("'", "''") + "' ORDER BY anime_nazevjap");
 
             foreach (DataRow row in DTA.Rows)
             {
@@ -10289,7 +10155,7 @@ namespace AniDBClient.Forms
         {
             DataSearch.Rows.Clear();
 
-            DataTable DTA = DatabaseSelect("SELECT anime.* FROM (anime INNER JOIN tags_relation ON anime.id_anime=tags_relation.id_anime) INNER JOIN tags ON tags.id_tags=tags_relation.id_tags WHERE tags_name='" + Anime_CB02.Text.Replace("'", "''") + "' ORDER BY anime_nazevjap");
+            DataTable DTA = db.DatabaseSelect("SELECT anime.* FROM (anime INNER JOIN tags_relation ON anime.id_anime=tags_relation.id_anime) INNER JOIN tags ON tags.id_tags=tags_relation.id_tags WHERE tags_name='" + Anime_CB02.Text.Replace("'", "''") + "' ORDER BY anime_nazevjap");
 
             foreach (DataRow row in DTA.Rows)
             {
@@ -10332,7 +10198,7 @@ namespace AniDBClient.Forms
         //Vykresli hodnocení
         private void Anime_Rat_ValueChanged(object sender, EventArgs e)
         {
-            DatabaseAdd("UPDATE anime SET anime_rating=" + Anime_Rat.Value.ToString() + " WHERE id_anime=" + AnimeTree.SelectedNode.Name);
+            db.DatabaseAdd("UPDATE anime SET anime_rating=" + Anime_Rat.Value.ToString() + " WHERE id_anime=" + AnimeTree.SelectedNode.Name);
 
             Bitmap BMP = new Bitmap(Anime_RatImg.Width, Anime_RatImg.Height);
             using (Graphics g = Graphics.FromImage(BMP))
@@ -10370,7 +10236,7 @@ namespace AniDBClient.Forms
         //Shlednuto
         private void Anime_Seen_TextChanged(object sender, EventArgs e)
         {
-            DatabaseAdd("UPDATE anime SET anime_seen='" + Anime_Seen.Text + "' WHERE id_anime=" + AnimeTree.SelectedNode.Name);
+            db.DatabaseAdd("UPDATE anime SET anime_seen='" + Anime_Seen.Text + "' WHERE id_anime=" + AnimeTree.SelectedNode.Name);
         }
 
         //Relace
@@ -10389,27 +10255,27 @@ namespace AniDBClient.Forms
             List<string> AnimePreID = new List<string>();
             List<Rectangle> PicRec = new List<Rectangle>();
 
-            DT = DatabaseSelect("SELECT anime_date_end, anime_rok, anime_obr, anime_nazevjap, id_anime_related, anime.id_anime FROM anime_relations INNER JOIN anime ON anime.id_anime=anime_relations.id_anime_related WHERE anime_relations.id_anime=" + AnimeTree.SelectedNode.Name + " ORDER BY anime_rok");
+            DT = db.DatabaseSelect("SELECT anime_date_end, anime_rok, anime_obr, anime_nazevjap, id_anime_related, anime.id_anime FROM anime_relations INNER JOIN anime ON anime.id_anime=anime_relations.id_anime_related WHERE anime_relations.id_anime=" + AnimeTree.SelectedNode.Name + " ORDER BY anime_rok");
 
             for (int i = 0; i < DT.Rows.Count; i++)
             {
                 if (!AnimePreID.Contains(DT.Rows[i]["id_anime_related"].ToString()))
                 {
-                    AnimePre.Add(DatabaseSelect("SELECT anime_date_end, anime_rok, anime_obr, anime_nazevjap, id_anime_related, anime.id_anime FROM anime_relations INNER JOIN anime ON anime.id_anime=anime_relations.id_anime_related WHERE anime_relations.id_anime=" + DT.Rows[i]["id_anime_related"].ToString() + " ORDER BY anime_rok"));
-                    AnimePre.Add(DatabaseSelect("SELECT anime_date_end, anime_rok, anime_obr, anime_nazevjap, id_anime_related, anime.id_anime FROM anime_relations INNER JOIN anime ON anime.id_anime=anime_relations.id_anime_related WHERE anime_relations.id_anime_related=" + DT.Rows[i]["id_anime_related"].ToString() + " ORDER BY anime_rok"));
+                    AnimePre.Add(db.DatabaseSelect("SELECT anime_date_end, anime_rok, anime_obr, anime_nazevjap, id_anime_related, anime.id_anime FROM anime_relations INNER JOIN anime ON anime.id_anime=anime_relations.id_anime_related WHERE anime_relations.id_anime=" + DT.Rows[i]["id_anime_related"].ToString() + " ORDER BY anime_rok"));
+                    AnimePre.Add(db.DatabaseSelect("SELECT anime_date_end, anime_rok, anime_obr, anime_nazevjap, id_anime_related, anime.id_anime FROM anime_relations INNER JOIN anime ON anime.id_anime=anime_relations.id_anime_related WHERE anime_relations.id_anime_related=" + DT.Rows[i]["id_anime_related"].ToString() + " ORDER BY anime_rok"));
 
                     AnimePreID.Add(DT.Rows[i]["id_anime_related"].ToString());
                 }
             }
 
-            DT = DatabaseSelect("SELECT anime_date_end, anime_rok, anime_obr, anime_nazevjap, id_anime_related, anime.id_anime FROM anime_relations INNER JOIN anime ON anime.id_anime=anime_relations.id_anime_related WHERE anime_relations.id_anime_related=" + AnimeTree.SelectedNode.Name + " ORDER BY anime_rok");
+            DT = db.DatabaseSelect("SELECT anime_date_end, anime_rok, anime_obr, anime_nazevjap, id_anime_related, anime.id_anime FROM anime_relations INNER JOIN anime ON anime.id_anime=anime_relations.id_anime_related WHERE anime_relations.id_anime_related=" + AnimeTree.SelectedNode.Name + " ORDER BY anime_rok");
 
             for (int i = 0; i < DT.Rows.Count; i++)
             {
                 if (!AnimePreID.Contains(DT.Rows[i]["id_anime_related"].ToString()))
                 {
-                    AnimePre.Add(DatabaseSelect("SELECT anime_date_end, anime_rok, anime_obr, anime_nazevjap, id_anime_related, anime.id_anime FROM anime_relations INNER JOIN anime ON anime.id_anime=anime_relations.id_anime_related WHERE anime_relations.id_anime=" + DT.Rows[i]["id_anime_related"].ToString() + " ORDER BY anime_rok"));
-                    AnimePre.Add(DatabaseSelect("SELECT anime_date_end, anime_rok, anime_obr, anime_nazevjap, id_anime_related, anime.id_anime FROM anime_relations INNER JOIN anime ON anime.id_anime=anime_relations.id_anime_related WHERE anime_relations.id_anime_related=" + DT.Rows[i]["id_anime_related"].ToString() + " ORDER BY anime_rok"));
+                    AnimePre.Add(db.DatabaseSelect("SELECT anime_date_end, anime_rok, anime_obr, anime_nazevjap, id_anime_related, anime.id_anime FROM anime_relations INNER JOIN anime ON anime.id_anime=anime_relations.id_anime_related WHERE anime_relations.id_anime=" + DT.Rows[i]["id_anime_related"].ToString() + " ORDER BY anime_rok"));
+                    AnimePre.Add(db.DatabaseSelect("SELECT anime_date_end, anime_rok, anime_obr, anime_nazevjap, id_anime_related, anime.id_anime FROM anime_relations INNER JOIN anime ON anime.id_anime=anime_relations.id_anime_related WHERE anime_relations.id_anime_related=" + DT.Rows[i]["id_anime_related"].ToString() + " ORDER BY anime_rok"));
 
                     AnimePreID.Add(DT.Rows[i]["id_anime_related"].ToString());
                 }
@@ -10421,8 +10287,8 @@ namespace AniDBClient.Forms
                 {
                     if (!AnimePreID.Contains(AnimePre[j].Rows[i]["id_anime_related"].ToString()))
                     {
-                        AnimePre.Add(DatabaseSelect("SELECT anime_date_end, anime_rok, anime_obr, anime_nazevjap, id_anime_related, anime.id_anime FROM anime_relations INNER JOIN anime ON anime.id_anime=anime_relations.id_anime_related WHERE anime_relations.id_anime=" + AnimePre[j].Rows[i]["id_anime_related"].ToString() + " ORDER BY anime_rok"));
-                        AnimePre.Add(DatabaseSelect("SELECT anime_date_end, anime_rok, anime_obr, anime_nazevjap, id_anime_related, anime.id_anime FROM anime_relations INNER JOIN anime ON anime.id_anime=anime_relations.id_anime_related WHERE anime_relations.id_anime_related=" + AnimePre[j].Rows[i]["id_anime_related"].ToString() + " ORDER BY anime_rok"));
+                        AnimePre.Add(db.DatabaseSelect("SELECT anime_date_end, anime_rok, anime_obr, anime_nazevjap, id_anime_related, anime.id_anime FROM anime_relations INNER JOIN anime ON anime.id_anime=anime_relations.id_anime_related WHERE anime_relations.id_anime=" + AnimePre[j].Rows[i]["id_anime_related"].ToString() + " ORDER BY anime_rok"));
+                        AnimePre.Add(db.DatabaseSelect("SELECT anime_date_end, anime_rok, anime_obr, anime_nazevjap, id_anime_related, anime.id_anime FROM anime_relations INNER JOIN anime ON anime.id_anime=anime_relations.id_anime_related WHERE anime_relations.id_anime_related=" + AnimePre[j].Rows[i]["id_anime_related"].ToString() + " ORDER BY anime_rok"));
 
                         AnimePreID.Add(AnimePre[j].Rows[i]["id_anime_related"].ToString());
                     }
@@ -10435,8 +10301,8 @@ namespace AniDBClient.Forms
                 {
                     if (!AnimePreID.Contains(AnimePre[j].Rows[i]["id_anime_related"].ToString()))
                     {
-                        AnimePre.Add(DatabaseSelect("SELECT anime_date_end, anime_rok, anime_obr, anime_nazevjap, id_anime_related, anime.id_anime FROM anime_relations INNER JOIN anime ON anime.id_anime=anime_relations.id_anime_related WHERE anime_relations.id_anime=" + AnimePre[j].Rows[i]["id_anime_related"].ToString() + " ORDER BY anime_rok"));
-                        AnimePre.Add(DatabaseSelect("SELECT anime_date_end, anime_rok, anime_obr, anime_nazevjap, id_anime_related, anime.id_anime FROM anime_relations INNER JOIN anime ON anime.id_anime=anime_relations.id_anime_related WHERE anime_relations.id_anime_related=" + AnimePre[j].Rows[i]["id_anime_related"].ToString() + " ORDER BY anime_rok"));
+                        AnimePre.Add(db.DatabaseSelect("SELECT anime_date_end, anime_rok, anime_obr, anime_nazevjap, id_anime_related, anime.id_anime FROM anime_relations INNER JOIN anime ON anime.id_anime=anime_relations.id_anime_related WHERE anime_relations.id_anime=" + AnimePre[j].Rows[i]["id_anime_related"].ToString() + " ORDER BY anime_rok"));
+                        AnimePre.Add(db.DatabaseSelect("SELECT anime_date_end, anime_rok, anime_obr, anime_nazevjap, id_anime_related, anime.id_anime FROM anime_relations INNER JOIN anime ON anime.id_anime=anime_relations.id_anime_related WHERE anime_relations.id_anime_related=" + AnimePre[j].Rows[i]["id_anime_related"].ToString() + " ORDER BY anime_rok"));
 
                         AnimePreID.Add(AnimePre[j].Rows[i]["id_anime_related"].ToString());
                     }
@@ -10582,7 +10448,7 @@ namespace AniDBClient.Forms
                         {
                             NPanel PN = (NPanel)Cont;
 
-                            DT = DatabaseSelect("SELECT * FROM anime_relations WHERE anime_relations.id_anime=" + PN.Name + " ORDER BY id_relation");
+                            DT = db.DatabaseSelect("SELECT * FROM anime_relations WHERE anime_relations.id_anime=" + PN.Name + " ORDER BY id_relation");
 
                             for (int i = 0; i < DT.Rows.Count; i++)
                             {
@@ -10702,8 +10568,8 @@ namespace AniDBClient.Forms
         //Smazání relace
         private void Anime_RelDel_Click(object sender, EventArgs e)
         {
-            DatabaseSelect("DELETE FROM anime_relations WHERE id_anime=" + AnimeTree.SelectedNode.Name);
-            DatabaseSelect("DELETE FROM anime_relations WHERE id_anime_related=" + AnimeTree.SelectedNode.Name);
+            db.DatabaseSelect("DELETE FROM anime_relations WHERE id_anime=" + AnimeTree.SelectedNode.Name);
+            db.DatabaseSelect("DELETE FROM anime_relations WHERE id_anime_related=" + AnimeTree.SelectedNode.Name);
 
             AnimeTree_AfterSelect(null, null);
         }
@@ -10716,7 +10582,7 @@ namespace AniDBClient.Forms
 
             if (OFD.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                DataTable DT = DatabaseSelect("SELECT * FROM anime ORDER BY anime_nazevjap");
+                DataTable DT = db.DatabaseSelect("SELECT * FROM anime ORDER BY anime_nazevjap");
 
                 XmlDocument doc = new XmlDocument();
                 XmlNode docNode = doc.CreateXmlDeclaration("1.0", "UTF-8", null);
@@ -10874,7 +10740,7 @@ namespace AniDBClient.Forms
 
             if (OFD.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                DataTable DT = DatabaseSelect("SELECT * FROM anime ORDER BY anime_nazevjap");
+                DataTable DT = db.DatabaseSelect("SELECT * FROM anime ORDER BY anime_nazevjap");
 
                 StreamWriter Zapis = new StreamWriter(OFD.FileName, false, Encoding.UTF8);
                 Zapis.WriteLine("ID;JAP;KAJ;ENG;Year;Type;Episodes;Dub;Sub;Size;Storage;Source;DateAir;DateEnd;18+;Length;Watched;Rating;SeenDate;");
@@ -11032,7 +10898,7 @@ namespace AniDBClient.Forms
             DataGenres[0, RowIndex].Value = new bool[2] { true, false };
             DataGenres[1, RowIndex].Value = Resources.i_Collapse;
 
-            DataTable DAnimes = DatabaseSelect("SELECT anime.* FROM anime INNER JOIN genres_relations ON anime.id_anime = genres_relations.id_anime WHERE genres_relations.id_genres=" + DataGenres[2, RowIndex].Value.ToString() + " ORDER BY anime.anime_nazevjap");
+            DataTable DAnimes = db.DatabaseSelect("SELECT anime.* FROM anime INNER JOIN genres_relations ON anime.id_anime = genres_relations.id_anime WHERE genres_relations.id_genres=" + DataGenres[2, RowIndex].Value.ToString() + " ORDER BY anime.anime_nazevjap");
 
             foreach (DataRow row in DAnimes.Rows)
             {
@@ -11121,11 +10987,11 @@ namespace AniDBClient.Forms
             DataGroups[0, RowIndex].Value = new bool[2] { true, false };
             DataGroups[1, RowIndex].Value = Resources.i_Collapse;
 
-            DataTable DAnimesID = DatabaseSelect("SELECT anime.id_anime FROM (groups INNER JOIN files ON groups.id_groups = files.id_groups) INNER JOIN anime ON files.id_anime = anime.id_anime WHERE groups.id_groups=" + DataGroups[2, RowIndex].Value.ToString() + " GROUP BY anime.id_anime");
+            DataTable DAnimesID = db.DatabaseSelect("SELECT anime.id_anime FROM (groups INNER JOIN files ON groups.id_groups = files.id_groups) INNER JOIN anime ON files.id_anime = anime.id_anime WHERE groups.id_groups=" + DataGroups[2, RowIndex].Value.ToString() + " GROUP BY anime.id_anime");
 
             foreach (DataRow row in DAnimesID.Rows)
             {
-                DataTable DAnime = DatabaseSelect("SELECT * FROM anime WHERE id_anime=" + row["id_anime"]);
+                DataTable DAnime = db.DatabaseSelect("SELECT * FROM anime WHERE id_anime=" + row["id_anime"]);
                 DataRow rowS = DAnime.Rows[0];
 
                 DataGroups.Rows.Insert(RowIndex + 1, 1);
@@ -11250,9 +11116,9 @@ namespace AniDBClient.Forms
             if (SQL.Length > 6)
             {
                 if (SQL.Substring(0, 6) == "SELECT")
-                    dataTable = DatabaseSelect(SQL);
+                    dataTable = db.DatabaseSelect(SQL);
                 else
-                    dataTable = DatabaseSelect("SELECT anime.id_anime FROM (groups INNER JOIN (genres INNER JOIN ((anime INNER JOIN files ON anime.id_anime = files.id_anime) INNER JOIN genres_relations ON anime.id_anime = genres_relations.id_anime) ON genres.id_grenres = genres_relations.id_genres) ON groups.id_groups = files.id_groups) INNER JOIN episodes ON (anime.id_anime = episodes.id_anime) AND (files.id_episodes = episodes.id_episodes) WHERE " + SQL + " GROUP BY anime.id_anime");
+                    dataTable = db.DatabaseSelect("SELECT anime.id_anime FROM (groups INNER JOIN (genres INNER JOIN ((anime INNER JOIN files ON anime.id_anime = files.id_anime) INNER JOIN genres_relations ON anime.id_anime = genres_relations.id_anime) ON genres.id_grenres = genres_relations.id_genres) ON groups.id_groups = files.id_groups) INNER JOIN episodes ON (anime.id_anime = episodes.id_anime) AND (files.id_episodes = episodes.id_episodes) WHERE " + SQL + " GROUP BY anime.id_anime");
 
                 int i = 0;
 
@@ -11273,7 +11139,7 @@ namespace AniDBClient.Forms
                     if (SQL != "")
                     {
                         SQL = SQL.Substring(0, SQL.Length - 4);
-                        DataTable DTA = DatabaseSelect("SELECT * FROM anime WHERE " + SQL + " ORDER BY anime_nazevjap");
+                        DataTable DTA = db.DatabaseSelect("SELECT * FROM anime WHERE " + SQL + " ORDER BY anime_nazevjap");
 
                         foreach (DataRow row in DTA.Rows)
                         {
@@ -11281,7 +11147,7 @@ namespace AniDBClient.Forms
                             {
                                 List<bool> anoG = new List<bool>();
 
-                                DataTable DTAG = DatabaseSelect("SELECT genres_genre FROM genres, genres_relations WHERE genres.id_grenres=genres_relations.id_genres AND id_anime=" + row["id_anime"].ToString());
+                                DataTable DTAG = db.DatabaseSelect("SELECT genres_genre FROM genres, genres_relations WHERE genres.id_grenres=genres_relations.id_genres AND id_anime=" + row["id_anime"].ToString());
 
                                 for (int j = 0; j < DataSearch_Genres.Items.Count; j++)
                                 {
@@ -11381,7 +11247,7 @@ namespace AniDBClient.Forms
             foreach (string nazev in Na_Smazani)
             {
                 LogTasks.Items.Remove(nazev);
-                DatabaseAdd("DELETE FROM task WHERE task_task='" + nazev + "'");
+                db.DatabaseAdd("DELETE FROM task WHERE task_task='" + nazev + "'");
             }
             LogTasks.EndUpdate();
 
@@ -11396,7 +11262,7 @@ namespace AniDBClient.Forms
             LogTasks.BeginUpdate();
             LogTasks.Items.Clear();
             LogTasks.EndUpdate();
-            DatabaseAdd("DELETE FROM task");
+            db.DatabaseAdd("DELETE FROM task");
 
             StatusBar_Mn02.Text = LogTasks.Items.Count.ToString();
         }
@@ -11782,7 +11648,7 @@ namespace AniDBClient.Forms
                             Hash_TotalLenght += SouborF.Length;
 
                         Hash_Nazvy_Souboru.Items.Add(SouborF.FullName);
-                        DatabaseAdd("INSERT INTO hash_files (hash_files_file, hash_files_size) VALUES ('" + SouborF.FullName.ToString().Replace("'", "''") + "', '" + SouborF.Length + "')");
+                        db.DatabaseAdd("INSERT INTO hash_files (hash_files_file, hash_files_size) VALUES ('" + SouborF.FullName.ToString().Replace("'", "''") + "', '" + SouborF.Length + "')");
                     }
                 }
             }
@@ -11994,7 +11860,7 @@ namespace AniDBClient.Forms
             {
                 if (!Hash_JeSmazano)
                 {
-                    DatabaseAdd("DELETE FROM hash_files WHERE hash_files_file='" + Hash_Nazvy_Souboru.Items[0].ToString().Replace("'", "''") + "'");
+                    db.DatabaseAdd("DELETE FROM hash_files WHERE hash_files_file='" + Hash_Nazvy_Souboru.Items[0].ToString().Replace("'", "''") + "'");
 
                     FileInfo Soubor = new FileInfo(Hash_Nazvy_Souboru.Items[0].ToString());
                     InitializeComponentArgs(Hash_String + "*" + Soubor.FullName + "*" + Soubor.Length);
@@ -12030,7 +11896,7 @@ namespace AniDBClient.Forms
             }
             else
             {
-                DatabaseAdd("DELETE FROM hash_files WHERE hash_files_file='" + Hash_Nazvy_Souboru.Items[0].ToString().Replace("'", "''") + "'");
+                db.DatabaseAdd("DELETE FROM hash_files WHERE hash_files_file='" + Hash_Nazvy_Souboru.Items[0].ToString().Replace("'", "''") + "'");
 
                 Hash_Nazvy_Souboru.Items.RemoveAt(0);
                 Hash_Chyba = false;
@@ -12108,7 +11974,7 @@ namespace AniDBClient.Forms
             if (Hash_Nazvy_Souboru.Items.Count > 0 && !Hash_W.IsBusy)
             {
                 Hash_TotalLenght = 0;
-                DataTable DT = DatabaseSelect("SELECT hash_files_size FROM hash_files");
+                DataTable DT = db.DatabaseSelect("SELECT hash_files_size FROM hash_files");
 
                 for (int i = 0; i < DT.Rows.Count; i++)
                 {
@@ -12174,7 +12040,7 @@ namespace AniDBClient.Forms
                     try
                     {
                         Hash_Nazvy_Souboru.Items.Remove(Radek);
-                        DatabaseAdd("DELETE FROM hash_files WHERE hash_files_file='" + Radek.Replace("'", "''") + "'");
+                        db.DatabaseAdd("DELETE FROM hash_files WHERE hash_files_file='" + Radek.Replace("'", "''") + "'");
 
                         StreamReader Cti = new StreamReader(Soubor.FullName);
 
@@ -12192,13 +12058,13 @@ namespace AniDBClient.Forms
                                         if (T.Length > 1)
                                             if (File.Exists(Soubor.Directory + @"\" + CtiRadek.Replace(" " + T[T.Length - 1], "")))
                                             {
-                                                DataTable dataTable = DatabaseSelect("SELECT * FROM files WHERE files_crc32='" + T[T.Length - 1] + "'");
+                                                DataTable dataTable = db.DatabaseSelect("SELECT * FROM files WHERE files_crc32='" + T[T.Length - 1] + "'");
 
                                                 FileInfo CtiSoubor = new FileInfo(Soubor.Directory + @"\" + CtiRadek.Replace(" " + T[T.Length - 1], ""));
 
                                                 if (dataTable.Rows.Count == 1)
                                                 {
-                                                    DatabaseAdd("UPDATE files set files_size='" + CtiSoubor.Length + "', files_localfile='" + CtiSoubor.FullName.Replace("'", "''") + "' WHERE files_crc32='" + T[T.Length - 1] + "'");
+                                                    db.DatabaseAdd("UPDATE files set files_size='" + CtiSoubor.Length + "', files_localfile='" + CtiSoubor.FullName.Replace("'", "''") + "' WHERE files_crc32='" + T[T.Length - 1] + "'");
                                                     ComunicationNewTask("FILE size=" + CtiSoubor.Length + "&ed2k=" + dataTable.Rows[0]["files_ed2k"].ToString().ToLower() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
                                                 }
                                                 else if (Options_ExtensionList.Items.Contains(CtiSoubor.Extension.ToLower()))
@@ -12222,7 +12088,7 @@ namespace AniDBClient.Forms
                     try
                     {
                         Hash_Nazvy_Souboru.Items.Remove(Radek);
-                        DatabaseAdd("DELETE FROM hash_files WHERE hash_files_file='" + Radek.Replace("'", "''") + "'");
+                        db.DatabaseAdd("DELETE FROM hash_files WHERE hash_files_file='" + Radek.Replace("'", "''") + "'");
 
                         StreamReader Cti = new StreamReader(Soubor.FullName);
 
@@ -12240,13 +12106,13 @@ namespace AniDBClient.Forms
                                         if (T.Length == 2)
                                             if (File.Exists(Soubor.Directory + @"\" + T[1]))
                                             {
-                                                DataTable dataTable = DatabaseSelect("SELECT * FROM files WHERE files_md5='" + T[0].Replace(" ", "").ToLower() + "'");
+                                                DataTable dataTable = db.DatabaseSelect("SELECT * FROM files WHERE files_md5='" + T[0].Replace(" ", "").ToLower() + "'");
 
                                                 FileInfo CtiSoubor = new FileInfo(Soubor.Directory + @"\" + T[1]);
 
                                                 if (dataTable.Rows.Count == 1)
                                                 {
-                                                    DatabaseAdd("UPDATE files set files_size='" + CtiSoubor.Length + "', files_localfile='" + CtiSoubor.FullName.Replace("'", "''") + "' WHERE files_md5='" + T[0].Replace(" ", "").ToLower() + "'");
+                                                    db.DatabaseAdd("UPDATE files set files_size='" + CtiSoubor.Length + "', files_localfile='" + CtiSoubor.FullName.Replace("'", "''") + "' WHERE files_md5='" + T[0].Replace(" ", "").ToLower() + "'");
                                                     ComunicationNewTask("FILE size=" + CtiSoubor.Length + "&ed2k=" + dataTable.Rows[0]["files_ed2k"].ToString().ToLower() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
                                                 }
                                                 else if (Options_ExtensionList.Items.Contains(CtiSoubor.Extension.ToLower()))
@@ -12270,7 +12136,7 @@ namespace AniDBClient.Forms
                     try
                     {
                         Hash_Nazvy_Souboru.Items.Remove(Radek);
-                        DatabaseAdd("DELETE FROM hash_files WHERE hash_files_file='" + Radek.Replace("'", "''") + "'");
+                        db.DatabaseAdd("DELETE FROM hash_files WHERE hash_files_file='" + Radek.Replace("'", "''") + "'");
 
                         StreamReader Cti = new StreamReader(Soubor.FullName);
 
@@ -12288,13 +12154,13 @@ namespace AniDBClient.Forms
                                         if (T.Length > 4)
                                             if (File.Exists(Soubor.Directory + @"\" + T[2]))
                                             {
-                                                DataTable dataTable = DatabaseSelect("SELECT * FROM files WHERE files_ed2k='" + T[4].ToLower() + "'");
+                                                DataTable dataTable = db.DatabaseSelect("SELECT * FROM files WHERE files_ed2k='" + T[4].ToLower() + "'");
 
                                                 FileInfo CtiSoubor = new FileInfo(Soubor.Directory + @"\" + T[2]);
 
                                                 if (dataTable.Rows.Count == 1)
                                                 {
-                                                    DatabaseAdd("UPDATE files set files_size='" + CtiSoubor.Length + "', files_localfile='" + CtiSoubor.FullName.Replace("'", "''") + "' WHERE files_ed2k='" + T[4].ToLower() + "'");
+                                                    db.DatabaseAdd("UPDATE files set files_size='" + CtiSoubor.Length + "', files_localfile='" + CtiSoubor.FullName.Replace("'", "''") + "' WHERE files_ed2k='" + T[4].ToLower() + "'");
                                                     ComunicationNewTask("FILE size=" + CtiSoubor.Length + "&ed2k=" + dataTable.Rows[0]["files_ed2k"].ToString().ToLower() + "&fmask=7FFAFFF9&amask=FEE0F0C1");
                                                 }
                                                 else if (Options_ExtensionList.Items.Contains(CtiSoubor.Extension.ToLower()))
@@ -12316,7 +12182,7 @@ namespace AniDBClient.Forms
                     try
                     {
                         Hash_Nazvy_Souboru.Items.Remove(Radek);
-                        DatabaseAdd("DELETE FROM hash_files WHERE hash_files_file='" + Radek.Replace("'", "''") + "'");
+                        db.DatabaseAdd("DELETE FROM hash_files WHERE hash_files_file='" + Radek.Replace("'", "''") + "'");
 
                         StreamReader xmlCti = new StreamReader(Soubor.FullName);
 
@@ -12696,17 +12562,17 @@ namespace AniDBClient.Forms
 
                                 if (xmlTFile["dateviewed"] != "0")
                                 {
-                                    DatabaseAdd("UPDATE files SET files_seen=#" + DatumFormat(GetDateFromSeconds(xmlTFile["dateviewed"])) + "# WHERE id_files=" + xmlTFile["id"]);
+                                    db.DatabaseAdd("UPDATE files SET files_seen=#" + Database.DateFormat(GetDateFromSeconds(xmlTFile["dateviewed"])) + "# WHERE id_files=" + xmlTFile["id"]);
 
                                     files_watched = "1";
                                 }
 
                                 if (Categories.Contains("18 Restricted"))
-                                    DatabaseAdd("UPDATE anime SET anime_18=1 WHERE id_anime=" + xmlTAnime["id"]);
+                                    db.DatabaseAdd("UPDATE anime SET anime_18=1 WHERE id_anime=" + xmlTAnime["id"]);
 
-                                DatabaseAdd("UPDATE files SET files_storage='" + xmlTFile["storage"].Replace("'", "''") + "', files_watched=" + files_watched + " WHERE id_files=" + xmlTFile["id"]);
+                                db.DatabaseAdd("UPDATE files SET files_storage='" + xmlTFile["storage"].Replace("'", "''") + "', files_watched=" + files_watched + " WHERE id_files=" + xmlTFile["id"]);
 
-                                DataTable DFile = DatabaseSelect("SELECT * FROM files WHERE id_files=" + xmlTFile["id"]);
+                                DataTable DFile = db.DatabaseSelect("SELECT * FROM files WHERE id_files=" + xmlTFile["id"]);
                             }
                         }
 
@@ -12722,10 +12588,10 @@ namespace AniDBClient.Forms
                         string Airx = (TimeSpan.FromTicks(Air.Ticks - new DateTime(1970, 1, 1).Ticks).TotalSeconds).ToString();
                         string Endy = (TimeSpan.FromTicks(End.Ticks - new DateTime(1970, 1, 1).Ticks).TotalSeconds).ToString();
 
-                        DatabaseAdd("UPDATE anime SET anime_epn=" + xmlTAnime["neps"] + ", anime_date_air=#" + DatumFormat(GetDateFromSeconds(Airx)) + "#, anime_date_end=#" + DatumFormat(GetDateFromSeconds(Endy)) + "# WHERE id_anime=" + xmlTAnime["id"]);
+                        db.DatabaseAdd("UPDATE anime SET anime_epn=" + xmlTAnime["neps"] + ", anime_date_air=#" + Database.DateFormat(GetDateFromSeconds(Airx)) + "#, anime_date_end=#" + Database.DateFormat(GetDateFromSeconds(Endy)) + "# WHERE id_anime=" + xmlTAnime["id"]);
 
                         if (xmlTAnime["url"] != "")
-                            DatabaseAdd("UPDATE anime SET anime_url='" + xmlTAnime["url"].Replace("'", "''") + "' WHERE id_anime=" + xmlTAnime["id"]);
+                            db.DatabaseAdd("UPDATE anime SET anime_url='" + xmlTAnime["url"].Replace("'", "''") + "' WHERE id_anime=" + xmlTAnime["id"]);
 
                         xmlCti.Close();
                     }
@@ -12753,7 +12619,7 @@ namespace AniDBClient.Forms
                                     Convert.ToInt32(T[0]);
                                     Convert.ToInt32(T[1]);
 
-                                    DatabaseAdd("UPDATE files SET files_lid=" + T[0] + " WHERE id_files=" + T[1]);
+                                    db.DatabaseAdd("UPDATE files SET files_lid=" + T[0] + " WHERE id_files=" + T[1]);
                                 }
                                 catch
                                 {
@@ -12791,7 +12657,7 @@ namespace AniDBClient.Forms
 
             foreach (int Radek in List)
             {
-                DatabaseAdd("DELETE FROM hash_files WHERE hash_files_file='" + Hash_Nazvy_Souboru.Items[Radek - k].ToString().Replace("'", "''") + "'");
+                db.DatabaseAdd("DELETE FROM hash_files WHERE hash_files_file='" + Hash_Nazvy_Souboru.Items[Radek - k].ToString().Replace("'", "''") + "'");
                 Hash_Nazvy_Souboru.Items.RemoveAt(Radek - k);
                 k++;
             }
@@ -12802,7 +12668,7 @@ namespace AniDBClient.Forms
         //Vymazat vše
         private void Hash_DeleteAll_Click(object sender, EventArgs e)
         {
-            DatabaseAdd("DELETE FROM hash_files");
+            db.DatabaseAdd("DELETE FROM hash_files");
             Hash_Nazvy_Souboru.Items.Clear();
             Hash_Check();
         }
@@ -12941,7 +12807,7 @@ namespace AniDBClient.Forms
 
             DataSQL.Rows.Clear();
 
-            DataSQL.DataSource = DatabaseSelect(DataSQL_Text.Text.Replace("'", "''"));
+            DataSQL.DataSource = db.DatabaseSelect(DataSQL_Text.Text.Replace("'", "''"));
 
             if (!DataSQL_Text.Items.Contains(DataSQL_Text.Text))
                 DataSQL_Text.Items.Add(DataSQL_Text.Text);
@@ -12955,7 +12821,7 @@ namespace AniDBClient.Forms
         {
             DataSQL_Columns.Items.Clear();
 
-            DataTable Sloupce = DatabaseSelect("SELECT TOP 1 * FROM " + DataSQL_Tables.Items[DataSQL_Tables.SelectedIndex]);
+            DataTable Sloupce = db.DatabaseSelect("SELECT TOP 1 * FROM " + DataSQL_Tables.Items[DataSQL_Tables.SelectedIndex]);
 
             foreach (DataColumn col in Sloupce.Columns)
                 DataSQL_Columns.Items.Add(col.ColumnName);
@@ -13063,7 +12929,7 @@ namespace AniDBClient.Forms
                 if (!Watcher_List.Items.Contains(path))
                 {
                     Watcher_List.Items.Add(path);
-                    DatabaseAdd("INSERT INTO watcher (watcher_path) VALUES ('" + path.Replace("'", "''") + "')");
+                    db.DatabaseAdd("INSERT INTO watcher (watcher_path) VALUES ('" + path.Replace("'", "''") + "')");
                 }
             }
         }
@@ -13073,7 +12939,7 @@ namespace AniDBClient.Forms
         {
             if (Watcher_List.SelectedIndex >= 0 && Watcher_List.SelectedIndex < Watcher_List.Items.Count)
             {
-                DatabaseAdd("DELETE FROM watcher WHERE watcher_path='" + Watcher_List.Items[Watcher_List.SelectedIndex].ToString().Replace("'", "''") + "'");
+                db.DatabaseAdd("DELETE FROM watcher WHERE watcher_path='" + Watcher_List.Items[Watcher_List.SelectedIndex].ToString().Replace("'", "''") + "'");
                 Watcher_List.Items.RemoveAt(Watcher_List.SelectedIndex);
             }
         }
@@ -13081,7 +12947,7 @@ namespace AniDBClient.Forms
         //Sputit hlídky
         private void Watcher_Run()
         {
-            DataTable DWatcher = DatabaseSelect("SELECT * FROM watcher");
+            DataTable DWatcher = db.DatabaseSelect("SELECT * FROM watcher");
 
             foreach (DataRow row in DWatcher.Rows)
                 Watcher_List.Items.Add(row["watcher_path"].ToString());
@@ -13115,10 +12981,10 @@ namespace AniDBClient.Forms
                 {
                     if (File.Exists(e.FullPath))
                     {
-                        DataTable DFile = DatabaseSelect("SELECT * FROM files WHERE files_localfile='" + Watcher_SouborOldM.FullName.Replace("'", "''") + "'");
+                        DataTable DFile = db.DatabaseSelect("SELECT * FROM files WHERE files_localfile='" + Watcher_SouborOldM.FullName.Replace("'", "''") + "'");
 
                         if (DFile.Rows.Count > 0)
-                            DatabaseAdd("UPDATE files SET files_localfile='" + e.FullPath.Replace("'", "''") + "' WHERE files_localfile='" + Watcher_SouborOldM.FullName.Replace("'", "''") + "'");
+                            db.DatabaseAdd("UPDATE files SET files_localfile='" + e.FullPath.Replace("'", "''") + "' WHERE files_localfile='" + Watcher_SouborOldM.FullName.Replace("'", "''") + "'");
                         else
                             Nacti_Hash(e.FullPath);
                     }
@@ -13150,13 +13016,13 @@ namespace AniDBClient.Forms
                 {
                     if (File.Exists(Watcher_SouborOldR.FullName))
                     {
-                        DataTable DFile = DatabaseSelect("SELECT * FROM files WHERE files_localfile='" + e.FullPath.Replace("'", "''") + "'");
+                        DataTable DFile = db.DatabaseSelect("SELECT * FROM files WHERE files_localfile='" + e.FullPath.Replace("'", "''") + "'");
 
                         if (DFile.Rows.Count > 0)
                         {
-                            DatabaseAdd("UPDATE files SET files_localfile='" + Watcher_SouborOldR.FullName.Replace("'", "''") + "' WHERE files_localfile='" + e.FullPath.Replace("'", "''") + "'");
+                            db.DatabaseAdd("UPDATE files SET files_localfile='" + Watcher_SouborOldR.FullName.Replace("'", "''") + "' WHERE files_localfile='" + e.FullPath.Replace("'", "''") + "'");
                             Hash_Nazvy_Souboru.Items.Remove(Watcher_SouborOldR.FullName);
-                            DatabaseAdd("DELETE FROM hash_files WHERE hash_files_file='" + Watcher_SouborOldR.FullName.Replace("'", "''") + "'");
+                            db.DatabaseAdd("DELETE FROM hash_files WHERE hash_files_file='" + Watcher_SouborOldR.FullName.Replace("'", "''") + "'");
                         }
                         else
                             Nacti_Hash(e.FullPath);
@@ -13179,10 +13045,10 @@ namespace AniDBClient.Forms
         {
             if (File.Exists(e.FullPath))
             {
-                DataTable DFile = DatabaseSelect("SELECT * FROM files WHERE files_localfile='" + e.OldFullPath.Replace("'", "''") + "'");
+                DataTable DFile = db.DatabaseSelect("SELECT * FROM files WHERE files_localfile='" + e.OldFullPath.Replace("'", "''") + "'");
 
                 if (DFile.Rows.Count > 0)
-                    DatabaseAdd("UPDATE files SET files_localfile='" + e.FullPath.Replace("'", "''") + "' WHERE files_localfile='" + e.OldFullPath.Replace("'", "''") + "'");
+                    db.DatabaseAdd("UPDATE files SET files_localfile='" + e.FullPath.Replace("'", "''") + "' WHERE files_localfile='" + e.OldFullPath.Replace("'", "''") + "'");
                 else
                     Nacti_Hash(e.FullPath);
             }
@@ -13193,11 +13059,11 @@ namespace AniDBClient.Forms
         //Vybrání mangy
         private void Manga_Tree_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            DataTable DManga = DatabaseSelect("SELECT * FROM manga WHERE id_manga=" + Manga_Tree.SelectedNode.Name);
-            DataTable DGenres = DatabaseSelect("SELECT * FROM manga_genres INNER JOIN genres ON genres.id_grenres=manga_genres.id_genres WHERE manga_genres.id_manga=" + Manga_Tree.SelectedNode.Name);
-            DataTable DChapters = DatabaseSelect("SELECT manga_chatpers_volume FROM manga_chapters WHERE id_manga=" + Manga_Tree.SelectedNode.Name + " GROUP BY manga_chatpers_volume ORDER BY manga_chatpers_volume ASC");
-            DataTable DAnime = DatabaseSelect("SELECT manga_anime.id_anime, anime_nazevjap FROM manga_anime INNER JOIN anime On anime.id_anime=manga_anime.id_anime WHERE id_manga=" + Manga_Tree.SelectedNode.Name);
-            DataTable DMangaRel = DatabaseSelect("SELECT manga_relations.id_manga_related, manga_nazevjap FROM manga_relations INNER JOIN manga On manga.id_manga=manga_relations.id_manga_related WHERE manga_relations.id_manga=" + Manga_Tree.SelectedNode.Name);
+            DataTable DManga = db.DatabaseSelect("SELECT * FROM manga WHERE id_manga=" + Manga_Tree.SelectedNode.Name);
+            DataTable DGenres = db.DatabaseSelect("SELECT * FROM manga_genres INNER JOIN genres ON genres.id_grenres=manga_genres.id_genres WHERE manga_genres.id_manga=" + Manga_Tree.SelectedNode.Name);
+            DataTable DChapters = db.DatabaseSelect("SELECT manga_chatpers_volume FROM manga_chapters WHERE id_manga=" + Manga_Tree.SelectedNode.Name + " GROUP BY manga_chatpers_volume ORDER BY manga_chatpers_volume ASC");
+            DataTable DAnime = db.DatabaseSelect("SELECT manga_anime.id_anime, anime_nazevjap FROM manga_anime INNER JOIN anime On anime.id_anime=manga_anime.id_anime WHERE id_manga=" + Manga_Tree.SelectedNode.Name);
+            DataTable DMangaRel = db.DatabaseSelect("SELECT manga_relations.id_manga_related, manga_nazevjap FROM manga_relations INNER JOIN manga On manga.id_manga=manga_relations.id_manga_related WHERE manga_relations.id_manga=" + Manga_Tree.SelectedNode.Name);
 
             Manga_Gr01.Text = DManga.Rows[0]["manga_nazevjap"].ToString();
 
@@ -13497,7 +13363,7 @@ namespace AniDBClient.Forms
             Manga_Data[0, RowIndex].Value = new int[3] { 1, 0, 0 };
             Manga_Data[1, RowIndex].Value = Resources.i_Collapse;
 
-            DataTable dataTable = DatabaseSelect("SELECT * FROM manga_chapters WHERE id_manga=" + Manga_Tree.SelectedNode.Name + " AND manga_chatpers_volume=" + Manga_Data[2, RowIndex].Value.ToString() + " ORDER BY manga_chatpers_chatper DESC");
+            DataTable dataTable = db.DatabaseSelect("SELECT * FROM manga_chapters WHERE id_manga=" + Manga_Tree.SelectedNode.Name + " AND manga_chatpers_volume=" + Manga_Data[2, RowIndex].Value.ToString() + " ORDER BY manga_chatpers_chatper DESC");
 
             foreach (DataRow row in dataTable.Rows)
             {
@@ -13557,7 +13423,7 @@ namespace AniDBClient.Forms
         private void Manga_CB01_SelectedIndexChanged(object sender, EventArgs e)
         {
             MangaSearch.Rows.Clear();
-            DataTable DTA = DatabaseSelect("SELECT manga.* FROM (manga INNER JOIN manga_genres ON manga.id_manga=manga_genres.id_manga) INNER JOIN genres ON genres.id_grenres=manga_genres.id_genres WHERE genres_genre='" + Manga_CB01.Text.Replace("'", "''") + "' ORDER BY manga_nazevjap");
+            DataTable DTA = db.DatabaseSelect("SELECT manga.* FROM (manga INNER JOIN manga_genres ON manga.id_manga=manga_genres.id_manga) INNER JOIN genres ON genres.id_grenres=manga_genres.id_genres WHERE genres_genre='" + Manga_CB01.Text.Replace("'", "''") + "' ORDER BY manga_nazevjap");
 
             foreach (DataRow row in DTA.Rows)
             {
@@ -13598,11 +13464,11 @@ namespace AniDBClient.Forms
         {
             if (Manga_Tx01.Text != "" && Manga_Tx00.Text == "0")
             {
-                DataTable DT = DatabaseSelect("SELECT id_manga FROM manga WHERE manga_nazevjap='" + Manga_Tx01.Text.Replace("'", "''") + "'");
+                DataTable DT = db.DatabaseSelect("SELECT id_manga FROM manga WHERE manga_nazevjap='" + Manga_Tx01.Text.Replace("'", "''") + "'");
 
                 if (DT.Rows.Count == 0)
                 {
-                    DT = DatabaseSelect("SELECT Max(id_manga) FROM manga");
+                    DT = db.DatabaseSelect("SELECT Max(id_manga) FROM manga");
 
                     int x18 = 0;
                     int ID = 0;
@@ -13682,7 +13548,7 @@ namespace AniDBClient.Forms
                         Manga_Tx22.Text = "http://" + Manga_Tx22.Text;
                     }
 
-                    DatabaseAdd("INSERT INTO manga VALUES (" + ID + ", '" + Manga_Tx01.Text.Replace("'", "''") + "', '" + Manga_Tx02.Text.Replace("'", "''") + "', '" + Manga_Tx03.Text.Replace("'", "''") + "', '" + Manga_Tx04.Text.Replace("'", "''") + "', '', " + x18 + ", " + Manga_Tx05.Text + ", " + Manga_Tx06.Text + ", " + Manga_Tx07.Text + ", '" + Manga_Tx18.Text + "', '" + Manga_Tx17.Text + "', '" + Manga_Tx22.Text + "', " + Manga_Tx23.Text + ", " + Manga_Tx24.Text + ")");
+                    db.DatabaseAdd("INSERT INTO manga VALUES (" + ID + ", '" + Manga_Tx01.Text.Replace("'", "''") + "', '" + Manga_Tx02.Text.Replace("'", "''") + "', '" + Manga_Tx03.Text.Replace("'", "''") + "', '" + Manga_Tx04.Text.Replace("'", "''") + "', '', " + x18 + ", " + Manga_Tx05.Text + ", " + Manga_Tx06.Text + ", " + Manga_Tx07.Text + ", '" + Manga_Tx18.Text + "', '" + Manga_Tx17.Text + "', '" + Manga_Tx22.Text + "', " + Manga_Tx23.Text + ", " + Manga_Tx24.Text + ")");
 
                     if (Manga_Tx08.Text == "")
                         Manga_Tx08.Text = MangaUrlObr;
@@ -13711,7 +13577,7 @@ namespace AniDBClient.Forms
                             img.Save(GlobalAdresar + @"\Accounts\!imgsm\" + ID.ToString() + ".jpg", System.Drawing.Imaging.ImageFormat.Jpeg);
 
 
-                            DatabaseAdd("UPDATE manga SET manga_obr='" + ID.ToString() + ".jpg' WHERE id_manga=" + ID.ToString());
+                            db.DatabaseAdd("UPDATE manga SET manga_obr='" + ID.ToString() + ".jpg' WHERE id_manga=" + ID.ToString());
                         }
                         catch
                         {
@@ -13730,10 +13596,10 @@ namespace AniDBClient.Forms
                     {
                         SQL = SQL.Substring(0, SQL.Length - 4);
 
-                        DataTable Genres = DatabaseSelect("SELECT * FROM genres WHERE " + SQL);
+                        DataTable Genres = db.DatabaseSelect("SELECT * FROM genres WHERE " + SQL);
 
                         for (int i = 0; i < Genres.Rows.Count; i++)
-                            DatabaseAdd("INSERT INTO manga_genres (id_genres, id_manga) VALUES (" + Genres.Rows[i]["id_grenres"] + ", " + ID.ToString() + ")");
+                            db.DatabaseAdd("INSERT INTO manga_genres (id_genres, id_manga) VALUES (" + Genres.Rows[i]["id_grenres"] + ", " + ID.ToString() + ")");
                     }
 
                     SQL = "";
@@ -13748,10 +13614,10 @@ namespace AniDBClient.Forms
                     {
                         SQL = SQL.Substring(0, SQL.Length - 4);
 
-                        DataTable Anime = DatabaseSelect("SELECT id_anime FROM anime WHERE " + SQL);
+                        DataTable Anime = db.DatabaseSelect("SELECT id_anime FROM anime WHERE " + SQL);
 
                         for (int i = 0; i < Anime.Rows.Count; i++)
-                            DatabaseAdd("INSERT INTO manga_anime (id_anime, id_manga) VALUES (" + Anime.Rows[i]["id_anime"] + ", " + ID.ToString() + ")");
+                            db.DatabaseAdd("INSERT INTO manga_anime (id_anime, id_manga) VALUES (" + Anime.Rows[i]["id_anime"] + ", " + ID.ToString() + ")");
                     }
 
                     SQL = "";
@@ -13766,10 +13632,10 @@ namespace AniDBClient.Forms
                     {
                         SQL = SQL.Substring(0, SQL.Length - 4);
 
-                        DataTable Manga = DatabaseSelect("SELECT id_manga FROM manga WHERE " + SQL);
+                        DataTable Manga = db.DatabaseSelect("SELECT id_manga FROM manga WHERE " + SQL);
 
                         for (int i = 0; i < Manga.Rows.Count; i++)
-                            DatabaseAdd("INSERT INTO manga_relations (id_manga, id_manga_related) VALUES (" + ID.ToString() + ", " + Manga.Rows[i]["id_manga"] + ")");
+                            db.DatabaseAdd("INSERT INTO manga_relations (id_manga, id_manga_related) VALUES (" + ID.ToString() + ", " + Manga.Rows[i]["id_manga"] + ")");
                     }
 
                     for (int i = 0; i < Manga_Genres.Items.Count; i++)
@@ -13813,9 +13679,9 @@ namespace AniDBClient.Forms
 
             MainTabManga.SelectedIndex = 1;
 
-            DataTable DGenres = DatabaseSelect("SELECT * FROM manga_genres INNER JOIN genres ON genres.id_grenres=manga_genres.id_genres WHERE manga_genres.id_manga=" + Manga_Tree.SelectedNode.Name);
-            DataTable DManga = DatabaseSelect("SELECT manga_nazevjap FROM manga_relations INNER JOIN manga ON manga.id_manga=manga_relations.id_manga_related WHERE manga_relations.id_manga=" + Manga_Tree.SelectedNode.Name);
-            DataTable DAnime = DatabaseSelect("SELECT anime_nazevjap FROM manga_anime INNER JOIN anime ON anime.id_anime=manga_anime.id_anime WHERE manga_anime.id_manga=" + Manga_Tree.SelectedNode.Name);
+            DataTable DGenres = db.DatabaseSelect("SELECT * FROM manga_genres INNER JOIN genres ON genres.id_grenres=manga_genres.id_genres WHERE manga_genres.id_manga=" + Manga_Tree.SelectedNode.Name);
+            DataTable DManga = db.DatabaseSelect("SELECT manga_nazevjap FROM manga_relations INNER JOIN manga ON manga.id_manga=manga_relations.id_manga_related WHERE manga_relations.id_manga=" + Manga_Tree.SelectedNode.Name);
+            DataTable DAnime = db.DatabaseSelect("SELECT anime_nazevjap FROM manga_anime INNER JOIN anime ON anime.id_anime=manga_anime.id_anime WHERE manga_anime.id_manga=" + Manga_Tree.SelectedNode.Name);
 
             Manga_Tx00.Text = Manga_Tree.SelectedNode.Name;
             Manga_Tx01.Text = Manga_LB12.Text;
@@ -13944,7 +13810,7 @@ namespace AniDBClient.Forms
                 Manga_Tx22.Text = "http://" + Manga_Tx22.Text;
             }
 
-            DatabaseAdd("UPDATE manga set manga_nazevjap='" + Manga_Tx01.Text.Replace("'", "''") + "', manga_nazevkaj='" + Manga_Tx02.Text.Replace("'", "''") + "', manga_nazeveng='" + Manga_Tx03.Text.Replace("'", "''") + "', manga_rok='" + Manga_Tx04.Text.Replace("'", "''") + "', manga_18=" + x18 + ", manga_MU=" + Manga_Tx05.Text + ", manga_MT=" + Manga_Tx06.Text + ", manga_volume=" + Manga_Tx07.Text + ", manga_artist='" + Manga_Tx18.Text.Replace("'", "''") + "', manga_author='" + Manga_Tx17.Text.Replace("'", "''") + "', manga_url='" + Manga_Tx22.Text + "', manga_MAL=" + Manga_Tx23.Text + ", manga_MugiMugi=" + Manga_Tx24.Text + " WHERE id_manga=" + ID);
+            db.DatabaseAdd("UPDATE manga set manga_nazevjap='" + Manga_Tx01.Text.Replace("'", "''") + "', manga_nazevkaj='" + Manga_Tx02.Text.Replace("'", "''") + "', manga_nazeveng='" + Manga_Tx03.Text.Replace("'", "''") + "', manga_rok='" + Manga_Tx04.Text.Replace("'", "''") + "', manga_18=" + x18 + ", manga_MU=" + Manga_Tx05.Text + ", manga_MT=" + Manga_Tx06.Text + ", manga_volume=" + Manga_Tx07.Text + ", manga_artist='" + Manga_Tx18.Text.Replace("'", "''") + "', manga_author='" + Manga_Tx17.Text.Replace("'", "''") + "', manga_url='" + Manga_Tx22.Text + "', manga_MAL=" + Manga_Tx23.Text + ", manga_MugiMugi=" + Manga_Tx24.Text + " WHERE id_manga=" + ID);
 
             if (Manga_Tx08.Text != "")
             {
@@ -13963,7 +13829,7 @@ namespace AniDBClient.Forms
                     FileHelpers.FileDelete(GlobalAdresar + @"\Accounts\!imgsm\" + ID.ToString() + ".jpg");
                     img.Save(GlobalAdresar + @"\Accounts\!imgsm\" + ID.ToString() + ".jpg", System.Drawing.Imaging.ImageFormat.Jpeg);
 
-                    DatabaseAdd("UPDATE manga SET manga_obr='" + ID.ToString() + ".jpg' WHERE id_manga=" + ID.ToString());
+                    db.DatabaseAdd("UPDATE manga SET manga_obr='" + ID.ToString() + ".jpg' WHERE id_manga=" + ID.ToString());
                 }
             }
 
@@ -13971,7 +13837,7 @@ namespace AniDBClient.Forms
             {
                 try
                 {
-                    DataTable Manga = DatabaseSelect("SELECT manga_obr FROM manga WHERE id_manga=" + ID.ToString());
+                    DataTable Manga = db.DatabaseSelect("SELECT manga_obr FROM manga WHERE id_manga=" + ID.ToString());
 
                     if (Manga.Rows.Count > 0)
                         if (Manga.Rows[0]["manga_obr"].ToString().Length > 0)
@@ -13996,7 +13862,7 @@ namespace AniDBClient.Forms
             }
 
             string SQL = "";
-            DatabaseAdd("DELETE FROM manga_genres WHERE id_manga=" + ID);
+            db.DatabaseAdd("DELETE FROM manga_genres WHERE id_manga=" + ID);
 
             for (int i = 0; i < Manga_Genres.Items.Count; i++)
             {
@@ -14008,13 +13874,13 @@ namespace AniDBClient.Forms
             {
                 SQL = SQL.Substring(0, SQL.Length - 4);
 
-                DataTable Genres = DatabaseSelect("SELECT * FROM genres WHERE " + SQL);
+                DataTable Genres = db.DatabaseSelect("SELECT * FROM genres WHERE " + SQL);
 
                 for (int i = 0; i < Genres.Rows.Count; i++)
-                    DatabaseAdd("INSERT INTO manga_genres (id_genres, id_manga) VALUES (" + Genres.Rows[i]["id_grenres"] + ", " + ID.ToString() + ")");
+                    db.DatabaseAdd("INSERT INTO manga_genres (id_genres, id_manga) VALUES (" + Genres.Rows[i]["id_grenres"] + ", " + ID.ToString() + ")");
             }
 
-            DatabaseAdd("DELETE FROM manga_anime WHERE id_manga=" + ID);
+            db.DatabaseAdd("DELETE FROM manga_anime WHERE id_manga=" + ID);
             SQL = "";
 
             for (int i = 0; i < Manga_Anime.Items.Count; i++)
@@ -14027,14 +13893,14 @@ namespace AniDBClient.Forms
             {
                 SQL = SQL.Substring(0, SQL.Length - 4);
 
-                DataTable Anime = DatabaseSelect("SELECT id_anime FROM anime WHERE " + SQL);
+                DataTable Anime = db.DatabaseSelect("SELECT id_anime FROM anime WHERE " + SQL);
 
                 for (int i = 0; i < Anime.Rows.Count; i++)
-                    DatabaseAdd("INSERT INTO manga_anime (id_anime, id_manga) VALUES (" + Anime.Rows[i]["id_anime"] + ", " + ID.ToString() + ")");
+                    db.DatabaseAdd("INSERT INTO manga_anime (id_anime, id_manga) VALUES (" + Anime.Rows[i]["id_anime"] + ", " + ID.ToString() + ")");
             }
 
-            DatabaseAdd("DELETE FROM manga_relations WHERE id_manga=" + ID);
-            DatabaseAdd("DELETE FROM manga_relations WHERE id_manga_related=" + ID);
+            db.DatabaseAdd("DELETE FROM manga_relations WHERE id_manga=" + ID);
+            db.DatabaseAdd("DELETE FROM manga_relations WHERE id_manga_related=" + ID);
             SQL = "";
 
             for (int i = 0; i < Manga_Manga.Items.Count; i++)
@@ -14047,12 +13913,12 @@ namespace AniDBClient.Forms
             {
                 SQL = SQL.Substring(0, SQL.Length - 4);
 
-                DataTable Manga = DatabaseSelect("SELECT id_manga FROM manga WHERE " + SQL);
+                DataTable Manga = db.DatabaseSelect("SELECT id_manga FROM manga WHERE " + SQL);
 
                 for (int i = 0; i < Manga.Rows.Count; i++)
                 {
-                    DatabaseAdd("INSERT INTO manga_relations (id_manga, id_manga_related) VALUES (" + ID.ToString() + ", " + Manga.Rows[i]["id_manga"] + ")");
-                    DatabaseAdd("INSERT INTO manga_relations (id_manga, id_manga_related) VALUES (" + Manga.Rows[i]["id_manga"] + ", " + ID.ToString() + ")");
+                    db.DatabaseAdd("INSERT INTO manga_relations (id_manga, id_manga_related) VALUES (" + ID.ToString() + ", " + Manga.Rows[i]["id_manga"] + ")");
+                    db.DatabaseAdd("INSERT INTO manga_relations (id_manga, id_manga_related) VALUES (" + Manga.Rows[i]["id_manga"] + ", " + ID.ToString() + ")");
                 }
             }
 
@@ -14109,7 +13975,7 @@ namespace AniDBClient.Forms
                 int[] WTF = (int[])Manga_Data[0, row.Index].Value;
 
                 if (WTF[1] == 1)
-                    DatabaseAdd("UPDATE manga_chapters SET manga_chatpers_read=1 WHERE id_manga_chatpers=" + WTF[2]);
+                    db.DatabaseAdd("UPDATE manga_chapters SET manga_chatpers_read=1 WHERE id_manga_chatpers=" + WTF[2]);
             }
         }
 
@@ -14121,7 +13987,7 @@ namespace AniDBClient.Forms
                 int[] WTF = (int[])Manga_Data[0, row.Index].Value;
 
                 if (WTF[1] == 1)
-                    DatabaseAdd("UPDATE manga_chapters SET manga_chatpers_read=0 WHERE id_manga_chatpers=" + WTF[2]);
+                    db.DatabaseAdd("UPDATE manga_chapters SET manga_chatpers_read=0 WHERE id_manga_chatpers=" + WTF[2]);
             }
         }
 
@@ -14133,7 +13999,7 @@ namespace AniDBClient.Forms
                 int[] WTF = (int[])Manga_Data[0, row.Index].Value;
 
                 if (WTF[1] == 1)
-                    DatabaseAdd("DELETE FROM manga_chapters WHERE id_manga_chatpers=" + WTF[2]);
+                    db.DatabaseAdd("DELETE FROM manga_chapters WHERE id_manga_chatpers=" + WTF[2]);
             }
         }
 
@@ -14751,7 +14617,7 @@ namespace AniDBClient.Forms
         //Chapters Directory Add
         private void Manga_Insert_CHD_Click(object sender, EventArgs e)
         {
-            DataTable DT = DatabaseSelect("SELECT Max(id_manga_chatpers) FROM manga_chapters");
+            DataTable DT = db.DatabaseSelect("SELECT Max(id_manga_chatpers) FROM manga_chapters");
 
             int ID = 1;
 
@@ -14769,7 +14635,7 @@ namespace AniDBClient.Forms
                 {
                     FileInfo Soubor = new FileInfo(Manga_ChaptersDT[5, i].Value.ToString());
 
-                    DatabaseAdd("INSERT INTO manga_chapters VALUES (" + ID + ", " + Manga_Tx12.Text + ", " + Manga_ChaptersDT[1, i].Value.ToString() + ", " + Manga_Tx20.Text + ", " + Soubor.Length + ", " + ((bool)Manga_ChaptersDT[3, i].Value ? "1" : "0") + ", " + Manga_ChaptersDT[2, i].Value.ToString() + ", '" + Manga_Tx21.Text.Replace("'", "''") + "', '" + Soubor.FullName.Replace("'", "''") + "', '" + Manga_ChaptersDT[4, i].Value.ToString().Replace("'", "''") + "')");
+                    db.DatabaseAdd("INSERT INTO manga_chapters VALUES (" + ID + ", " + Manga_Tx12.Text + ", " + Manga_ChaptersDT[1, i].Value.ToString() + ", " + Manga_Tx20.Text + ", " + Soubor.Length + ", " + ((bool)Manga_ChaptersDT[3, i].Value ? "1" : "0") + ", " + Manga_ChaptersDT[2, i].Value.ToString() + ", '" + Manga_Tx21.Text.Replace("'", "''") + "', '" + Soubor.FullName.Replace("'", "''") + "', '" + Manga_ChaptersDT[4, i].Value.ToString().Replace("'", "''") + "')");
                     ID++;
                 }
             }
@@ -14873,10 +14739,10 @@ namespace AniDBClient.Forms
         {
             if (MessageBox.Show(Language.MessageBox_DeleteI, Language.MessageBox_Delete, MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                DatabaseAdd("DELETE FROM manga WHERE id_manga=" + ID);
-                DatabaseAdd("DELETE FROM manga_chapters WHERE id_manga=" + ID);
-                DatabaseAdd("DELETE FROM manga_genres WHERE id_manga=" + ID);
-                DatabaseAdd("DELETE FROM manga_anime WHERE id_manga=" + ID);
+                db.DatabaseAdd("DELETE FROM manga WHERE id_manga=" + ID);
+                db.DatabaseAdd("DELETE FROM manga_chapters WHERE id_manga=" + ID);
+                db.DatabaseAdd("DELETE FROM manga_genres WHERE id_manga=" + ID);
+                db.DatabaseAdd("DELETE FROM manga_anime WHERE id_manga=" + ID);
 
                 FileHelpers.FileDelete(GlobalAdresar + @"\Accounts\!imgsm\" + ID + ".jpg");
                 DatabaseSelectMangaTree(0);
@@ -14949,9 +14815,9 @@ namespace AniDBClient.Forms
             if (SQL.Length > 6)
             {
                 if (SQL.Substring(0, 6) == "SELECT")
-                    dataTable = DatabaseSelect(SQL);
+                    dataTable = db.DatabaseSelect(SQL);
                 else
-                    dataTable = DatabaseSelect("SELECT * FROM manga WHERE " + SQL + " ORDER BY manga_nazevjap");
+                    dataTable = db.DatabaseSelect("SELECT * FROM manga WHERE " + SQL + " ORDER BY manga_nazevjap");
 
                 foreach (DataRow row in dataTable.Rows)
                 {
@@ -14989,7 +14855,7 @@ namespace AniDBClient.Forms
             Gp.Legend.Border.IsVisible = false;
             Gp.Legend.FontSpec.Size = 12;
 
-            DataTable dataTable = DatabaseSelect("SELECT * FROM mylist_local");
+            DataTable dataTable = db.DatabaseSelect("SELECT * FROM mylist_local");
             if (dataTable.Rows.Count > 0)
             {
                 DataRow row = dataTable.Rows[0];
@@ -15036,7 +14902,7 @@ namespace AniDBClient.Forms
             Gp.Legend.Border.IsVisible = false;
             Gp.Legend.FontSpec.Size = 12;
 
-            DataTable dataTable = DatabaseSelect("SELECT * FROM mylist_storages");
+            DataTable dataTable = db.DatabaseSelect("SELECT * FROM mylist_storages");
 
             foreach (DataRow rowX in dataTable.Rows)
             {
@@ -15075,7 +14941,7 @@ namespace AniDBClient.Forms
             Gp.Legend.Border.IsVisible = false;
             Gp.Legend.FontSpec.Size = 12;
 
-            DataTable dataTable = DatabaseSelect("SELECT * FROM mylist_sources");
+            DataTable dataTable = db.DatabaseSelect("SELECT * FROM mylist_sources");
 
             foreach (DataRow rowX in dataTable.Rows)
             {
@@ -15114,7 +14980,7 @@ namespace AniDBClient.Forms
             Gp.Legend.Border.IsVisible = false;
             Gp.Legend.FontSpec.Size = 12;
 
-            DataTable DT = DatabaseSelect("SELECT id_anime, anime_nazevjap, anime_seen FROM anime WHERE anime_watched=1 ORDER BY anime_seen");
+            DataTable DT = db.DatabaseSelect("SELECT id_anime, anime_nazevjap, anime_seen FROM anime WHERE anime_watched=1 ORDER BY anime_seen");
 
             Random Rnd = new Random();
             int R = 0;
@@ -15188,7 +15054,7 @@ namespace AniDBClient.Forms
             Gp.Legend.Border.IsVisible = false;
             Gp.Legend.FontSpec.Size = 12;
 
-            DataTable DT = DatabaseSelect("SELECT anime.id_anime, tags_name, anime_nazevjap FROM (anime INNER JOIN tags_relation ON tags_relation.id_anime=anime.id_anime) INNER JOIN tags ON tags.id_tags=tags_relation.id_tags ORDER BY tags_name, anime_nazevjap");
+            DataTable DT = db.DatabaseSelect("SELECT anime.id_anime, tags_name, anime_nazevjap FROM (anime INNER JOIN tags_relation ON tags_relation.id_anime=anime.id_anime) INNER JOIN tags ON tags.id_tags=tags_relation.id_tags ORDER BY tags_name, anime_nazevjap");
 
             Random Rnd = new Random();
             int R = 0;
@@ -15261,7 +15127,7 @@ namespace AniDBClient.Forms
 
             Gp.Legend.Border.IsVisible = false;
 
-            DataTable DT = DatabaseSelect("SELECT id_anime, anime_nazevjap, anime_rating FROM anime WHERE anime_rating>0 ORDER BY anime_rating, anime_nazevjap");
+            DataTable DT = db.DatabaseSelect("SELECT id_anime, anime_nazevjap, anime_rating FROM anime WHERE anime_rating>0 ORDER BY anime_rating, anime_nazevjap");
 
             Random Rnd = new Random();
             int R = 0;
@@ -15481,12 +15347,12 @@ namespace AniDBClient.Forms
                         try { str = Convert.ToInt32(Parse(uriReguire, "/index-page-", ".html", false)); }
                         catch { }
 
-                        DT = DatabaseSelect("SELECT count(id_anime) as pocet FROM anime");
+                        DT = db.DatabaseSelect("SELECT count(id_anime) as pocet FROM anime");
 
                         try { c = Convert.ToInt32(DT.Rows[0]["pocet"].ToString()) / nastr + 1; }
                         catch { }
 
-                        DT = DatabaseSelect("SELECT TOP " + nastr + " * FROM (SELECT TOP " + nastr + " * FROM (SELECT TOP " + (str * nastr) + " * FROM anime ORDER BY CStr([anime]![anime_nazevjap]) ASC) ORDER BY CStr([anime]![anime_nazevjap]) DESC) ORDER by CStr([anime]![anime_nazevjap]) ASC");
+                        DT = db.DatabaseSelect("SELECT TOP " + nastr + " * FROM (SELECT TOP " + nastr + " * FROM (SELECT TOP " + (str * nastr) + " * FROM anime ORDER BY CStr([anime]![anime_nazevjap]) ASC) ORDER BY CStr([anime]![anime_nazevjap]) DESC) ORDER by CStr([anime]![anime_nazevjap]) ASC");
 
                         if (c > 1) { 
                         for (int i = 1; i <= c; i++)
@@ -15535,12 +15401,12 @@ namespace AniDBClient.Forms
                         if (sText == null)
                             sText = Parse(uriReguire, "/index-page-" + str + "-", ".html", false);
 
-                        DT = DatabaseSelect("SELECT count(id_anime) as pocet FROM anime WHERE anime_nazevjap like '%" + sText + "%' OR anime_nazevkaj like '%" + sText + "%' OR anime_nazeveng like '%" + sText + "%'");
+                        DT = db.DatabaseSelect("SELECT count(id_anime) as pocet FROM anime WHERE anime_nazevjap like '%" + sText + "%' OR anime_nazevkaj like '%" + sText + "%' OR anime_nazeveng like '%" + sText + "%'");
 
                         try { c = Convert.ToInt32(DT.Rows[0]["pocet"].ToString()) / nastr + 1; }
                         catch { }
 
-                        DT = DatabaseSelect("SELECT TOP " + nastr + " * FROM (SELECT TOP " + nastr + " * FROM (SELECT TOP " + (str * nastr) + " * FROM anime WHERE anime_nazevjap like '%" + sText + "%' OR anime_nazevkaj like '%" + sText + "%' OR anime_nazeveng like '%" + sText + "%' ORDER BY CStr([anime]![anime_nazevjap]) ASC) ORDER BY CStr([anime]![anime_nazevjap]) DESC) ORDER by CStr([anime]![anime_nazevjap]) ASC");
+                        DT = db.DatabaseSelect("SELECT TOP " + nastr + " * FROM (SELECT TOP " + nastr + " * FROM (SELECT TOP " + (str * nastr) + " * FROM anime WHERE anime_nazevjap like '%" + sText + "%' OR anime_nazevkaj like '%" + sText + "%' OR anime_nazeveng like '%" + sText + "%' ORDER BY CStr([anime]![anime_nazevjap]) ASC) ORDER BY CStr([anime]![anime_nazevjap]) DESC) ORDER by CStr([anime]![anime_nazevjap]) ASC");
 
                         if (c > 1) { 
                         for (int i = 1; i <= c; i++)
@@ -15582,7 +15448,7 @@ namespace AniDBClient.Forms
                         try { anime = Convert.ToInt32(Parse(uriReguire, "/anime-", ".html", false)); }
                         catch { }
 
-                        DT = DatabaseSelect("SELECT * FROM anime WHERE id_anime=" + anime);
+                        DT = db.DatabaseSelect("SELECT * FROM anime WHERE id_anime=" + anime);
 
                         if (DT.Rows.Count > 0)
                         {
@@ -15596,7 +15462,7 @@ namespace AniDBClient.Forms
                             TxP += "<br />" + DT.Rows[0]["anime_typ"].ToString() + "\r\n";
                             TxP += "<br />" + DT.Rows[0]["anime_epn"].ToString() + " + " + DT.Rows[0]["anime_epn_spec"].ToString() + "S\r\n";
 
-                            DT = DatabaseSelect("SELECT * FROM (files INNER JOIN groups ON groups.id_groups=files.id_groups) INNER JOIN episodes ON episodes.id_episodes=files.id_episodes WHERE files.id_anime=" + anime + " ORDER BY episodes_spec, episodes_epn");
+                            DT = db.DatabaseSelect("SELECT * FROM (files INNER JOIN groups ON groups.id_groups=files.id_groups) INNER JOIN episodes ON episodes.id_episodes=files.id_episodes WHERE files.id_anime=" + anime + " ORDER BY episodes_spec, episodes_epn");
 
                             string epn = "";
 

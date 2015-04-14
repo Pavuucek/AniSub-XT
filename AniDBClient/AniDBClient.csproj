@@ -109,6 +109,7 @@
     <Compile Include="Utilities\AniDbClient2.cs" />
     <Compile Include="Utilities\AniDbMsgs.cs" />
     <Compile Include="Utilities\ControlSorter.cs" />
+    <Compile Include="Utilities\Database.cs" />
     <Compile Include="Utilities\EDCrypt.cs" />
     <Compile Include="Forms\Backups.cs">
       <SubType>Form</SubType>

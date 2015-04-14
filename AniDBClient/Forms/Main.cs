@@ -352,10 +352,10 @@ namespace AniDBClient.Forms
 
             StatusBar_Mn01.Text = Language.StatusBar_Mn01;
 
-            MainTabLog_Mn01.Text = Language.MainTabLog_Mn01;
-            MainTabLog_Mn02.Text = Language.MainTabLog_Mn02;
-            MainTabLog_Mn03.Text = Language.MainTabLog_Mn03;
-            MainTabLog_Mn04.Text = Language.MainTabLog_Mn04;
+            MainTabLog_Mn01.Text = Language.MainTabLog_AniDb;
+            MainTabLog_Mn02.Text = Language.MainTabLog_Sql;
+            MainTabLog_Mn03.Text = Language.MainTabLog_Tasks;
+            MainTabLog_Mn04.Text = Language.MainTabLog_Error;
 
             MainTabData_Mn00.Text = Language.MainTabData_MyList;
             MainTabData_Mn01.Text = Language.MainTabData_Files;
@@ -569,67 +569,67 @@ namespace AniDBClient.Forms
 
             Watcher_CH01.Text = Language.Watcher_CH01;
 
-            Manga_Gr04.Text = Language.MainTabManga_Mn00;
-            MainTabManga_Mn01.Text = Language.MainTabManga_Mn01;
-            MainTabManga_Mn02.Text = Language.MainTabManga_Mn02;
+            Manga_Gr04.Text = Language.MainTabManga_MyList;
+            MainTabManga_Mn01.Text = Language.MainTabManga_Manga;
+            MainTabManga_Mn02.Text = Language.MainTabManga_NewManga;
             MainTabManga_Mn03.Text = Language.MainTabData_Search;
 
-            Manga_Gr02.Text = Language.Manga_Gr02;
-            Manga_Gr03.Text = Language.Manga_Gr03;
+            Manga_Gr02.Text = Language.Manga_Manga;
+            Manga_Gr03.Text = Language.Manga_MangaChapters;
 
-            Manga_LB01.Text = Language.Manga_LB01;
-            Manga_LB03.Text = Language.Manga_LB03;
-            Manga_LB05.Text = Language.Manga_LB05;
-            Manga_LB07.Text = Language.Manga_LB07;
-            Manga_LB09.Text = Language.Manga_LB09;
-            Manga_LB15.Text = Language.Manga_LB15;
-            Manga_LB25.Text = Language.Manga_LB25;
-            Manga_LB16.Text = Language.Manga_LB16;
-            Manga_LB17.Text = Language.Manga_LB17;
-            Manga_LB18.Text = Language.Manga_LB18;
-            Manga_LB19.Text = Language.Manga_LB19;
-            Manga_LB20.Text = Language.Manga_LB20;
-            Manga_LB21.Text = Language.Manga_LB21;
-            Manga_LB22.Text = Language.Manga_LB22;
-            Manga_LB23.Text = Language.Manga_LB23;
-            Manga_LB24.Text = Language.Manga_LB24;
+            Manga_LB01.Text = Language.Manga_MainName;
+            Manga_LB03.Text = Language.Manga_JapName;
+            Manga_LB05.Text = Language.Manga_EngName;
+            Manga_LB07.Text = Language.Manga_Year;
+            Manga_LB09.Text = Language.Manga_Adult;
+            Manga_LB15.Text = Language.Manga_Volume;
+            Manga_LB25.Text = Language.Manga_lblGenres;
+            Manga_LB16.Text = Language.Manga_lblMainName;
+            Manga_LB17.Text = Language.Manga_lblJapName;
+            Manga_LB18.Text = Language.Manga_lblEngName;
+            Manga_LB19.Text = Language.Manga_lblYear;
+            Manga_LB20.Text = Language.Manga_UpdatesId;
+            Manga_LB21.Text = Language.Manga_TradersId;
+            Manga_LB22.Text = Language.Manga_lblVolume;
+            Manga_LB23.Text = Language.Manga_Picture;
+            Manga_LB24.Text = Language.Manga_lblAdult;
             Manga_LB35.Text = Language.Manga_LB35;
             Manga_LB36.Text = Language.Manga_LB36;
             Manga_LB37.Text = Language.Manga_LB37;
             Manga_LB39.Text = Language.Manga_LB39;
             Manga_LB41.Text = Language.Manga_LB29;
             Manga_LB42.Text = Language.Manga_LB33;
-            Manga_LB43.Text = Language.Manga_LB27;
+            Manga_LB43.Text = Language.Manga_lblVolume2;
             Manga_LB44.Text = Language.Manga_LB44;
             Manga_LB50.Text = Language.Manga_LB50;
             Manga_LB51.Text = Language.Manga_LB51;
 
-            MangaSearch_LB01.Text = Language.Manga_LB16;
-            MangaSearch_LB02.Text = Language.Manga_LB17;
-            MangaSearch_LB03.Text = Language.Manga_LB18;
+            MangaSearch_LB01.Text = Language.Manga_lblMainName;
+            MangaSearch_LB02.Text = Language.Manga_lblJapName;
+            MangaSearch_LB03.Text = Language.Manga_lblEngName;
             MangaSearch_LB04.Text = Language.Manga_LB35;
             MangaSearch_LB05.Text = Language.Manga_LB36;
-            MangaSearch_LB06.Text = Language.Manga_LB20;
-            MangaSearch_LB07.Text = Language.Manga_LB21;
-            MangaSearch_LB08.Text = Language.Manga_LB19;
-            MangaSearch_LB09.Text = Language.Manga_LB22;
-            MangaSearch_LB10.Text = Language.Manga_LB25;
+            MangaSearch_LB06.Text = Language.Manga_UpdatesId;
+            MangaSearch_LB07.Text = Language.Manga_TradersId;
+            MangaSearch_LB08.Text = Language.Manga_lblYear;
+            MangaSearch_LB09.Text = Language.Manga_lblVolume;
+            MangaSearch_LB10.Text = Language.Manga_lblGenres;
 
             MangaSearch_New.Text = Language.DataSearch_New;
             MangaSearch_Search.Text = Language.DataSearch_Search;
 
             MangaTree_CH01.Text = Language.MangaTree_CH01;
 
-            Manga_Data_Menu_Mn02.Text = Language.Manga_Data_Menu_Mn02;
-            Manga_Data_Menu_Mn03.Text = Language.Manga_Data_Menu_Mn03;
-            Manga_Data_Menu_Mn04.Text = Language.Manga_Data_Menu_Mn04;
+            Manga_Data_Menu_Mn02.Text = Language.Manga_Data_Menu_Read;
+            Manga_Data_Menu_Mn03.Text = Language.Manga_Data_Menu_UnRead;
+            Manga_Data_Menu_Mn04.Text = Language.Manga_Data_Menu_Delete;
 
-            Manga_Data_Mn03.HeaderText = Language.Manga_Data_Mn03;
-            Manga_Data_Mn04.HeaderText = Language.Manga_Data_Mn04;
-            Manga_Data_Mn05.HeaderText = Language.Manga_Data_Mn05;
-            Manga_Data_Mn08.HeaderText = Language.Manga_Data_Mn08;
-            Manga_Data_Mn09.HeaderText = Language.Manga_Data_Mn09;
-            Manga_Data_Mn10.HeaderText = Language.Manga_Data_Mn10;
+            Manga_Data_Mn03.HeaderText = Language.Manga_Data_Volume;
+            Manga_Data_Mn04.HeaderText = Language.Manga_Data_Name;
+            Manga_Data_Mn05.HeaderText = Language.Manga_Data_Pages;
+            Manga_Data_Mn08.HeaderText = Language.Manga_Data_Size;
+            Manga_Data_Mn09.HeaderText = Language.Manga_Data_File;
+            Manga_Data_Mn10.HeaderText = Language.Manga_Data_Chapter;
 
             Manga_Tree_Menu_Mn01.Text = Language.Manga_Tree_Menu_Mn01;
 
@@ -714,7 +714,7 @@ namespace AniDBClient.Forms
             ToolTip.SetToolTip(Manga_EditCh, Language.Manga_Edit);
             ToolTip.SetToolTip(Manga_Insert, Language.Manga_Insert);
             ToolTip.SetToolTip(Manga_Update, Language.Manga_Update);
-            ToolTip.SetToolTip(Manga_Insert_CHD, Language.Manga_Insert_CH);
+            ToolTip.SetToolTip(Manga_Insert_CHD, Language.Manga_Insert_Ch);
             ToolTip.SetToolTip(Manga_Delete, Language.Manga_Delete);
             ToolTip.SetToolTip(Zgc_GraphB01, Language.MainTabData_Anime2);
             ToolTip.SetToolTip(Zgc_GraphB02, Language.DataAnime_Storage);

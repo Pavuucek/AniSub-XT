@@ -420,13 +420,13 @@
   <data name="MainTabData_Search" xml:space="preserve">
     <value>Search</value>
   </data>
-  <data name="MainTabLog_Mn01" xml:space="preserve">
+  <data name="MainTabLog_AniDb" xml:space="preserve">
     <value>AniDB</value>
   </data>
-  <data name="MainTabLog_Mn02" xml:space="preserve">
+  <data name="MainTabLog_Sql" xml:space="preserve">
     <value>SQL</value>
   </data>
-  <data name="MainTabLog_Mn03" xml:space="preserve">
+  <data name="MainTabLog_Tasks" xml:space="preserve">
     <value>Tasks</value>
   </data>
   <data name="MainTab_Settings" xml:space="preserve">
@@ -801,7 +801,7 @@
   <data name="MainTab_Sql" xml:space="preserve">
     <value>SQL</value>
   </data>
-  <data name="MainTabLog_Mn04" xml:space="preserve">
+  <data name="MainTabLog_Error" xml:space="preserve">
     <value>Error</value>
   </data>
   <data name="Options_VL86" xml:space="preserve">
@@ -979,19 +979,19 @@ Before you can use AniSub, please fill your name and password:</value>
   <data name="AnimeTree_Adult" xml:space="preserve">
     <value>18+</value>
   </data>
-  <data name="MainTabManga_Mn01" xml:space="preserve">
+  <data name="MainTabManga_Manga" xml:space="preserve">
     <value>Manga</value>
   </data>
-  <data name="MainTabManga_Mn02" xml:space="preserve">
+  <data name="MainTabManga_NewManga" xml:space="preserve">
     <value>New manga</value>
   </data>
   <data name="MainTab_Manga" xml:space="preserve">
     <value>Manga</value>
   </data>
-  <data name="Manga_Gr02" xml:space="preserve">
+  <data name="Manga_Manga" xml:space="preserve">
     <value>Manga</value>
   </data>
-  <data name="Manga_Gr03" xml:space="preserve">
+  <data name="Manga_Chapters" xml:space="preserve">
     <value>Manga Chapters</value>
   </data>
   <data name="MSG01" xml:space="preserve">
@@ -1015,94 +1015,94 @@ Before you can use AniSub, please fill your name and password:</value>
   <data name="Manga_Chapter" xml:space="preserve">
     <value>Chapter</value>
   </data>
-  <data name="Manga_Data_Menu_Mn01" xml:space="preserve">
+  <data name="Manga_Data_Menu_Edit" xml:space="preserve">
     <value>Edit</value>
   </data>
-  <data name="Manga_Data_Mn03" xml:space="preserve">
+  <data name="Manga_Data_Volume" xml:space="preserve">
     <value>Volume</value>
   </data>
-  <data name="Manga_Data_Mn04" xml:space="preserve">
+  <data name="Manga_Data_Title" xml:space="preserve">
     <value>Title</value>
   </data>
-  <data name="Manga_Data_Mn05" xml:space="preserve">
+  <data name="Manga_Data_Pages" xml:space="preserve">
     <value>Pages</value>
   </data>
-  <data name="Manga_Data_Mn08" xml:space="preserve">
+  <data name="Manga_Data_Size" xml:space="preserve">
     <value>Size</value>
   </data>
-  <data name="Manga_Data_Mn09" xml:space="preserve">
+  <data name="Manga_Data_File" xml:space="preserve">
     <value>File</value>
   </data>
   <data name="Manga_Delete" xml:space="preserve">
     <value>Delete</value>
   </data>
-  <data name="Manga_Delete_CH" xml:space="preserve">
+  <data name="Manga_Delete_Ch" xml:space="preserve">
     <value>Delete</value>
   </data>
   <data name="Manga_Edit" xml:space="preserve">
     <value>Edit</value>
   </data>
-  <data name="Manga_Gr021" xml:space="preserve">
+  <data name="Manga_Manga2" xml:space="preserve">
     <value>Manga</value>
   </data>
-  <data name="Manga_Gr031" xml:space="preserve">
+  <data name="Manga_Chapters2" xml:space="preserve">
     <value>Manga Chapters</value>
   </data>
   <data name="Manga_Insert" xml:space="preserve">
     <value>Add</value>
   </data>
-  <data name="Manga_Insert_CH" xml:space="preserve">
+  <data name="Manga_Insert_Ch" xml:space="preserve">
     <value>Add</value>
   </data>
-  <data name="Manga_LB01" xml:space="preserve">
+  <data name="Manga_MainName" xml:space="preserve">
     <value>Main title</value>
   </data>
-  <data name="Manga_LB03" xml:space="preserve">
+  <data name="Manga_JapName" xml:space="preserve">
     <value>Japanese title</value>
   </data>
-  <data name="Manga_LB05" xml:space="preserve">
+  <data name="Manga_EngName" xml:space="preserve">
     <value>English titlee</value>
   </data>
-  <data name="Manga_LB07" xml:space="preserve">
+  <data name="Manga_Year" xml:space="preserve">
     <value>Year</value>
   </data>
-  <data name="Manga_LB09" xml:space="preserve">
+  <data name="Manga_Adult" xml:space="preserve">
     <value>18+</value>
   </data>
-  <data name="Manga_LB15" xml:space="preserve">
+  <data name="Manga_Volume" xml:space="preserve">
     <value>Volume</value>
   </data>
-  <data name="Manga_LB16" xml:space="preserve">
+  <data name="Manga_lblMainName" xml:space="preserve">
     <value>Main title</value>
   </data>
-  <data name="Manga_LB17" xml:space="preserve">
+  <data name="Manga_lblJapName" xml:space="preserve">
     <value>Japanese tittle</value>
   </data>
-  <data name="Manga_LB18" xml:space="preserve">
+  <data name="Manga_lblEngName" xml:space="preserve">
     <value>English title</value>
   </data>
-  <data name="Manga_LB19" xml:space="preserve">
+  <data name="Manga_lblYear" xml:space="preserve">
     <value>Year</value>
   </data>
-  <data name="Manga_LB20" xml:space="preserve">
+  <data name="Manga_UpdatesId" xml:space="preserve">
     <value>Manga Updates ID/URL</value>
   </data>
-  <data name="Manga_LB21" xml:space="preserve">
+  <data name="Manga_TradersId" xml:space="preserve">
     <value>Manga Traders ID/URL</value>
   </data>
-  <data name="Manga_LB22" xml:space="preserve">
+  <data name="Manga_lblVolume" xml:space="preserve">
     <value>Volume</value>
   </data>
-  <data name="Manga_LB23" xml:space="preserve">
+  <data name="Manga_Picture" xml:space="preserve">
     <value>Picture</value>
   </data>
-  <data name="Manga_LB24" xml:space="preserve">
+  <data name="Manga_lblAdult" xml:space="preserve">
     <value>18+</value>
   </data>
-  <data name="Manga_LB25" xml:space="preserve">
+  <data name="Manga_lblGenres" xml:space="preserve">
     <value>Genres</value>
   </data>
-  <data name="Manga_LB27" xml:space="preserve">
+  <data name="Manga_lblVolume2" xml:space="preserve">
     <value>Volume</value>
   </data>
   <data name="Manga_LB28" xml:space="preserve">
@@ -1144,7 +1144,7 @@ Before you can use AniSub, please fill your name and password:</value>
   <data name="Manga_LB39" xml:space="preserve">
     <value>Artist</value>
   </data>
-  <data name="MainTabManga_Mn00" xml:space="preserve">
+  <data name="MainTabManga_MyList" xml:space="preserve">
     <value>MyList</value>
   </data>
   <data name="Options_LB50" xml:space="preserve">
@@ -1192,13 +1192,13 @@ Before you can use AniSub, please fill your name and password:</value>
   <data name="DataFiles_Bt21_ToolTip" xml:space="preserve">
     <value>Generate filetree</value>
   </data>
-  <data name="Manga_Data_Menu_Mn02" xml:space="preserve">
+  <data name="Manga_Data_Menu_Read" xml:space="preserve">
     <value>Read</value>
   </data>
-  <data name="Manga_Data_Menu_Mn03" xml:space="preserve">
+  <data name="Manga_Data_Menu_Unread" xml:space="preserve">
     <value>Unread</value>
   </data>
-  <data name="Manga_Data_Menu_Mn04" xml:space="preserve">
+  <data name="Manga_Data_Menu_Delete" xml:space="preserve">
     <value>Delete</value>
   </data>
   <data name="Manga_Tree_Menu_Mn01" xml:space="preserve">
@@ -1258,7 +1258,7 @@ Before you can use AniSub, please fill your name and password:</value>
   <data name="Anime_RelDel" xml:space="preserve">
     <value>Delete relation</value>
   </data>
-  <data name="Manga_Data_Mn10" xml:space="preserve">
+  <data name="Manga_Data_Chapter" xml:space="preserve">
     <value>Chapter</value>
   </data>
   <data name="LogIn_FirstUse" xml:space="preserve">

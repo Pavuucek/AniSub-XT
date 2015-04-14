@@ -81,11 +81,6 @@ namespace AniDBClient.Forms
         private FileInfo Watcher_SouborOldR = null;
         private UnZipRar UnZip = new UnZipRar();
 
-        [DllImport("Explorerframe.dll")]
-        private static extern bool SetProgressState(IntPtr hwnd, uint tbpFlags);
-
-        [DllImport("Explorerframe.dll")]
-        private static extern bool SetProgressValue(IntPtr hwnd, ulong ullCompleted, ulong ullTotal);
         #endregion
 
         public Main(string globalAdresar)

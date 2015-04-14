@@ -1,54 +1,49 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using AniDBClient.Lang;
 
-namespace AniDBClient
+namespace AniDBClient.Forms
 {
     public partial class MyListAdd : Form
     {
         public List<object[]> ML = new List<object[]>();
 
-        public MyListAdd(string Index, string Source, string Storage, string Other, string Watched, List<object[]> ml)
+        public MyListAdd(string index, string source, string storage, string other, string watched, List<object[]> ml)
         {
             InitializeComponent();
-            this.DialogResult = DialogResult.Cancel;
+            DialogResult = DialogResult.Cancel;
 
-            Options_MylistState.SelectedIndex = Convert.ToInt32(Index);
+            Options_MylistState.SelectedIndex = Convert.ToInt32(index);
 
-            Options_MylistSource.Text = Source;
-            Options_MylistStorage.Text = Storage;
-            Options_MylistOther.Text = Other;
+            Options_MylistSource.Text = source;
+            Options_MylistStorage.Text = storage;
+            Options_MylistOther.Text = other;
 
-            if (Watched == "1")
+            if (watched == "1")
                 Options_CH02.Checked = true;
 
-            Options_LB10.Text = Language.Options_LB10;
-            Options_LB09.Text = Language.Options_LB09;
-            Options_LB08.Text = Language.Options_LB08;
-            Options_LB07.Text = Language.Options_LB07;
-            Options_GR02.Text = Language.Options_GR02;
-            Options_CH02.Text = Language.Options_CH02;
+            Options_LB10.Text = Language.Options_lblOther;
+            Options_LB09.Text = Language.Options_lblStorage;
+            Options_LB08.Text = Language.Options_lblSource;
+            Options_LB07.Text = Language.Options_lblStatus;
+            Options_GR02.Text = Language.Options_MyList;
+            Options_CH02.Text = Language.Options_Watched;
 
             ML = ml;
 
             Options_MyList.Items.Add("Default");
 
             if (ML != null)
-                for (int i = 0; i < ML.Count; i++)
+                for (var i = 0; i < ML.Count; i++)
                     Options_MyList.Items.Add(ML[i][0].ToString());
         }
 
         //Potvrzení
         private void Options_MylistOk_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+            DialogResult = DialogResult.OK;
+            Close();
         }
 
         //Při stistku kláves
@@ -57,13 +52,13 @@ namespace AniDBClient
             switch (e.KeyData)
             {
                 case Keys.Enter:
-                    this.DialogResult = DialogResult.OK;
-                    this.Close();
+                    DialogResult = DialogResult.OK;
+                    Close();
                     break;
 
                 case Keys.Escape:
-                    this.DialogResult = DialogResult.Cancel;
-                    this.Close();
+                    DialogResult = DialogResult.Cancel;
+                    Close();
                     break;
             }
         }
@@ -79,8 +74,8 @@ namespace AniDBClient
                 Options_MylistSource.Text = ML[Options_MyList.SelectedIndex - 1][1].ToString();
                 Options_MylistStorage.Text = ML[Options_MyList.SelectedIndex - 1][2].ToString();
                 Options_MylistOther.Text = ML[Options_MyList.SelectedIndex - 1][3].ToString();
-                Options_MylistState.SelectedIndex = (int)ML[Options_MyList.SelectedIndex - 1][4];
-                Options_CH02.Checked = (bool)ML[Options_MyList.SelectedIndex - 1][5];
+                Options_MylistState.SelectedIndex = (int) ML[Options_MyList.SelectedIndex - 1][4];
+                Options_CH02.Checked = (bool) ML[Options_MyList.SelectedIndex - 1][5];
             }
             else if (Options_MyList.SelectedIndex == 0)
             {
@@ -97,7 +92,7 @@ namespace AniDBClient
 
             Options_MyList.Items.Add(Options_MylistName.Text);
 
-            object[] ml = new object[6];
+            var ml = new object[6];
 
             ml[0] = Options_MylistName.Text;
             ml[1] = Options_MylistSource.Text;
@@ -122,8 +117,8 @@ namespace AniDBClient
         //Při ukončení
         private void Option_MylistClose_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.Cancel;
-            this.Close();
+            DialogResult = DialogResult.Cancel;
+            Close();
         }
 
         //Při načtení formuláře

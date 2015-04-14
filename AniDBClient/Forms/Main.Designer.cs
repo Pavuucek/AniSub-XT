@@ -1,6 +1,6 @@
 ﻿using ZedGraph;
 
-namespace AniDBClient
+namespace AniDBClient.Forms
 {
     partial class Main
     {
@@ -31,58 +31,69 @@ namespace AniDBClient
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle49 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle50 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle56 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle53 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle54 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle55 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle57 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle58 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MainTab = new System.Windows.Forms.TabControl();
-            this.MainTab_Mn00 = new System.Windows.Forms.TabPage();
+            this.MainTab_IndexPage = new System.Windows.Forms.TabPage();
             this.WEB = new System.Windows.Forms.WebBrowser();
-            this.MainTab_Mn01 = new System.Windows.Forms.TabPage();
+            this.MainTab_SettinsPage = new System.Windows.Forms.TabPage();
             this.Options_GR06 = new System.Windows.Forms.GroupBox();
-            this.Options_CH24 = new System.Windows.Forms.CheckBox();
-            this.Options_CH23 = new System.Windows.Forms.Label();
-            this.Options_CH22 = new System.Windows.Forms.Label();
+            this.Options_LaunchWebServerOnStartupCheckBox = new System.Windows.Forms.CheckBox();
+            this.Options_MpcHcPortLabel = new System.Windows.Forms.Label();
+            this.Options_WebServerPortLabel = new System.Windows.Forms.Label();
+            this.Options_CH13BT = new System.Windows.Forms.Button();
             this.WebServer_MPCHC = new System.Windows.Forms.NumericUpDown();
             this.WebServer_Port = new System.Windows.Forms.NumericUpDown();
             this.Options_GR05 = new System.Windows.Forms.GroupBox();
-            this.Options_CH03 = new System.Windows.Forms.Label();
-            this.Options_CH20 = new System.Windows.Forms.Label();
-            this.Options_CH12 = new System.Windows.Forms.Label();
-            this.Options_CH11 = new System.Windows.Forms.Label();
-            this.Options_CH10 = new System.Windows.Forms.Label();
-            this.Options_CH07 = new System.Windows.Forms.Label();
-            this.Options_CH09 = new System.Windows.Forms.Label();
-            this.Options_CH06 = new System.Windows.Forms.Label();
-            this.Options_CH05 = new System.Windows.Forms.Label();
-            this.Options_CH04 = new System.Windows.Forms.Label();
+            this.Options_CheckUnknownFilesLabel = new System.Windows.Forms.Label();
+            this.Options_CH11BT = new System.Windows.Forms.Button();
+            this.Options_CH12BT = new System.Windows.Forms.Button();
+            this.Options_CheckNewMangaChaptersLabel = new System.Windows.Forms.Label();
+            this.Options_CH10BT = new System.Windows.Forms.Button();
+            this.Options_DeleteDbLabel = new System.Windows.Forms.Label();
+            this.Options_CH09BT = new System.Windows.Forms.Button();
+            this.Options_ForceDbUpdateLabel = new System.Windows.Forms.Label();
+            this.Options_CH07BT = new System.Windows.Forms.Button();
+            this.Options_RestoreBackupLabel = new System.Windows.Forms.Label();
+            this.Options_CH08BT = new System.Windows.Forms.Button();
+            this.Options_CompactAndRepairDbLabel = new System.Windows.Forms.Label();
+            this.Options_CH06BT = new System.Windows.Forms.Button();
+            this.Options_CreateBackupLabel = new System.Windows.Forms.Label();
+            this.Options_CH05BT = new System.Windows.Forms.Button();
+            this.Options_CH04BT = new System.Windows.Forms.Button();
+            this.Options_DeleteDuplicatesLabel = new System.Windows.Forms.Label();
+            this.Options_CH03BT = new System.Windows.Forms.Button();
+            this.Options_DownloadAllFilesLabel = new System.Windows.Forms.Label();
+            this.Options_DownloadAllAnimeEpisodesLabel = new System.Windows.Forms.Label();
             this.Options_GR03 = new System.Windows.Forms.GroupBox();
             this.Options_Color01 = new System.Windows.Forms.Button();
             this.Options_Color02 = new System.Windows.Forms.Button();
@@ -95,99 +106,123 @@ namespace AniDBClient
             this.Options_Color09 = new System.Windows.Forms.Button();
             this.Options_Color08 = new System.Windows.Forms.Button();
             this.Options_GR02 = new System.Windows.Forms.GroupBox();
-            this.Options_CH08 = new System.Windows.Forms.CheckBox();
-            this.Options_CH19 = new System.Windows.Forms.CheckBox();
-            this.Options_CH14 = new System.Windows.Forms.CheckBox();
-            this.Options_CH16 = new System.Windows.Forms.CheckBox();
-            this.Options_CH21 = new System.Windows.Forms.CheckBox();
-            this.Options_CH15 = new System.Windows.Forms.CheckBox();
-            this.Options_CH17 = new System.Windows.Forms.CheckBox();
-            this.Options_CH18 = new System.Windows.Forms.CheckBox();
-            this.Options_CH13 = new System.Windows.Forms.CheckBox();
+            this.Options_SaveSettingsOnExitCheckBox = new System.Windows.Forms.CheckBox();
+            this.Options_DetectMyListStatusCheckBox = new System.Windows.Forms.CheckBox();
+            this.Options_ShowAdultOnWelcomeScreenCheckBox = new System.Windows.Forms.CheckBox();
+            this.Options_MinimizeToTrayCheckBox = new System.Windows.Forms.CheckBox();
+            this.Options_SaveLogsToFilesCheckBox = new System.Windows.Forms.CheckBox();
+            this.Options_AddSameFilesMultipleTimesCheckBox = new System.Windows.Forms.CheckBox();
+            this.Options_FlatStyleCheckBox = new System.Windows.Forms.CheckBox();
+            this.Options_DontGenerateWelcomeSceenCheckBox = new System.Windows.Forms.CheckBox();
+            this.Options_ClassicFolderSelectDialogCheckBox = new System.Windows.Forms.CheckBox();
             this.Watcher_List = new System.Windows.Forms.ComboBox();
             this.Options_GR01 = new System.Windows.Forms.GroupBox();
-            this.Options_CH02 = new System.Windows.Forms.CheckBox();
-            this.Options_LB10 = new System.Windows.Forms.Label();
-            this.Options_LB09 = new System.Windows.Forms.Label();
-            this.Options_LB08 = new System.Windows.Forms.Label();
-            this.Options_LB07 = new System.Windows.Forms.Label();
+            this.Options_WatchedCheckbox = new System.Windows.Forms.CheckBox();
+            this.Options_OtherLabel = new System.Windows.Forms.Label();
+            this.Options_StorageLabel = new System.Windows.Forms.Label();
+            this.Options_SourceLabel = new System.Windows.Forms.Label();
+            this.Options_StatusLabel = new System.Windows.Forms.Label();
             this.Options_MylistOther = new System.Windows.Forms.TextBox();
             this.Options_MylistStorage = new System.Windows.Forms.TextBox();
-            this.Options_CH01 = new System.Windows.Forms.CheckBox();
+            this.Options_AutoAddToMyListCheckBox = new System.Windows.Forms.CheckBox();
             this.Options_MylistSource = new System.Windows.Forms.TextBox();
             this.Options_MylistState = new System.Windows.Forms.ComboBox();
-            this.Options_LB11 = new System.Windows.Forms.Label();
+            this.Options_NetworkLabel = new System.Windows.Forms.Label();
             this.Watcher_CH01 = new System.Windows.Forms.CheckBox();
-            this.Options_LB01 = new System.Windows.Forms.Label();
+            this.Options_ServerLabel = new System.Windows.Forms.Label();
             this.Options_Network = new System.Windows.Forms.ComboBox();
+            this.Watcher_Delete = new System.Windows.Forms.Button();
             this.Options_Delay = new System.Windows.Forms.NumericUpDown();
             this.Options_Password = new System.Windows.Forms.TextBox();
             this.Options_Reset = new System.Windows.Forms.NumericUpDown();
+            this.Watcher_Add = new System.Windows.Forms.Button();
             this.Options_ServerPort = new System.Windows.Forms.NumericUpDown();
-            this.Options_LB02 = new System.Windows.Forms.Label();
+            this.Options_PortLabel = new System.Windows.Forms.Label();
             this.Options_Backup = new System.Windows.Forms.NumericUpDown();
+            this.Options_ExtensionRem = new System.Windows.Forms.Button();
             this.Options_LocalPort = new System.Windows.Forms.NumericUpDown();
             this.Options_User = new System.Windows.Forms.TextBox();
-            this.Options_LB03 = new System.Windows.Forms.Label();
-            this.Options_LB13 = new System.Windows.Forms.Label();
-            this.Options_LB45 = new System.Windows.Forms.Label();
-            this.Options_LB04 = new System.Windows.Forms.Label();
-            this.Options_LB12 = new System.Windows.Forms.Label();
-            this.Options_LB05 = new System.Windows.Forms.Label();
-            this.Options_LB69 = new System.Windows.Forms.Label();
+            this.Options_AccountChange = new System.Windows.Forms.Button();
+            this.Options_UserNameLabel = new System.Windows.Forms.Label();
+            this.Options_Hash_WatcherLabel = new System.Windows.Forms.Label();
+            this.Options_LocalPortLabel = new System.Windows.Forms.Label();
+            this.Options_PasswordLabel = new System.Windows.Forms.Label();
+            this.Options_FileTypesLabel = new System.Windows.Forms.Label();
+            this.Options_ExtensionAdd = new System.Windows.Forms.Button();
+            this.Options_w8Hack = new System.Windows.Forms.Button();
+            this.Options_SetingsDefault = new System.Windows.Forms.Button();
+            this.Options_SetingsLoad = new System.Windows.Forms.Button();
+            this.Options_TimeoutLabel = new System.Windows.Forms.Label();
+            this.Options_DbBackupCountLabel = new System.Windows.Forms.Label();
             this.Options_Language = new System.Windows.Forms.ComboBox();
             this.Options_TimeOut = new System.Windows.Forms.NumericUpDown();
-            this.Options_LB06 = new System.Windows.Forms.Label();
-            this.Options_LB68 = new System.Windows.Forms.Label();
+            this.Options_DelayLabel = new System.Windows.Forms.Label();
+            this.Options_SetingsSave = new System.Windows.Forms.Button();
+            this.Options_StartComunication = new System.Windows.Forms.Button();
+            this.Options_ResetCountLabel = new System.Windows.Forms.Label();
             this.Options_ServerName = new System.Windows.Forms.TextBox();
             this.Options_ExtensionList = new System.Windows.Forms.ComboBox();
-            this.MainTab_Mn02 = new System.Windows.Forms.TabPage();
-            this.Rules_CH04 = new System.Windows.Forms.CheckBox();
-            this.Rules_Tags = new System.Windows.Forms.Button();
-            this.Rules_CH03 = new System.Windows.Forms.CheckBox();
-            this.Rules_CH02 = new System.Windows.Forms.CheckBox();
-            this.Rules_CH01 = new System.Windows.Forms.CheckBox();
-            this.Rules_GR03 = new System.Windows.Forms.GroupBox();
+            this.MainTab_RulesPage = new System.Windows.Forms.TabPage();
+            this.Rules_DeleteSourceIfEmptyCheckBox = new System.Windows.Forms.CheckBox();
+            this.Rules_TagsButton = new System.Windows.Forms.Button();
+            this.Rules_ReplaceExistingCheckBox = new System.Windows.Forms.CheckBox();
+            this.Rules_DontCopyToAnotherDiskCheckBox = new System.Windows.Forms.CheckBox();
+            this.Rules_AutomaticRenamingCheckBox = new System.Windows.Forms.CheckBox();
+            this.Rules_RulesForCharacterReplacingGroupBox = new System.Windows.Forms.GroupBox();
             this.Rules_Replace = new System.Windows.Forms.DataGridView();
             this.Rules_Replace_Mn01 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Rules_Replace_Mn02 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Rules_GR04 = new System.Windows.Forms.GroupBox();
-            this.Rules_InfoRB02 = new System.Windows.Forms.RadioButton();
-            this.Rules_InfoRB01 = new System.Windows.Forms.RadioButton();
+            this.Rules_ExportInfoGroupBox = new System.Windows.Forms.GroupBox();
+            this.Rules_InfoDell = new System.Windows.Forms.Button();
+            this.Rules_InfoRenameDoNothingRadioButton = new System.Windows.Forms.RadioButton();
+            this.Rules_InfoExportRadioButton = new System.Windows.Forms.RadioButton();
+            this.Rules_InfoAdd = new System.Windows.Forms.Button();
             this.Rules_InfoC = new System.Windows.Forms.ComboBox();
             this.Rules_Info = new System.Windows.Forms.TextBox();
-            this.Rules_GR02 = new System.Windows.Forms.GroupBox();
+            this.Rules_RulesForGeneratingDirectoriesGroupBox = new System.Windows.Forms.GroupBox();
+            this.Rules_FilesRulesMoveDel = new System.Windows.Forms.Button();
             this.Rules_FilesRulesMove_RB03 = new System.Windows.Forms.RadioButton();
             this.Rules_FilesRulesMove_RB01 = new System.Windows.Forms.RadioButton();
             this.Rules_FilesRulesMove_RB02 = new System.Windows.Forms.RadioButton();
+            this.Rules_FilesRulesMoveAdd = new System.Windows.Forms.Button();
             this.Rules_FilesRulesMoveC = new System.Windows.Forms.ComboBox();
             this.Rules_FilesRulesMove = new System.Windows.Forms.TextBox();
-            this.Rules_GR01 = new System.Windows.Forms.GroupBox();
+            this.Rules_RulesForFileRenamingGroupBox = new System.Windows.Forms.GroupBox();
             this.Rules_Position = new System.Windows.Forms.ComboBox();
-            this.Rules_LB01 = new System.Windows.Forms.Label();
-            this.Rules_FilesRulesRename_RB02 = new System.Windows.Forms.RadioButton();
-            this.Rules_FilesRulesRename_RB01 = new System.Windows.Forms.RadioButton();
+            this.Rules_RulesNumberPositionLabel = new System.Windows.Forms.Label();
+            this.Rules_FilesRulesRename_DoNothingRadioButton = new System.Windows.Forms.RadioButton();
+            this.Rules_FilesRulesRename_RenameRadioButton = new System.Windows.Forms.RadioButton();
+            this.Rules_FilesRulesRenameDel = new System.Windows.Forms.Button();
+            this.Rules_FilesRulesRenameAdd = new System.Windows.Forms.Button();
             this.Rules_FilesRulesRenameC = new System.Windows.Forms.ComboBox();
             this.Rules_FilesRulesRename = new System.Windows.Forms.TextBox();
-            this.MainTab_Mn06 = new System.Windows.Forms.TabPage();
+            this.MainTab_HashPage = new System.Windows.Forms.TabPage();
             this.Hash_GR01 = new System.Windows.Forms.GroupBox();
             this.Hash_ProgressBar_Total_Percent = new System.Windows.Forms.Label();
             this.Hash_ProgressBar_Percent = new System.Windows.Forms.Label();
+            this.Hash = new System.Windows.Forms.Button();
             this.Hash_ProgressBar_Total = new System.Windows.Forms.ProgressBar();
             this.Hash_Nazvy_Souboru = new System.Windows.Forms.ListBox();
             this.Hash_LB03 = new System.Windows.Forms.Label();
             this.Hash_ProgressBar = new System.Windows.Forms.ProgressBar();
             this.Hash_LB02 = new System.Windows.Forms.Label();
+            this.Hash_Cesta = new System.Windows.Forms.Button();
             this.Hash_Waiting = new System.Windows.Forms.NumericUpDown();
+            this.Hash_Stop_Total = new System.Windows.Forms.Button();
             this.Hash_CH03 = new System.Windows.Forms.CheckBox();
+            this.Hash_Files = new System.Windows.Forms.Button();
             this.Hash_CH02 = new System.Windows.Forms.CheckBox();
+            this.Hash_Delete = new System.Windows.Forms.Button();
             this.Hash_CH01 = new System.Windows.Forms.CheckBox();
-            this.MainTab_Mn03 = new System.Windows.Forms.TabPage();
+            this.Hash_DeleteAll = new System.Windows.Forms.Button();
+            this.MainTab_AnimePage = new System.Windows.Forms.TabPage();
             this.MainTabData = new System.Windows.Forms.TabControl();
-            this.MainTabData_Mn00 = new System.Windows.Forms.TabPage();
+            this.MainTabData_MyListTabPage = new System.Windows.Forms.TabPage();
             this.Options_GR04 = new System.Windows.Forms.GroupBox();
+            this.Options_MyListRefreshMin = new System.Windows.Forms.Button();
+            this.Options_MyListRefresh = new System.Windows.Forms.Button();
             this.MyListAnime = new System.Windows.Forms.DataGridView();
-            this.MainTabData_Mn01 = new System.Windows.Forms.TabPage();
+            this.MainTabData_FilesTabPage = new System.Windows.Forms.TabPage();
             this.DataFilesTree_CH04 = new System.Windows.Forms.CheckBox();
             this.DataFilesTree_CH03 = new System.Windows.Forms.CheckBox();
             this.DataFilesTree_CH02 = new System.Windows.Forms.CheckBox();
@@ -274,7 +309,30 @@ namespace AniDBClient
             this.DataFiles_Menu_Mn03 = new System.Windows.Forms.ToolStripMenuItem();
             this.DataFiles_Menu_Mn04 = new System.Windows.Forms.ToolStripMenuItem();
             this.DataFiles_Menu_Mn07 = new System.Windows.Forms.ToolStripMenuItem();
-            this.MainTabData_Mn02 = new System.Windows.Forms.TabPage();
+            this.DataFiles_Bt21 = new System.Windows.Forms.Button();
+            this.DataFiles_Bt22 = new System.Windows.Forms.Button();
+            this.DataFiles_Bt20 = new System.Windows.Forms.Button();
+            this.DataFiles_Bt19 = new System.Windows.Forms.Button();
+            this.DataFiles_Bt00 = new System.Windows.Forms.Button();
+            this.DataFiles_Bt01 = new System.Windows.Forms.Button();
+            this.DataFiles_Bt18 = new System.Windows.Forms.Button();
+            this.DataFiles_Bt17 = new System.Windows.Forms.Button();
+            this.DataFiles_Bt16 = new System.Windows.Forms.Button();
+            this.DataFiles_Bt15 = new System.Windows.Forms.Button();
+            this.DataFiles_Bt14 = new System.Windows.Forms.Button();
+            this.DataFiles_Bt13 = new System.Windows.Forms.Button();
+            this.DataFiles_Bt12 = new System.Windows.Forms.Button();
+            this.DataFiles_Bt11 = new System.Windows.Forms.Button();
+            this.DataFiles_Bt10 = new System.Windows.Forms.Button();
+            this.DataFiles_Bt09 = new System.Windows.Forms.Button();
+            this.DataFiles_Bt08 = new System.Windows.Forms.Button();
+            this.DataFiles_Bt07 = new System.Windows.Forms.Button();
+            this.DataFiles_Bt06 = new System.Windows.Forms.Button();
+            this.DataFiles_Bt05 = new System.Windows.Forms.Button();
+            this.DataFiles_Bt04 = new System.Windows.Forms.Button();
+            this.DataFiles_Bt03 = new System.Windows.Forms.Button();
+            this.DataFiles_Bt02 = new System.Windows.Forms.Button();
+            this.MainTabData_AnimeTabPage = new System.Windows.Forms.TabPage();
             this.DataAnime_Page = new System.Windows.Forms.NumericUpDown();
             this.DataAnime_Rows = new System.Windows.Forms.NumericUpDown();
             this.DataAnime = new System.Windows.Forms.DataGridView();
@@ -295,37 +353,42 @@ namespace AniDBClient
             this.DataAnime_Mn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataAnime_Mn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataAnime_Menu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.DataAnime_Menu_Mn01 = new System.Windows.Forms.ToolStripMenuItem();
-            this.DataAnime_Menu_Mn01_Mn01 = new System.Windows.Forms.ToolStripMenuItem();
-            this.DataAnime_Menu_Mn01_Mn02 = new System.Windows.Forms.ToolStripMenuItem();
-            this.DataAnime_Menu_Mn01_Mn03 = new System.Windows.Forms.ToolStripMenuItem();
-            this.DataAnime_Menu_Mn01_Mn04 = new System.Windows.Forms.ToolStripMenuItem();
-            this.DataAnime_Menu_Mn01_Mn05 = new System.Windows.Forms.ToolStripMenuItem();
-            this.DataAnime_Menu_Mn01_Mn06 = new System.Windows.Forms.ToolStripMenuItem();
-            this.DataAnime_Menu_Mn02 = new System.Windows.Forms.ToolStripMenuItem();
-            this.DataAnime_Menu_Mn02_Mn01 = new System.Windows.Forms.ToolStripMenuItem();
-            this.DataAnime_Menu_Mn02_Mn02 = new System.Windows.Forms.ToolStripMenuItem();
-            this.DataAnime_Menu_Mn02_Mn03 = new System.Windows.Forms.ToolStripMenuItem();
-            this.DataAnime_Menu_Mn03 = new System.Windows.Forms.ToolStripMenuItem();
-            this.DataAnime_Menu_Mn03_Mn01 = new System.Windows.Forms.ToolStripMenuItem();
+            this.DataAnime_Menu_Expand = new System.Windows.Forms.ToolStripMenuItem();
+            this.DataAnime_Menu_Expand_Anime = new System.Windows.Forms.ToolStripMenuItem();
+            this.DataAnime_Menu_Expand_Episodes = new System.Windows.Forms.ToolStripMenuItem();
+            this.DataAnime_Menu_Expand_All = new System.Windows.Forms.ToolStripMenuItem();
+            this.DataAnime_Menu_Expand_CollapseEpisodes = new System.Windows.Forms.ToolStripMenuItem();
+            this.DataAnime_Menu_Expand_CollapseAllEpisodes = new System.Windows.Forms.ToolStripMenuItem();
+            this.DataAnime_Menu_Expand_CollapseAll = new System.Windows.Forms.ToolStripMenuItem();
+            this.DataAnime_Menu_MyList = new System.Windows.Forms.ToolStripMenuItem();
+            this.DataAnime_Menu_MyList_AddModify = new System.Windows.Forms.ToolStripMenuItem();
+            this.DataAnime_Menu_MyList_Delete = new System.Windows.Forms.ToolStripMenuItem();
+            this.DataAnime_Menu_MyList_Watched = new System.Windows.Forms.ToolStripMenuItem();
+            this.DataAnime_Menu_Database = new System.Windows.Forms.ToolStripMenuItem();
+            this.DataAnime_Menu_Database_Delete = new System.Windows.Forms.ToolStripMenuItem();
             this.DataAnime_Menu_Mn04 = new System.Windows.Forms.ToolStripMenuItem();
             this.DataAnime_Menu_Mn04_Mn01 = new System.Windows.Forms.ToolStripMenuItem();
             this.DataAnime_Menu_Mn04_Mn02 = new System.Windows.Forms.ToolStripMenuItem();
             this.DataAnime_Menu_Mn04_Mn03 = new System.Windows.Forms.ToolStripMenuItem();
             this.DataAnime_Menu_Mn04_Mn04 = new System.Windows.Forms.ToolStripMenuItem();
             this.DataAnime_Menu_Mn04_Mn05 = new System.Windows.Forms.ToolStripMenuItem();
-            this.MainTabData_Mn03 = new System.Windows.Forms.TabPage();
+            this.MainTabData_Anime2TabPage = new System.Windows.Forms.TabPage();
+            this.Anime_Rel = new System.Windows.Forms.PictureBox();
             this.Anime_RelDel = new System.Windows.Forms.Button();
             this.AnimeTree_CH02 = new System.Windows.Forms.CheckBox();
             this.AnimeTree_CH01 = new System.Windows.Forms.CheckBox();
             this.Anime_GR01 = new System.Windows.Forms.GroupBox();
+            this.Anime_DateOK = new System.Windows.Forms.PictureBox();
             this.Anime_CB01 = new System.Windows.Forms.ComboBox();
             this.Anime_CB02 = new System.Windows.Forms.ComboBox();
             this.Anime_Seen = new System.Windows.Forms.MaskedTextBox();
+            this.Anime_RatImg = new System.Windows.Forms.PictureBox();
             this.Anime_Rat = new System.Windows.Forms.NumericUpDown();
+            this.Anime_BT01 = new System.Windows.Forms.Button();
             this.Anime_LB11 = new System.Windows.Forms.Label();
             this.Anime_RelationTree = new System.Windows.Forms.TreeView();
             this.Anime_LB08 = new System.Windows.Forms.LinkLabel();
+            this.Anime_Img = new System.Windows.Forms.PictureBox();
             this.Anime_OP07 = new System.Windows.Forms.Label();
             this.Anime_OP06 = new System.Windows.Forms.Label();
             this.Anime_OP04 = new System.Windows.Forms.Label();
@@ -364,7 +427,10 @@ namespace AniDBClient
             this.AnimeTree_Menu_Mn01_Mn04 = new System.Windows.Forms.ToolStripMenuItem();
             this.AnimeTree_Menu_Mn01_Mn05 = new System.Windows.Forms.ToolStripMenuItem();
             this.AnimeTree_Menu_Mn02 = new System.Windows.Forms.ToolStripMenuItem();
-            this.MainTabData_Mn04 = new System.Windows.Forms.TabPage();
+            this.Anime_Lang03 = new System.Windows.Forms.Button();
+            this.Anime_Lang02 = new System.Windows.Forms.Button();
+            this.Anime_Lang01 = new System.Windows.Forms.Button();
+            this.MainTabData_GenresTabPage = new System.Windows.Forms.TabPage();
             this.DataGenres_Page = new System.Windows.Forms.NumericUpDown();
             this.DataGenres_Rows = new System.Windows.Forms.NumericUpDown();
             this.DataGenres = new System.Windows.Forms.DataGridView();
@@ -375,7 +441,7 @@ namespace AniDBClient
             this.DataGenres_Mn05 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataGenres_Mn06 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataGenres_Mn07 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MainTabData_Mn05 = new System.Windows.Forms.TabPage();
+            this.MainTabData_GroupsTabPage = new System.Windows.Forms.TabPage();
             this.DataGroups_Page = new System.Windows.Forms.NumericUpDown();
             this.DataGroups_Rows = new System.Windows.Forms.NumericUpDown();
             this.DataGroups = new System.Windows.Forms.DataGridView();
@@ -386,7 +452,7 @@ namespace AniDBClient
             this.DataGroups_Mn05 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataGroups_Mn06 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataGroups_Mn07 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MainTabData_Mn07 = new System.Windows.Forms.TabPage();
+            this.MainTabData_SearchTabPage = new System.Windows.Forms.TabPage();
             this.DataSearch_CH02 = new System.Windows.Forms.CheckBox();
             this.DataSearch_CH01 = new System.Windows.Forms.CheckBox();
             this.DataSearch_NM05 = new System.Windows.Forms.NumericUpDown();
@@ -429,14 +495,20 @@ namespace AniDBClient
             this.DataSearch_Mn03 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataSearch_Mn04 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataSearch_Mn05 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MainTabData_Mn08 = new System.Windows.Forms.TabPage();
+            this.MainTabData_OthersTabPage = new System.Windows.Forms.TabPage();
             this.AnimeSeen = new System.Windows.Forms.TreeView();
             this.AnimeRating = new System.Windows.Forms.TreeView();
             this.AnimeTags = new System.Windows.Forms.TreeView();
-            this.MainTabData_Mn09 = new System.Windows.Forms.TabPage();
+            this.MainTabData_GraphsTabPage = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Zgc_GraphB06 = new System.Windows.Forms.Button();
+            this.Zgc_GraphB05 = new System.Windows.Forms.Button();
+            this.Zgc_GraphB04 = new System.Windows.Forms.Button();
+            this.Zgc_GraphB03 = new System.Windows.Forms.Button();
+            this.Zgc_GraphB02 = new System.Windows.Forms.Button();
+            this.Zgc_GraphB01 = new System.Windows.Forms.Button();
             this.Zgc_Graph = new ZedGraph.ZedGraphControl();
-            this.MainTabData_Mn10 = new System.Windows.Forms.TabPage();
+            this.MainTabData_ExportTabPage = new System.Windows.Forms.TabPage();
             this.Anime_ExportLB01 = new System.Windows.Forms.Label();
             this.Anime_ExportBT02 = new System.Windows.Forms.Button();
             this.Anime_ExportBT01 = new System.Windows.Forms.Button();
@@ -458,35 +530,39 @@ namespace AniDBClient
             this.Anime_ExportCH03 = new System.Windows.Forms.CheckBox();
             this.Anime_ExportCH02 = new System.Windows.Forms.CheckBox();
             this.Anime_ExportCH01 = new System.Windows.Forms.CheckBox();
-            this.MainTab_Mn07 = new System.Windows.Forms.TabPage();
+            this.MainTab_MangaPage = new System.Windows.Forms.TabPage();
             this.MainTabManga = new System.Windows.Forms.TabControl();
             this.MainTabManga_Mn01 = new System.Windows.Forms.TabPage();
+            this.Options_MyListRefreshManga = new System.Windows.Forms.Button();
             this.Manga_Gr04 = new System.Windows.Forms.GroupBox();
-            this.Options_LB51 = new System.Windows.Forms.Label();
+            this.Options_MangaLabel = new System.Windows.Forms.Label();
             this.Options_LB65 = new System.Windows.Forms.Label();
-            this.Options_LB53 = new System.Windows.Forms.Label();
+            this.Options_VolumesLabel = new System.Windows.Forms.Label();
             this.Options_LB54 = new System.Windows.Forms.Label();
-            this.Options_LB59 = new System.Windows.Forms.Label();
+            this.Options_ReadLabel = new System.Windows.Forms.Label();
             this.Options_LB56 = new System.Windows.Forms.Label();
-            this.Options_LB55 = new System.Windows.Forms.Label();
+            this.Options_ChaptersLabel = new System.Windows.Forms.Label();
             this.Options_LB64 = new System.Windows.Forms.Label();
-            this.Options_LB61 = new System.Windows.Forms.Label();
+            this.Options_TotalPagesLabel = new System.Windows.Forms.Label();
             this.Options_LB62 = new System.Windows.Forms.Label();
-            this.Options_LB63 = new System.Windows.Forms.Label();
+            this.Options_AdultLabel = new System.Windows.Forms.Label();
             this.Options_LB58 = new System.Windows.Forms.Label();
-            this.Options_LB67 = new System.Windows.Forms.Label();
+            this.Options_ReadLabel2 = new System.Windows.Forms.Label();
             this.Options_LB60 = new System.Windows.Forms.Label();
-            this.Options_LB57 = new System.Windows.Forms.Label();
+            this.Options_FileSizeLabel = new System.Windows.Forms.Label();
             this.Options_LB52 = new System.Windows.Forms.Label();
             this.MangaTree_CH01 = new System.Windows.Forms.CheckBox();
             this.Manga_Gr01 = new System.Windows.Forms.GroupBox();
             this.Manga_CB01 = new System.Windows.Forms.ComboBox();
             this.Manga_RelationTree = new System.Windows.Forms.TreeView();
+            this.Manga_Chapter = new System.Windows.Forms.Button();
+            this.Manga_Edit = new System.Windows.Forms.Button();
             this.Manga_LB14 = new System.Windows.Forms.LinkLabel();
             this.Manga_LB53 = new System.Windows.Forms.LinkLabel();
             this.Manga_LB45 = new System.Windows.Forms.LinkLabel();
             this.Manga_LB52 = new System.Windows.Forms.LinkLabel();
             this.Manga_LB13 = new System.Windows.Forms.LinkLabel();
+            this.Manga_Picture = new System.Windows.Forms.PictureBox();
             this.Manga_LB40 = new System.Windows.Forms.Label();
             this.Manga_LB10 = new System.Windows.Forms.Label();
             this.Manga_LB12 = new System.Windows.Forms.Label();
@@ -517,8 +593,12 @@ namespace AniDBClient
             this.Manga_Tree = new System.Windows.Forms.TreeView();
             this.Manga_Tree_Menu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.Manga_Tree_Menu_Mn01 = new System.Windows.Forms.ToolStripMenuItem();
+            this.Manga_Lang03 = new System.Windows.Forms.Button();
+            this.Manga_Lang02 = new System.Windows.Forms.Button();
+            this.Manga_Lang01 = new System.Windows.Forms.Button();
             this.MainTabManga_Mn02 = new System.Windows.Forms.TabPage();
             this.Manga_Gr03 = new System.Windows.Forms.GroupBox();
+            this.Manga_EditCh = new System.Windows.Forms.Button();
             this.Manga_Tx20 = new System.Windows.Forms.NumericUpDown();
             this.Manga_ChaptersDT = new System.Windows.Forms.DataGridView();
             this.Manga_ChaptersCM01 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -531,6 +611,8 @@ namespace AniDBClient
             this.Manga_Tx19 = new System.Windows.Forms.TextBox();
             this.Manga_Tx12 = new System.Windows.Forms.TextBox();
             this.Manga_LB41 = new System.Windows.Forms.Label();
+            this.Manga_Obr_CHD = new System.Windows.Forms.Button();
+            this.Manga_Insert_CHD = new System.Windows.Forms.Button();
             this.Manga_LB42 = new System.Windows.Forms.Label();
             this.Manga_LB43 = new System.Windows.Forms.Label();
             this.Manga_Gr02 = new System.Windows.Forms.GroupBox();
@@ -544,14 +626,22 @@ namespace AniDBClient
             this.Manga_Manga = new System.Windows.Forms.CheckedListBox();
             this.Manga_Anime = new System.Windows.Forms.CheckedListBox();
             this.Manga_Genres = new System.Windows.Forms.CheckedListBox();
+            this.Manga_Delete = new System.Windows.Forms.Button();
             this.Manga_LB24 = new System.Windows.Forms.Label();
             this.Manga_LB44 = new System.Windows.Forms.Label();
             this.Manga_LB36 = new System.Windows.Forms.Label();
+            this.Manga_Update = new System.Windows.Forms.Button();
             this.Manga_LB22 = new System.Windows.Forms.Label();
             this.Manga_LB23 = new System.Windows.Forms.Label();
+            this.Manga_Insert = new System.Windows.Forms.Button();
             this.Manga_LB35 = new System.Windows.Forms.Label();
             this.Manga_LB51 = new System.Windows.Forms.Label();
             this.Manga_LB21 = new System.Windows.Forms.Label();
+            this.Manga_Download_MAL = new System.Windows.Forms.Button();
+            this.Manga_Download_MU = new System.Windows.Forms.Button();
+            this.Manga_Download_MugiMugi = new System.Windows.Forms.Button();
+            this.Manga_Download = new System.Windows.Forms.Button();
+            this.Manga_Obr = new System.Windows.Forms.Button();
             this.Manga_LB50 = new System.Windows.Forms.Label();
             this.Manga_LB20 = new System.Windows.Forms.Label();
             this.Manga_LB19 = new System.Windows.Forms.Label();
@@ -598,29 +688,33 @@ namespace AniDBClient
             this.MangaSearch_Mn02 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MangaSearch_Mn03 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MangaSearch_Mn04 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MainTab_Mn04 = new System.Windows.Forms.TabPage();
+            this.MainTab_LogPage = new System.Windows.Forms.TabPage();
             this.MainTabLog = new System.Windows.Forms.TabControl();
-            this.MainTabLog_Mn01 = new System.Windows.Forms.TabPage();
+            this.MainTabLog_AniDbTabPage = new System.Windows.Forms.TabPage();
             this.Log = new System.Windows.Forms.TextBox();
-            this.MainTabLog_Mn02 = new System.Windows.Forms.TabPage();
+            this.MainTabLog_SqlTabPage = new System.Windows.Forms.TabPage();
             this.LogSQL = new System.Windows.Forms.TextBox();
-            this.MainTabLog_Mn04 = new System.Windows.Forms.TabPage();
+            this.MainTabLog_ErrorTabPage = new System.Windows.Forms.TabPage();
             this.LogError = new System.Windows.Forms.TextBox();
-            this.MainTabLog_Mn03 = new System.Windows.Forms.TabPage();
+            this.MainTabLog_TasksTabPage = new System.Windows.Forms.TabPage();
             this.Add_Text02 = new System.Windows.Forms.ComboBox();
             this.Add_Text01 = new System.Windows.Forms.TextBox();
             this.Add_LB01 = new System.Windows.Forms.Label();
+            this.Add_Add = new System.Windows.Forms.Button();
+            this.LogTasksDelAll = new System.Windows.Forms.Button();
+            this.LogTasksDel = new System.Windows.Forms.Button();
             this.LogTasks = new System.Windows.Forms.ListBox();
-            this.MainTab_Mn05 = new System.Windows.Forms.TabPage();
-            this.DataSQL_GR01 = new System.Windows.Forms.GroupBox();
-            this.DataSQL_BT03 = new System.Windows.Forms.Button();
-            this.DataSQL_BT04 = new System.Windows.Forms.Button();
-            this.DataSQL_BT02 = new System.Windows.Forms.Button();
-            this.DataSQL_BT01 = new System.Windows.Forms.Button();
+            this.MainTab_SqlPage = new System.Windows.Forms.TabPage();
+            this.DataSql_CheckGroupBox = new System.Windows.Forms.GroupBox();
+            this.DataSql_FilesButton = new System.Windows.Forms.Button();
+            this.DataSql_MyListButton = new System.Windows.Forms.Button();
+            this.DataSql_EpisodesButton = new System.Windows.Forms.Button();
+            this.DataSql_AnimeButton = new System.Windows.Forms.Button();
             this.DataSQL_Text = new System.Windows.Forms.ComboBox();
             this.DataSQL_Columns = new System.Windows.Forms.ListBox();
             this.DataSQL_Tables = new System.Windows.Forms.ListBox();
             this.DataSQL = new System.Windows.Forms.DataGridView();
+            this.DataSQL_Select = new System.Windows.Forms.Button();
             this.ComunicationW = new System.ComponentModel.BackgroundWorker();
             this.ComunicationRec = new System.Windows.Forms.Timer(this.components);
             this.Hash_W = new System.ComponentModel.BackgroundWorker();
@@ -650,7 +744,7 @@ namespace AniDBClient
             this.Manga_Data_Menu_Mn03 = new System.Windows.Forms.ToolStripMenuItem();
             this.Manga_Data_Menu_Mn04 = new System.Windows.Forms.ToolStripMenuItem();
             this.Database_W = new System.ComponentModel.BackgroundWorker();
-            this.StatusBar_ConnectLB = new System.Windows.Forms.Label();
+            this.StatusBar_ConnectLabel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.StatusBar_ProgressBar = new System.Windows.Forms.ProgressBar();
             this.StatusBar_Mn06 = new System.Windows.Forms.Label();
@@ -658,109 +752,15 @@ namespace AniDBClient
             this.StatusBar_Mn04 = new System.Windows.Forms.Label();
             this.StatusBar_Mn03 = new System.Windows.Forms.Label();
             this.StatusBar_Mn02 = new System.Windows.Forms.Label();
-            this.StatusBar_Mn01 = new System.Windows.Forms.Label();
-            this.ToolTipAnimeRel = new System.Windows.Forms.ToolTip(this.components);
-            this.Notify = new System.Windows.Forms.NotifyIcon(this.components);
+            this.StatusBar_TasksRemainingLabel = new System.Windows.Forms.Label();
             this.StatusBar_Connect = new System.Windows.Forms.Button();
             this.StatusBar_Hash = new System.Windows.Forms.Button();
             this.StatusBar_Refresh = new System.Windows.Forms.Button();
-            this.Options_CH13BT = new System.Windows.Forms.Button();
-            this.Options_CH11BT = new System.Windows.Forms.Button();
-            this.Options_CH12BT = new System.Windows.Forms.Button();
-            this.Options_CH10BT = new System.Windows.Forms.Button();
-            this.Options_CH09BT = new System.Windows.Forms.Button();
-            this.Options_CH07BT = new System.Windows.Forms.Button();
-            this.Options_CH08BT = new System.Windows.Forms.Button();
-            this.Options_CH06BT = new System.Windows.Forms.Button();
-            this.Options_CH05BT = new System.Windows.Forms.Button();
-            this.Options_CH04BT = new System.Windows.Forms.Button();
-            this.Options_CH03BT = new System.Windows.Forms.Button();
-            this.Watcher_Delete = new System.Windows.Forms.Button();
-            this.Watcher_Add = new System.Windows.Forms.Button();
-            this.Options_ExtensionRem = new System.Windows.Forms.Button();
-            this.Options_AccountChange = new System.Windows.Forms.Button();
-            this.Options_ExtensionAdd = new System.Windows.Forms.Button();
-            this.Options_w8Hack = new System.Windows.Forms.Button();
-            this.Options_SetingsDefault = new System.Windows.Forms.Button();
-            this.Options_SetingsLoad = new System.Windows.Forms.Button();
-            this.Options_SetingsSave = new System.Windows.Forms.Button();
-            this.Options_StartComunication = new System.Windows.Forms.Button();
-            this.Rules_InfoDell = new System.Windows.Forms.Button();
-            this.Rules_InfoAdd = new System.Windows.Forms.Button();
-            this.Rules_FilesRulesMoveDel = new System.Windows.Forms.Button();
-            this.Rules_FilesRulesMoveAdd = new System.Windows.Forms.Button();
-            this.Rules_FilesRulesRenameDel = new System.Windows.Forms.Button();
-            this.Rules_FilesRulesRenameAdd = new System.Windows.Forms.Button();
-            this.Hash = new System.Windows.Forms.Button();
-            this.Hash_Cesta = new System.Windows.Forms.Button();
-            this.Hash_Stop_Total = new System.Windows.Forms.Button();
-            this.Hash_Files = new System.Windows.Forms.Button();
-            this.Hash_Delete = new System.Windows.Forms.Button();
-            this.Hash_DeleteAll = new System.Windows.Forms.Button();
-            this.Options_MyListRefreshMin = new System.Windows.Forms.Button();
-            this.Options_MyListRefresh = new System.Windows.Forms.Button();
-            this.DataFiles_Bt21 = new System.Windows.Forms.Button();
-            this.DataFiles_Bt22 = new System.Windows.Forms.Button();
-            this.DataFiles_Bt20 = new System.Windows.Forms.Button();
-            this.DataFiles_Bt19 = new System.Windows.Forms.Button();
-            this.DataFiles_Bt00 = new System.Windows.Forms.Button();
-            this.DataFiles_Bt01 = new System.Windows.Forms.Button();
-            this.DataFiles_Bt18 = new System.Windows.Forms.Button();
-            this.DataFiles_Bt17 = new System.Windows.Forms.Button();
-            this.DataFiles_Bt16 = new System.Windows.Forms.Button();
-            this.DataFiles_Bt15 = new System.Windows.Forms.Button();
-            this.DataFiles_Bt14 = new System.Windows.Forms.Button();
-            this.DataFiles_Bt13 = new System.Windows.Forms.Button();
-            this.DataFiles_Bt12 = new System.Windows.Forms.Button();
-            this.DataFiles_Bt11 = new System.Windows.Forms.Button();
-            this.DataFiles_Bt10 = new System.Windows.Forms.Button();
-            this.DataFiles_Bt09 = new System.Windows.Forms.Button();
-            this.DataFiles_Bt08 = new System.Windows.Forms.Button();
-            this.DataFiles_Bt07 = new System.Windows.Forms.Button();
-            this.DataFiles_Bt06 = new System.Windows.Forms.Button();
-            this.DataFiles_Bt05 = new System.Windows.Forms.Button();
-            this.DataFiles_Bt04 = new System.Windows.Forms.Button();
-            this.DataFiles_Bt03 = new System.Windows.Forms.Button();
-            this.DataFiles_Bt02 = new System.Windows.Forms.Button();
-            this.Anime_Rel = new System.Windows.Forms.PictureBox();
-            this.Anime_DateOK = new System.Windows.Forms.PictureBox();
-            this.Anime_RatImg = new System.Windows.Forms.PictureBox();
-            this.Anime_BT01 = new System.Windows.Forms.Button();
-            this.Anime_Img = new System.Windows.Forms.PictureBox();
-            this.Anime_Lang03 = new System.Windows.Forms.Button();
-            this.Anime_Lang02 = new System.Windows.Forms.Button();
-            this.Anime_Lang01 = new System.Windows.Forms.Button();
-            this.Zgc_GraphB06 = new System.Windows.Forms.Button();
-            this.Zgc_GraphB05 = new System.Windows.Forms.Button();
-            this.Zgc_GraphB04 = new System.Windows.Forms.Button();
-            this.Zgc_GraphB03 = new System.Windows.Forms.Button();
-            this.Zgc_GraphB02 = new System.Windows.Forms.Button();
-            this.Zgc_GraphB01 = new System.Windows.Forms.Button();
-            this.Options_MyListRefreshManga = new System.Windows.Forms.Button();
-            this.Manga_Chapter = new System.Windows.Forms.Button();
-            this.Manga_Edit = new System.Windows.Forms.Button();
-            this.Manga_Picture = new System.Windows.Forms.PictureBox();
-            this.Manga_Lang03 = new System.Windows.Forms.Button();
-            this.Manga_Lang02 = new System.Windows.Forms.Button();
-            this.Manga_Lang01 = new System.Windows.Forms.Button();
-            this.Manga_EditCh = new System.Windows.Forms.Button();
-            this.Manga_Obr_CHD = new System.Windows.Forms.Button();
-            this.Manga_Insert_CHD = new System.Windows.Forms.Button();
-            this.Manga_Delete = new System.Windows.Forms.Button();
-            this.Manga_Update = new System.Windows.Forms.Button();
-            this.Manga_Insert = new System.Windows.Forms.Button();
-            this.Manga_Download_MAL = new System.Windows.Forms.Button();
-            this.Manga_Download_MU = new System.Windows.Forms.Button();
-            this.Manga_Download_MugiMugi = new System.Windows.Forms.Button();
-            this.Manga_Download = new System.Windows.Forms.Button();
-            this.Manga_Obr = new System.Windows.Forms.Button();
-            this.Add_Add = new System.Windows.Forms.Button();
-            this.LogTasksDelAll = new System.Windows.Forms.Button();
-            this.LogTasksDel = new System.Windows.Forms.Button();
-            this.DataSQL_Select = new System.Windows.Forms.Button();
+            this.ToolTipAnimeRel = new System.Windows.Forms.ToolTip(this.components);
+            this.Notify = new System.Windows.Forms.NotifyIcon(this.components);
             this.MainTab.SuspendLayout();
-            this.MainTab_Mn00.SuspendLayout();
-            this.MainTab_Mn01.SuspendLayout();
+            this.MainTab_IndexPage.SuspendLayout();
+            this.MainTab_SettinsPage.SuspendLayout();
             this.Options_GR06.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.WebServer_MPCHC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.WebServer_Port)).BeginInit();
@@ -774,21 +774,21 @@ namespace AniDBClient
             ((System.ComponentModel.ISupportInitialize)(this.Options_Backup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Options_LocalPort)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Options_TimeOut)).BeginInit();
-            this.MainTab_Mn02.SuspendLayout();
-            this.Rules_GR03.SuspendLayout();
+            this.MainTab_RulesPage.SuspendLayout();
+            this.Rules_RulesForCharacterReplacingGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Rules_Replace)).BeginInit();
-            this.Rules_GR04.SuspendLayout();
-            this.Rules_GR02.SuspendLayout();
-            this.Rules_GR01.SuspendLayout();
-            this.MainTab_Mn06.SuspendLayout();
+            this.Rules_ExportInfoGroupBox.SuspendLayout();
+            this.Rules_RulesForGeneratingDirectoriesGroupBox.SuspendLayout();
+            this.Rules_RulesForFileRenamingGroupBox.SuspendLayout();
+            this.MainTab_HashPage.SuspendLayout();
             this.Hash_GR01.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Hash_Waiting)).BeginInit();
-            this.MainTab_Mn03.SuspendLayout();
+            this.MainTab_AnimePage.SuspendLayout();
             this.MainTabData.SuspendLayout();
-            this.MainTabData_Mn00.SuspendLayout();
+            this.MainTabData_MyListTabPage.SuspendLayout();
             this.Options_GR04.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MyListAnime)).BeginInit();
-            this.MainTabData_Mn01.SuspendLayout();
+            this.MainTabData_FilesTabPage.SuspendLayout();
             this.DataFilesTree_Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataFiles_Year)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataFiles_Month)).BeginInit();
@@ -797,40 +797,45 @@ namespace AniDBClient
             ((System.ComponentModel.ISupportInitialize)(this.DataFiles_Rows)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataFiles)).BeginInit();
             this.DataFiles_Menu.SuspendLayout();
-            this.MainTabData_Mn02.SuspendLayout();
+            this.MainTabData_AnimeTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataAnime_Page)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataAnime_Rows)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataAnime)).BeginInit();
             this.DataAnime_Menu.SuspendLayout();
-            this.MainTabData_Mn03.SuspendLayout();
+            this.MainTabData_Anime2TabPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Anime_Rel)).BeginInit();
             this.Anime_GR01.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Anime_DateOK)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Anime_RatImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Anime_Rat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Anime_Img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AnimeData)).BeginInit();
             this.AnimeTree_Menu.SuspendLayout();
-            this.MainTabData_Mn04.SuspendLayout();
+            this.MainTabData_GenresTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGenres_Page)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGenres_Rows)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGenres)).BeginInit();
-            this.MainTabData_Mn05.SuspendLayout();
+            this.MainTabData_GroupsTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGroups_Page)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGroups_Rows)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGroups)).BeginInit();
-            this.MainTabData_Mn07.SuspendLayout();
+            this.MainTabData_SearchTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataSearch_NM05)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSearch_NM04)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSearch_NM03)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSearch_NM02)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSearch_NM01)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSearch)).BeginInit();
-            this.MainTabData_Mn08.SuspendLayout();
-            this.MainTabData_Mn09.SuspendLayout();
+            this.MainTabData_OthersTabPage.SuspendLayout();
+            this.MainTabData_GraphsTabPage.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.MainTabData_Mn10.SuspendLayout();
-            this.MainTab_Mn07.SuspendLayout();
+            this.MainTabData_ExportTabPage.SuspendLayout();
+            this.MainTab_MangaPage.SuspendLayout();
             this.MainTabManga.SuspendLayout();
             this.MainTabManga_Mn01.SuspendLayout();
             this.Manga_Gr04.SuspendLayout();
             this.Manga_Gr01.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Manga_Picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Manga_Data)).BeginInit();
             this.Manga_Tree_Menu.SuspendLayout();
             this.MainTabManga_Mn02.SuspendLayout();
@@ -846,23 +851,18 @@ namespace AniDBClient
             ((System.ComponentModel.ISupportInitialize)(this.MangaSearch_NM02)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MangaSearch_NM01)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MangaSearch)).BeginInit();
-            this.MainTab_Mn04.SuspendLayout();
+            this.MainTab_LogPage.SuspendLayout();
             this.MainTabLog.SuspendLayout();
-            this.MainTabLog_Mn01.SuspendLayout();
-            this.MainTabLog_Mn02.SuspendLayout();
-            this.MainTabLog_Mn04.SuspendLayout();
-            this.MainTabLog_Mn03.SuspendLayout();
-            this.MainTab_Mn05.SuspendLayout();
-            this.DataSQL_GR01.SuspendLayout();
+            this.MainTabLog_AniDbTabPage.SuspendLayout();
+            this.MainTabLog_SqlTabPage.SuspendLayout();
+            this.MainTabLog_ErrorTabPage.SuspendLayout();
+            this.MainTabLog_TasksTabPage.SuspendLayout();
+            this.MainTab_SqlPage.SuspendLayout();
+            this.DataSql_CheckGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataSQL)).BeginInit();
             this.AnimeData_Menu.SuspendLayout();
             this.Manga_Data_Menu.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Anime_Rel)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Anime_DateOK)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Anime_RatImg)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Anime_Img)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Manga_Picture)).BeginInit();
             this.SuspendLayout();
             // 
             // MainTab
@@ -870,14 +870,14 @@ namespace AniDBClient
             this.MainTab.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.MainTab.Controls.Add(this.MainTab_Mn00);
-            this.MainTab.Controls.Add(this.MainTab_Mn01);
-            this.MainTab.Controls.Add(this.MainTab_Mn02);
-            this.MainTab.Controls.Add(this.MainTab_Mn06);
-            this.MainTab.Controls.Add(this.MainTab_Mn03);
-            this.MainTab.Controls.Add(this.MainTab_Mn07);
-            this.MainTab.Controls.Add(this.MainTab_Mn04);
-            this.MainTab.Controls.Add(this.MainTab_Mn05);
+            this.MainTab.Controls.Add(this.MainTab_IndexPage);
+            this.MainTab.Controls.Add(this.MainTab_SettinsPage);
+            this.MainTab.Controls.Add(this.MainTab_RulesPage);
+            this.MainTab.Controls.Add(this.MainTab_HashPage);
+            this.MainTab.Controls.Add(this.MainTab_AnimePage);
+            this.MainTab.Controls.Add(this.MainTab_MangaPage);
+            this.MainTab.Controls.Add(this.MainTab_LogPage);
+            this.MainTab.Controls.Add(this.MainTab_SqlPage);
             this.MainTab.Enabled = false;
             this.MainTab.Location = new System.Drawing.Point(12, 12);
             this.MainTab.Name = "MainTab";
@@ -886,16 +886,16 @@ namespace AniDBClient
             this.MainTab.TabIndex = 0;
             this.MainTab.SelectedIndexChanged += new System.EventHandler(this.MainTab_SelectedIndexChanged);
             // 
-            // MainTab_Mn00
+            // MainTab_IndexPage
             // 
-            this.MainTab_Mn00.BackColor = System.Drawing.Color.White;
-            this.MainTab_Mn00.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.MainTab_Mn00.Controls.Add(this.WEB);
-            this.MainTab_Mn00.Location = new System.Drawing.Point(4, 22);
-            this.MainTab_Mn00.Name = "MainTab_Mn00";
-            this.MainTab_Mn00.Size = new System.Drawing.Size(1119, 680);
-            this.MainTab_Mn00.TabIndex = 0;
-            this.MainTab_Mn00.Text = "0";
+            this.MainTab_IndexPage.BackColor = System.Drawing.Color.White;
+            this.MainTab_IndexPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.MainTab_IndexPage.Controls.Add(this.WEB);
+            this.MainTab_IndexPage.Location = new System.Drawing.Point(4, 22);
+            this.MainTab_IndexPage.Name = "MainTab_IndexPage";
+            this.MainTab_IndexPage.Size = new System.Drawing.Size(1119, 680);
+            this.MainTab_IndexPage.TabIndex = 0;
+            this.MainTab_IndexPage.Text = "0";
             // 
             // WEB
             // 
@@ -908,66 +908,66 @@ namespace AniDBClient
             this.WEB.WebBrowserShortcutsEnabled = false;
             this.WEB.Navigating += new System.Windows.Forms.WebBrowserNavigatingEventHandler(this.WEB_Navigating);
             // 
-            // MainTab_Mn01
+            // MainTab_SettinsPage
             // 
-            this.MainTab_Mn01.AutoScroll = true;
-            this.MainTab_Mn01.AutoScrollMargin = new System.Drawing.Size(20, 20);
-            this.MainTab_Mn01.BackColor = System.Drawing.Color.White;
-            this.MainTab_Mn01.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.MainTab_Mn01.Controls.Add(this.Options_GR06);
-            this.MainTab_Mn01.Controls.Add(this.Options_GR05);
-            this.MainTab_Mn01.Controls.Add(this.Options_GR03);
-            this.MainTab_Mn01.Controls.Add(this.Options_GR02);
-            this.MainTab_Mn01.Controls.Add(this.Watcher_List);
-            this.MainTab_Mn01.Controls.Add(this.Options_GR01);
-            this.MainTab_Mn01.Controls.Add(this.Options_LB11);
-            this.MainTab_Mn01.Controls.Add(this.Watcher_CH01);
-            this.MainTab_Mn01.Controls.Add(this.Options_LB01);
-            this.MainTab_Mn01.Controls.Add(this.Options_Network);
-            this.MainTab_Mn01.Controls.Add(this.Watcher_Delete);
-            this.MainTab_Mn01.Controls.Add(this.Options_Delay);
-            this.MainTab_Mn01.Controls.Add(this.Options_Password);
-            this.MainTab_Mn01.Controls.Add(this.Options_Reset);
-            this.MainTab_Mn01.Controls.Add(this.Watcher_Add);
-            this.MainTab_Mn01.Controls.Add(this.Options_ServerPort);
-            this.MainTab_Mn01.Controls.Add(this.Options_LB02);
-            this.MainTab_Mn01.Controls.Add(this.Options_Backup);
-            this.MainTab_Mn01.Controls.Add(this.Options_ExtensionRem);
-            this.MainTab_Mn01.Controls.Add(this.Options_LocalPort);
-            this.MainTab_Mn01.Controls.Add(this.Options_User);
-            this.MainTab_Mn01.Controls.Add(this.Options_AccountChange);
-            this.MainTab_Mn01.Controls.Add(this.Options_LB03);
-            this.MainTab_Mn01.Controls.Add(this.Options_LB13);
-            this.MainTab_Mn01.Controls.Add(this.Options_LB45);
-            this.MainTab_Mn01.Controls.Add(this.Options_LB04);
-            this.MainTab_Mn01.Controls.Add(this.Options_LB12);
-            this.MainTab_Mn01.Controls.Add(this.Options_ExtensionAdd);
-            this.MainTab_Mn01.Controls.Add(this.Options_w8Hack);
-            this.MainTab_Mn01.Controls.Add(this.Options_SetingsDefault);
-            this.MainTab_Mn01.Controls.Add(this.Options_SetingsLoad);
-            this.MainTab_Mn01.Controls.Add(this.Options_LB05);
-            this.MainTab_Mn01.Controls.Add(this.Options_LB69);
-            this.MainTab_Mn01.Controls.Add(this.Options_Language);
-            this.MainTab_Mn01.Controls.Add(this.Options_TimeOut);
-            this.MainTab_Mn01.Controls.Add(this.Options_LB06);
-            this.MainTab_Mn01.Controls.Add(this.Options_SetingsSave);
-            this.MainTab_Mn01.Controls.Add(this.Options_StartComunication);
-            this.MainTab_Mn01.Controls.Add(this.Options_LB68);
-            this.MainTab_Mn01.Controls.Add(this.Options_ServerName);
-            this.MainTab_Mn01.Controls.Add(this.Options_ExtensionList);
-            this.MainTab_Mn01.Location = new System.Drawing.Point(4, 22);
-            this.MainTab_Mn01.Name = "MainTab_Mn01";
-            this.MainTab_Mn01.Padding = new System.Windows.Forms.Padding(3);
-            this.MainTab_Mn01.Size = new System.Drawing.Size(1119, 680);
-            this.MainTab_Mn01.TabIndex = 0;
-            this.MainTab_Mn01.Text = "1";
-            this.MainTab_Mn01.UseVisualStyleBackColor = true;
+            this.MainTab_SettinsPage.AutoScroll = true;
+            this.MainTab_SettinsPage.AutoScrollMargin = new System.Drawing.Size(20, 20);
+            this.MainTab_SettinsPage.BackColor = System.Drawing.Color.White;
+            this.MainTab_SettinsPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.MainTab_SettinsPage.Controls.Add(this.Options_GR06);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_GR05);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_GR03);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_GR02);
+            this.MainTab_SettinsPage.Controls.Add(this.Watcher_List);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_GR01);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_NetworkLabel);
+            this.MainTab_SettinsPage.Controls.Add(this.Watcher_CH01);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_ServerLabel);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_Network);
+            this.MainTab_SettinsPage.Controls.Add(this.Watcher_Delete);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_Delay);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_Password);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_Reset);
+            this.MainTab_SettinsPage.Controls.Add(this.Watcher_Add);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_ServerPort);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_PortLabel);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_Backup);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_ExtensionRem);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_LocalPort);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_User);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_AccountChange);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_UserNameLabel);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_Hash_WatcherLabel);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_LocalPortLabel);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_PasswordLabel);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_FileTypesLabel);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_ExtensionAdd);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_w8Hack);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_SetingsDefault);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_SetingsLoad);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_TimeoutLabel);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_DbBackupCountLabel);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_Language);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_TimeOut);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_DelayLabel);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_SetingsSave);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_StartComunication);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_ResetCountLabel);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_ServerName);
+            this.MainTab_SettinsPage.Controls.Add(this.Options_ExtensionList);
+            this.MainTab_SettinsPage.Location = new System.Drawing.Point(4, 22);
+            this.MainTab_SettinsPage.Name = "MainTab_SettinsPage";
+            this.MainTab_SettinsPage.Padding = new System.Windows.Forms.Padding(3);
+            this.MainTab_SettinsPage.Size = new System.Drawing.Size(1119, 680);
+            this.MainTab_SettinsPage.TabIndex = 0;
+            this.MainTab_SettinsPage.Text = "1";
+            this.MainTab_SettinsPage.UseVisualStyleBackColor = true;
             // 
             // Options_GR06
             // 
-            this.Options_GR06.Controls.Add(this.Options_CH24);
-            this.Options_GR06.Controls.Add(this.Options_CH23);
-            this.Options_GR06.Controls.Add(this.Options_CH22);
+            this.Options_GR06.Controls.Add(this.Options_LaunchWebServerOnStartupCheckBox);
+            this.Options_GR06.Controls.Add(this.Options_MpcHcPortLabel);
+            this.Options_GR06.Controls.Add(this.Options_WebServerPortLabel);
             this.Options_GR06.Controls.Add(this.Options_CH13BT);
             this.Options_GR06.Controls.Add(this.WebServer_MPCHC);
             this.Options_GR06.Controls.Add(this.WebServer_Port);
@@ -980,37 +980,49 @@ namespace AniDBClient
             this.Options_GR06.TabStop = false;
             this.Options_GR06.Text = "groupBox1";
             // 
-            // Options_CH24
+            // Options_LaunchWebServerOnStartupCheckBox
             // 
-            this.Options_CH24.ForeColor = System.Drawing.Color.Black;
-            this.Options_CH24.Location = new System.Drawing.Point(9, 80);
-            this.Options_CH24.Name = "Options_CH24";
-            this.Options_CH24.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Options_CH24.Size = new System.Drawing.Size(435, 17);
-            this.Options_CH24.TabIndex = 2;
-            this.Options_CH24.Text = "checkBox1";
-            this.Options_CH24.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Options_CH24.UseVisualStyleBackColor = true;
+            this.Options_LaunchWebServerOnStartupCheckBox.ForeColor = System.Drawing.Color.Black;
+            this.Options_LaunchWebServerOnStartupCheckBox.Location = new System.Drawing.Point(9, 80);
+            this.Options_LaunchWebServerOnStartupCheckBox.Name = "Options_LaunchWebServerOnStartupCheckBox";
+            this.Options_LaunchWebServerOnStartupCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Options_LaunchWebServerOnStartupCheckBox.Size = new System.Drawing.Size(435, 17);
+            this.Options_LaunchWebServerOnStartupCheckBox.TabIndex = 2;
+            this.Options_LaunchWebServerOnStartupCheckBox.Text = "checkBox1";
+            this.Options_LaunchWebServerOnStartupCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Options_LaunchWebServerOnStartupCheckBox.UseVisualStyleBackColor = true;
             // 
-            // Options_CH23
+            // Options_MpcHcPortLabel
             // 
-            this.Options_CH23.AutoSize = true;
-            this.Options_CH23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_CH23.Location = new System.Drawing.Point(6, 57);
-            this.Options_CH23.Name = "Options_CH23";
-            this.Options_CH23.Size = new System.Drawing.Size(41, 13);
-            this.Options_CH23.TabIndex = 0;
-            this.Options_CH23.Text = "label1";
+            this.Options_MpcHcPortLabel.AutoSize = true;
+            this.Options_MpcHcPortLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_MpcHcPortLabel.Location = new System.Drawing.Point(6, 57);
+            this.Options_MpcHcPortLabel.Name = "Options_MpcHcPortLabel";
+            this.Options_MpcHcPortLabel.Size = new System.Drawing.Size(41, 13);
+            this.Options_MpcHcPortLabel.TabIndex = 0;
+            this.Options_MpcHcPortLabel.Text = "label1";
             // 
-            // Options_CH22
+            // Options_WebServerPortLabel
             // 
-            this.Options_CH22.AutoSize = true;
-            this.Options_CH22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_CH22.Location = new System.Drawing.Point(6, 31);
-            this.Options_CH22.Name = "Options_CH22";
-            this.Options_CH22.Size = new System.Drawing.Size(41, 13);
-            this.Options_CH22.TabIndex = 0;
-            this.Options_CH22.Text = "label1";
+            this.Options_WebServerPortLabel.AutoSize = true;
+            this.Options_WebServerPortLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_WebServerPortLabel.Location = new System.Drawing.Point(6, 31);
+            this.Options_WebServerPortLabel.Name = "Options_WebServerPortLabel";
+            this.Options_WebServerPortLabel.Size = new System.Drawing.Size(41, 13);
+            this.Options_WebServerPortLabel.TabIndex = 0;
+            this.Options_WebServerPortLabel.Text = "label1";
+            // 
+            // Options_CH13BT
+            // 
+            this.Options_CH13BT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Options_CH13BT.BackgroundImage")));
+            this.Options_CH13BT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Options_CH13BT.ForeColor = System.Drawing.Color.Black;
+            this.Options_CH13BT.Location = new System.Drawing.Point(369, 103);
+            this.Options_CH13BT.Name = "Options_CH13BT";
+            this.Options_CH13BT.Size = new System.Drawing.Size(23, 23);
+            this.Options_CH13BT.TabIndex = 0;
+            this.Options_CH13BT.UseVisualStyleBackColor = true;
+            this.Options_CH13BT.Click += new System.EventHandler(this.Options_CH13BT_Click);
             // 
             // WebServer_MPCHC
             // 
@@ -1064,26 +1076,26 @@ namespace AniDBClient
             // 
             // Options_GR05
             // 
-            this.Options_GR05.Controls.Add(this.Options_CH03);
+            this.Options_GR05.Controls.Add(this.Options_CheckUnknownFilesLabel);
             this.Options_GR05.Controls.Add(this.Options_CH11BT);
             this.Options_GR05.Controls.Add(this.Options_CH12BT);
-            this.Options_GR05.Controls.Add(this.Options_CH20);
+            this.Options_GR05.Controls.Add(this.Options_CheckNewMangaChaptersLabel);
             this.Options_GR05.Controls.Add(this.Options_CH10BT);
-            this.Options_GR05.Controls.Add(this.Options_CH12);
+            this.Options_GR05.Controls.Add(this.Options_DeleteDbLabel);
             this.Options_GR05.Controls.Add(this.Options_CH09BT);
-            this.Options_GR05.Controls.Add(this.Options_CH11);
+            this.Options_GR05.Controls.Add(this.Options_ForceDbUpdateLabel);
             this.Options_GR05.Controls.Add(this.Options_CH07BT);
-            this.Options_GR05.Controls.Add(this.Options_CH10);
+            this.Options_GR05.Controls.Add(this.Options_RestoreBackupLabel);
             this.Options_GR05.Controls.Add(this.Options_CH08BT);
-            this.Options_GR05.Controls.Add(this.Options_CH07);
+            this.Options_GR05.Controls.Add(this.Options_CompactAndRepairDbLabel);
             this.Options_GR05.Controls.Add(this.Options_CH06BT);
-            this.Options_GR05.Controls.Add(this.Options_CH09);
+            this.Options_GR05.Controls.Add(this.Options_CreateBackupLabel);
             this.Options_GR05.Controls.Add(this.Options_CH05BT);
             this.Options_GR05.Controls.Add(this.Options_CH04BT);
-            this.Options_GR05.Controls.Add(this.Options_CH06);
+            this.Options_GR05.Controls.Add(this.Options_DeleteDuplicatesLabel);
             this.Options_GR05.Controls.Add(this.Options_CH03BT);
-            this.Options_GR05.Controls.Add(this.Options_CH05);
-            this.Options_GR05.Controls.Add(this.Options_CH04);
+            this.Options_GR05.Controls.Add(this.Options_DownloadAllFilesLabel);
+            this.Options_GR05.Controls.Add(this.Options_DownloadAllAnimeEpisodesLabel);
             this.Options_GR05.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Options_GR05.Location = new System.Drawing.Point(604, 363);
             this.Options_GR05.Margin = new System.Windows.Forms.Padding(10);
@@ -1093,105 +1105,225 @@ namespace AniDBClient
             this.Options_GR05.TabStop = false;
             this.Options_GR05.Text = "groupBox1";
             // 
-            // Options_CH03
+            // Options_CheckUnknownFilesLabel
             // 
-            this.Options_CH03.AutoSize = true;
-            this.Options_CH03.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_CH03.Location = new System.Drawing.Point(6, 31);
-            this.Options_CH03.Name = "Options_CH03";
-            this.Options_CH03.Size = new System.Drawing.Size(41, 13);
-            this.Options_CH03.TabIndex = 0;
-            this.Options_CH03.Text = "label1";
+            this.Options_CheckUnknownFilesLabel.AutoSize = true;
+            this.Options_CheckUnknownFilesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_CheckUnknownFilesLabel.Location = new System.Drawing.Point(6, 31);
+            this.Options_CheckUnknownFilesLabel.Name = "Options_CheckUnknownFilesLabel";
+            this.Options_CheckUnknownFilesLabel.Size = new System.Drawing.Size(41, 13);
+            this.Options_CheckUnknownFilesLabel.TabIndex = 0;
+            this.Options_CheckUnknownFilesLabel.Text = "label1";
             // 
-            // Options_CH20
+            // Options_CH11BT
             // 
-            this.Options_CH20.AutoSize = true;
-            this.Options_CH20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_CH20.Location = new System.Drawing.Point(6, 292);
-            this.Options_CH20.Name = "Options_CH20";
-            this.Options_CH20.Size = new System.Drawing.Size(41, 13);
-            this.Options_CH20.TabIndex = 0;
-            this.Options_CH20.Text = "label1";
+            this.Options_CH11BT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Options_CH11BT.BackgroundImage")));
+            this.Options_CH11BT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Options_CH11BT.ForeColor = System.Drawing.Color.Black;
+            this.Options_CH11BT.Location = new System.Drawing.Point(369, 258);
+            this.Options_CH11BT.Name = "Options_CH11BT";
+            this.Options_CH11BT.Size = new System.Drawing.Size(23, 23);
+            this.Options_CH11BT.TabIndex = 0;
+            this.Options_CH11BT.UseVisualStyleBackColor = true;
+            this.Options_CH11BT.Click += new System.EventHandler(this.Options_CH11BT_Click);
             // 
-            // Options_CH12
+            // Options_CH12BT
             // 
-            this.Options_CH12.AutoSize = true;
-            this.Options_CH12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_CH12.Location = new System.Drawing.Point(6, 264);
-            this.Options_CH12.Name = "Options_CH12";
-            this.Options_CH12.Size = new System.Drawing.Size(41, 13);
-            this.Options_CH12.TabIndex = 0;
-            this.Options_CH12.Text = "label1";
+            this.Options_CH12BT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Options_CH12BT.BackgroundImage")));
+            this.Options_CH12BT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Options_CH12BT.ForeColor = System.Drawing.Color.Black;
+            this.Options_CH12BT.Location = new System.Drawing.Point(369, 287);
+            this.Options_CH12BT.Name = "Options_CH12BT";
+            this.Options_CH12BT.Size = new System.Drawing.Size(23, 23);
+            this.Options_CH12BT.TabIndex = 0;
+            this.Options_CH12BT.UseVisualStyleBackColor = true;
+            this.Options_CH12BT.Click += new System.EventHandler(this.Options_CH12BT_Click);
             // 
-            // Options_CH11
+            // Options_CheckNewMangaChaptersLabel
             // 
-            this.Options_CH11.AutoSize = true;
-            this.Options_CH11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_CH11.Location = new System.Drawing.Point(6, 235);
-            this.Options_CH11.Name = "Options_CH11";
-            this.Options_CH11.Size = new System.Drawing.Size(41, 13);
-            this.Options_CH11.TabIndex = 0;
-            this.Options_CH11.Text = "label1";
+            this.Options_CheckNewMangaChaptersLabel.AutoSize = true;
+            this.Options_CheckNewMangaChaptersLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_CheckNewMangaChaptersLabel.Location = new System.Drawing.Point(6, 292);
+            this.Options_CheckNewMangaChaptersLabel.Name = "Options_CheckNewMangaChaptersLabel";
+            this.Options_CheckNewMangaChaptersLabel.Size = new System.Drawing.Size(41, 13);
+            this.Options_CheckNewMangaChaptersLabel.TabIndex = 0;
+            this.Options_CheckNewMangaChaptersLabel.Text = "label1";
             // 
-            // Options_CH10
+            // Options_CH10BT
             // 
-            this.Options_CH10.AutoSize = true;
-            this.Options_CH10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_CH10.Location = new System.Drawing.Point(6, 206);
-            this.Options_CH10.Name = "Options_CH10";
-            this.Options_CH10.Size = new System.Drawing.Size(41, 13);
-            this.Options_CH10.TabIndex = 0;
-            this.Options_CH10.Text = "label1";
+            this.Options_CH10BT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Options_CH10BT.BackgroundImage")));
+            this.Options_CH10BT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Options_CH10BT.ForeColor = System.Drawing.Color.Black;
+            this.Options_CH10BT.Location = new System.Drawing.Point(369, 229);
+            this.Options_CH10BT.Name = "Options_CH10BT";
+            this.Options_CH10BT.Size = new System.Drawing.Size(23, 23);
+            this.Options_CH10BT.TabIndex = 0;
+            this.Options_CH10BT.UseVisualStyleBackColor = true;
+            this.Options_CH10BT.Click += new System.EventHandler(this.Options_CH10BT_Click);
             // 
-            // Options_CH07
+            // Options_DeleteDbLabel
             // 
-            this.Options_CH07.AutoSize = true;
-            this.Options_CH07.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_CH07.Location = new System.Drawing.Point(6, 148);
-            this.Options_CH07.Name = "Options_CH07";
-            this.Options_CH07.Size = new System.Drawing.Size(41, 13);
-            this.Options_CH07.TabIndex = 0;
-            this.Options_CH07.Text = "label1";
+            this.Options_DeleteDbLabel.AutoSize = true;
+            this.Options_DeleteDbLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_DeleteDbLabel.Location = new System.Drawing.Point(6, 264);
+            this.Options_DeleteDbLabel.Name = "Options_DeleteDbLabel";
+            this.Options_DeleteDbLabel.Size = new System.Drawing.Size(41, 13);
+            this.Options_DeleteDbLabel.TabIndex = 0;
+            this.Options_DeleteDbLabel.Text = "label1";
             // 
-            // Options_CH09
+            // Options_CH09BT
             // 
-            this.Options_CH09.AutoSize = true;
-            this.Options_CH09.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_CH09.Location = new System.Drawing.Point(6, 177);
-            this.Options_CH09.Name = "Options_CH09";
-            this.Options_CH09.Size = new System.Drawing.Size(41, 13);
-            this.Options_CH09.TabIndex = 0;
-            this.Options_CH09.Text = "label1";
+            this.Options_CH09BT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Options_CH09BT.BackgroundImage")));
+            this.Options_CH09BT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Options_CH09BT.ForeColor = System.Drawing.Color.Black;
+            this.Options_CH09BT.Location = new System.Drawing.Point(369, 200);
+            this.Options_CH09BT.Name = "Options_CH09BT";
+            this.Options_CH09BT.Size = new System.Drawing.Size(23, 23);
+            this.Options_CH09BT.TabIndex = 0;
+            this.Options_CH09BT.UseVisualStyleBackColor = true;
+            this.Options_CH09BT.Click += new System.EventHandler(this.Options_CH09BT_Click);
             // 
-            // Options_CH06
+            // Options_ForceDbUpdateLabel
             // 
-            this.Options_CH06.AutoSize = true;
-            this.Options_CH06.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_CH06.Location = new System.Drawing.Point(6, 119);
-            this.Options_CH06.Name = "Options_CH06";
-            this.Options_CH06.Size = new System.Drawing.Size(41, 13);
-            this.Options_CH06.TabIndex = 0;
-            this.Options_CH06.Text = "label1";
+            this.Options_ForceDbUpdateLabel.AutoSize = true;
+            this.Options_ForceDbUpdateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_ForceDbUpdateLabel.Location = new System.Drawing.Point(6, 235);
+            this.Options_ForceDbUpdateLabel.Name = "Options_ForceDbUpdateLabel";
+            this.Options_ForceDbUpdateLabel.Size = new System.Drawing.Size(41, 13);
+            this.Options_ForceDbUpdateLabel.TabIndex = 0;
+            this.Options_ForceDbUpdateLabel.Text = "label1";
             // 
-            // Options_CH05
+            // Options_CH07BT
             // 
-            this.Options_CH05.AutoSize = true;
-            this.Options_CH05.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_CH05.Location = new System.Drawing.Point(6, 90);
-            this.Options_CH05.Name = "Options_CH05";
-            this.Options_CH05.Size = new System.Drawing.Size(41, 13);
-            this.Options_CH05.TabIndex = 0;
-            this.Options_CH05.Text = "label1";
+            this.Options_CH07BT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Options_CH07BT.BackgroundImage")));
+            this.Options_CH07BT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Options_CH07BT.ForeColor = System.Drawing.Color.Black;
+            this.Options_CH07BT.Location = new System.Drawing.Point(369, 142);
+            this.Options_CH07BT.Name = "Options_CH07BT";
+            this.Options_CH07BT.Size = new System.Drawing.Size(23, 23);
+            this.Options_CH07BT.TabIndex = 0;
+            this.Options_CH07BT.UseVisualStyleBackColor = true;
+            this.Options_CH07BT.Click += new System.EventHandler(this.Options_CH07BT_Click);
             // 
-            // Options_CH04
+            // Options_RestoreBackupLabel
             // 
-            this.Options_CH04.AutoSize = true;
-            this.Options_CH04.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_CH04.Location = new System.Drawing.Point(6, 61);
-            this.Options_CH04.Name = "Options_CH04";
-            this.Options_CH04.Size = new System.Drawing.Size(41, 13);
-            this.Options_CH04.TabIndex = 0;
-            this.Options_CH04.Text = "label1";
+            this.Options_RestoreBackupLabel.AutoSize = true;
+            this.Options_RestoreBackupLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_RestoreBackupLabel.Location = new System.Drawing.Point(6, 206);
+            this.Options_RestoreBackupLabel.Name = "Options_RestoreBackupLabel";
+            this.Options_RestoreBackupLabel.Size = new System.Drawing.Size(41, 13);
+            this.Options_RestoreBackupLabel.TabIndex = 0;
+            this.Options_RestoreBackupLabel.Text = "label1";
+            // 
+            // Options_CH08BT
+            // 
+            this.Options_CH08BT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Options_CH08BT.BackgroundImage")));
+            this.Options_CH08BT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Options_CH08BT.ForeColor = System.Drawing.Color.Black;
+            this.Options_CH08BT.Location = new System.Drawing.Point(369, 171);
+            this.Options_CH08BT.Name = "Options_CH08BT";
+            this.Options_CH08BT.Size = new System.Drawing.Size(23, 23);
+            this.Options_CH08BT.TabIndex = 0;
+            this.Options_CH08BT.UseVisualStyleBackColor = true;
+            this.Options_CH08BT.Click += new System.EventHandler(this.Options_CH08BT_Click);
+            // 
+            // Options_CompactAndRepairDbLabel
+            // 
+            this.Options_CompactAndRepairDbLabel.AutoSize = true;
+            this.Options_CompactAndRepairDbLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_CompactAndRepairDbLabel.Location = new System.Drawing.Point(6, 148);
+            this.Options_CompactAndRepairDbLabel.Name = "Options_CompactAndRepairDbLabel";
+            this.Options_CompactAndRepairDbLabel.Size = new System.Drawing.Size(41, 13);
+            this.Options_CompactAndRepairDbLabel.TabIndex = 0;
+            this.Options_CompactAndRepairDbLabel.Text = "label1";
+            // 
+            // Options_CH06BT
+            // 
+            this.Options_CH06BT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Options_CH06BT.BackgroundImage")));
+            this.Options_CH06BT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Options_CH06BT.ForeColor = System.Drawing.Color.Black;
+            this.Options_CH06BT.Location = new System.Drawing.Point(369, 113);
+            this.Options_CH06BT.Name = "Options_CH06BT";
+            this.Options_CH06BT.Size = new System.Drawing.Size(23, 23);
+            this.Options_CH06BT.TabIndex = 0;
+            this.Options_CH06BT.UseVisualStyleBackColor = true;
+            this.Options_CH06BT.Click += new System.EventHandler(this.Options_CH06BT_Click);
+            // 
+            // Options_CreateBackupLabel
+            // 
+            this.Options_CreateBackupLabel.AutoSize = true;
+            this.Options_CreateBackupLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_CreateBackupLabel.Location = new System.Drawing.Point(6, 177);
+            this.Options_CreateBackupLabel.Name = "Options_CreateBackupLabel";
+            this.Options_CreateBackupLabel.Size = new System.Drawing.Size(41, 13);
+            this.Options_CreateBackupLabel.TabIndex = 0;
+            this.Options_CreateBackupLabel.Text = "label1";
+            // 
+            // Options_CH05BT
+            // 
+            this.Options_CH05BT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Options_CH05BT.BackgroundImage")));
+            this.Options_CH05BT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Options_CH05BT.ForeColor = System.Drawing.Color.Black;
+            this.Options_CH05BT.Location = new System.Drawing.Point(369, 84);
+            this.Options_CH05BT.Name = "Options_CH05BT";
+            this.Options_CH05BT.Size = new System.Drawing.Size(23, 23);
+            this.Options_CH05BT.TabIndex = 0;
+            this.Options_CH05BT.UseVisualStyleBackColor = true;
+            this.Options_CH05BT.Click += new System.EventHandler(this.Options_CH05BT_Click);
+            // 
+            // Options_CH04BT
+            // 
+            this.Options_CH04BT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Options_CH04BT.BackgroundImage")));
+            this.Options_CH04BT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Options_CH04BT.ForeColor = System.Drawing.Color.Black;
+            this.Options_CH04BT.Location = new System.Drawing.Point(369, 55);
+            this.Options_CH04BT.Name = "Options_CH04BT";
+            this.Options_CH04BT.Size = new System.Drawing.Size(23, 23);
+            this.Options_CH04BT.TabIndex = 0;
+            this.Options_CH04BT.UseVisualStyleBackColor = true;
+            this.Options_CH04BT.Click += new System.EventHandler(this.Options_CH04BT_Click);
+            // 
+            // Options_DeleteDuplicatesLabel
+            // 
+            this.Options_DeleteDuplicatesLabel.AutoSize = true;
+            this.Options_DeleteDuplicatesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_DeleteDuplicatesLabel.Location = new System.Drawing.Point(6, 119);
+            this.Options_DeleteDuplicatesLabel.Name = "Options_DeleteDuplicatesLabel";
+            this.Options_DeleteDuplicatesLabel.Size = new System.Drawing.Size(41, 13);
+            this.Options_DeleteDuplicatesLabel.TabIndex = 0;
+            this.Options_DeleteDuplicatesLabel.Text = "label1";
+            // 
+            // Options_CH03BT
+            // 
+            this.Options_CH03BT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Options_CH03BT.BackgroundImage")));
+            this.Options_CH03BT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Options_CH03BT.ForeColor = System.Drawing.Color.Black;
+            this.Options_CH03BT.Location = new System.Drawing.Point(369, 26);
+            this.Options_CH03BT.Name = "Options_CH03BT";
+            this.Options_CH03BT.Size = new System.Drawing.Size(23, 23);
+            this.Options_CH03BT.TabIndex = 0;
+            this.Options_CH03BT.UseVisualStyleBackColor = true;
+            this.Options_CH03BT.Click += new System.EventHandler(this.Options_CH03BT_Click);
+            // 
+            // Options_DownloadAllFilesLabel
+            // 
+            this.Options_DownloadAllFilesLabel.AutoSize = true;
+            this.Options_DownloadAllFilesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_DownloadAllFilesLabel.Location = new System.Drawing.Point(6, 90);
+            this.Options_DownloadAllFilesLabel.Name = "Options_DownloadAllFilesLabel";
+            this.Options_DownloadAllFilesLabel.Size = new System.Drawing.Size(41, 13);
+            this.Options_DownloadAllFilesLabel.TabIndex = 0;
+            this.Options_DownloadAllFilesLabel.Text = "label1";
+            // 
+            // Options_DownloadAllAnimeEpisodesLabel
+            // 
+            this.Options_DownloadAllAnimeEpisodesLabel.AutoSize = true;
+            this.Options_DownloadAllAnimeEpisodesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_DownloadAllAnimeEpisodesLabel.Location = new System.Drawing.Point(6, 61);
+            this.Options_DownloadAllAnimeEpisodesLabel.Name = "Options_DownloadAllAnimeEpisodesLabel";
+            this.Options_DownloadAllAnimeEpisodesLabel.Size = new System.Drawing.Size(41, 13);
+            this.Options_DownloadAllAnimeEpisodesLabel.TabIndex = 0;
+            this.Options_DownloadAllAnimeEpisodesLabel.Text = "label1";
             // 
             // Options_GR03
             // 
@@ -1316,15 +1448,15 @@ namespace AniDBClient
             // 
             // Options_GR02
             // 
-            this.Options_GR02.Controls.Add(this.Options_CH08);
-            this.Options_GR02.Controls.Add(this.Options_CH19);
-            this.Options_GR02.Controls.Add(this.Options_CH14);
-            this.Options_GR02.Controls.Add(this.Options_CH16);
-            this.Options_GR02.Controls.Add(this.Options_CH21);
-            this.Options_GR02.Controls.Add(this.Options_CH15);
-            this.Options_GR02.Controls.Add(this.Options_CH17);
-            this.Options_GR02.Controls.Add(this.Options_CH18);
-            this.Options_GR02.Controls.Add(this.Options_CH13);
+            this.Options_GR02.Controls.Add(this.Options_SaveSettingsOnExitCheckBox);
+            this.Options_GR02.Controls.Add(this.Options_DetectMyListStatusCheckBox);
+            this.Options_GR02.Controls.Add(this.Options_ShowAdultOnWelcomeScreenCheckBox);
+            this.Options_GR02.Controls.Add(this.Options_MinimizeToTrayCheckBox);
+            this.Options_GR02.Controls.Add(this.Options_SaveLogsToFilesCheckBox);
+            this.Options_GR02.Controls.Add(this.Options_AddSameFilesMultipleTimesCheckBox);
+            this.Options_GR02.Controls.Add(this.Options_FlatStyleCheckBox);
+            this.Options_GR02.Controls.Add(this.Options_DontGenerateWelcomeSceenCheckBox);
+            this.Options_GR02.Controls.Add(this.Options_ClassicFolderSelectDialogCheckBox);
             this.Options_GR02.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Options_GR02.Location = new System.Drawing.Point(13, 363);
             this.Options_GR02.Margin = new System.Windows.Forms.Padding(10);
@@ -1334,125 +1466,125 @@ namespace AniDBClient
             this.Options_GR02.TabStop = false;
             this.Options_GR02.Text = "groupBox1";
             // 
-            // Options_CH08
+            // Options_SaveSettingsOnExitCheckBox
             // 
-            this.Options_CH08.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_CH08.ForeColor = System.Drawing.Color.Black;
-            this.Options_CH08.Location = new System.Drawing.Point(9, 19);
-            this.Options_CH08.Name = "Options_CH08";
-            this.Options_CH08.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Options_CH08.Size = new System.Drawing.Size(435, 17);
-            this.Options_CH08.TabIndex = 0;
-            this.Options_CH08.Text = "checkBox3";
-            this.Options_CH08.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Options_CH08.UseVisualStyleBackColor = true;
+            this.Options_SaveSettingsOnExitCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_SaveSettingsOnExitCheckBox.ForeColor = System.Drawing.Color.Black;
+            this.Options_SaveSettingsOnExitCheckBox.Location = new System.Drawing.Point(9, 19);
+            this.Options_SaveSettingsOnExitCheckBox.Name = "Options_SaveSettingsOnExitCheckBox";
+            this.Options_SaveSettingsOnExitCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Options_SaveSettingsOnExitCheckBox.Size = new System.Drawing.Size(435, 17);
+            this.Options_SaveSettingsOnExitCheckBox.TabIndex = 0;
+            this.Options_SaveSettingsOnExitCheckBox.Text = "checkBox3";
+            this.Options_SaveSettingsOnExitCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Options_SaveSettingsOnExitCheckBox.UseVisualStyleBackColor = true;
             // 
-            // Options_CH19
+            // Options_DetectMyListStatusCheckBox
             // 
-            this.Options_CH19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_CH19.ForeColor = System.Drawing.Color.Black;
-            this.Options_CH19.Location = new System.Drawing.Point(9, 226);
-            this.Options_CH19.Name = "Options_CH19";
-            this.Options_CH19.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Options_CH19.Size = new System.Drawing.Size(435, 17);
-            this.Options_CH19.TabIndex = 0;
-            this.Options_CH19.Text = "checkBox3";
-            this.Options_CH19.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Options_CH19.UseVisualStyleBackColor = true;
+            this.Options_DetectMyListStatusCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_DetectMyListStatusCheckBox.ForeColor = System.Drawing.Color.Black;
+            this.Options_DetectMyListStatusCheckBox.Location = new System.Drawing.Point(9, 226);
+            this.Options_DetectMyListStatusCheckBox.Name = "Options_DetectMyListStatusCheckBox";
+            this.Options_DetectMyListStatusCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Options_DetectMyListStatusCheckBox.Size = new System.Drawing.Size(435, 17);
+            this.Options_DetectMyListStatusCheckBox.TabIndex = 0;
+            this.Options_DetectMyListStatusCheckBox.Text = "checkBox3";
+            this.Options_DetectMyListStatusCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Options_DetectMyListStatusCheckBox.UseVisualStyleBackColor = true;
             // 
-            // Options_CH14
+            // Options_ShowAdultOnWelcomeScreenCheckBox
             // 
-            this.Options_CH14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_CH14.ForeColor = System.Drawing.Color.Black;
-            this.Options_CH14.Location = new System.Drawing.Point(9, 180);
-            this.Options_CH14.Name = "Options_CH14";
-            this.Options_CH14.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Options_CH14.Size = new System.Drawing.Size(435, 17);
-            this.Options_CH14.TabIndex = 0;
-            this.Options_CH14.Text = "checkBox3";
-            this.Options_CH14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Options_CH14.UseVisualStyleBackColor = true;
+            this.Options_ShowAdultOnWelcomeScreenCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_ShowAdultOnWelcomeScreenCheckBox.ForeColor = System.Drawing.Color.Black;
+            this.Options_ShowAdultOnWelcomeScreenCheckBox.Location = new System.Drawing.Point(9, 180);
+            this.Options_ShowAdultOnWelcomeScreenCheckBox.Name = "Options_ShowAdultOnWelcomeScreenCheckBox";
+            this.Options_ShowAdultOnWelcomeScreenCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Options_ShowAdultOnWelcomeScreenCheckBox.Size = new System.Drawing.Size(435, 17);
+            this.Options_ShowAdultOnWelcomeScreenCheckBox.TabIndex = 0;
+            this.Options_ShowAdultOnWelcomeScreenCheckBox.Text = "checkBox3";
+            this.Options_ShowAdultOnWelcomeScreenCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Options_ShowAdultOnWelcomeScreenCheckBox.UseVisualStyleBackColor = true;
             // 
-            // Options_CH16
+            // Options_MinimizeToTrayCheckBox
             // 
-            this.Options_CH16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_CH16.ForeColor = System.Drawing.Color.Black;
-            this.Options_CH16.Location = new System.Drawing.Point(9, 111);
-            this.Options_CH16.Name = "Options_CH16";
-            this.Options_CH16.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Options_CH16.Size = new System.Drawing.Size(435, 17);
-            this.Options_CH16.TabIndex = 0;
-            this.Options_CH16.Text = "checkBox3";
-            this.Options_CH16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Options_CH16.UseVisualStyleBackColor = true;
+            this.Options_MinimizeToTrayCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_MinimizeToTrayCheckBox.ForeColor = System.Drawing.Color.Black;
+            this.Options_MinimizeToTrayCheckBox.Location = new System.Drawing.Point(9, 111);
+            this.Options_MinimizeToTrayCheckBox.Name = "Options_MinimizeToTrayCheckBox";
+            this.Options_MinimizeToTrayCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Options_MinimizeToTrayCheckBox.Size = new System.Drawing.Size(435, 17);
+            this.Options_MinimizeToTrayCheckBox.TabIndex = 0;
+            this.Options_MinimizeToTrayCheckBox.Text = "checkBox3";
+            this.Options_MinimizeToTrayCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Options_MinimizeToTrayCheckBox.UseVisualStyleBackColor = true;
             // 
-            // Options_CH21
+            // Options_SaveLogsToFilesCheckBox
             // 
-            this.Options_CH21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_CH21.ForeColor = System.Drawing.Color.Black;
-            this.Options_CH21.Location = new System.Drawing.Point(9, 318);
-            this.Options_CH21.Name = "Options_CH21";
-            this.Options_CH21.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Options_CH21.Size = new System.Drawing.Size(435, 17);
-            this.Options_CH21.TabIndex = 0;
-            this.Options_CH21.Text = "checkBox3";
-            this.Options_CH21.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Options_CH21.UseVisualStyleBackColor = true;
-            this.Options_CH21.CheckedChanged += new System.EventHandler(this.Options_CH21_CheckedChanged);
+            this.Options_SaveLogsToFilesCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_SaveLogsToFilesCheckBox.ForeColor = System.Drawing.Color.Black;
+            this.Options_SaveLogsToFilesCheckBox.Location = new System.Drawing.Point(9, 318);
+            this.Options_SaveLogsToFilesCheckBox.Name = "Options_SaveLogsToFilesCheckBox";
+            this.Options_SaveLogsToFilesCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Options_SaveLogsToFilesCheckBox.Size = new System.Drawing.Size(435, 17);
+            this.Options_SaveLogsToFilesCheckBox.TabIndex = 0;
+            this.Options_SaveLogsToFilesCheckBox.Text = "checkBox3";
+            this.Options_SaveLogsToFilesCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Options_SaveLogsToFilesCheckBox.UseVisualStyleBackColor = true;
+            this.Options_SaveLogsToFilesCheckBox.CheckedChanged += new System.EventHandler(this.Options_CH21_CheckedChanged);
             // 
-            // Options_CH15
+            // Options_AddSameFilesMultipleTimesCheckBox
             // 
-            this.Options_CH15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_CH15.ForeColor = System.Drawing.Color.Black;
-            this.Options_CH15.Location = new System.Drawing.Point(9, 272);
-            this.Options_CH15.Name = "Options_CH15";
-            this.Options_CH15.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Options_CH15.Size = new System.Drawing.Size(435, 17);
-            this.Options_CH15.TabIndex = 0;
-            this.Options_CH15.Text = "checkBox3";
-            this.Options_CH15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Options_CH15.UseVisualStyleBackColor = true;
+            this.Options_AddSameFilesMultipleTimesCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_AddSameFilesMultipleTimesCheckBox.ForeColor = System.Drawing.Color.Black;
+            this.Options_AddSameFilesMultipleTimesCheckBox.Location = new System.Drawing.Point(9, 272);
+            this.Options_AddSameFilesMultipleTimesCheckBox.Name = "Options_AddSameFilesMultipleTimesCheckBox";
+            this.Options_AddSameFilesMultipleTimesCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Options_AddSameFilesMultipleTimesCheckBox.Size = new System.Drawing.Size(435, 17);
+            this.Options_AddSameFilesMultipleTimesCheckBox.TabIndex = 0;
+            this.Options_AddSameFilesMultipleTimesCheckBox.Text = "checkBox3";
+            this.Options_AddSameFilesMultipleTimesCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Options_AddSameFilesMultipleTimesCheckBox.UseVisualStyleBackColor = true;
             // 
-            // Options_CH17
+            // Options_FlatStyleCheckBox
             // 
-            this.Options_CH17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_CH17.ForeColor = System.Drawing.Color.Black;
-            this.Options_CH17.Location = new System.Drawing.Point(9, 88);
-            this.Options_CH17.Name = "Options_CH17";
-            this.Options_CH17.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Options_CH17.Size = new System.Drawing.Size(435, 17);
-            this.Options_CH17.TabIndex = 0;
-            this.Options_CH17.Text = "checkBox3";
-            this.Options_CH17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Options_CH17.UseVisualStyleBackColor = true;
-            this.Options_CH17.CheckedChanged += new System.EventHandler(this.Options_CH17_CheckedChanged);
+            this.Options_FlatStyleCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_FlatStyleCheckBox.ForeColor = System.Drawing.Color.Black;
+            this.Options_FlatStyleCheckBox.Location = new System.Drawing.Point(9, 88);
+            this.Options_FlatStyleCheckBox.Name = "Options_FlatStyleCheckBox";
+            this.Options_FlatStyleCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Options_FlatStyleCheckBox.Size = new System.Drawing.Size(435, 17);
+            this.Options_FlatStyleCheckBox.TabIndex = 0;
+            this.Options_FlatStyleCheckBox.Text = "checkBox3";
+            this.Options_FlatStyleCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Options_FlatStyleCheckBox.UseVisualStyleBackColor = true;
+            this.Options_FlatStyleCheckBox.CheckedChanged += new System.EventHandler(this.Options_CH17_CheckedChanged);
             // 
-            // Options_CH18
+            // Options_DontGenerateWelcomeSceenCheckBox
             // 
-            this.Options_CH18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_CH18.ForeColor = System.Drawing.Color.Black;
-            this.Options_CH18.Location = new System.Drawing.Point(9, 157);
-            this.Options_CH18.Name = "Options_CH18";
-            this.Options_CH18.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Options_CH18.Size = new System.Drawing.Size(435, 17);
-            this.Options_CH18.TabIndex = 0;
-            this.Options_CH18.Text = "checkBox3";
-            this.Options_CH18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Options_CH18.UseVisualStyleBackColor = true;
-            this.Options_CH18.CheckedChanged += new System.EventHandler(this.Options_CH17_CheckedChanged);
+            this.Options_DontGenerateWelcomeSceenCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_DontGenerateWelcomeSceenCheckBox.ForeColor = System.Drawing.Color.Black;
+            this.Options_DontGenerateWelcomeSceenCheckBox.Location = new System.Drawing.Point(9, 157);
+            this.Options_DontGenerateWelcomeSceenCheckBox.Name = "Options_DontGenerateWelcomeSceenCheckBox";
+            this.Options_DontGenerateWelcomeSceenCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Options_DontGenerateWelcomeSceenCheckBox.Size = new System.Drawing.Size(435, 17);
+            this.Options_DontGenerateWelcomeSceenCheckBox.TabIndex = 0;
+            this.Options_DontGenerateWelcomeSceenCheckBox.Text = "checkBox3";
+            this.Options_DontGenerateWelcomeSceenCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Options_DontGenerateWelcomeSceenCheckBox.UseVisualStyleBackColor = true;
+            this.Options_DontGenerateWelcomeSceenCheckBox.CheckedChanged += new System.EventHandler(this.Options_CH17_CheckedChanged);
             // 
-            // Options_CH13
+            // Options_ClassicFolderSelectDialogCheckBox
             // 
-            this.Options_CH13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_CH13.ForeColor = System.Drawing.Color.Black;
-            this.Options_CH13.Location = new System.Drawing.Point(9, 65);
-            this.Options_CH13.Name = "Options_CH13";
-            this.Options_CH13.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Options_CH13.Size = new System.Drawing.Size(435, 17);
-            this.Options_CH13.TabIndex = 0;
-            this.Options_CH13.Text = "checkBox3";
-            this.Options_CH13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Options_CH13.UseVisualStyleBackColor = true;
+            this.Options_ClassicFolderSelectDialogCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_ClassicFolderSelectDialogCheckBox.ForeColor = System.Drawing.Color.Black;
+            this.Options_ClassicFolderSelectDialogCheckBox.Location = new System.Drawing.Point(9, 65);
+            this.Options_ClassicFolderSelectDialogCheckBox.Name = "Options_ClassicFolderSelectDialogCheckBox";
+            this.Options_ClassicFolderSelectDialogCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Options_ClassicFolderSelectDialogCheckBox.Size = new System.Drawing.Size(435, 17);
+            this.Options_ClassicFolderSelectDialogCheckBox.TabIndex = 0;
+            this.Options_ClassicFolderSelectDialogCheckBox.Text = "checkBox3";
+            this.Options_ClassicFolderSelectDialogCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Options_ClassicFolderSelectDialogCheckBox.UseVisualStyleBackColor = true;
             // 
             // Watcher_List
             // 
@@ -1466,14 +1598,14 @@ namespace AniDBClient
             // 
             // Options_GR01
             // 
-            this.Options_GR01.Controls.Add(this.Options_CH02);
-            this.Options_GR01.Controls.Add(this.Options_LB10);
-            this.Options_GR01.Controls.Add(this.Options_LB09);
-            this.Options_GR01.Controls.Add(this.Options_LB08);
-            this.Options_GR01.Controls.Add(this.Options_LB07);
+            this.Options_GR01.Controls.Add(this.Options_WatchedCheckbox);
+            this.Options_GR01.Controls.Add(this.Options_OtherLabel);
+            this.Options_GR01.Controls.Add(this.Options_StorageLabel);
+            this.Options_GR01.Controls.Add(this.Options_SourceLabel);
+            this.Options_GR01.Controls.Add(this.Options_StatusLabel);
             this.Options_GR01.Controls.Add(this.Options_MylistOther);
             this.Options_GR01.Controls.Add(this.Options_MylistStorage);
-            this.Options_GR01.Controls.Add(this.Options_CH01);
+            this.Options_GR01.Controls.Add(this.Options_AutoAddToMyListCheckBox);
             this.Options_GR01.Controls.Add(this.Options_MylistSource);
             this.Options_GR01.Controls.Add(this.Options_MylistState);
             this.Options_GR01.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -1486,61 +1618,61 @@ namespace AniDBClient
             this.Options_GR01.TabStop = false;
             this.Options_GR01.Text = "groupBox2";
             // 
-            // Options_CH02
+            // Options_WatchedCheckbox
             // 
-            this.Options_CH02.ForeColor = System.Drawing.Color.Black;
-            this.Options_CH02.Location = new System.Drawing.Point(9, 124);
-            this.Options_CH02.Name = "Options_CH02";
-            this.Options_CH02.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Options_CH02.Size = new System.Drawing.Size(435, 17);
-            this.Options_CH02.TabIndex = 0;
-            this.Options_CH02.Text = "checkBox1";
-            this.Options_CH02.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Options_CH02.UseVisualStyleBackColor = true;
+            this.Options_WatchedCheckbox.ForeColor = System.Drawing.Color.Black;
+            this.Options_WatchedCheckbox.Location = new System.Drawing.Point(9, 124);
+            this.Options_WatchedCheckbox.Name = "Options_WatchedCheckbox";
+            this.Options_WatchedCheckbox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Options_WatchedCheckbox.Size = new System.Drawing.Size(435, 17);
+            this.Options_WatchedCheckbox.TabIndex = 0;
+            this.Options_WatchedCheckbox.Text = "checkBox1";
+            this.Options_WatchedCheckbox.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Options_WatchedCheckbox.UseVisualStyleBackColor = true;
             // 
-            // Options_LB10
+            // Options_OtherLabel
             // 
-            this.Options_LB10.AutoSize = true;
-            this.Options_LB10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB10.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB10.Location = new System.Drawing.Point(6, 101);
-            this.Options_LB10.Name = "Options_LB10";
-            this.Options_LB10.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB10.TabIndex = 0;
-            this.Options_LB10.Text = "Nadpis";
+            this.Options_OtherLabel.AutoSize = true;
+            this.Options_OtherLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_OtherLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_OtherLabel.Location = new System.Drawing.Point(6, 101);
+            this.Options_OtherLabel.Name = "Options_OtherLabel";
+            this.Options_OtherLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_OtherLabel.TabIndex = 0;
+            this.Options_OtherLabel.Text = "Nadpis";
             // 
-            // Options_LB09
+            // Options_StorageLabel
             // 
-            this.Options_LB09.AutoSize = true;
-            this.Options_LB09.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB09.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB09.Location = new System.Drawing.Point(6, 75);
-            this.Options_LB09.Name = "Options_LB09";
-            this.Options_LB09.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB09.TabIndex = 0;
-            this.Options_LB09.Text = "Nadpis";
+            this.Options_StorageLabel.AutoSize = true;
+            this.Options_StorageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_StorageLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_StorageLabel.Location = new System.Drawing.Point(6, 75);
+            this.Options_StorageLabel.Name = "Options_StorageLabel";
+            this.Options_StorageLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_StorageLabel.TabIndex = 0;
+            this.Options_StorageLabel.Text = "Nadpis";
             // 
-            // Options_LB08
+            // Options_SourceLabel
             // 
-            this.Options_LB08.AutoSize = true;
-            this.Options_LB08.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB08.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB08.Location = new System.Drawing.Point(6, 49);
-            this.Options_LB08.Name = "Options_LB08";
-            this.Options_LB08.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB08.TabIndex = 0;
-            this.Options_LB08.Text = "Nadpis";
+            this.Options_SourceLabel.AutoSize = true;
+            this.Options_SourceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_SourceLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_SourceLabel.Location = new System.Drawing.Point(6, 49);
+            this.Options_SourceLabel.Name = "Options_SourceLabel";
+            this.Options_SourceLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_SourceLabel.TabIndex = 0;
+            this.Options_SourceLabel.Text = "Nadpis";
             // 
-            // Options_LB07
+            // Options_StatusLabel
             // 
-            this.Options_LB07.AutoSize = true;
-            this.Options_LB07.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB07.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB07.Location = new System.Drawing.Point(6, 22);
-            this.Options_LB07.Name = "Options_LB07";
-            this.Options_LB07.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB07.TabIndex = 0;
-            this.Options_LB07.Text = "Nadpis";
+            this.Options_StatusLabel.AutoSize = true;
+            this.Options_StatusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_StatusLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_StatusLabel.Location = new System.Drawing.Point(6, 22);
+            this.Options_StatusLabel.Name = "Options_StatusLabel";
+            this.Options_StatusLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_StatusLabel.TabIndex = 0;
+            this.Options_StatusLabel.Text = "Nadpis";
             // 
             // Options_MylistOther
             // 
@@ -1562,17 +1694,17 @@ namespace AniDBClient
             this.Options_MylistStorage.Size = new System.Drawing.Size(304, 20);
             this.Options_MylistStorage.TabIndex = 0;
             // 
-            // Options_CH01
+            // Options_AutoAddToMyListCheckBox
             // 
-            this.Options_CH01.ForeColor = System.Drawing.Color.Black;
-            this.Options_CH01.Location = new System.Drawing.Point(9, 147);
-            this.Options_CH01.Name = "Options_CH01";
-            this.Options_CH01.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Options_CH01.Size = new System.Drawing.Size(435, 17);
-            this.Options_CH01.TabIndex = 0;
-            this.Options_CH01.Text = "checkBox1";
-            this.Options_CH01.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Options_CH01.UseVisualStyleBackColor = true;
+            this.Options_AutoAddToMyListCheckBox.ForeColor = System.Drawing.Color.Black;
+            this.Options_AutoAddToMyListCheckBox.Location = new System.Drawing.Point(9, 147);
+            this.Options_AutoAddToMyListCheckBox.Name = "Options_AutoAddToMyListCheckBox";
+            this.Options_AutoAddToMyListCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Options_AutoAddToMyListCheckBox.Size = new System.Drawing.Size(435, 17);
+            this.Options_AutoAddToMyListCheckBox.TabIndex = 0;
+            this.Options_AutoAddToMyListCheckBox.Text = "checkBox1";
+            this.Options_AutoAddToMyListCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Options_AutoAddToMyListCheckBox.UseVisualStyleBackColor = true;
             // 
             // Options_MylistSource
             // 
@@ -1601,16 +1733,16 @@ namespace AniDBClient
             this.Options_MylistState.Size = new System.Drawing.Size(304, 21);
             this.Options_MylistState.TabIndex = 0;
             // 
-            // Options_LB11
+            // Options_NetworkLabel
             // 
-            this.Options_LB11.AutoSize = true;
-            this.Options_LB11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB11.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB11.Location = new System.Drawing.Point(10, 17);
-            this.Options_LB11.Name = "Options_LB11";
-            this.Options_LB11.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB11.TabIndex = 0;
-            this.Options_LB11.Text = "Nadpis";
+            this.Options_NetworkLabel.AutoSize = true;
+            this.Options_NetworkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_NetworkLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_NetworkLabel.Location = new System.Drawing.Point(10, 17);
+            this.Options_NetworkLabel.Name = "Options_NetworkLabel";
+            this.Options_NetworkLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_NetworkLabel.TabIndex = 0;
+            this.Options_NetworkLabel.Text = "Nadpis";
             // 
             // Watcher_CH01
             // 
@@ -1623,16 +1755,16 @@ namespace AniDBClient
             this.Watcher_CH01.Text = "checkBox1";
             this.Watcher_CH01.UseVisualStyleBackColor = true;
             // 
-            // Options_LB01
+            // Options_ServerLabel
             // 
-            this.Options_LB01.AutoSize = true;
-            this.Options_LB01.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB01.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB01.Location = new System.Drawing.Point(10, 70);
-            this.Options_LB01.Name = "Options_LB01";
-            this.Options_LB01.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB01.TabIndex = 0;
-            this.Options_LB01.Text = "Nadpis";
+            this.Options_ServerLabel.AutoSize = true;
+            this.Options_ServerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_ServerLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_ServerLabel.Location = new System.Drawing.Point(10, 70);
+            this.Options_ServerLabel.Name = "Options_ServerLabel";
+            this.Options_ServerLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_ServerLabel.TabIndex = 0;
+            this.Options_ServerLabel.Text = "Nadpis";
             // 
             // Options_Network
             // 
@@ -1643,6 +1775,18 @@ namespace AniDBClient
             this.Options_Network.Name = "Options_Network";
             this.Options_Network.Size = new System.Drawing.Size(304, 21);
             this.Options_Network.TabIndex = 0;
+            // 
+            // Watcher_Delete
+            // 
+            this.Watcher_Delete.BackgroundImage = global::AniDBClient.Properties.Resources.i_Delete;
+            this.Watcher_Delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Watcher_Delete.ForeColor = System.Drawing.Color.Black;
+            this.Watcher_Delete.Location = new System.Drawing.Point(490, 302);
+            this.Watcher_Delete.Name = "Watcher_Delete";
+            this.Watcher_Delete.Size = new System.Drawing.Size(21, 21);
+            this.Watcher_Delete.TabIndex = 3;
+            this.Watcher_Delete.UseVisualStyleBackColor = true;
+            this.Watcher_Delete.Click += new System.EventHandler(this.Watcher_Delete_Click);
             // 
             // Options_Delay
             // 
@@ -1705,6 +1849,18 @@ namespace AniDBClient
             0,
             0});
             // 
+            // Watcher_Add
+            // 
+            this.Watcher_Add.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Watcher_Add.BackgroundImage")));
+            this.Watcher_Add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Watcher_Add.ForeColor = System.Drawing.Color.Black;
+            this.Watcher_Add.Location = new System.Drawing.Point(463, 302);
+            this.Watcher_Add.Name = "Watcher_Add";
+            this.Watcher_Add.Size = new System.Drawing.Size(21, 21);
+            this.Watcher_Add.TabIndex = 4;
+            this.Watcher_Add.UseVisualStyleBackColor = true;
+            this.Watcher_Add.Click += new System.EventHandler(this.Watcher_Add_Click);
+            // 
             // Options_ServerPort
             // 
             this.Options_ServerPort.BackColor = System.Drawing.Color.White;
@@ -1730,16 +1886,16 @@ namespace AniDBClient
             0,
             0});
             // 
-            // Options_LB02
+            // Options_PortLabel
             // 
-            this.Options_LB02.AutoSize = true;
-            this.Options_LB02.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB02.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB02.Location = new System.Drawing.Point(10, 96);
-            this.Options_LB02.Name = "Options_LB02";
-            this.Options_LB02.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB02.TabIndex = 0;
-            this.Options_LB02.Text = "Nadpis";
+            this.Options_PortLabel.AutoSize = true;
+            this.Options_PortLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_PortLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_PortLabel.Location = new System.Drawing.Point(10, 96);
+            this.Options_PortLabel.Name = "Options_PortLabel";
+            this.Options_PortLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_PortLabel.TabIndex = 0;
+            this.Options_PortLabel.Text = "Nadpis";
             // 
             // Options_Backup
             // 
@@ -1765,6 +1921,17 @@ namespace AniDBClient
             0,
             0,
             0});
+            // 
+            // Options_ExtensionRem
+            // 
+            this.Options_ExtensionRem.BackgroundImage = global::AniDBClient.Properties.Resources.i_Delete;
+            this.Options_ExtensionRem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Options_ExtensionRem.Location = new System.Drawing.Point(490, 275);
+            this.Options_ExtensionRem.Name = "Options_ExtensionRem";
+            this.Options_ExtensionRem.Size = new System.Drawing.Size(21, 21);
+            this.Options_ExtensionRem.TabIndex = 0;
+            this.Options_ExtensionRem.UseVisualStyleBackColor = true;
+            this.Options_ExtensionRem.Click += new System.EventHandler(this.Options_ExtensionRem_Click);
             // 
             // Options_LocalPort
             // 
@@ -1802,82 +1969,142 @@ namespace AniDBClient
             this.Options_User.TabIndex = 0;
             this.Options_User.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // Options_LB03
+            // Options_AccountChange
             // 
-            this.Options_LB03.AutoSize = true;
-            this.Options_LB03.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB03.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB03.Location = new System.Drawing.Point(10, 122);
-            this.Options_LB03.Name = "Options_LB03";
-            this.Options_LB03.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB03.TabIndex = 0;
-            this.Options_LB03.Text = "Nadpis";
+            this.Options_AccountChange.BackgroundImage = global::AniDBClient.Properties.Resources.i_Log_Out;
+            this.Options_AccountChange.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Options_AccountChange.ForeColor = System.Drawing.Color.Black;
+            this.Options_AccountChange.Location = new System.Drawing.Point(463, 119);
+            this.Options_AccountChange.Name = "Options_AccountChange";
+            this.Options_AccountChange.Size = new System.Drawing.Size(21, 21);
+            this.Options_AccountChange.TabIndex = 0;
+            this.Options_AccountChange.UseVisualStyleBackColor = true;
+            this.Options_AccountChange.Click += new System.EventHandler(this.Options_AccountChange_Click);
             // 
-            // Options_LB13
+            // Options_UserNameLabel
             // 
-            this.Options_LB13.AutoSize = true;
-            this.Options_LB13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB13.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB13.Location = new System.Drawing.Point(10, 305);
-            this.Options_LB13.Name = "Options_LB13";
-            this.Options_LB13.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB13.TabIndex = 0;
-            this.Options_LB13.Text = "Nadpis";
+            this.Options_UserNameLabel.AutoSize = true;
+            this.Options_UserNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_UserNameLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_UserNameLabel.Location = new System.Drawing.Point(10, 122);
+            this.Options_UserNameLabel.Name = "Options_UserNameLabel";
+            this.Options_UserNameLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_UserNameLabel.TabIndex = 0;
+            this.Options_UserNameLabel.Text = "Nadpis";
             // 
-            // Options_LB45
+            // Options_Hash_WatcherLabel
             // 
-            this.Options_LB45.AutoSize = true;
-            this.Options_LB45.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB45.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB45.Location = new System.Drawing.Point(10, 43);
-            this.Options_LB45.Name = "Options_LB45";
-            this.Options_LB45.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB45.TabIndex = 0;
-            this.Options_LB45.Text = "Nadpis";
+            this.Options_Hash_WatcherLabel.AutoSize = true;
+            this.Options_Hash_WatcherLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_Hash_WatcherLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_Hash_WatcherLabel.Location = new System.Drawing.Point(10, 305);
+            this.Options_Hash_WatcherLabel.Name = "Options_Hash_WatcherLabel";
+            this.Options_Hash_WatcherLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_Hash_WatcherLabel.TabIndex = 0;
+            this.Options_Hash_WatcherLabel.Text = "Nadpis";
             // 
-            // Options_LB04
+            // Options_LocalPortLabel
             // 
-            this.Options_LB04.AutoSize = true;
-            this.Options_LB04.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB04.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB04.Location = new System.Drawing.Point(10, 148);
-            this.Options_LB04.Name = "Options_LB04";
-            this.Options_LB04.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB04.TabIndex = 0;
-            this.Options_LB04.Text = "Nadpis";
+            this.Options_LocalPortLabel.AutoSize = true;
+            this.Options_LocalPortLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_LocalPortLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_LocalPortLabel.Location = new System.Drawing.Point(10, 43);
+            this.Options_LocalPortLabel.Name = "Options_LocalPortLabel";
+            this.Options_LocalPortLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_LocalPortLabel.TabIndex = 0;
+            this.Options_LocalPortLabel.Text = "Nadpis";
             // 
-            // Options_LB12
+            // Options_PasswordLabel
             // 
-            this.Options_LB12.AutoSize = true;
-            this.Options_LB12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB12.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB12.Location = new System.Drawing.Point(10, 279);
-            this.Options_LB12.Name = "Options_LB12";
-            this.Options_LB12.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB12.TabIndex = 0;
-            this.Options_LB12.Text = "Nadpis";
+            this.Options_PasswordLabel.AutoSize = true;
+            this.Options_PasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_PasswordLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_PasswordLabel.Location = new System.Drawing.Point(10, 148);
+            this.Options_PasswordLabel.Name = "Options_PasswordLabel";
+            this.Options_PasswordLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_PasswordLabel.TabIndex = 0;
+            this.Options_PasswordLabel.Text = "Nadpis";
             // 
-            // Options_LB05
+            // Options_FileTypesLabel
             // 
-            this.Options_LB05.AutoSize = true;
-            this.Options_LB05.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB05.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB05.Location = new System.Drawing.Point(10, 173);
-            this.Options_LB05.Name = "Options_LB05";
-            this.Options_LB05.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB05.TabIndex = 0;
-            this.Options_LB05.Text = "Nadpis";
+            this.Options_FileTypesLabel.AutoSize = true;
+            this.Options_FileTypesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_FileTypesLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_FileTypesLabel.Location = new System.Drawing.Point(10, 279);
+            this.Options_FileTypesLabel.Name = "Options_FileTypesLabel";
+            this.Options_FileTypesLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_FileTypesLabel.TabIndex = 0;
+            this.Options_FileTypesLabel.Text = "Nadpis";
             // 
-            // Options_LB69
+            // Options_ExtensionAdd
             // 
-            this.Options_LB69.AutoSize = true;
-            this.Options_LB69.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB69.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB69.Location = new System.Drawing.Point(10, 251);
-            this.Options_LB69.Name = "Options_LB69";
-            this.Options_LB69.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB69.TabIndex = 0;
-            this.Options_LB69.Text = "Nadpis";
+            this.Options_ExtensionAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Options_ExtensionAdd.BackgroundImage")));
+            this.Options_ExtensionAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Options_ExtensionAdd.ForeColor = System.Drawing.Color.Black;
+            this.Options_ExtensionAdd.Location = new System.Drawing.Point(463, 275);
+            this.Options_ExtensionAdd.Name = "Options_ExtensionAdd";
+            this.Options_ExtensionAdd.Size = new System.Drawing.Size(21, 21);
+            this.Options_ExtensionAdd.TabIndex = 0;
+            this.Options_ExtensionAdd.UseVisualStyleBackColor = true;
+            this.Options_ExtensionAdd.Click += new System.EventHandler(this.Options_ExtensionAdd_Click);
+            // 
+            // Options_w8Hack
+            // 
+            this.Options_w8Hack.BackgroundImage = global::AniDBClient.Properties.Resources.i_w8;
+            this.Options_w8Hack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Options_w8Hack.ForeColor = System.Drawing.Color.Black;
+            this.Options_w8Hack.Location = new System.Drawing.Point(867, 306);
+            this.Options_w8Hack.Name = "Options_w8Hack";
+            this.Options_w8Hack.Size = new System.Drawing.Size(36, 36);
+            this.Options_w8Hack.TabIndex = 0;
+            this.Options_w8Hack.UseVisualStyleBackColor = true;
+            this.Options_w8Hack.Click += new System.EventHandler(this.Options_w8Hack_Click);
+            // 
+            // Options_SetingsDefault
+            // 
+            this.Options_SetingsDefault.BackgroundImage = global::AniDBClient.Properties.Resources.i_StockIndexDown;
+            this.Options_SetingsDefault.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Options_SetingsDefault.ForeColor = System.Drawing.Color.Black;
+            this.Options_SetingsDefault.Location = new System.Drawing.Point(925, 306);
+            this.Options_SetingsDefault.Name = "Options_SetingsDefault";
+            this.Options_SetingsDefault.Size = new System.Drawing.Size(36, 36);
+            this.Options_SetingsDefault.TabIndex = 0;
+            this.Options_SetingsDefault.UseVisualStyleBackColor = true;
+            this.Options_SetingsDefault.Click += new System.EventHandler(this.Options_SetingsDefault_Click);
+            // 
+            // Options_SetingsLoad
+            // 
+            this.Options_SetingsLoad.BackgroundImage = global::AniDBClient.Properties.Resources.i_StockIndexUp;
+            this.Options_SetingsLoad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Options_SetingsLoad.ForeColor = System.Drawing.Color.Black;
+            this.Options_SetingsLoad.Location = new System.Drawing.Point(983, 306);
+            this.Options_SetingsLoad.Name = "Options_SetingsLoad";
+            this.Options_SetingsLoad.Size = new System.Drawing.Size(36, 36);
+            this.Options_SetingsLoad.TabIndex = 0;
+            this.Options_SetingsLoad.UseVisualStyleBackColor = true;
+            this.Options_SetingsLoad.Click += new System.EventHandler(this.Options_SetingsLoad_Click);
+            // 
+            // Options_TimeoutLabel
+            // 
+            this.Options_TimeoutLabel.AutoSize = true;
+            this.Options_TimeoutLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_TimeoutLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_TimeoutLabel.Location = new System.Drawing.Point(10, 173);
+            this.Options_TimeoutLabel.Name = "Options_TimeoutLabel";
+            this.Options_TimeoutLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_TimeoutLabel.TabIndex = 0;
+            this.Options_TimeoutLabel.Text = "Nadpis";
+            // 
+            // Options_DbBackupCountLabel
+            // 
+            this.Options_DbBackupCountLabel.AutoSize = true;
+            this.Options_DbBackupCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_DbBackupCountLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_DbBackupCountLabel.Location = new System.Drawing.Point(10, 251);
+            this.Options_DbBackupCountLabel.Name = "Options_DbBackupCountLabel";
+            this.Options_DbBackupCountLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_DbBackupCountLabel.TabIndex = 0;
+            this.Options_DbBackupCountLabel.Text = "Nadpis";
             // 
             // Options_Language
             // 
@@ -1923,27 +2150,51 @@ namespace AniDBClient
             0,
             0});
             // 
-            // Options_LB06
+            // Options_DelayLabel
             // 
-            this.Options_LB06.AutoSize = true;
-            this.Options_LB06.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB06.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB06.Location = new System.Drawing.Point(10, 199);
-            this.Options_LB06.Name = "Options_LB06";
-            this.Options_LB06.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB06.TabIndex = 0;
-            this.Options_LB06.Text = "Nadpis";
+            this.Options_DelayLabel.AutoSize = true;
+            this.Options_DelayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_DelayLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_DelayLabel.Location = new System.Drawing.Point(10, 199);
+            this.Options_DelayLabel.Name = "Options_DelayLabel";
+            this.Options_DelayLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_DelayLabel.TabIndex = 0;
+            this.Options_DelayLabel.Text = "Nadpis";
             // 
-            // Options_LB68
+            // Options_SetingsSave
             // 
-            this.Options_LB68.AutoSize = true;
-            this.Options_LB68.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB68.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB68.Location = new System.Drawing.Point(10, 225);
-            this.Options_LB68.Name = "Options_LB68";
-            this.Options_LB68.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB68.TabIndex = 0;
-            this.Options_LB68.Text = "Nadpis";
+            this.Options_SetingsSave.BackgroundImage = global::AniDBClient.Properties.Resources.i_Save;
+            this.Options_SetingsSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Options_SetingsSave.ForeColor = System.Drawing.Color.Black;
+            this.Options_SetingsSave.Location = new System.Drawing.Point(1044, 306);
+            this.Options_SetingsSave.Name = "Options_SetingsSave";
+            this.Options_SetingsSave.Size = new System.Drawing.Size(36, 36);
+            this.Options_SetingsSave.TabIndex = 0;
+            this.Options_SetingsSave.UseVisualStyleBackColor = true;
+            this.Options_SetingsSave.Click += new System.EventHandler(this.Options_SetingsSave_Click);
+            // 
+            // Options_StartComunication
+            // 
+            this.Options_StartComunication.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Options_StartComunication.BackgroundImage")));
+            this.Options_StartComunication.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Options_StartComunication.ForeColor = System.Drawing.Color.Black;
+            this.Options_StartComunication.Location = new System.Drawing.Point(463, 67);
+            this.Options_StartComunication.Name = "Options_StartComunication";
+            this.Options_StartComunication.Size = new System.Drawing.Size(21, 21);
+            this.Options_StartComunication.TabIndex = 0;
+            this.Options_StartComunication.UseVisualStyleBackColor = true;
+            this.Options_StartComunication.Click += new System.EventHandler(this.Options_StartComunication_Click);
+            // 
+            // Options_ResetCountLabel
+            // 
+            this.Options_ResetCountLabel.AutoSize = true;
+            this.Options_ResetCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_ResetCountLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_ResetCountLabel.Location = new System.Drawing.Point(10, 225);
+            this.Options_ResetCountLabel.Name = "Options_ResetCountLabel";
+            this.Options_ResetCountLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_ResetCountLabel.TabIndex = 0;
+            this.Options_ResetCountLabel.Text = "Nadpis";
             // 
             // Options_ServerName
             // 
@@ -1968,91 +2219,91 @@ namespace AniDBClient
             this.Options_ExtensionList.TabIndex = 0;
             this.Options_ExtensionList.SelectedIndexChanged += new System.EventHandler(this.Options_Language_SelectedIndexChanged);
             // 
-            // MainTab_Mn02
+            // MainTab_RulesPage
             // 
-            this.MainTab_Mn02.BackColor = System.Drawing.Color.White;
-            this.MainTab_Mn02.Controls.Add(this.Rules_CH04);
-            this.MainTab_Mn02.Controls.Add(this.Rules_Tags);
-            this.MainTab_Mn02.Controls.Add(this.Rules_CH03);
-            this.MainTab_Mn02.Controls.Add(this.Rules_CH02);
-            this.MainTab_Mn02.Controls.Add(this.Rules_CH01);
-            this.MainTab_Mn02.Controls.Add(this.Rules_GR03);
-            this.MainTab_Mn02.Controls.Add(this.Rules_GR04);
-            this.MainTab_Mn02.Controls.Add(this.Rules_GR02);
-            this.MainTab_Mn02.Controls.Add(this.Rules_GR01);
-            this.MainTab_Mn02.Location = new System.Drawing.Point(4, 22);
-            this.MainTab_Mn02.Name = "MainTab_Mn02";
-            this.MainTab_Mn02.Padding = new System.Windows.Forms.Padding(3);
-            this.MainTab_Mn02.Size = new System.Drawing.Size(1119, 680);
-            this.MainTab_Mn02.TabIndex = 0;
-            this.MainTab_Mn02.Text = "2";
-            this.MainTab_Mn02.UseVisualStyleBackColor = true;
+            this.MainTab_RulesPage.BackColor = System.Drawing.Color.White;
+            this.MainTab_RulesPage.Controls.Add(this.Rules_DeleteSourceIfEmptyCheckBox);
+            this.MainTab_RulesPage.Controls.Add(this.Rules_TagsButton);
+            this.MainTab_RulesPage.Controls.Add(this.Rules_ReplaceExistingCheckBox);
+            this.MainTab_RulesPage.Controls.Add(this.Rules_DontCopyToAnotherDiskCheckBox);
+            this.MainTab_RulesPage.Controls.Add(this.Rules_AutomaticRenamingCheckBox);
+            this.MainTab_RulesPage.Controls.Add(this.Rules_RulesForCharacterReplacingGroupBox);
+            this.MainTab_RulesPage.Controls.Add(this.Rules_ExportInfoGroupBox);
+            this.MainTab_RulesPage.Controls.Add(this.Rules_RulesForGeneratingDirectoriesGroupBox);
+            this.MainTab_RulesPage.Controls.Add(this.Rules_RulesForFileRenamingGroupBox);
+            this.MainTab_RulesPage.Location = new System.Drawing.Point(4, 22);
+            this.MainTab_RulesPage.Name = "MainTab_RulesPage";
+            this.MainTab_RulesPage.Padding = new System.Windows.Forms.Padding(3);
+            this.MainTab_RulesPage.Size = new System.Drawing.Size(1119, 680);
+            this.MainTab_RulesPage.TabIndex = 0;
+            this.MainTab_RulesPage.Text = "2";
+            this.MainTab_RulesPage.UseVisualStyleBackColor = true;
             // 
-            // Rules_CH04
+            // Rules_DeleteSourceIfEmptyCheckBox
             // 
-            this.Rules_CH04.AutoSize = true;
-            this.Rules_CH04.Location = new System.Drawing.Point(756, 15);
-            this.Rules_CH04.Name = "Rules_CH04";
-            this.Rules_CH04.Size = new System.Drawing.Size(80, 17);
-            this.Rules_CH04.TabIndex = 1;
-            this.Rules_CH04.Text = "checkBox1";
-            this.Rules_CH04.UseVisualStyleBackColor = true;
+            this.Rules_DeleteSourceIfEmptyCheckBox.AutoSize = true;
+            this.Rules_DeleteSourceIfEmptyCheckBox.Location = new System.Drawing.Point(756, 15);
+            this.Rules_DeleteSourceIfEmptyCheckBox.Name = "Rules_DeleteSourceIfEmptyCheckBox";
+            this.Rules_DeleteSourceIfEmptyCheckBox.Size = new System.Drawing.Size(80, 17);
+            this.Rules_DeleteSourceIfEmptyCheckBox.TabIndex = 1;
+            this.Rules_DeleteSourceIfEmptyCheckBox.Text = "checkBox1";
+            this.Rules_DeleteSourceIfEmptyCheckBox.UseVisualStyleBackColor = true;
             // 
-            // Rules_Tags
+            // Rules_TagsButton
             // 
-            this.Rules_Tags.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.Rules_Tags.ForeColor = System.Drawing.Color.Black;
-            this.Rules_Tags.Location = new System.Drawing.Point(1006, 11);
-            this.Rules_Tags.Name = "Rules_Tags";
-            this.Rules_Tags.Size = new System.Drawing.Size(75, 23);
-            this.Rules_Tags.TabIndex = 0;
-            this.Rules_Tags.Text = "button1";
-            this.Rules_Tags.UseVisualStyleBackColor = true;
-            this.Rules_Tags.Click += new System.EventHandler(this.Rules_Tags_Click);
+            this.Rules_TagsButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.Rules_TagsButton.ForeColor = System.Drawing.Color.Black;
+            this.Rules_TagsButton.Location = new System.Drawing.Point(1006, 11);
+            this.Rules_TagsButton.Name = "Rules_TagsButton";
+            this.Rules_TagsButton.Size = new System.Drawing.Size(75, 23);
+            this.Rules_TagsButton.TabIndex = 0;
+            this.Rules_TagsButton.Text = "button1";
+            this.Rules_TagsButton.UseVisualStyleBackColor = true;
+            this.Rules_TagsButton.Click += new System.EventHandler(this.Rules_Tags_Click);
             // 
-            // Rules_CH03
+            // Rules_ReplaceExistingCheckBox
             // 
-            this.Rules_CH03.AutoSize = true;
-            this.Rules_CH03.ForeColor = System.Drawing.Color.Black;
-            this.Rules_CH03.Location = new System.Drawing.Point(506, 15);
-            this.Rules_CH03.Name = "Rules_CH03";
-            this.Rules_CH03.Size = new System.Drawing.Size(80, 17);
-            this.Rules_CH03.TabIndex = 0;
-            this.Rules_CH03.Text = "checkBox3";
-            this.Rules_CH03.UseVisualStyleBackColor = true;
+            this.Rules_ReplaceExistingCheckBox.AutoSize = true;
+            this.Rules_ReplaceExistingCheckBox.ForeColor = System.Drawing.Color.Black;
+            this.Rules_ReplaceExistingCheckBox.Location = new System.Drawing.Point(506, 15);
+            this.Rules_ReplaceExistingCheckBox.Name = "Rules_ReplaceExistingCheckBox";
+            this.Rules_ReplaceExistingCheckBox.Size = new System.Drawing.Size(80, 17);
+            this.Rules_ReplaceExistingCheckBox.TabIndex = 0;
+            this.Rules_ReplaceExistingCheckBox.Text = "checkBox3";
+            this.Rules_ReplaceExistingCheckBox.UseVisualStyleBackColor = true;
             // 
-            // Rules_CH02
+            // Rules_DontCopyToAnotherDiskCheckBox
             // 
-            this.Rules_CH02.AutoSize = true;
-            this.Rules_CH02.ForeColor = System.Drawing.Color.Black;
-            this.Rules_CH02.Location = new System.Drawing.Point(256, 15);
-            this.Rules_CH02.Name = "Rules_CH02";
-            this.Rules_CH02.Size = new System.Drawing.Size(80, 17);
-            this.Rules_CH02.TabIndex = 0;
-            this.Rules_CH02.Text = "checkBox2";
-            this.Rules_CH02.UseVisualStyleBackColor = true;
+            this.Rules_DontCopyToAnotherDiskCheckBox.AutoSize = true;
+            this.Rules_DontCopyToAnotherDiskCheckBox.ForeColor = System.Drawing.Color.Black;
+            this.Rules_DontCopyToAnotherDiskCheckBox.Location = new System.Drawing.Point(256, 15);
+            this.Rules_DontCopyToAnotherDiskCheckBox.Name = "Rules_DontCopyToAnotherDiskCheckBox";
+            this.Rules_DontCopyToAnotherDiskCheckBox.Size = new System.Drawing.Size(80, 17);
+            this.Rules_DontCopyToAnotherDiskCheckBox.TabIndex = 0;
+            this.Rules_DontCopyToAnotherDiskCheckBox.Text = "checkBox2";
+            this.Rules_DontCopyToAnotherDiskCheckBox.UseVisualStyleBackColor = true;
             // 
-            // Rules_CH01
+            // Rules_AutomaticRenamingCheckBox
             // 
-            this.Rules_CH01.AutoSize = true;
-            this.Rules_CH01.ForeColor = System.Drawing.Color.Black;
-            this.Rules_CH01.Location = new System.Drawing.Point(6, 15);
-            this.Rules_CH01.Name = "Rules_CH01";
-            this.Rules_CH01.Size = new System.Drawing.Size(80, 17);
-            this.Rules_CH01.TabIndex = 0;
-            this.Rules_CH01.Text = "checkBox1";
-            this.Rules_CH01.UseVisualStyleBackColor = true;
+            this.Rules_AutomaticRenamingCheckBox.AutoSize = true;
+            this.Rules_AutomaticRenamingCheckBox.ForeColor = System.Drawing.Color.Black;
+            this.Rules_AutomaticRenamingCheckBox.Location = new System.Drawing.Point(6, 15);
+            this.Rules_AutomaticRenamingCheckBox.Name = "Rules_AutomaticRenamingCheckBox";
+            this.Rules_AutomaticRenamingCheckBox.Size = new System.Drawing.Size(80, 17);
+            this.Rules_AutomaticRenamingCheckBox.TabIndex = 0;
+            this.Rules_AutomaticRenamingCheckBox.Text = "checkBox1";
+            this.Rules_AutomaticRenamingCheckBox.UseVisualStyleBackColor = true;
             // 
-            // Rules_GR03
+            // Rules_RulesForCharacterReplacingGroupBox
             // 
-            this.Rules_GR03.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.Rules_GR03.Controls.Add(this.Rules_Replace);
-            this.Rules_GR03.Location = new System.Drawing.Point(6, 409);
-            this.Rules_GR03.Name = "Rules_GR03";
-            this.Rules_GR03.Size = new System.Drawing.Size(1098, 183);
-            this.Rules_GR03.TabIndex = 0;
-            this.Rules_GR03.TabStop = false;
-            this.Rules_GR03.Text = "groupBox3";
+            this.Rules_RulesForCharacterReplacingGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.Rules_RulesForCharacterReplacingGroupBox.Controls.Add(this.Rules_Replace);
+            this.Rules_RulesForCharacterReplacingGroupBox.Location = new System.Drawing.Point(6, 409);
+            this.Rules_RulesForCharacterReplacingGroupBox.Name = "Rules_RulesForCharacterReplacingGroupBox";
+            this.Rules_RulesForCharacterReplacingGroupBox.Size = new System.Drawing.Size(1098, 183);
+            this.Rules_RulesForCharacterReplacingGroupBox.TabIndex = 0;
+            this.Rules_RulesForCharacterReplacingGroupBox.TabStop = false;
+            this.Rules_RulesForCharacterReplacingGroupBox.Text = "groupBox3";
             // 
             // Rules_Replace
             // 
@@ -2062,41 +2313,41 @@ namespace AniDBClient
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Rules_Replace.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Rules_Replace.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle31.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Rules_Replace.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle31;
             this.Rules_Replace.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Rules_Replace.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Rules_Replace_Mn01,
             this.Rules_Replace_Mn02});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Rules_Replace.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle32.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Rules_Replace.DefaultCellStyle = dataGridViewCellStyle32;
             this.Rules_Replace.GridColor = System.Drawing.Color.LightGray;
             this.Rules_Replace.Location = new System.Drawing.Point(6, 19);
             this.Rules_Replace.Name = "Rules_Replace";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Rules_Replace.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle33.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Rules_Replace.RowHeadersDefaultCellStyle = dataGridViewCellStyle33;
             this.Rules_Replace.RowHeadersVisible = false;
             this.Rules_Replace.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Rules_Replace.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Rules_Replace.RowsDefaultCellStyle = dataGridViewCellStyle34;
             this.Rules_Replace.ShowCellErrors = false;
             this.Rules_Replace.ShowCellToolTips = false;
             this.Rules_Replace.ShowEditingIcon = false;
@@ -2120,48 +2371,73 @@ namespace AniDBClient
             this.Rules_Replace_Mn02.HeaderText = "";
             this.Rules_Replace_Mn02.Name = "Rules_Replace_Mn02";
             // 
-            // Rules_GR04
+            // Rules_ExportInfoGroupBox
             // 
-            this.Rules_GR04.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Rules_GR04.Controls.Add(this.Rules_InfoDell);
-            this.Rules_GR04.Controls.Add(this.Rules_InfoRB02);
-            this.Rules_GR04.Controls.Add(this.Rules_InfoRB01);
-            this.Rules_GR04.Controls.Add(this.Rules_InfoAdd);
-            this.Rules_GR04.Controls.Add(this.Rules_InfoC);
-            this.Rules_GR04.Controls.Add(this.Rules_Info);
-            this.Rules_GR04.ForeColor = System.Drawing.Color.Black;
-            this.Rules_GR04.Location = new System.Drawing.Point(789, 49);
-            this.Rules_GR04.Name = "Rules_GR04";
-            this.Rules_GR04.Size = new System.Drawing.Size(291, 354);
-            this.Rules_GR04.TabIndex = 0;
-            this.Rules_GR04.TabStop = false;
-            this.Rules_GR04.Text = "groupBox2";
+            this.Rules_ExportInfoGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Rules_ExportInfoGroupBox.Controls.Add(this.Rules_InfoDell);
+            this.Rules_ExportInfoGroupBox.Controls.Add(this.Rules_InfoRenameDoNothingRadioButton);
+            this.Rules_ExportInfoGroupBox.Controls.Add(this.Rules_InfoExportRadioButton);
+            this.Rules_ExportInfoGroupBox.Controls.Add(this.Rules_InfoAdd);
+            this.Rules_ExportInfoGroupBox.Controls.Add(this.Rules_InfoC);
+            this.Rules_ExportInfoGroupBox.Controls.Add(this.Rules_Info);
+            this.Rules_ExportInfoGroupBox.ForeColor = System.Drawing.Color.Black;
+            this.Rules_ExportInfoGroupBox.Location = new System.Drawing.Point(789, 49);
+            this.Rules_ExportInfoGroupBox.Name = "Rules_ExportInfoGroupBox";
+            this.Rules_ExportInfoGroupBox.Size = new System.Drawing.Size(291, 354);
+            this.Rules_ExportInfoGroupBox.TabIndex = 0;
+            this.Rules_ExportInfoGroupBox.TabStop = false;
+            this.Rules_ExportInfoGroupBox.Text = "groupBox2";
             // 
-            // Rules_InfoRB02
+            // Rules_InfoDell
             // 
-            this.Rules_InfoRB02.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Rules_InfoRB02.AutoSize = true;
-            this.Rules_InfoRB02.Checked = true;
-            this.Rules_InfoRB02.ForeColor = System.Drawing.Color.Black;
-            this.Rules_InfoRB02.Location = new System.Drawing.Point(180, 19);
-            this.Rules_InfoRB02.Name = "Rules_InfoRB02";
-            this.Rules_InfoRB02.Size = new System.Drawing.Size(85, 17);
-            this.Rules_InfoRB02.TabIndex = 0;
-            this.Rules_InfoRB02.TabStop = true;
-            this.Rules_InfoRB02.Text = "radioButton1";
-            this.Rules_InfoRB02.UseVisualStyleBackColor = true;
+            this.Rules_InfoDell.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Rules_InfoDell.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Rules_InfoDell.BackgroundImage")));
+            this.Rules_InfoDell.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Rules_InfoDell.Location = new System.Drawing.Point(262, 325);
+            this.Rules_InfoDell.Name = "Rules_InfoDell";
+            this.Rules_InfoDell.Size = new System.Drawing.Size(23, 23);
+            this.Rules_InfoDell.TabIndex = 0;
+            this.Rules_InfoDell.UseVisualStyleBackColor = true;
+            this.Rules_InfoDell.Click += new System.EventHandler(this.Rules_InfoDell_Click);
             // 
-            // Rules_InfoRB01
+            // Rules_InfoRenameDoNothingRadioButton
             // 
-            this.Rules_InfoRB01.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Rules_InfoRB01.AutoSize = true;
-            this.Rules_InfoRB01.ForeColor = System.Drawing.Color.Black;
-            this.Rules_InfoRB01.Location = new System.Drawing.Point(89, 19);
-            this.Rules_InfoRB01.Name = "Rules_InfoRB01";
-            this.Rules_InfoRB01.Size = new System.Drawing.Size(85, 17);
-            this.Rules_InfoRB01.TabIndex = 0;
-            this.Rules_InfoRB01.Text = "radioButton1";
-            this.Rules_InfoRB01.UseVisualStyleBackColor = true;
+            this.Rules_InfoRenameDoNothingRadioButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Rules_InfoRenameDoNothingRadioButton.AutoSize = true;
+            this.Rules_InfoRenameDoNothingRadioButton.Checked = true;
+            this.Rules_InfoRenameDoNothingRadioButton.ForeColor = System.Drawing.Color.Black;
+            this.Rules_InfoRenameDoNothingRadioButton.Location = new System.Drawing.Point(180, 19);
+            this.Rules_InfoRenameDoNothingRadioButton.Name = "Rules_InfoRenameDoNothingRadioButton";
+            this.Rules_InfoRenameDoNothingRadioButton.Size = new System.Drawing.Size(85, 17);
+            this.Rules_InfoRenameDoNothingRadioButton.TabIndex = 0;
+            this.Rules_InfoRenameDoNothingRadioButton.TabStop = true;
+            this.Rules_InfoRenameDoNothingRadioButton.Text = "radioButton1";
+            this.Rules_InfoRenameDoNothingRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // Rules_InfoExportRadioButton
+            // 
+            this.Rules_InfoExportRadioButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Rules_InfoExportRadioButton.AutoSize = true;
+            this.Rules_InfoExportRadioButton.ForeColor = System.Drawing.Color.Black;
+            this.Rules_InfoExportRadioButton.Location = new System.Drawing.Point(89, 19);
+            this.Rules_InfoExportRadioButton.Name = "Rules_InfoExportRadioButton";
+            this.Rules_InfoExportRadioButton.Size = new System.Drawing.Size(85, 17);
+            this.Rules_InfoExportRadioButton.TabIndex = 0;
+            this.Rules_InfoExportRadioButton.Text = "radioButton1";
+            this.Rules_InfoExportRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // Rules_InfoAdd
+            // 
+            this.Rules_InfoAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Rules_InfoAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Rules_InfoAdd.BackgroundImage")));
+            this.Rules_InfoAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Rules_InfoAdd.ForeColor = System.Drawing.Color.Black;
+            this.Rules_InfoAdd.Location = new System.Drawing.Point(233, 325);
+            this.Rules_InfoAdd.Name = "Rules_InfoAdd";
+            this.Rules_InfoAdd.Size = new System.Drawing.Size(23, 23);
+            this.Rules_InfoAdd.TabIndex = 0;
+            this.Rules_InfoAdd.UseVisualStyleBackColor = true;
+            this.Rules_InfoAdd.Click += new System.EventHandler(this.Rules_InfoAdd_Click);
             // 
             // Rules_InfoC
             // 
@@ -2191,23 +2467,35 @@ namespace AniDBClient
             this.Rules_Info.Size = new System.Drawing.Size(279, 276);
             this.Rules_Info.TabIndex = 0;
             // 
-            // Rules_GR02
+            // Rules_RulesForGeneratingDirectoriesGroupBox
             // 
-            this.Rules_GR02.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Rules_GR02.Controls.Add(this.Rules_FilesRulesMoveDel);
-            this.Rules_GR02.Controls.Add(this.Rules_FilesRulesMove_RB03);
-            this.Rules_GR02.Controls.Add(this.Rules_FilesRulesMove_RB01);
-            this.Rules_GR02.Controls.Add(this.Rules_FilesRulesMove_RB02);
-            this.Rules_GR02.Controls.Add(this.Rules_FilesRulesMoveAdd);
-            this.Rules_GR02.Controls.Add(this.Rules_FilesRulesMoveC);
-            this.Rules_GR02.Controls.Add(this.Rules_FilesRulesMove);
-            this.Rules_GR02.ForeColor = System.Drawing.Color.Black;
-            this.Rules_GR02.Location = new System.Drawing.Point(477, 49);
-            this.Rules_GR02.Name = "Rules_GR02";
-            this.Rules_GR02.Size = new System.Drawing.Size(291, 354);
-            this.Rules_GR02.TabIndex = 0;
-            this.Rules_GR02.TabStop = false;
-            this.Rules_GR02.Text = "groupBox2";
+            this.Rules_RulesForGeneratingDirectoriesGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Rules_RulesForGeneratingDirectoriesGroupBox.Controls.Add(this.Rules_FilesRulesMoveDel);
+            this.Rules_RulesForGeneratingDirectoriesGroupBox.Controls.Add(this.Rules_FilesRulesMove_RB03);
+            this.Rules_RulesForGeneratingDirectoriesGroupBox.Controls.Add(this.Rules_FilesRulesMove_RB01);
+            this.Rules_RulesForGeneratingDirectoriesGroupBox.Controls.Add(this.Rules_FilesRulesMove_RB02);
+            this.Rules_RulesForGeneratingDirectoriesGroupBox.Controls.Add(this.Rules_FilesRulesMoveAdd);
+            this.Rules_RulesForGeneratingDirectoriesGroupBox.Controls.Add(this.Rules_FilesRulesMoveC);
+            this.Rules_RulesForGeneratingDirectoriesGroupBox.Controls.Add(this.Rules_FilesRulesMove);
+            this.Rules_RulesForGeneratingDirectoriesGroupBox.ForeColor = System.Drawing.Color.Black;
+            this.Rules_RulesForGeneratingDirectoriesGroupBox.Location = new System.Drawing.Point(477, 49);
+            this.Rules_RulesForGeneratingDirectoriesGroupBox.Name = "Rules_RulesForGeneratingDirectoriesGroupBox";
+            this.Rules_RulesForGeneratingDirectoriesGroupBox.Size = new System.Drawing.Size(291, 354);
+            this.Rules_RulesForGeneratingDirectoriesGroupBox.TabIndex = 0;
+            this.Rules_RulesForGeneratingDirectoriesGroupBox.TabStop = false;
+            this.Rules_RulesForGeneratingDirectoriesGroupBox.Text = "groupBox2";
+            // 
+            // Rules_FilesRulesMoveDel
+            // 
+            this.Rules_FilesRulesMoveDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Rules_FilesRulesMoveDel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Rules_FilesRulesMoveDel.BackgroundImage")));
+            this.Rules_FilesRulesMoveDel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Rules_FilesRulesMoveDel.Location = new System.Drawing.Point(262, 325);
+            this.Rules_FilesRulesMoveDel.Name = "Rules_FilesRulesMoveDel";
+            this.Rules_FilesRulesMoveDel.Size = new System.Drawing.Size(23, 23);
+            this.Rules_FilesRulesMoveDel.TabIndex = 0;
+            this.Rules_FilesRulesMoveDel.UseVisualStyleBackColor = true;
+            this.Rules_FilesRulesMoveDel.Click += new System.EventHandler(this.Rules_FilesRulesMoveDel_Click);
             // 
             // Rules_FilesRulesMove_RB03
             // 
@@ -2247,6 +2535,19 @@ namespace AniDBClient
             this.Rules_FilesRulesMove_RB02.Text = "radioButton1";
             this.Rules_FilesRulesMove_RB02.UseVisualStyleBackColor = true;
             // 
+            // Rules_FilesRulesMoveAdd
+            // 
+            this.Rules_FilesRulesMoveAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Rules_FilesRulesMoveAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Rules_FilesRulesMoveAdd.BackgroundImage")));
+            this.Rules_FilesRulesMoveAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Rules_FilesRulesMoveAdd.ForeColor = System.Drawing.Color.Black;
+            this.Rules_FilesRulesMoveAdd.Location = new System.Drawing.Point(233, 325);
+            this.Rules_FilesRulesMoveAdd.Name = "Rules_FilesRulesMoveAdd";
+            this.Rules_FilesRulesMoveAdd.Size = new System.Drawing.Size(23, 23);
+            this.Rules_FilesRulesMoveAdd.TabIndex = 0;
+            this.Rules_FilesRulesMoveAdd.UseVisualStyleBackColor = true;
+            this.Rules_FilesRulesMoveAdd.Click += new System.EventHandler(this.Rules_FilesRulesMoveAdd_Click);
+            // 
             // Rules_FilesRulesMoveC
             // 
             this.Rules_FilesRulesMoveC.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -2275,24 +2576,24 @@ namespace AniDBClient
             this.Rules_FilesRulesMove.Size = new System.Drawing.Size(279, 276);
             this.Rules_FilesRulesMove.TabIndex = 0;
             // 
-            // Rules_GR01
+            // Rules_RulesForFileRenamingGroupBox
             // 
-            this.Rules_GR01.BackColor = System.Drawing.Color.White;
-            this.Rules_GR01.Controls.Add(this.Rules_Position);
-            this.Rules_GR01.Controls.Add(this.Rules_LB01);
-            this.Rules_GR01.Controls.Add(this.Rules_FilesRulesRename_RB02);
-            this.Rules_GR01.Controls.Add(this.Rules_FilesRulesRename_RB01);
-            this.Rules_GR01.Controls.Add(this.Rules_FilesRulesRenameDel);
-            this.Rules_GR01.Controls.Add(this.Rules_FilesRulesRenameAdd);
-            this.Rules_GR01.Controls.Add(this.Rules_FilesRulesRenameC);
-            this.Rules_GR01.Controls.Add(this.Rules_FilesRulesRename);
-            this.Rules_GR01.ForeColor = System.Drawing.Color.Black;
-            this.Rules_GR01.Location = new System.Drawing.Point(6, 49);
-            this.Rules_GR01.Name = "Rules_GR01";
-            this.Rules_GR01.Size = new System.Drawing.Size(459, 354);
-            this.Rules_GR01.TabIndex = 0;
-            this.Rules_GR01.TabStop = false;
-            this.Rules_GR01.Text = "groupBox1";
+            this.Rules_RulesForFileRenamingGroupBox.BackColor = System.Drawing.Color.White;
+            this.Rules_RulesForFileRenamingGroupBox.Controls.Add(this.Rules_Position);
+            this.Rules_RulesForFileRenamingGroupBox.Controls.Add(this.Rules_RulesNumberPositionLabel);
+            this.Rules_RulesForFileRenamingGroupBox.Controls.Add(this.Rules_FilesRulesRename_DoNothingRadioButton);
+            this.Rules_RulesForFileRenamingGroupBox.Controls.Add(this.Rules_FilesRulesRename_RenameRadioButton);
+            this.Rules_RulesForFileRenamingGroupBox.Controls.Add(this.Rules_FilesRulesRenameDel);
+            this.Rules_RulesForFileRenamingGroupBox.Controls.Add(this.Rules_FilesRulesRenameAdd);
+            this.Rules_RulesForFileRenamingGroupBox.Controls.Add(this.Rules_FilesRulesRenameC);
+            this.Rules_RulesForFileRenamingGroupBox.Controls.Add(this.Rules_FilesRulesRename);
+            this.Rules_RulesForFileRenamingGroupBox.ForeColor = System.Drawing.Color.Black;
+            this.Rules_RulesForFileRenamingGroupBox.Location = new System.Drawing.Point(6, 49);
+            this.Rules_RulesForFileRenamingGroupBox.Name = "Rules_RulesForFileRenamingGroupBox";
+            this.Rules_RulesForFileRenamingGroupBox.Size = new System.Drawing.Size(459, 354);
+            this.Rules_RulesForFileRenamingGroupBox.TabIndex = 0;
+            this.Rules_RulesForFileRenamingGroupBox.TabStop = false;
+            this.Rules_RulesForFileRenamingGroupBox.Text = "groupBox1";
             // 
             // Rules_Position
             // 
@@ -2313,41 +2614,67 @@ namespace AniDBClient
             this.Rules_Position.Size = new System.Drawing.Size(121, 21);
             this.Rules_Position.TabIndex = 0;
             // 
-            // Rules_LB01
+            // Rules_RulesNumberPositionLabel
             // 
-            this.Rules_LB01.AutoSize = true;
-            this.Rules_LB01.ForeColor = System.Drawing.Color.Black;
-            this.Rules_LB01.Location = new System.Drawing.Point(6, 21);
-            this.Rules_LB01.Name = "Rules_LB01";
-            this.Rules_LB01.Size = new System.Drawing.Size(35, 13);
-            this.Rules_LB01.TabIndex = 0;
-            this.Rules_LB01.Text = "label1";
+            this.Rules_RulesNumberPositionLabel.AutoSize = true;
+            this.Rules_RulesNumberPositionLabel.ForeColor = System.Drawing.Color.Black;
+            this.Rules_RulesNumberPositionLabel.Location = new System.Drawing.Point(6, 21);
+            this.Rules_RulesNumberPositionLabel.Name = "Rules_RulesNumberPositionLabel";
+            this.Rules_RulesNumberPositionLabel.Size = new System.Drawing.Size(35, 13);
+            this.Rules_RulesNumberPositionLabel.TabIndex = 0;
+            this.Rules_RulesNumberPositionLabel.Text = "label1";
             // 
-            // Rules_FilesRulesRename_RB02
+            // Rules_FilesRulesRename_DoNothingRadioButton
             // 
-            this.Rules_FilesRulesRename_RB02.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Rules_FilesRulesRename_RB02.AutoSize = true;
-            this.Rules_FilesRulesRename_RB02.ForeColor = System.Drawing.Color.Black;
-            this.Rules_FilesRulesRename_RB02.Location = new System.Drawing.Point(358, 20);
-            this.Rules_FilesRulesRename_RB02.Name = "Rules_FilesRulesRename_RB02";
-            this.Rules_FilesRulesRename_RB02.Size = new System.Drawing.Size(85, 17);
-            this.Rules_FilesRulesRename_RB02.TabIndex = 0;
-            this.Rules_FilesRulesRename_RB02.TabStop = true;
-            this.Rules_FilesRulesRename_RB02.Text = "radioButton1";
-            this.Rules_FilesRulesRename_RB02.UseVisualStyleBackColor = true;
+            this.Rules_FilesRulesRename_DoNothingRadioButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Rules_FilesRulesRename_DoNothingRadioButton.AutoSize = true;
+            this.Rules_FilesRulesRename_DoNothingRadioButton.ForeColor = System.Drawing.Color.Black;
+            this.Rules_FilesRulesRename_DoNothingRadioButton.Location = new System.Drawing.Point(358, 20);
+            this.Rules_FilesRulesRename_DoNothingRadioButton.Name = "Rules_FilesRulesRename_DoNothingRadioButton";
+            this.Rules_FilesRulesRename_DoNothingRadioButton.Size = new System.Drawing.Size(85, 17);
+            this.Rules_FilesRulesRename_DoNothingRadioButton.TabIndex = 0;
+            this.Rules_FilesRulesRename_DoNothingRadioButton.TabStop = true;
+            this.Rules_FilesRulesRename_DoNothingRadioButton.Text = "radioButton1";
+            this.Rules_FilesRulesRename_DoNothingRadioButton.UseVisualStyleBackColor = true;
             // 
-            // Rules_FilesRulesRename_RB01
+            // Rules_FilesRulesRename_RenameRadioButton
             // 
-            this.Rules_FilesRulesRename_RB01.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Rules_FilesRulesRename_RB01.AutoSize = true;
-            this.Rules_FilesRulesRename_RB01.ForeColor = System.Drawing.Color.Black;
-            this.Rules_FilesRulesRename_RB01.Location = new System.Drawing.Point(267, 20);
-            this.Rules_FilesRulesRename_RB01.Name = "Rules_FilesRulesRename_RB01";
-            this.Rules_FilesRulesRename_RB01.Size = new System.Drawing.Size(85, 17);
-            this.Rules_FilesRulesRename_RB01.TabIndex = 0;
-            this.Rules_FilesRulesRename_RB01.TabStop = true;
-            this.Rules_FilesRulesRename_RB01.Text = "radioButton1";
-            this.Rules_FilesRulesRename_RB01.UseVisualStyleBackColor = true;
+            this.Rules_FilesRulesRename_RenameRadioButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Rules_FilesRulesRename_RenameRadioButton.AutoSize = true;
+            this.Rules_FilesRulesRename_RenameRadioButton.ForeColor = System.Drawing.Color.Black;
+            this.Rules_FilesRulesRename_RenameRadioButton.Location = new System.Drawing.Point(267, 20);
+            this.Rules_FilesRulesRename_RenameRadioButton.Name = "Rules_FilesRulesRename_RenameRadioButton";
+            this.Rules_FilesRulesRename_RenameRadioButton.Size = new System.Drawing.Size(85, 17);
+            this.Rules_FilesRulesRename_RenameRadioButton.TabIndex = 0;
+            this.Rules_FilesRulesRename_RenameRadioButton.TabStop = true;
+            this.Rules_FilesRulesRename_RenameRadioButton.Text = "radioButton1";
+            this.Rules_FilesRulesRename_RenameRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // Rules_FilesRulesRenameDel
+            // 
+            this.Rules_FilesRulesRenameDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Rules_FilesRulesRenameDel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Rules_FilesRulesRenameDel.BackgroundImage")));
+            this.Rules_FilesRulesRenameDel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Rules_FilesRulesRenameDel.ForeColor = System.Drawing.Color.Black;
+            this.Rules_FilesRulesRenameDel.Location = new System.Drawing.Point(430, 325);
+            this.Rules_FilesRulesRenameDel.Name = "Rules_FilesRulesRenameDel";
+            this.Rules_FilesRulesRenameDel.Size = new System.Drawing.Size(23, 23);
+            this.Rules_FilesRulesRenameDel.TabIndex = 0;
+            this.Rules_FilesRulesRenameDel.UseVisualStyleBackColor = true;
+            this.Rules_FilesRulesRenameDel.Click += new System.EventHandler(this.Rules_FilesRulesRenameDel_Click);
+            // 
+            // Rules_FilesRulesRenameAdd
+            // 
+            this.Rules_FilesRulesRenameAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Rules_FilesRulesRenameAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Rules_FilesRulesRenameAdd.BackgroundImage")));
+            this.Rules_FilesRulesRenameAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Rules_FilesRulesRenameAdd.ForeColor = System.Drawing.Color.Black;
+            this.Rules_FilesRulesRenameAdd.Location = new System.Drawing.Point(401, 325);
+            this.Rules_FilesRulesRenameAdd.Name = "Rules_FilesRulesRenameAdd";
+            this.Rules_FilesRulesRenameAdd.Size = new System.Drawing.Size(23, 23);
+            this.Rules_FilesRulesRenameAdd.TabIndex = 0;
+            this.Rules_FilesRulesRenameAdd.UseVisualStyleBackColor = true;
+            this.Rules_FilesRulesRenameAdd.Click += new System.EventHandler(this.Rules_FilesRulesRenameAdd_Click);
             // 
             // Rules_FilesRulesRenameC
             // 
@@ -2377,16 +2704,16 @@ namespace AniDBClient
             this.Rules_FilesRulesRename.Size = new System.Drawing.Size(447, 276);
             this.Rules_FilesRulesRename.TabIndex = 0;
             // 
-            // MainTab_Mn06
+            // MainTab_HashPage
             // 
-            this.MainTab_Mn06.BackColor = System.Drawing.Color.White;
-            this.MainTab_Mn06.Controls.Add(this.Hash_GR01);
-            this.MainTab_Mn06.Location = new System.Drawing.Point(4, 22);
-            this.MainTab_Mn06.Name = "MainTab_Mn06";
-            this.MainTab_Mn06.Size = new System.Drawing.Size(1119, 680);
-            this.MainTab_Mn06.TabIndex = 0;
-            this.MainTab_Mn06.Text = "6";
-            this.MainTab_Mn06.UseVisualStyleBackColor = true;
+            this.MainTab_HashPage.BackColor = System.Drawing.Color.White;
+            this.MainTab_HashPage.Controls.Add(this.Hash_GR01);
+            this.MainTab_HashPage.Location = new System.Drawing.Point(4, 22);
+            this.MainTab_HashPage.Name = "MainTab_HashPage";
+            this.MainTab_HashPage.Size = new System.Drawing.Size(1119, 680);
+            this.MainTab_HashPage.TabIndex = 0;
+            this.MainTab_HashPage.Text = "6";
+            this.MainTab_HashPage.UseVisualStyleBackColor = true;
             // 
             // Hash_GR01
             // 
@@ -2436,6 +2763,20 @@ namespace AniDBClient
             this.Hash_ProgressBar_Percent.TabIndex = 0;
             this.Hash_ProgressBar_Percent.Text = "0%";
             this.Hash_ProgressBar_Percent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Hash
+            // 
+            this.Hash.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Hash.BackgroundImage")));
+            this.Hash.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Hash.Enabled = false;
+            this.Hash.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.Hash.ForeColor = System.Drawing.Color.Black;
+            this.Hash.Location = new System.Drawing.Point(588, 21);
+            this.Hash.Name = "Hash";
+            this.Hash.Size = new System.Drawing.Size(36, 36);
+            this.Hash.TabIndex = 0;
+            this.Hash.UseVisualStyleBackColor = true;
+            this.Hash.Click += new System.EventHandler(this.Hash_Click);
             // 
             // Hash_ProgressBar_Total
             // 
@@ -2501,6 +2842,19 @@ namespace AniDBClient
             this.Hash_LB02.TabIndex = 0;
             this.Hash_LB02.Text = "label1";
             // 
+            // Hash_Cesta
+            // 
+            this.Hash_Cesta.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Hash_Cesta.BackgroundImage")));
+            this.Hash_Cesta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Hash_Cesta.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.Hash_Cesta.ForeColor = System.Drawing.Color.Black;
+            this.Hash_Cesta.Location = new System.Drawing.Point(6, 19);
+            this.Hash_Cesta.Name = "Hash_Cesta";
+            this.Hash_Cesta.Size = new System.Drawing.Size(36, 36);
+            this.Hash_Cesta.TabIndex = 0;
+            this.Hash_Cesta.UseVisualStyleBackColor = true;
+            this.Hash_Cesta.Click += new System.EventHandler(this.Hash_Cesta_Click);
+            // 
             // Hash_Waiting
             // 
             this.Hash_Waiting.ForeColor = System.Drawing.Color.Black;
@@ -2520,6 +2874,19 @@ namespace AniDBClient
             0,
             0});
             // 
+            // Hash_Stop_Total
+            // 
+            this.Hash_Stop_Total.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Hash_Stop_Total.BackgroundImage")));
+            this.Hash_Stop_Total.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Hash_Stop_Total.Enabled = false;
+            this.Hash_Stop_Total.ForeColor = System.Drawing.Color.Black;
+            this.Hash_Stop_Total.Location = new System.Drawing.Point(630, 21);
+            this.Hash_Stop_Total.Name = "Hash_Stop_Total";
+            this.Hash_Stop_Total.Size = new System.Drawing.Size(36, 36);
+            this.Hash_Stop_Total.TabIndex = 0;
+            this.Hash_Stop_Total.UseVisualStyleBackColor = true;
+            this.Hash_Stop_Total.Click += new System.EventHandler(this.Hash_Stop_Total_Click);
+            // 
             // Hash_CH03
             // 
             this.Hash_CH03.AutoSize = true;
@@ -2530,6 +2897,19 @@ namespace AniDBClient
             this.Hash_CH03.TabIndex = 0;
             this.Hash_CH03.Text = "Window";
             this.Hash_CH03.UseVisualStyleBackColor = true;
+            // 
+            // Hash_Files
+            // 
+            this.Hash_Files.BackgroundImage = global::AniDBClient.Properties.Resources.i_Key;
+            this.Hash_Files.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Hash_Files.Enabled = false;
+            this.Hash_Files.ForeColor = System.Drawing.Color.Black;
+            this.Hash_Files.Location = new System.Drawing.Point(546, 21);
+            this.Hash_Files.Name = "Hash_Files";
+            this.Hash_Files.Size = new System.Drawing.Size(36, 36);
+            this.Hash_Files.TabIndex = 0;
+            this.Hash_Files.UseVisualStyleBackColor = true;
+            this.Hash_Files.Click += new System.EventHandler(this.Hash_Files_Click);
             // 
             // Hash_CH02
             // 
@@ -2542,6 +2922,19 @@ namespace AniDBClient
             this.Hash_CH02.Text = "Log";
             this.Hash_CH02.UseVisualStyleBackColor = true;
             // 
+            // Hash_Delete
+            // 
+            this.Hash_Delete.BackgroundImage = global::AniDBClient.Properties.Resources.i_Delete;
+            this.Hash_Delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Hash_Delete.Enabled = false;
+            this.Hash_Delete.ForeColor = System.Drawing.Color.Black;
+            this.Hash_Delete.Location = new System.Drawing.Point(48, 19);
+            this.Hash_Delete.Name = "Hash_Delete";
+            this.Hash_Delete.Size = new System.Drawing.Size(36, 36);
+            this.Hash_Delete.TabIndex = 0;
+            this.Hash_Delete.UseVisualStyleBackColor = true;
+            this.Hash_Delete.Click += new System.EventHandler(this.Hash_Delete_Click);
+            // 
             // Hash_CH01
             // 
             this.Hash_CH01.AutoSize = true;
@@ -2553,32 +2946,45 @@ namespace AniDBClient
             this.Hash_CH01.Text = "AvDump 2";
             this.Hash_CH01.UseVisualStyleBackColor = true;
             // 
-            // MainTab_Mn03
+            // Hash_DeleteAll
             // 
-            this.MainTab_Mn03.BackColor = System.Drawing.Color.White;
-            this.MainTab_Mn03.Controls.Add(this.MainTabData);
-            this.MainTab_Mn03.Location = new System.Drawing.Point(4, 22);
-            this.MainTab_Mn03.Name = "MainTab_Mn03";
-            this.MainTab_Mn03.Size = new System.Drawing.Size(1119, 680);
-            this.MainTab_Mn03.TabIndex = 0;
-            this.MainTab_Mn03.Text = "3";
-            this.MainTab_Mn03.UseVisualStyleBackColor = true;
+            this.Hash_DeleteAll.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Hash_DeleteAll.BackgroundImage")));
+            this.Hash_DeleteAll.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Hash_DeleteAll.Enabled = false;
+            this.Hash_DeleteAll.ForeColor = System.Drawing.Color.Black;
+            this.Hash_DeleteAll.Location = new System.Drawing.Point(90, 19);
+            this.Hash_DeleteAll.Name = "Hash_DeleteAll";
+            this.Hash_DeleteAll.Size = new System.Drawing.Size(36, 36);
+            this.Hash_DeleteAll.TabIndex = 0;
+            this.Hash_DeleteAll.UseVisualStyleBackColor = true;
+            this.Hash_DeleteAll.Click += new System.EventHandler(this.Hash_DeleteAll_Click);
+            // 
+            // MainTab_AnimePage
+            // 
+            this.MainTab_AnimePage.BackColor = System.Drawing.Color.White;
+            this.MainTab_AnimePage.Controls.Add(this.MainTabData);
+            this.MainTab_AnimePage.Location = new System.Drawing.Point(4, 22);
+            this.MainTab_AnimePage.Name = "MainTab_AnimePage";
+            this.MainTab_AnimePage.Size = new System.Drawing.Size(1119, 680);
+            this.MainTab_AnimePage.TabIndex = 0;
+            this.MainTab_AnimePage.Text = "3";
+            this.MainTab_AnimePage.UseVisualStyleBackColor = true;
             // 
             // MainTabData
             // 
             this.MainTabData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.MainTabData.Controls.Add(this.MainTabData_Mn00);
-            this.MainTabData.Controls.Add(this.MainTabData_Mn01);
-            this.MainTabData.Controls.Add(this.MainTabData_Mn02);
-            this.MainTabData.Controls.Add(this.MainTabData_Mn03);
-            this.MainTabData.Controls.Add(this.MainTabData_Mn04);
-            this.MainTabData.Controls.Add(this.MainTabData_Mn05);
-            this.MainTabData.Controls.Add(this.MainTabData_Mn07);
-            this.MainTabData.Controls.Add(this.MainTabData_Mn08);
-            this.MainTabData.Controls.Add(this.MainTabData_Mn09);
-            this.MainTabData.Controls.Add(this.MainTabData_Mn10);
+            this.MainTabData.Controls.Add(this.MainTabData_MyListTabPage);
+            this.MainTabData.Controls.Add(this.MainTabData_FilesTabPage);
+            this.MainTabData.Controls.Add(this.MainTabData_AnimeTabPage);
+            this.MainTabData.Controls.Add(this.MainTabData_Anime2TabPage);
+            this.MainTabData.Controls.Add(this.MainTabData_GenresTabPage);
+            this.MainTabData.Controls.Add(this.MainTabData_GroupsTabPage);
+            this.MainTabData.Controls.Add(this.MainTabData_SearchTabPage);
+            this.MainTabData.Controls.Add(this.MainTabData_OthersTabPage);
+            this.MainTabData.Controls.Add(this.MainTabData_GraphsTabPage);
+            this.MainTabData.Controls.Add(this.MainTabData_ExportTabPage);
             this.MainTabData.Location = new System.Drawing.Point(3, 3);
             this.MainTabData.Name = "MainTabData";
             this.MainTabData.SelectedIndex = 0;
@@ -2587,16 +2993,16 @@ namespace AniDBClient
             this.MainTabData.SelectedIndexChanged += new System.EventHandler(this.MainTabData_SelectedIndexChanged);
             this.MainTabData.MouseEnter += new System.EventHandler(this.MainTabData_MouseEnter);
             // 
-            // MainTabData_Mn00
+            // MainTabData_MyListTabPage
             // 
-            this.MainTabData_Mn00.BackColor = System.Drawing.Color.White;
-            this.MainTabData_Mn00.Controls.Add(this.Options_GR04);
-            this.MainTabData_Mn00.Location = new System.Drawing.Point(4, 22);
-            this.MainTabData_Mn00.Name = "MainTabData_Mn00";
-            this.MainTabData_Mn00.Size = new System.Drawing.Size(1105, 648);
-            this.MainTabData_Mn00.TabIndex = 0;
-            this.MainTabData_Mn00.Text = "0";
-            this.MainTabData_Mn00.UseVisualStyleBackColor = true;
+            this.MainTabData_MyListTabPage.BackColor = System.Drawing.Color.White;
+            this.MainTabData_MyListTabPage.Controls.Add(this.Options_GR04);
+            this.MainTabData_MyListTabPage.Location = new System.Drawing.Point(4, 22);
+            this.MainTabData_MyListTabPage.Name = "MainTabData_MyListTabPage";
+            this.MainTabData_MyListTabPage.Size = new System.Drawing.Size(1105, 648);
+            this.MainTabData_MyListTabPage.TabIndex = 0;
+            this.MainTabData_MyListTabPage.Text = "0";
+            this.MainTabData_MyListTabPage.UseVisualStyleBackColor = true;
             // 
             // Options_GR04
             // 
@@ -2615,6 +3021,30 @@ namespace AniDBClient
             this.Options_GR04.TabStop = false;
             this.Options_GR04.Text = "groupBox3";
             // 
+            // Options_MyListRefreshMin
+            // 
+            this.Options_MyListRefreshMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Options_MyListRefreshMin.BackgroundImage = global::AniDBClient.Properties.Resources.i_Refresh;
+            this.Options_MyListRefreshMin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Options_MyListRefreshMin.Location = new System.Drawing.Point(48, 622);
+            this.Options_MyListRefreshMin.Name = "Options_MyListRefreshMin";
+            this.Options_MyListRefreshMin.Size = new System.Drawing.Size(36, 36);
+            this.Options_MyListRefreshMin.TabIndex = 0;
+            this.Options_MyListRefreshMin.UseVisualStyleBackColor = true;
+            this.Options_MyListRefreshMin.Click += new System.EventHandler(this.Options_MyListRefreshMin_Click);
+            // 
+            // Options_MyListRefresh
+            // 
+            this.Options_MyListRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Options_MyListRefresh.BackgroundImage = global::AniDBClient.Properties.Resources.i_Refresh;
+            this.Options_MyListRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Options_MyListRefresh.Location = new System.Drawing.Point(6, 622);
+            this.Options_MyListRefresh.Name = "Options_MyListRefresh";
+            this.Options_MyListRefresh.Size = new System.Drawing.Size(36, 36);
+            this.Options_MyListRefresh.TabIndex = 0;
+            this.Options_MyListRefresh.UseVisualStyleBackColor = true;
+            this.Options_MyListRefresh.Click += new System.EventHandler(this.Options_MyListRefresh_Click);
+            // 
             // MyListAnime
             // 
             this.MyListAnime.AllowUserToAddRows = false;
@@ -2627,14 +3057,14 @@ namespace AniDBClient
             this.MyListAnime.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.MyListAnime.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.MyListAnime.ColumnHeadersVisible = false;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.MyListAnime.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle35.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle35.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.MyListAnime.DefaultCellStyle = dataGridViewCellStyle35;
             this.MyListAnime.GridColor = System.Drawing.Color.White;
             this.MyListAnime.Location = new System.Drawing.Point(7, 19);
             this.MyListAnime.Name = "MyListAnime";
@@ -2642,74 +3072,74 @@ namespace AniDBClient
             this.MyListAnime.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.MyListAnime.RowHeadersVisible = false;
             this.MyListAnime.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            this.MyListAnime.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle36.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle36.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.Color.Black;
+            this.MyListAnime.RowsDefaultCellStyle = dataGridViewCellStyle36;
             this.MyListAnime.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.MyListAnime.Size = new System.Drawing.Size(1099, 597);
             this.MyListAnime.TabIndex = 1;
             // 
-            // MainTabData_Mn01
+            // MainTabData_FilesTabPage
             // 
-            this.MainTabData_Mn01.BackColor = System.Drawing.Color.White;
-            this.MainTabData_Mn01.Controls.Add(this.DataFilesTree_CH04);
-            this.MainTabData_Mn01.Controls.Add(this.DataFilesTree_CH03);
-            this.MainTabData_Mn01.Controls.Add(this.DataFilesTree_CH02);
-            this.MainTabData_Mn01.Controls.Add(this.DataFilesTree_CH01);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_LB06);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_LB05);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_LB04);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_LB03);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_LB02);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_LB01);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Filtr04);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Filtr03);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Filtr02);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Filtr01);
-            this.MainTabData_Mn01.Controls.Add(this.DataFilesTree);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_RB05);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_RB04);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Year);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Month);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Day);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_RB03);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_RB02);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_RB01);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Page);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Rows);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt21);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt22);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt20);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt19);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt00);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt01);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt18);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt17);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt16);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt15);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt14);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt13);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt12);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt11);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt10);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt09);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt08);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt07);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt06);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt05);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt04);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt03);
-            this.MainTabData_Mn01.Controls.Add(this.DataFiles_Bt02);
-            this.MainTabData_Mn01.Location = new System.Drawing.Point(4, 22);
-            this.MainTabData_Mn01.Name = "MainTabData_Mn01";
-            this.MainTabData_Mn01.Padding = new System.Windows.Forms.Padding(3);
-            this.MainTabData_Mn01.Size = new System.Drawing.Size(1105, 648);
-            this.MainTabData_Mn01.TabIndex = 0;
-            this.MainTabData_Mn01.Text = "1";
-            this.MainTabData_Mn01.UseVisualStyleBackColor = true;
+            this.MainTabData_FilesTabPage.BackColor = System.Drawing.Color.White;
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFilesTree_CH04);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFilesTree_CH03);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFilesTree_CH02);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFilesTree_CH01);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_LB06);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_LB05);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_LB04);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_LB03);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_LB02);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_LB01);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Filtr04);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Filtr03);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Filtr02);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Filtr01);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFilesTree);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_RB05);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_RB04);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Year);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Month);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Day);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_RB03);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_RB02);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_RB01);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Page);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Rows);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt21);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt22);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt20);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt19);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt00);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt01);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt18);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt17);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt16);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt15);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt14);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt13);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt12);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt11);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt10);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt09);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt08);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt07);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt06);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt05);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt04);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt03);
+            this.MainTabData_FilesTabPage.Controls.Add(this.DataFiles_Bt02);
+            this.MainTabData_FilesTabPage.Location = new System.Drawing.Point(4, 22);
+            this.MainTabData_FilesTabPage.Name = "MainTabData_FilesTabPage";
+            this.MainTabData_FilesTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.MainTabData_FilesTabPage.Size = new System.Drawing.Size(1105, 648);
+            this.MainTabData_FilesTabPage.TabIndex = 0;
+            this.MainTabData_FilesTabPage.Text = "1";
+            this.MainTabData_FilesTabPage.UseVisualStyleBackColor = true;
             // 
             // DataFilesTree_CH04
             // 
@@ -3422,11 +3852,11 @@ namespace AniDBClient
             this.DataFiles.ReadOnly = true;
             this.DataFiles.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.DataFiles.RowHeadersVisible = false;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            this.DataFiles.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle38.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle38.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.Color.Black;
+            this.DataFiles.RowsDefaultCellStyle = dataGridViewCellStyle38;
             this.DataFiles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataFiles.Size = new System.Drawing.Size(1093, 555);
             this.DataFiles.TabIndex = 0;
@@ -3499,8 +3929,8 @@ namespace AniDBClient
             // 
             // DataFiles_Mn09
             // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.DataFiles_Mn09.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.DataFiles_Mn09.DefaultCellStyle = dataGridViewCellStyle37;
             this.DataFiles_Mn09.HeaderText = "";
             this.DataFiles_Mn09.Name = "DataFiles_Mn09";
             this.DataFiles_Mn09.ReadOnly = true;
@@ -3741,19 +4171,296 @@ namespace AniDBClient
             this.DataFiles_Menu_Mn07.Text = "7";
             this.DataFiles_Menu_Mn07.Click += new System.EventHandler(this.DataFiles_Menu_Mn07_Click);
             // 
-            // MainTabData_Mn02
+            // DataFiles_Bt21
             // 
-            this.MainTabData_Mn02.BackColor = System.Drawing.Color.White;
-            this.MainTabData_Mn02.Controls.Add(this.DataAnime_Page);
-            this.MainTabData_Mn02.Controls.Add(this.DataAnime_Rows);
-            this.MainTabData_Mn02.Controls.Add(this.DataAnime);
-            this.MainTabData_Mn02.Location = new System.Drawing.Point(4, 22);
-            this.MainTabData_Mn02.Name = "MainTabData_Mn02";
-            this.MainTabData_Mn02.Padding = new System.Windows.Forms.Padding(3);
-            this.MainTabData_Mn02.Size = new System.Drawing.Size(1105, 648);
-            this.MainTabData_Mn02.TabIndex = 0;
-            this.MainTabData_Mn02.Text = "2";
-            this.MainTabData_Mn02.UseVisualStyleBackColor = true;
+            this.DataFiles_Bt21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.DataFiles_Bt21.BackgroundImage = global::AniDBClient.Properties.Resources.i_Information;
+            this.DataFiles_Bt21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.DataFiles_Bt21.Location = new System.Drawing.Point(731, 619);
+            this.DataFiles_Bt21.Name = "DataFiles_Bt21";
+            this.DataFiles_Bt21.Size = new System.Drawing.Size(23, 23);
+            this.DataFiles_Bt21.TabIndex = 0;
+            this.DataFiles_Bt21.UseVisualStyleBackColor = true;
+            this.DataFiles_Bt21.Click += new System.EventHandler(this.DataFiles_Bt21_Click);
+            // 
+            // DataFiles_Bt22
+            // 
+            this.DataFiles_Bt22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.DataFiles_Bt22.BackgroundImage = global::AniDBClient.Properties.Resources.i_Help;
+            this.DataFiles_Bt22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.DataFiles_Bt22.Location = new System.Drawing.Point(673, 619);
+            this.DataFiles_Bt22.Name = "DataFiles_Bt22";
+            this.DataFiles_Bt22.Size = new System.Drawing.Size(23, 23);
+            this.DataFiles_Bt22.TabIndex = 0;
+            this.DataFiles_Bt22.UseVisualStyleBackColor = true;
+            this.DataFiles_Bt22.Click += new System.EventHandler(this.DataFiles_Bt22_Click);
+            // 
+            // DataFiles_Bt20
+            // 
+            this.DataFiles_Bt20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.DataFiles_Bt20.BackgroundImage = global::AniDBClient.Properties.Resources.i_Help;
+            this.DataFiles_Bt20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.DataFiles_Bt20.Location = new System.Drawing.Point(702, 619);
+            this.DataFiles_Bt20.Name = "DataFiles_Bt20";
+            this.DataFiles_Bt20.Size = new System.Drawing.Size(23, 23);
+            this.DataFiles_Bt20.TabIndex = 0;
+            this.DataFiles_Bt20.UseVisualStyleBackColor = true;
+            this.DataFiles_Bt20.Click += new System.EventHandler(this.DataFiles_Bt20_Click);
+            // 
+            // DataFiles_Bt19
+            // 
+            this.DataFiles_Bt19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.DataFiles_Bt19.BackgroundImage = global::AniDBClient.Properties.Resources.i_Globe;
+            this.DataFiles_Bt19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.DataFiles_Bt19.Location = new System.Drawing.Point(615, 619);
+            this.DataFiles_Bt19.Name = "DataFiles_Bt19";
+            this.DataFiles_Bt19.Size = new System.Drawing.Size(23, 23);
+            this.DataFiles_Bt19.TabIndex = 0;
+            this.DataFiles_Bt19.UseVisualStyleBackColor = true;
+            this.DataFiles_Bt19.Click += new System.EventHandler(this.DataFiles_Bt19_Click);
+            // 
+            // DataFiles_Bt00
+            // 
+            this.DataFiles_Bt00.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.DataFiles_Bt00.BackgroundImage = global::AniDBClient.Properties.Resources.i_Refresh;
+            this.DataFiles_Bt00.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.DataFiles_Bt00.Location = new System.Drawing.Point(6, 619);
+            this.DataFiles_Bt00.Name = "DataFiles_Bt00";
+            this.DataFiles_Bt00.Size = new System.Drawing.Size(23, 23);
+            this.DataFiles_Bt00.TabIndex = 0;
+            this.DataFiles_Bt00.UseVisualStyleBackColor = true;
+            this.DataFiles_Bt00.Click += new System.EventHandler(this.DataFiles_Bt01_Click);
+            // 
+            // DataFiles_Bt01
+            // 
+            this.DataFiles_Bt01.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.DataFiles_Bt01.BackgroundImage = global::AniDBClient.Properties.Resources.i_Delete;
+            this.DataFiles_Bt01.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.DataFiles_Bt01.Location = new System.Drawing.Point(35, 619);
+            this.DataFiles_Bt01.Name = "DataFiles_Bt01";
+            this.DataFiles_Bt01.Size = new System.Drawing.Size(23, 23);
+            this.DataFiles_Bt01.TabIndex = 0;
+            this.DataFiles_Bt01.UseVisualStyleBackColor = true;
+            this.DataFiles_Bt01.Click += new System.EventHandler(this.DataFiles_Bt01_Click);
+            // 
+            // DataFiles_Bt18
+            // 
+            this.DataFiles_Bt18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.DataFiles_Bt18.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_file_removemylist;
+            this.DataFiles_Bt18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.DataFiles_Bt18.Location = new System.Drawing.Point(557, 619);
+            this.DataFiles_Bt18.Name = "DataFiles_Bt18";
+            this.DataFiles_Bt18.Size = new System.Drawing.Size(23, 23);
+            this.DataFiles_Bt18.TabIndex = 0;
+            this.DataFiles_Bt18.UseVisualStyleBackColor = true;
+            this.DataFiles_Bt18.Click += new System.EventHandler(this.DataFiles_Bt01_Click);
+            // 
+            // DataFiles_Bt17
+            // 
+            this.DataFiles_Bt17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.DataFiles_Bt17.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_file_addmylist;
+            this.DataFiles_Bt17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.DataFiles_Bt17.Location = new System.Drawing.Point(528, 619);
+            this.DataFiles_Bt17.Name = "DataFiles_Bt17";
+            this.DataFiles_Bt17.Size = new System.Drawing.Size(23, 23);
+            this.DataFiles_Bt17.TabIndex = 0;
+            this.DataFiles_Bt17.UseVisualStyleBackColor = true;
+            this.DataFiles_Bt17.Click += new System.EventHandler(this.DataFiles_Bt01_Click);
+            // 
+            // DataFiles_Bt16
+            // 
+            this.DataFiles_Bt16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.DataFiles_Bt16.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_atype_other;
+            this.DataFiles_Bt16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.DataFiles_Bt16.Location = new System.Drawing.Point(499, 619);
+            this.DataFiles_Bt16.Name = "DataFiles_Bt16";
+            this.DataFiles_Bt16.Size = new System.Drawing.Size(23, 23);
+            this.DataFiles_Bt16.TabIndex = 0;
+            this.DataFiles_Bt16.UseVisualStyleBackColor = true;
+            this.DataFiles_Bt16.Click += new System.EventHandler(this.DataFiles_Bt01_Click);
+            // 
+            // DataFiles_Bt15
+            // 
+            this.DataFiles_Bt15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.DataFiles_Bt15.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_atype_web;
+            this.DataFiles_Bt15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.DataFiles_Bt15.Location = new System.Drawing.Point(470, 619);
+            this.DataFiles_Bt15.Name = "DataFiles_Bt15";
+            this.DataFiles_Bt15.Size = new System.Drawing.Size(23, 23);
+            this.DataFiles_Bt15.TabIndex = 0;
+            this.DataFiles_Bt15.UseVisualStyleBackColor = true;
+            this.DataFiles_Bt15.Click += new System.EventHandler(this.DataFiles_Bt01_Click);
+            // 
+            // DataFiles_Bt14
+            // 
+            this.DataFiles_Bt14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.DataFiles_Bt14.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_atype_tv_series;
+            this.DataFiles_Bt14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.DataFiles_Bt14.Location = new System.Drawing.Point(441, 619);
+            this.DataFiles_Bt14.Name = "DataFiles_Bt14";
+            this.DataFiles_Bt14.Size = new System.Drawing.Size(23, 23);
+            this.DataFiles_Bt14.TabIndex = 0;
+            this.DataFiles_Bt14.UseVisualStyleBackColor = true;
+            this.DataFiles_Bt14.Click += new System.EventHandler(this.DataFiles_Bt01_Click);
+            // 
+            // DataFiles_Bt13
+            // 
+            this.DataFiles_Bt13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.DataFiles_Bt13.BackgroundImage = global::AniDBClient.Properties.Resources.Anidb_filestate_ondvd;
+            this.DataFiles_Bt13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.DataFiles_Bt13.Location = new System.Drawing.Point(412, 619);
+            this.DataFiles_Bt13.Name = "DataFiles_Bt13";
+            this.DataFiles_Bt13.Size = new System.Drawing.Size(23, 23);
+            this.DataFiles_Bt13.TabIndex = 0;
+            this.DataFiles_Bt13.UseVisualStyleBackColor = true;
+            this.DataFiles_Bt13.Click += new System.EventHandler(this.DataFiles_Bt01_Click);
+            // 
+            // DataFiles_Bt12
+            // 
+            this.DataFiles_Bt12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.DataFiles_Bt12.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_atype_tv_special;
+            this.DataFiles_Bt12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.DataFiles_Bt12.Location = new System.Drawing.Point(383, 619);
+            this.DataFiles_Bt12.Name = "DataFiles_Bt12";
+            this.DataFiles_Bt12.Size = new System.Drawing.Size(23, 23);
+            this.DataFiles_Bt12.TabIndex = 0;
+            this.DataFiles_Bt12.UseVisualStyleBackColor = true;
+            this.DataFiles_Bt12.Click += new System.EventHandler(this.DataFiles_Bt01_Click);
+            // 
+            // DataFiles_Bt11
+            // 
+            this.DataFiles_Bt11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.DataFiles_Bt11.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_atype_ova;
+            this.DataFiles_Bt11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.DataFiles_Bt11.Location = new System.Drawing.Point(354, 619);
+            this.DataFiles_Bt11.Name = "DataFiles_Bt11";
+            this.DataFiles_Bt11.Size = new System.Drawing.Size(23, 23);
+            this.DataFiles_Bt11.TabIndex = 0;
+            this.DataFiles_Bt11.UseVisualStyleBackColor = true;
+            this.DataFiles_Bt11.Click += new System.EventHandler(this.DataFiles_Bt01_Click);
+            // 
+            // DataFiles_Bt10
+            // 
+            this.DataFiles_Bt10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.DataFiles_Bt10.BackColor = System.Drawing.Color.White;
+            this.DataFiles_Bt10.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_seen_yes;
+            this.DataFiles_Bt10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.DataFiles_Bt10.Location = new System.Drawing.Point(325, 619);
+            this.DataFiles_Bt10.Name = "DataFiles_Bt10";
+            this.DataFiles_Bt10.Size = new System.Drawing.Size(23, 23);
+            this.DataFiles_Bt10.TabIndex = 0;
+            this.DataFiles_Bt10.UseVisualStyleBackColor = false;
+            this.DataFiles_Bt10.Click += new System.EventHandler(this.DataFiles_Bt01_Click);
+            // 
+            // DataFiles_Bt09
+            // 
+            this.DataFiles_Bt09.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.DataFiles_Bt09.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_seen_no;
+            this.DataFiles_Bt09.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.DataFiles_Bt09.Location = new System.Drawing.Point(296, 619);
+            this.DataFiles_Bt09.Name = "DataFiles_Bt09";
+            this.DataFiles_Bt09.Size = new System.Drawing.Size(23, 23);
+            this.DataFiles_Bt09.TabIndex = 0;
+            this.DataFiles_Bt09.UseVisualStyleBackColor = true;
+            this.DataFiles_Bt09.Click += new System.EventHandler(this.DataFiles_Bt01_Click);
+            // 
+            // DataFiles_Bt08
+            // 
+            this.DataFiles_Bt08.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.DataFiles_Bt08.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_state_release;
+            this.DataFiles_Bt08.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.DataFiles_Bt08.Location = new System.Drawing.Point(267, 619);
+            this.DataFiles_Bt08.Name = "DataFiles_Bt08";
+            this.DataFiles_Bt08.Size = new System.Drawing.Size(23, 23);
+            this.DataFiles_Bt08.TabIndex = 0;
+            this.DataFiles_Bt08.UseVisualStyleBackColor = true;
+            this.DataFiles_Bt08.Click += new System.EventHandler(this.DataFiles_Bt01_Click);
+            // 
+            // DataFiles_Bt07
+            // 
+            this.DataFiles_Bt07.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.DataFiles_Bt07.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_filestate_other;
+            this.DataFiles_Bt07.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.DataFiles_Bt07.Location = new System.Drawing.Point(238, 619);
+            this.DataFiles_Bt07.Name = "DataFiles_Bt07";
+            this.DataFiles_Bt07.Size = new System.Drawing.Size(23, 23);
+            this.DataFiles_Bt07.TabIndex = 0;
+            this.DataFiles_Bt07.UseVisualStyleBackColor = true;
+            this.DataFiles_Bt07.Click += new System.EventHandler(this.DataFiles_Bt01_Click);
+            // 
+            // DataFiles_Bt06
+            // 
+            this.DataFiles_Bt06.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.DataFiles_Bt06.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_state_shared;
+            this.DataFiles_Bt06.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.DataFiles_Bt06.Location = new System.Drawing.Point(209, 619);
+            this.DataFiles_Bt06.Name = "DataFiles_Bt06";
+            this.DataFiles_Bt06.Size = new System.Drawing.Size(23, 23);
+            this.DataFiles_Bt06.TabIndex = 0;
+            this.DataFiles_Bt06.UseVisualStyleBackColor = true;
+            this.DataFiles_Bt06.Click += new System.EventHandler(this.DataFiles_Bt01_Click);
+            // 
+            // DataFiles_Bt05
+            // 
+            this.DataFiles_Bt05.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.DataFiles_Bt05.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_state_unknown;
+            this.DataFiles_Bt05.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.DataFiles_Bt05.Location = new System.Drawing.Point(180, 619);
+            this.DataFiles_Bt05.Name = "DataFiles_Bt05";
+            this.DataFiles_Bt05.Size = new System.Drawing.Size(23, 23);
+            this.DataFiles_Bt05.TabIndex = 0;
+            this.DataFiles_Bt05.UseVisualStyleBackColor = true;
+            this.DataFiles_Bt05.Click += new System.EventHandler(this.DataFiles_Bt01_Click);
+            // 
+            // DataFiles_Bt04
+            // 
+            this.DataFiles_Bt04.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.DataFiles_Bt04.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_state_deleted;
+            this.DataFiles_Bt04.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.DataFiles_Bt04.Location = new System.Drawing.Point(151, 619);
+            this.DataFiles_Bt04.Name = "DataFiles_Bt04";
+            this.DataFiles_Bt04.Size = new System.Drawing.Size(23, 23);
+            this.DataFiles_Bt04.TabIndex = 0;
+            this.DataFiles_Bt04.UseVisualStyleBackColor = true;
+            this.DataFiles_Bt04.Click += new System.EventHandler(this.DataFiles_Bt01_Click);
+            // 
+            // DataFiles_Bt03
+            // 
+            this.DataFiles_Bt03.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.DataFiles_Bt03.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_state_oncd;
+            this.DataFiles_Bt03.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.DataFiles_Bt03.Location = new System.Drawing.Point(122, 619);
+            this.DataFiles_Bt03.Name = "DataFiles_Bt03";
+            this.DataFiles_Bt03.Size = new System.Drawing.Size(23, 23);
+            this.DataFiles_Bt03.TabIndex = 0;
+            this.DataFiles_Bt03.UseVisualStyleBackColor = true;
+            this.DataFiles_Bt03.Click += new System.EventHandler(this.DataFiles_Bt01_Click);
+            // 
+            // DataFiles_Bt02
+            // 
+            this.DataFiles_Bt02.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.DataFiles_Bt02.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_state_onhdd;
+            this.DataFiles_Bt02.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.DataFiles_Bt02.Location = new System.Drawing.Point(93, 619);
+            this.DataFiles_Bt02.Name = "DataFiles_Bt02";
+            this.DataFiles_Bt02.Size = new System.Drawing.Size(23, 23);
+            this.DataFiles_Bt02.TabIndex = 0;
+            this.DataFiles_Bt02.UseVisualStyleBackColor = true;
+            this.DataFiles_Bt02.Click += new System.EventHandler(this.DataFiles_Bt01_Click);
+            // 
+            // MainTabData_AnimeTabPage
+            // 
+            this.MainTabData_AnimeTabPage.BackColor = System.Drawing.Color.White;
+            this.MainTabData_AnimeTabPage.Controls.Add(this.DataAnime_Page);
+            this.MainTabData_AnimeTabPage.Controls.Add(this.DataAnime_Rows);
+            this.MainTabData_AnimeTabPage.Controls.Add(this.DataAnime);
+            this.MainTabData_AnimeTabPage.Location = new System.Drawing.Point(4, 22);
+            this.MainTabData_AnimeTabPage.Name = "MainTabData_AnimeTabPage";
+            this.MainTabData_AnimeTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.MainTabData_AnimeTabPage.Size = new System.Drawing.Size(1105, 648);
+            this.MainTabData_AnimeTabPage.TabIndex = 0;
+            this.MainTabData_AnimeTabPage.Text = "2";
+            this.MainTabData_AnimeTabPage.UseVisualStyleBackColor = true;
             // 
             // DataAnime_Page
             // 
@@ -3844,11 +4551,11 @@ namespace AniDBClient
             this.DataAnime.ReadOnly = true;
             this.DataAnime.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.DataAnime.RowHeadersVisible = false;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
-            this.DataAnime.RowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle45.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle45.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle45.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle45.SelectionForeColor = System.Drawing.Color.Black;
+            this.DataAnime.RowsDefaultCellStyle = dataGridViewCellStyle45;
             this.DataAnime.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataAnime.Size = new System.Drawing.Size(1093, 610);
             this.DataAnime.TabIndex = 0;
@@ -3907,8 +4614,8 @@ namespace AniDBClient
             // 
             // DataAnime_Mn06
             // 
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.DataAnime_Mn06.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.DataAnime_Mn06.DefaultCellStyle = dataGridViewCellStyle8;
             this.DataAnime_Mn06.HeaderText = "";
             this.DataAnime_Mn06.Name = "DataAnime_Mn06";
             this.DataAnime_Mn06.ReadOnly = true;
@@ -3923,8 +4630,8 @@ namespace AniDBClient
             // 
             // DataAnime_Mn09
             // 
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.DataAnime_Mn09.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.DataAnime_Mn09.DefaultCellStyle = dataGridViewCellStyle39;
             this.DataAnime_Mn09.HeaderText = "";
             this.DataAnime_Mn09.Name = "DataAnime_Mn09";
             this.DataAnime_Mn09.ReadOnly = true;
@@ -3932,8 +4639,8 @@ namespace AniDBClient
             // 
             // DataAnime_Mn10
             // 
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.DataAnime_Mn10.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.DataAnime_Mn10.DefaultCellStyle = dataGridViewCellStyle40;
             this.DataAnime_Mn10.HeaderText = "";
             this.DataAnime_Mn10.Name = "DataAnime_Mn10";
             this.DataAnime_Mn10.ReadOnly = true;
@@ -3941,8 +4648,8 @@ namespace AniDBClient
             // 
             // DataAnime_Mn11
             // 
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.DataAnime_Mn11.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.DataAnime_Mn11.DefaultCellStyle = dataGridViewCellStyle41;
             this.DataAnime_Mn11.HeaderText = "";
             this.DataAnime_Mn11.Name = "DataAnime_Mn11";
             this.DataAnime_Mn11.ReadOnly = true;
@@ -3950,8 +4657,8 @@ namespace AniDBClient
             // 
             // DataAnime_Mn12
             // 
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.DataAnime_Mn12.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.DataAnime_Mn12.DefaultCellStyle = dataGridViewCellStyle42;
             this.DataAnime_Mn12.HeaderText = "";
             this.DataAnime_Mn12.Name = "DataAnime_Mn12";
             this.DataAnime_Mn12.ReadOnly = true;
@@ -3975,8 +4682,8 @@ namespace AniDBClient
             // 
             // DataAnime_Mn15
             // 
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.DataAnime_Mn15.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.DataAnime_Mn15.DefaultCellStyle = dataGridViewCellStyle43;
             this.DataAnime_Mn15.HeaderText = "";
             this.DataAnime_Mn15.Name = "DataAnime_Mn15";
             this.DataAnime_Mn15.ReadOnly = true;
@@ -3984,8 +4691,8 @@ namespace AniDBClient
             // 
             // DataAnime_Mn16
             // 
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.DataAnime_Mn16.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.DataAnime_Mn16.DefaultCellStyle = dataGridViewCellStyle44;
             this.DataAnime_Mn16.HeaderText = "";
             this.DataAnime_Mn16.Name = "DataAnime_Mn16";
             this.DataAnime_Mn16.ReadOnly = true;
@@ -3995,113 +4702,113 @@ namespace AniDBClient
             // 
             this.DataAnime_Menu.BackColor = System.Drawing.Color.White;
             this.DataAnime_Menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.DataAnime_Menu_Mn01,
-            this.DataAnime_Menu_Mn02,
-            this.DataAnime_Menu_Mn03,
+            this.DataAnime_Menu_Expand,
+            this.DataAnime_Menu_MyList,
+            this.DataAnime_Menu_Database,
             this.DataAnime_Menu_Mn04});
             this.DataAnime_Menu.Name = "DataFiles_Menu";
             this.DataAnime_Menu.Size = new System.Drawing.Size(81, 92);
             // 
-            // DataAnime_Menu_Mn01
+            // DataAnime_Menu_Expand
             // 
-            this.DataAnime_Menu_Mn01.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.DataAnime_Menu_Mn01_Mn01,
-            this.DataAnime_Menu_Mn01_Mn02,
-            this.DataAnime_Menu_Mn01_Mn03,
-            this.DataAnime_Menu_Mn01_Mn04,
-            this.DataAnime_Menu_Mn01_Mn05,
-            this.DataAnime_Menu_Mn01_Mn06});
-            this.DataAnime_Menu_Mn01.Name = "DataAnime_Menu_Mn01";
-            this.DataAnime_Menu_Mn01.Size = new System.Drawing.Size(80, 22);
-            this.DataAnime_Menu_Mn01.Text = "1";
+            this.DataAnime_Menu_Expand.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.DataAnime_Menu_Expand_Anime,
+            this.DataAnime_Menu_Expand_Episodes,
+            this.DataAnime_Menu_Expand_All,
+            this.DataAnime_Menu_Expand_CollapseEpisodes,
+            this.DataAnime_Menu_Expand_CollapseAllEpisodes,
+            this.DataAnime_Menu_Expand_CollapseAll});
+            this.DataAnime_Menu_Expand.Name = "DataAnime_Menu_Expand";
+            this.DataAnime_Menu_Expand.Size = new System.Drawing.Size(80, 22);
+            this.DataAnime_Menu_Expand.Text = "1";
             // 
-            // DataAnime_Menu_Mn01_Mn01
+            // DataAnime_Menu_Expand_Anime
             // 
-            this.DataAnime_Menu_Mn01_Mn01.Name = "DataAnime_Menu_Mn01_Mn01";
-            this.DataAnime_Menu_Mn01_Mn01.Size = new System.Drawing.Size(80, 22);
-            this.DataAnime_Menu_Mn01_Mn01.Text = "1";
-            this.DataAnime_Menu_Mn01_Mn01.Click += new System.EventHandler(this.DataAnime_Menu_Mn01_Mn01_Click);
+            this.DataAnime_Menu_Expand_Anime.Name = "DataAnime_Menu_Expand_Anime";
+            this.DataAnime_Menu_Expand_Anime.Size = new System.Drawing.Size(80, 22);
+            this.DataAnime_Menu_Expand_Anime.Text = "1";
+            this.DataAnime_Menu_Expand_Anime.Click += new System.EventHandler(this.DataAnime_Menu_Mn01_Mn01_Click);
             // 
-            // DataAnime_Menu_Mn01_Mn02
+            // DataAnime_Menu_Expand_Episodes
             // 
-            this.DataAnime_Menu_Mn01_Mn02.Name = "DataAnime_Menu_Mn01_Mn02";
-            this.DataAnime_Menu_Mn01_Mn02.Size = new System.Drawing.Size(80, 22);
-            this.DataAnime_Menu_Mn01_Mn02.Text = "2";
-            this.DataAnime_Menu_Mn01_Mn02.Click += new System.EventHandler(this.DataAnime_Menu_Mn01_Mn02_Click);
+            this.DataAnime_Menu_Expand_Episodes.Name = "DataAnime_Menu_Expand_Episodes";
+            this.DataAnime_Menu_Expand_Episodes.Size = new System.Drawing.Size(80, 22);
+            this.DataAnime_Menu_Expand_Episodes.Text = "2";
+            this.DataAnime_Menu_Expand_Episodes.Click += new System.EventHandler(this.DataAnime_Menu_Mn01_Mn02_Click);
             // 
-            // DataAnime_Menu_Mn01_Mn03
+            // DataAnime_Menu_Expand_All
             // 
-            this.DataAnime_Menu_Mn01_Mn03.Name = "DataAnime_Menu_Mn01_Mn03";
-            this.DataAnime_Menu_Mn01_Mn03.Size = new System.Drawing.Size(80, 22);
-            this.DataAnime_Menu_Mn01_Mn03.Text = "3";
-            this.DataAnime_Menu_Mn01_Mn03.Click += new System.EventHandler(this.DataAnime_Menu_Mn01_Mn03_Click);
+            this.DataAnime_Menu_Expand_All.Name = "DataAnime_Menu_Expand_All";
+            this.DataAnime_Menu_Expand_All.Size = new System.Drawing.Size(80, 22);
+            this.DataAnime_Menu_Expand_All.Text = "3";
+            this.DataAnime_Menu_Expand_All.Click += new System.EventHandler(this.DataAnime_Menu_Mn01_Mn03_Click);
             // 
-            // DataAnime_Menu_Mn01_Mn04
+            // DataAnime_Menu_Expand_CollapseEpisodes
             // 
-            this.DataAnime_Menu_Mn01_Mn04.Name = "DataAnime_Menu_Mn01_Mn04";
-            this.DataAnime_Menu_Mn01_Mn04.Size = new System.Drawing.Size(80, 22);
-            this.DataAnime_Menu_Mn01_Mn04.Text = "4";
-            this.DataAnime_Menu_Mn01_Mn04.Click += new System.EventHandler(this.DataAnime_Menu_Mn01_Mn04_Click);
+            this.DataAnime_Menu_Expand_CollapseEpisodes.Name = "DataAnime_Menu_Expand_CollapseEpisodes";
+            this.DataAnime_Menu_Expand_CollapseEpisodes.Size = new System.Drawing.Size(80, 22);
+            this.DataAnime_Menu_Expand_CollapseEpisodes.Text = "4";
+            this.DataAnime_Menu_Expand_CollapseEpisodes.Click += new System.EventHandler(this.DataAnime_Menu_Mn01_Mn04_Click);
             // 
-            // DataAnime_Menu_Mn01_Mn05
+            // DataAnime_Menu_Expand_CollapseAllEpisodes
             // 
-            this.DataAnime_Menu_Mn01_Mn05.Name = "DataAnime_Menu_Mn01_Mn05";
-            this.DataAnime_Menu_Mn01_Mn05.Size = new System.Drawing.Size(80, 22);
-            this.DataAnime_Menu_Mn01_Mn05.Text = "5";
-            this.DataAnime_Menu_Mn01_Mn05.Click += new System.EventHandler(this.DataAnime_Menu_Mn01_Mn05_Click);
+            this.DataAnime_Menu_Expand_CollapseAllEpisodes.Name = "DataAnime_Menu_Expand_CollapseAllEpisodes";
+            this.DataAnime_Menu_Expand_CollapseAllEpisodes.Size = new System.Drawing.Size(80, 22);
+            this.DataAnime_Menu_Expand_CollapseAllEpisodes.Text = "5";
+            this.DataAnime_Menu_Expand_CollapseAllEpisodes.Click += new System.EventHandler(this.DataAnime_Menu_Mn01_Mn05_Click);
             // 
-            // DataAnime_Menu_Mn01_Mn06
+            // DataAnime_Menu_Expand_CollapseAll
             // 
-            this.DataAnime_Menu_Mn01_Mn06.Name = "DataAnime_Menu_Mn01_Mn06";
-            this.DataAnime_Menu_Mn01_Mn06.Size = new System.Drawing.Size(80, 22);
-            this.DataAnime_Menu_Mn01_Mn06.Text = "6";
-            this.DataAnime_Menu_Mn01_Mn06.Click += new System.EventHandler(this.DataAnime_Menu_Mn01_Mn06_Click);
+            this.DataAnime_Menu_Expand_CollapseAll.Name = "DataAnime_Menu_Expand_CollapseAll";
+            this.DataAnime_Menu_Expand_CollapseAll.Size = new System.Drawing.Size(80, 22);
+            this.DataAnime_Menu_Expand_CollapseAll.Text = "6";
+            this.DataAnime_Menu_Expand_CollapseAll.Click += new System.EventHandler(this.DataAnime_Menu_Mn01_Mn06_Click);
             // 
-            // DataAnime_Menu_Mn02
+            // DataAnime_Menu_MyList
             // 
-            this.DataAnime_Menu_Mn02.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.DataAnime_Menu_Mn02_Mn01,
-            this.DataAnime_Menu_Mn02_Mn02,
-            this.DataAnime_Menu_Mn02_Mn03});
-            this.DataAnime_Menu_Mn02.Name = "DataAnime_Menu_Mn02";
-            this.DataAnime_Menu_Mn02.Size = new System.Drawing.Size(80, 22);
-            this.DataAnime_Menu_Mn02.Text = "2";
+            this.DataAnime_Menu_MyList.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.DataAnime_Menu_MyList_AddModify,
+            this.DataAnime_Menu_MyList_Delete,
+            this.DataAnime_Menu_MyList_Watched});
+            this.DataAnime_Menu_MyList.Name = "DataAnime_Menu_MyList";
+            this.DataAnime_Menu_MyList.Size = new System.Drawing.Size(80, 22);
+            this.DataAnime_Menu_MyList.Text = "2";
             // 
-            // DataAnime_Menu_Mn02_Mn01
+            // DataAnime_Menu_MyList_AddModify
             // 
-            this.DataAnime_Menu_Mn02_Mn01.Name = "DataAnime_Menu_Mn02_Mn01";
-            this.DataAnime_Menu_Mn02_Mn01.Size = new System.Drawing.Size(80, 22);
-            this.DataAnime_Menu_Mn02_Mn01.Text = "1";
-            this.DataAnime_Menu_Mn02_Mn01.Click += new System.EventHandler(this.DataAnime_Menu_Mn02_Mn01_Click);
+            this.DataAnime_Menu_MyList_AddModify.Name = "DataAnime_Menu_MyList_AddModify";
+            this.DataAnime_Menu_MyList_AddModify.Size = new System.Drawing.Size(80, 22);
+            this.DataAnime_Menu_MyList_AddModify.Text = "1";
+            this.DataAnime_Menu_MyList_AddModify.Click += new System.EventHandler(this.DataAnime_Menu_Mn02_Mn01_Click);
             // 
-            // DataAnime_Menu_Mn02_Mn02
+            // DataAnime_Menu_MyList_Delete
             // 
-            this.DataAnime_Menu_Mn02_Mn02.Name = "DataAnime_Menu_Mn02_Mn02";
-            this.DataAnime_Menu_Mn02_Mn02.Size = new System.Drawing.Size(80, 22);
-            this.DataAnime_Menu_Mn02_Mn02.Text = "2";
-            this.DataAnime_Menu_Mn02_Mn02.Click += new System.EventHandler(this.DataAnime_Menu_Mn02_Mn02_Click);
+            this.DataAnime_Menu_MyList_Delete.Name = "DataAnime_Menu_MyList_Delete";
+            this.DataAnime_Menu_MyList_Delete.Size = new System.Drawing.Size(80, 22);
+            this.DataAnime_Menu_MyList_Delete.Text = "2";
+            this.DataAnime_Menu_MyList_Delete.Click += new System.EventHandler(this.DataAnime_Menu_Mn02_Mn02_Click);
             // 
-            // DataAnime_Menu_Mn02_Mn03
+            // DataAnime_Menu_MyList_Watched
             // 
-            this.DataAnime_Menu_Mn02_Mn03.Name = "DataAnime_Menu_Mn02_Mn03";
-            this.DataAnime_Menu_Mn02_Mn03.Size = new System.Drawing.Size(80, 22);
-            this.DataAnime_Menu_Mn02_Mn03.Text = "3";
-            this.DataAnime_Menu_Mn02_Mn03.Click += new System.EventHandler(this.DataAnime_Menu_Mn02_Mn03_Click);
+            this.DataAnime_Menu_MyList_Watched.Name = "DataAnime_Menu_MyList_Watched";
+            this.DataAnime_Menu_MyList_Watched.Size = new System.Drawing.Size(80, 22);
+            this.DataAnime_Menu_MyList_Watched.Text = "3";
+            this.DataAnime_Menu_MyList_Watched.Click += new System.EventHandler(this.DataAnime_Menu_Mn02_Mn03_Click);
             // 
-            // DataAnime_Menu_Mn03
+            // DataAnime_Menu_Database
             // 
-            this.DataAnime_Menu_Mn03.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.DataAnime_Menu_Mn03_Mn01});
-            this.DataAnime_Menu_Mn03.Name = "DataAnime_Menu_Mn03";
-            this.DataAnime_Menu_Mn03.Size = new System.Drawing.Size(80, 22);
-            this.DataAnime_Menu_Mn03.Text = "3";
+            this.DataAnime_Menu_Database.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.DataAnime_Menu_Database_Delete});
+            this.DataAnime_Menu_Database.Name = "DataAnime_Menu_Database";
+            this.DataAnime_Menu_Database.Size = new System.Drawing.Size(80, 22);
+            this.DataAnime_Menu_Database.Text = "3";
             // 
-            // DataAnime_Menu_Mn03_Mn01
+            // DataAnime_Menu_Database_Delete
             // 
-            this.DataAnime_Menu_Mn03_Mn01.Name = "DataAnime_Menu_Mn03_Mn01";
-            this.DataAnime_Menu_Mn03_Mn01.Size = new System.Drawing.Size(80, 22);
-            this.DataAnime_Menu_Mn03_Mn01.Text = "1";
-            this.DataAnime_Menu_Mn03_Mn01.Click += new System.EventHandler(this.DataAnime_Menu_Mn03_Mn01_Click);
+            this.DataAnime_Menu_Database_Delete.Name = "DataAnime_Menu_Database_Delete";
+            this.DataAnime_Menu_Database_Delete.Size = new System.Drawing.Size(80, 22);
+            this.DataAnime_Menu_Database_Delete.Text = "1";
+            this.DataAnime_Menu_Database_Delete.Click += new System.EventHandler(this.DataAnime_Menu_Mn03_Mn01_Click);
             // 
             // DataAnime_Menu_Mn04
             // 
@@ -4150,24 +4857,34 @@ namespace AniDBClient
             this.DataAnime_Menu_Mn04_Mn05.Text = "5";
             this.DataAnime_Menu_Mn04_Mn05.Click += new System.EventHandler(this.DataAnime_Menu_Mn04_Mn05_Click);
             // 
-            // MainTabData_Mn03
+            // MainTabData_Anime2TabPage
             // 
-            this.MainTabData_Mn03.BackColor = System.Drawing.Color.White;
-            this.MainTabData_Mn03.Controls.Add(this.Anime_Rel);
-            this.MainTabData_Mn03.Controls.Add(this.Anime_RelDel);
-            this.MainTabData_Mn03.Controls.Add(this.AnimeTree_CH02);
-            this.MainTabData_Mn03.Controls.Add(this.AnimeTree_CH01);
-            this.MainTabData_Mn03.Controls.Add(this.Anime_GR01);
-            this.MainTabData_Mn03.Controls.Add(this.AnimeTree);
-            this.MainTabData_Mn03.Controls.Add(this.Anime_Lang03);
-            this.MainTabData_Mn03.Controls.Add(this.Anime_Lang02);
-            this.MainTabData_Mn03.Controls.Add(this.Anime_Lang01);
-            this.MainTabData_Mn03.Location = new System.Drawing.Point(4, 22);
-            this.MainTabData_Mn03.Name = "MainTabData_Mn03";
-            this.MainTabData_Mn03.Size = new System.Drawing.Size(1105, 648);
-            this.MainTabData_Mn03.TabIndex = 0;
-            this.MainTabData_Mn03.Text = "3";
-            this.MainTabData_Mn03.UseVisualStyleBackColor = true;
+            this.MainTabData_Anime2TabPage.BackColor = System.Drawing.Color.White;
+            this.MainTabData_Anime2TabPage.Controls.Add(this.Anime_Rel);
+            this.MainTabData_Anime2TabPage.Controls.Add(this.Anime_RelDel);
+            this.MainTabData_Anime2TabPage.Controls.Add(this.AnimeTree_CH02);
+            this.MainTabData_Anime2TabPage.Controls.Add(this.AnimeTree_CH01);
+            this.MainTabData_Anime2TabPage.Controls.Add(this.Anime_GR01);
+            this.MainTabData_Anime2TabPage.Controls.Add(this.AnimeTree);
+            this.MainTabData_Anime2TabPage.Controls.Add(this.Anime_Lang03);
+            this.MainTabData_Anime2TabPage.Controls.Add(this.Anime_Lang02);
+            this.MainTabData_Anime2TabPage.Controls.Add(this.Anime_Lang01);
+            this.MainTabData_Anime2TabPage.Location = new System.Drawing.Point(4, 22);
+            this.MainTabData_Anime2TabPage.Name = "MainTabData_Anime2TabPage";
+            this.MainTabData_Anime2TabPage.Size = new System.Drawing.Size(1105, 648);
+            this.MainTabData_Anime2TabPage.TabIndex = 0;
+            this.MainTabData_Anime2TabPage.Text = "3";
+            this.MainTabData_Anime2TabPage.UseVisualStyleBackColor = true;
+            // 
+            // Anime_Rel
+            // 
+            this.Anime_Rel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Anime_Rel.Location = new System.Drawing.Point(211, 14);
+            this.Anime_Rel.Name = "Anime_Rel";
+            this.Anime_Rel.Size = new System.Drawing.Size(15, 15);
+            this.Anime_Rel.TabIndex = 0;
+            this.Anime_Rel.TabStop = false;
+            this.Anime_Rel.Visible = false;
             // 
             // Anime_RelDel
             // 
@@ -4246,6 +4963,15 @@ namespace AniDBClient
             this.Anime_GR01.Text = "groupBox1";
             this.Anime_GR01.Visible = false;
             // 
+            // Anime_DateOK
+            // 
+            this.Anime_DateOK.Location = new System.Drawing.Point(479, 141);
+            this.Anime_DateOK.Name = "Anime_DateOK";
+            this.Anime_DateOK.Size = new System.Drawing.Size(13, 13);
+            this.Anime_DateOK.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Anime_DateOK.TabIndex = 2;
+            this.Anime_DateOK.TabStop = false;
+            // 
             // Anime_CB01
             // 
             this.Anime_CB01.BackColor = System.Drawing.Color.White;
@@ -4291,6 +5017,16 @@ namespace AniDBClient
             this.Anime_Seen.Click += new System.EventHandler(this.Anime_Seen_Click);
             this.Anime_Seen.TextChanged += new System.EventHandler(this.Anime_Seen_TextChanged);
             // 
+            // Anime_RatImg
+            // 
+            this.Anime_RatImg.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Anime_RatImg.Location = new System.Drawing.Point(364, 265);
+            this.Anime_RatImg.Name = "Anime_RatImg";
+            this.Anime_RatImg.Size = new System.Drawing.Size(104, 20);
+            this.Anime_RatImg.TabIndex = 0;
+            this.Anime_RatImg.TabStop = false;
+            // 
             // Anime_Rat
             // 
             this.Anime_Rat.BackColor = System.Drawing.Color.White;
@@ -4308,6 +5044,18 @@ namespace AniDBClient
             this.Anime_Rat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Anime_Rat.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
             this.Anime_Rat.ValueChanged += new System.EventHandler(this.Anime_Rat_ValueChanged);
+            // 
+            // Anime_BT01
+            // 
+            this.Anime_BT01.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Anime_BT01.BackgroundImage")));
+            this.Anime_BT01.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Anime_BT01.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.Anime_BT01.Location = new System.Drawing.Point(520, 289);
+            this.Anime_BT01.Name = "Anime_BT01";
+            this.Anime_BT01.Size = new System.Drawing.Size(23, 23);
+            this.Anime_BT01.TabIndex = 0;
+            this.Anime_BT01.UseVisualStyleBackColor = true;
+            this.Anime_BT01.Click += new System.EventHandler(this.Anime_BT01_Click);
             // 
             // Anime_LB11
             // 
@@ -4346,6 +5094,16 @@ namespace AniDBClient
             this.Anime_LB08.TabStop = true;
             this.Anime_LB08.Text = "linkLabel1";
             this.Anime_LB08.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Anime_LB08_LinkClicked);
+            // 
+            // Anime_Img
+            // 
+            this.Anime_Img.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Anime_Img.Location = new System.Drawing.Point(6, 42);
+            this.Anime_Img.Name = "Anime_Img";
+            this.Anime_Img.Size = new System.Drawing.Size(225, 279);
+            this.Anime_Img.TabIndex = 0;
+            this.Anime_Img.TabStop = false;
+            this.Anime_Img.DoubleClick += new System.EventHandler(this.Anime_Img_DoubleClick);
             // 
             // Anime_OP07
             // 
@@ -4528,12 +5286,12 @@ namespace AniDBClient
             this.AnimeData.ReadOnly = true;
             this.AnimeData.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.AnimeData.RowHeadersVisible = false;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.Black;
-            this.AnimeData.RowsDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle49.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle49.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            dataGridViewCellStyle49.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle49.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle49.SelectionForeColor = System.Drawing.Color.Black;
+            this.AnimeData.RowsDefaultCellStyle = dataGridViewCellStyle49;
             this.AnimeData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.AnimeData.ShowCellErrors = false;
             this.AnimeData.Size = new System.Drawing.Size(833, 309);
@@ -4544,8 +5302,8 @@ namespace AniDBClient
             // 
             // AnimeData_Mn01
             // 
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.AnimeData_Mn01.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.AnimeData_Mn01.DefaultCellStyle = dataGridViewCellStyle16;
             this.AnimeData_Mn01.HeaderText = "";
             this.AnimeData_Mn01.Name = "AnimeData_Mn01";
             this.AnimeData_Mn01.ReadOnly = true;
@@ -4561,8 +5319,8 @@ namespace AniDBClient
             // 
             // AnimeData_Mn03
             // 
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.AnimeData_Mn03.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle46.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.AnimeData_Mn03.DefaultCellStyle = dataGridViewCellStyle46;
             this.AnimeData_Mn03.HeaderText = "";
             this.AnimeData_Mn03.Name = "AnimeData_Mn03";
             this.AnimeData_Mn03.ReadOnly = true;
@@ -4572,9 +5330,9 @@ namespace AniDBClient
             // AnimeData_Mn04
             // 
             this.AnimeData_Mn04.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.AnimeData_Mn04.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle47.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.AnimeData_Mn04.DefaultCellStyle = dataGridViewCellStyle47;
             this.AnimeData_Mn04.HeaderText = "";
             this.AnimeData_Mn04.Name = "AnimeData_Mn04";
             this.AnimeData_Mn04.ReadOnly = true;
@@ -4582,9 +5340,9 @@ namespace AniDBClient
             // 
             // AnimeData_Mn05
             // 
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.AnimeData_Mn05.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle48.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.AnimeData_Mn05.DefaultCellStyle = dataGridViewCellStyle48;
             this.AnimeData_Mn05.HeaderText = "";
             this.AnimeData_Mn05.Name = "AnimeData_Mn05";
             this.AnimeData_Mn05.ReadOnly = true;
@@ -4767,18 +5525,48 @@ namespace AniDBClient
             this.AnimeTree_Menu_Mn02.Text = "2";
             this.AnimeTree_Menu_Mn02.Click += new System.EventHandler(this.AnimeTree_Menu_Mn02_Click);
             // 
-            // MainTabData_Mn04
+            // Anime_Lang03
             // 
-            this.MainTabData_Mn04.BackColor = System.Drawing.Color.White;
-            this.MainTabData_Mn04.Controls.Add(this.DataGenres_Page);
-            this.MainTabData_Mn04.Controls.Add(this.DataGenres_Rows);
-            this.MainTabData_Mn04.Controls.Add(this.DataGenres);
-            this.MainTabData_Mn04.Location = new System.Drawing.Point(4, 22);
-            this.MainTabData_Mn04.Name = "MainTabData_Mn04";
-            this.MainTabData_Mn04.Size = new System.Drawing.Size(1105, 648);
-            this.MainTabData_Mn04.TabIndex = 0;
-            this.MainTabData_Mn04.Text = "4";
-            this.MainTabData_Mn04.UseVisualStyleBackColor = true;
+            this.Anime_Lang03.Image = ((System.Drawing.Image)(resources.GetObject("Anime_Lang03.Image")));
+            this.Anime_Lang03.Location = new System.Drawing.Point(61, 16);
+            this.Anime_Lang03.Name = "Anime_Lang03";
+            this.Anime_Lang03.Size = new System.Drawing.Size(23, 23);
+            this.Anime_Lang03.TabIndex = 0;
+            this.Anime_Lang03.UseVisualStyleBackColor = true;
+            this.Anime_Lang03.Click += new System.EventHandler(this.Anime_Lang03_Click);
+            // 
+            // Anime_Lang02
+            // 
+            this.Anime_Lang02.Image = global::AniDBClient.Properties.Resources.anidb_audio_english;
+            this.Anime_Lang02.Location = new System.Drawing.Point(32, 16);
+            this.Anime_Lang02.Name = "Anime_Lang02";
+            this.Anime_Lang02.Size = new System.Drawing.Size(23, 23);
+            this.Anime_Lang02.TabIndex = 0;
+            this.Anime_Lang02.UseVisualStyleBackColor = true;
+            this.Anime_Lang02.Click += new System.EventHandler(this.Anime_Lang02_Click);
+            // 
+            // Anime_Lang01
+            // 
+            this.Anime_Lang01.Image = ((System.Drawing.Image)(resources.GetObject("Anime_Lang01.Image")));
+            this.Anime_Lang01.Location = new System.Drawing.Point(3, 16);
+            this.Anime_Lang01.Name = "Anime_Lang01";
+            this.Anime_Lang01.Size = new System.Drawing.Size(23, 23);
+            this.Anime_Lang01.TabIndex = 0;
+            this.Anime_Lang01.UseVisualStyleBackColor = true;
+            this.Anime_Lang01.Click += new System.EventHandler(this.Anime_Lang01_Click);
+            // 
+            // MainTabData_GenresTabPage
+            // 
+            this.MainTabData_GenresTabPage.BackColor = System.Drawing.Color.White;
+            this.MainTabData_GenresTabPage.Controls.Add(this.DataGenres_Page);
+            this.MainTabData_GenresTabPage.Controls.Add(this.DataGenres_Rows);
+            this.MainTabData_GenresTabPage.Controls.Add(this.DataGenres);
+            this.MainTabData_GenresTabPage.Location = new System.Drawing.Point(4, 22);
+            this.MainTabData_GenresTabPage.Name = "MainTabData_GenresTabPage";
+            this.MainTabData_GenresTabPage.Size = new System.Drawing.Size(1105, 648);
+            this.MainTabData_GenresTabPage.TabIndex = 0;
+            this.MainTabData_GenresTabPage.Text = "4";
+            this.MainTabData_GenresTabPage.UseVisualStyleBackColor = true;
             // 
             // DataGenres_Page
             // 
@@ -4859,11 +5647,11 @@ namespace AniDBClient
             this.DataGenres.ReadOnly = true;
             this.DataGenres.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.DataGenres.RowHeadersVisible = false;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.Black;
-            this.DataGenres.RowsDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle50.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle50.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle50.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle50.SelectionForeColor = System.Drawing.Color.Black;
+            this.DataGenres.RowsDefaultCellStyle = dataGridViewCellStyle50;
             this.DataGenres.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGenres.Size = new System.Drawing.Size(1093, 610);
             this.DataGenres.TabIndex = 0;
@@ -4926,18 +5714,18 @@ namespace AniDBClient
             this.DataGenres_Mn07.ReadOnly = true;
             this.DataGenres_Mn07.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // MainTabData_Mn05
+            // MainTabData_GroupsTabPage
             // 
-            this.MainTabData_Mn05.BackColor = System.Drawing.Color.White;
-            this.MainTabData_Mn05.Controls.Add(this.DataGroups_Page);
-            this.MainTabData_Mn05.Controls.Add(this.DataGroups_Rows);
-            this.MainTabData_Mn05.Controls.Add(this.DataGroups);
-            this.MainTabData_Mn05.Location = new System.Drawing.Point(4, 22);
-            this.MainTabData_Mn05.Name = "MainTabData_Mn05";
-            this.MainTabData_Mn05.Size = new System.Drawing.Size(1105, 648);
-            this.MainTabData_Mn05.TabIndex = 0;
-            this.MainTabData_Mn05.Text = "5";
-            this.MainTabData_Mn05.UseVisualStyleBackColor = true;
+            this.MainTabData_GroupsTabPage.BackColor = System.Drawing.Color.White;
+            this.MainTabData_GroupsTabPage.Controls.Add(this.DataGroups_Page);
+            this.MainTabData_GroupsTabPage.Controls.Add(this.DataGroups_Rows);
+            this.MainTabData_GroupsTabPage.Controls.Add(this.DataGroups);
+            this.MainTabData_GroupsTabPage.Location = new System.Drawing.Point(4, 22);
+            this.MainTabData_GroupsTabPage.Name = "MainTabData_GroupsTabPage";
+            this.MainTabData_GroupsTabPage.Size = new System.Drawing.Size(1105, 648);
+            this.MainTabData_GroupsTabPage.TabIndex = 0;
+            this.MainTabData_GroupsTabPage.Text = "5";
+            this.MainTabData_GroupsTabPage.UseVisualStyleBackColor = true;
             // 
             // DataGroups_Page
             // 
@@ -5018,11 +5806,11 @@ namespace AniDBClient
             this.DataGroups.ReadOnly = true;
             this.DataGroups.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.DataGroups.RowHeadersVisible = false;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.Black;
-            this.DataGroups.RowsDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle51.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle51.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle51.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle51.SelectionForeColor = System.Drawing.Color.Black;
+            this.DataGroups.RowsDefaultCellStyle = dataGridViewCellStyle51;
             this.DataGroups.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGroups.Size = new System.Drawing.Size(1093, 610);
             this.DataGroups.TabIndex = 0;
@@ -5083,53 +5871,53 @@ namespace AniDBClient
             this.DataGroups_Mn07.ReadOnly = true;
             this.DataGroups_Mn07.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // MainTabData_Mn07
+            // MainTabData_SearchTabPage
             // 
-            this.MainTabData_Mn07.BackColor = System.Drawing.Color.White;
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_CH02);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_CH01);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_NM05);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_NM04);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_NM03);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_NM02);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_NM01);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_CB01);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_CB02);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_TX05);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_TX04);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_TX08);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_TX03);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_TX07);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_TX02);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_TX06);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_TX01);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_LB15);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_LB10);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_LB05);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_LB14);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_LB09);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_LB04);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_LB13);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_LB08);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_LB03);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_LB12);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_LB07);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_LB02);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_LB11);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_LB06);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_LB01);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_LB16);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_Genres);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_Clear);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch_Select);
-            this.MainTabData_Mn07.Controls.Add(this.DataSearch);
-            this.MainTabData_Mn07.ForeColor = System.Drawing.Color.Black;
-            this.MainTabData_Mn07.Location = new System.Drawing.Point(4, 22);
-            this.MainTabData_Mn07.Name = "MainTabData_Mn07";
-            this.MainTabData_Mn07.Size = new System.Drawing.Size(1105, 648);
-            this.MainTabData_Mn07.TabIndex = 0;
-            this.MainTabData_Mn07.Text = "7";
-            this.MainTabData_Mn07.UseVisualStyleBackColor = true;
+            this.MainTabData_SearchTabPage.BackColor = System.Drawing.Color.White;
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_CH02);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_CH01);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_NM05);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_NM04);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_NM03);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_NM02);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_NM01);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_CB01);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_CB02);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_TX05);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_TX04);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_TX08);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_TX03);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_TX07);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_TX02);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_TX06);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_TX01);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_LB15);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_LB10);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_LB05);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_LB14);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_LB09);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_LB04);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_LB13);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_LB08);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_LB03);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_LB12);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_LB07);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_LB02);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_LB11);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_LB06);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_LB01);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_LB16);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_Genres);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_Clear);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch_Select);
+            this.MainTabData_SearchTabPage.Controls.Add(this.DataSearch);
+            this.MainTabData_SearchTabPage.ForeColor = System.Drawing.Color.Black;
+            this.MainTabData_SearchTabPage.Location = new System.Drawing.Point(4, 22);
+            this.MainTabData_SearchTabPage.Name = "MainTabData_SearchTabPage";
+            this.MainTabData_SearchTabPage.Size = new System.Drawing.Size(1105, 648);
+            this.MainTabData_SearchTabPage.TabIndex = 0;
+            this.MainTabData_SearchTabPage.Text = "7";
+            this.MainTabData_SearchTabPage.UseVisualStyleBackColor = true;
             // 
             // DataSearch_CH02
             // 
@@ -5588,11 +6376,11 @@ namespace AniDBClient
             this.DataSearch.ReadOnly = true;
             this.DataSearch.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.DataSearch.RowHeadersVisible = false;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.Black;
-            this.DataSearch.RowsDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle52.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle52.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle52.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle52.SelectionForeColor = System.Drawing.Color.Black;
+            this.DataSearch.RowsDefaultCellStyle = dataGridViewCellStyle52;
             this.DataSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataSearch.Size = new System.Drawing.Size(1093, 504);
             this.DataSearch.TabIndex = 0;
@@ -5637,17 +6425,17 @@ namespace AniDBClient
             this.DataSearch_Mn05.Name = "DataSearch_Mn05";
             this.DataSearch_Mn05.ReadOnly = true;
             // 
-            // MainTabData_Mn08
+            // MainTabData_OthersTabPage
             // 
-            this.MainTabData_Mn08.BackColor = System.Drawing.Color.White;
-            this.MainTabData_Mn08.Controls.Add(this.AnimeSeen);
-            this.MainTabData_Mn08.Controls.Add(this.AnimeRating);
-            this.MainTabData_Mn08.Controls.Add(this.AnimeTags);
-            this.MainTabData_Mn08.Location = new System.Drawing.Point(4, 22);
-            this.MainTabData_Mn08.Name = "MainTabData_Mn08";
-            this.MainTabData_Mn08.Size = new System.Drawing.Size(1105, 648);
-            this.MainTabData_Mn08.TabIndex = 0;
-            this.MainTabData_Mn08.Text = "8";
+            this.MainTabData_OthersTabPage.BackColor = System.Drawing.Color.White;
+            this.MainTabData_OthersTabPage.Controls.Add(this.AnimeSeen);
+            this.MainTabData_OthersTabPage.Controls.Add(this.AnimeRating);
+            this.MainTabData_OthersTabPage.Controls.Add(this.AnimeTags);
+            this.MainTabData_OthersTabPage.Location = new System.Drawing.Point(4, 22);
+            this.MainTabData_OthersTabPage.Name = "MainTabData_OthersTabPage";
+            this.MainTabData_OthersTabPage.Size = new System.Drawing.Size(1105, 648);
+            this.MainTabData_OthersTabPage.TabIndex = 0;
+            this.MainTabData_OthersTabPage.Text = "8";
             // 
             // AnimeSeen
             // 
@@ -5691,16 +6479,16 @@ namespace AniDBClient
             this.AnimeTags.TabIndex = 0;
             this.AnimeTags.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.AnimeTags_MouseDoubleClick);
             // 
-            // MainTabData_Mn09
+            // MainTabData_GraphsTabPage
             // 
-            this.MainTabData_Mn09.BackColor = System.Drawing.Color.White;
-            this.MainTabData_Mn09.Controls.Add(this.panel1);
-            this.MainTabData_Mn09.Controls.Add(this.Zgc_Graph);
-            this.MainTabData_Mn09.Location = new System.Drawing.Point(4, 22);
-            this.MainTabData_Mn09.Name = "MainTabData_Mn09";
-            this.MainTabData_Mn09.Size = new System.Drawing.Size(1105, 648);
-            this.MainTabData_Mn09.TabIndex = 0;
-            this.MainTabData_Mn09.Text = "9";
+            this.MainTabData_GraphsTabPage.BackColor = System.Drawing.Color.White;
+            this.MainTabData_GraphsTabPage.Controls.Add(this.panel1);
+            this.MainTabData_GraphsTabPage.Controls.Add(this.Zgc_Graph);
+            this.MainTabData_GraphsTabPage.Location = new System.Drawing.Point(4, 22);
+            this.MainTabData_GraphsTabPage.Name = "MainTabData_GraphsTabPage";
+            this.MainTabData_GraphsTabPage.Size = new System.Drawing.Size(1105, 648);
+            this.MainTabData_GraphsTabPage.TabIndex = 0;
+            this.MainTabData_GraphsTabPage.Text = "9";
             // 
             // panel1
             // 
@@ -5715,6 +6503,72 @@ namespace AniDBClient
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1105, 45);
             this.panel1.TabIndex = 0;
+            // 
+            // Zgc_GraphB06
+            // 
+            this.Zgc_GraphB06.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Zgc_GraphB06.BackgroundImage")));
+            this.Zgc_GraphB06.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Zgc_GraphB06.Location = new System.Drawing.Point(223, 3);
+            this.Zgc_GraphB06.Name = "Zgc_GraphB06";
+            this.Zgc_GraphB06.Size = new System.Drawing.Size(38, 38);
+            this.Zgc_GraphB06.TabIndex = 0;
+            this.Zgc_GraphB06.UseVisualStyleBackColor = true;
+            this.Zgc_GraphB06.Click += new System.EventHandler(this.Zgc_GraphB06_Click);
+            // 
+            // Zgc_GraphB05
+            // 
+            this.Zgc_GraphB05.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Zgc_GraphB05.BackgroundImage")));
+            this.Zgc_GraphB05.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Zgc_GraphB05.Location = new System.Drawing.Point(179, 3);
+            this.Zgc_GraphB05.Name = "Zgc_GraphB05";
+            this.Zgc_GraphB05.Size = new System.Drawing.Size(38, 38);
+            this.Zgc_GraphB05.TabIndex = 0;
+            this.Zgc_GraphB05.UseVisualStyleBackColor = true;
+            this.Zgc_GraphB05.Click += new System.EventHandler(this.Zgc_GraphB05_Click);
+            // 
+            // Zgc_GraphB04
+            // 
+            this.Zgc_GraphB04.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Zgc_GraphB04.BackgroundImage")));
+            this.Zgc_GraphB04.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Zgc_GraphB04.Location = new System.Drawing.Point(135, 3);
+            this.Zgc_GraphB04.Name = "Zgc_GraphB04";
+            this.Zgc_GraphB04.Size = new System.Drawing.Size(38, 38);
+            this.Zgc_GraphB04.TabIndex = 0;
+            this.Zgc_GraphB04.UseVisualStyleBackColor = true;
+            this.Zgc_GraphB04.Click += new System.EventHandler(this.Zgc_GraphB04_Click);
+            // 
+            // Zgc_GraphB03
+            // 
+            this.Zgc_GraphB03.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Zgc_GraphB03.BackgroundImage")));
+            this.Zgc_GraphB03.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Zgc_GraphB03.Location = new System.Drawing.Point(91, 3);
+            this.Zgc_GraphB03.Name = "Zgc_GraphB03";
+            this.Zgc_GraphB03.Size = new System.Drawing.Size(38, 38);
+            this.Zgc_GraphB03.TabIndex = 0;
+            this.Zgc_GraphB03.UseVisualStyleBackColor = true;
+            this.Zgc_GraphB03.Click += new System.EventHandler(this.Zgc_GraphB03_Click);
+            // 
+            // Zgc_GraphB02
+            // 
+            this.Zgc_GraphB02.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Zgc_GraphB02.BackgroundImage")));
+            this.Zgc_GraphB02.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Zgc_GraphB02.Location = new System.Drawing.Point(47, 3);
+            this.Zgc_GraphB02.Name = "Zgc_GraphB02";
+            this.Zgc_GraphB02.Size = new System.Drawing.Size(38, 38);
+            this.Zgc_GraphB02.TabIndex = 0;
+            this.Zgc_GraphB02.UseVisualStyleBackColor = true;
+            this.Zgc_GraphB02.Click += new System.EventHandler(this.Zgc_GraphB02_Click);
+            // 
+            // Zgc_GraphB01
+            // 
+            this.Zgc_GraphB01.BackgroundImage = global::AniDBClient.Properties.Resources.i_Picture;
+            this.Zgc_GraphB01.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Zgc_GraphB01.Location = new System.Drawing.Point(3, 3);
+            this.Zgc_GraphB01.Name = "Zgc_GraphB01";
+            this.Zgc_GraphB01.Size = new System.Drawing.Size(38, 38);
+            this.Zgc_GraphB01.TabIndex = 0;
+            this.Zgc_GraphB01.UseVisualStyleBackColor = true;
+            this.Zgc_GraphB01.Click += new System.EventHandler(this.Zgc_GraphB01_Click);
             // 
             // Zgc_Graph
             // 
@@ -5754,35 +6608,35 @@ namespace AniDBClient
             this.Zgc_Graph.TabIndex = 0;
             this.Zgc_Graph.ZoomButtons = System.Windows.Forms.MouseButtons.None;
             // 
-            // MainTabData_Mn10
+            // MainTabData_ExportTabPage
             // 
-            this.MainTabData_Mn10.BackColor = System.Drawing.Color.White;
-            this.MainTabData_Mn10.Controls.Add(this.Anime_ExportLB01);
-            this.MainTabData_Mn10.Controls.Add(this.Anime_ExportBT02);
-            this.MainTabData_Mn10.Controls.Add(this.Anime_ExportBT01);
-            this.MainTabData_Mn10.Controls.Add(this.Anime_ExportCH18);
-            this.MainTabData_Mn10.Controls.Add(this.Anime_ExportCH17);
-            this.MainTabData_Mn10.Controls.Add(this.Anime_ExportCH16);
-            this.MainTabData_Mn10.Controls.Add(this.Anime_ExportCH15);
-            this.MainTabData_Mn10.Controls.Add(this.Anime_ExportCH14);
-            this.MainTabData_Mn10.Controls.Add(this.Anime_ExportCH13);
-            this.MainTabData_Mn10.Controls.Add(this.Anime_ExportCH12);
-            this.MainTabData_Mn10.Controls.Add(this.Anime_ExportCH11);
-            this.MainTabData_Mn10.Controls.Add(this.Anime_ExportCH10);
-            this.MainTabData_Mn10.Controls.Add(this.Anime_ExportCH09);
-            this.MainTabData_Mn10.Controls.Add(this.Anime_ExportCH08);
-            this.MainTabData_Mn10.Controls.Add(this.Anime_ExportCH07);
-            this.MainTabData_Mn10.Controls.Add(this.Anime_ExportCH06);
-            this.MainTabData_Mn10.Controls.Add(this.Anime_ExportCH05);
-            this.MainTabData_Mn10.Controls.Add(this.Anime_ExportCH04);
-            this.MainTabData_Mn10.Controls.Add(this.Anime_ExportCH03);
-            this.MainTabData_Mn10.Controls.Add(this.Anime_ExportCH02);
-            this.MainTabData_Mn10.Controls.Add(this.Anime_ExportCH01);
-            this.MainTabData_Mn10.Location = new System.Drawing.Point(4, 22);
-            this.MainTabData_Mn10.Name = "MainTabData_Mn10";
-            this.MainTabData_Mn10.Size = new System.Drawing.Size(1105, 648);
-            this.MainTabData_Mn10.TabIndex = 0;
-            this.MainTabData_Mn10.Text = "10";
+            this.MainTabData_ExportTabPage.BackColor = System.Drawing.Color.White;
+            this.MainTabData_ExportTabPage.Controls.Add(this.Anime_ExportLB01);
+            this.MainTabData_ExportTabPage.Controls.Add(this.Anime_ExportBT02);
+            this.MainTabData_ExportTabPage.Controls.Add(this.Anime_ExportBT01);
+            this.MainTabData_ExportTabPage.Controls.Add(this.Anime_ExportCH18);
+            this.MainTabData_ExportTabPage.Controls.Add(this.Anime_ExportCH17);
+            this.MainTabData_ExportTabPage.Controls.Add(this.Anime_ExportCH16);
+            this.MainTabData_ExportTabPage.Controls.Add(this.Anime_ExportCH15);
+            this.MainTabData_ExportTabPage.Controls.Add(this.Anime_ExportCH14);
+            this.MainTabData_ExportTabPage.Controls.Add(this.Anime_ExportCH13);
+            this.MainTabData_ExportTabPage.Controls.Add(this.Anime_ExportCH12);
+            this.MainTabData_ExportTabPage.Controls.Add(this.Anime_ExportCH11);
+            this.MainTabData_ExportTabPage.Controls.Add(this.Anime_ExportCH10);
+            this.MainTabData_ExportTabPage.Controls.Add(this.Anime_ExportCH09);
+            this.MainTabData_ExportTabPage.Controls.Add(this.Anime_ExportCH08);
+            this.MainTabData_ExportTabPage.Controls.Add(this.Anime_ExportCH07);
+            this.MainTabData_ExportTabPage.Controls.Add(this.Anime_ExportCH06);
+            this.MainTabData_ExportTabPage.Controls.Add(this.Anime_ExportCH05);
+            this.MainTabData_ExportTabPage.Controls.Add(this.Anime_ExportCH04);
+            this.MainTabData_ExportTabPage.Controls.Add(this.Anime_ExportCH03);
+            this.MainTabData_ExportTabPage.Controls.Add(this.Anime_ExportCH02);
+            this.MainTabData_ExportTabPage.Controls.Add(this.Anime_ExportCH01);
+            this.MainTabData_ExportTabPage.Location = new System.Drawing.Point(4, 22);
+            this.MainTabData_ExportTabPage.Name = "MainTabData_ExportTabPage";
+            this.MainTabData_ExportTabPage.Size = new System.Drawing.Size(1105, 648);
+            this.MainTabData_ExportTabPage.TabIndex = 0;
+            this.MainTabData_ExportTabPage.Text = "10";
             // 
             // Anime_ExportLB01
             // 
@@ -5997,16 +6851,16 @@ namespace AniDBClient
             this.Anime_ExportCH01.Text = "checkBox1";
             this.Anime_ExportCH01.UseVisualStyleBackColor = true;
             // 
-            // MainTab_Mn07
+            // MainTab_MangaPage
             // 
-            this.MainTab_Mn07.BackColor = System.Drawing.Color.White;
-            this.MainTab_Mn07.Controls.Add(this.MainTabManga);
-            this.MainTab_Mn07.Location = new System.Drawing.Point(4, 22);
-            this.MainTab_Mn07.Name = "MainTab_Mn07";
-            this.MainTab_Mn07.Size = new System.Drawing.Size(1119, 680);
-            this.MainTab_Mn07.TabIndex = 0;
-            this.MainTab_Mn07.Text = "7";
-            this.MainTab_Mn07.UseVisualStyleBackColor = true;
+            this.MainTab_MangaPage.BackColor = System.Drawing.Color.White;
+            this.MainTab_MangaPage.Controls.Add(this.MainTabManga);
+            this.MainTab_MangaPage.Location = new System.Drawing.Point(4, 22);
+            this.MainTab_MangaPage.Name = "MainTab_MangaPage";
+            this.MainTab_MangaPage.Size = new System.Drawing.Size(1119, 680);
+            this.MainTab_MangaPage.TabIndex = 0;
+            this.MainTab_MangaPage.Text = "7";
+            this.MainTab_MangaPage.UseVisualStyleBackColor = true;
             // 
             // MainTabManga
             // 
@@ -6042,23 +6896,34 @@ namespace AniDBClient
             this.MainTabManga_Mn01.Text = "1";
             this.MainTabManga_Mn01.UseVisualStyleBackColor = true;
             // 
+            // Options_MyListRefreshManga
+            // 
+            this.Options_MyListRefreshManga.BackgroundImage = global::AniDBClient.Properties.Resources.i_Refresh;
+            this.Options_MyListRefreshManga.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Options_MyListRefreshManga.Location = new System.Drawing.Point(227, 201);
+            this.Options_MyListRefreshManga.Name = "Options_MyListRefreshManga";
+            this.Options_MyListRefreshManga.Size = new System.Drawing.Size(24, 24);
+            this.Options_MyListRefreshManga.TabIndex = 0;
+            this.Options_MyListRefreshManga.UseVisualStyleBackColor = true;
+            this.Options_MyListRefreshManga.Click += new System.EventHandler(this.Options_MyListRefreshMin_Click);
+            // 
             // Manga_Gr04
             // 
-            this.Manga_Gr04.Controls.Add(this.Options_LB51);
+            this.Manga_Gr04.Controls.Add(this.Options_MangaLabel);
             this.Manga_Gr04.Controls.Add(this.Options_LB65);
-            this.Manga_Gr04.Controls.Add(this.Options_LB53);
+            this.Manga_Gr04.Controls.Add(this.Options_VolumesLabel);
             this.Manga_Gr04.Controls.Add(this.Options_LB54);
-            this.Manga_Gr04.Controls.Add(this.Options_LB59);
+            this.Manga_Gr04.Controls.Add(this.Options_ReadLabel);
             this.Manga_Gr04.Controls.Add(this.Options_LB56);
-            this.Manga_Gr04.Controls.Add(this.Options_LB55);
+            this.Manga_Gr04.Controls.Add(this.Options_ChaptersLabel);
             this.Manga_Gr04.Controls.Add(this.Options_LB64);
-            this.Manga_Gr04.Controls.Add(this.Options_LB61);
+            this.Manga_Gr04.Controls.Add(this.Options_TotalPagesLabel);
             this.Manga_Gr04.Controls.Add(this.Options_LB62);
-            this.Manga_Gr04.Controls.Add(this.Options_LB63);
+            this.Manga_Gr04.Controls.Add(this.Options_AdultLabel);
             this.Manga_Gr04.Controls.Add(this.Options_LB58);
-            this.Manga_Gr04.Controls.Add(this.Options_LB67);
+            this.Manga_Gr04.Controls.Add(this.Options_ReadLabel2);
             this.Manga_Gr04.Controls.Add(this.Options_LB60);
-            this.Manga_Gr04.Controls.Add(this.Options_LB57);
+            this.Manga_Gr04.Controls.Add(this.Options_FileSizeLabel);
             this.Manga_Gr04.Controls.Add(this.Options_LB52);
             this.Manga_Gr04.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.Manga_Gr04.Location = new System.Drawing.Point(3, 6);
@@ -6068,17 +6933,17 @@ namespace AniDBClient
             this.Manga_Gr04.TabStop = false;
             this.Manga_Gr04.Text = "groupBox1";
             // 
-            // Options_LB51
+            // Options_MangaLabel
             // 
-            this.Options_LB51.AutoSize = true;
-            this.Options_LB51.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB51.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB51.Location = new System.Drawing.Point(10, 25);
-            this.Options_LB51.Margin = new System.Windows.Forms.Padding(3);
-            this.Options_LB51.Name = "Options_LB51";
-            this.Options_LB51.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB51.TabIndex = 0;
-            this.Options_LB51.Text = "Nadpis";
+            this.Options_MangaLabel.AutoSize = true;
+            this.Options_MangaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_MangaLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_MangaLabel.Location = new System.Drawing.Point(10, 25);
+            this.Options_MangaLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.Options_MangaLabel.Name = "Options_MangaLabel";
+            this.Options_MangaLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_MangaLabel.TabIndex = 0;
+            this.Options_MangaLabel.Text = "Nadpis";
             // 
             // Options_LB65
             // 
@@ -6093,17 +6958,17 @@ namespace AniDBClient
             this.Options_LB65.Text = "Value";
             this.Options_LB65.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Options_LB53
+            // Options_VolumesLabel
             // 
-            this.Options_LB53.AutoSize = true;
-            this.Options_LB53.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB53.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB53.Location = new System.Drawing.Point(10, 44);
-            this.Options_LB53.Margin = new System.Windows.Forms.Padding(3);
-            this.Options_LB53.Name = "Options_LB53";
-            this.Options_LB53.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB53.TabIndex = 0;
-            this.Options_LB53.Text = "Nadpis";
+            this.Options_VolumesLabel.AutoSize = true;
+            this.Options_VolumesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_VolumesLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_VolumesLabel.Location = new System.Drawing.Point(10, 44);
+            this.Options_VolumesLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.Options_VolumesLabel.Name = "Options_VolumesLabel";
+            this.Options_VolumesLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_VolumesLabel.TabIndex = 0;
+            this.Options_VolumesLabel.Text = "Nadpis";
             // 
             // Options_LB54
             // 
@@ -6118,17 +6983,17 @@ namespace AniDBClient
             this.Options_LB54.Text = "Value";
             this.Options_LB54.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // Options_LB59
+            // Options_ReadLabel
             // 
-            this.Options_LB59.AutoSize = true;
-            this.Options_LB59.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB59.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB59.Location = new System.Drawing.Point(10, 101);
-            this.Options_LB59.Margin = new System.Windows.Forms.Padding(3);
-            this.Options_LB59.Name = "Options_LB59";
-            this.Options_LB59.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB59.TabIndex = 0;
-            this.Options_LB59.Text = "Nadpis";
+            this.Options_ReadLabel.AutoSize = true;
+            this.Options_ReadLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_ReadLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_ReadLabel.Location = new System.Drawing.Point(10, 101);
+            this.Options_ReadLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.Options_ReadLabel.Name = "Options_ReadLabel";
+            this.Options_ReadLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_ReadLabel.TabIndex = 0;
+            this.Options_ReadLabel.Text = "Nadpis";
             // 
             // Options_LB56
             // 
@@ -6143,17 +7008,17 @@ namespace AniDBClient
             this.Options_LB56.Text = "Value";
             this.Options_LB56.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // Options_LB55
+            // Options_ChaptersLabel
             // 
-            this.Options_LB55.AutoSize = true;
-            this.Options_LB55.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB55.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB55.Location = new System.Drawing.Point(10, 63);
-            this.Options_LB55.Margin = new System.Windows.Forms.Padding(3);
-            this.Options_LB55.Name = "Options_LB55";
-            this.Options_LB55.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB55.TabIndex = 0;
-            this.Options_LB55.Text = "Nadpis";
+            this.Options_ChaptersLabel.AutoSize = true;
+            this.Options_ChaptersLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_ChaptersLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_ChaptersLabel.Location = new System.Drawing.Point(10, 63);
+            this.Options_ChaptersLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.Options_ChaptersLabel.Name = "Options_ChaptersLabel";
+            this.Options_ChaptersLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_ChaptersLabel.TabIndex = 0;
+            this.Options_ChaptersLabel.Text = "Nadpis";
             // 
             // Options_LB64
             // 
@@ -6168,17 +7033,17 @@ namespace AniDBClient
             this.Options_LB64.Text = "Value";
             this.Options_LB64.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // Options_LB61
+            // Options_TotalPagesLabel
             // 
-            this.Options_LB61.AutoSize = true;
-            this.Options_LB61.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB61.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB61.Location = new System.Drawing.Point(10, 120);
-            this.Options_LB61.Margin = new System.Windows.Forms.Padding(3);
-            this.Options_LB61.Name = "Options_LB61";
-            this.Options_LB61.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB61.TabIndex = 0;
-            this.Options_LB61.Text = "Nadpis";
+            this.Options_TotalPagesLabel.AutoSize = true;
+            this.Options_TotalPagesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_TotalPagesLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_TotalPagesLabel.Location = new System.Drawing.Point(10, 120);
+            this.Options_TotalPagesLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.Options_TotalPagesLabel.Name = "Options_TotalPagesLabel";
+            this.Options_TotalPagesLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_TotalPagesLabel.TabIndex = 0;
+            this.Options_TotalPagesLabel.Text = "Nadpis";
             // 
             // Options_LB62
             // 
@@ -6193,17 +7058,17 @@ namespace AniDBClient
             this.Options_LB62.Text = "Value";
             this.Options_LB62.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // Options_LB63
+            // Options_AdultLabel
             // 
-            this.Options_LB63.AutoSize = true;
-            this.Options_LB63.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB63.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB63.Location = new System.Drawing.Point(10, 139);
-            this.Options_LB63.Margin = new System.Windows.Forms.Padding(3);
-            this.Options_LB63.Name = "Options_LB63";
-            this.Options_LB63.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB63.TabIndex = 0;
-            this.Options_LB63.Text = "Nadpis";
+            this.Options_AdultLabel.AutoSize = true;
+            this.Options_AdultLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_AdultLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_AdultLabel.Location = new System.Drawing.Point(10, 139);
+            this.Options_AdultLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.Options_AdultLabel.Name = "Options_AdultLabel";
+            this.Options_AdultLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_AdultLabel.TabIndex = 0;
+            this.Options_AdultLabel.Text = "Nadpis";
             // 
             // Options_LB58
             // 
@@ -6218,17 +7083,17 @@ namespace AniDBClient
             this.Options_LB58.Text = "Value";
             this.Options_LB58.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // Options_LB67
+            // Options_ReadLabel2
             // 
-            this.Options_LB67.AutoSize = true;
-            this.Options_LB67.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB67.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB67.Location = new System.Drawing.Point(10, 158);
-            this.Options_LB67.Margin = new System.Windows.Forms.Padding(3);
-            this.Options_LB67.Name = "Options_LB67";
-            this.Options_LB67.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB67.TabIndex = 0;
-            this.Options_LB67.Text = "Nadpis";
+            this.Options_ReadLabel2.AutoSize = true;
+            this.Options_ReadLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_ReadLabel2.ForeColor = System.Drawing.Color.Black;
+            this.Options_ReadLabel2.Location = new System.Drawing.Point(10, 158);
+            this.Options_ReadLabel2.Margin = new System.Windows.Forms.Padding(3);
+            this.Options_ReadLabel2.Name = "Options_ReadLabel2";
+            this.Options_ReadLabel2.Size = new System.Drawing.Size(46, 13);
+            this.Options_ReadLabel2.TabIndex = 0;
+            this.Options_ReadLabel2.Text = "Nadpis";
             // 
             // Options_LB60
             // 
@@ -6243,17 +7108,17 @@ namespace AniDBClient
             this.Options_LB60.Text = "Value";
             this.Options_LB60.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // Options_LB57
+            // Options_FileSizeLabel
             // 
-            this.Options_LB57.AutoSize = true;
-            this.Options_LB57.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Options_LB57.ForeColor = System.Drawing.Color.Black;
-            this.Options_LB57.Location = new System.Drawing.Point(10, 82);
-            this.Options_LB57.Margin = new System.Windows.Forms.Padding(3);
-            this.Options_LB57.Name = "Options_LB57";
-            this.Options_LB57.Size = new System.Drawing.Size(46, 13);
-            this.Options_LB57.TabIndex = 0;
-            this.Options_LB57.Text = "Nadpis";
+            this.Options_FileSizeLabel.AutoSize = true;
+            this.Options_FileSizeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Options_FileSizeLabel.ForeColor = System.Drawing.Color.Black;
+            this.Options_FileSizeLabel.Location = new System.Drawing.Point(10, 82);
+            this.Options_FileSizeLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.Options_FileSizeLabel.Name = "Options_FileSizeLabel";
+            this.Options_FileSizeLabel.Size = new System.Drawing.Size(46, 13);
+            this.Options_FileSizeLabel.TabIndex = 0;
+            this.Options_FileSizeLabel.Text = "Nadpis";
             // 
             // Options_LB52
             // 
@@ -6345,6 +7210,36 @@ namespace AniDBClient
             this.Manga_RelationTree.TabIndex = 0;
             this.Manga_RelationTree.DoubleClick += new System.EventHandler(this.Manga_RelationTree_DoubleClick);
             // 
+            // Manga_Chapter
+            // 
+            this.Manga_Chapter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Manga_Chapter.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Manga_Chapter.BackgroundImage")));
+            this.Manga_Chapter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Manga_Chapter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.Manga_Chapter.ForeColor = System.Drawing.Color.Black;
+            this.Manga_Chapter.Location = new System.Drawing.Point(738, 285);
+            this.Manga_Chapter.Margin = new System.Windows.Forms.Padding(10);
+            this.Manga_Chapter.Name = "Manga_Chapter";
+            this.Manga_Chapter.Size = new System.Drawing.Size(36, 36);
+            this.Manga_Chapter.TabIndex = 0;
+            this.Manga_Chapter.UseVisualStyleBackColor = true;
+            this.Manga_Chapter.Click += new System.EventHandler(this.Manga_Chapter_Click);
+            // 
+            // Manga_Edit
+            // 
+            this.Manga_Edit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Manga_Edit.BackgroundImage = global::AniDBClient.Properties.Resources.i_Edit;
+            this.Manga_Edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Manga_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.Manga_Edit.ForeColor = System.Drawing.Color.Black;
+            this.Manga_Edit.Location = new System.Drawing.Point(794, 285);
+            this.Manga_Edit.Margin = new System.Windows.Forms.Padding(10);
+            this.Manga_Edit.Name = "Manga_Edit";
+            this.Manga_Edit.Size = new System.Drawing.Size(36, 36);
+            this.Manga_Edit.TabIndex = 0;
+            this.Manga_Edit.UseVisualStyleBackColor = true;
+            this.Manga_Edit.Click += new System.EventHandler(this.Manga_Edit_Click);
+            // 
             // Manga_LB14
             // 
             this.Manga_LB14.AutoSize = true;
@@ -6414,6 +7309,15 @@ namespace AniDBClient
             this.Manga_LB13.TabStop = true;
             this.Manga_LB13.Text = "linkLabel1";
             this.Manga_LB13.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Manga_LB13_LinkClicked);
+            // 
+            // Manga_Picture
+            // 
+            this.Manga_Picture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Manga_Picture.Location = new System.Drawing.Point(6, 42);
+            this.Manga_Picture.Name = "Manga_Picture";
+            this.Manga_Picture.Size = new System.Drawing.Size(225, 279);
+            this.Manga_Picture.TabIndex = 0;
+            this.Manga_Picture.TabStop = false;
             // 
             // Manga_LB40
             // 
@@ -6628,12 +7532,12 @@ namespace AniDBClient
             this.Manga_Data.ReadOnly = true;
             this.Manga_Data.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.Manga_Data.RowHeadersVisible = false;
-            dataGridViewCellStyle28.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.Black;
-            this.Manga_Data.RowsDefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle56.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle56.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            dataGridViewCellStyle56.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle56.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle56.SelectionForeColor = System.Drawing.Color.Black;
+            this.Manga_Data.RowsDefaultCellStyle = dataGridViewCellStyle56;
             this.Manga_Data.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Manga_Data.Size = new System.Drawing.Size(824, 309);
             this.Manga_Data.TabIndex = 0;
@@ -6642,8 +7546,8 @@ namespace AniDBClient
             // 
             // Manga_Data_Mn01
             // 
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.Manga_Data_Mn01.DefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle53.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.Manga_Data_Mn01.DefaultCellStyle = dataGridViewCellStyle53;
             this.Manga_Data_Mn01.HeaderText = "";
             this.Manga_Data_Mn01.Name = "Manga_Data_Mn01";
             this.Manga_Data_Mn01.ReadOnly = true;
@@ -6659,8 +7563,8 @@ namespace AniDBClient
             // 
             // Manga_Data_Mn03
             // 
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.Manga_Data_Mn03.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle54.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.Manga_Data_Mn03.DefaultCellStyle = dataGridViewCellStyle54;
             this.Manga_Data_Mn03.HeaderText = "";
             this.Manga_Data_Mn03.Name = "Manga_Data_Mn03";
             this.Manga_Data_Mn03.ReadOnly = true;
@@ -6678,9 +7582,9 @@ namespace AniDBClient
             // Manga_Data_Mn04
             // 
             this.Manga_Data_Mn04.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.Manga_Data_Mn04.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle55.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle55.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.Manga_Data_Mn04.DefaultCellStyle = dataGridViewCellStyle55;
             this.Manga_Data_Mn04.HeaderText = "";
             this.Manga_Data_Mn04.Name = "Manga_Data_Mn04";
             this.Manga_Data_Mn04.ReadOnly = true;
@@ -6750,6 +7654,36 @@ namespace AniDBClient
             this.Manga_Tree_Menu_Mn01.Text = "1";
             this.Manga_Tree_Menu_Mn01.Click += new System.EventHandler(this.Manga_Tree_Menu_Mn01_Click);
             // 
+            // Manga_Lang03
+            // 
+            this.Manga_Lang03.Image = global::AniDBClient.Properties.Resources.anidb_audio_english;
+            this.Manga_Lang03.Location = new System.Drawing.Point(35, 201);
+            this.Manga_Lang03.Name = "Manga_Lang03";
+            this.Manga_Lang03.Size = new System.Drawing.Size(23, 23);
+            this.Manga_Lang03.TabIndex = 0;
+            this.Manga_Lang03.UseVisualStyleBackColor = true;
+            this.Manga_Lang03.Click += new System.EventHandler(this.Manga_Lang03_Click);
+            // 
+            // Manga_Lang02
+            // 
+            this.Manga_Lang02.Image = ((System.Drawing.Image)(resources.GetObject("Manga_Lang02.Image")));
+            this.Manga_Lang02.Location = new System.Drawing.Point(64, 201);
+            this.Manga_Lang02.Name = "Manga_Lang02";
+            this.Manga_Lang02.Size = new System.Drawing.Size(23, 23);
+            this.Manga_Lang02.TabIndex = 0;
+            this.Manga_Lang02.UseVisualStyleBackColor = true;
+            this.Manga_Lang02.Click += new System.EventHandler(this.Manga_Lang02_Click);
+            // 
+            // Manga_Lang01
+            // 
+            this.Manga_Lang01.Image = ((System.Drawing.Image)(resources.GetObject("Manga_Lang01.Image")));
+            this.Manga_Lang01.Location = new System.Drawing.Point(6, 201);
+            this.Manga_Lang01.Name = "Manga_Lang01";
+            this.Manga_Lang01.Size = new System.Drawing.Size(23, 23);
+            this.Manga_Lang01.TabIndex = 0;
+            this.Manga_Lang01.UseVisualStyleBackColor = true;
+            this.Manga_Lang01.Click += new System.EventHandler(this.Manga_Lang01_Click);
+            // 
             // MainTabManga_Mn02
             // 
             this.MainTabManga_Mn02.BackColor = System.Drawing.Color.White;
@@ -6786,6 +7720,21 @@ namespace AniDBClient
             this.Manga_Gr03.TabStop = false;
             this.Manga_Gr03.Text = "groupBox2";
             this.Manga_Gr03.Visible = false;
+            // 
+            // Manga_EditCh
+            // 
+            this.Manga_EditCh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Manga_EditCh.BackgroundImage = global::AniDBClient.Properties.Resources.i_Edit;
+            this.Manga_EditCh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Manga_EditCh.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.Manga_EditCh.ForeColor = System.Drawing.Color.Black;
+            this.Manga_EditCh.Location = new System.Drawing.Point(170, 17);
+            this.Manga_EditCh.Margin = new System.Windows.Forms.Padding(10);
+            this.Manga_EditCh.Name = "Manga_EditCh";
+            this.Manga_EditCh.Size = new System.Drawing.Size(23, 23);
+            this.Manga_EditCh.TabIndex = 0;
+            this.Manga_EditCh.UseVisualStyleBackColor = true;
+            this.Manga_EditCh.Click += new System.EventHandler(this.Manga_Edit_Click);
             // 
             // Manga_Tx20
             // 
@@ -6928,6 +7877,31 @@ namespace AniDBClient
             this.Manga_LB41.Size = new System.Drawing.Size(48, 13);
             this.Manga_LB41.TabIndex = 0;
             this.Manga_LB41.Text = "label13";
+            // 
+            // Manga_Obr_CHD
+            // 
+            this.Manga_Obr_CHD.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Manga_Obr_CHD.BackgroundImage")));
+            this.Manga_Obr_CHD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Manga_Obr_CHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Manga_Obr_CHD.ForeColor = System.Drawing.Color.Black;
+            this.Manga_Obr_CHD.Location = new System.Drawing.Point(263, 17);
+            this.Manga_Obr_CHD.Name = "Manga_Obr_CHD";
+            this.Manga_Obr_CHD.Size = new System.Drawing.Size(23, 23);
+            this.Manga_Obr_CHD.TabIndex = 0;
+            this.Manga_Obr_CHD.UseVisualStyleBackColor = true;
+            this.Manga_Obr_CHD.Click += new System.EventHandler(this.Manga_Obr_CHD_Click);
+            // 
+            // Manga_Insert_CHD
+            // 
+            this.Manga_Insert_CHD.BackgroundImage = global::AniDBClient.Properties.Resources.i_Check;
+            this.Manga_Insert_CHD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Manga_Insert_CHD.ForeColor = System.Drawing.Color.Black;
+            this.Manga_Insert_CHD.Location = new System.Drawing.Point(818, 18);
+            this.Manga_Insert_CHD.Name = "Manga_Insert_CHD";
+            this.Manga_Insert_CHD.Size = new System.Drawing.Size(23, 23);
+            this.Manga_Insert_CHD.TabIndex = 0;
+            this.Manga_Insert_CHD.UseVisualStyleBackColor = true;
+            this.Manga_Insert_CHD.Click += new System.EventHandler(this.Manga_Insert_CHD_Click);
             // 
             // Manga_LB42
             // 
@@ -7122,6 +8096,19 @@ namespace AniDBClient
             this.Manga_Genres.Sorted = true;
             this.Manga_Genres.TabIndex = 0;
             // 
+            // Manga_Delete
+            // 
+            this.Manga_Delete.BackgroundImage = global::AniDBClient.Properties.Resources.i_Delete;
+            this.Manga_Delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Manga_Delete.ForeColor = System.Drawing.Color.Black;
+            this.Manga_Delete.Location = new System.Drawing.Point(588, 289);
+            this.Manga_Delete.Name = "Manga_Delete";
+            this.Manga_Delete.Size = new System.Drawing.Size(36, 36);
+            this.Manga_Delete.TabIndex = 0;
+            this.Manga_Delete.UseVisualStyleBackColor = true;
+            this.Manga_Delete.Visible = false;
+            this.Manga_Delete.Click += new System.EventHandler(this.Manga_Delete_Click);
+            // 
             // Manga_LB24
             // 
             this.Manga_LB24.AutoSize = true;
@@ -7155,6 +8142,18 @@ namespace AniDBClient
             this.Manga_LB36.TabIndex = 0;
             this.Manga_LB36.Text = "label13";
             // 
+            // Manga_Update
+            // 
+            this.Manga_Update.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Manga_Update.BackgroundImage")));
+            this.Manga_Update.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Manga_Update.ForeColor = System.Drawing.Color.Black;
+            this.Manga_Update.Location = new System.Drawing.Point(680, 289);
+            this.Manga_Update.Name = "Manga_Update";
+            this.Manga_Update.Size = new System.Drawing.Size(36, 36);
+            this.Manga_Update.TabIndex = 0;
+            this.Manga_Update.UseVisualStyleBackColor = true;
+            this.Manga_Update.Click += new System.EventHandler(this.Manga_Update_Click);
+            // 
             // Manga_LB22
             // 
             this.Manga_LB22.AutoSize = true;
@@ -7176,6 +8175,18 @@ namespace AniDBClient
             this.Manga_LB23.Size = new System.Drawing.Size(48, 13);
             this.Manga_LB23.TabIndex = 0;
             this.Manga_LB23.Text = "label13";
+            // 
+            // Manga_Insert
+            // 
+            this.Manga_Insert.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Manga_Insert.BackgroundImage")));
+            this.Manga_Insert.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Manga_Insert.ForeColor = System.Drawing.Color.Black;
+            this.Manga_Insert.Location = new System.Drawing.Point(773, 289);
+            this.Manga_Insert.Name = "Manga_Insert";
+            this.Manga_Insert.Size = new System.Drawing.Size(36, 36);
+            this.Manga_Insert.TabIndex = 0;
+            this.Manga_Insert.UseVisualStyleBackColor = true;
+            this.Manga_Insert.Click += new System.EventHandler(this.Manga_Insert_Click);
             // 
             // Manga_LB35
             // 
@@ -7209,6 +8220,75 @@ namespace AniDBClient
             this.Manga_LB21.Size = new System.Drawing.Size(48, 13);
             this.Manga_LB21.TabIndex = 0;
             this.Manga_LB21.Text = "label13";
+            // 
+            // Manga_Download_MAL
+            // 
+            this.Manga_Download_MAL.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Manga_Download_MAL.BackgroundImage")));
+            this.Manga_Download_MAL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Manga_Download_MAL.Enabled = false;
+            this.Manga_Download_MAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Manga_Download_MAL.ForeColor = System.Drawing.Color.Black;
+            this.Manga_Download_MAL.Location = new System.Drawing.Point(468, 173);
+            this.Manga_Download_MAL.Name = "Manga_Download_MAL";
+            this.Manga_Download_MAL.Size = new System.Drawing.Size(23, 23);
+            this.Manga_Download_MAL.TabIndex = 0;
+            this.Manga_Download_MAL.UseVisualStyleBackColor = true;
+            this.Manga_Download_MAL.Click += new System.EventHandler(this.Manga_Download_MAL_Click);
+            // 
+            // Manga_Download_MU
+            // 
+            this.Manga_Download_MU.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Manga_Download_MU.BackgroundImage")));
+            this.Manga_Download_MU.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Manga_Download_MU.Enabled = false;
+            this.Manga_Download_MU.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Manga_Download_MU.ForeColor = System.Drawing.Color.Black;
+            this.Manga_Download_MU.Location = new System.Drawing.Point(468, 121);
+            this.Manga_Download_MU.Name = "Manga_Download_MU";
+            this.Manga_Download_MU.Size = new System.Drawing.Size(23, 23);
+            this.Manga_Download_MU.TabIndex = 0;
+            this.Manga_Download_MU.UseVisualStyleBackColor = true;
+            this.Manga_Download_MU.Click += new System.EventHandler(this.Manga_Download_MU_Click);
+            // 
+            // Manga_Download_MugiMugi
+            // 
+            this.Manga_Download_MugiMugi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Manga_Download_MugiMugi.BackgroundImage")));
+            this.Manga_Download_MugiMugi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Manga_Download_MugiMugi.Enabled = false;
+            this.Manga_Download_MugiMugi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Manga_Download_MugiMugi.ForeColor = System.Drawing.Color.Black;
+            this.Manga_Download_MugiMugi.Location = new System.Drawing.Point(468, 199);
+            this.Manga_Download_MugiMugi.Name = "Manga_Download_MugiMugi";
+            this.Manga_Download_MugiMugi.Size = new System.Drawing.Size(23, 23);
+            this.Manga_Download_MugiMugi.TabIndex = 0;
+            this.Manga_Download_MugiMugi.UseVisualStyleBackColor = true;
+            this.Manga_Download_MugiMugi.Click += new System.EventHandler(this.Manga_Download_MugiMugi_Click);
+            // 
+            // Manga_Download
+            // 
+            this.Manga_Download.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Manga_Download.BackgroundImage")));
+            this.Manga_Download.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Manga_Download.Enabled = false;
+            this.Manga_Download.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Manga_Download.ForeColor = System.Drawing.Color.Black;
+            this.Manga_Download.Location = new System.Drawing.Point(468, 147);
+            this.Manga_Download.Name = "Manga_Download";
+            this.Manga_Download.Size = new System.Drawing.Size(23, 23);
+            this.Manga_Download.TabIndex = 0;
+            this.Manga_Download.UseVisualStyleBackColor = true;
+            this.Manga_Download.Click += new System.EventHandler(this.Manga_Download_Click);
+            // 
+            // Manga_Obr
+            // 
+            this.Manga_Obr.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Manga_Obr.BackgroundImage")));
+            this.Manga_Obr.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Manga_Obr.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Manga_Obr.ForeColor = System.Drawing.Color.Black;
+            this.Manga_Obr.Location = new System.Drawing.Point(468, 328);
+            this.Manga_Obr.Name = "Manga_Obr";
+            this.Manga_Obr.Size = new System.Drawing.Size(23, 23);
+            this.Manga_Obr.TabIndex = 0;
+            this.Manga_Obr.UseVisualStyleBackColor = true;
+            this.Manga_Obr.Click += new System.EventHandler(this.Manga_Obr_Click);
             // 
             // Manga_LB50
             // 
@@ -7706,11 +8786,11 @@ namespace AniDBClient
             this.MangaSearch.ReadOnly = true;
             this.MangaSearch.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.MangaSearch.RowHeadersVisible = false;
-            dataGridViewCellStyle29.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.Black;
-            this.MangaSearch.RowsDefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle57.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle57.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle57.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle57.SelectionForeColor = System.Drawing.Color.Black;
+            this.MangaSearch.RowsDefaultCellStyle = dataGridViewCellStyle57;
             this.MangaSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.MangaSearch.Size = new System.Drawing.Size(1084, 504);
             this.MangaSearch.TabIndex = 0;
@@ -7749,43 +8829,43 @@ namespace AniDBClient
             this.MangaSearch_Mn04.Name = "MangaSearch_Mn04";
             this.MangaSearch_Mn04.ReadOnly = true;
             // 
-            // MainTab_Mn04
+            // MainTab_LogPage
             // 
-            this.MainTab_Mn04.BackColor = System.Drawing.Color.White;
-            this.MainTab_Mn04.Controls.Add(this.MainTabLog);
-            this.MainTab_Mn04.Location = new System.Drawing.Point(4, 22);
-            this.MainTab_Mn04.Name = "MainTab_Mn04";
-            this.MainTab_Mn04.Size = new System.Drawing.Size(1119, 680);
-            this.MainTab_Mn04.TabIndex = 0;
-            this.MainTab_Mn04.Text = "4";
-            this.MainTab_Mn04.UseVisualStyleBackColor = true;
+            this.MainTab_LogPage.BackColor = System.Drawing.Color.White;
+            this.MainTab_LogPage.Controls.Add(this.MainTabLog);
+            this.MainTab_LogPage.Location = new System.Drawing.Point(4, 22);
+            this.MainTab_LogPage.Name = "MainTab_LogPage";
+            this.MainTab_LogPage.Size = new System.Drawing.Size(1119, 680);
+            this.MainTab_LogPage.TabIndex = 0;
+            this.MainTab_LogPage.Text = "4";
+            this.MainTab_LogPage.UseVisualStyleBackColor = true;
             // 
             // MainTabLog
             // 
             this.MainTabLog.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.MainTabLog.Controls.Add(this.MainTabLog_Mn01);
-            this.MainTabLog.Controls.Add(this.MainTabLog_Mn02);
-            this.MainTabLog.Controls.Add(this.MainTabLog_Mn04);
-            this.MainTabLog.Controls.Add(this.MainTabLog_Mn03);
+            this.MainTabLog.Controls.Add(this.MainTabLog_AniDbTabPage);
+            this.MainTabLog.Controls.Add(this.MainTabLog_SqlTabPage);
+            this.MainTabLog.Controls.Add(this.MainTabLog_ErrorTabPage);
+            this.MainTabLog.Controls.Add(this.MainTabLog_TasksTabPage);
             this.MainTabLog.Location = new System.Drawing.Point(3, 3);
             this.MainTabLog.Name = "MainTabLog";
             this.MainTabLog.SelectedIndex = 0;
             this.MainTabLog.Size = new System.Drawing.Size(1104, 674);
             this.MainTabLog.TabIndex = 0;
             // 
-            // MainTabLog_Mn01
+            // MainTabLog_AniDbTabPage
             // 
-            this.MainTabLog_Mn01.BackColor = System.Drawing.Color.White;
-            this.MainTabLog_Mn01.Controls.Add(this.Log);
-            this.MainTabLog_Mn01.Location = new System.Drawing.Point(4, 22);
-            this.MainTabLog_Mn01.Name = "MainTabLog_Mn01";
-            this.MainTabLog_Mn01.Padding = new System.Windows.Forms.Padding(3);
-            this.MainTabLog_Mn01.Size = new System.Drawing.Size(1096, 648);
-            this.MainTabLog_Mn01.TabIndex = 0;
-            this.MainTabLog_Mn01.Text = "1";
-            this.MainTabLog_Mn01.UseVisualStyleBackColor = true;
+            this.MainTabLog_AniDbTabPage.BackColor = System.Drawing.Color.White;
+            this.MainTabLog_AniDbTabPage.Controls.Add(this.Log);
+            this.MainTabLog_AniDbTabPage.Location = new System.Drawing.Point(4, 22);
+            this.MainTabLog_AniDbTabPage.Name = "MainTabLog_AniDbTabPage";
+            this.MainTabLog_AniDbTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.MainTabLog_AniDbTabPage.Size = new System.Drawing.Size(1096, 648);
+            this.MainTabLog_AniDbTabPage.TabIndex = 0;
+            this.MainTabLog_AniDbTabPage.Text = "1";
+            this.MainTabLog_AniDbTabPage.UseVisualStyleBackColor = true;
             // 
             // Log
             // 
@@ -7804,17 +8884,17 @@ namespace AniDBClient
             this.Log.Size = new System.Drawing.Size(1087, 636);
             this.Log.TabIndex = 0;
             // 
-            // MainTabLog_Mn02
+            // MainTabLog_SqlTabPage
             // 
-            this.MainTabLog_Mn02.BackColor = System.Drawing.Color.White;
-            this.MainTabLog_Mn02.Controls.Add(this.LogSQL);
-            this.MainTabLog_Mn02.Location = new System.Drawing.Point(4, 22);
-            this.MainTabLog_Mn02.Name = "MainTabLog_Mn02";
-            this.MainTabLog_Mn02.Padding = new System.Windows.Forms.Padding(3);
-            this.MainTabLog_Mn02.Size = new System.Drawing.Size(1096, 648);
-            this.MainTabLog_Mn02.TabIndex = 0;
-            this.MainTabLog_Mn02.Text = "2";
-            this.MainTabLog_Mn02.UseVisualStyleBackColor = true;
+            this.MainTabLog_SqlTabPage.BackColor = System.Drawing.Color.White;
+            this.MainTabLog_SqlTabPage.Controls.Add(this.LogSQL);
+            this.MainTabLog_SqlTabPage.Location = new System.Drawing.Point(4, 22);
+            this.MainTabLog_SqlTabPage.Name = "MainTabLog_SqlTabPage";
+            this.MainTabLog_SqlTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.MainTabLog_SqlTabPage.Size = new System.Drawing.Size(1096, 648);
+            this.MainTabLog_SqlTabPage.TabIndex = 0;
+            this.MainTabLog_SqlTabPage.Text = "2";
+            this.MainTabLog_SqlTabPage.UseVisualStyleBackColor = true;
             // 
             // LogSQL
             // 
@@ -7833,16 +8913,16 @@ namespace AniDBClient
             this.LogSQL.Size = new System.Drawing.Size(1087, 636);
             this.LogSQL.TabIndex = 0;
             // 
-            // MainTabLog_Mn04
+            // MainTabLog_ErrorTabPage
             // 
-            this.MainTabLog_Mn04.BackColor = System.Drawing.Color.White;
-            this.MainTabLog_Mn04.Controls.Add(this.LogError);
-            this.MainTabLog_Mn04.Location = new System.Drawing.Point(4, 22);
-            this.MainTabLog_Mn04.Name = "MainTabLog_Mn04";
-            this.MainTabLog_Mn04.Size = new System.Drawing.Size(1096, 648);
-            this.MainTabLog_Mn04.TabIndex = 0;
-            this.MainTabLog_Mn04.Text = "4";
-            this.MainTabLog_Mn04.UseVisualStyleBackColor = true;
+            this.MainTabLog_ErrorTabPage.BackColor = System.Drawing.Color.White;
+            this.MainTabLog_ErrorTabPage.Controls.Add(this.LogError);
+            this.MainTabLog_ErrorTabPage.Location = new System.Drawing.Point(4, 22);
+            this.MainTabLog_ErrorTabPage.Name = "MainTabLog_ErrorTabPage";
+            this.MainTabLog_ErrorTabPage.Size = new System.Drawing.Size(1096, 648);
+            this.MainTabLog_ErrorTabPage.TabIndex = 0;
+            this.MainTabLog_ErrorTabPage.Text = "4";
+            this.MainTabLog_ErrorTabPage.UseVisualStyleBackColor = true;
             // 
             // LogError
             // 
@@ -7861,22 +8941,22 @@ namespace AniDBClient
             this.LogError.Size = new System.Drawing.Size(1087, 636);
             this.LogError.TabIndex = 0;
             // 
-            // MainTabLog_Mn03
+            // MainTabLog_TasksTabPage
             // 
-            this.MainTabLog_Mn03.BackColor = System.Drawing.Color.White;
-            this.MainTabLog_Mn03.Controls.Add(this.Add_Text02);
-            this.MainTabLog_Mn03.Controls.Add(this.Add_Text01);
-            this.MainTabLog_Mn03.Controls.Add(this.Add_LB01);
-            this.MainTabLog_Mn03.Controls.Add(this.Add_Add);
-            this.MainTabLog_Mn03.Controls.Add(this.LogTasksDelAll);
-            this.MainTabLog_Mn03.Controls.Add(this.LogTasksDel);
-            this.MainTabLog_Mn03.Controls.Add(this.LogTasks);
-            this.MainTabLog_Mn03.Location = new System.Drawing.Point(4, 22);
-            this.MainTabLog_Mn03.Name = "MainTabLog_Mn03";
-            this.MainTabLog_Mn03.Size = new System.Drawing.Size(1096, 648);
-            this.MainTabLog_Mn03.TabIndex = 0;
-            this.MainTabLog_Mn03.Text = "3";
-            this.MainTabLog_Mn03.UseVisualStyleBackColor = true;
+            this.MainTabLog_TasksTabPage.BackColor = System.Drawing.Color.White;
+            this.MainTabLog_TasksTabPage.Controls.Add(this.Add_Text02);
+            this.MainTabLog_TasksTabPage.Controls.Add(this.Add_Text01);
+            this.MainTabLog_TasksTabPage.Controls.Add(this.Add_LB01);
+            this.MainTabLog_TasksTabPage.Controls.Add(this.Add_Add);
+            this.MainTabLog_TasksTabPage.Controls.Add(this.LogTasksDelAll);
+            this.MainTabLog_TasksTabPage.Controls.Add(this.LogTasksDel);
+            this.MainTabLog_TasksTabPage.Controls.Add(this.LogTasks);
+            this.MainTabLog_TasksTabPage.Location = new System.Drawing.Point(4, 22);
+            this.MainTabLog_TasksTabPage.Name = "MainTabLog_TasksTabPage";
+            this.MainTabLog_TasksTabPage.Size = new System.Drawing.Size(1096, 648);
+            this.MainTabLog_TasksTabPage.TabIndex = 0;
+            this.MainTabLog_TasksTabPage.Text = "3";
+            this.MainTabLog_TasksTabPage.UseVisualStyleBackColor = true;
             // 
             // Add_Text02
             // 
@@ -7915,6 +8995,45 @@ namespace AniDBClient
             this.Add_LB01.TabIndex = 0;
             this.Add_LB01.Text = "label1";
             // 
+            // Add_Add
+            // 
+            this.Add_Add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Add_Add.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Add_Add.BackgroundImage")));
+            this.Add_Add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Add_Add.ForeColor = System.Drawing.Color.Black;
+            this.Add_Add.Location = new System.Drawing.Point(315, 619);
+            this.Add_Add.Name = "Add_Add";
+            this.Add_Add.Size = new System.Drawing.Size(23, 23);
+            this.Add_Add.TabIndex = 0;
+            this.Add_Add.UseVisualStyleBackColor = true;
+            this.Add_Add.Click += new System.EventHandler(this.Add_Add_Click);
+            // 
+            // LogTasksDelAll
+            // 
+            this.LogTasksDelAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.LogTasksDelAll.BackgroundImage = global::AniDBClient.Properties.Resources.i_Cancel;
+            this.LogTasksDelAll.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.LogTasksDelAll.ForeColor = System.Drawing.Color.Black;
+            this.LogTasksDelAll.Location = new System.Drawing.Point(373, 619);
+            this.LogTasksDelAll.Name = "LogTasksDelAll";
+            this.LogTasksDelAll.Size = new System.Drawing.Size(23, 23);
+            this.LogTasksDelAll.TabIndex = 0;
+            this.LogTasksDelAll.UseVisualStyleBackColor = true;
+            this.LogTasksDelAll.Click += new System.EventHandler(this.LogTasksDelAll_Click);
+            // 
+            // LogTasksDel
+            // 
+            this.LogTasksDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.LogTasksDel.BackgroundImage = global::AniDBClient.Properties.Resources.i_Delete;
+            this.LogTasksDel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.LogTasksDel.ForeColor = System.Drawing.Color.Black;
+            this.LogTasksDel.Location = new System.Drawing.Point(344, 619);
+            this.LogTasksDel.Name = "LogTasksDel";
+            this.LogTasksDel.Size = new System.Drawing.Size(23, 23);
+            this.LogTasksDel.TabIndex = 0;
+            this.LogTasksDel.UseVisualStyleBackColor = true;
+            this.LogTasksDel.Click += new System.EventHandler(this.LogTasksDel_Click);
+            // 
             // LogTasks
             // 
             this.LogTasks.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -7931,80 +9050,80 @@ namespace AniDBClient
             this.LogTasks.Size = new System.Drawing.Size(1087, 598);
             this.LogTasks.TabIndex = 0;
             // 
-            // MainTab_Mn05
+            // MainTab_SqlPage
             // 
-            this.MainTab_Mn05.BackColor = System.Drawing.Color.White;
-            this.MainTab_Mn05.Controls.Add(this.DataSQL_GR01);
-            this.MainTab_Mn05.Controls.Add(this.DataSQL_Text);
-            this.MainTab_Mn05.Controls.Add(this.DataSQL_Columns);
-            this.MainTab_Mn05.Controls.Add(this.DataSQL_Tables);
-            this.MainTab_Mn05.Controls.Add(this.DataSQL);
-            this.MainTab_Mn05.Controls.Add(this.DataSQL_Select);
-            this.MainTab_Mn05.Location = new System.Drawing.Point(4, 22);
-            this.MainTab_Mn05.Name = "MainTab_Mn05";
-            this.MainTab_Mn05.Size = new System.Drawing.Size(1119, 680);
-            this.MainTab_Mn05.TabIndex = 0;
-            this.MainTab_Mn05.Text = "5";
-            this.MainTab_Mn05.UseVisualStyleBackColor = true;
+            this.MainTab_SqlPage.BackColor = System.Drawing.Color.White;
+            this.MainTab_SqlPage.Controls.Add(this.DataSql_CheckGroupBox);
+            this.MainTab_SqlPage.Controls.Add(this.DataSQL_Text);
+            this.MainTab_SqlPage.Controls.Add(this.DataSQL_Columns);
+            this.MainTab_SqlPage.Controls.Add(this.DataSQL_Tables);
+            this.MainTab_SqlPage.Controls.Add(this.DataSQL);
+            this.MainTab_SqlPage.Controls.Add(this.DataSQL_Select);
+            this.MainTab_SqlPage.Location = new System.Drawing.Point(4, 22);
+            this.MainTab_SqlPage.Name = "MainTab_SqlPage";
+            this.MainTab_SqlPage.Size = new System.Drawing.Size(1119, 680);
+            this.MainTab_SqlPage.TabIndex = 0;
+            this.MainTab_SqlPage.Text = "5";
+            this.MainTab_SqlPage.UseVisualStyleBackColor = true;
             // 
-            // DataSQL_GR01
+            // DataSql_CheckGroupBox
             // 
-            this.DataSQL_GR01.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.DataSQL_GR01.Controls.Add(this.DataSQL_BT03);
-            this.DataSQL_GR01.Controls.Add(this.DataSQL_BT04);
-            this.DataSQL_GR01.Controls.Add(this.DataSQL_BT02);
-            this.DataSQL_GR01.Controls.Add(this.DataSQL_BT01);
-            this.DataSQL_GR01.ForeColor = System.Drawing.Color.Black;
-            this.DataSQL_GR01.Location = new System.Drawing.Point(900, 427);
-            this.DataSQL_GR01.Name = "DataSQL_GR01";
-            this.DataSQL_GR01.Size = new System.Drawing.Size(207, 250);
-            this.DataSQL_GR01.TabIndex = 0;
-            this.DataSQL_GR01.TabStop = false;
-            this.DataSQL_GR01.Text = "groupBox1";
+            this.DataSql_CheckGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.DataSql_CheckGroupBox.Controls.Add(this.DataSql_FilesButton);
+            this.DataSql_CheckGroupBox.Controls.Add(this.DataSql_MyListButton);
+            this.DataSql_CheckGroupBox.Controls.Add(this.DataSql_EpisodesButton);
+            this.DataSql_CheckGroupBox.Controls.Add(this.DataSql_AnimeButton);
+            this.DataSql_CheckGroupBox.ForeColor = System.Drawing.Color.Black;
+            this.DataSql_CheckGroupBox.Location = new System.Drawing.Point(900, 427);
+            this.DataSql_CheckGroupBox.Name = "DataSql_CheckGroupBox";
+            this.DataSql_CheckGroupBox.Size = new System.Drawing.Size(207, 250);
+            this.DataSql_CheckGroupBox.TabIndex = 0;
+            this.DataSql_CheckGroupBox.TabStop = false;
+            this.DataSql_CheckGroupBox.Text = "groupBox1";
             // 
-            // DataSQL_BT03
+            // DataSql_FilesButton
             // 
-            this.DataSQL_BT03.ForeColor = System.Drawing.Color.Black;
-            this.DataSQL_BT03.Location = new System.Drawing.Point(126, 19);
-            this.DataSQL_BT03.Name = "DataSQL_BT03";
-            this.DataSQL_BT03.Size = new System.Drawing.Size(75, 23);
-            this.DataSQL_BT03.TabIndex = 0;
-            this.DataSQL_BT03.Text = "button4";
-            this.DataSQL_BT03.UseVisualStyleBackColor = true;
-            this.DataSQL_BT03.Click += new System.EventHandler(this.DataSQL_BT03_Click);
+            this.DataSql_FilesButton.ForeColor = System.Drawing.Color.Black;
+            this.DataSql_FilesButton.Location = new System.Drawing.Point(126, 19);
+            this.DataSql_FilesButton.Name = "DataSql_FilesButton";
+            this.DataSql_FilesButton.Size = new System.Drawing.Size(75, 23);
+            this.DataSql_FilesButton.TabIndex = 0;
+            this.DataSql_FilesButton.Text = "button4";
+            this.DataSql_FilesButton.UseVisualStyleBackColor = true;
+            this.DataSql_FilesButton.Click += new System.EventHandler(this.DataSQL_BT03_Click);
             // 
-            // DataSQL_BT04
+            // DataSql_MyListButton
             // 
-            this.DataSQL_BT04.ForeColor = System.Drawing.Color.Black;
-            this.DataSQL_BT04.Location = new System.Drawing.Point(126, 48);
-            this.DataSQL_BT04.Name = "DataSQL_BT04";
-            this.DataSQL_BT04.Size = new System.Drawing.Size(75, 23);
-            this.DataSQL_BT04.TabIndex = 0;
-            this.DataSQL_BT04.Text = "button3";
-            this.DataSQL_BT04.UseVisualStyleBackColor = true;
-            this.DataSQL_BT04.Click += new System.EventHandler(this.DataSQL_BT04_Click);
+            this.DataSql_MyListButton.ForeColor = System.Drawing.Color.Black;
+            this.DataSql_MyListButton.Location = new System.Drawing.Point(126, 48);
+            this.DataSql_MyListButton.Name = "DataSql_MyListButton";
+            this.DataSql_MyListButton.Size = new System.Drawing.Size(75, 23);
+            this.DataSql_MyListButton.TabIndex = 0;
+            this.DataSql_MyListButton.Text = "button3";
+            this.DataSql_MyListButton.UseVisualStyleBackColor = true;
+            this.DataSql_MyListButton.Click += new System.EventHandler(this.DataSQL_BT04_Click);
             // 
-            // DataSQL_BT02
+            // DataSql_EpisodesButton
             // 
-            this.DataSQL_BT02.ForeColor = System.Drawing.Color.Black;
-            this.DataSQL_BT02.Location = new System.Drawing.Point(6, 48);
-            this.DataSQL_BT02.Name = "DataSQL_BT02";
-            this.DataSQL_BT02.Size = new System.Drawing.Size(75, 23);
-            this.DataSQL_BT02.TabIndex = 0;
-            this.DataSQL_BT02.Text = "button2";
-            this.DataSQL_BT02.UseVisualStyleBackColor = true;
-            this.DataSQL_BT02.Click += new System.EventHandler(this.DataSQL_BT02_Click);
+            this.DataSql_EpisodesButton.ForeColor = System.Drawing.Color.Black;
+            this.DataSql_EpisodesButton.Location = new System.Drawing.Point(6, 48);
+            this.DataSql_EpisodesButton.Name = "DataSql_EpisodesButton";
+            this.DataSql_EpisodesButton.Size = new System.Drawing.Size(75, 23);
+            this.DataSql_EpisodesButton.TabIndex = 0;
+            this.DataSql_EpisodesButton.Text = "button2";
+            this.DataSql_EpisodesButton.UseVisualStyleBackColor = true;
+            this.DataSql_EpisodesButton.Click += new System.EventHandler(this.DataSQL_BT02_Click);
             // 
-            // DataSQL_BT01
+            // DataSql_AnimeButton
             // 
-            this.DataSQL_BT01.ForeColor = System.Drawing.Color.Black;
-            this.DataSQL_BT01.Location = new System.Drawing.Point(6, 19);
-            this.DataSQL_BT01.Name = "DataSQL_BT01";
-            this.DataSQL_BT01.Size = new System.Drawing.Size(75, 23);
-            this.DataSQL_BT01.TabIndex = 0;
-            this.DataSQL_BT01.Text = "button1";
-            this.DataSQL_BT01.UseVisualStyleBackColor = true;
-            this.DataSQL_BT01.Click += new System.EventHandler(this.DataSQL_BT01_Click);
+            this.DataSql_AnimeButton.ForeColor = System.Drawing.Color.Black;
+            this.DataSql_AnimeButton.Location = new System.Drawing.Point(6, 19);
+            this.DataSql_AnimeButton.Name = "DataSql_AnimeButton";
+            this.DataSql_AnimeButton.Size = new System.Drawing.Size(75, 23);
+            this.DataSql_AnimeButton.TabIndex = 0;
+            this.DataSql_AnimeButton.Text = "button1";
+            this.DataSql_AnimeButton.UseVisualStyleBackColor = true;
+            this.DataSql_AnimeButton.Click += new System.EventHandler(this.DataSQL_BT01_Click);
             // 
             // DataSQL_Text
             // 
@@ -8061,14 +9180,27 @@ namespace AniDBClient
             this.DataSQL.ReadOnly = true;
             this.DataSQL.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.DataSQL.RowHeadersVisible = false;
-            dataGridViewCellStyle30.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.Color.Black;
-            this.DataSQL.RowsDefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle58.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle58.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle58.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle58.SelectionForeColor = System.Drawing.Color.Black;
+            this.DataSQL.RowsDefaultCellStyle = dataGridViewCellStyle58;
             this.DataSQL.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataSQL.Size = new System.Drawing.Size(891, 647);
             this.DataSQL.TabIndex = 0;
+            // 
+            // DataSQL_Select
+            // 
+            this.DataSQL_Select.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.DataSQL_Select.BackgroundImage = global::AniDBClient.Properties.Resources.i_Burn_Disk;
+            this.DataSQL_Select.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.DataSQL_Select.ForeColor = System.Drawing.Color.Black;
+            this.DataSQL_Select.Location = new System.Drawing.Point(1078, 3);
+            this.DataSQL_Select.Name = "DataSQL_Select";
+            this.DataSQL_Select.Size = new System.Drawing.Size(23, 23);
+            this.DataSQL_Select.TabIndex = 0;
+            this.DataSQL_Select.UseVisualStyleBackColor = true;
+            this.DataSQL_Select.Click += new System.EventHandler(this.DataSQL_Select_Click);
             // 
             // ComunicationW
             // 
@@ -8272,16 +9404,16 @@ namespace AniDBClient
             this.Manga_Data_Menu_Mn04.Text = "4";
             this.Manga_Data_Menu_Mn04.Click += new System.EventHandler(this.Manga_Data_Menu_Mn04_Click);
             // 
-            // StatusBar_ConnectLB
+            // StatusBar_ConnectLabel
             // 
-            this.StatusBar_ConnectLB.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.StatusBar_ConnectLB.ForeColor = System.Drawing.Color.Black;
-            this.StatusBar_ConnectLB.Location = new System.Drawing.Point(896, 0);
-            this.StatusBar_ConnectLB.Name = "StatusBar_ConnectLB";
-            this.StatusBar_ConnectLB.Size = new System.Drawing.Size(85, 23);
-            this.StatusBar_ConnectLB.TabIndex = 0;
-            this.StatusBar_ConnectLB.Text = "label1";
-            this.StatusBar_ConnectLB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.StatusBar_ConnectLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.StatusBar_ConnectLabel.ForeColor = System.Drawing.Color.Black;
+            this.StatusBar_ConnectLabel.Location = new System.Drawing.Point(896, 0);
+            this.StatusBar_ConnectLabel.Name = "StatusBar_ConnectLabel";
+            this.StatusBar_ConnectLabel.Size = new System.Drawing.Size(85, 23);
+            this.StatusBar_ConnectLabel.TabIndex = 0;
+            this.StatusBar_ConnectLabel.Text = "label1";
+            this.StatusBar_ConnectLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
@@ -8291,8 +9423,8 @@ namespace AniDBClient
             this.panel2.Controls.Add(this.StatusBar_Mn04);
             this.panel2.Controls.Add(this.StatusBar_Mn03);
             this.panel2.Controls.Add(this.StatusBar_Mn02);
-            this.panel2.Controls.Add(this.StatusBar_Mn01);
-            this.panel2.Controls.Add(this.StatusBar_ConnectLB);
+            this.panel2.Controls.Add(this.StatusBar_TasksRemainingLabel);
+            this.panel2.Controls.Add(this.StatusBar_ConnectLabel);
             this.panel2.Controls.Add(this.StatusBar_Connect);
             this.panel2.Controls.Add(this.StatusBar_Hash);
             this.panel2.Controls.Add(this.StatusBar_Refresh);
@@ -8362,21 +9494,15 @@ namespace AniDBClient
             this.StatusBar_Mn02.Text = "label1";
             this.StatusBar_Mn02.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // StatusBar_Mn01
+            // StatusBar_TasksRemainingLabel
             // 
-            this.StatusBar_Mn01.Location = new System.Drawing.Point(68, 0);
-            this.StatusBar_Mn01.Margin = new System.Windows.Forms.Padding(0);
-            this.StatusBar_Mn01.Name = "StatusBar_Mn01";
-            this.StatusBar_Mn01.Size = new System.Drawing.Size(100, 23);
-            this.StatusBar_Mn01.TabIndex = 0;
-            this.StatusBar_Mn01.Text = "label1";
-            this.StatusBar_Mn01.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Notify
-            // 
-            this.Notify.Icon = ((System.Drawing.Icon)(resources.GetObject("Notify.Icon")));
-            this.Notify.Text = "AniSub";
-            this.Notify.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Notify_MouseDoubleClick);
+            this.StatusBar_TasksRemainingLabel.Location = new System.Drawing.Point(68, 0);
+            this.StatusBar_TasksRemainingLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.StatusBar_TasksRemainingLabel.Name = "StatusBar_TasksRemainingLabel";
+            this.StatusBar_TasksRemainingLabel.Size = new System.Drawing.Size(100, 23);
+            this.StatusBar_TasksRemainingLabel.TabIndex = 0;
+            this.StatusBar_TasksRemainingLabel.Text = "label1";
+            this.StatusBar_TasksRemainingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // StatusBar_Connect
             // 
@@ -8418,1137 +9544,11 @@ namespace AniDBClient
             this.StatusBar_Refresh.UseVisualStyleBackColor = true;
             this.StatusBar_Refresh.Click += new System.EventHandler(this.StatusBar_Refresh_Click);
             // 
-            // Options_CH13BT
-            // 
-            this.Options_CH13BT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Options_CH13BT.BackgroundImage")));
-            this.Options_CH13BT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Options_CH13BT.ForeColor = System.Drawing.Color.Black;
-            this.Options_CH13BT.Location = new System.Drawing.Point(369, 103);
-            this.Options_CH13BT.Name = "Options_CH13BT";
-            this.Options_CH13BT.Size = new System.Drawing.Size(23, 23);
-            this.Options_CH13BT.TabIndex = 0;
-            this.Options_CH13BT.UseVisualStyleBackColor = true;
-            this.Options_CH13BT.Click += new System.EventHandler(this.Options_CH13BT_Click);
-            // 
-            // Options_CH11BT
-            // 
-            this.Options_CH11BT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Options_CH11BT.BackgroundImage")));
-            this.Options_CH11BT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Options_CH11BT.ForeColor = System.Drawing.Color.Black;
-            this.Options_CH11BT.Location = new System.Drawing.Point(369, 258);
-            this.Options_CH11BT.Name = "Options_CH11BT";
-            this.Options_CH11BT.Size = new System.Drawing.Size(23, 23);
-            this.Options_CH11BT.TabIndex = 0;
-            this.Options_CH11BT.UseVisualStyleBackColor = true;
-            this.Options_CH11BT.Click += new System.EventHandler(this.Options_CH11BT_Click);
-            // 
-            // Options_CH12BT
-            // 
-            this.Options_CH12BT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Options_CH12BT.BackgroundImage")));
-            this.Options_CH12BT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Options_CH12BT.ForeColor = System.Drawing.Color.Black;
-            this.Options_CH12BT.Location = new System.Drawing.Point(369, 287);
-            this.Options_CH12BT.Name = "Options_CH12BT";
-            this.Options_CH12BT.Size = new System.Drawing.Size(23, 23);
-            this.Options_CH12BT.TabIndex = 0;
-            this.Options_CH12BT.UseVisualStyleBackColor = true;
-            this.Options_CH12BT.Click += new System.EventHandler(this.Options_CH12BT_Click);
-            // 
-            // Options_CH10BT
-            // 
-            this.Options_CH10BT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Options_CH10BT.BackgroundImage")));
-            this.Options_CH10BT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Options_CH10BT.ForeColor = System.Drawing.Color.Black;
-            this.Options_CH10BT.Location = new System.Drawing.Point(369, 229);
-            this.Options_CH10BT.Name = "Options_CH10BT";
-            this.Options_CH10BT.Size = new System.Drawing.Size(23, 23);
-            this.Options_CH10BT.TabIndex = 0;
-            this.Options_CH10BT.UseVisualStyleBackColor = true;
-            this.Options_CH10BT.Click += new System.EventHandler(this.Options_CH10BT_Click);
-            // 
-            // Options_CH09BT
-            // 
-            this.Options_CH09BT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Options_CH09BT.BackgroundImage")));
-            this.Options_CH09BT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Options_CH09BT.ForeColor = System.Drawing.Color.Black;
-            this.Options_CH09BT.Location = new System.Drawing.Point(369, 200);
-            this.Options_CH09BT.Name = "Options_CH09BT";
-            this.Options_CH09BT.Size = new System.Drawing.Size(23, 23);
-            this.Options_CH09BT.TabIndex = 0;
-            this.Options_CH09BT.UseVisualStyleBackColor = true;
-            this.Options_CH09BT.Click += new System.EventHandler(this.Options_CH09BT_Click);
-            // 
-            // Options_CH07BT
-            // 
-            this.Options_CH07BT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Options_CH07BT.BackgroundImage")));
-            this.Options_CH07BT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Options_CH07BT.ForeColor = System.Drawing.Color.Black;
-            this.Options_CH07BT.Location = new System.Drawing.Point(369, 142);
-            this.Options_CH07BT.Name = "Options_CH07BT";
-            this.Options_CH07BT.Size = new System.Drawing.Size(23, 23);
-            this.Options_CH07BT.TabIndex = 0;
-            this.Options_CH07BT.UseVisualStyleBackColor = true;
-            this.Options_CH07BT.Click += new System.EventHandler(this.Options_CH07BT_Click);
-            // 
-            // Options_CH08BT
-            // 
-            this.Options_CH08BT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Options_CH08BT.BackgroundImage")));
-            this.Options_CH08BT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Options_CH08BT.ForeColor = System.Drawing.Color.Black;
-            this.Options_CH08BT.Location = new System.Drawing.Point(369, 171);
-            this.Options_CH08BT.Name = "Options_CH08BT";
-            this.Options_CH08BT.Size = new System.Drawing.Size(23, 23);
-            this.Options_CH08BT.TabIndex = 0;
-            this.Options_CH08BT.UseVisualStyleBackColor = true;
-            this.Options_CH08BT.Click += new System.EventHandler(this.Options_CH08BT_Click);
-            // 
-            // Options_CH06BT
-            // 
-            this.Options_CH06BT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Options_CH06BT.BackgroundImage")));
-            this.Options_CH06BT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Options_CH06BT.ForeColor = System.Drawing.Color.Black;
-            this.Options_CH06BT.Location = new System.Drawing.Point(369, 113);
-            this.Options_CH06BT.Name = "Options_CH06BT";
-            this.Options_CH06BT.Size = new System.Drawing.Size(23, 23);
-            this.Options_CH06BT.TabIndex = 0;
-            this.Options_CH06BT.UseVisualStyleBackColor = true;
-            this.Options_CH06BT.Click += new System.EventHandler(this.Options_CH06BT_Click);
-            // 
-            // Options_CH05BT
-            // 
-            this.Options_CH05BT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Options_CH05BT.BackgroundImage")));
-            this.Options_CH05BT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Options_CH05BT.ForeColor = System.Drawing.Color.Black;
-            this.Options_CH05BT.Location = new System.Drawing.Point(369, 84);
-            this.Options_CH05BT.Name = "Options_CH05BT";
-            this.Options_CH05BT.Size = new System.Drawing.Size(23, 23);
-            this.Options_CH05BT.TabIndex = 0;
-            this.Options_CH05BT.UseVisualStyleBackColor = true;
-            this.Options_CH05BT.Click += new System.EventHandler(this.Options_CH05BT_Click);
-            // 
-            // Options_CH04BT
-            // 
-            this.Options_CH04BT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Options_CH04BT.BackgroundImage")));
-            this.Options_CH04BT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Options_CH04BT.ForeColor = System.Drawing.Color.Black;
-            this.Options_CH04BT.Location = new System.Drawing.Point(369, 55);
-            this.Options_CH04BT.Name = "Options_CH04BT";
-            this.Options_CH04BT.Size = new System.Drawing.Size(23, 23);
-            this.Options_CH04BT.TabIndex = 0;
-            this.Options_CH04BT.UseVisualStyleBackColor = true;
-            this.Options_CH04BT.Click += new System.EventHandler(this.Options_CH04BT_Click);
-            // 
-            // Options_CH03BT
-            // 
-            this.Options_CH03BT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Options_CH03BT.BackgroundImage")));
-            this.Options_CH03BT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Options_CH03BT.ForeColor = System.Drawing.Color.Black;
-            this.Options_CH03BT.Location = new System.Drawing.Point(369, 26);
-            this.Options_CH03BT.Name = "Options_CH03BT";
-            this.Options_CH03BT.Size = new System.Drawing.Size(23, 23);
-            this.Options_CH03BT.TabIndex = 0;
-            this.Options_CH03BT.UseVisualStyleBackColor = true;
-            this.Options_CH03BT.Click += new System.EventHandler(this.Options_CH03BT_Click);
-            // 
-            // Watcher_Delete
-            // 
-            this.Watcher_Delete.BackgroundImage = global::AniDBClient.Properties.Resources.i_Delete;
-            this.Watcher_Delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Watcher_Delete.ForeColor = System.Drawing.Color.Black;
-            this.Watcher_Delete.Location = new System.Drawing.Point(490, 302);
-            this.Watcher_Delete.Name = "Watcher_Delete";
-            this.Watcher_Delete.Size = new System.Drawing.Size(21, 21);
-            this.Watcher_Delete.TabIndex = 3;
-            this.Watcher_Delete.UseVisualStyleBackColor = true;
-            this.Watcher_Delete.Click += new System.EventHandler(this.Watcher_Delete_Click);
-            // 
-            // Watcher_Add
-            // 
-            this.Watcher_Add.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Watcher_Add.BackgroundImage")));
-            this.Watcher_Add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Watcher_Add.ForeColor = System.Drawing.Color.Black;
-            this.Watcher_Add.Location = new System.Drawing.Point(463, 302);
-            this.Watcher_Add.Name = "Watcher_Add";
-            this.Watcher_Add.Size = new System.Drawing.Size(21, 21);
-            this.Watcher_Add.TabIndex = 4;
-            this.Watcher_Add.UseVisualStyleBackColor = true;
-            this.Watcher_Add.Click += new System.EventHandler(this.Watcher_Add_Click);
-            // 
-            // Options_ExtensionRem
-            // 
-            this.Options_ExtensionRem.BackgroundImage = global::AniDBClient.Properties.Resources.i_Delete;
-            this.Options_ExtensionRem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Options_ExtensionRem.Location = new System.Drawing.Point(490, 275);
-            this.Options_ExtensionRem.Name = "Options_ExtensionRem";
-            this.Options_ExtensionRem.Size = new System.Drawing.Size(21, 21);
-            this.Options_ExtensionRem.TabIndex = 0;
-            this.Options_ExtensionRem.UseVisualStyleBackColor = true;
-            this.Options_ExtensionRem.Click += new System.EventHandler(this.Options_ExtensionRem_Click);
-            // 
-            // Options_AccountChange
-            // 
-            this.Options_AccountChange.BackgroundImage = global::AniDBClient.Properties.Resources.i_Log_Out;
-            this.Options_AccountChange.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Options_AccountChange.ForeColor = System.Drawing.Color.Black;
-            this.Options_AccountChange.Location = new System.Drawing.Point(463, 119);
-            this.Options_AccountChange.Name = "Options_AccountChange";
-            this.Options_AccountChange.Size = new System.Drawing.Size(21, 21);
-            this.Options_AccountChange.TabIndex = 0;
-            this.Options_AccountChange.UseVisualStyleBackColor = true;
-            this.Options_AccountChange.Click += new System.EventHandler(this.Options_AccountChange_Click);
-            // 
-            // Options_ExtensionAdd
-            // 
-            this.Options_ExtensionAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Options_ExtensionAdd.BackgroundImage")));
-            this.Options_ExtensionAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Options_ExtensionAdd.ForeColor = System.Drawing.Color.Black;
-            this.Options_ExtensionAdd.Location = new System.Drawing.Point(463, 275);
-            this.Options_ExtensionAdd.Name = "Options_ExtensionAdd";
-            this.Options_ExtensionAdd.Size = new System.Drawing.Size(21, 21);
-            this.Options_ExtensionAdd.TabIndex = 0;
-            this.Options_ExtensionAdd.UseVisualStyleBackColor = true;
-            this.Options_ExtensionAdd.Click += new System.EventHandler(this.Options_ExtensionAdd_Click);
-            // 
-            // Options_w8Hack
-            // 
-            this.Options_w8Hack.BackgroundImage = global::AniDBClient.Properties.Resources.i_w8;
-            this.Options_w8Hack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Options_w8Hack.ForeColor = System.Drawing.Color.Black;
-            this.Options_w8Hack.Location = new System.Drawing.Point(867, 306);
-            this.Options_w8Hack.Name = "Options_w8Hack";
-            this.Options_w8Hack.Size = new System.Drawing.Size(36, 36);
-            this.Options_w8Hack.TabIndex = 0;
-            this.Options_w8Hack.UseVisualStyleBackColor = true;
-            this.Options_w8Hack.Click += new System.EventHandler(this.Options_w8Hack_Click);
-            // 
-            // Options_SetingsDefault
-            // 
-            this.Options_SetingsDefault.BackgroundImage = global::AniDBClient.Properties.Resources.i_StockIndexDown;
-            this.Options_SetingsDefault.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Options_SetingsDefault.ForeColor = System.Drawing.Color.Black;
-            this.Options_SetingsDefault.Location = new System.Drawing.Point(925, 306);
-            this.Options_SetingsDefault.Name = "Options_SetingsDefault";
-            this.Options_SetingsDefault.Size = new System.Drawing.Size(36, 36);
-            this.Options_SetingsDefault.TabIndex = 0;
-            this.Options_SetingsDefault.UseVisualStyleBackColor = true;
-            this.Options_SetingsDefault.Click += new System.EventHandler(this.Options_SetingsDefault_Click);
-            // 
-            // Options_SetingsLoad
-            // 
-            this.Options_SetingsLoad.BackgroundImage = global::AniDBClient.Properties.Resources.i_StockIndexUp;
-            this.Options_SetingsLoad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Options_SetingsLoad.ForeColor = System.Drawing.Color.Black;
-            this.Options_SetingsLoad.Location = new System.Drawing.Point(983, 306);
-            this.Options_SetingsLoad.Name = "Options_SetingsLoad";
-            this.Options_SetingsLoad.Size = new System.Drawing.Size(36, 36);
-            this.Options_SetingsLoad.TabIndex = 0;
-            this.Options_SetingsLoad.UseVisualStyleBackColor = true;
-            this.Options_SetingsLoad.Click += new System.EventHandler(this.Options_SetingsLoad_Click);
-            // 
-            // Options_SetingsSave
-            // 
-            this.Options_SetingsSave.BackgroundImage = global::AniDBClient.Properties.Resources.i_Save;
-            this.Options_SetingsSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Options_SetingsSave.ForeColor = System.Drawing.Color.Black;
-            this.Options_SetingsSave.Location = new System.Drawing.Point(1044, 306);
-            this.Options_SetingsSave.Name = "Options_SetingsSave";
-            this.Options_SetingsSave.Size = new System.Drawing.Size(36, 36);
-            this.Options_SetingsSave.TabIndex = 0;
-            this.Options_SetingsSave.UseVisualStyleBackColor = true;
-            this.Options_SetingsSave.Click += new System.EventHandler(this.Options_SetingsSave_Click);
-            // 
-            // Options_StartComunication
-            // 
-            this.Options_StartComunication.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Options_StartComunication.BackgroundImage")));
-            this.Options_StartComunication.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Options_StartComunication.ForeColor = System.Drawing.Color.Black;
-            this.Options_StartComunication.Location = new System.Drawing.Point(463, 67);
-            this.Options_StartComunication.Name = "Options_StartComunication";
-            this.Options_StartComunication.Size = new System.Drawing.Size(21, 21);
-            this.Options_StartComunication.TabIndex = 0;
-            this.Options_StartComunication.UseVisualStyleBackColor = true;
-            this.Options_StartComunication.Click += new System.EventHandler(this.Options_StartComunication_Click);
-            // 
-            // Rules_InfoDell
-            // 
-            this.Rules_InfoDell.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Rules_InfoDell.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Rules_InfoDell.BackgroundImage")));
-            this.Rules_InfoDell.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Rules_InfoDell.Location = new System.Drawing.Point(262, 325);
-            this.Rules_InfoDell.Name = "Rules_InfoDell";
-            this.Rules_InfoDell.Size = new System.Drawing.Size(23, 23);
-            this.Rules_InfoDell.TabIndex = 0;
-            this.Rules_InfoDell.UseVisualStyleBackColor = true;
-            this.Rules_InfoDell.Click += new System.EventHandler(this.Rules_InfoDell_Click);
-            // 
-            // Rules_InfoAdd
-            // 
-            this.Rules_InfoAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Rules_InfoAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Rules_InfoAdd.BackgroundImage")));
-            this.Rules_InfoAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Rules_InfoAdd.ForeColor = System.Drawing.Color.Black;
-            this.Rules_InfoAdd.Location = new System.Drawing.Point(233, 325);
-            this.Rules_InfoAdd.Name = "Rules_InfoAdd";
-            this.Rules_InfoAdd.Size = new System.Drawing.Size(23, 23);
-            this.Rules_InfoAdd.TabIndex = 0;
-            this.Rules_InfoAdd.UseVisualStyleBackColor = true;
-            this.Rules_InfoAdd.Click += new System.EventHandler(this.Rules_InfoAdd_Click);
-            // 
-            // Rules_FilesRulesMoveDel
-            // 
-            this.Rules_FilesRulesMoveDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Rules_FilesRulesMoveDel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Rules_FilesRulesMoveDel.BackgroundImage")));
-            this.Rules_FilesRulesMoveDel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Rules_FilesRulesMoveDel.Location = new System.Drawing.Point(262, 325);
-            this.Rules_FilesRulesMoveDel.Name = "Rules_FilesRulesMoveDel";
-            this.Rules_FilesRulesMoveDel.Size = new System.Drawing.Size(23, 23);
-            this.Rules_FilesRulesMoveDel.TabIndex = 0;
-            this.Rules_FilesRulesMoveDel.UseVisualStyleBackColor = true;
-            this.Rules_FilesRulesMoveDel.Click += new System.EventHandler(this.Rules_FilesRulesMoveDel_Click);
-            // 
-            // Rules_FilesRulesMoveAdd
-            // 
-            this.Rules_FilesRulesMoveAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Rules_FilesRulesMoveAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Rules_FilesRulesMoveAdd.BackgroundImage")));
-            this.Rules_FilesRulesMoveAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Rules_FilesRulesMoveAdd.ForeColor = System.Drawing.Color.Black;
-            this.Rules_FilesRulesMoveAdd.Location = new System.Drawing.Point(233, 325);
-            this.Rules_FilesRulesMoveAdd.Name = "Rules_FilesRulesMoveAdd";
-            this.Rules_FilesRulesMoveAdd.Size = new System.Drawing.Size(23, 23);
-            this.Rules_FilesRulesMoveAdd.TabIndex = 0;
-            this.Rules_FilesRulesMoveAdd.UseVisualStyleBackColor = true;
-            this.Rules_FilesRulesMoveAdd.Click += new System.EventHandler(this.Rules_FilesRulesMoveAdd_Click);
-            // 
-            // Rules_FilesRulesRenameDel
-            // 
-            this.Rules_FilesRulesRenameDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Rules_FilesRulesRenameDel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Rules_FilesRulesRenameDel.BackgroundImage")));
-            this.Rules_FilesRulesRenameDel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Rules_FilesRulesRenameDel.ForeColor = System.Drawing.Color.Black;
-            this.Rules_FilesRulesRenameDel.Location = new System.Drawing.Point(430, 325);
-            this.Rules_FilesRulesRenameDel.Name = "Rules_FilesRulesRenameDel";
-            this.Rules_FilesRulesRenameDel.Size = new System.Drawing.Size(23, 23);
-            this.Rules_FilesRulesRenameDel.TabIndex = 0;
-            this.Rules_FilesRulesRenameDel.UseVisualStyleBackColor = true;
-            this.Rules_FilesRulesRenameDel.Click += new System.EventHandler(this.Rules_FilesRulesRenameDel_Click);
-            // 
-            // Rules_FilesRulesRenameAdd
-            // 
-            this.Rules_FilesRulesRenameAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Rules_FilesRulesRenameAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Rules_FilesRulesRenameAdd.BackgroundImage")));
-            this.Rules_FilesRulesRenameAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Rules_FilesRulesRenameAdd.ForeColor = System.Drawing.Color.Black;
-            this.Rules_FilesRulesRenameAdd.Location = new System.Drawing.Point(401, 325);
-            this.Rules_FilesRulesRenameAdd.Name = "Rules_FilesRulesRenameAdd";
-            this.Rules_FilesRulesRenameAdd.Size = new System.Drawing.Size(23, 23);
-            this.Rules_FilesRulesRenameAdd.TabIndex = 0;
-            this.Rules_FilesRulesRenameAdd.UseVisualStyleBackColor = true;
-            this.Rules_FilesRulesRenameAdd.Click += new System.EventHandler(this.Rules_FilesRulesRenameAdd_Click);
-            // 
-            // Hash
-            // 
-            this.Hash.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Hash.BackgroundImage")));
-            this.Hash.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Hash.Enabled = false;
-            this.Hash.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.Hash.ForeColor = System.Drawing.Color.Black;
-            this.Hash.Location = new System.Drawing.Point(588, 21);
-            this.Hash.Name = "Hash";
-            this.Hash.Size = new System.Drawing.Size(36, 36);
-            this.Hash.TabIndex = 0;
-            this.Hash.UseVisualStyleBackColor = true;
-            this.Hash.Click += new System.EventHandler(this.Hash_Click);
-            // 
-            // Hash_Cesta
-            // 
-            this.Hash_Cesta.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Hash_Cesta.BackgroundImage")));
-            this.Hash_Cesta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Hash_Cesta.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.Hash_Cesta.ForeColor = System.Drawing.Color.Black;
-            this.Hash_Cesta.Location = new System.Drawing.Point(6, 19);
-            this.Hash_Cesta.Name = "Hash_Cesta";
-            this.Hash_Cesta.Size = new System.Drawing.Size(36, 36);
-            this.Hash_Cesta.TabIndex = 0;
-            this.Hash_Cesta.UseVisualStyleBackColor = true;
-            this.Hash_Cesta.Click += new System.EventHandler(this.Hash_Cesta_Click);
-            // 
-            // Hash_Stop_Total
-            // 
-            this.Hash_Stop_Total.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Hash_Stop_Total.BackgroundImage")));
-            this.Hash_Stop_Total.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Hash_Stop_Total.Enabled = false;
-            this.Hash_Stop_Total.ForeColor = System.Drawing.Color.Black;
-            this.Hash_Stop_Total.Location = new System.Drawing.Point(630, 21);
-            this.Hash_Stop_Total.Name = "Hash_Stop_Total";
-            this.Hash_Stop_Total.Size = new System.Drawing.Size(36, 36);
-            this.Hash_Stop_Total.TabIndex = 0;
-            this.Hash_Stop_Total.UseVisualStyleBackColor = true;
-            this.Hash_Stop_Total.Click += new System.EventHandler(this.Hash_Stop_Total_Click);
-            // 
-            // Hash_Files
-            // 
-            this.Hash_Files.BackgroundImage = global::AniDBClient.Properties.Resources.i_Key;
-            this.Hash_Files.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Hash_Files.Enabled = false;
-            this.Hash_Files.ForeColor = System.Drawing.Color.Black;
-            this.Hash_Files.Location = new System.Drawing.Point(546, 21);
-            this.Hash_Files.Name = "Hash_Files";
-            this.Hash_Files.Size = new System.Drawing.Size(36, 36);
-            this.Hash_Files.TabIndex = 0;
-            this.Hash_Files.UseVisualStyleBackColor = true;
-            this.Hash_Files.Click += new System.EventHandler(this.Hash_Files_Click);
-            // 
-            // Hash_Delete
-            // 
-            this.Hash_Delete.BackgroundImage = global::AniDBClient.Properties.Resources.i_Delete;
-            this.Hash_Delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Hash_Delete.Enabled = false;
-            this.Hash_Delete.ForeColor = System.Drawing.Color.Black;
-            this.Hash_Delete.Location = new System.Drawing.Point(48, 19);
-            this.Hash_Delete.Name = "Hash_Delete";
-            this.Hash_Delete.Size = new System.Drawing.Size(36, 36);
-            this.Hash_Delete.TabIndex = 0;
-            this.Hash_Delete.UseVisualStyleBackColor = true;
-            this.Hash_Delete.Click += new System.EventHandler(this.Hash_Delete_Click);
-            // 
-            // Hash_DeleteAll
-            // 
-            this.Hash_DeleteAll.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Hash_DeleteAll.BackgroundImage")));
-            this.Hash_DeleteAll.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Hash_DeleteAll.Enabled = false;
-            this.Hash_DeleteAll.ForeColor = System.Drawing.Color.Black;
-            this.Hash_DeleteAll.Location = new System.Drawing.Point(90, 19);
-            this.Hash_DeleteAll.Name = "Hash_DeleteAll";
-            this.Hash_DeleteAll.Size = new System.Drawing.Size(36, 36);
-            this.Hash_DeleteAll.TabIndex = 0;
-            this.Hash_DeleteAll.UseVisualStyleBackColor = true;
-            this.Hash_DeleteAll.Click += new System.EventHandler(this.Hash_DeleteAll_Click);
-            // 
-            // Options_MyListRefreshMin
-            // 
-            this.Options_MyListRefreshMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Options_MyListRefreshMin.BackgroundImage = global::AniDBClient.Properties.Resources.i_Refresh;
-            this.Options_MyListRefreshMin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Options_MyListRefreshMin.Location = new System.Drawing.Point(48, 622);
-            this.Options_MyListRefreshMin.Name = "Options_MyListRefreshMin";
-            this.Options_MyListRefreshMin.Size = new System.Drawing.Size(36, 36);
-            this.Options_MyListRefreshMin.TabIndex = 0;
-            this.Options_MyListRefreshMin.UseVisualStyleBackColor = true;
-            this.Options_MyListRefreshMin.Click += new System.EventHandler(this.Options_MyListRefreshMin_Click);
-            // 
-            // Options_MyListRefresh
-            // 
-            this.Options_MyListRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Options_MyListRefresh.BackgroundImage = global::AniDBClient.Properties.Resources.i_Refresh;
-            this.Options_MyListRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Options_MyListRefresh.Location = new System.Drawing.Point(6, 622);
-            this.Options_MyListRefresh.Name = "Options_MyListRefresh";
-            this.Options_MyListRefresh.Size = new System.Drawing.Size(36, 36);
-            this.Options_MyListRefresh.TabIndex = 0;
-            this.Options_MyListRefresh.UseVisualStyleBackColor = true;
-            this.Options_MyListRefresh.Click += new System.EventHandler(this.Options_MyListRefresh_Click);
-            // 
-            // DataFiles_Bt21
-            // 
-            this.DataFiles_Bt21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt21.BackgroundImage = global::AniDBClient.Properties.Resources.i_Information;
-            this.DataFiles_Bt21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.DataFiles_Bt21.Location = new System.Drawing.Point(731, 619);
-            this.DataFiles_Bt21.Name = "DataFiles_Bt21";
-            this.DataFiles_Bt21.Size = new System.Drawing.Size(23, 23);
-            this.DataFiles_Bt21.TabIndex = 0;
-            this.DataFiles_Bt21.UseVisualStyleBackColor = true;
-            this.DataFiles_Bt21.Click += new System.EventHandler(this.DataFiles_Bt21_Click);
-            // 
-            // DataFiles_Bt22
-            // 
-            this.DataFiles_Bt22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt22.BackgroundImage = global::AniDBClient.Properties.Resources.i_Help;
-            this.DataFiles_Bt22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.DataFiles_Bt22.Location = new System.Drawing.Point(673, 619);
-            this.DataFiles_Bt22.Name = "DataFiles_Bt22";
-            this.DataFiles_Bt22.Size = new System.Drawing.Size(23, 23);
-            this.DataFiles_Bt22.TabIndex = 0;
-            this.DataFiles_Bt22.UseVisualStyleBackColor = true;
-            this.DataFiles_Bt22.Click += new System.EventHandler(this.DataFiles_Bt22_Click);
-            // 
-            // DataFiles_Bt20
-            // 
-            this.DataFiles_Bt20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt20.BackgroundImage = global::AniDBClient.Properties.Resources.i_Help;
-            this.DataFiles_Bt20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.DataFiles_Bt20.Location = new System.Drawing.Point(702, 619);
-            this.DataFiles_Bt20.Name = "DataFiles_Bt20";
-            this.DataFiles_Bt20.Size = new System.Drawing.Size(23, 23);
-            this.DataFiles_Bt20.TabIndex = 0;
-            this.DataFiles_Bt20.UseVisualStyleBackColor = true;
-            this.DataFiles_Bt20.Click += new System.EventHandler(this.DataFiles_Bt20_Click);
-            // 
-            // DataFiles_Bt19
-            // 
-            this.DataFiles_Bt19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt19.BackgroundImage = global::AniDBClient.Properties.Resources.i_Globe;
-            this.DataFiles_Bt19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.DataFiles_Bt19.Location = new System.Drawing.Point(615, 619);
-            this.DataFiles_Bt19.Name = "DataFiles_Bt19";
-            this.DataFiles_Bt19.Size = new System.Drawing.Size(23, 23);
-            this.DataFiles_Bt19.TabIndex = 0;
-            this.DataFiles_Bt19.UseVisualStyleBackColor = true;
-            this.DataFiles_Bt19.Click += new System.EventHandler(this.DataFiles_Bt19_Click);
-            // 
-            // DataFiles_Bt00
-            // 
-            this.DataFiles_Bt00.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt00.BackgroundImage = global::AniDBClient.Properties.Resources.i_Refresh;
-            this.DataFiles_Bt00.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.DataFiles_Bt00.Location = new System.Drawing.Point(6, 619);
-            this.DataFiles_Bt00.Name = "DataFiles_Bt00";
-            this.DataFiles_Bt00.Size = new System.Drawing.Size(23, 23);
-            this.DataFiles_Bt00.TabIndex = 0;
-            this.DataFiles_Bt00.UseVisualStyleBackColor = true;
-            this.DataFiles_Bt00.Click += new System.EventHandler(this.DataFiles_Bt01_Click);
-            // 
-            // DataFiles_Bt01
-            // 
-            this.DataFiles_Bt01.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt01.BackgroundImage = global::AniDBClient.Properties.Resources.i_Delete;
-            this.DataFiles_Bt01.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.DataFiles_Bt01.Location = new System.Drawing.Point(35, 619);
-            this.DataFiles_Bt01.Name = "DataFiles_Bt01";
-            this.DataFiles_Bt01.Size = new System.Drawing.Size(23, 23);
-            this.DataFiles_Bt01.TabIndex = 0;
-            this.DataFiles_Bt01.UseVisualStyleBackColor = true;
-            this.DataFiles_Bt01.Click += new System.EventHandler(this.DataFiles_Bt01_Click);
-            // 
-            // DataFiles_Bt18
-            // 
-            this.DataFiles_Bt18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt18.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_file_removemylist;
-            this.DataFiles_Bt18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.DataFiles_Bt18.Location = new System.Drawing.Point(557, 619);
-            this.DataFiles_Bt18.Name = "DataFiles_Bt18";
-            this.DataFiles_Bt18.Size = new System.Drawing.Size(23, 23);
-            this.DataFiles_Bt18.TabIndex = 0;
-            this.DataFiles_Bt18.UseVisualStyleBackColor = true;
-            this.DataFiles_Bt18.Click += new System.EventHandler(this.DataFiles_Bt01_Click);
-            // 
-            // DataFiles_Bt17
-            // 
-            this.DataFiles_Bt17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt17.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_file_addmylist;
-            this.DataFiles_Bt17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.DataFiles_Bt17.Location = new System.Drawing.Point(528, 619);
-            this.DataFiles_Bt17.Name = "DataFiles_Bt17";
-            this.DataFiles_Bt17.Size = new System.Drawing.Size(23, 23);
-            this.DataFiles_Bt17.TabIndex = 0;
-            this.DataFiles_Bt17.UseVisualStyleBackColor = true;
-            this.DataFiles_Bt17.Click += new System.EventHandler(this.DataFiles_Bt01_Click);
-            // 
-            // DataFiles_Bt16
-            // 
-            this.DataFiles_Bt16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt16.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_atype_other;
-            this.DataFiles_Bt16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.DataFiles_Bt16.Location = new System.Drawing.Point(499, 619);
-            this.DataFiles_Bt16.Name = "DataFiles_Bt16";
-            this.DataFiles_Bt16.Size = new System.Drawing.Size(23, 23);
-            this.DataFiles_Bt16.TabIndex = 0;
-            this.DataFiles_Bt16.UseVisualStyleBackColor = true;
-            this.DataFiles_Bt16.Click += new System.EventHandler(this.DataFiles_Bt01_Click);
-            // 
-            // DataFiles_Bt15
-            // 
-            this.DataFiles_Bt15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt15.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_atype_web;
-            this.DataFiles_Bt15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.DataFiles_Bt15.Location = new System.Drawing.Point(470, 619);
-            this.DataFiles_Bt15.Name = "DataFiles_Bt15";
-            this.DataFiles_Bt15.Size = new System.Drawing.Size(23, 23);
-            this.DataFiles_Bt15.TabIndex = 0;
-            this.DataFiles_Bt15.UseVisualStyleBackColor = true;
-            this.DataFiles_Bt15.Click += new System.EventHandler(this.DataFiles_Bt01_Click);
-            // 
-            // DataFiles_Bt14
-            // 
-            this.DataFiles_Bt14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt14.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_atype_tv_series;
-            this.DataFiles_Bt14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.DataFiles_Bt14.Location = new System.Drawing.Point(441, 619);
-            this.DataFiles_Bt14.Name = "DataFiles_Bt14";
-            this.DataFiles_Bt14.Size = new System.Drawing.Size(23, 23);
-            this.DataFiles_Bt14.TabIndex = 0;
-            this.DataFiles_Bt14.UseVisualStyleBackColor = true;
-            this.DataFiles_Bt14.Click += new System.EventHandler(this.DataFiles_Bt01_Click);
-            // 
-            // DataFiles_Bt13
-            // 
-            this.DataFiles_Bt13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt13.BackgroundImage = global::AniDBClient.Properties.Resources.Anidb_filestate_ondvd;
-            this.DataFiles_Bt13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.DataFiles_Bt13.Location = new System.Drawing.Point(412, 619);
-            this.DataFiles_Bt13.Name = "DataFiles_Bt13";
-            this.DataFiles_Bt13.Size = new System.Drawing.Size(23, 23);
-            this.DataFiles_Bt13.TabIndex = 0;
-            this.DataFiles_Bt13.UseVisualStyleBackColor = true;
-            this.DataFiles_Bt13.Click += new System.EventHandler(this.DataFiles_Bt01_Click);
-            // 
-            // DataFiles_Bt12
-            // 
-            this.DataFiles_Bt12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt12.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_atype_tv_special;
-            this.DataFiles_Bt12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.DataFiles_Bt12.Location = new System.Drawing.Point(383, 619);
-            this.DataFiles_Bt12.Name = "DataFiles_Bt12";
-            this.DataFiles_Bt12.Size = new System.Drawing.Size(23, 23);
-            this.DataFiles_Bt12.TabIndex = 0;
-            this.DataFiles_Bt12.UseVisualStyleBackColor = true;
-            this.DataFiles_Bt12.Click += new System.EventHandler(this.DataFiles_Bt01_Click);
-            // 
-            // DataFiles_Bt11
-            // 
-            this.DataFiles_Bt11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt11.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_atype_ova;
-            this.DataFiles_Bt11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.DataFiles_Bt11.Location = new System.Drawing.Point(354, 619);
-            this.DataFiles_Bt11.Name = "DataFiles_Bt11";
-            this.DataFiles_Bt11.Size = new System.Drawing.Size(23, 23);
-            this.DataFiles_Bt11.TabIndex = 0;
-            this.DataFiles_Bt11.UseVisualStyleBackColor = true;
-            this.DataFiles_Bt11.Click += new System.EventHandler(this.DataFiles_Bt01_Click);
-            // 
-            // DataFiles_Bt10
-            // 
-            this.DataFiles_Bt10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt10.BackColor = System.Drawing.Color.White;
-            this.DataFiles_Bt10.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_seen_yes;
-            this.DataFiles_Bt10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.DataFiles_Bt10.Location = new System.Drawing.Point(325, 619);
-            this.DataFiles_Bt10.Name = "DataFiles_Bt10";
-            this.DataFiles_Bt10.Size = new System.Drawing.Size(23, 23);
-            this.DataFiles_Bt10.TabIndex = 0;
-            this.DataFiles_Bt10.UseVisualStyleBackColor = false;
-            this.DataFiles_Bt10.Click += new System.EventHandler(this.DataFiles_Bt01_Click);
-            // 
-            // DataFiles_Bt09
-            // 
-            this.DataFiles_Bt09.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt09.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_seen_no;
-            this.DataFiles_Bt09.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.DataFiles_Bt09.Location = new System.Drawing.Point(296, 619);
-            this.DataFiles_Bt09.Name = "DataFiles_Bt09";
-            this.DataFiles_Bt09.Size = new System.Drawing.Size(23, 23);
-            this.DataFiles_Bt09.TabIndex = 0;
-            this.DataFiles_Bt09.UseVisualStyleBackColor = true;
-            this.DataFiles_Bt09.Click += new System.EventHandler(this.DataFiles_Bt01_Click);
-            // 
-            // DataFiles_Bt08
-            // 
-            this.DataFiles_Bt08.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt08.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_state_release;
-            this.DataFiles_Bt08.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.DataFiles_Bt08.Location = new System.Drawing.Point(267, 619);
-            this.DataFiles_Bt08.Name = "DataFiles_Bt08";
-            this.DataFiles_Bt08.Size = new System.Drawing.Size(23, 23);
-            this.DataFiles_Bt08.TabIndex = 0;
-            this.DataFiles_Bt08.UseVisualStyleBackColor = true;
-            this.DataFiles_Bt08.Click += new System.EventHandler(this.DataFiles_Bt01_Click);
-            // 
-            // DataFiles_Bt07
-            // 
-            this.DataFiles_Bt07.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt07.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_filestate_other;
-            this.DataFiles_Bt07.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.DataFiles_Bt07.Location = new System.Drawing.Point(238, 619);
-            this.DataFiles_Bt07.Name = "DataFiles_Bt07";
-            this.DataFiles_Bt07.Size = new System.Drawing.Size(23, 23);
-            this.DataFiles_Bt07.TabIndex = 0;
-            this.DataFiles_Bt07.UseVisualStyleBackColor = true;
-            this.DataFiles_Bt07.Click += new System.EventHandler(this.DataFiles_Bt01_Click);
-            // 
-            // DataFiles_Bt06
-            // 
-            this.DataFiles_Bt06.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt06.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_state_shared;
-            this.DataFiles_Bt06.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.DataFiles_Bt06.Location = new System.Drawing.Point(209, 619);
-            this.DataFiles_Bt06.Name = "DataFiles_Bt06";
-            this.DataFiles_Bt06.Size = new System.Drawing.Size(23, 23);
-            this.DataFiles_Bt06.TabIndex = 0;
-            this.DataFiles_Bt06.UseVisualStyleBackColor = true;
-            this.DataFiles_Bt06.Click += new System.EventHandler(this.DataFiles_Bt01_Click);
-            // 
-            // DataFiles_Bt05
-            // 
-            this.DataFiles_Bt05.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt05.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_state_unknown;
-            this.DataFiles_Bt05.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.DataFiles_Bt05.Location = new System.Drawing.Point(180, 619);
-            this.DataFiles_Bt05.Name = "DataFiles_Bt05";
-            this.DataFiles_Bt05.Size = new System.Drawing.Size(23, 23);
-            this.DataFiles_Bt05.TabIndex = 0;
-            this.DataFiles_Bt05.UseVisualStyleBackColor = true;
-            this.DataFiles_Bt05.Click += new System.EventHandler(this.DataFiles_Bt01_Click);
-            // 
-            // DataFiles_Bt04
-            // 
-            this.DataFiles_Bt04.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt04.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_state_deleted;
-            this.DataFiles_Bt04.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.DataFiles_Bt04.Location = new System.Drawing.Point(151, 619);
-            this.DataFiles_Bt04.Name = "DataFiles_Bt04";
-            this.DataFiles_Bt04.Size = new System.Drawing.Size(23, 23);
-            this.DataFiles_Bt04.TabIndex = 0;
-            this.DataFiles_Bt04.UseVisualStyleBackColor = true;
-            this.DataFiles_Bt04.Click += new System.EventHandler(this.DataFiles_Bt01_Click);
-            // 
-            // DataFiles_Bt03
-            // 
-            this.DataFiles_Bt03.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt03.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_state_oncd;
-            this.DataFiles_Bt03.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.DataFiles_Bt03.Location = new System.Drawing.Point(122, 619);
-            this.DataFiles_Bt03.Name = "DataFiles_Bt03";
-            this.DataFiles_Bt03.Size = new System.Drawing.Size(23, 23);
-            this.DataFiles_Bt03.TabIndex = 0;
-            this.DataFiles_Bt03.UseVisualStyleBackColor = true;
-            this.DataFiles_Bt03.Click += new System.EventHandler(this.DataFiles_Bt01_Click);
-            // 
-            // DataFiles_Bt02
-            // 
-            this.DataFiles_Bt02.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DataFiles_Bt02.BackgroundImage = global::AniDBClient.Properties.Resources.anidb_state_onhdd;
-            this.DataFiles_Bt02.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.DataFiles_Bt02.Location = new System.Drawing.Point(93, 619);
-            this.DataFiles_Bt02.Name = "DataFiles_Bt02";
-            this.DataFiles_Bt02.Size = new System.Drawing.Size(23, 23);
-            this.DataFiles_Bt02.TabIndex = 0;
-            this.DataFiles_Bt02.UseVisualStyleBackColor = true;
-            this.DataFiles_Bt02.Click += new System.EventHandler(this.DataFiles_Bt01_Click);
-            // 
-            // Anime_Rel
-            // 
-            this.Anime_Rel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Anime_Rel.Location = new System.Drawing.Point(211, 14);
-            this.Anime_Rel.Name = "Anime_Rel";
-            this.Anime_Rel.Size = new System.Drawing.Size(15, 15);
-            this.Anime_Rel.TabIndex = 0;
-            this.Anime_Rel.TabStop = false;
-            this.Anime_Rel.Visible = false;
-            // 
-            // Anime_DateOK
-            // 
-            this.Anime_DateOK.Location = new System.Drawing.Point(479, 141);
-            this.Anime_DateOK.Name = "Anime_DateOK";
-            this.Anime_DateOK.Size = new System.Drawing.Size(13, 13);
-            this.Anime_DateOK.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Anime_DateOK.TabIndex = 2;
-            this.Anime_DateOK.TabStop = false;
-            // 
-            // Anime_RatImg
-            // 
-            this.Anime_RatImg.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Anime_RatImg.Location = new System.Drawing.Point(364, 265);
-            this.Anime_RatImg.Name = "Anime_RatImg";
-            this.Anime_RatImg.Size = new System.Drawing.Size(104, 20);
-            this.Anime_RatImg.TabIndex = 0;
-            this.Anime_RatImg.TabStop = false;
-            // 
-            // Anime_BT01
-            // 
-            this.Anime_BT01.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Anime_BT01.BackgroundImage")));
-            this.Anime_BT01.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Anime_BT01.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.Anime_BT01.Location = new System.Drawing.Point(520, 289);
-            this.Anime_BT01.Name = "Anime_BT01";
-            this.Anime_BT01.Size = new System.Drawing.Size(23, 23);
-            this.Anime_BT01.TabIndex = 0;
-            this.Anime_BT01.UseVisualStyleBackColor = true;
-            this.Anime_BT01.Click += new System.EventHandler(this.Anime_BT01_Click);
-            // 
-            // Anime_Img
-            // 
-            this.Anime_Img.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Anime_Img.Location = new System.Drawing.Point(6, 42);
-            this.Anime_Img.Name = "Anime_Img";
-            this.Anime_Img.Size = new System.Drawing.Size(225, 279);
-            this.Anime_Img.TabIndex = 0;
-            this.Anime_Img.TabStop = false;
-            this.Anime_Img.DoubleClick += new System.EventHandler(this.Anime_Img_DoubleClick);
-            // 
-            // Anime_Lang03
-            // 
-            this.Anime_Lang03.Image = ((System.Drawing.Image)(resources.GetObject("Anime_Lang03.Image")));
-            this.Anime_Lang03.Location = new System.Drawing.Point(61, 16);
-            this.Anime_Lang03.Name = "Anime_Lang03";
-            this.Anime_Lang03.Size = new System.Drawing.Size(23, 23);
-            this.Anime_Lang03.TabIndex = 0;
-            this.Anime_Lang03.UseVisualStyleBackColor = true;
-            this.Anime_Lang03.Click += new System.EventHandler(this.Anime_Lang03_Click);
-            // 
-            // Anime_Lang02
-            // 
-            this.Anime_Lang02.Image = global::AniDBClient.Properties.Resources.anidb_audio_english;
-            this.Anime_Lang02.Location = new System.Drawing.Point(32, 16);
-            this.Anime_Lang02.Name = "Anime_Lang02";
-            this.Anime_Lang02.Size = new System.Drawing.Size(23, 23);
-            this.Anime_Lang02.TabIndex = 0;
-            this.Anime_Lang02.UseVisualStyleBackColor = true;
-            this.Anime_Lang02.Click += new System.EventHandler(this.Anime_Lang02_Click);
-            // 
-            // Anime_Lang01
-            // 
-            this.Anime_Lang01.Image = ((System.Drawing.Image)(resources.GetObject("Anime_Lang01.Image")));
-            this.Anime_Lang01.Location = new System.Drawing.Point(3, 16);
-            this.Anime_Lang01.Name = "Anime_Lang01";
-            this.Anime_Lang01.Size = new System.Drawing.Size(23, 23);
-            this.Anime_Lang01.TabIndex = 0;
-            this.Anime_Lang01.UseVisualStyleBackColor = true;
-            this.Anime_Lang01.Click += new System.EventHandler(this.Anime_Lang01_Click);
-            // 
-            // Zgc_GraphB06
-            // 
-            this.Zgc_GraphB06.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Zgc_GraphB06.BackgroundImage")));
-            this.Zgc_GraphB06.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Zgc_GraphB06.Location = new System.Drawing.Point(223, 3);
-            this.Zgc_GraphB06.Name = "Zgc_GraphB06";
-            this.Zgc_GraphB06.Size = new System.Drawing.Size(38, 38);
-            this.Zgc_GraphB06.TabIndex = 0;
-            this.Zgc_GraphB06.UseVisualStyleBackColor = true;
-            this.Zgc_GraphB06.Click += new System.EventHandler(this.Zgc_GraphB06_Click);
-            // 
-            // Zgc_GraphB05
-            // 
-            this.Zgc_GraphB05.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Zgc_GraphB05.BackgroundImage")));
-            this.Zgc_GraphB05.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Zgc_GraphB05.Location = new System.Drawing.Point(179, 3);
-            this.Zgc_GraphB05.Name = "Zgc_GraphB05";
-            this.Zgc_GraphB05.Size = new System.Drawing.Size(38, 38);
-            this.Zgc_GraphB05.TabIndex = 0;
-            this.Zgc_GraphB05.UseVisualStyleBackColor = true;
-            this.Zgc_GraphB05.Click += new System.EventHandler(this.Zgc_GraphB05_Click);
-            // 
-            // Zgc_GraphB04
-            // 
-            this.Zgc_GraphB04.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Zgc_GraphB04.BackgroundImage")));
-            this.Zgc_GraphB04.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Zgc_GraphB04.Location = new System.Drawing.Point(135, 3);
-            this.Zgc_GraphB04.Name = "Zgc_GraphB04";
-            this.Zgc_GraphB04.Size = new System.Drawing.Size(38, 38);
-            this.Zgc_GraphB04.TabIndex = 0;
-            this.Zgc_GraphB04.UseVisualStyleBackColor = true;
-            this.Zgc_GraphB04.Click += new System.EventHandler(this.Zgc_GraphB04_Click);
-            // 
-            // Zgc_GraphB03
-            // 
-            this.Zgc_GraphB03.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Zgc_GraphB03.BackgroundImage")));
-            this.Zgc_GraphB03.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Zgc_GraphB03.Location = new System.Drawing.Point(91, 3);
-            this.Zgc_GraphB03.Name = "Zgc_GraphB03";
-            this.Zgc_GraphB03.Size = new System.Drawing.Size(38, 38);
-            this.Zgc_GraphB03.TabIndex = 0;
-            this.Zgc_GraphB03.UseVisualStyleBackColor = true;
-            this.Zgc_GraphB03.Click += new System.EventHandler(this.Zgc_GraphB03_Click);
-            // 
-            // Zgc_GraphB02
-            // 
-            this.Zgc_GraphB02.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Zgc_GraphB02.BackgroundImage")));
-            this.Zgc_GraphB02.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Zgc_GraphB02.Location = new System.Drawing.Point(47, 3);
-            this.Zgc_GraphB02.Name = "Zgc_GraphB02";
-            this.Zgc_GraphB02.Size = new System.Drawing.Size(38, 38);
-            this.Zgc_GraphB02.TabIndex = 0;
-            this.Zgc_GraphB02.UseVisualStyleBackColor = true;
-            this.Zgc_GraphB02.Click += new System.EventHandler(this.Zgc_GraphB02_Click);
-            // 
-            // Zgc_GraphB01
-            // 
-            this.Zgc_GraphB01.BackgroundImage = global::AniDBClient.Properties.Resources.i_Picture;
-            this.Zgc_GraphB01.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Zgc_GraphB01.Location = new System.Drawing.Point(3, 3);
-            this.Zgc_GraphB01.Name = "Zgc_GraphB01";
-            this.Zgc_GraphB01.Size = new System.Drawing.Size(38, 38);
-            this.Zgc_GraphB01.TabIndex = 0;
-            this.Zgc_GraphB01.UseVisualStyleBackColor = true;
-            this.Zgc_GraphB01.Click += new System.EventHandler(this.Zgc_GraphB01_Click);
-            // 
-            // Options_MyListRefreshManga
-            // 
-            this.Options_MyListRefreshManga.BackgroundImage = global::AniDBClient.Properties.Resources.i_Refresh;
-            this.Options_MyListRefreshManga.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Options_MyListRefreshManga.Location = new System.Drawing.Point(227, 201);
-            this.Options_MyListRefreshManga.Name = "Options_MyListRefreshManga";
-            this.Options_MyListRefreshManga.Size = new System.Drawing.Size(24, 24);
-            this.Options_MyListRefreshManga.TabIndex = 0;
-            this.Options_MyListRefreshManga.UseVisualStyleBackColor = true;
-            this.Options_MyListRefreshManga.Click += new System.EventHandler(this.Options_MyListRefreshMin_Click);
-            // 
-            // Manga_Chapter
-            // 
-            this.Manga_Chapter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Manga_Chapter.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Manga_Chapter.BackgroundImage")));
-            this.Manga_Chapter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Manga_Chapter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.Manga_Chapter.ForeColor = System.Drawing.Color.Black;
-            this.Manga_Chapter.Location = new System.Drawing.Point(738, 285);
-            this.Manga_Chapter.Margin = new System.Windows.Forms.Padding(10);
-            this.Manga_Chapter.Name = "Manga_Chapter";
-            this.Manga_Chapter.Size = new System.Drawing.Size(36, 36);
-            this.Manga_Chapter.TabIndex = 0;
-            this.Manga_Chapter.UseVisualStyleBackColor = true;
-            this.Manga_Chapter.Click += new System.EventHandler(this.Manga_Chapter_Click);
-            // 
-            // Manga_Edit
-            // 
-            this.Manga_Edit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Manga_Edit.BackgroundImage = global::AniDBClient.Properties.Resources.i_Edit;
-            this.Manga_Edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Manga_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.Manga_Edit.ForeColor = System.Drawing.Color.Black;
-            this.Manga_Edit.Location = new System.Drawing.Point(794, 285);
-            this.Manga_Edit.Margin = new System.Windows.Forms.Padding(10);
-            this.Manga_Edit.Name = "Manga_Edit";
-            this.Manga_Edit.Size = new System.Drawing.Size(36, 36);
-            this.Manga_Edit.TabIndex = 0;
-            this.Manga_Edit.UseVisualStyleBackColor = true;
-            this.Manga_Edit.Click += new System.EventHandler(this.Manga_Edit_Click);
-            // 
-            // Manga_Picture
-            // 
-            this.Manga_Picture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Manga_Picture.Location = new System.Drawing.Point(6, 42);
-            this.Manga_Picture.Name = "Manga_Picture";
-            this.Manga_Picture.Size = new System.Drawing.Size(225, 279);
-            this.Manga_Picture.TabIndex = 0;
-            this.Manga_Picture.TabStop = false;
-            // 
-            // Manga_Lang03
-            // 
-            this.Manga_Lang03.Image = global::AniDBClient.Properties.Resources.anidb_audio_english;
-            this.Manga_Lang03.Location = new System.Drawing.Point(35, 201);
-            this.Manga_Lang03.Name = "Manga_Lang03";
-            this.Manga_Lang03.Size = new System.Drawing.Size(23, 23);
-            this.Manga_Lang03.TabIndex = 0;
-            this.Manga_Lang03.UseVisualStyleBackColor = true;
-            this.Manga_Lang03.Click += new System.EventHandler(this.Manga_Lang03_Click);
-            // 
-            // Manga_Lang02
-            // 
-            this.Manga_Lang02.Image = ((System.Drawing.Image)(resources.GetObject("Manga_Lang02.Image")));
-            this.Manga_Lang02.Location = new System.Drawing.Point(64, 201);
-            this.Manga_Lang02.Name = "Manga_Lang02";
-            this.Manga_Lang02.Size = new System.Drawing.Size(23, 23);
-            this.Manga_Lang02.TabIndex = 0;
-            this.Manga_Lang02.UseVisualStyleBackColor = true;
-            this.Manga_Lang02.Click += new System.EventHandler(this.Manga_Lang02_Click);
-            // 
-            // Manga_Lang01
-            // 
-            this.Manga_Lang01.Image = ((System.Drawing.Image)(resources.GetObject("Manga_Lang01.Image")));
-            this.Manga_Lang01.Location = new System.Drawing.Point(6, 201);
-            this.Manga_Lang01.Name = "Manga_Lang01";
-            this.Manga_Lang01.Size = new System.Drawing.Size(23, 23);
-            this.Manga_Lang01.TabIndex = 0;
-            this.Manga_Lang01.UseVisualStyleBackColor = true;
-            this.Manga_Lang01.Click += new System.EventHandler(this.Manga_Lang01_Click);
-            // 
-            // Manga_EditCh
-            // 
-            this.Manga_EditCh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Manga_EditCh.BackgroundImage = global::AniDBClient.Properties.Resources.i_Edit;
-            this.Manga_EditCh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Manga_EditCh.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.Manga_EditCh.ForeColor = System.Drawing.Color.Black;
-            this.Manga_EditCh.Location = new System.Drawing.Point(170, 17);
-            this.Manga_EditCh.Margin = new System.Windows.Forms.Padding(10);
-            this.Manga_EditCh.Name = "Manga_EditCh";
-            this.Manga_EditCh.Size = new System.Drawing.Size(23, 23);
-            this.Manga_EditCh.TabIndex = 0;
-            this.Manga_EditCh.UseVisualStyleBackColor = true;
-            this.Manga_EditCh.Click += new System.EventHandler(this.Manga_Edit_Click);
-            // 
-            // Manga_Obr_CHD
-            // 
-            this.Manga_Obr_CHD.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Manga_Obr_CHD.BackgroundImage")));
-            this.Manga_Obr_CHD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Manga_Obr_CHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Manga_Obr_CHD.ForeColor = System.Drawing.Color.Black;
-            this.Manga_Obr_CHD.Location = new System.Drawing.Point(263, 17);
-            this.Manga_Obr_CHD.Name = "Manga_Obr_CHD";
-            this.Manga_Obr_CHD.Size = new System.Drawing.Size(23, 23);
-            this.Manga_Obr_CHD.TabIndex = 0;
-            this.Manga_Obr_CHD.UseVisualStyleBackColor = true;
-            this.Manga_Obr_CHD.Click += new System.EventHandler(this.Manga_Obr_CHD_Click);
-            // 
-            // Manga_Insert_CHD
-            // 
-            this.Manga_Insert_CHD.BackgroundImage = global::AniDBClient.Properties.Resources.i_Check;
-            this.Manga_Insert_CHD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Manga_Insert_CHD.ForeColor = System.Drawing.Color.Black;
-            this.Manga_Insert_CHD.Location = new System.Drawing.Point(818, 18);
-            this.Manga_Insert_CHD.Name = "Manga_Insert_CHD";
-            this.Manga_Insert_CHD.Size = new System.Drawing.Size(23, 23);
-            this.Manga_Insert_CHD.TabIndex = 0;
-            this.Manga_Insert_CHD.UseVisualStyleBackColor = true;
-            this.Manga_Insert_CHD.Click += new System.EventHandler(this.Manga_Insert_CHD_Click);
-            // 
-            // Manga_Delete
-            // 
-            this.Manga_Delete.BackgroundImage = global::AniDBClient.Properties.Resources.i_Delete;
-            this.Manga_Delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Manga_Delete.ForeColor = System.Drawing.Color.Black;
-            this.Manga_Delete.Location = new System.Drawing.Point(588, 289);
-            this.Manga_Delete.Name = "Manga_Delete";
-            this.Manga_Delete.Size = new System.Drawing.Size(36, 36);
-            this.Manga_Delete.TabIndex = 0;
-            this.Manga_Delete.UseVisualStyleBackColor = true;
-            this.Manga_Delete.Visible = false;
-            this.Manga_Delete.Click += new System.EventHandler(this.Manga_Delete_Click);
-            // 
-            // Manga_Update
-            // 
-            this.Manga_Update.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Manga_Update.BackgroundImage")));
-            this.Manga_Update.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Manga_Update.ForeColor = System.Drawing.Color.Black;
-            this.Manga_Update.Location = new System.Drawing.Point(680, 289);
-            this.Manga_Update.Name = "Manga_Update";
-            this.Manga_Update.Size = new System.Drawing.Size(36, 36);
-            this.Manga_Update.TabIndex = 0;
-            this.Manga_Update.UseVisualStyleBackColor = true;
-            this.Manga_Update.Click += new System.EventHandler(this.Manga_Update_Click);
-            // 
-            // Manga_Insert
-            // 
-            this.Manga_Insert.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Manga_Insert.BackgroundImage")));
-            this.Manga_Insert.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Manga_Insert.ForeColor = System.Drawing.Color.Black;
-            this.Manga_Insert.Location = new System.Drawing.Point(773, 289);
-            this.Manga_Insert.Name = "Manga_Insert";
-            this.Manga_Insert.Size = new System.Drawing.Size(36, 36);
-            this.Manga_Insert.TabIndex = 0;
-            this.Manga_Insert.UseVisualStyleBackColor = true;
-            this.Manga_Insert.Click += new System.EventHandler(this.Manga_Insert_Click);
-            // 
-            // Manga_Download_MAL
-            // 
-            this.Manga_Download_MAL.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Manga_Download_MAL.BackgroundImage")));
-            this.Manga_Download_MAL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Manga_Download_MAL.Enabled = false;
-            this.Manga_Download_MAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Manga_Download_MAL.ForeColor = System.Drawing.Color.Black;
-            this.Manga_Download_MAL.Location = new System.Drawing.Point(468, 173);
-            this.Manga_Download_MAL.Name = "Manga_Download_MAL";
-            this.Manga_Download_MAL.Size = new System.Drawing.Size(23, 23);
-            this.Manga_Download_MAL.TabIndex = 0;
-            this.Manga_Download_MAL.UseVisualStyleBackColor = true;
-            this.Manga_Download_MAL.Click += new System.EventHandler(this.Manga_Download_MAL_Click);
-            // 
-            // Manga_Download_MU
-            // 
-            this.Manga_Download_MU.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Manga_Download_MU.BackgroundImage")));
-            this.Manga_Download_MU.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Manga_Download_MU.Enabled = false;
-            this.Manga_Download_MU.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Manga_Download_MU.ForeColor = System.Drawing.Color.Black;
-            this.Manga_Download_MU.Location = new System.Drawing.Point(468, 121);
-            this.Manga_Download_MU.Name = "Manga_Download_MU";
-            this.Manga_Download_MU.Size = new System.Drawing.Size(23, 23);
-            this.Manga_Download_MU.TabIndex = 0;
-            this.Manga_Download_MU.UseVisualStyleBackColor = true;
-            this.Manga_Download_MU.Click += new System.EventHandler(this.Manga_Download_MU_Click);
-            // 
-            // Manga_Download_MugiMugi
-            // 
-            this.Manga_Download_MugiMugi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Manga_Download_MugiMugi.BackgroundImage")));
-            this.Manga_Download_MugiMugi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Manga_Download_MugiMugi.Enabled = false;
-            this.Manga_Download_MugiMugi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Manga_Download_MugiMugi.ForeColor = System.Drawing.Color.Black;
-            this.Manga_Download_MugiMugi.Location = new System.Drawing.Point(468, 199);
-            this.Manga_Download_MugiMugi.Name = "Manga_Download_MugiMugi";
-            this.Manga_Download_MugiMugi.Size = new System.Drawing.Size(23, 23);
-            this.Manga_Download_MugiMugi.TabIndex = 0;
-            this.Manga_Download_MugiMugi.UseVisualStyleBackColor = true;
-            this.Manga_Download_MugiMugi.Click += new System.EventHandler(this.Manga_Download_MugiMugi_Click);
-            // 
-            // Manga_Download
-            // 
-            this.Manga_Download.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Manga_Download.BackgroundImage")));
-            this.Manga_Download.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Manga_Download.Enabled = false;
-            this.Manga_Download.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Manga_Download.ForeColor = System.Drawing.Color.Black;
-            this.Manga_Download.Location = new System.Drawing.Point(468, 147);
-            this.Manga_Download.Name = "Manga_Download";
-            this.Manga_Download.Size = new System.Drawing.Size(23, 23);
-            this.Manga_Download.TabIndex = 0;
-            this.Manga_Download.UseVisualStyleBackColor = true;
-            this.Manga_Download.Click += new System.EventHandler(this.Manga_Download_Click);
-            // 
-            // Manga_Obr
-            // 
-            this.Manga_Obr.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Manga_Obr.BackgroundImage")));
-            this.Manga_Obr.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Manga_Obr.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Manga_Obr.ForeColor = System.Drawing.Color.Black;
-            this.Manga_Obr.Location = new System.Drawing.Point(468, 328);
-            this.Manga_Obr.Name = "Manga_Obr";
-            this.Manga_Obr.Size = new System.Drawing.Size(23, 23);
-            this.Manga_Obr.TabIndex = 0;
-            this.Manga_Obr.UseVisualStyleBackColor = true;
-            this.Manga_Obr.Click += new System.EventHandler(this.Manga_Obr_Click);
-            // 
-            // Add_Add
-            // 
-            this.Add_Add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Add_Add.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Add_Add.BackgroundImage")));
-            this.Add_Add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Add_Add.ForeColor = System.Drawing.Color.Black;
-            this.Add_Add.Location = new System.Drawing.Point(315, 619);
-            this.Add_Add.Name = "Add_Add";
-            this.Add_Add.Size = new System.Drawing.Size(23, 23);
-            this.Add_Add.TabIndex = 0;
-            this.Add_Add.UseVisualStyleBackColor = true;
-            this.Add_Add.Click += new System.EventHandler(this.Add_Add_Click);
-            // 
-            // LogTasksDelAll
-            // 
-            this.LogTasksDelAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.LogTasksDelAll.BackgroundImage = global::AniDBClient.Properties.Resources.i_Cancel;
-            this.LogTasksDelAll.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.LogTasksDelAll.ForeColor = System.Drawing.Color.Black;
-            this.LogTasksDelAll.Location = new System.Drawing.Point(373, 619);
-            this.LogTasksDelAll.Name = "LogTasksDelAll";
-            this.LogTasksDelAll.Size = new System.Drawing.Size(23, 23);
-            this.LogTasksDelAll.TabIndex = 0;
-            this.LogTasksDelAll.UseVisualStyleBackColor = true;
-            this.LogTasksDelAll.Click += new System.EventHandler(this.LogTasksDelAll_Click);
-            // 
-            // LogTasksDel
-            // 
-            this.LogTasksDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.LogTasksDel.BackgroundImage = global::AniDBClient.Properties.Resources.i_Delete;
-            this.LogTasksDel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.LogTasksDel.ForeColor = System.Drawing.Color.Black;
-            this.LogTasksDel.Location = new System.Drawing.Point(344, 619);
-            this.LogTasksDel.Name = "LogTasksDel";
-            this.LogTasksDel.Size = new System.Drawing.Size(23, 23);
-            this.LogTasksDel.TabIndex = 0;
-            this.LogTasksDel.UseVisualStyleBackColor = true;
-            this.LogTasksDel.Click += new System.EventHandler(this.LogTasksDel_Click);
-            // 
-            // DataSQL_Select
-            // 
-            this.DataSQL_Select.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.DataSQL_Select.BackgroundImage = global::AniDBClient.Properties.Resources.i_Burn_Disk;
-            this.DataSQL_Select.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.DataSQL_Select.ForeColor = System.Drawing.Color.Black;
-            this.DataSQL_Select.Location = new System.Drawing.Point(1078, 3);
-            this.DataSQL_Select.Name = "DataSQL_Select";
-            this.DataSQL_Select.Size = new System.Drawing.Size(23, 23);
-            this.DataSQL_Select.TabIndex = 0;
-            this.DataSQL_Select.UseVisualStyleBackColor = true;
-            this.DataSQL_Select.Click += new System.EventHandler(this.DataSQL_Select_Click);
+            // Notify
+            // 
+            this.Notify.Icon = ((System.Drawing.Icon)(resources.GetObject("Notify.Icon")));
+            this.Notify.Text = "AniSub";
+            this.Notify.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Notify_MouseDoubleClick);
             // 
             // Main
             // 
@@ -9574,9 +9574,9 @@ namespace AniDBClient
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Main_KeyDown);
             this.Resize += new System.EventHandler(this.Main_Resize);
             this.MainTab.ResumeLayout(false);
-            this.MainTab_Mn00.ResumeLayout(false);
-            this.MainTab_Mn01.ResumeLayout(false);
-            this.MainTab_Mn01.PerformLayout();
+            this.MainTab_IndexPage.ResumeLayout(false);
+            this.MainTab_SettinsPage.ResumeLayout(false);
+            this.MainTab_SettinsPage.PerformLayout();
             this.Options_GR06.ResumeLayout(false);
             this.Options_GR06.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.WebServer_MPCHC)).EndInit();
@@ -9593,27 +9593,27 @@ namespace AniDBClient
             ((System.ComponentModel.ISupportInitialize)(this.Options_Backup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Options_LocalPort)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Options_TimeOut)).EndInit();
-            this.MainTab_Mn02.ResumeLayout(false);
-            this.MainTab_Mn02.PerformLayout();
-            this.Rules_GR03.ResumeLayout(false);
+            this.MainTab_RulesPage.ResumeLayout(false);
+            this.MainTab_RulesPage.PerformLayout();
+            this.Rules_RulesForCharacterReplacingGroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Rules_Replace)).EndInit();
-            this.Rules_GR04.ResumeLayout(false);
-            this.Rules_GR04.PerformLayout();
-            this.Rules_GR02.ResumeLayout(false);
-            this.Rules_GR02.PerformLayout();
-            this.Rules_GR01.ResumeLayout(false);
-            this.Rules_GR01.PerformLayout();
-            this.MainTab_Mn06.ResumeLayout(false);
+            this.Rules_ExportInfoGroupBox.ResumeLayout(false);
+            this.Rules_ExportInfoGroupBox.PerformLayout();
+            this.Rules_RulesForGeneratingDirectoriesGroupBox.ResumeLayout(false);
+            this.Rules_RulesForGeneratingDirectoriesGroupBox.PerformLayout();
+            this.Rules_RulesForFileRenamingGroupBox.ResumeLayout(false);
+            this.Rules_RulesForFileRenamingGroupBox.PerformLayout();
+            this.MainTab_HashPage.ResumeLayout(false);
             this.Hash_GR01.ResumeLayout(false);
             this.Hash_GR01.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Hash_Waiting)).EndInit();
-            this.MainTab_Mn03.ResumeLayout(false);
+            this.MainTab_AnimePage.ResumeLayout(false);
             this.MainTabData.ResumeLayout(false);
-            this.MainTabData_Mn00.ResumeLayout(false);
+            this.MainTabData_MyListTabPage.ResumeLayout(false);
             this.Options_GR04.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MyListAnime)).EndInit();
-            this.MainTabData_Mn01.ResumeLayout(false);
-            this.MainTabData_Mn01.PerformLayout();
+            this.MainTabData_FilesTabPage.ResumeLayout(false);
+            this.MainTabData_FilesTabPage.PerformLayout();
             this.DataFilesTree_Menu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataFiles_Year)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataFiles_Month)).EndInit();
@@ -9622,41 +9622,45 @@ namespace AniDBClient
             ((System.ComponentModel.ISupportInitialize)(this.DataFiles_Rows)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataFiles)).EndInit();
             this.DataFiles_Menu.ResumeLayout(false);
-            this.MainTabData_Mn02.ResumeLayout(false);
+            this.MainTabData_AnimeTabPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataAnime_Page)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataAnime_Rows)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataAnime)).EndInit();
             this.DataAnime_Menu.ResumeLayout(false);
-            this.MainTabData_Mn03.ResumeLayout(false);
-            this.MainTabData_Mn03.PerformLayout();
+            this.MainTabData_Anime2TabPage.ResumeLayout(false);
+            this.MainTabData_Anime2TabPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Anime_Rel)).EndInit();
             this.Anime_GR01.ResumeLayout(false);
             this.Anime_GR01.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Anime_DateOK)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Anime_RatImg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Anime_Rat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Anime_Img)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AnimeData)).EndInit();
             this.AnimeTree_Menu.ResumeLayout(false);
-            this.MainTabData_Mn04.ResumeLayout(false);
+            this.MainTabData_GenresTabPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataGenres_Page)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGenres_Rows)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGenres)).EndInit();
-            this.MainTabData_Mn05.ResumeLayout(false);
+            this.MainTabData_GroupsTabPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataGroups_Page)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGroups_Rows)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGroups)).EndInit();
-            this.MainTabData_Mn07.ResumeLayout(false);
-            this.MainTabData_Mn07.PerformLayout();
+            this.MainTabData_SearchTabPage.ResumeLayout(false);
+            this.MainTabData_SearchTabPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataSearch_NM05)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSearch_NM04)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSearch_NM03)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSearch_NM02)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSearch_NM01)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSearch)).EndInit();
-            this.MainTabData_Mn08.ResumeLayout(false);
-            this.MainTabData_Mn09.ResumeLayout(false);
-            this.MainTabData_Mn09.PerformLayout();
+            this.MainTabData_OthersTabPage.ResumeLayout(false);
+            this.MainTabData_GraphsTabPage.ResumeLayout(false);
+            this.MainTabData_GraphsTabPage.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.MainTabData_Mn10.ResumeLayout(false);
-            this.MainTabData_Mn10.PerformLayout();
-            this.MainTab_Mn07.ResumeLayout(false);
+            this.MainTabData_ExportTabPage.ResumeLayout(false);
+            this.MainTabData_ExportTabPage.PerformLayout();
+            this.MainTab_MangaPage.ResumeLayout(false);
             this.MainTabManga.ResumeLayout(false);
             this.MainTabManga_Mn01.ResumeLayout(false);
             this.MainTabManga_Mn01.PerformLayout();
@@ -9664,6 +9668,7 @@ namespace AniDBClient
             this.Manga_Gr04.PerformLayout();
             this.Manga_Gr01.ResumeLayout(false);
             this.Manga_Gr01.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Manga_Picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Manga_Data)).EndInit();
             this.Manga_Tree_Menu.ResumeLayout(false);
             this.MainTabManga_Mn02.ResumeLayout(false);
@@ -9682,27 +9687,22 @@ namespace AniDBClient
             ((System.ComponentModel.ISupportInitialize)(this.MangaSearch_NM02)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MangaSearch_NM01)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MangaSearch)).EndInit();
-            this.MainTab_Mn04.ResumeLayout(false);
+            this.MainTab_LogPage.ResumeLayout(false);
             this.MainTabLog.ResumeLayout(false);
-            this.MainTabLog_Mn01.ResumeLayout(false);
-            this.MainTabLog_Mn01.PerformLayout();
-            this.MainTabLog_Mn02.ResumeLayout(false);
-            this.MainTabLog_Mn02.PerformLayout();
-            this.MainTabLog_Mn04.ResumeLayout(false);
-            this.MainTabLog_Mn04.PerformLayout();
-            this.MainTabLog_Mn03.ResumeLayout(false);
-            this.MainTabLog_Mn03.PerformLayout();
-            this.MainTab_Mn05.ResumeLayout(false);
-            this.DataSQL_GR01.ResumeLayout(false);
+            this.MainTabLog_AniDbTabPage.ResumeLayout(false);
+            this.MainTabLog_AniDbTabPage.PerformLayout();
+            this.MainTabLog_SqlTabPage.ResumeLayout(false);
+            this.MainTabLog_SqlTabPage.PerformLayout();
+            this.MainTabLog_ErrorTabPage.ResumeLayout(false);
+            this.MainTabLog_ErrorTabPage.PerformLayout();
+            this.MainTabLog_TasksTabPage.ResumeLayout(false);
+            this.MainTabLog_TasksTabPage.PerformLayout();
+            this.MainTab_SqlPage.ResumeLayout(false);
+            this.DataSql_CheckGroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataSQL)).EndInit();
             this.AnimeData_Menu.ResumeLayout(false);
             this.Manga_Data_Menu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Anime_Rel)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Anime_DateOK)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Anime_RatImg)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Anime_Img)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Manga_Picture)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -9710,10 +9710,10 @@ namespace AniDBClient
         #endregion
 
         private System.Windows.Forms.TabControl MainTab;
-        private System.Windows.Forms.TabPage MainTab_Mn01;
-        private System.Windows.Forms.TabPage MainTab_Mn02;
-        private System.Windows.Forms.TabPage MainTab_Mn03;
-        private System.Windows.Forms.TabPage MainTab_Mn04;
+        private System.Windows.Forms.TabPage MainTab_SettinsPage;
+        private System.Windows.Forms.TabPage MainTab_RulesPage;
+        private System.Windows.Forms.TabPage MainTab_AnimePage;
+        private System.Windows.Forms.TabPage MainTab_LogPage;
         private System.Windows.Forms.TextBox Log;
         private System.Windows.Forms.Button Options_StartComunication;
         private System.Windows.Forms.TextBox Options_Password;
@@ -9721,28 +9721,28 @@ namespace AniDBClient
         private System.ComponentModel.BackgroundWorker ComunicationW;
         private System.Windows.Forms.TextBox Options_ServerName;
         private System.Windows.Forms.GroupBox Options_GR01;
-        private System.Windows.Forms.Label Options_LB04;
-        private System.Windows.Forms.Label Options_LB03;
-        private System.Windows.Forms.Label Options_LB02;
-        private System.Windows.Forms.Label Options_LB01;
+        private System.Windows.Forms.Label Options_PasswordLabel;
+        private System.Windows.Forms.Label Options_UserNameLabel;
+        private System.Windows.Forms.Label Options_PortLabel;
+        private System.Windows.Forms.Label Options_ServerLabel;
         private System.Windows.Forms.NumericUpDown Options_Delay;
         private System.Windows.Forms.NumericUpDown Options_TimeOut;
-        private System.Windows.Forms.Label Options_LB06;
-        private System.Windows.Forms.Label Options_LB05;
+        private System.Windows.Forms.Label Options_DelayLabel;
+        private System.Windows.Forms.Label Options_TimeoutLabel;
         private System.Windows.Forms.Button Options_ExtensionAdd;
-        private System.Windows.Forms.Label Options_LB09;
-        private System.Windows.Forms.Label Options_LB08;
-        private System.Windows.Forms.Label Options_LB07;
+        private System.Windows.Forms.Label Options_StorageLabel;
+        private System.Windows.Forms.Label Options_SourceLabel;
+        private System.Windows.Forms.Label Options_StatusLabel;
         private System.Windows.Forms.TextBox Options_MylistOther;
         private System.Windows.Forms.TextBox Options_MylistStorage;
         private System.Windows.Forms.TextBox Options_MylistSource;
         private System.Windows.Forms.ComboBox Options_MylistState;
-        private System.Windows.Forms.CheckBox Options_CH01;
-        private System.Windows.Forms.Label Options_LB10;
-        private System.Windows.Forms.CheckBox Options_CH02;
-        private System.Windows.Forms.GroupBox Rules_GR03;
-        private System.Windows.Forms.GroupBox Rules_GR02;
-        private System.Windows.Forms.GroupBox Rules_GR01;
+        private System.Windows.Forms.CheckBox Options_AutoAddToMyListCheckBox;
+        private System.Windows.Forms.Label Options_OtherLabel;
+        private System.Windows.Forms.CheckBox Options_WatchedCheckbox;
+        private System.Windows.Forms.GroupBox Rules_RulesForCharacterReplacingGroupBox;
+        private System.Windows.Forms.GroupBox Rules_RulesForGeneratingDirectoriesGroupBox;
+        private System.Windows.Forms.GroupBox Rules_RulesForFileRenamingGroupBox;
         private System.Windows.Forms.Button Rules_FilesRulesMoveAdd;
         private System.Windows.Forms.ComboBox Rules_FilesRulesMoveC;
         private System.Windows.Forms.TextBox Rules_FilesRulesMove;
@@ -9754,30 +9754,29 @@ namespace AniDBClient
         private System.Windows.Forms.Button Options_SetingsLoad;
         private System.Windows.Forms.Button Options_SetingsSave;
         private System.Windows.Forms.ContextMenuStrip DataAnime_Menu;
-        private System.Windows.Forms.ToolStripMenuItem DataAnime_Menu_Mn01;
-        private System.Windows.Forms.ToolStripMenuItem DataAnime_Menu_Mn02;
-        private System.Windows.Forms.ToolStripMenuItem DataAnime_Menu_Mn03;
-        private System.Windows.Forms.ToolStripMenuItem DataAnime_Menu_Mn01_Mn01;
-        private System.Windows.Forms.ToolStripMenuItem DataAnime_Menu_Mn01_Mn02;
-        private System.Windows.Forms.ToolStripMenuItem DataAnime_Menu_Mn01_Mn03;
-        private System.Windows.Forms.ToolStripMenuItem DataAnime_Menu_Mn01_Mn04;
-        private System.Windows.Forms.ToolStripMenuItem DataAnime_Menu_Mn01_Mn05;
-        private System.Windows.Forms.ToolStripMenuItem DataAnime_Menu_Mn01_Mn06;
+        private System.Windows.Forms.ToolStripMenuItem DataAnime_Menu_Expand;
+        private System.Windows.Forms.ToolStripMenuItem DataAnime_Menu_MyList;
+        private System.Windows.Forms.ToolStripMenuItem DataAnime_Menu_Database;
+        private System.Windows.Forms.ToolStripMenuItem DataAnime_Menu_Expand_Anime;
+        private System.Windows.Forms.ToolStripMenuItem DataAnime_Menu_Expand_Episodes;
+        private System.Windows.Forms.ToolStripMenuItem DataAnime_Menu_Expand_All;
+        private System.Windows.Forms.ToolStripMenuItem DataAnime_Menu_Expand_CollapseEpisodes;
+        private System.Windows.Forms.ToolStripMenuItem DataAnime_Menu_Expand_CollapseAllEpisodes;
+        private System.Windows.Forms.ToolStripMenuItem DataAnime_Menu_Expand_CollapseAll;
         private System.Windows.Forms.Button Rules_FilesRulesRenameDel;
-        private System.Windows.Forms.Label Options_LB45;
+        private System.Windows.Forms.Label Options_LocalPortLabel;
         private System.Windows.Forms.Timer ComunicationRec;
         private System.Windows.Forms.TabControl MainTabData;
-        private System.Windows.Forms.TabPage MainTabData_Mn01;
-        private System.Windows.Forms.TabPage MainTabData_Mn02;
-        private System.Windows.Forms.TabPage MainTabData_Mn03;
-        private System.Windows.Forms.TabPage MainTabData_Mn04;
-        private System.Windows.Forms.TabPage MainTabData_Mn05;
+        private System.Windows.Forms.TabPage MainTabData_FilesTabPage;
+        private System.Windows.Forms.TabPage MainTabData_AnimeTabPage;
+        private System.Windows.Forms.TabPage MainTabData_Anime2TabPage;
+        private System.Windows.Forms.TabPage MainTabData_GenresTabPage;
+        private System.Windows.Forms.TabPage MainTabData_GroupsTabPage;
         private System.Windows.Forms.DataGridView DataAnime;
         private System.Windows.Forms.TabControl MainTabLog;
-        private System.Windows.Forms.TabPage MainTabLog_Mn01;
-        private System.Windows.Forms.TabPage MainTabLog_Mn02;
+        private System.Windows.Forms.TabPage MainTabLog_AniDbTabPage;
+        private System.Windows.Forms.TabPage MainTabLog_SqlTabPage;
         private System.Windows.Forms.TextBox LogSQL;
-        private System.Windows.Forms.ListBox LogTasks;
         private System.Windows.Forms.DataGridView DataFiles;
         private System.Windows.Forms.TreeView AnimeTree;
         private System.Windows.Forms.GroupBox Anime_GR01;
@@ -9789,10 +9788,10 @@ namespace AniDBClient
         private System.Windows.Forms.Label Anime_LB06;
         private System.Windows.Forms.Label Anime_LB03;
         private System.Windows.Forms.LinkLabel Anime_LB02;
-        private System.Windows.Forms.ToolStripMenuItem DataAnime_Menu_Mn02_Mn01;
-        private System.Windows.Forms.ToolStripMenuItem DataAnime_Menu_Mn02_Mn02;
-        private System.Windows.Forms.ToolStripMenuItem DataAnime_Menu_Mn02_Mn03;
-        private System.Windows.Forms.TabPage MainTabLog_Mn03;
+        private System.Windows.Forms.ToolStripMenuItem DataAnime_Menu_MyList_AddModify;
+        private System.Windows.Forms.ToolStripMenuItem DataAnime_Menu_MyList_Delete;
+        private System.Windows.Forms.ToolStripMenuItem DataAnime_Menu_MyList_Watched;
+        private System.Windows.Forms.TabPage MainTabLog_TasksTabPage;
         private System.Windows.Forms.Button LogTasksDel;
         private System.Windows.Forms.NumericUpDown DataAnime_Rows;
         private System.Windows.Forms.NumericUpDown DataAnime_Page;
@@ -9808,14 +9807,14 @@ namespace AniDBClient
         private System.Windows.Forms.Label Anime_OP03;
         private System.Windows.Forms.Label Anime_OP02;
         private System.Windows.Forms.Label Anime_OP01;
-        private System.Windows.Forms.ToolStripMenuItem DataAnime_Menu_Mn03_Mn01;
+        private System.Windows.Forms.ToolStripMenuItem DataAnime_Menu_Database_Delete;
         private System.Windows.Forms.ToolStripMenuItem DataFiles_Menu_Mn02_Mn01;
         private System.Windows.Forms.ToolStripMenuItem DataFiles_Menu_Mn03;
         private System.Windows.Forms.RadioButton Rules_FilesRulesMove_RB01;
         private System.Windows.Forms.RadioButton Rules_FilesRulesMove_RB02;
         private System.Windows.Forms.DataGridViewTextBoxColumn Rules_Replace_Mn01;
         private System.Windows.Forms.DataGridViewTextBoxColumn Rules_Replace_Mn02;
-        private System.Windows.Forms.TabPage MainTab_Mn06;
+        private System.Windows.Forms.TabPage MainTab_HashPage;
         private System.Windows.Forms.ProgressBar Hash_ProgressBar_Total;
         private System.Windows.Forms.Button Hash_Stop_Total;
         private System.Windows.Forms.ProgressBar Hash_ProgressBar;
@@ -9871,7 +9870,7 @@ namespace AniDBClient
         private System.Windows.Forms.ToolTip ToolTip;
         private System.Windows.Forms.Button DataFiles_Bt18;
         private System.Windows.Forms.Button DataFiles_Bt17;
-        private System.Windows.Forms.TabPage MainTabData_Mn07;
+        private System.Windows.Forms.TabPage MainTabData_SearchTabPage;
         private System.Windows.Forms.CheckedListBox DataSearch_Genres;
         private System.Windows.Forms.Button DataSearch_Select;
         private System.Windows.Forms.DataGridView DataSearch;
@@ -9918,11 +9917,11 @@ namespace AniDBClient
         private System.Windows.Forms.RadioButton Rules_FilesRulesMove_RB03;
         private System.Windows.Forms.Button Hash_Files;
         private System.Windows.Forms.Button Hash_Delete;
-        private System.Windows.Forms.RadioButton Rules_FilesRulesRename_RB02;
-        private System.Windows.Forms.RadioButton Rules_FilesRulesRename_RB01;
-        private System.Windows.Forms.CheckBox Rules_CH03;
-        private System.Windows.Forms.CheckBox Rules_CH02;
-        private System.Windows.Forms.CheckBox Rules_CH01;
+        private System.Windows.Forms.RadioButton Rules_FilesRulesRename_DoNothingRadioButton;
+        private System.Windows.Forms.RadioButton Rules_FilesRulesRename_RenameRadioButton;
+        private System.Windows.Forms.CheckBox Rules_ReplaceExistingCheckBox;
+        private System.Windows.Forms.CheckBox Rules_DontCopyToAnotherDiskCheckBox;
+        private System.Windows.Forms.CheckBox Rules_AutomaticRenamingCheckBox;
         private System.ComponentModel.BackgroundWorker FRename_W;
         private System.Windows.Forms.ToolStripMenuItem DataFiles_Menu_Mn04;
         private System.Windows.Forms.ToolStripMenuItem AnimeData_Menu_Mn04;
@@ -9943,7 +9942,7 @@ namespace AniDBClient
         private System.Windows.Forms.ImageList DataFilesTreeImages;
         private System.Windows.Forms.ToolStripMenuItem DataFilesTree_Mn06;
         private System.Windows.Forms.TextBox DataFiles_Filtr01;
-        private System.Windows.Forms.TabPage MainTabLog_Mn04;
+        private System.Windows.Forms.TabPage MainTabLog_ErrorTabPage;
         private System.Windows.Forms.TextBox LogError;
         private System.Windows.Forms.ComboBox Options_Language;
         private System.Windows.Forms.ToolStripMenuItem DataFiles_Menu_Mn05;
@@ -9970,7 +9969,7 @@ namespace AniDBClient
         private System.Windows.Forms.ToolStripMenuItem AnimeData_Menu_Mn05_Mn03;
         private System.Windows.Forms.ToolStripMenuItem AnimeData_Menu_Mn05_Mn04;
         private System.Windows.Forms.ToolStripMenuItem AnimeData_Menu_Mn05_Mn05;
-        private System.Windows.Forms.Button Rules_Tags;
+        private System.Windows.Forms.Button Rules_TagsButton;
         private System.Windows.Forms.LinkLabel Anime_LB08;
         private System.Windows.Forms.TreeView Anime_RelationTree;
         private System.Windows.Forms.ToolStripMenuItem DataFiles_Menu_Mn06;
@@ -9983,7 +9982,7 @@ namespace AniDBClient
         private System.Windows.Forms.CheckBox Hash_CH03;
         private System.Windows.Forms.CheckBox Hash_CH02;
         private System.Windows.Forms.ComboBox Rules_Position;
-        private System.Windows.Forms.Label Rules_LB01;
+        private System.Windows.Forms.Label Rules_RulesNumberPositionLabel;
         private System.Windows.Forms.ToolStripMenuItem DataFiles_Menu_Mn06_Mn04;
         private System.Windows.Forms.NumericUpDown Hash_Waiting;
         private System.Windows.Forms.Label Hash_LB02;
@@ -9995,7 +9994,7 @@ namespace AniDBClient
         private System.Windows.Forms.TextBox DataFiles_Filtr04;
         private System.Windows.Forms.TextBox DataFiles_Filtr03;
         private System.Windows.Forms.TextBox DataFiles_Filtr02;
-        private System.Windows.Forms.CheckBox Options_CH08;
+        private System.Windows.Forms.CheckBox Options_SaveSettingsOnExitCheckBox;
         private System.Windows.Forms.Button Options_CH07BT;
         private System.Windows.Forms.Button Options_CH06BT;
         private System.Windows.Forms.Button Options_CH05BT;
@@ -10018,7 +10017,7 @@ namespace AniDBClient
         private System.Windows.Forms.CheckBox DataFilesTree_CH03;
         private System.Windows.Forms.RadioButton DataFiles_RB05;
         private System.Windows.Forms.CheckBox AnimeTree_CH01;
-        private System.Windows.Forms.TabPage MainTab_Mn07;
+        private System.Windows.Forms.TabPage MainTab_MangaPage;
         private System.Windows.Forms.TabControl MainTabManga;
         private System.Windows.Forms.TabPage MainTabManga_Mn01;
         private System.Windows.Forms.TabPage MainTabManga_Mn02;
@@ -10043,7 +10042,7 @@ namespace AniDBClient
         private System.Windows.Forms.DataGridView Manga_Data;
         private System.Windows.Forms.TreeView Manga_Tree;
         private System.Windows.Forms.LinkLabel Manga_LB14;
-        private System.Windows.Forms.TabPage MainTabData_Mn00;
+        private System.Windows.Forms.TabPage MainTabData_MyListTabPage;
         private System.Windows.Forms.GroupBox Options_GR04;
         private System.Windows.Forms.Button Options_MyListRefresh;
         private System.Windows.Forms.Button Options_MyListRefreshMin;
@@ -10075,12 +10074,12 @@ namespace AniDBClient
         private System.Windows.Forms.Button Manga_Edit;
         private System.Windows.Forms.TextBox Manga_Tx12;
         private System.Windows.Forms.Button Manga_Chapter;
-        private System.Windows.Forms.TabPage MainTab_Mn05;
-        private System.Windows.Forms.GroupBox DataSQL_GR01;
-        private System.Windows.Forms.Button DataSQL_BT03;
-        private System.Windows.Forms.Button DataSQL_BT04;
-        private System.Windows.Forms.Button DataSQL_BT02;
-        private System.Windows.Forms.Button DataSQL_BT01;
+        private System.Windows.Forms.TabPage MainTab_SqlPage;
+        private System.Windows.Forms.GroupBox DataSql_CheckGroupBox;
+        private System.Windows.Forms.Button DataSql_FilesButton;
+        private System.Windows.Forms.Button DataSql_MyListButton;
+        private System.Windows.Forms.Button DataSql_EpisodesButton;
+        private System.Windows.Forms.Button DataSql_AnimeButton;
         private System.Windows.Forms.ComboBox DataSQL_Text;
         private System.Windows.Forms.ListBox DataSQL_Columns;
         private System.Windows.Forms.ListBox DataSQL_Tables;
@@ -10104,11 +10103,11 @@ namespace AniDBClient
         private System.Windows.Forms.Label Anime_LB10;
         private System.Windows.Forms.Label Anime_OP07;
         private System.Windows.Forms.ToolStripMenuItem AnimeTree_Menu_Mn02;
-        private System.Windows.Forms.Label Options_CH07;
-        private System.Windows.Forms.Label Options_CH06;
-        private System.Windows.Forms.Label Options_CH05;
-        private System.Windows.Forms.Label Options_CH04;
-        private System.Windows.Forms.Label Options_CH03;
+        private System.Windows.Forms.Label Options_CompactAndRepairDbLabel;
+        private System.Windows.Forms.Label Options_DeleteDuplicatesLabel;
+        private System.Windows.Forms.Label Options_DownloadAllFilesLabel;
+        private System.Windows.Forms.Label Options_DownloadAllAnimeEpisodesLabel;
+        private System.Windows.Forms.Label Options_CheckUnknownFilesLabel;
         private System.ComponentModel.BackgroundWorker Database_W;
         private System.Windows.Forms.Label DataFiles_LB05;
         private System.Windows.Forms.Button DataFiles_Bt20;
@@ -10127,8 +10126,8 @@ namespace AniDBClient
         private System.Windows.Forms.CheckBox AnimeTree_CH02;
         private System.Windows.Forms.ContextMenuStrip Manga_Tree_Menu;
         private System.Windows.Forms.ToolStripMenuItem Manga_Tree_Menu_Mn01;
-        private System.Windows.Forms.Label Options_CH10;
-        private System.Windows.Forms.Label Options_CH09;
+        private System.Windows.Forms.Label Options_RestoreBackupLabel;
+        private System.Windows.Forms.Label Options_CreateBackupLabel;
         private System.Windows.Forms.Button Options_CH09BT;
         private System.Windows.Forms.Button Options_CH08BT;
         private System.Windows.Forms.TabPage MainTabManga_Mn03;
@@ -10161,7 +10160,7 @@ namespace AniDBClient
         private System.Windows.Forms.DataGridViewTextBoxColumn MangaSearch_Mn04;
         private System.Windows.Forms.Button Anime_BT01;
         private System.Windows.Forms.Label Anime_LB11;
-        private System.Windows.Forms.TabPage MainTabData_Mn08;
+        private System.Windows.Forms.TabPage MainTabData_OthersTabPage;
         private System.Windows.Forms.TreeView AnimeTags;
         private System.Windows.Forms.TreeView AnimeSeen;
         private System.Windows.Forms.TreeView AnimeRating;
@@ -10172,15 +10171,15 @@ namespace AniDBClient
         private System.Windows.Forms.GroupBox Hash_GR01;
         private System.Windows.Forms.Label Hash_ProgressBar_Total_Percent;
         private System.Windows.Forms.Label Hash_ProgressBar_Percent;
-        private System.Windows.Forms.TabPage MainTab_Mn00;
+        private System.Windows.Forms.TabPage MainTab_IndexPage;
         private System.Windows.Forms.WebBrowser WEB;
-        private System.Windows.Forms.Label Options_CH12;
-        private System.Windows.Forms.Label Options_CH11;
+        private System.Windows.Forms.Label Options_DeleteDbLabel;
+        private System.Windows.Forms.Label Options_ForceDbUpdateLabel;
         private System.Windows.Forms.Button Options_CH11BT;
         private System.Windows.Forms.Button Options_CH10BT;
-        private System.Windows.Forms.Label StatusBar_ConnectLB;
+        private System.Windows.Forms.Label StatusBar_ConnectLabel;
         private System.Windows.Forms.Button StatusBar_Hash;
-        private System.Windows.Forms.TabPage MainTabData_Mn09;
+        private System.Windows.Forms.TabPage MainTabData_GraphsTabPage;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button Zgc_GraphB03;
         private System.Windows.Forms.Button Zgc_GraphB02;
@@ -10198,8 +10197,7 @@ namespace AniDBClient
         private System.Windows.Forms.Label StatusBar_Mn05;
         private System.Windows.Forms.Label StatusBar_Mn04;
         private System.Windows.Forms.Label StatusBar_Mn03;
-        private System.Windows.Forms.Label StatusBar_Mn02;
-        private System.Windows.Forms.Label StatusBar_Mn01;
+        private System.Windows.Forms.Label StatusBar_TasksRemainingLabel;
         private System.Windows.Forms.NumericUpDown Manga_Tx20;
         private System.Windows.Forms.DataGridViewTextBoxColumn Manga_Data_Mn01;
         private System.Windows.Forms.DataGridViewImageColumn Manga_Data_Mn02;
@@ -10211,7 +10209,7 @@ namespace AniDBClient
         private System.Windows.Forms.DataGridViewTextBoxColumn Manga_Data_Mn09;
         private System.Windows.Forms.DataGridViewImageColumn Manga_Data_Mn06;
         private System.Windows.Forms.DataGridViewImageColumn Manga_Data_Mn07;
-        private System.Windows.Forms.TabPage MainTabData_Mn10;
+        private System.Windows.Forms.TabPage MainTabData_ExportTabPage;
         private System.Windows.Forms.Button Anime_ExportBT02;
         private System.Windows.Forms.Button Anime_ExportBT01;
         private System.Windows.Forms.CheckBox Anime_ExportCH18;
@@ -10234,10 +10232,10 @@ namespace AniDBClient
         private System.Windows.Forms.CheckBox Anime_ExportCH01;
         private System.Windows.Forms.Label Anime_ExportLB01;
         private System.Windows.Forms.NumericUpDown Options_Reset;
-        private System.Windows.Forms.Label Options_LB68;
+        private System.Windows.Forms.Label Options_ResetCountLabel;
         private System.Windows.Forms.NumericUpDown Options_ServerPort;
         private System.Windows.Forms.NumericUpDown Options_LocalPort;
-        private System.Windows.Forms.CheckBox Options_CH13;
+        private System.Windows.Forms.CheckBox Options_ClassicFolderSelectDialogCheckBox;
         private System.Windows.Forms.Button Options_ExtensionRem;
         private System.Windows.Forms.Button Rules_FilesRulesMoveDel;
         private System.Windows.Forms.ToolTip ToolTipAnimeRel;
@@ -10248,10 +10246,10 @@ namespace AniDBClient
         private System.Windows.Forms.DataGridViewCheckBoxColumn Manga_ChaptersCM04;
         private System.Windows.Forms.DataGridViewTextBoxColumn Manga_ChaptersCM05;
         private System.Windows.Forms.DataGridViewTextBoxColumn Manga_ChaptersCM06;
-        private System.Windows.Forms.GroupBox Rules_GR04;
+        private System.Windows.Forms.GroupBox Rules_ExportInfoGroupBox;
         private System.Windows.Forms.Button Rules_InfoDell;
-        private System.Windows.Forms.RadioButton Rules_InfoRB02;
-        private System.Windows.Forms.RadioButton Rules_InfoRB01;
+        private System.Windows.Forms.RadioButton Rules_InfoRenameDoNothingRadioButton;
+        private System.Windows.Forms.RadioButton Rules_InfoExportRadioButton;
         private System.Windows.Forms.Button Rules_InfoAdd;
         private System.Windows.Forms.ComboBox Rules_InfoC;
         private System.Windows.Forms.TextBox Rules_Info;
@@ -10259,25 +10257,25 @@ namespace AniDBClient
         private System.Windows.Forms.NumericUpDown Manga_Tx07;
         private System.Windows.Forms.NumericUpDown Manga_Tx04;
         private System.Windows.Forms.GroupBox Manga_Gr04;
-        private System.Windows.Forms.Label Options_LB51;
+        private System.Windows.Forms.Label Options_MangaLabel;
         private System.Windows.Forms.Label Options_LB65;
-        private System.Windows.Forms.Label Options_LB53;
+        private System.Windows.Forms.Label Options_VolumesLabel;
         private System.Windows.Forms.Label Options_LB54;
-        private System.Windows.Forms.Label Options_LB59;
+        private System.Windows.Forms.Label Options_ReadLabel;
         private System.Windows.Forms.Label Options_LB56;
-        private System.Windows.Forms.Label Options_LB55;
+        private System.Windows.Forms.Label Options_ChaptersLabel;
         private System.Windows.Forms.Label Options_LB64;
-        private System.Windows.Forms.Label Options_LB61;
+        private System.Windows.Forms.Label Options_TotalPagesLabel;
         private System.Windows.Forms.Label Options_LB62;
-        private System.Windows.Forms.Label Options_LB63;
+        private System.Windows.Forms.Label Options_AdultLabel;
         private System.Windows.Forms.Label Options_LB58;
-        private System.Windows.Forms.Label Options_LB67;
+        private System.Windows.Forms.Label Options_ReadLabel2;
         private System.Windows.Forms.Label Options_LB60;
-        private System.Windows.Forms.Label Options_LB57;
+        private System.Windows.Forms.Label Options_FileSizeLabel;
         private System.Windows.Forms.Label Options_LB52;
         private System.Windows.Forms.Button Options_MyListRefreshManga;
-        private System.Windows.Forms.CheckBox Options_CH14;
-        private System.Windows.Forms.CheckBox Options_CH15;
+        private System.Windows.Forms.CheckBox Options_ShowAdultOnWelcomeScreenCheckBox;
+        private System.Windows.Forms.CheckBox Options_AddSameFilesMultipleTimesCheckBox;
         private System.Windows.Forms.Label Manga_LB44;
         private System.Windows.Forms.TextBox Manga_Tx22;
         private System.Windows.Forms.LinkLabel Manga_LB45;
@@ -10292,15 +10290,15 @@ namespace AniDBClient
         private System.Windows.Forms.Button Options_Color07;
         private System.Windows.Forms.Button Options_Color06;
         private System.Windows.Forms.Button Options_Color10;
-        private System.Windows.Forms.CheckBox Options_CH17;
-        private System.Windows.Forms.CheckBox Options_CH16;
+        private System.Windows.Forms.CheckBox Options_FlatStyleCheckBox;
+        private System.Windows.Forms.CheckBox Options_MinimizeToTrayCheckBox;
         private System.Windows.Forms.NotifyIcon Notify;
-        private System.Windows.Forms.CheckBox Rules_CH04;
+        private System.Windows.Forms.CheckBox Rules_DeleteSourceIfEmptyCheckBox;
         private System.Windows.Forms.Label DataFiles_LB06;
-        private System.Windows.Forms.CheckBox Options_CH18;
+        private System.Windows.Forms.CheckBox Options_DontGenerateWelcomeSceenCheckBox;
         private System.Windows.Forms.Button DataFiles_Bt22;
         private System.Windows.Forms.NumericUpDown Options_Backup;
-        private System.Windows.Forms.Label Options_LB69;
+        private System.Windows.Forms.Label Options_DbBackupCountLabel;
         private System.Windows.Forms.ComboBox Anime_CB01;
         private System.Windows.Forms.ComboBox Anime_CB02;
         private System.Windows.Forms.ComboBox Manga_CB01;
@@ -10317,7 +10315,7 @@ namespace AniDBClient
         private System.Windows.Forms.TextBox Manga_Tx23;
         private System.Windows.Forms.LinkLabel Manga_LB53;
         private System.Windows.Forms.LinkLabel Manga_LB52;
-        private System.Windows.Forms.Label Options_CH20;
+        private System.Windows.Forms.Label Options_CheckNewMangaChaptersLabel;
         private System.Windows.Forms.Button Options_CH12BT;
         private System.Windows.Forms.DataGridViewTextBoxColumn DataFiles_Mn00;
         private System.Windows.Forms.DataGridViewTextBoxColumn DataFiles_Mn01;
@@ -10340,14 +10338,14 @@ namespace AniDBClient
         private System.Windows.Forms.DataGridView MyListAnime;
         private System.Windows.Forms.PictureBox Anime_DateOK;
         private System.Windows.Forms.ComboBox Options_Network;
-        private System.Windows.Forms.Label Options_LB11;
+        private System.Windows.Forms.Label Options_NetworkLabel;
         private System.Windows.Forms.ComboBox Options_ExtensionList;
-        private System.Windows.Forms.Label Options_LB12;
+        private System.Windows.Forms.Label Options_FileTypesLabel;
         private System.Windows.Forms.ComboBox Watcher_List;
         private System.Windows.Forms.CheckBox Watcher_CH01;
         private System.Windows.Forms.Button Watcher_Delete;
         private System.Windows.Forms.Button Watcher_Add;
-        private System.Windows.Forms.Label Options_LB13;
+        private System.Windows.Forms.Label Options_Hash_WatcherLabel;
         private System.Windows.Forms.DataGridViewTextBoxColumn DataAnime_Mn00;
         private System.Windows.Forms.DataGridViewImageColumn DataAnime_Mn01;
         private System.Windows.Forms.DataGridViewImageColumn DataAnime_Mn02;
@@ -10394,17 +10392,19 @@ namespace AniDBClient
         private System.Windows.Forms.GroupBox Options_GR05;
         private System.Windows.Forms.GroupBox Options_GR03;
         private System.Windows.Forms.GroupBox Options_GR02;
-        private System.Windows.Forms.CheckBox Options_CH19;
+        private System.Windows.Forms.CheckBox Options_DetectMyListStatusCheckBox;
         private System.Windows.Forms.Button Options_SetingsDefault;
-        private System.Windows.Forms.CheckBox Options_CH21;
+        private System.Windows.Forms.CheckBox Options_SaveLogsToFilesCheckBox;
         private System.Windows.Forms.GroupBox Options_GR06;
-        private System.Windows.Forms.CheckBox Options_CH24;
-        private System.Windows.Forms.Label Options_CH23;
-        private System.Windows.Forms.Label Options_CH22;
+        private System.Windows.Forms.CheckBox Options_LaunchWebServerOnStartupCheckBox;
+        private System.Windows.Forms.Label Options_MpcHcPortLabel;
+        private System.Windows.Forms.Label Options_WebServerPortLabel;
         private System.Windows.Forms.Button Options_CH13BT;
         private System.Windows.Forms.NumericUpDown WebServer_MPCHC;
         private System.Windows.Forms.NumericUpDown WebServer_Port;
         private System.Windows.Forms.Button Options_w8Hack;
+        public System.Windows.Forms.ListBox LogTasks;
+        public System.Windows.Forms.Label StatusBar_Mn02;
     }
 }
 

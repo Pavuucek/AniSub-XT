@@ -106,8 +106,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AniDBClient.cs" />
-    <Compile Include="EDCrypt.cs" />
+    <Compile Include="Utilities\AniDbComm.cs" />
+    <Compile Include="Helpers\OtherHelpers.cs" />
+    <Compile Include="Utilities\AniDbClient2.cs" />
+    <Compile Include="Utilities\AniDbMsgs.cs" />
+    <Compile Include="Utilities\ControlSorter.cs" />
+    <Compile Include="Utilities\Database.cs" />
+    <Compile Include="Utilities\EDCrypt.cs" />
     <Compile Include="Forms\Backups.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,10 +148,10 @@
     <Compile Include="Forms\LogIn.Designer.cs">
       <DependentUpon>LogIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main.cs">
+    <Compile Include="Forms\Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main.Designer.cs">
+    <Compile Include="Forms\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Lang\Language.Designer.cs">
@@ -156,11 +161,14 @@
     </Compile>
     <Compile Include="7z\Ole32.cs" />
     <Compile Include="7z\Pack.cs" />
-    <Compile Include="PN.cs">
+    <Compile Include="Helpers\ImageHelpers.cs" />
+    <Compile Include="Utilities\Global.cs" />
+    <Compile Include="Utilities\NPanel.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Helpers\StringHelpers.cs" />
     <EmbeddedResource Include="Forms\Backups.resx">
       <DependentUpon>Backups.cs</DependentUpon>
     </EmbeddedResource>
@@ -178,7 +186,7 @@
     <EmbeddedResource Include="Forms\Tags.resx">
       <DependentUpon>Tags.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main.resx">
+    <EmbeddedResource Include="Forms\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -212,7 +220,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Settings.cs" />
+    <Compile Include="Helpers\ControlHelpers.cs" />
+    <Compile Include="Helpers\FileHelpers.cs" />
+    <Compile Include="Utilities\Logger.cs" />
+    <Compile Include="Utilities\NodeSorter.cs" />
+    <Compile Include="Utilities\Settings.cs" />
     <Compile Include="7z\SevenZipFormat.cs" />
     <Compile Include="7z\SevenZipInterface.cs" />
     <Compile Include="ShellContextMenu.cs" />

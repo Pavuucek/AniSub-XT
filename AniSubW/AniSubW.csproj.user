@@ -3,4 +3,10 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <StartArguments>D:\Scripts\C#\AniSub\AniDB\bin\AniDBClient\Accounts\yoruichi11\yoruichi11.mdb</StartArguments>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <StartArguments>D:\Scripts\C#\AniSub\AniDB\bin\AniDBClient\Accounts\yoruichi11\yoruichi11.mdb</StartArguments>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <StartArguments>D:\Scripts\C#\AniSub\AniDB\bin\AniDBClient\Accounts\yoruichi11\yoruichi11.mdb</StartArguments>
+  </PropertyGroup>
 </Project>

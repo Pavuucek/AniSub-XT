@@ -13,4 +13,10 @@
     <FallbackCulture>en-US</FallbackCulture>
     <VerifyUploadedFiles>false</VerifyUploadedFiles>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <StartArguments>d:\Scripts\C#\AniSub\AniDB\bin\AniDBClient\Accounts\Yoruichi11\Yoruichi11.mdb%2afull%2afull</StartArguments>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <StartArguments>d:\Scripts\C#\AniSub\AniDB\bin\AniDBClient\Accounts\Yoruichi11\Yoruichi11.mdb%2afull%2afull</StartArguments>
+  </PropertyGroup>
 </Project>

@@ -108,9 +108,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>.\WinAPI.dll</HintPath>
     </Reference>
-    <Reference Include="ZedGraph">
-      <HintPath>.\ZedGraph.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Hash\Ed2k.cs" />
@@ -308,6 +305,10 @@
     <ProjectReference Include="..\External\HttpServer\HttpServer.csproj">
       <Project>{455e7d70-1c85-4d7f-9f01-dc801b8b8c34}</Project>
       <Name>HttpServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\External\ZedGraph\source\ZedGraph.csproj">
+      <Project>{2541686b-1673-43bf-af89-3163945db009}</Project>
+      <Name>ZedGraph</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

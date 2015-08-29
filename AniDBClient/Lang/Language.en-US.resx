@@ -1,0 +1,1468 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Add_Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Add_Id" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="AnimeData_Episode" xml:space="preserve">
+    <value>Episode</value>
+  </data>
+  <data name="AnimeData_Name" xml:space="preserve">
+    <value>Title *</value>
+  </data>
+  <data name="AnimeData_Length" xml:space="preserve">
+    <value>Length</value>
+  </data>
+  <data name="Anime_KanjiName" xml:space="preserve">
+    <value>Kanji title:</value>
+  </data>
+  <data name="Anime_Type" xml:space="preserve">
+    <value>Type:</value>
+  </data>
+  <data name="Anime_Year" xml:space="preserve">
+    <value>Year:</value>
+  </data>
+  <data name="Anime_Episodes" xml:space="preserve">
+    <value>Episodes:</value>
+  </data>
+  <data name="Anime_Genres" xml:space="preserve">
+    <value>Genres:</value>
+  </data>
+  <data name="DataAnime_Menu_Expand" xml:space="preserve">
+    <value>Expand</value>
+  </data>
+  <data name="DataAnime_Menu_Expand_Anime" xml:space="preserve">
+    <value>Expand anime</value>
+  </data>
+  <data name="DataAnime_Menu_Expand_Episodes" xml:space="preserve">
+    <value>Expand episodes</value>
+  </data>
+  <data name="DataAnime_Menu_Expand_All" xml:space="preserve">
+    <value>Expand all</value>
+  </data>
+  <data name="DataAnime_Menu_Expand_CollapseEpisodes" xml:space="preserve">
+    <value>Collapse episodes</value>
+  </data>
+  <data name="DataAnime_Menu_Expand_CollapseAllEpisodes" xml:space="preserve">
+    <value>Collapse all episodes</value>
+  </data>
+  <data name="DataAnime_Menu_Expand_CollapseAll" xml:space="preserve">
+    <value>Collapse all</value>
+  </data>
+  <data name="DataAnime_Menu_MyList" xml:space="preserve">
+    <value>MyList</value>
+  </data>
+  <data name="DataAnime_Menu_MyListAddModify" xml:space="preserve">
+    <value>Add / Modify</value>
+  </data>
+  <data name="DataAnime_Menu_MyList_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DataAnime_Menu_MyList_Watched" xml:space="preserve">
+    <value>Watched</value>
+  </data>
+  <data name="DataAnime_Menu_MyListUpdate" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="DataAnime_Menu_MyListCheck" xml:space="preserve">
+    <value>Check</value>
+  </data>
+  <data name="DataAnime_Menu_Database" xml:space="preserve">
+    <value>Database</value>
+  </data>
+  <data name="DataAnime_Menu_Database_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DataAnime_JapName" xml:space="preserve">
+    <value>Title JAP *</value>
+  </data>
+  <data name="DataAnime_EngName" xml:space="preserve">
+    <value>Title ENG</value>
+  </data>
+  <data name="DataAnime_Year" xml:space="preserve">
+    <value>Year</value>
+  </data>
+  <data name="DataAnime_Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="DataAnime_Dub" xml:space="preserve">
+    <value>Dub</value>
+  </data>
+  <data name="DataAnime_Sub" xml:space="preserve">
+    <value>Sub</value>
+  </data>
+  <data name="DataAnime_Episodes" xml:space="preserve">
+    <value>Episodes</value>
+  </data>
+  <data name="DataAnime_Size" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="DataAnime_Length" xml:space="preserve">
+    <value>Length</value>
+  </data>
+  <data name="DataAnime_Watched" xml:space="preserve">
+    <value>Watched</value>
+  </data>
+  <data name="DataAnime_Storage" xml:space="preserve">
+    <value>Storage</value>
+  </data>
+  <data name="DataAnime_Source" xml:space="preserve">
+    <value>Source</value>
+  </data>
+  <data name="DataFiles_Bt00_ToolTip" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="DataFiles_Bt01_ToolTip" xml:space="preserve">
+    <value>Filter: none</value>
+  </data>
+  <data name="DataFiles_Bt02_ToolTip" xml:space="preserve">
+    <value>Filter: storage on HDD</value>
+  </data>
+  <data name="DataFiles_Bt03_ToolTip" xml:space="preserve">
+    <value>Filter: storage on CD/DVD</value>
+  </data>
+  <data name="DataFiles_Bt04_ToolTip" xml:space="preserve">
+    <value>Filter: deleted</value>
+  </data>
+  <data name="DataFiles_Bt05_ToolTip" xml:space="preserve">
+    <value>Filter: unkonwn storage</value>
+  </data>
+  <data name="DataFiles_Bt06_ToolTip" xml:space="preserve">
+    <value>Filter: none storage</value>
+  </data>
+  <data name="DataFiles_Bt07_ToolTip" xml:space="preserve">
+    <value>Filter: none other</value>
+  </data>
+  <data name="DataFiles_Bt08_ToolTip" xml:space="preserve">
+    <value>Filter: none source</value>
+  </data>
+  <data name="DataFiles_Bt09_ToolTip" xml:space="preserve">
+    <value>Filter: unwatched</value>
+  </data>
+  <data name="DataFiles_Bt10_ToolTip" xml:space="preserve">
+    <value>Filter: watched</value>
+  </data>
+  <data name="DataFiles_Bt11_ToolTip" xml:space="preserve">
+    <value>Filter: Blue-ray</value>
+  </data>
+  <data name="DataFiles_Bt12_ToolTip" xml:space="preserve">
+    <value>Filter: HDTV</value>
+  </data>
+  <data name="DataFiles_Bt13_ToolTip" xml:space="preserve">
+    <value>Filter: DVD</value>
+  </data>
+  <data name="DataFiles_Bt14_ToolTip" xml:space="preserve">
+    <value>Filter: DTV</value>
+  </data>
+  <data name="DataFiles_Bt15_ToolTip" xml:space="preserve">
+    <value>Filter: www</value>
+  </data>
+  <data name="DataFiles_Bt16_ToolTip" xml:space="preserve">
+    <value>Filter: ?</value>
+  </data>
+  <data name="DataFiles_Bt17_ToolTip" xml:space="preserve">
+    <value>Filter: in MyList</value>
+  </data>
+  <data name="DataFiles_Bt18_ToolTip" xml:space="preserve">
+    <value>Filter: not in MyList</value>
+  </data>
+  <data name="DataFiles_Menu_Rename" xml:space="preserve">
+    <value>Rename</value>
+  </data>
+  <data name="DataFiles_Anime" xml:space="preserve">
+    <value>Anime *</value>
+  </data>
+  <data name="DataFiles_Episode" xml:space="preserve">
+    <value>Episode</value>
+  </data>
+  <data name="DataFiles_File" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="DataFiles_Storage2" xml:space="preserve">
+    <value>Storage</value>
+  </data>
+  <data name="DataFiles_Source2" xml:space="preserve">
+    <value>Source</value>
+  </data>
+  <data name="DataFiles_Group" xml:space="preserve">
+    <value>Group</value>
+  </data>
+  <data name="DataFiles_Path2" xml:space="preserve">
+    <value>Path *</value>
+  </data>
+  <data name="DataFiles_Size" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="DataFiles_Today" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="DataFiles_Yesterday" xml:space="preserve">
+    <value>Yesterday</value>
+  </data>
+  <data name="DataFiles_Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="DataFiles_Nothing" xml:space="preserve">
+    <value>Nothing</value>
+  </data>
+  <data name="DataSearch_Watched" xml:space="preserve">
+    <value>Watched</value>
+  </data>
+  <data name="DataSearch_New" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="DataSearch_AnimeId" xml:space="preserve">
+    <value>ID Anime</value>
+  </data>
+  <data name="DataSearch_EpisodeId" xml:space="preserve">
+    <value>ID Episode</value>
+  </data>
+  <data name="DataSearch_FileId" xml:space="preserve">
+    <value>ID File</value>
+  </data>
+  <data name="DataSearch_MyListId" xml:space="preserve">
+    <value>ID MyList</value>
+  </data>
+  <data name="DataSearch_Episodes" xml:space="preserve">
+    <value>Episodes</value>
+  </data>
+  <data name="DataSearch_AnimeName" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="DataSearch_EpisodeName" xml:space="preserve">
+    <value>Episode title</value>
+  </data>
+  <data name="DataSearch_Storage" xml:space="preserve">
+    <value>Storage</value>
+  </data>
+  <data name="DataSearch_Source" xml:space="preserve">
+    <value>Source</value>
+  </data>
+  <data name="DataSearch_Other" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="DataSearch_AnimeType" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="DataSearch_FileType" xml:space="preserve">
+    <value>File type</value>
+  </data>
+  <data name="DataSearch_Dub" xml:space="preserve">
+    <value>Dub</value>
+  </data>
+  <data name="DataSearch_Sub" xml:space="preserve">
+    <value>Sub</value>
+  </data>
+  <data name="DataSearch_Group" xml:space="preserve">
+    <value>Group</value>
+  </data>
+  <data name="DataSearch_Genres" xml:space="preserve">
+    <value>Genres</value>
+  </data>
+  <data name="DataSearch_Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="Hash" xml:space="preserve">
+    <value>Hash</value>
+  </data>
+  <data name="Hash_Path" xml:space="preserve">
+    <value>Path:</value>
+  </data>
+  <data name="Hash_Stop_Total" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="LogIn_AutoLogin" xml:space="preserve">
+    <value>Remember me</value>
+  </data>
+  <data name="LogIn_LogIn" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="LogIn_Register" xml:space="preserve">
+    <value>New database</value>
+  </data>
+  <data name="LogTasksDel" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="MainTabData_Files" xml:space="preserve">
+    <value>Files</value>
+  </data>
+  <data name="MainTabData_Anime" xml:space="preserve">
+    <value>Anime</value>
+  </data>
+  <data name="MainTabData_Anime2" xml:space="preserve">
+    <value>Anime</value>
+  </data>
+  <data name="MainTabData_Genres" xml:space="preserve">
+    <value>Genres</value>
+  </data>
+  <data name="MainTabData_Groups" xml:space="preserve">
+    <value>Groups</value>
+  </data>
+  <data name="MainTabData_Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="MainTabLog_AniDb" xml:space="preserve">
+    <value>AniDB</value>
+  </data>
+  <data name="MainTabLog_Sql" xml:space="preserve">
+    <value>SQL</value>
+  </data>
+  <data name="MainTabLog_Tasks" xml:space="preserve">
+    <value>Tasks</value>
+  </data>
+  <data name="MainTab_SettingsPage" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="MainTab_RulesPage" xml:space="preserve">
+    <value>Rules</value>
+  </data>
+  <data name="MainTab_AnimePage" xml:space="preserve">
+    <value>Anime</value>
+  </data>
+  <data name="MainTab_LogPage" xml:space="preserve">
+    <value>Log</value>
+  </data>
+  <data name="MainTabData_MyList" xml:space="preserve">
+    <value>MyList</value>
+  </data>
+  <data name="MainTab_HashPage" xml:space="preserve">
+    <value>Hash</value>
+  </data>
+  <data name="MessageBox_Account" xml:space="preserve">
+    <value>Account...</value>
+  </data>
+  <data name="MessageBox_AccountLoadFailed" xml:space="preserve">
+    <value>Filed to load accout data.</value>
+  </data>
+  <data name="MessageBox_Delete" xml:space="preserve">
+    <value>Delete...</value>
+  </data>
+  <data name="MessageBox_DeleteI" xml:space="preserve">
+    <value>Do you realy want to delete record(s) from database?</value>
+  </data>
+  <data name="MessageBox_LogIn" xml:space="preserve">
+    <value>Account...</value>
+  </data>
+  <data name="MessageBox_LogInI" xml:space="preserve">
+    <value>Wrong password!</value>
+  </data>
+  <data name="MessageBox_Register" xml:space="preserve">
+    <value>Account...</value>
+  </data>
+  <data name="MessageBox_RegisterE" xml:space="preserve">
+    <value>Account...</value>
+  </data>
+  <data name="MessageBox_RegisterEI" xml:space="preserve">
+    <value>The username already exist.</value>
+  </data>
+  <data name="MessageBox_RegisterI" xml:space="preserve">
+    <value>Account was created.</value>
+  </data>
+  <data name="MessageBox_Rename" xml:space="preserve">
+    <value>Rewrite...</value>
+  </data>
+  <data name="MessageBox_RenameI" xml:space="preserve">
+    <value>Do you realay want to rewrite file?</value>
+  </data>
+  <data name="Options_AccountChange" xml:space="preserve">
+    <value>Log out</value>
+  </data>
+  <data name="Options_AutoAddToMyList" xml:space="preserve">
+    <value>Add files to MyList automatically</value>
+  </data>
+  <data name="Options_Watched" xml:space="preserve">
+    <value>Watched</value>
+  </data>
+  <data name="Options_CheckUnknownFiles" xml:space="preserve">
+    <value>Check unknown files</value>
+  </data>
+  <data name="Options_DownloadAllAnimeEpisodes" xml:space="preserve">
+    <value>Download all episodes to anime</value>
+  </data>
+  <data name="Options_DownloadAllFiles" xml:space="preserve">
+    <value>Download all files to episodes</value>
+  </data>
+  <data name="Options_DeleteDuplicates" xml:space="preserve">
+    <value>Delete duplically files</value>
+  </data>
+  <data name="Options_ExtensionAdd" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Options_Interface" xml:space="preserve">
+    <value>Interface</value>
+  </data>
+  <data name="Options_MyList" xml:space="preserve">
+    <value>MyList</value>
+  </data>
+  <data name="Options_FileTypes" xml:space="preserve">
+    <value>Files type</value>
+  </data>
+  <data name="Options_MyList2" xml:space="preserve">
+    <value>MyList</value>
+  </data>
+  <data name="Options_Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="Options_lblServer" xml:space="preserve">
+    <value>Server:</value>
+  </data>
+  <data name="Options_lblPort" xml:space="preserve">
+    <value>Server port:</value>
+  </data>
+  <data name="Options_lblUserName" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="Options_lblPassword" xml:space="preserve">
+    <value>Password:</value>
+  </data>
+  <data name="Options_lblTimeout" xml:space="preserve">
+    <value>Timeout:</value>
+  </data>
+  <data name="Options_lblDelay" xml:space="preserve">
+    <value>Delay:</value>
+  </data>
+  <data name="Options_lblStatus" xml:space="preserve">
+    <value>Status:</value>
+  </data>
+  <data name="Options_lblSource" xml:space="preserve">
+    <value>Source:</value>
+  </data>
+  <data name="Options_lblStorage" xml:space="preserve">
+    <value>Storage:</value>
+  </data>
+  <data name="Options_lblOther" xml:space="preserve">
+    <value>Other:</value>
+  </data>
+  <data name="Options_lblAnime" xml:space="preserve">
+    <value>Anime:</value>
+  </data>
+  <data name="Options_lblEpisodes" xml:space="preserve">
+    <value>Episodes:</value>
+  </data>
+  <data name="Options_lblFiles" xml:space="preserve">
+    <value>Files:</value>
+  </data>
+  <data name="Options_lblSizeOfFiles" xml:space="preserve">
+    <value>Size of files:</value>
+  </data>
+  <data name="Options_lblWatchedAnime" xml:space="preserve">
+    <value>Watched anime:</value>
+  </data>
+  <data name="Options_lblSizeOfWatchedAnime" xml:space="preserve">
+    <value>Size of watched anime</value>
+  </data>
+  <data name="Options_lblType" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Options_lblCount" xml:space="preserve">
+    <value>Count</value>
+  </data>
+  <data name="Options_lblWatched" xml:space="preserve">
+    <value>Watched</value>
+  </data>
+  <data name="Options_lblSize2" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="Options_lblLength" xml:space="preserve">
+    <value>Length</value>
+  </data>
+  <data name="Options_lblStatus2" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Options_Count2" xml:space="preserve">
+    <value>Count</value>
+  </data>
+  <data name="Options_lblSize3" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="Options_lblLength2" xml:space="preserve">
+    <value>Length</value>
+  </data>
+  <data name="Options_lblWatched2" xml:space="preserve">
+    <value>Watched</value>
+  </data>
+  <data name="Options_lblAnime2" xml:space="preserve">
+    <value>Anime:</value>
+  </data>
+  <data name="Options_lblEpisodes2" xml:space="preserve">
+    <value>Episodes:</value>
+  </data>
+  <data name="Options_lblFiles2" xml:space="preserve">
+    <value>Files:</value>
+  </data>
+  <data name="Options_lblTotalSize" xml:space="preserve">
+    <value>Total size:</value>
+  </data>
+  <data name="Options_lblAddedAnime" xml:space="preserve">
+    <value>Added anime:</value>
+  </data>
+  <data name="Options_lblAddedEpisodes" xml:space="preserve">
+    <value>Added episodes:</value>
+  </data>
+  <data name="Options_lblAddedFiles" xml:space="preserve">
+    <value>Added files</value>
+  </data>
+  <data name="Options_lblAddedGroups" xml:space="preserve">
+    <value>Added groups:</value>
+  </data>
+  <data name="Options_lblLeech" xml:space="preserve">
+    <value>Leech:</value>
+  </data>
+  <data name="Options_lblGlory" xml:space="preserve">
+    <value>Glory:</value>
+  </data>
+  <data name="Options_lblAniDbWatched" xml:space="preserve">
+    <value>AniDB watched:</value>
+  </data>
+  <data name="Options_lblLocalMyList" xml:space="preserve">
+    <value>Local MyList</value>
+  </data>
+  <data name="Options_lblAniDbMyList" xml:space="preserve">
+    <value>AniDB Mylist</value>
+  </data>
+  <data name="Options_lblAniDbMyList2" xml:space="preserve">
+    <value>AniDB MyList:</value>
+  </data>
+  <data name="Options_lblWatched3" xml:space="preserve">
+    <value>Watched:</value>
+  </data>
+  <data name="Options_lblVotes" xml:space="preserve">
+    <value>Votes:</value>
+  </data>
+  <data name="Options_lblReviews" xml:space="preserve">
+    <value>Reviews:</value>
+  </data>
+  <data name="Options_lblLocalPort" xml:space="preserve">
+    <value>Local port:</value>
+  </data>
+  <data name="Options_lblGroups" xml:space="preserve">
+    <value>Groups:</value>
+  </data>
+  <data name="Options_lblTotalLength" xml:space="preserve">
+    <value>Total lenght:</value>
+  </data>
+  <data name="Options_MylistOk" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Options_MyListRefresh" xml:space="preserve">
+    <value>Update statistics (full)</value>
+  </data>
+  <data name="Options_SetingsLoad" xml:space="preserve">
+    <value>Load settings</value>
+  </data>
+  <data name="Options_SetingsSave" xml:space="preserve">
+    <value>Save settings</value>
+  </data>
+  <data name="Options_StartComunicationOff" xml:space="preserve">
+    <value>Connect</value>
+  </data>
+  <data name="Options_StartComunicationOn" xml:space="preserve">
+    <value>Disconnect</value>
+  </data>
+  <data name="Options_lblTvSeries" xml:space="preserve">
+    <value>TV Series:</value>
+  </data>
+  <data name="Options_lblTvSpecials" xml:space="preserve">
+    <value>TV Specials:</value>
+  </data>
+  <data name="Options_lblMovies" xml:space="preserve">
+    <value>Movies:</value>
+  </data>
+  <data name="Options_lblOva" xml:space="preserve">
+    <value>OVA:</value>
+  </data>
+  <data name="Options_lblWww" xml:space="preserve">
+    <value>Www:</value>
+  </data>
+  <data name="Options_lblOthers" xml:space="preserve">
+    <value>Others:</value>
+  </data>
+  <data name="Options_lblUnknown" xml:space="preserve">
+    <value>Unknown:</value>
+  </data>
+  <data name="Options_lblSummary" xml:space="preserve">
+    <value>Summary:</value>
+  </data>
+  <data name="Options_lblSummary2" xml:space="preserve">
+    <value>Summary:</value>
+  </data>
+  <data name="Options_lblUnknown2" xml:space="preserve">
+    <value>Unknown:</value>
+  </data>
+  <data name="Options_lblOnHdd" xml:space="preserve">
+    <value>On HDD:</value>
+  </data>
+  <data name="Options_lblOnOptical" xml:space="preserve">
+    <value>Na CD/DVD:</value>
+  </data>
+  <data name="Options_lblDeleted" xml:space="preserve">
+    <value>Deleted:</value>
+  </data>
+  <data name="Rules_FilesRulesMoveAdd" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Rules_FilesRulesMoveDel" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Rules_FilesRulesMoveMove" xml:space="preserve">
+    <value>Move</value>
+  </data>
+  <data name="Rules_FilesRulesMoveCopy" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="Rules_FilesRulesMoveDoNothing" xml:space="preserve">
+    <value>Do nothing</value>
+  </data>
+  <data name="Rules_FilesRulesRenameAdd" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Rules_FilesRulesRenameDel" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Rules_RulesForFileRenaming" xml:space="preserve">
+    <value>Rules for files renaming</value>
+  </data>
+  <data name="Rules_RulesForCreatingDirectories" xml:space="preserve">
+    <value>Rules for creating directories</value>
+  </data>
+  <data name="Rules_RulesForCharacterReplacing" xml:space="preserve">
+    <value>Rules for character replacing</value>
+  </data>
+  <data name="StatusBar_Disconnected" xml:space="preserve">
+    <value>Disconnected</value>
+  </data>
+  <data name="StatusBar_ConnectLBOn" xml:space="preserve">
+    <value>Connected</value>
+  </data>
+  <data name="StatusBar_TasksRemaining" xml:space="preserve">
+    <value>Tasks remain:</value>
+  </data>
+  <data name="Hash_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Hash_File" xml:space="preserve">
+    <value>Parse</value>
+  </data>
+  <data name="MessageBox_DB" xml:space="preserve">
+    <value>The file OriginalDatabase.mdb doesn't exist!</value>
+  </data>
+  <data name="Options_lblMusicVideo" xml:space="preserve">
+    <value>Music Video</value>
+  </data>
+  <data name="Options_lblStorage2" xml:space="preserve">
+    <value>Storage</value>
+  </data>
+  <data name="Options_lblSource2" xml:space="preserve">
+    <value>Source</value>
+  </data>
+  <data name="Rules_FilesRulesRenameRename" xml:space="preserve">
+    <value>Rename</value>
+  </data>
+  <data name="Rules_FilesRulesRenameDoNothing" xml:space="preserve">
+    <value>Do nothing</value>
+  </data>
+  <data name="Rules_AutomaticRenaming" xml:space="preserve">
+    <value>Automatic renaming</value>
+  </data>
+  <data name="Rules_DontMoveToAnotherDisk" xml:space="preserve">
+    <value>Do not copy/move to another disk</value>
+  </data>
+  <data name="Rules_ReplaceExisting" xml:space="preserve">
+    <value>Replace existing files</value>
+  </data>
+  <data name="DataFilesTree_Clear2" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="DataFiles_Menu_Win" xml:space="preserve">
+    <value>Win</value>
+  </data>
+  <data name="DataSQL_Filter" xml:space="preserve">
+    <value>Do it!</value>
+  </data>
+  <data name="MainTab_SqlPage" xml:space="preserve">
+    <value>SQL</value>
+  </data>
+  <data name="MainTabLog_Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Options_lblAdult2" xml:space="preserve">
+    <value>18+:</value>
+  </data>
+  <data name="DataFiles_Menu_Download" xml:space="preserve">
+    <value>Re-Download</value>
+  </data>
+  <data name="DataFiles_Menu_DownloadAnime" xml:space="preserve">
+    <value>Anime Data</value>
+  </data>
+  <data name="DataFiles_Menu_DownloadEpisodes" xml:space="preserve">
+    <value>Episodes Data</value>
+  </data>
+  <data name="DataFiles_Menu_DownloadFiles" xml:space="preserve">
+    <value>Files Data</value>
+  </data>
+  <data name="DataFiles_Menu_DownloadMyList" xml:space="preserve">
+    <value>MyList Data</value>
+  </data>
+  <data name="DataFiles_Menu_DownloadAll" xml:space="preserve">
+    <value>All Data</value>
+  </data>
+  <data name="Options_CompactAndRepairDb" xml:space="preserve">
+    <value>Compact and repair database</value>
+  </data>
+  <data name="StatusBar_Status" xml:space="preserve">
+    <value>Status:</value>
+  </data>
+  <data name="StatusBar_Mn04_Off" xml:space="preserve">
+    <value>Complete</value>
+  </data>
+  <data name="StatusBar_Mn04_On" xml:space="preserve">
+    <value>Renaming files</value>
+  </data>
+  <data name="Rules_Tags" xml:space="preserve">
+    <value>Tags</value>
+  </data>
+  <data name="Anime_RelationTree_Sequel" xml:space="preserve">
+    <value>Sequel: </value>
+  </data>
+  <data name="Anime_RelationTree_Prequel" xml:space="preserve">
+    <value>Prequel: </value>
+  </data>
+  <data name="Anime_RelationTree_SameSetting" xml:space="preserve">
+    <value>Same setting: </value>
+  </data>
+  <data name="Anime_RelationTree_AlternativeSetting" xml:space="preserve">
+    <value>Alternative setting: </value>
+  </data>
+  <data name="Anime_RelationTree_AlternativeVersion" xml:space="preserve">
+    <value>Alternative version: </value>
+  </data>
+  <data name="Anime_RelationTree_Character" xml:space="preserve">
+    <value>Character: </value>
+  </data>
+  <data name="Anime_RelationTree_SideStory" xml:space="preserve">
+    <value>Side story: </value>
+  </data>
+  <data name="Anime_RelationTree_ParentStory" xml:space="preserve">
+    <value>Parent story: </value>
+  </data>
+  <data name="Anime_RelationTree_Summary" xml:space="preserve">
+    <value>Summary: </value>
+  </data>
+  <data name="Anime_RelationTree_FullStory" xml:space="preserve">
+    <value>Full story: </value>
+  </data>
+  <data name="Anime_RelationTree_Other" xml:space="preserve">
+    <value>Other: </value>
+  </data>
+  <data name="DataFiles_Menu_Export" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="DataFiles_Menu_ExportMd5" xml:space="preserve">
+    <value>MD5</value>
+  </data>
+  <data name="DataFiles_Menu_ExportCrc32" xml:space="preserve">
+    <value>CRC32</value>
+  </data>
+  <data name="DataFiles_Menu_ExportEd2k" xml:space="preserve">
+    <value>ED2K</value>
+  </data>
+  <data name="Anime_Date" xml:space="preserve">
+    <value>Date:</value>
+  </data>
+  <data name="LogIn_LogOut" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="LogIn_WelcomeMessage" xml:space="preserve">
+    <value>Welcome
+AniSub is client for communication with AniDB.
+AniSub is alternative client for AOM. AniSub is small, fast and also it is for low-end computers. It can do the same things as AOM. And it is much faster than any Java client.
+
+Before you can use AniSub, please fill your name and password:</value>
+  </data>
+  <data name="Rules_NumberPosition" xml:space="preserve">
+    <value>Number position:</value>
+  </data>
+  <data name="DataFiles_Menu_ExportSha1" xml:space="preserve">
+    <value>SHA1</value>
+  </data>
+  <data name="Hash_Waiting" xml:space="preserve">
+    <value>Waiting:</value>
+  </data>
+  <data name="StatusBar_Version" xml:space="preserve">
+    <value>Version: </value>
+  </data>
+  <data name="DataFiles_Name" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="DataFiles_Path" xml:space="preserve">
+    <value>Path:</value>
+  </data>
+  <data name="DataFiles_Storage" xml:space="preserve">
+    <value>Storage:</value>
+  </data>
+  <data name="DataFiles_Source" xml:space="preserve">
+    <value>Source:</value>
+  </data>
+  <data name="Watcher_Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Watcher_Enable" xml:space="preserve">
+    <value>Enable</value>
+  </data>
+  <data name="Watcher_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DataFiles_Menu_Rehash" xml:space="preserve">
+    <value>Rehash</value>
+  </data>
+  <data name="Options_Update" xml:space="preserve">
+    <value>Do it!</value>
+  </data>
+  <data name="Options_SaveSettingsOnExit" xml:space="preserve">
+    <value>After exit: save settings</value>
+  </data>
+  <data name="Options_MyListRefreshMin" xml:space="preserve">
+    <value>Update statistics (minimal)</value>
+  </data>
+  <data name="Options_MyListUpdate" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="DataFilesTree_Clear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="DataFilesTree_Expand" xml:space="preserve">
+    <value>Expand</value>
+  </data>
+  <data name="Hash_DeleteAll" xml:space="preserve">
+    <value>Delete All</value>
+  </data>
+  <data name="DataSql_Anime" xml:space="preserve">
+    <value>Anime</value>
+  </data>
+  <data name="DataSql_Episodes" xml:space="preserve">
+    <value>Episodes</value>
+  </data>
+  <data name="DataSql_Files" xml:space="preserve">
+    <value>Files</value>
+  </data>
+  <data name="DataSql_MyList" xml:space="preserve">
+    <value>MyList</value>
+  </data>
+  <data name="DataSql_Check" xml:space="preserve">
+    <value>Check</value>
+  </data>
+  <data name="DataFilesTree_FilesOnly" xml:space="preserve">
+    <value>Only files</value>
+  </data>
+  <data name="DataFiles_Unknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="AnimeTree_Adult" xml:space="preserve">
+    <value>18+</value>
+  </data>
+  <data name="MainTabManga_Manga" xml:space="preserve">
+    <value>Manga</value>
+  </data>
+  <data name="MainTabManga_NewManga" xml:space="preserve">
+    <value>New manga</value>
+  </data>
+  <data name="MainTab_MangaPage" xml:space="preserve">
+    <value>Manga</value>
+  </data>
+  <data name="Manga_Manga" xml:space="preserve">
+    <value>Manga</value>
+  </data>
+  <data name="Manga_Chapters" xml:space="preserve">
+    <value>Manga Chapters</value>
+  </data>
+  <data name="MessageBox_OutdatedVersion" xml:space="preserve">
+    <value>Client version is out dated!</value>
+  </data>
+  <data name="MessageBox_ClientBanned" xml:space="preserve">
+    <value>Client banned!</value>
+  </data>
+  <data name="MessageBox_LoginFailed" xml:space="preserve">
+    <value>Login failed!</value>
+  </data>
+  <data name="MessageBox_AniDbNotResponding" xml:space="preserve">
+    <value>AniDb is not responding!</value>
+  </data>
+  <data name="MessageBox_NewVersionAvailable" xml:space="preserve">
+    <value>New versions of AniSub</value>
+  </data>
+  <data name="MangaTree_Adult" xml:space="preserve">
+    <value>18+</value>
+  </data>
+  <data name="Manga_Chapter" xml:space="preserve">
+    <value>Chapter</value>
+  </data>
+  <data name="Manga_Data_Menu_Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Manga_Data_Volume" xml:space="preserve">
+    <value>Volume</value>
+  </data>
+  <data name="Manga_Data_Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="Manga_Data_Pages" xml:space="preserve">
+    <value>Pages</value>
+  </data>
+  <data name="Manga_Data_Size" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="Manga_Data_File" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="Manga_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Manga_Delete_Ch" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Manga_Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Manga_Manga2" xml:space="preserve">
+    <value>Manga</value>
+  </data>
+  <data name="Manga_Chapters2" xml:space="preserve">
+    <value>Manga Chapters</value>
+  </data>
+  <data name="Manga_Insert" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Manga_Insert_Ch" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Manga_MainName" xml:space="preserve">
+    <value>Main title</value>
+  </data>
+  <data name="Manga_JapName" xml:space="preserve">
+    <value>Japanese title</value>
+  </data>
+  <data name="Manga_EngName" xml:space="preserve">
+    <value>English titlee</value>
+  </data>
+  <data name="Manga_Year" xml:space="preserve">
+    <value>Year</value>
+  </data>
+  <data name="Manga_Adult" xml:space="preserve">
+    <value>18+</value>
+  </data>
+  <data name="Manga_Volume" xml:space="preserve">
+    <value>Volume</value>
+  </data>
+  <data name="Manga_lblMainName" xml:space="preserve">
+    <value>Main title</value>
+  </data>
+  <data name="Manga_lblJapName" xml:space="preserve">
+    <value>Japanese tittle</value>
+  </data>
+  <data name="Manga_lblEngName" xml:space="preserve">
+    <value>English title</value>
+  </data>
+  <data name="Manga_lblYear" xml:space="preserve">
+    <value>Year</value>
+  </data>
+  <data name="Manga_UpdatesId" xml:space="preserve">
+    <value>Manga Updates ID/URL</value>
+  </data>
+  <data name="Manga_TradersId" xml:space="preserve">
+    <value>Manga Traders ID/URL</value>
+  </data>
+  <data name="Manga_lblVolume" xml:space="preserve">
+    <value>Volume</value>
+  </data>
+  <data name="Manga_Picture" xml:space="preserve">
+    <value>Picture</value>
+  </data>
+  <data name="Manga_lblAdult" xml:space="preserve">
+    <value>18+</value>
+  </data>
+  <data name="Manga_lblGenres" xml:space="preserve">
+    <value>Genres</value>
+  </data>
+  <data name="Manga_lblVolume2" xml:space="preserve">
+    <value>Volume</value>
+  </data>
+  <data name="Manga_lblChapter" xml:space="preserve">
+    <value>Chapter</value>
+  </data>
+  <data name="Manga_File" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="Manga_ReleaseDate" xml:space="preserve">
+    <value>Date of release</value>
+  </data>
+  <data name="Manga_Read" xml:space="preserve">
+    <value>Read</value>
+  </data>
+  <data name="Manga_Pages" xml:space="preserve">
+    <value>Pages</value>
+  </data>
+  <data name="Manga_Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="Manga_Name" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="Manga_Update" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="Manga_Update_Ch" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="Manga_Author" xml:space="preserve">
+    <value>Author</value>
+  </data>
+  <data name="Manga_Artist" xml:space="preserve">
+    <value>Artist</value>
+  </data>
+  <data name="Manga_Author2" xml:space="preserve">
+    <value>Author</value>
+  </data>
+  <data name="Manga_Artist2" xml:space="preserve">
+    <value>Artist</value>
+  </data>
+  <data name="MainTabManga_MyList" xml:space="preserve">
+    <value>MyList</value>
+  </data>
+  <data name="Options_lblMyList" xml:space="preserve">
+    <value>MyList</value>
+  </data>
+  <data name="Options_lblManga" xml:space="preserve">
+    <value>Manga</value>
+  </data>
+  <data name="Options_lblVolumes" xml:space="preserve">
+    <value>Volumes</value>
+  </data>
+  <data name="Options_lblChapters" xml:space="preserve">
+    <value>Chapters</value>
+  </data>
+  <data name="Options_lblFileSize" xml:space="preserve">
+    <value>Size of files</value>
+  </data>
+  <data name="Options_lblRead" xml:space="preserve">
+    <value>Read</value>
+  </data>
+  <data name="Options_lblTotalPages" xml:space="preserve">
+    <value>Total pages</value>
+  </data>
+  <data name="Options_lblAdult" xml:space="preserve">
+    <value>18+</value>
+  </data>
+  <data name="Options_MyListRefreshManga" xml:space="preserve">
+    <value>Update statistics</value>
+  </data>
+  <data name="AnimeTree_Menu_DeleteAnime" xml:space="preserve">
+    <value>Delete Anime</value>
+  </data>
+  <data name="Anime_Length" xml:space="preserve">
+    <value>Length</value>
+  </data>
+  <data name="MessageBox_Anime" xml:space="preserve">
+    <value>Mylist information will not be deleted from AniDB. Do you realy want delete anime?</value>
+  </data>
+  <data name="DataFiles_Updating" xml:space="preserve">
+    <value>Updating...</value>
+  </data>
+  <data name="DataFiles_Bt20_ToolTip" xml:space="preserve">
+    <value>Check if files exists on hdd</value>
+  </data>
+  <data name="DataFiles_Bt21_ToolTip" xml:space="preserve">
+    <value>Generate filetree</value>
+  </data>
+  <data name="Manga_Data_Menu_Read" xml:space="preserve">
+    <value>Read</value>
+  </data>
+  <data name="Manga_Data_Menu_Unread" xml:space="preserve">
+    <value>Unread</value>
+  </data>
+  <data name="Manga_Data_Menu_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Manga_Tree_Menu_Delete" xml:space="preserve">
+    <value>Delete Manga</value>
+  </data>
+  <data name="Options_CreateBackup" xml:space="preserve">
+    <value>Create backup</value>
+  </data>
+  <data name="Options_RestoreBackup" xml:space="preserve">
+    <value>Restore from backup</value>
+  </data>
+  <data name="Anime_BT01" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="Anime_Tags" xml:space="preserve">
+    <value>Tags</value>
+  </data>
+  <data name="MainTabData_Others" xml:space="preserve">
+    <value>Others</value>
+  </data>
+  <data name="AnimeRating" xml:space="preserve">
+    <value>Rating</value>
+  </data>
+  <data name="Hash_FileHashing" xml:space="preserve">
+    <value>Hashing files</value>
+  </data>
+  <data name="Hash_Watcher" xml:space="preserve">
+    <value>Watch dog **</value>
+  </data>
+  <data name="MainTab_IndexPage" xml:space="preserve">
+    <value>Index</value>
+  </data>
+  <data name="MessageBox_ClearDatabase" xml:space="preserve">
+    <value>Are you sure you want clear whole your database?</value>
+  </data>
+  <data name="Options_ForceDbUpdate" xml:space="preserve">
+    <value>Force update database</value>
+  </data>
+  <data name="Options_DeleteDb" xml:space="preserve">
+    <value>Clear database</value>
+  </data>
+  <data name="Options_lblRead2" xml:space="preserve">
+    <value>Read</value>
+  </data>
+  <data name="Options_lblUnread" xml:space="preserve">
+    <value>Unread</value>
+  </data>
+  <data name="MainTabData_Graphs" xml:space="preserve">
+    <value>Graphs</value>
+  </data>
+  <data name="Zgc_WatchedTimeline" xml:space="preserve">
+    <value>Watched timeline</value>
+  </data>
+  <data name="DataFilesTree_ReverseFilter" xml:space="preserve">
+    <value>Reverse filter</value>
+  </data>
+  <data name="Anime_RelDel" xml:space="preserve">
+    <value>Delete relation</value>
+  </data>
+  <data name="Manga_Data_Chapter" xml:space="preserve">
+    <value>Chapter</value>
+  </data>
+  <data name="LogIn_FirstUse" xml:space="preserve">
+    <value>First use:</value>
+  </data>
+  <data name="Anime_Export_Xml" xml:space="preserve">
+    <value>Export to xml</value>
+  </data>
+  <data name="Anime_Export_Cvs" xml:space="preserve">
+    <value>Export to csv</value>
+  </data>
+  <data name="Anime_Export_Id" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="Anime_Export_JapName" xml:space="preserve">
+    <value>Japanese title</value>
+  </data>
+  <data name="Anime_Export_KanjiName" xml:space="preserve">
+    <value>Kanji title</value>
+  </data>
+  <data name="Anime_Export_EngName" xml:space="preserve">
+    <value>English title</value>
+  </data>
+  <data name="Anime_Export_Year" xml:space="preserve">
+    <value>Year</value>
+  </data>
+  <data name="Anime_Export_Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Anime_Export_Episodes" xml:space="preserve">
+    <value>Episodes</value>
+  </data>
+  <data name="Anime_Export_Dub" xml:space="preserve">
+    <value>Dub</value>
+  </data>
+  <data name="Anime_Export_Sub" xml:space="preserve">
+    <value>Sub</value>
+  </data>
+  <data name="Anime_Export_Size" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="Anime_Export_Storage" xml:space="preserve">
+    <value>Storage</value>
+  </data>
+  <data name="Anime_Export_Source" xml:space="preserve">
+    <value>Source</value>
+  </data>
+  <data name="Anime_Export_Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Anime_Export_Adult" xml:space="preserve">
+    <value>18+</value>
+  </data>
+  <data name="Anime_Export_Length" xml:space="preserve">
+    <value>Length</value>
+  </data>
+  <data name="Anime_Export_Watched" xml:space="preserve">
+    <value>Seen</value>
+  </data>
+  <data name="Anime_Export_Ratings" xml:space="preserve">
+    <value>Ratings</value>
+  </data>
+  <data name="Anime_Export_WatchedDate" xml:space="preserve">
+    <value>Seen (date)</value>
+  </data>
+  <data name="MainTabData_Export" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="Anime_Export_UpdateYourStatistics" xml:space="preserve">
+    <value>Please update your statistic before apply export.</value>
+  </data>
+  <data name="LogIn_LicenseAgreement" xml:space="preserve">
+    <value>End User License Agreement</value>
+  </data>
+  <data name="MainTab_About" xml:space="preserve">
+    <value>About AniSub</value>
+  </data>
+  <data name="Options_lblResetCount" xml:space="preserve">
+    <value>Reset counts:</value>
+  </data>
+  <data name="Options_ClassicFolderSelectDialog" xml:space="preserve">
+    <value>Classic open folder dialog</value>
+  </data>
+  <data name="Rules_ExportInfo" xml:space="preserve">
+    <value>Export informations</value>
+  </data>
+  <data name="Rules_InfoExport" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="Options_ShowAdultOnWelcomeScreen" xml:space="preserve">
+    <value>Show 18+ in welcome screen</value>
+  </data>
+  <data name="Options_AddSameFilesMultipleTimes" xml:space="preserve">
+    <value>Add the same file multiple times</value>
+  </data>
+  <data name="Manga_CustomUrl" xml:space="preserve">
+    <value>Own URL:</value>
+  </data>
+  <data name="MessageBox_DBC" xml:space="preserve">
+    <value>Cannot find a OleDb driver for Microsoft Access. Please download the Microsoft Access Database Engine 2010 Redistributable. http://www.microsoft.com/download/en/details.aspx?id=13255</value>
+  </data>
+  <data name="Options_Basic" xml:space="preserve">
+    <value>Basic</value>
+  </data>
+  <data name="Options_Colors" xml:space="preserve">
+    <value>Colors</value>
+  </data>
+  <data name="Options_Maintenance" xml:space="preserve">
+    <value>Maintenance</value>
+  </data>
+  <data name="Options_DarkColor" xml:space="preserve">
+    <value>Dark color</value>
+  </data>
+  <data name="Options_NormalColor" xml:space="preserve">
+    <value>Normal color</value>
+  </data>
+  <data name="Options_LightColor" xml:space="preserve">
+    <value>Light color</value>
+  </data>
+  <data name="Options_MissingFilesColor" xml:space="preserve">
+    <value>Missing files color</value>
+  </data>
+  <data name="Options_SelectedRowsColor" xml:space="preserve">
+    <value>Selected rows color</value>
+  </data>
+  <data name="Options_TextColor" xml:space="preserve">
+    <value>Text color</value>
+  </data>
+  <data name="Options_TextInputColor" xml:space="preserve">
+    <value>Text input color</value>
+  </data>
+  <data name="Options_BackgroundColor" xml:space="preserve">
+    <value>Background color</value>
+  </data>
+  <data name="Options_TablesBackgroundColor" xml:space="preserve">
+    <value>Background color for tables</value>
+  </data>
+  <data name="Options_ProgresBarColor" xml:space="preserve">
+    <value>Progress bar color</value>
+  </data>
+  <data name="Options_MinimizeToTray" xml:space="preserve">
+    <value>Minimalize to system tray</value>
+  </data>
+  <data name="Options_FlatStyle" xml:space="preserve">
+    <value>Flat style</value>
+  </data>
+  <data name="Rules_DeleteSourceIfEmpty" xml:space="preserve">
+    <value>Delete source directory if empty</value>
+  </data>
+  <data name="DataFiles_Files" xml:space="preserve">
+    <value>Files</value>
+  </data>
+  <data name="DataFiles_Bt22_ToolTip" xml:space="preserve">
+    <value>Show duplicated files</value>
+  </data>
+  <data name="Options_DontGenerateWelcomeScreen" xml:space="preserve">
+    <value>Do not generate welcome screen (faster startup)</value>
+  </data>
+  <data name="MessageBox_Restart" xml:space="preserve">
+    <value>AniSub will be restarted. Please be patient.</value>
+  </data>
+  <data name="Options_lblDbBackupCount" xml:space="preserve">
+    <value>Count of DB backups</value>
+  </data>
+  <data name="Manga_MyAnimeListUrl" xml:space="preserve">
+    <value>My Anime List ID/URL</value>
+  </data>
+  <data name="Manga_MugiMugiUrl" xml:space="preserve">
+    <value>MugiMugi ID/URL</value>
+  </data>
+  <data name="Options_DetectMyListStatus" xml:space="preserve">
+    <value>Detect mylist status from AniDB</value>
+  </data>
+  <data name="Options_CheckNewMangaChapters" xml:space="preserve">
+    <value>Check new chapters for manga(s)</value>
+  </data>
+  <data name="Options_Network" xml:space="preserve">
+    <value>Network:</value>
+  </data>
+  <data name="MessageBox_SettingsClear" xml:space="preserve">
+    <value>Are you really want to load default settings?</value>
+  </data>
+  <data name="Options_SetingsDefault_ToolTip" xml:space="preserve">
+    <value>Load default settings</value>
+  </data>
+  <data name="Options_SaveLogsToFiles" xml:space="preserve">
+    <value>Save logs to files</value>
+  </data>
+  <data name="Options_WebServerPort" xml:space="preserve">
+    <value>Webserver port</value>
+  </data>
+  <data name="Options_MpcHcPort" xml:space="preserve">
+    <value>MPC-HC port</value>
+  </data>
+  <data name="Options_LaunchWebserverOnStartup" xml:space="preserve">
+    <value>Start webserver at startup</value>
+  </data>
+  <data name="Options_WebServer" xml:space="preserve">
+    <value>Webserver</value>
+  </data>
+  <data name="MessageBox_W8Hack" xml:space="preserve">
+    <value>Restart PC is required after apply patch.</value>
+  </data>
+  <data name="Options_w8Hack" xml:space="preserve">
+    <value>Patch for Windows 8</value>
+  </data>
+</root>

@@ -1,0 +1,1465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DataAnime_Menu_Expand" xml:space="preserve">
+    <value>Rozevřít</value>
+  </data>
+  <data name="DataAnime_Menu_Expand_Anime" xml:space="preserve">
+    <value>Rozevřít anime</value>
+  </data>
+  <data name="DataAnime_Menu_Expand_Episodes" xml:space="preserve">
+    <value>Rozevřít episody</value>
+  </data>
+  <data name="DataAnime_Menu_Expand_All" xml:space="preserve">
+    <value>Rozevřít vše</value>
+  </data>
+  <data name="DataAnime_Menu_Expand_CollapseEpisodes" xml:space="preserve">
+    <value>Sbalit episody</value>
+  </data>
+  <data name="DataAnime_Menu_Expand_CollapseAllEpisodes" xml:space="preserve">
+    <value>Sbalit všechny episody</value>
+  </data>
+  <data name="DataAnime_Menu_Expand_CollapseAll" xml:space="preserve">
+    <value>Sbalit vše</value>
+  </data>
+  <data name="DataAnime_Menu_MyList" xml:space="preserve">
+    <value>MyList</value>
+  </data>
+  <data name="DataAnime_Menu_MyListAddModify" xml:space="preserve">
+    <value>Přidat / Upravit</value>
+  </data>
+  <data name="DataAnime_Menu_MyList_Delete" xml:space="preserve">
+    <value>Vymazat</value>
+  </data>
+  <data name="DataAnime_Menu_MyList_Watched" xml:space="preserve">
+    <value>Shlédnuto</value>
+  </data>
+  <data name="DataAnime_Menu_Database" xml:space="preserve">
+    <value>Databáze</value>
+  </data>
+  <data name="DataAnime_JapName" xml:space="preserve">
+    <value>Název JAP *</value>
+  </data>
+  <data name="DataAnime_EngName" xml:space="preserve">
+    <value>Název ENG</value>
+  </data>
+  <data name="DataAnime_Year" xml:space="preserve">
+    <value>Rok</value>
+  </data>
+  <data name="DataAnime_Type" xml:space="preserve">
+    <value>Typ série</value>
+  </data>
+  <data name="DataAnime_Dub" xml:space="preserve">
+    <value>Dabing</value>
+  </data>
+  <data name="DataAnime_Sub" xml:space="preserve">
+    <value>Titulky</value>
+  </data>
+  <data name="DataAnime_Episodes" xml:space="preserve">
+    <value>Epizody</value>
+  </data>
+  <data name="DataAnime_Size" xml:space="preserve">
+    <value>Velikost</value>
+  </data>
+  <data name="DataAnime_Length" xml:space="preserve">
+    <value>Délka</value>
+  </data>
+  <data name="DataAnime_Watched" xml:space="preserve">
+    <value>Shlédnuto</value>
+  </data>
+  <data name="DataAnime_Storage" xml:space="preserve">
+    <value>Úložiště</value>
+  </data>
+  <data name="DataAnime_Source" xml:space="preserve">
+    <value>Zdroj</value>
+  </data>
+  <data name="LogIn_AutoLogin" xml:space="preserve">
+    <value>Automaticky přihlásit</value>
+  </data>
+  <data name="LogIn_LogIn" xml:space="preserve">
+    <value>Přihlásit</value>
+  </data>
+  <data name="LogIn_Register" xml:space="preserve">
+    <value>Vytvořit</value>
+  </data>
+  <data name="LogTasksDel" xml:space="preserve">
+    <value>Vymazat</value>
+  </data>
+  <data name="MainTabData_Files" xml:space="preserve">
+    <value>Soubory</value>
+  </data>
+  <data name="MainTabData_Anime" xml:space="preserve">
+    <value>Anime</value>
+  </data>
+  <data name="MainTabData_Anime2" xml:space="preserve">
+    <value>Anime</value>
+  </data>
+  <data name="MainTabData_Genres" xml:space="preserve">
+    <value>Žánry</value>
+  </data>
+  <data name="MainTabData_Groups" xml:space="preserve">
+    <value>Skupiny</value>
+  </data>
+  <data name="MainTabLog_AniDb" xml:space="preserve">
+    <value>AniDB</value>
+  </data>
+  <data name="MainTabLog_Sql" xml:space="preserve">
+    <value>SQL</value>
+  </data>
+  <data name="MainTabLog_Tasks" xml:space="preserve">
+    <value>Úlohy</value>
+  </data>
+  <data name="MainTab_SettingsPage" xml:space="preserve">
+    <value>Nastavení</value>
+  </data>
+  <data name="MainTab_RulesPage" xml:space="preserve">
+    <value>Pravidla</value>
+  </data>
+  <data name="MainTab_AnimePage" xml:space="preserve">
+    <value>Anime</value>
+  </data>
+  <data name="MainTab_LogPage" xml:space="preserve">
+    <value>Log</value>
+  </data>
+  <data name="MainTabData_MyList" xml:space="preserve">
+    <value>MyList</value>
+  </data>
+  <data name="Options_AccountChange" xml:space="preserve">
+    <value>Odhlásit</value>
+  </data>
+  <data name="Options_AutoAddToMyList" xml:space="preserve">
+    <value>Přidat do MyListu automaticky</value>
+  </data>
+  <data name="Options_Watched" xml:space="preserve">
+    <value>Shlédnuto</value>
+  </data>
+  <data name="Options_ExtensionAdd" xml:space="preserve">
+    <value>Přidat</value>
+  </data>
+  <data name="Options_Interface" xml:space="preserve">
+    <value>Připojení</value>
+  </data>
+  <data name="Options_MyList" xml:space="preserve">
+    <value>MyList</value>
+  </data>
+  <data name="Options_FileTypes" xml:space="preserve">
+    <value>Typy souborů</value>
+  </data>
+  <data name="Options_MyList2" xml:space="preserve">
+    <value>MyList</value>
+  </data>
+  <data name="Options_lblServer" xml:space="preserve">
+    <value>Server:</value>
+  </data>
+  <data name="Options_lblPort" xml:space="preserve">
+    <value>Vzdálený port:</value>
+  </data>
+  <data name="Options_lblUserName" xml:space="preserve">
+    <value>Jméno:</value>
+  </data>
+  <data name="Options_lblPassword" xml:space="preserve">
+    <value>Heslo:</value>
+  </data>
+  <data name="Options_lblTimeout" xml:space="preserve">
+    <value>Timeout:</value>
+  </data>
+  <data name="Options_lblDelay" xml:space="preserve">
+    <value>Spoždění:</value>
+  </data>
+  <data name="Options_lblStatus" xml:space="preserve">
+    <value>Status:</value>
+  </data>
+  <data name="Options_lblSource" xml:space="preserve">
+    <value>Zdroj:</value>
+  </data>
+  <data name="Options_lblStorage" xml:space="preserve">
+    <value>Úložiště</value>
+  </data>
+  <data name="Options_lblOther" xml:space="preserve">
+    <value>Ostatní:</value>
+  </data>
+  <data name="Options_lblAnime" xml:space="preserve">
+    <value>Anime:</value>
+  </data>
+  <data name="Options_lblEpisodes" xml:space="preserve">
+    <value>Episod:</value>
+  </data>
+  <data name="Options_lblFiles" xml:space="preserve">
+    <value>Souborů:</value>
+  </data>
+  <data name="Options_lblSizeOfFiles" xml:space="preserve">
+    <value>Velikost souborů:</value>
+  </data>
+  <data name="Options_lblWatchedAnime" xml:space="preserve">
+    <value>Shlednutých anime:</value>
+  </data>
+  <data name="Options_lblSizeOfWatchedAnime" xml:space="preserve">
+    <value>Velikost shlednutých anime:</value>
+  </data>
+  <data name="Options_lblType" xml:space="preserve">
+    <value>Typ</value>
+  </data>
+  <data name="Options_lblCount" xml:space="preserve">
+    <value>Počet</value>
+  </data>
+  <data name="Options_lblWatched" xml:space="preserve">
+    <value>Shlédnuto</value>
+  </data>
+  <data name="Options_lblSize" xml:space="preserve">
+    <value>Velikost</value>
+  </data>
+  <data name="Options_lblSize2" xml:space="preserve">
+    <value>Délka</value>
+  </data>
+  <data name="Options_lblStatus2" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Options_lblCount2" xml:space="preserve">
+    <value>Počet</value>
+  </data>
+  <data name="Options_lblSize3" xml:space="preserve">
+    <value>Velikost</value>
+  </data>
+  <data name="Options_lblLength" xml:space="preserve">
+    <value>Délka</value>
+  </data>
+  <data name="Options_lblWatched2" xml:space="preserve">
+    <value>Shlédnuto</value>
+  </data>
+  <data name="Options_lblAnime2" xml:space="preserve">
+    <value>Anime:</value>
+  </data>
+  <data name="Options_lblEpisodes2" xml:space="preserve">
+    <value>Episod:</value>
+  </data>
+  <data name="Options_lblFiles2" xml:space="preserve">
+    <value>Souborů:</value>
+  </data>
+  <data name="Options_lblTotalSize" xml:space="preserve">
+    <value>Celková velikost:</value>
+  </data>
+  <data name="Options_AddedAnime" xml:space="preserve">
+    <value>Přidaných anime:</value>
+  </data>
+  <data name="Options_lblAddedEpisodes" xml:space="preserve">
+    <value>Přidaných episod:</value>
+  </data>
+  <data name="Options_lblAddedFiles" xml:space="preserve">
+    <value>Přidaných souborů:</value>
+  </data>
+  <data name="Options_lblAddedGroups" xml:space="preserve">
+    <value>Přidaných skupin:</value>
+  </data>
+  <data name="Options_lblLeech" xml:space="preserve">
+    <value>Leech:</value>
+  </data>
+  <data name="Options_lblGlory" xml:space="preserve">
+    <value>Glory:</value>
+  </data>
+  <data name="Options_lblAniDbWatched" xml:space="preserve">
+    <value>AniDB Shlédnuto:</value>
+  </data>
+  <data name="Options_lblLocalMyList" xml:space="preserve">
+    <value>Lokální MyList</value>
+  </data>
+  <data name="Options_lblAniDbMyList" xml:space="preserve">
+    <value>AniDB Mylist</value>
+  </data>
+  <data name="Options_lblAniDbMylist2" xml:space="preserve">
+    <value>AniDB MyList:</value>
+  </data>
+  <data name="Options_lblWatched3" xml:space="preserve">
+    <value>Shlédnuto:</value>
+  </data>
+  <data name="Options_lblVotes" xml:space="preserve">
+    <value>Hlasováno:</value>
+  </data>
+  <data name="Options_lblReviews" xml:space="preserve">
+    <value>Přidaných recenzí:</value>
+  </data>
+  <data name="Options_lblLocalPort" xml:space="preserve">
+    <value>Lokální port:</value>
+  </data>
+  <data name="Options_lblGroups" xml:space="preserve">
+    <value>Skupin:</value>
+  </data>
+  <data name="Options_lblTotalLength" xml:space="preserve">
+    <value>Celková délka:</value>
+  </data>
+  <data name="Options_MylistOk" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Options_MyListRefresh" xml:space="preserve">
+    <value>Aktualizace statistik (kompletní)</value>
+  </data>
+  <data name="Options_SetingsLoad" xml:space="preserve">
+    <value>Načíst nastavení</value>
+  </data>
+  <data name="Options_SetingsSave" xml:space="preserve">
+    <value>Uložit nastavení</value>
+  </data>
+  <data name="Options_StartComunicationOff" xml:space="preserve">
+    <value>Připojit</value>
+  </data>
+  <data name="Options_StartComunicationOn" xml:space="preserve">
+    <value>Odpojit</value>
+  </data>
+  <data name="Options_lblTvSeries" xml:space="preserve">
+    <value>TV Série:</value>
+  </data>
+  <data name="Options_lblTvSpecials" xml:space="preserve">
+    <value>TV Speciály:</value>
+  </data>
+  <data name="Options_lblMovies" xml:space="preserve">
+    <value>Filmy:</value>
+  </data>
+  <data name="Options_lblOva" xml:space="preserve">
+    <value>OVA:</value>
+  </data>
+  <data name="Options_lblWww" xml:space="preserve">
+    <value>Www:</value>
+  </data>
+  <data name="Options_lblOthers" xml:space="preserve">
+    <value>Ostatní:</value>
+  </data>
+  <data name="Options_lblUnknown" xml:space="preserve">
+    <value>Neznámé:</value>
+  </data>
+  <data name="Options_lblUnknown2" xml:space="preserve">
+    <value>Neznámé:</value>
+  </data>
+  <data name="Options_lblOnHdd" xml:space="preserve">
+    <value>Na HDD:</value>
+  </data>
+  <data name="Options_lblOnOptical" xml:space="preserve">
+    <value>Na CD/DVD:</value>
+  </data>
+  <data name="Options_lblDeleted" xml:space="preserve">
+    <value>Smazáno:</value>
+  </data>
+  <data name="Rules_FilesRulesMoveAdd" xml:space="preserve">
+    <value>Přidat</value>
+  </data>
+  <data name="Rules_FilesRulesMoveDel" xml:space="preserve">
+    <value>Vymazat</value>
+  </data>
+  <data name="Rules_FilesRulesRenameAdd" xml:space="preserve">
+    <value>Přidat</value>
+  </data>
+  <data name="Rules_FilesRulesRenameDel" xml:space="preserve">
+    <value>Vymazat</value>
+  </data>
+  <data name="Rules_RulesForFileRenaming" xml:space="preserve">
+    <value>Pravidla pro přejmenování souborů</value>
+  </data>
+  <data name="Rules_RulesForCreatingDirectories" xml:space="preserve">
+    <value>Pravidla pro vytváření adresářů</value>
+  </data>
+  <data name="Rules_RulesForCharacterReplacing" xml:space="preserve">
+    <value>Pravidla pro nahrazování znaků</value>
+  </data>
+  <data name="StatusBar_TasksRemaining" xml:space="preserve">
+    <value>Zbývá úloh:</value>
+  </data>
+  <data name="Add_Add" xml:space="preserve">
+    <value>Přidat</value>
+  </data>
+  <data name="Anime_KanjiName" xml:space="preserve">
+    <value>Název kanji:</value>
+  </data>
+  <data name="Anime_Type" xml:space="preserve">
+    <value>Typ:</value>
+  </data>
+  <data name="Anime_Year" xml:space="preserve">
+    <value>Rok:</value>
+  </data>
+  <data name="Anime_Episodes" xml:space="preserve">
+    <value>Počet epizod:</value>
+  </data>
+  <data name="Anime_Genres" xml:space="preserve">
+    <value>Žánry:</value>
+  </data>
+  <data name="DataAnime_Menu_MyListUpdate" xml:space="preserve">
+    <value>Aktualizovat</value>
+  </data>
+  <data name="DataAnime_Menu_Database_Delete" xml:space="preserve">
+    <value>Smazat</value>
+  </data>
+  <data name="DataFiles_Today" xml:space="preserve">
+    <value>Dnes</value>
+  </data>
+  <data name="Rules_FilesRulesMoveMove" xml:space="preserve">
+    <value>Přesunout</value>
+  </data>
+  <data name="Rules_FilesRulesMoveCopy" xml:space="preserve">
+    <value>Kopírovat</value>
+  </data>
+  <data name="DataFiles_Menu_Rename" xml:space="preserve">
+    <value>Přejmenovat</value>
+  </data>
+  <data name="DataFiles_Anime" xml:space="preserve">
+    <value>Anime *</value>
+  </data>
+  <data name="DataFiles_Episode" xml:space="preserve">
+    <value>Episoda</value>
+  </data>
+  <data name="DataFiles_File" xml:space="preserve">
+    <value>Soubor</value>
+  </data>
+  <data name="DataFiles_Storage2" xml:space="preserve">
+    <value>Úložiště</value>
+  </data>
+  <data name="DataFiles_Source2" xml:space="preserve">
+    <value>Zdroj</value>
+  </data>
+  <data name="DataFiles_Group" xml:space="preserve">
+    <value>Skupina</value>
+  </data>
+  <data name="DataFiles_Path2" xml:space="preserve">
+    <value>Cesta *</value>
+  </data>
+  <data name="DataFiles_Size" xml:space="preserve">
+    <value>Velikost</value>
+  </data>
+  <data name="Add_Id" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="AnimeData_Episode" xml:space="preserve">
+    <value>Episoda</value>
+  </data>
+  <data name="AnimeData_Name" xml:space="preserve">
+    <value>Název *</value>
+  </data>
+  <data name="AnimeData_Length" xml:space="preserve">
+    <value>Délka</value>
+  </data>
+  <data name="Hash" xml:space="preserve">
+    <value>Hash</value>
+  </data>
+  <data name="Hash_Path" xml:space="preserve">
+    <value>Cesta:</value>
+  </data>
+  <data name="Hash_Stop_Total" xml:space="preserve">
+    <value>Zastavit</value>
+  </data>
+  <data name="MessageBox_LogInI" xml:space="preserve">
+    <value>Špatné heslo!</value>
+  </data>
+  <data name="MessageBox_RegisterEI" xml:space="preserve">
+    <value>Účet již existuje!</value>
+  </data>
+  <data name="MessageBox_RegisterI" xml:space="preserve">
+    <value>Účet byl vytvořen.</value>
+  </data>
+  <data name="MainTab_HashPage" xml:space="preserve">
+    <value>Hash</value>
+  </data>
+  <data name="DataFiles_Yesterday" xml:space="preserve">
+    <value>Včera</value>
+  </data>
+  <data name="DataFiles_Date" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="DataFiles_Nothing" xml:space="preserve">
+    <value>Nic</value>
+  </data>
+  <data name="Options_CheckUnknownFiles" xml:space="preserve">
+    <value>Zkontrolovat neznámé soubory</value>
+  </data>
+  <data name="Options_DownloadAllAnimeEpisodes" xml:space="preserve">
+    <value>Stáhnout všechny epizody k anime</value>
+  </data>
+  <data name="Options_DownloadAllFiles" xml:space="preserve">
+    <value>Stáhnout soubory k epizodám</value>
+  </data>
+  <data name="Options_Settings" xml:space="preserve">
+    <value>Nastavení</value>
+  </data>
+  <data name="DataAnime_Menu_MyListCheck" xml:space="preserve">
+    <value>Zkontrolovat</value>
+  </data>
+  <data name="DataFiles_Bt00_ToolTip" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="DataFiles_Bt01_ToolTip" xml:space="preserve">
+    <value>Filtr: žádný</value>
+  </data>
+  <data name="DataFiles_Bt02_ToolTip" xml:space="preserve">
+    <value>Filtr: uloženo na HDD</value>
+  </data>
+  <data name="DataFiles_Bt03_ToolTip" xml:space="preserve">
+    <value>Filtr: uloženo na CD/DVD</value>
+  </data>
+  <data name="DataFiles_Bt04_ToolTip" xml:space="preserve">
+    <value>Filtr: smazáno</value>
+  </data>
+  <data name="DataFiles_Bt05_ToolTip" xml:space="preserve">
+    <value>Filtr: není známo místo uložení</value>
+  </data>
+  <data name="DataFiles_Bt06_ToolTip" xml:space="preserve">
+    <value>Filtr: Nevyplněna úložna</value>
+  </data>
+  <data name="DataFiles_Bt07_ToolTip" xml:space="preserve">
+    <value>Filtr: Nevyplněno ostatní</value>
+  </data>
+  <data name="DataFiles_Bt08_ToolTip" xml:space="preserve">
+    <value>Filtr: nevyplněn zdroj</value>
+  </data>
+  <data name="DataFiles_Bt09_ToolTip" xml:space="preserve">
+    <value>Filtr: neshlédnuto</value>
+  </data>
+  <data name="DataFiles_Bt10_ToolTip" xml:space="preserve">
+    <value>Filtr: shlédnuto</value>
+  </data>
+  <data name="DataFiles_Bt11_ToolTip" xml:space="preserve">
+    <value>Filtr: Blue-ray</value>
+  </data>
+  <data name="DataFiles_Bt12_ToolTip" xml:space="preserve">
+    <value>Filtr: HDTV</value>
+  </data>
+  <data name="DataFiles_Bt13_ToolTip" xml:space="preserve">
+    <value>Filtr: DVD</value>
+  </data>
+  <data name="DataFiles_Bt14_ToolTip" xml:space="preserve">
+    <value>Filtr: DTV</value>
+  </data>
+  <data name="DataFiles_Bt15_ToolTip" xml:space="preserve">
+    <value>Filtr: www</value>
+  </data>
+  <data name="DataFiles_Bt16_ToolTip" xml:space="preserve">
+    <value>Filtr: ?</value>
+  </data>
+  <data name="DataFiles_Bt17_ToolTip" xml:space="preserve">
+    <value>Filtr: je v MyListu</value>
+  </data>
+  <data name="DataFiles_Bt18_ToolTip" xml:space="preserve">
+    <value>Filtr: není v MyListu</value>
+  </data>
+  <data name="DataSearch_Watched" xml:space="preserve">
+    <value>Shlédnuto</value>
+  </data>
+  <data name="DataSearch_New" xml:space="preserve">
+    <value>Nové</value>
+  </data>
+  <data name="DataSearch_AnimeId" xml:space="preserve">
+    <value>ID Anime</value>
+  </data>
+  <data name="DataSearch_EpisodeId" xml:space="preserve">
+    <value>ID Episody</value>
+  </data>
+  <data name="DataSearch_FileId" xml:space="preserve">
+    <value>ID Souboru</value>
+  </data>
+  <data name="DataSearch_MyListId" xml:space="preserve">
+    <value>ID MyListu</value>
+  </data>
+  <data name="DataSearch_Episodes" xml:space="preserve">
+    <value>Počet Epizod</value>
+  </data>
+  <data name="DataSearch_AnimeName" xml:space="preserve">
+    <value>Název Anime</value>
+  </data>
+  <data name="DataSearch_EpisodeName" xml:space="preserve">
+    <value>Název Episody</value>
+  </data>
+  <data name="DataSearch_Storage" xml:space="preserve">
+    <value>Úložiště</value>
+  </data>
+  <data name="DataSearch_Source" xml:space="preserve">
+    <value>Zdroj</value>
+  </data>
+  <data name="DataSearch_Other" xml:space="preserve">
+    <value>Ostatní</value>
+  </data>
+  <data name="DataSearch_AnimeType" xml:space="preserve">
+    <value>Typ Anime</value>
+  </data>
+  <data name="DataSearch_FileType" xml:space="preserve">
+    <value>Typ Souboru</value>
+  </data>
+  <data name="DataSearch_Dub" xml:space="preserve">
+    <value>Dabing</value>
+  </data>
+  <data name="DataSearch_Sub" xml:space="preserve">
+    <value>Titulky</value>
+  </data>
+  <data name="DataSearch_Group" xml:space="preserve">
+    <value>Název Skupiny</value>
+  </data>
+  <data name="DataSearch_Genres" xml:space="preserve">
+    <value>Žánry</value>
+  </data>
+  <data name="DataSearch_Search" xml:space="preserve">
+    <value>Vyhledat</value>
+  </data>
+  <data name="MainTabData_Search" xml:space="preserve">
+    <value>Vyhledávání</value>
+  </data>
+  <data name="Options_DeleteDuplicates" xml:space="preserve">
+    <value>Vymazat zdvojené soubory</value>
+  </data>
+  <data name="Rules_FilesRulesMoveDoNothing" xml:space="preserve">
+    <value>Nedělat nic</value>
+  </data>
+  <data name="StatusBar_Disconnected" xml:space="preserve">
+    <value>Odpojeno</value>
+  </data>
+  <data name="StatusBar_ConnectLBOn" xml:space="preserve">
+    <value>Připojeno</value>
+  </data>
+  <data name="MessageBox_Account" xml:space="preserve">
+    <value>Účet...</value>
+  </data>
+  <data name="MessageBox_AccountLoadFailed" xml:space="preserve">
+    <value>Nepovedlo se načíst uživatelská data.</value>
+  </data>
+  <data name="MessageBox_Delete" xml:space="preserve">
+    <value>Smazat...</value>
+  </data>
+  <data name="MessageBox_DeleteI" xml:space="preserve">
+    <value>Opravdu chcete smazat data z databáze?</value>
+  </data>
+  <data name="MessageBox_LogIn" xml:space="preserve">
+    <value>Účet...</value>
+  </data>
+  <data name="MessageBox_Register" xml:space="preserve">
+    <value>Účet...</value>
+  </data>
+  <data name="MessageBox_RegisterE" xml:space="preserve">
+    <value>Účet...</value>
+  </data>
+  <data name="MessageBox_Rename" xml:space="preserve">
+    <value>Přepsat...</value>
+  </data>
+  <data name="MessageBox_RenameI" xml:space="preserve">
+    <value>Opravdu chcete přepsat soubor, který již existuje.</value>
+  </data>
+  <data name="Options_lblSummary" xml:space="preserve">
+    <value>Celkem:</value>
+  </data>
+  <data name="Options_lblSummary2" xml:space="preserve">
+    <value>Celkem:</value>
+  </data>
+  <data name="Hash_Delete" xml:space="preserve">
+    <value>Vymazat</value>
+  </data>
+  <data name="Hash_File" xml:space="preserve">
+    <value>Parse</value>
+  </data>
+  <data name="MessageBox_DB" xml:space="preserve">
+    <value>Soubor OriginalDatabase.mdb neexistuje!</value>
+  </data>
+  <data name="Options_lblMusicVideo" xml:space="preserve">
+    <value>Music Video</value>
+  </data>
+  <data name="Options_lblStorage2" xml:space="preserve">
+    <value>Úložiště</value>
+  </data>
+  <data name="Options_lblSource2" xml:space="preserve">
+    <value>Zdroj</value>
+  </data>
+  <data name="Rules_FilesRulesRenameRename" xml:space="preserve">
+    <value>Přejmenovat</value>
+  </data>
+  <data name="Rules_FilesRulesRenameDoNothing" xml:space="preserve">
+    <value>Nedělat nic</value>
+  </data>
+  <data name="Rules_AutomaticRenaming" xml:space="preserve">
+    <value>Automaticky přejmenovat</value>
+  </data>
+  <data name="Rules_DontCopyToAnotherDisk" xml:space="preserve">
+    <value>Nekopírovat/Nepřesouvat na jiný disk</value>
+  </data>
+  <data name="Rules_ReplaceExisting" xml:space="preserve">
+    <value>Nahrazovat existující soubory</value>
+  </data>
+  <data name="DataFilesTree_Clear2" xml:space="preserve">
+    <value>Vyčistit</value>
+  </data>
+  <data name="DataFiles_Menu_Win" xml:space="preserve">
+    <value>Win</value>
+  </data>
+  <data name="DataSQL_Filter" xml:space="preserve">
+    <value>Filtr</value>
+  </data>
+  <data name="MainTab_SqlPage" xml:space="preserve">
+    <value>SQL</value>
+  </data>
+  <data name="MainTabLog_Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Options_lblAdult2" xml:space="preserve">
+    <value>18+:</value>
+  </data>
+  <data name="DataFiles_Menu_Download" xml:space="preserve">
+    <value>Stáhnout</value>
+  </data>
+  <data name="DataFiles_Menu_DownloadAnime" xml:space="preserve">
+    <value>Anime</value>
+  </data>
+  <data name="DataFiles_Menu_DownloadEpisodes" xml:space="preserve">
+    <value>Episody</value>
+  </data>
+  <data name="DataFiles_Menu_DownloadFiles" xml:space="preserve">
+    <value>Soubory</value>
+  </data>
+  <data name="DataFiles_Menu_DownloadMyList" xml:space="preserve">
+    <value>MyList</value>
+  </data>
+  <data name="DataFiles_Menu_DownloadAll" xml:space="preserve">
+    <value>Vše</value>
+  </data>
+  <data name="Options_CompactAndRepairDb" xml:space="preserve">
+    <value>Komprimovat a opravit databázi</value>
+  </data>
+  <data name="StatusBar_Status" xml:space="preserve">
+    <value>Status:</value>
+  </data>
+  <data name="StatusBar_Mn04_Off" xml:space="preserve">
+    <value>Hotovo</value>
+  </data>
+  <data name="StatusBar_Mn04_On" xml:space="preserve">
+    <value>Přejmenovávám soubory</value>
+  </data>
+  <data name="Rules_Tags" xml:space="preserve">
+    <value>Tagy</value>
+  </data>
+  <data name="Anime_RelationTree_Sequel" xml:space="preserve">
+    <value>Sequel: </value>
+  </data>
+  <data name="Anime_RelationTree_Prequel" xml:space="preserve">
+    <value>Prequel: </value>
+  </data>
+  <data name="Anime_RelationTree_SameSetting" xml:space="preserve">
+    <value>Same setting: </value>
+  </data>
+  <data name="Anime_RelationTree_AlternativeSetting" xml:space="preserve">
+    <value>Alternative setting: </value>
+  </data>
+  <data name="Anime_RelationTree_AlternativeVersion" xml:space="preserve">
+    <value>Alternative version: </value>
+  </data>
+  <data name="Anime_RelationTree_Character" xml:space="preserve">
+    <value>Character: </value>
+  </data>
+  <data name="Anime_RelationTree_SideStory" xml:space="preserve">
+    <value>Side story: </value>
+  </data>
+  <data name="Anime_RelationTree_ParentStory" xml:space="preserve">
+    <value>Parent story: </value>
+  </data>
+  <data name="Anime_RelationTree_Summary" xml:space="preserve">
+    <value>Summary: </value>
+  </data>
+  <data name="Anime_RelationTree_FullStory" xml:space="preserve">
+    <value>Full story: </value>
+  </data>
+  <data name="Anime_RelationTree_Other" xml:space="preserve">
+    <value>Other: </value>
+  </data>
+  <data name="DataFiles_Menu_Export" xml:space="preserve">
+    <value>Exportovat</value>
+  </data>
+  <data name="DataFiles_Menu_ExportMd5" xml:space="preserve">
+    <value>MD5</value>
+  </data>
+  <data name="DataFiles_Menu_ExportCrc32" xml:space="preserve">
+    <value>CRC32</value>
+  </data>
+  <data name="DataFiles_Menu_ExportEd2k" xml:space="preserve">
+    <value>ED2K</value>
+  </data>
+  <data name="Anime_Date" xml:space="preserve">
+    <value>Datum:</value>
+  </data>
+  <data name="LogIn_LogOut" xml:space="preserve">
+    <value>Konec</value>
+  </data>
+  <data name="LogIn_WelcomeMessage" xml:space="preserve">
+    <value>Vítejte
+AniSub je klient pro komunikaci s AniDB.
+AniSub je alternativou za AOM. AniSub je malý, rychlý a hlavně také nenáročný. Umí toho stejně mnoho jako AOM ba dokonce i víc. A je také rychlý než jakýkoliv Java client.
+
+Předtím než co začneš používat AniSub, tak prosím vyplň svoje přihlašovací jméno a heslo:</value>
+  </data>
+  <data name="Rules_NumberPosition" xml:space="preserve">
+    <value>Pozice čísel:</value>
+  </data>
+  <data name="DataFiles_Menu_ExportSha1" xml:space="preserve">
+    <value>SHA1</value>
+  </data>
+  <data name="Hash_Waiting" xml:space="preserve">
+    <value>Čekání:</value>
+  </data>
+  <data name="StatusBar_Version" xml:space="preserve">
+    <value>Verze: </value>
+  </data>
+  <data name="DataFiles_Name" xml:space="preserve">
+    <value>Název:</value>
+  </data>
+  <data name="DataFiles_Path" xml:space="preserve">
+    <value>Cesta:</value>
+  </data>
+  <data name="DataFiles_Storage" xml:space="preserve">
+    <value>Úložna:</value>
+  </data>
+  <data name="DataFiles_Source" xml:space="preserve">
+    <value>Zdroj:</value>
+  </data>
+  <data name="Watcher_Add" xml:space="preserve">
+    <value>Přidat</value>
+  </data>
+  <data name="Watcher_Enable" xml:space="preserve">
+    <value>Povolit</value>
+  </data>
+  <data name="Watcher_Delete" xml:space="preserve">
+    <value>Smazat</value>
+  </data>
+  <data name="Anime_RelationTree_AlternativeStory" xml:space="preserve">
+    <value>Alternativní příběh</value>
+  </data>
+  <data name="DataFiles_Menu_Rehash" xml:space="preserve">
+    <value>Rehash</value>
+  </data>
+  <data name="Options_Update" xml:space="preserve">
+    <value>Aktualizuj</value>
+  </data>
+  <data name="Options_SaveSettingsOnExit" xml:space="preserve">
+    <value>Při ukončení: uložit nastavení</value>
+  </data>
+  <data name="Options_MyListRefreshMin" xml:space="preserve">
+    <value>Aktualizace statistik (minimální)</value>
+  </data>
+  <data name="Options_MyListUpdate" xml:space="preserve">
+    <value>Aktualizace</value>
+  </data>
+  <data name="DataFilesTree_Clear" xml:space="preserve">
+    <value>Vyčistit</value>
+  </data>
+  <data name="DataFilesTree_Expand" xml:space="preserve">
+    <value>Rozevírat</value>
+  </data>
+  <data name="Hash_DeleteAll" xml:space="preserve">
+    <value>Vše vymazat</value>
+  </data>
+  <data name="DataSql_Anime" xml:space="preserve">
+    <value>Anime</value>
+  </data>
+  <data name="DataSql_Episodes" xml:space="preserve">
+    <value>Episody</value>
+  </data>
+  <data name="DataSql_Files" xml:space="preserve">
+    <value>Soubory</value>
+  </data>
+  <data name="DataSql_MyList" xml:space="preserve">
+    <value>MyList</value>
+  </data>
+  <data name="DataSql_Check" xml:space="preserve">
+    <value>Zkontroluj</value>
+  </data>
+  <data name="DataFilesTree_FilesOnly" xml:space="preserve">
+    <value>Pouze soubory</value>
+  </data>
+  <data name="DataFiles_Unknown" xml:space="preserve">
+    <value>Neznámé</value>
+  </data>
+  <data name="AnimeTree_Adult" xml:space="preserve">
+    <value>18+</value>
+  </data>
+  <data name="MainTabManga_Manga" xml:space="preserve">
+    <value>Manga</value>
+  </data>
+  <data name="MainTabManga_NewManga" xml:space="preserve">
+    <value>Nová manga</value>
+  </data>
+  <data name="MainTab_MangaPage" xml:space="preserve">
+    <value>Manga</value>
+  </data>
+  <data name="MangaTree_CH01" xml:space="preserve">
+    <value>18+</value>
+  </data>
+  <data name="Manga_Edit" xml:space="preserve">
+    <value>Editovat</value>
+  </data>
+  <data name="Manga_Manga" xml:space="preserve">
+    <value>Manga</value>
+  </data>
+  <data name="Manga_MangaChapters" xml:space="preserve">
+    <value>Manga Chapters</value>
+  </data>
+  <data name="Manga_Insert" xml:space="preserve">
+    <value>Vložit</value>
+  </data>
+  <data name="Manga_MainName" xml:space="preserve">
+    <value>Hlavní název</value>
+  </data>
+  <data name="Manga_JapName" xml:space="preserve">
+    <value>Název Japonsky</value>
+  </data>
+  <data name="Manga_EngName" xml:space="preserve">
+    <value>Název Anglicky</value>
+  </data>
+  <data name="Manga_Year" xml:space="preserve">
+    <value>Rok</value>
+  </data>
+  <data name="Manga_Adult" xml:space="preserve">
+    <value>18+</value>
+  </data>
+  <data name="Manga_Volume" xml:space="preserve">
+    <value>Volume</value>
+  </data>
+  <data name="Manga_lblMainName" xml:space="preserve">
+    <value>Hlavní název</value>
+  </data>
+  <data name="Manga_lblJapName" xml:space="preserve">
+    <value>Název Japonsky</value>
+  </data>
+  <data name="Manga_lblEngName" xml:space="preserve">
+    <value>Název Anglicky</value>
+  </data>
+  <data name="Manga_lblYear" xml:space="preserve">
+    <value>Rok</value>
+  </data>
+  <data name="Manga_UpdatesId" xml:space="preserve">
+    <value>Manga Updates ID/URL</value>
+  </data>
+  <data name="Manga_TradersId" xml:space="preserve">
+    <value>Manga Traders ID/URL</value>
+  </data>
+  <data name="Manga_lblVolume" xml:space="preserve">
+    <value>Volume</value>
+  </data>
+  <data name="Manga_Picture" xml:space="preserve">
+    <value>Obrázek</value>
+  </data>
+  <data name="Manga_lblAdult" xml:space="preserve">
+    <value>18+</value>
+  </data>
+  <data name="Manga_lblGenres" xml:space="preserve">
+    <value>Žánry</value>
+  </data>
+  <data name="Manga_Update" xml:space="preserve">
+    <value>Aktualizovat</value>
+  </data>
+  <data name="MessageBox_OutdatedVersion" xml:space="preserve">
+    <value>Zastaralá verze AniSub!</value>
+  </data>
+  <data name="MessageBox_ClientBanned" xml:space="preserve">
+    <value>Client je zabanován!</value>
+  </data>
+  <data name="MessageBox_LoginFailed" xml:space="preserve">
+    <value>Nezdařilo se přihlášení</value>
+  </data>
+  <data name="MessageBox_AniDbNotResponding" xml:space="preserve">
+    <value>AniDB neodpovídá!</value>
+  </data>
+  <data name="MessageBox_NewVersionAvailable" xml:space="preserve">
+    <value>Nová verze AniSub!</value>
+  </data>
+  <data name="Manga_Chapter" xml:space="preserve">
+    <value>Chapter</value>
+  </data>
+  <data name="Manga_Data_Menu_Edit" xml:space="preserve">
+    <value>Upravit</value>
+  </data>
+  <data name="Manga_Data_Volume" xml:space="preserve">
+    <value>Volume</value>
+  </data>
+  <data name="Manga_Data_Name" xml:space="preserve">
+    <value>Název</value>
+  </data>
+  <data name="Manga_Data_Pages" xml:space="preserve">
+    <value>P. Stránek</value>
+  </data>
+  <data name="Manga_Data_Size" xml:space="preserve">
+    <value>Velikost</value>
+  </data>
+  <data name="Manga_Data_File" xml:space="preserve">
+    <value>Soubor</value>
+  </data>
+  <data name="Manga_Delete" xml:space="preserve">
+    <value>Smazat</value>
+  </data>
+  <data name="Manga_Delete_Ch" xml:space="preserve">
+    <value>Smazat</value>
+  </data>
+  <data name="Manga_Insert_Ch" xml:space="preserve">
+    <value>Vložit</value>
+  </data>
+  <data name="Manga_lblVolume2" xml:space="preserve">
+    <value>Volume</value>
+  </data>
+  <data name="Manga_lblChapter" xml:space="preserve">
+    <value>Chapter</value>
+  </data>
+  <data name="Manga_File" xml:space="preserve">
+    <value>Soubor</value>
+  </data>
+  <data name="Manga_ReleaseDate" xml:space="preserve">
+    <value>Datum vydání</value>
+  </data>
+  <data name="Manga_Read" xml:space="preserve">
+    <value>Přečteno</value>
+  </data>
+  <data name="Manga_Pages" xml:space="preserve">
+    <value>Stránek</value>
+  </data>
+  <data name="Manga_Language" xml:space="preserve">
+    <value>Jazyk</value>
+  </data>
+  <data name="Manga_Name" xml:space="preserve">
+    <value>Název</value>
+  </data>
+  <data name="Manga_Update_Ch" xml:space="preserve">
+    <value>Aktualizovat</value>
+  </data>
+  <data name="Manga_Author" xml:space="preserve">
+    <value>Autor</value>
+  </data>
+  <data name="Manga_Artist" xml:space="preserve">
+    <value>Kreslíř</value>
+  </data>
+  <data name="Manga_Author2" xml:space="preserve">
+    <value>Autor</value>
+  </data>
+  <data name="Manga_Artist2" xml:space="preserve">
+    <value>Kreslíř</value>
+  </data>
+  <data name="MainTabManga_MyList" xml:space="preserve">
+    <value>MyList</value>
+  </data>
+  <data name="Options_lblMyList" xml:space="preserve">
+    <value>MyList</value>
+  </data>
+  <data name="Options_lblManga" xml:space="preserve">
+    <value>Manga</value>
+  </data>
+  <data name="Options_lblVolumes" xml:space="preserve">
+    <value>Volumes</value>
+  </data>
+  <data name="Options_lblChapters" xml:space="preserve">
+    <value>Chapters</value>
+  </data>
+  <data name="Options_lblFileSize" xml:space="preserve">
+    <value>Velikost souborů</value>
+  </data>
+  <data name="Options_lblRead" xml:space="preserve">
+    <value>Přečteno</value>
+  </data>
+  <data name="Options_lblTotalPages" xml:space="preserve">
+    <value>Celkem stránek</value>
+  </data>
+  <data name="Options_lblAdult" xml:space="preserve">
+    <value>18+</value>
+  </data>
+  <data name="Options_MyListRefreshManga" xml:space="preserve">
+    <value>Aktualizace statistik</value>
+  </data>
+  <data name="AnimeTree_Menu_DeleteAnime" xml:space="preserve">
+    <value>Smazat Anime</value>
+  </data>
+  <data name="Anime_Length" xml:space="preserve">
+    <value>Délka</value>
+  </data>
+  <data name="MessageBox_Anime" xml:space="preserve">
+    <value>Z AniDB nebudou ostraněny informace vašeho mylistu. Opravdu chcete smazat anime?</value>
+  </data>
+  <data name="DataFiles_Updating" xml:space="preserve">
+    <value>Aktualizuji...</value>
+  </data>
+  <data name="DataFiles_Bt20_ToolTip" xml:space="preserve">
+    <value>Kontrola existujících souborů na disku</value>
+  </data>
+  <data name="DataFiles_Bt21_ToolTip" xml:space="preserve">
+    <value>Vygenerovat stromovou strukturu</value>
+  </data>
+  <data name="Manga_Data_Menu_Read" xml:space="preserve">
+    <value>Přečteno</value>
+  </data>
+  <data name="Manga_Data_Menu_UnRead" xml:space="preserve">
+    <value>Nepřečteno</value>
+  </data>
+  <data name="Manga_Data_Menu_Delete" xml:space="preserve">
+    <value>Smazat</value>
+  </data>
+  <data name="Manga_Tree_Menu_Delete" xml:space="preserve">
+    <value>Smazat Mangu</value>
+  </data>
+  <data name="Options_CreateBackup" xml:space="preserve">
+    <value>Vytvořit zálohu</value>
+  </data>
+  <data name="Options_RestoreBackup" xml:space="preserve">
+    <value>Obnovit ze zálohy</value>
+  </data>
+  <data name="Anime_BT01" xml:space="preserve">
+    <value>Aktualizuj</value>
+  </data>
+  <data name="Anime_Tags" xml:space="preserve">
+    <value>Tagy</value>
+  </data>
+  <data name="MainTabData_Others" xml:space="preserve">
+    <value>Ostatní</value>
+  </data>
+  <data name="AnimeRating" xml:space="preserve">
+    <value>Hodnocení</value>
+  </data>
+  <data name="Hash_FileHashing" xml:space="preserve">
+    <value>Hashování souborů</value>
+  </data>
+  <data name="Hash_Watcher" xml:space="preserve">
+    <value>Hlídací pes **</value>
+  </data>
+  <data name="MainTab_IndexPage" xml:space="preserve">
+    <value>Úvod</value>
+  </data>
+  <data name="MessageBox_ClearDatabase" xml:space="preserve">
+    <value>Jseš si jistí, že chceš smazat celou databázi?</value>
+  </data>
+  <data name="Options_ForceDbUpdate" xml:space="preserve">
+    <value>Aktualizovat databázi</value>
+  </data>
+  <data name="Options_DeleteDb" xml:space="preserve">
+    <value>Vymazat databázi</value>
+  </data>
+  <data name="Options_lblRead2" xml:space="preserve">
+    <value>Přečteno</value>
+  </data>
+  <data name="Options_lblUnread" xml:space="preserve">
+    <value>Nepřečteno</value>
+  </data>
+  <data name="MainTabData_Graphs" xml:space="preserve">
+    <value>Grafy</value>
+  </data>
+  <data name="Zgc_WatchedTimeline" xml:space="preserve">
+    <value>Časová posloupnost shlédnutí</value>
+  </data>
+  <data name="DataFilesTree_ReverseFilter" xml:space="preserve">
+    <value>Negovat filtr</value>
+  </data>
+  <data name="Anime_RelDel" xml:space="preserve">
+    <value>Smazat relaci</value>
+  </data>
+  <data name="Manga_Data_Chapter" xml:space="preserve">
+    <value>Chapter</value>
+  </data>
+  <data name="LogIn_FirstUse" xml:space="preserve">
+    <value>První použití:</value>
+  </data>
+  <data name="Anime_Export_Xml" xml:space="preserve">
+    <value>Export do xml</value>
+  </data>
+  <data name="Anime_Export_Cvs" xml:space="preserve">
+    <value>Export do csv</value>
+  </data>
+  <data name="Anime_Export_Id" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="Anime_Export_JapName" xml:space="preserve">
+    <value>Název japonsky</value>
+  </data>
+  <data name="Anime_Export_KanjiName" xml:space="preserve">
+    <value>Název kanji</value>
+  </data>
+  <data name="Anime_Export_EngName" xml:space="preserve">
+    <value>Název anglicky</value>
+  </data>
+  <data name="Anime_Export_Year" xml:space="preserve">
+    <value>Rok</value>
+  </data>
+  <data name="Anime_Export_Type" xml:space="preserve">
+    <value>Typ</value>
+  </data>
+  <data name="Anime_Export_Episodes" xml:space="preserve">
+    <value>Epizod</value>
+  </data>
+  <data name="Anime_Export_Dub" xml:space="preserve">
+    <value>Dub</value>
+  </data>
+  <data name="Anime_Export_Sub" xml:space="preserve">
+    <value>Sub</value>
+  </data>
+  <data name="Anime_Export_Size" xml:space="preserve">
+    <value>Velikost</value>
+  </data>
+  <data name="Anime_Export_Storage" xml:space="preserve">
+    <value>Úložna</value>
+  </data>
+  <data name="Anime_Export_Source" xml:space="preserve">
+    <value>Zdroj</value>
+  </data>
+  <data name="Anime_Export_Date" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="Anime_Export_Adult" xml:space="preserve">
+    <value>18+</value>
+  </data>
+  <data name="Anime_Export_Length" xml:space="preserve">
+    <value>Délka</value>
+  </data>
+  <data name="Anime_Export_Watched" xml:space="preserve">
+    <value>Shlédnuto</value>
+  </data>
+  <data name="Anime_Export_Ratings" xml:space="preserve">
+    <value>Hodnocení</value>
+  </data>
+  <data name="Anime_Export_WatchedDate" xml:space="preserve">
+    <value>Shleduto (datum)</value>
+  </data>
+  <data name="MainTabData_Export" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="Anime_Export_UpdateYourStatistics" xml:space="preserve">
+    <value>Před vytvořením exportu doporučuju provést přepočítání statistik!</value>
+  </data>
+  <data name="LogIn_LicenseAgreement" xml:space="preserve">
+    <value>Licenční smlouva s koncovým uživatelem</value>
+  </data>
+  <data name="MainTab_About" xml:space="preserve">
+    <value>O programu AniSub</value>
+  </data>
+  <data name="Options_lblResetCount" xml:space="preserve">
+    <value>Počet opakování:</value>
+  </data>
+  <data name="Options_ClassicFolderSelectDialog" xml:space="preserve">
+    <value>Klasický dialog pro vybrání adresáře</value>
+  </data>
+  <data name="Rules_ExportInfo" xml:space="preserve">
+    <value>Exportovat informace</value>
+  </data>
+  <data name="Rules_InfoExport" xml:space="preserve">
+    <value>Exportovat</value>
+  </data>
+  <data name="Options_ShowAdultOnWelcomeScreen" xml:space="preserve">
+    <value>Zobrazit 18+ v uvítací obrazovce</value>
+  </data>
+  <data name="Options_AddSameFilesMultipleTimes" xml:space="preserve">
+    <value>Přidat stejné soubory vícekrát</value>
+  </data>
+  <data name="Manga_CustomUrl" xml:space="preserve">
+    <value>Vlastní URL:</value>
+  </data>
+  <data name="MessageBox_DBC" xml:space="preserve">
+    <value>Nebyl nalezen zavaděč OleDb pro Microsoft Access. Prosím stáhněte a naistalujte následující balíček: http://www.microsoft.com/download/en/details.aspx?id=13255</value>
+  </data>
+  <data name="Options_Basic" xml:space="preserve">
+    <value>Základní</value>
+  </data>
+  <data name="Options_Colors" xml:space="preserve">
+    <value>Barvy</value>
+  </data>
+  <data name="Options_Maintenance" xml:space="preserve">
+    <value>Údržba</value>
+  </data>
+  <data name="Options_DarkColor" xml:space="preserve">
+    <value>Tmavší barva pro řádky</value>
+  </data>
+  <data name="Options_NormalColor" xml:space="preserve">
+    <value>Normální barva pro řádky</value>
+  </data>
+  <data name="Options_LightColor" xml:space="preserve">
+    <value>Světlá barva pro řádky</value>
+  </data>
+  <data name="Options_MissingFilesColor" xml:space="preserve">
+    <value>Barva pro chybějící soubory</value>
+  </data>
+  <data name="Options_SelectedRowsColor" xml:space="preserve">
+    <value>Barva pro zvýraznění</value>
+  </data>
+  <data name="Options_TextColor" xml:space="preserve">
+    <value>Barva textu</value>
+  </data>
+  <data name="Options_TextInputColor" xml:space="preserve">
+    <value>Barva textu pro psaní</value>
+  </data>
+  <data name="Options_BackgroundColor" xml:space="preserve">
+    <value>Barva pozadí</value>
+  </data>
+  <data name="Options_TablesBackgroundColor" xml:space="preserve">
+    <value>Barva pozadí pro tabulky</value>
+  </data>
+  <data name="Options_ProgressBarColor" xml:space="preserve">
+    <value>Barva progress baru</value>
+  </data>
+  <data name="Options_MinimizeToTray" xml:space="preserve">
+    <value>Minimalizovat do lišty</value>
+  </data>
+  <data name="Options_FlatStyle" xml:space="preserve">
+    <value>Plochý vzhled</value>
+  </data>
+  <data name="Rules_DeleteSourceIfEmpty" xml:space="preserve">
+    <value>Smazat adresář pokud je prázdný</value>
+  </data>
+  <data name="DataFiles_Files" xml:space="preserve">
+    <value>Souborů</value>
+  </data>
+  <data name="DataFiles_Bt22_ToolTip" xml:space="preserve">
+    <value>Zobrazit duplikátní soubory</value>
+  </data>
+  <data name="Options_DontGenerateWelcomeScreen" xml:space="preserve">
+    <value>Negenerovat úvodní stránku (rychlejší start)</value>
+  </data>
+  <data name="MessageBox_Restart" xml:space="preserve">
+    <value>AniSub bude restartován. Prosím o strpení.</value>
+  </data>
+  <data name="Options_lblDbBackupCount" xml:space="preserve">
+    <value>Počet záloh DB</value>
+  </data>
+  <data name="Manga_MyAnimeListUrl" xml:space="preserve">
+    <value>My Anime List ID/URL</value>
+  </data>
+  <data name="Manga_MugiMugiUrl" xml:space="preserve">
+    <value>MugiMugi ID/URL</value>
+  </data>
+  <data name="Options_DetectMyListStatus" xml:space="preserve">
+    <value>Zjišťovat mylist status z AniDB</value>
+  </data>
+  <data name="Options_CheckNewMangaChapters" xml:space="preserve">
+    <value>Zkontrolovat nové chaptery u mang</value>
+  </data>
+  <data name="Options_Network" xml:space="preserve">
+    <value>Síť:</value>
+  </data>
+  <data name="MessageBox_SettingsClear" xml:space="preserve">
+    <value>Opravdu chcete načíst defaultní nastavení?</value>
+  </data>
+  <data name="Options_SetingsDefault_ToolTip" xml:space="preserve">
+    <value>Načíst defaultní nastavení</value>
+  </data>
+  <data name="Options_SaveLogsToFiles" xml:space="preserve">
+    <value>Ukládat hlášení do souborů</value>
+  </data>
+  <data name="Options_WebServerPort" xml:space="preserve">
+    <value>Webserver port</value>
+  </data>
+  <data name="Options_MpcHcPort" xml:space="preserve">
+    <value>MPC-HC port</value>
+  </data>
+  <data name="Options_LaunchWebServerOnStartup" xml:space="preserve">
+    <value>Spustit webserver při startu</value>
+  </data>
+  <data name="Options_WebServer" xml:space="preserve">
+    <value>Webserver</value>
+  </data>
+  <data name="MessageBox_W8Hack" xml:space="preserve">
+    <value>Po aplikování hacku je nutné restartovat počítač.</value>
+  </data>
+  <data name="Options_w8Hack" xml:space="preserve">
+    <value>Patch pro Windows 8</value>
+  </data>
+</root>

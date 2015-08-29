@@ -1,8 +1,0 @@
-//Please, do not modify this example. Thnks
-//Anime JP (Anime Eng) [Group]
-DO ADD 'C:\'
-IF 8(),N(Shounen ai) DO ADD 'Hentai\'
-ELSE DO ADD 'Anime\'
-DO ADD '%ann'
-IF I(eng) DO ADD ' (%eng)'
-IF G(!unknown);G(!raw) DO ADD ' [%grp]'
